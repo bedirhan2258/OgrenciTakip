@@ -17,5 +17,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         {
             InitializeComponent();
         }
+
+       
     }
 }
