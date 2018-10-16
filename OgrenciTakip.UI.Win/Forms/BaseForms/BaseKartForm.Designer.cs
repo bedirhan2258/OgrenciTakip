@@ -67,14 +67,7 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.myBandedGridControl1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
-            this.myBandedGridView1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myBandedGridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myBandedGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -286,90 +279,11 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // myBandedGridControl1
-            // 
-            this.myBandedGridControl1.Location = new System.Drawing.Point(428, 283);
-            this.myBandedGridControl1.MainView = this.myBandedGridView1;
-            this.myBandedGridControl1.MenuManager = this.ribbonControl;
-            this.myBandedGridControl1.Name = "myBandedGridControl1";
-            this.myBandedGridControl1.Size = new System.Drawing.Size(400, 200);
-            this.myBandedGridControl1.TabIndex = 2;
-            this.myBandedGridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.myBandedGridView1});
-            // 
-            // myBandedGridView1
-            // 
-            this.myBandedGridView1.Appearance.BandPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.myBandedGridView1.Appearance.BandPanel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.myBandedGridView1.Appearance.BandPanel.Options.UseFont = true;
-            this.myBandedGridView1.Appearance.BandPanel.Options.UseForeColor = true;
-            this.myBandedGridView1.Appearance.BandPanel.Options.UseTextOptions = true;
-            this.myBandedGridView1.Appearance.BandPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.myBandedGridView1.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.myBandedGridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.myBandedGridView1.Appearance.FooterPanel.Options.UseFont = true;
-            this.myBandedGridView1.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.myBandedGridView1.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.myBandedGridView1.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.myBandedGridView1.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.myBandedGridView1.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.myBandedGridView1.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.myBandedGridView1.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.myBandedGridView1.BandPanelRowHeight = 40;
-            this.myBandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand1});
-            this.myBandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
-            this.colId,
-            this.colKod});
-            this.myBandedGridView1.GridControl = this.myBandedGridControl1;
-            this.myBandedGridView1.Name = "myBandedGridView1";
-            this.myBandedGridView1.OptionsMenu.EnableColumnMenu = false;
-            this.myBandedGridView1.OptionsMenu.EnableFooterMenu = false;
-            this.myBandedGridView1.OptionsMenu.EnableGroupPanelMenu = false;
-            this.myBandedGridView1.OptionsNavigation.EnterMoveNextColumn = true;
-            this.myBandedGridView1.OptionsPrint.AutoWidth = false;
-            this.myBandedGridView1.OptionsPrint.PrintFooter = false;
-            this.myBandedGridView1.OptionsPrint.PrintGroupFooter = false;
-            this.myBandedGridView1.OptionsView.ColumnAutoWidth = false;
-            this.myBandedGridView1.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
-            this.myBandedGridView1.OptionsView.RowAutoHeight = true;
-            this.myBandedGridView1.OptionsView.ShowAutoFilterRow = true;
-            this.myBandedGridView1.OptionsView.ShowGroupPanel = false;
-            this.myBandedGridView1.OptionsView.ShowViewCaption = true;
-            this.myBandedGridView1.StatusBarAciklama = null;
-            this.myBandedGridView1.StatusBarKisayol = null;
-            this.myBandedGridView1.StatusBarKisayolAciklama = null;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "gridBand1";
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            // 
-            // colId
-            // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.OptionsColumn.AllowEdit = false;
-            this.colId.OptionsColumn.ShowInCustomizationForm = false;
-            // 
-            // colKod
-            // 
-            this.colKod.AppearanceCell.Options.UseTextOptions = true;
-            this.colKod.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colKod.Caption = "Kod";
-            this.colKod.FieldName = "Kod";
-            this.colKod.Name = "colKod";
-            this.colKod.OptionsColumn.AllowEdit = false;
-            this.colKod.Visible = true;
-            // 
             // BaseKartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 596);
-            this.Controls.Add(this.myBandedGridControl1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.MaximizeBox = false;
@@ -379,8 +293,6 @@
             this.ShowInTaskbar = false;
             this.StatusBar = this.ribbonStatusBar1;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myBandedGridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myBandedGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,11 +311,6 @@
         private DevExpress.XtraBars.BarStaticItem statusBarAciklama;
         private DevExpress.XtraBars.BarStaticItem statusBarKisayol;
         private DevExpress.XtraBars.BarStaticItem statusBarKisayolAciklama;
-        private UserControls.Grid.MyBandedGridControl myBandedGridControl1;
-        private UserControls.Grid.MyBandedGridView myBandedGridView1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colKod;
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
     }
 }
