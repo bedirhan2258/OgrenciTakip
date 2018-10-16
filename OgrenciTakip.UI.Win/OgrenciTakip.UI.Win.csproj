@@ -72,6 +72,18 @@
     <Compile Include="Forms\BaseForms\BaseKartlarForm.Designer.cs">
       <DependentUpon>BaseKartlarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SchoolForms\OkulKarti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SchoolForms\OkulKarti.Designer.cs">
+      <DependentUpon>OkulKarti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SchoolForms\OkulKartlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SchoolForms\OkulKartlari.Designer.cs">
+      <DependentUpon>OkulKartlari.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IStatusbarAciklama.cs" />
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
@@ -136,6 +148,9 @@
     <Compile Include="UserControls\Controls\MyToggleSwitch.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\Grid\MyBandedGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Grid\MyGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForms\BaseKartlarForm.resx">
       <DependentUpon>BaseKartlarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SchoolForms\OkulKarti.resx">
+      <DependentUpon>OkulKarti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
