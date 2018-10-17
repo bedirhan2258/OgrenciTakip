@@ -28,169 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
-            this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
-            this.colId = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colKod = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.longNavigator1 = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
-            this.colOkulAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colIlAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
+            this.barInsert = new DevExpress.XtraBars.BarStaticItem();
+            this.barInsertAciklama = new DevExpress.XtraBars.BarStaticItem();
+            this.barDelete = new DevExpress.XtraBars.BarStaticItem();
+            this.barDeleteAciklama = new DevExpress.XtraBars.BarStaticItem();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             this.SuspendLayout();
             // 
-            // grid
+            // ribbonControl
             // 
-            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid.Location = new System.Drawing.Point(0, 102);
-            this.grid.MainView = this.tablo;
-            this.grid.MenuManager = this.ribbonControl;
-            this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(1102, 364);
-            this.grid.TabIndex = 2;
-            this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.tablo});
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barInsert,
+            this.barInsertAciklama,
+            this.barDelete,
+            this.barDeleteAciklama});
+            this.ribbonControl.MaxItemId = 16;
+            this.ribbonControl.Size = new System.Drawing.Size(1122, 102);
+            this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // tablo
+            // barInsert
             // 
-            this.tablo.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tablo.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.FooterPanel.Options.UseFont = true;
-            this.tablo.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.tablo.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.tablo.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.tablo.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tablo.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colKod,
-            this.colOkulAdi,
-            this.colIlAdi,
-            this.colIlce,
-            this.colAciklama});
-            this.tablo.GridControl = this.grid;
-            this.tablo.Name = "tablo";
-            this.tablo.OptionsMenu.EnableColumnMenu = false;
-            this.tablo.OptionsMenu.EnableFooterMenu = false;
-            this.tablo.OptionsMenu.EnableGroupPanelMenu = false;
-            this.tablo.OptionsNavigation.EnterMoveNextColumn = true;
-            this.tablo.OptionsPrint.AutoWidth = false;
-            this.tablo.OptionsPrint.PrintFooter = false;
-            this.tablo.OptionsPrint.PrintGroupFooter = false;
-            this.tablo.OptionsView.ColumnAutoWidth = false;
-            this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
-            this.tablo.OptionsView.RowAutoHeight = true;
-            this.tablo.OptionsView.ShowAutoFilterRow = true;
-            this.tablo.OptionsView.ShowGroupPanel = false;
-            this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
-            this.tablo.ViewCaption = "Okul Kartları";
+            this.barInsert.Caption = "Insert :";
+            this.barInsert.Id = 12;
+            this.barInsert.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barInsert.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.barInsert.ItemAppearance.Normal.Options.UseFont = true;
+            this.barInsert.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.barInsert.Name = "barInsert";
             // 
-            // colId
+            // barInsertAciklama
             // 
-            this.colId.Caption = "Id";
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.OptionsColumn.AllowEdit = false;
-            this.colId.OptionsColumn.ShowInCustomizationForm = false;
-            this.colId.StatusBarAciklama = null;
-            this.colId.StatusBarKisayol = null;
-            this.colId.StatusBarKisayolAciklama = null;
+            this.barInsertAciklama.Caption = "Yeni";
+            this.barInsertAciklama.Id = 13;
+            this.barInsertAciklama.Name = "barInsertAciklama";
             // 
-            // colKod
+            // barDelete
             // 
-            this.colKod.AppearanceCell.Options.UseTextOptions = true;
-            this.colKod.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colKod.Caption = "Kod";
-            this.colKod.FieldName = "Kod";
-            this.colKod.Name = "colKod";
-            this.colKod.OptionsColumn.AllowEdit = false;
-            this.colKod.StatusBarAciklama = null;
-            this.colKod.StatusBarKisayol = null;
-            this.colKod.StatusBarKisayolAciklama = null;
-            this.colKod.Visible = true;
-            this.colKod.VisibleIndex = 0;
-            this.colKod.Width = 110;
+            this.barDelete.Caption = "Delete :";
+            this.barDelete.Id = 14;
+            this.barDelete.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barDelete.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.barDelete.ItemAppearance.Normal.Options.UseFont = true;
+            this.barDelete.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.barDelete.Name = "barDelete";
             // 
-            // longNavigator1
+            // barDeleteAciklama
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 466);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1102, 24);
-            this.longNavigator1.TabIndex = 3;
-            // 
-            // colOkulAdi
-            // 
-            this.colOkulAdi.Caption = "Okul Adı";
-            this.colOkulAdi.FieldName = "OkulAdi";
-            this.colOkulAdi.Name = "colOkulAdi";
-            this.colOkulAdi.OptionsColumn.AllowEdit = false;
-            this.colOkulAdi.StatusBarAciklama = null;
-            this.colOkulAdi.StatusBarKisayol = null;
-            this.colOkulAdi.StatusBarKisayolAciklama = null;
-            this.colOkulAdi.Visible = true;
-            this.colOkulAdi.VisibleIndex = 1;
-            this.colOkulAdi.Width = 260;
-            // 
-            // colIlAdi
-            // 
-            this.colIlAdi.Caption = "İl";
-            this.colIlAdi.FieldName = "IlAdi";
-            this.colIlAdi.Name = "colIlAdi";
-            this.colIlAdi.OptionsColumn.AllowEdit = false;
-            this.colIlAdi.StatusBarAciklama = null;
-            this.colIlAdi.StatusBarKisayol = null;
-            this.colIlAdi.StatusBarKisayolAciklama = null;
-            this.colIlAdi.Visible = true;
-            this.colIlAdi.VisibleIndex = 2;
-            this.colIlAdi.Width = 130;
-            // 
-            // colIlce
-            // 
-            this.colIlce.Caption = "İlçe";
-            this.colIlce.FieldName = "IlceAdi";
-            this.colIlce.Name = "colIlce";
-            this.colIlce.OptionsColumn.AllowEdit = false;
-            this.colIlce.StatusBarAciklama = null;
-            this.colIlce.StatusBarKisayol = null;
-            this.colIlce.StatusBarKisayolAciklama = null;
-            this.colIlce.Visible = true;
-            this.colIlce.VisibleIndex = 3;
-            this.colIlce.Width = 130;
-            // 
-            // colAciklama
-            // 
-            this.colAciklama.Caption = "Açıklama";
-            this.colAciklama.FieldName = "Aciklama";
-            this.colAciklama.Name = "colAciklama";
-            this.colAciklama.OptionsColumn.AllowEdit = false;
-            this.colAciklama.StatusBarAciklama = null;
-            this.colAciklama.StatusBarKisayol = null;
-            this.colAciklama.StatusBarKisayolAciklama = null;
-            this.colAciklama.Visible = true;
-            this.colAciklama.VisibleIndex = 4;
-            this.colAciklama.Width = 450;
+            this.barDeleteAciklama.Caption = "Sil";
+            this.barDeleteAciklama.Id = 15;
+            this.barDeleteAciklama.Name = "barDeleteAciklama";
             // 
             // OkulKartlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 521);
-            this.Controls.Add(this.grid);
-            this.Controls.Add(this.longNavigator1);
+            this.ClientSize = new System.Drawing.Size(1122, 412);
             this.Name = "OkulKartlari";
-            this.Text = "Okul Kartları";
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
-            this.Controls.SetChildIndex(this.grid, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +101,9 @@
         private UserControls.Grid.MyGridColumn colIlAdi;
         private UserControls.Grid.MyGridColumn colIlce;
         private UserControls.Grid.MyGridColumn colAciklama;
+        private DevExpress.XtraBars.BarStaticItem barInsert;
+        private DevExpress.XtraBars.BarStaticItem barInsertAciklama;
+        private DevExpress.XtraBars.BarStaticItem barDelete;
+        private DevExpress.XtraBars.BarStaticItem barDeleteAciklama;
     }
 }
