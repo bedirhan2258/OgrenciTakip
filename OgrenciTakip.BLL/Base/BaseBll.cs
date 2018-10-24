@@ -8,6 +8,8 @@ using OgrenciTakip.DAL.Interfaces;
 using System.Linq.Expressions;
 using OgrenciTakip.BLL.Functions;
 using System.Linq;
+using OgrenciTakip.Common.Enum;
+using OgrenciTakip.Common.Message;
 
 namespace OgrenciTakip.BLL.Base
 {
@@ -44,7 +46,20 @@ namespace OgrenciTakip.BLL.Base
         protected bool BaseUpdate(BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _unitOfWork);
-            
+            //Validation
+            var degisenAlanlar = oldEntity.DegisenAlanlariGetir(currentEntity);
+            if (degisenAlanlar.Count == 0) return true;
+            _unitOfWork.Rep.Update(currentEntity.EntityConvert<T>(), degisenAlanlar);
+            return _unitOfWork.Save();
+        }
+
+        protected bool BaseDelete(BaseEntity entity, KartTuru kartTuru, bool messageVer = true)
+        {
+            GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _unitOfWork);
+            if(messageVer)
+            {
+                Messages.
+            }
         }
 
         #region Dispose

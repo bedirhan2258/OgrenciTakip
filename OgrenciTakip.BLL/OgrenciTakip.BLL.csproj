@@ -63,6 +63,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OgrenciTakip.Common\OgrenciTakip.Common.csproj">
+      <Project>{46AC19A6-5358-48C2-8139-C640A1C0CEE8}</Project>
+      <Name>OgrenciTakip.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OgrenciTakip.DAL\OgrenciTakip.DAL.csproj">
       <Project>{27F4B7FA-4430-4BF8-81A3-1D7340F692B3}</Project>
       <Name>OgrenciTakip.DAL</Name>
