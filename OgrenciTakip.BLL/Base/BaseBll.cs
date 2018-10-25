@@ -8,8 +8,9 @@ using OgrenciTakip.DAL.Interfaces;
 using System.Linq.Expressions;
 using OgrenciTakip.BLL.Functions;
 using System.Linq;
-using OgrenciTakip.Common.Enum;
 using OgrenciTakip.Common.Message;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
 
 namespace OgrenciTakip.BLL.Base
 {
@@ -56,33 +57,20 @@ namespace OgrenciTakip.BLL.Base
         protected bool BaseDelete(BaseEntity entity, KartTuru kartTuru, bool messageVer = true)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _unitOfWork);
-            if(messageVer)
-            {
-                Messages.
-            }
+            if (messageVer)
+                if (Messages.SilMesaj(kartTuru.ToName()) != DialogResult.Yes) return false;
+
+            _unitOfWork.Rep.Delete(entity.EntityConvert<T>());
+            return _unitOfWork.Save();
         }
 
         #region Dispose
 
-        private bool _disposedValue = false;
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!_disposedValue)
-            {
-                if (disposing)
-                {
-                    _context.Dispose();
-                }
-                _disposedValue = true;
-            }
-        }
         public void Dispose()
         {
-            Dispose(true);
-            GC.SuppressFinalize(this);
+            _ctrl?.Dispose();
+            _unitOfWork?.Dispose();
         }
-
         #endregion
     }
 }

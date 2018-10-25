@@ -1,7 +1,8 @@
 ﻿
 using System.ComponentModel;
 
-namespace OgrenciTakip.Common.Enum
+namespace OgrenciTakip.Common.Enums
+
 {
     //Enumlar varsayılan olarak int olarak kayıt edilir.
     public enum KartTuru : byte

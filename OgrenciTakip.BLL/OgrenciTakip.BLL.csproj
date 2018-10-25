@@ -55,6 +55,7 @@
     <Compile Include="Base\BaseBll.cs" />
     <Compile Include="Functions\Convert.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
+    <Compile Include="General\OkulBLL.cs" />
     <Compile Include="Interfaces\IBaseBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
