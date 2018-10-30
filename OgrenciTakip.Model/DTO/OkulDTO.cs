@@ -1,12 +1,13 @@
 ﻿
-
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciTakip.Model.DTO
 {
-    //Burada attribute olacak.
+    //NotMapped ile OkulS class'ı 'nın alanları dahil etmiyoruz.
 
+    [NotMapped]
     public class OkulS : Okul
     {
         public string IlAdi { get; set; }

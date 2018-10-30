@@ -47,7 +47,16 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 17.1\Components\Bin\Framework\DevExpress.XtraLayout.v17.1.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -83,6 +92,12 @@
     </Compile>
     <Compile Include="Forms\SchoolForms\OkulKartlari.Designer.cs">
       <DependentUpon>OkulKartlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IStatusbarAciklama.cs" />
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
@@ -184,6 +199,9 @@
     <EmbeddedResource Include="Forms\SchoolForms\OkulKartlari.resx">
       <DependentUpon>OkulKartlari.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -204,6 +222,7 @@
     <EmbeddedResource Include="UserControls\Navigators\SmallNavigator.resx">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -288,6 +307,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\article_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OgrenciTakip.BLL\OgrenciTakip.BLL.csproj">
+      <Project>{667ee83a-9657-4eaa-a77d-b67145704552}</Project>
+      <Name>OgrenciTakip.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OgrenciTakip.Model\OgrenciTakip.Model.csproj">
+      <Project>{0734F5CF-5794-4E0A-9B41-17B3715278F8}</Project>
+      <Name>OgrenciTakip.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

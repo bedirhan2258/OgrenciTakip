@@ -1,8 +1,5 @@
-﻿using OgrenciTakip.UI.Win.Forms.BaseForms;
+﻿using OgrenciTakip.UI.Win.GeneralForms;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win
@@ -17,7 +14,7 @@ namespace OgrenciTakip.UI.Win
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaseKartForm());
+            Application.Run(new AnaForm());
         }
     }
 }

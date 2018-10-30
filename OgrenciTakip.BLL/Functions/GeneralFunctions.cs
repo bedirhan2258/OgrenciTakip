@@ -13,7 +13,7 @@ namespace OgrenciTakip.BLL.Functions
     {
         public static string GetConnectionString()
         {
-            return ConfigurationManager.ConnectionStrings["OgrenciTakipXontext"].ConnectionString;
+            return ConfigurationManager.ConnectionStrings["OgrenciTakipContext"].ConnectionString;
         }
 
         public static List<string> DegisenAlanlariGetir<T>(this T oldEntity, T currentEntity)

@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
-
+using System.Linq;
 namespace OgrenciTakip.BLL.General
 {
     public class OkulBLL : BaseBll<Okul, OgrenciTakipContext>
@@ -41,7 +41,7 @@ namespace OgrenciTakip.BLL.General
                 IlAdi = x.Il.IlAdi,
                 IlceAdi = x.Ilce.IlceAdi,
                 Aciklama = x.Aciklama
-            });
+            }).OrderBy(x => x.Kod).ToList();
         }
         public bool Insert(BaseEntity entity)
         {
