@@ -38,7 +38,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         {
             if (e.Item == btnOkulKartlari)
             {
-                OkulKartlari frmOkulKartlari = new OkulKartlari();
+                OkulListForm frmOkulKartlari = new OkulListForm();
                 frmOkulKartlari.MdiParent = ActiveForm;
                 frmOkulKartlari.Show();
             }

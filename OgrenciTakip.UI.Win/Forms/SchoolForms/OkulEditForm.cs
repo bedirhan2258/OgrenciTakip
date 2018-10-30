@@ -2,9 +2,9 @@
 
 namespace OgrenciTakip.UI.Win.Forms.SchoolForms
 {
-    public partial class OkulKarti : BaseKartForm
+    public partial class OkulEditForm : BaseEditForm
     {
-        public OkulKarti()
+        public OkulEditForm()
         {
             InitializeComponent();
         }

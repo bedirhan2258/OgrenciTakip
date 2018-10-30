@@ -1,6 +1,6 @@
 ﻿namespace OgrenciTakip.UI.Win.Forms.SchoolForms
 {
-    partial class OkulKartlari
+    partial class OkulListForm
     {
         /// <summary>
         /// Required designer variable.
