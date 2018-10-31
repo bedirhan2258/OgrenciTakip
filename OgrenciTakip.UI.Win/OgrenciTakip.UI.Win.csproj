@@ -93,6 +93,8 @@
     <Compile Include="Forms\SchoolForms\OkulListForm.Designer.cs">
       <DependentUpon>OkulListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\FilterFunctions.cs" />
+    <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>

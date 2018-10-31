@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.longNavigator1 = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -48,13 +48,13 @@
             this.ribbonControl.Size = new System.Drawing.Size(1340, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator1.Location = new System.Drawing.Point(0, 577);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1340, 24);
-            this.longNavigator1.TabIndex = 3;
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 577);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1340, 24);
+            this.longNavigator.TabIndex = 3;
             // 
             // grid
             // 
@@ -185,15 +185,15 @@
             this.colAciklama.VisibleIndex = 4;
             this.colAciklama.Width = 450;
             // 
-            // OkulKartlari
+            // OkulListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1340, 632);
             this.Controls.Add(this.grid);
-            this.Controls.Add(this.longNavigator1);
-            this.Name = "OkulKartlari";
+            this.Controls.Add(this.longNavigator);
+            this.Name = "OkulListForm";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
-            this.Controls.SetChildIndex(this.longNavigator1, 0);
+            this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
@@ -203,7 +203,7 @@
 
         }
 
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colId;

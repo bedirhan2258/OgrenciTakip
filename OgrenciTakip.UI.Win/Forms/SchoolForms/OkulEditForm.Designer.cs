@@ -49,7 +49,7 @@
             this.txtIl = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtAciklama = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -203,7 +203,7 @@
             this.txtIl,
             this.layoutControlItem4,
             this.layoutControlItem6,
-            this.layoutControlItem5});
+            this.txtAciklama});
             this.layoutControlGroup.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup.Name = "layoutControlGroup";
@@ -304,29 +304,29 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
-            // layoutControlItem5
+            // txtAciklama
             // 
-            this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem5.Control = this.memoAciklama;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 4;
-            this.layoutControlItem5.Size = new System.Drawing.Size(370, 60);
-            this.layoutControlItem5.Text = "Açıklama";
-            this.layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(41, 13);
-            this.layoutControlItem5.TextToControlDistance = 10;
+            this.txtAciklama.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.txtAciklama.AppearanceItemCaption.Options.UseForeColor = true;
+            this.txtAciklama.Control = this.memoAciklama;
+            this.txtAciklama.Location = new System.Drawing.Point(0, 96);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.txtAciklama.OptionsTableLayoutItem.RowIndex = 4;
+            this.txtAciklama.Size = new System.Drawing.Size(370, 60);
+            this.txtAciklama.Text = "Açıklama";
+            this.txtAciklama.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.txtAciklama.TextSize = new System.Drawing.Size(41, 13);
+            this.txtAciklama.TextToControlDistance = 10;
             // 
-            // OkulKarti
+            // OkulEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 309);
             this.Controls.Add(this.myDataLayoutControl);
             this.MinimumSize = new System.Drawing.Size(400, 310);
-            this.Name = "OkulKarti";
+            this.Name = "OkulEditForm";
             this.Text = "Okul Kartı";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
@@ -345,15 +345,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtIl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
         private UserControls.Controls.MyToggleSwitch tglDurum;
         private UserControls.Controls.MyMemoEdit memoAciklama;
         private UserControls.Controls.MyButtonEdit btnIlce;
@@ -363,9 +361,10 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem txtIl;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem txtAciklama;
+        public UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
+        public DevExpress.XtraLayout.LayoutControlItem txtIl;
     }
 }
