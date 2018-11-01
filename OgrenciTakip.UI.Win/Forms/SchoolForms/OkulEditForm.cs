@@ -50,7 +50,7 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
                 Aciklama = memoAciklama.Text,
                 Durum = tglDurum.IsOn
             };
-
+            ButonEnabledDurumu();
         }
     }
 }

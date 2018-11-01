@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Enums\IslemTuru.cs" />
     <Compile Include="Enums\KartTuru.cs" />
+    <Compile Include="Enums\VeriDegisimYeri.cs" />
     <Compile Include="Functions\EnumFunctions.cs" />
     <Compile Include="Message\Messages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

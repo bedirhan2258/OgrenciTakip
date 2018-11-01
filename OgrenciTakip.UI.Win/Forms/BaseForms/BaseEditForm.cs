@@ -5,6 +5,7 @@ using DevExpress.XtraBars.Ribbon;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities.Base;
+using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 
 namespace OgrenciTakip.UI.Win.Forms.BaseForms
@@ -27,10 +28,24 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         }
         protected void EventsLoad()
         {
+            //Button Events
             foreach (BarItem button in ribbonControl.Items)
             {
                 button.ItemClick += Button_ItemClick;
             }
+            //Form Events
+            Load += BaseEditForm_Load;
+        }
+
+        private void BaseEditForm_Load(object sender, EventArgs e)
+        {
+            isLoaded = true;
+            GuncelNesneOlustur();
+            //SablonYukle();
+            //ButtonGizleGoster();
+            id = islemTuru.IdOlustur(oldEntity);
+            //Guncelleme yapılacak.
+
         }
 
         private void EntityDelete()
@@ -55,10 +70,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual void NesneyiKontrollereBagla() { }
 
         protected virtual void GuncelNesneOlustur() { }
-        protected internal virtual void ButonEnableDurumu()
+        protected internal virtual void ButonEnabledDurumu()
         {
             if (!isLoaded) return;
-
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy);
         }
 
         private void Button_ItemClick(object sender, ItemClickEventArgs e)
