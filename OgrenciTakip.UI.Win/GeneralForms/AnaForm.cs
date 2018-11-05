@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraBars;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
+using OgrenciTakip.UI.Win.Show;
+using OgrenciTakip.Common.Enums;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -38,9 +40,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         {
             if (e.Item == btnOkulKartlari)
             {
-                OkulListForm frmOkulKartlari = new OkulListForm();
-                frmOkulKartlari.MdiParent = ActiveForm;
-                frmOkulKartlari.Show();
+                ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
             }
         }
     }

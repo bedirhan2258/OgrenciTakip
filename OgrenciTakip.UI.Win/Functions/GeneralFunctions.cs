@@ -91,14 +91,15 @@ namespace OgrenciTakip.UI.Win.Functions
             }
             string Id()
             {
-                var yil = SifirEkle(DateTime.Now.Date.Year.ToString());
+                var yil = DateTime.Now.Date.Year.ToString();
                 var ay = SifirEkle(DateTime.Now.Date.Month.ToString());
                 var gun = SifirEkle(DateTime.Now.Date.Day.ToString());
-                var saat = SifirEkle(DateTime.Now.Date.Hour.ToString());
-                var dakika = SifirEkle(DateTime.Now.Date.Minute.ToString());
-                var saniye = SifirEkle(DateTime.Now.Date.Second.ToString());
-                var milisaniye = UcBasamakYap(DateTime.Now.Date.Millisecond.ToString());
+                var saat = SifirEkle(DateTime.Now.Hour.ToString());
+                var dakika = SifirEkle(DateTime.Now.Minute.ToString());
+                var saniye = SifirEkle(DateTime.Now.Second.ToString());
+                var milisaniye = UcBasamakYap(DateTime.Now.Millisecond.ToString());
                 var random = SifirEkle(new Random().Next(0, 99).ToString());
+
                 return yil + ay + gun + saat + dakika + saniye + milisaniye + random;
             }
             return islemTuru == IslemTuru.EntityUpdate ? selectedEnttiy.Id : long.Parse(Id());

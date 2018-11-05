@@ -9,9 +9,11 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using System.Linq;
+using OgrenciTakip.BLL.Interfaces;
+
 namespace OgrenciTakip.BLL.General
 {
-    public class OkulBLL : BaseBll<Okul, OgrenciTakipContext>
+    public class OkulBLL : BaseBll<Okul, OgrenciTakipContext>,IBaseGenelBll
     {
         public OkulBLL() { }
         public OkulBLL(Control ctrl) : base(ctrl) { }
@@ -54,6 +56,11 @@ namespace OgrenciTakip.BLL.General
         public bool Delete(BaseEntity entity)
         {
             return BaseDelete(entity, KartTuru.Okul);
+        }
+
+        public string YeniKodVer()
+        {
+            throw new NotImplementedException();
         }
     }
 }

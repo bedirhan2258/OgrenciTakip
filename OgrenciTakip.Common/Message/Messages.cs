@@ -29,9 +29,25 @@ namespace OgrenciTakip.Common.Message
         {
             return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi}.. Silinecektir.Onaylıyor musunuz?", "Silme Onayı");
         }
+
+        public static DialogResult EvetSeciliEvetHayirIptal(string mesaj, string baslik)
+        {
+            return XtraMessageBox.Show(mesaj, baslik, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+        }
+        public static DialogResult KapanisMesaj()
+        {
+            return EvetSeciliEvetHayirIptal("Yapılan Değişiklikler Kayıt Edilsin mi?", "Çıkış Onay");
+        }
+
+        public static DialogResult KayitMesaj()
+        {
+            return EvetSeciliEvetHayir("Yapılan Değişiklikler Kayıt Edilsin mi?", "Kayıt Onay");
+        }
+
         public static void KartSecmemeUyariMesaji()
         {
             UyariMesaji("Lütfen Bir Kart Seçiniz.");
         }
+
     }
 }

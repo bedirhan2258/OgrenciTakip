@@ -24,6 +24,11 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
         protected internal override void Yukle()
         {
             oldEntity = islemTuru == IslemTuru.EntityInsert ? new OkulS() : ((OkulBLL)bll).Single(FilterFunctions.Filter<Okul>(id));
+            NesneyiKontrollereBagla();
+
+            if (islemTuru != IslemTuru.EntityInsert) return;
+            txtKod.Text = ((OkulBLL)bll).YeniKodVer();
+            txtOkulAdi.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {

@@ -1,9 +1,10 @@
-﻿
-using System;
+﻿using System;
+using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.UserControls.Controls;
@@ -14,13 +15,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
     {
         protected internal IslemTuru islemTuru;
         protected internal long id;
-        protected internal bool refresh;
+        protected internal bool refreshYapilacak;
         protected MyDataLayoutControl dataLayoutControl;
         protected IBaseBll bll;
         protected KartTuru kartTuru;
         protected BaseEntity oldEntity;
         protected BaseEntity currentEnttiy;
         protected bool isLoaded;
+        protected bool kayitSonrasiFormuKapat = true;
 
         public BaseEditForm()
         {
@@ -58,9 +60,73 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             throw new NotImplementedException();
         }
 
-        private void Kaydet(bool v)
+        private bool Kaydet(bool kapanis)
         {
-            throw new NotImplementedException();
+            bool KayitIslemi()
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                switch (islemTuru)
+                {
+                    case IslemTuru.EntityInsert:
+                        if (EntityInsert())
+                            return KayitSonrasiIslemler();
+                        break;
+
+                    case IslemTuru.EntityUpdate:
+                        if (EntityUpdate())
+                            return KayitSonrasiIslemler();
+                        break;
+
+                }
+                bool KayitSonrasiIslemler()
+                {
+                    oldEntity = currentEnttiy;
+                    refreshYapilacak = true;
+                    ButonEnabledDurumu();
+                    if (kayitSonrasiFormuKapat)
+                    {
+                        Close();
+                    }
+                    else
+                    {
+                        islemTuru = islemTuru == IslemTuru.EntityInsert ? IslemTuru.EntityUpdate : islemTuru;
+                    }
+                    return true;
+                }
+                return false;
+            }
+
+
+            var result = kapanis ? Messages.KapanisMesaj() : Messages.KayitMesaj();
+            switch (result)
+            {
+                case System.Windows.Forms.DialogResult.Yes:
+                    return KayitIslemi();
+
+                case System.Windows.Forms.DialogResult.No:
+                    if (kapanis)
+                    {
+                        btnKaydet.Enabled = false;
+                    }
+                    return true;
+
+                case System.Windows.Forms.DialogResult.Cancel:
+                    return true;
+
+            }
+
+            return false;
+        }
+
+        protected virtual bool EntityUpdate()
+        {
+            return ((IBaseGenelBll)bll).Update(oldEntity, currentEnttiy);
+        }
+
+        protected virtual bool EntityInsert()
+        {
+            return ((IBaseGenelBll)bll).Insert(currentEnttiy);
         }
 
         protected internal virtual void Yukle()
