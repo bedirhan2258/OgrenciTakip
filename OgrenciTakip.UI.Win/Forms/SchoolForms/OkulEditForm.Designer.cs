@@ -88,7 +88,7 @@
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.layoutControlGroup;
             this.myDataLayoutControl.Size = new System.Drawing.Size(390, 176);
-            this.myDataLayoutControl.TabIndex = 2;
+            this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
             // tglDurum
@@ -107,7 +107,7 @@
             this.tglDurum.Size = new System.Drawing.Size(97, 20);
             this.tglDurum.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
             this.tglDurum.StyleController = this.myDataLayoutControl;
-            this.tglDurum.TabIndex = 9;
+            this.tglDurum.TabIndex = 4;
             // 
             // memoAciklama
             // 
@@ -115,13 +115,13 @@
             this.memoAciklama.Location = new System.Drawing.Point(63, 108);
             this.memoAciklama.MenuManager = this.ribbonControl;
             this.memoAciklama.Name = "memoAciklama";
-            this.memoAciklama.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
+            this.memoAciklama.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.memoAciklama.Properties.Appearance.Options.UseBackColor = true;
             this.memoAciklama.Properties.MaxLength = 500;
             this.memoAciklama.Size = new System.Drawing.Size(315, 56);
             this.memoAciklama.StatusBarAciklama = "Aciklama Griniz.";
             this.memoAciklama.StyleController = this.myDataLayoutControl;
-            this.memoAciklama.TabIndex = 8;
+            this.memoAciklama.TabIndex = 3;
             // 
             // btnIlce
             // 
@@ -140,7 +140,7 @@
             this.btnIlce.StatusBarKisayol = "F4 :";
             this.btnIlce.StatusBarKisayolAciklama = null;
             this.btnIlce.StyleController = this.myDataLayoutControl;
-            this.btnIlce.TabIndex = 7;
+            this.btnIlce.TabIndex = 2;
             // 
             // btnIl
             // 
@@ -159,7 +159,7 @@
             this.btnIl.StatusBarKisayol = "F4 :";
             this.btnIl.StatusBarKisayolAciklama = null;
             this.btnIl.StyleController = this.myDataLayoutControl;
-            this.btnIl.TabIndex = 6;
+            this.btnIl.TabIndex = 1;
             // 
             // txtOkulAdi
             // 
@@ -173,7 +173,7 @@
             this.txtOkulAdi.Size = new System.Drawing.Size(315, 20);
             this.txtOkulAdi.StatusBarAciklama = null;
             this.txtOkulAdi.StyleController = this.myDataLayoutControl;
-            this.txtOkulAdi.TabIndex = 5;
+            this.txtOkulAdi.TabIndex = 0;
             // 
             // txtKod
             // 
@@ -191,7 +191,7 @@
             this.txtKod.Size = new System.Drawing.Size(145, 20);
             this.txtKod.StatusBarAciklama = "Kod Giriniz";
             this.txtKod.StyleController = this.myDataLayoutControl;
-            this.txtKod.TabIndex = 4;
+            this.txtKod.TabIndex = 5;
             // 
             // layoutControlGroup
             // 

@@ -63,7 +63,12 @@ namespace OgrenciTakip.BLL.Base
             _unitOfWork.Rep.Delete(entity.EntityConvert<T>());
             return _unitOfWork.Save();
         }
+        protected string BaseYeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter, Expression<Func<T, bool>> where = null)
+        {
 
+            GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _unitOfWork);
+            return _unitOfWork.Rep.YeniKodVer(kartTuru, filter, where);
+        }
         #region Dispose
 
         public void Dispose()

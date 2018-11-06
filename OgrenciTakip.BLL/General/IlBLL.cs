@@ -1,48 +1,44 @@
-﻿using OgrenciTakip.BLL.Base;
+﻿
+using OgrenciTakip.BLL.Base;
+using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Data.Context;
-using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Windows.Forms;
-using System.Linq;
-using OgrenciTakip.BLL.Interfaces;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class OkulBLL : BaseBll<Okul, OgrenciTakipContext>,IBaseGenelBll
+    public class IlBLL : BaseBll<Il, OgrenciTakipContext>, IBaseGenelBll
     {
-        public OkulBLL() { }
-        public OkulBLL(Control ctrl) : base(ctrl) { }
+        public IlBLL() { }
+        public IlBLL(Control ctrl) : base(ctrl) { }
 
-        public BaseEntity Single(Expression<Func<Okul, bool>> filter)
+        public BaseEntity Single(Expression<Func<Il, bool>> filter)
         {
-            return BaseSingle(filter, x => new OkulS
+            return BaseSingle(filter, x => new Il
             {
                 Id = x.Id,
                 Kod = x.Kod,
-                OkulAdi = x.OkulAdi,
-                IlId = x.IlId,
-                IlAdi = x.Il.IlAdi,
-                IlceId = x.IlceId,
-                IlceAdi = x.Ilce.IlceAdi,
+                IlAdi = x.IlAdi,
                 Aciklama = x.Aciklama,
                 Durum = x.Durum
             });
         }
-        public IEnumerable<BaseEntity> List(Expression<Func<Okul, bool>> filter)
+        public IEnumerable<BaseEntity> List(Expression<Func<Il, bool>> filter)
         {
-            return BaseList(filter, x => new OkulL
+            return BaseList(filter, x => new Il
             {
+
                 Id = x.Id,
                 Kod = x.Kod,
-                OkulAdi = x.OkulAdi,
-                IlAdi = x.Il.IlAdi,
-                IlceAdi = x.Ilce.IlceAdi,
+                IlAdi = x.IlAdi,
                 Aciklama = x.Aciklama
+
             }).OrderBy(x => x.Kod).ToList();
         }
         public bool Insert(BaseEntity entity)
@@ -55,12 +51,12 @@ namespace OgrenciTakip.BLL.General
         }
         public bool Delete(BaseEntity entity)
         {
-            return BaseDelete(entity, KartTuru.Okul);
+            return BaseDelete(entity, KartTuru.Il);
         }
 
         public string YeniKodVer()
         {
-            return BaseYeniKodVer(KartTuru.Okul, x => x.Kod);
+            return BaseYeniKodVer(KartTuru.Il, x => x.Kod);
         }
     }
 }

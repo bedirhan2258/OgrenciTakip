@@ -18,7 +18,7 @@ namespace OgrenciTakip.UI.Win.Show
                 frm.id = id;
                 frm.Yukle();
                 frm.ShowDialog();
-                return frm.refresh ? frm.id : 0;
+                return frm.refreshYapilacak ? frm.id : 0;
             }
         }
     }
