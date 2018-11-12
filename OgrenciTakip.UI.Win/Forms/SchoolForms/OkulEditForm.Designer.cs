@@ -136,9 +136,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnIlce.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnIlce.Size = new System.Drawing.Size(145, 20);
-            this.btnIlce.StatusBarAciklama = null;
+            this.btnIlce.StatusBarAciklama = "İlçe Seçiniz.";
             this.btnIlce.StatusBarKisayol = "F4 :";
-            this.btnIlce.StatusBarKisayolAciklama = null;
+            this.btnIlce.StatusBarKisayolAciklama = "İlçe Seç";
             this.btnIlce.StyleController = this.myDataLayoutControl;
             this.btnIlce.TabIndex = 2;
             // 
@@ -155,9 +155,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.btnIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.btnIl.Size = new System.Drawing.Size(145, 20);
-            this.btnIl.StatusBarAciklama = null;
+            this.btnIl.StatusBarAciklama = "İl Seçiniz";
             this.btnIl.StatusBarKisayol = "F4 :";
-            this.btnIl.StatusBarKisayolAciklama = null;
+            this.btnIl.StatusBarKisayolAciklama = "İl Seç";
             this.btnIl.StyleController = this.myDataLayoutControl;
             this.btnIl.TabIndex = 1;
             // 
@@ -171,7 +171,7 @@
             this.txtOkulAdi.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtOkulAdi.Properties.MaxLength = 50;
             this.txtOkulAdi.Size = new System.Drawing.Size(315, 20);
-            this.txtOkulAdi.StatusBarAciklama = null;
+            this.txtOkulAdi.StatusBarAciklama = "Okul Adi Giriniz.";
             this.txtOkulAdi.StyleController = this.myDataLayoutControl;
             this.txtOkulAdi.TabIndex = 0;
             // 
