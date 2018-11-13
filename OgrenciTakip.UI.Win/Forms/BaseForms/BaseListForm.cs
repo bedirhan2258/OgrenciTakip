@@ -22,6 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal BaseEntity selectedEntity;
         protected IBaseBll bll;
         protected ControlNavigator navigator;
+        protected internal long? seciliGelecekId;
 
         public BaseListForm()
         {
@@ -64,7 +65,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         }
 
-        private void ShowEditForm(long id)
+        protected virtual void ShowEditForm(long id)
         {
             var result = formShow.ShowDialogEditForms(kartTuru, id);
 

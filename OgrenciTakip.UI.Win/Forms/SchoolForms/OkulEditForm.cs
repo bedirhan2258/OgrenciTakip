@@ -57,5 +57,9 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
             };
             ButonEnabledDurumu();
         }
+        protected override void SecimYap(object sender)
+        {
+            
+        }
     }
 }

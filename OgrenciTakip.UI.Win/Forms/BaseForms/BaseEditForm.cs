@@ -49,7 +49,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             //Guncelleme yapılacak.
 
         }
-
+        protected virtual void SecimYap(object sender) { }
         private void EntityDelete()
         {
             throw new NotImplementedException();
