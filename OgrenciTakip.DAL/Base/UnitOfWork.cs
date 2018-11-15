@@ -7,6 +7,8 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
 using OgrenciTakip.Common.Message;
+using System.Data.Entity.Validation;
+using System.Text;
 
 namespace OgrenciTakip.DAL.Base
 {
@@ -61,12 +63,24 @@ namespace OgrenciTakip.DAL.Base
                     }
                     return false;
                 }
-
+                //Messages.HataMesaji(ex.Message);
+                //return false;
             }
-            catch (Exception ex)
+            catch (DbEntityValidationException dbValEx)
             {
-                Messages.HataMesaji(ex.Message);
-                return false;
+                var outputLines = new StringBuilder();
+                foreach (var eve in dbValEx.EntityValidationErrors)
+                {
+                    outputLines.AppendFormat("{0}:Entity of type {1} in state {2} has the following validatin errors:", DateTime.Now, eve.Entry.Entity.GetType().Name, eve.Entry);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        outputLines.AppendFormat("-Property {0},Error:1{1}", ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+
+                //Tools.Notify(this, outputLines.ToString(),"error");
+                throw new DbEntityValidationException(string.Format("Validation errorsrn{0}"
+                 , outputLines.ToString()), dbValEx);
             }
             return true;
         }

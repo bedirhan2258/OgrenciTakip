@@ -20,26 +20,11 @@ namespace OgrenciTakip.BLL.General
 
         public BaseEntity Single(Expression<Func<Il, bool>> filter)
         {
-            return BaseSingle(filter, x => new Il
-            {
-                Id = x.Id,
-                Kod = x.Kod,
-                IlAdi = x.IlAdi,
-                Aciklama = x.Aciklama,
-                Durum = x.Durum
-            });
+            return BaseSingle(filter, x => x);
         }
         public IEnumerable<BaseEntity> List(Expression<Func<Il, bool>> filter)
         {
-            return BaseList(filter, x => new Il
-            {
-
-                Id = x.Id,
-                Kod = x.Kod,
-                IlAdi = x.IlAdi,
-                Aciklama = x.Aciklama
-
-            }).OrderBy(x => x.Kod).ToList();
+            return BaseList(filter, x => x).OrderBy(x => x.Kod).ToList();
         }
         public bool Insert(BaseEntity entity)
         {

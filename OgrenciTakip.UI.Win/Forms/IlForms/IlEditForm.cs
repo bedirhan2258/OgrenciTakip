@@ -25,7 +25,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlForms
             NesneyiKontrollereBagla();
 
             if (islemTuru != IslemTuru.EntityInsert) return;
-            txtKod.Text = ((OkulBLL)bll).YeniKodVer();
+            txtKod.Text = ((IlBLL)bll).YeniKodVer();
             txtIlAdi.Focus();
         }
         protected override void NesneyiKontrollereBagla()
@@ -39,10 +39,11 @@ namespace OgrenciTakip.UI.Win.Forms.IlForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Okul
+            currentEnttiy = new Il
             {
                 Id = id,
                 Kod = txtKod.Text,
+                IlAdi = txtIlAdi.Text,
                 Aciklama = memoAciklama.Text,
                 Durum = tglDurum.IsOn
             };

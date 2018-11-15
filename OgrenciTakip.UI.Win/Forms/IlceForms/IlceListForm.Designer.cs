@@ -124,7 +124,7 @@
             // colIlceAdi
             // 
             this.colIlceAdi.Caption = "İlçe Adı";
-            this.colIlceAdi.FieldName = "IlceAdı";
+            this.colIlceAdi.FieldName = "IlceAdi";
             this.colIlceAdi.Name = "colIlceAdi";
             this.colIlceAdi.OptionsColumn.AllowEdit = false;
             this.colIlceAdi.StatusBarAciklama = null;

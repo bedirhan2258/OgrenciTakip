@@ -38,34 +38,34 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.tglDurum = new OgrenciTakip.UI.Win.UserControls.Controls.MyToggleSwitch();
-            this.memoAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
-            this.btnIlce = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
-            this.btnIl = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
+            this.txtIlce = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtIl = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtOkulAdi = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtKod = new OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
             this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtIl = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControl = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtAciklama = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControl3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoAciklama.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIlce.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIlce.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOkulAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -77,9 +77,9 @@
             // myDataLayoutControl
             // 
             this.myDataLayoutControl.Controls.Add(this.tglDurum);
-            this.myDataLayoutControl.Controls.Add(this.memoAciklama);
-            this.myDataLayoutControl.Controls.Add(this.btnIlce);
-            this.myDataLayoutControl.Controls.Add(this.btnIl);
+            this.myDataLayoutControl.Controls.Add(this.txtAciklama);
+            this.myDataLayoutControl.Controls.Add(this.txtIlce);
+            this.myDataLayoutControl.Controls.Add(this.txtIl);
             this.myDataLayoutControl.Controls.Add(this.txtOkulAdi);
             this.myDataLayoutControl.Controls.Add(this.txtKod);
             this.myDataLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,57 +109,57 @@
             this.tglDurum.StyleController = this.myDataLayoutControl;
             this.tglDurum.TabIndex = 4;
             // 
-            // memoAciklama
+            // txtAciklama
             // 
-            this.memoAciklama.EnterMoveNextControl = true;
-            this.memoAciklama.Location = new System.Drawing.Point(63, 108);
-            this.memoAciklama.MenuManager = this.ribbonControl;
-            this.memoAciklama.Name = "memoAciklama";
-            this.memoAciklama.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.memoAciklama.Properties.Appearance.Options.UseBackColor = true;
-            this.memoAciklama.Properties.MaxLength = 500;
-            this.memoAciklama.Size = new System.Drawing.Size(315, 56);
-            this.memoAciklama.StatusBarAciklama = "Aciklama Griniz.";
-            this.memoAciklama.StyleController = this.myDataLayoutControl;
-            this.memoAciklama.TabIndex = 3;
+            this.txtAciklama.EnterMoveNextControl = true;
+            this.txtAciklama.Location = new System.Drawing.Point(63, 108);
+            this.txtAciklama.MenuManager = this.ribbonControl;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtAciklama.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAciklama.Properties.MaxLength = 500;
+            this.txtAciklama.Size = new System.Drawing.Size(315, 56);
+            this.txtAciklama.StatusBarAciklama = "Aciklama Griniz.";
+            this.txtAciklama.StyleController = this.myDataLayoutControl;
+            this.txtAciklama.TabIndex = 3;
             // 
-            // btnIlce
+            // txtIlce
             // 
-            this.btnIlce.EnterMoveNextControl = true;
-            this.btnIlce.Id = null;
-            this.btnIlce.Location = new System.Drawing.Point(63, 84);
-            this.btnIlce.MenuManager = this.ribbonControl;
-            this.btnIlce.Name = "btnIlce";
-            this.btnIlce.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.btnIlce.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.btnIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtIlce.EnterMoveNextControl = true;
+            this.txtIlce.Id = null;
+            this.txtIlce.Location = new System.Drawing.Point(63, 84);
+            this.txtIlce.MenuManager = this.ribbonControl;
+            this.txtIlce.Name = "txtIlce";
+            this.txtIlce.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtIlce.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btnIlce.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.btnIlce.Size = new System.Drawing.Size(145, 20);
-            this.btnIlce.StatusBarAciklama = "İlçe Seçiniz.";
-            this.btnIlce.StatusBarKisayol = "F4 :";
-            this.btnIlce.StatusBarKisayolAciklama = "İlçe Seç";
-            this.btnIlce.StyleController = this.myDataLayoutControl;
-            this.btnIlce.TabIndex = 2;
+            this.txtIlce.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtIlce.Size = new System.Drawing.Size(145, 20);
+            this.txtIlce.StatusBarAciklama = "İlçe Seçiniz.";
+            this.txtIlce.StatusBarKisayol = "F4 :";
+            this.txtIlce.StatusBarKisayolAciklama = "İlçe Seç";
+            this.txtIlce.StyleController = this.myDataLayoutControl;
+            this.txtIlce.TabIndex = 2;
             // 
-            // btnIl
+            // txtIl
             // 
-            this.btnIl.EnterMoveNextControl = true;
-            this.btnIl.Id = null;
-            this.btnIl.Location = new System.Drawing.Point(63, 60);
-            this.btnIl.MenuManager = this.ribbonControl;
-            this.btnIl.Name = "btnIl";
-            this.btnIl.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.btnIl.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.btnIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtIl.EnterMoveNextControl = true;
+            this.txtIl.Id = null;
+            this.txtIl.Location = new System.Drawing.Point(63, 60);
+            this.txtIl.MenuManager = this.ribbonControl;
+            this.txtIl.Name = "txtIl";
+            this.txtIl.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtIl.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.btnIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.btnIl.Size = new System.Drawing.Size(145, 20);
-            this.btnIl.StatusBarAciklama = "İl Seçiniz";
-            this.btnIl.StatusBarKisayol = "F4 :";
-            this.btnIl.StatusBarKisayolAciklama = "İl Seç";
-            this.btnIl.StyleController = this.myDataLayoutControl;
-            this.btnIl.TabIndex = 1;
+            this.txtIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtIl.Size = new System.Drawing.Size(145, 20);
+            this.txtIl.StatusBarAciklama = "İl Seçiniz";
+            this.txtIl.StatusBarKisayol = "F4 :";
+            this.txtIl.StatusBarKisayolAciklama = "İl Seç";
+            this.txtIl.StyleController = this.myDataLayoutControl;
+            this.txtIl.TabIndex = 1;
             // 
             // txtOkulAdi
             // 
@@ -200,10 +200,10 @@
             this.layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.txtIl,
+            this.layoutControl,
             this.layoutControlItem4,
             this.layoutControlItem6,
-            this.txtAciklama});
+            this.layoutControl3});
             this.layoutControlGroup.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup.Name = "layoutControlGroup";
@@ -264,25 +264,25 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(41, 13);
             this.layoutControlItem2.TextToControlDistance = 10;
             // 
-            // txtIl
+            // layoutControl
             // 
-            this.txtIl.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.txtIl.AppearanceItemCaption.Options.UseForeColor = true;
-            this.txtIl.Control = this.btnIl;
-            this.txtIl.Location = new System.Drawing.Point(0, 48);
-            this.txtIl.Name = "txtIl";
-            this.txtIl.OptionsTableLayoutItem.RowIndex = 2;
-            this.txtIl.Size = new System.Drawing.Size(200, 24);
-            this.txtIl.Text = "İl";
-            this.txtIl.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.txtIl.TextSize = new System.Drawing.Size(41, 13);
-            this.txtIl.TextToControlDistance = 10;
+            this.layoutControl.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControl.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControl.Control = this.txtIl;
+            this.layoutControl.Location = new System.Drawing.Point(0, 48);
+            this.layoutControl.Name = "layoutControl";
+            this.layoutControl.OptionsTableLayoutItem.RowIndex = 2;
+            this.layoutControl.Size = new System.Drawing.Size(200, 24);
+            this.layoutControl.Text = "İl";
+            this.layoutControl.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControl.TextSize = new System.Drawing.Size(41, 13);
+            this.layoutControl.TextToControlDistance = 10;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem4.Control = this.btnIlce;
+            this.layoutControlItem4.Control = this.txtIlce;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 72);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 3;
@@ -304,20 +304,20 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
-            // txtAciklama
+            // layoutControl3
             // 
-            this.txtAciklama.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.txtAciklama.AppearanceItemCaption.Options.UseForeColor = true;
-            this.txtAciklama.Control = this.memoAciklama;
-            this.txtAciklama.Location = new System.Drawing.Point(0, 96);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.txtAciklama.OptionsTableLayoutItem.RowIndex = 4;
-            this.txtAciklama.Size = new System.Drawing.Size(370, 60);
-            this.txtAciklama.Text = "Açıklama";
-            this.txtAciklama.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.txtAciklama.TextSize = new System.Drawing.Size(41, 13);
-            this.txtAciklama.TextToControlDistance = 10;
+            this.layoutControl3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControl3.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControl3.Control = this.txtAciklama;
+            this.layoutControl3.Location = new System.Drawing.Point(0, 96);
+            this.layoutControl3.Name = "layoutControl3";
+            this.layoutControl3.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControl3.OptionsTableLayoutItem.RowIndex = 4;
+            this.layoutControl3.Size = new System.Drawing.Size(370, 60);
+            this.layoutControl3.Text = "Açıklama";
+            this.layoutControl3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.layoutControl3.TextSize = new System.Drawing.Size(41, 13);
+            this.layoutControl3.TextToControlDistance = 10;
             // 
             // OkulEditForm
             // 
@@ -334,18 +334,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoAciklama.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIlce.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIlce.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOkulAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,9 +353,8 @@
 
         #endregion
         private UserControls.Controls.MyToggleSwitch tglDurum;
-        private UserControls.Controls.MyMemoEdit memoAciklama;
-        private UserControls.Controls.MyButtonEdit btnIlce;
-        private UserControls.Controls.MyButtonEdit btnIl;
+        private UserControls.Controls.MyMemoEdit txtAciklama;
+        private UserControls.Controls.MyButtonEdit txtIlce;
         private UserControls.Controls.MyTextEdit txtOkulAdi;
         private UserControls.Controls.MyKodTextEdit txtKod;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
@@ -363,8 +362,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraLayout.LayoutControlItem txtAciklama;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControl3;
         public UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
-        public DevExpress.XtraLayout.LayoutControlItem txtIl;
+        public DevExpress.XtraLayout.LayoutControlItem layoutControl;
+        private UserControls.Controls.MyButtonEdit txtIl;
     }
 }

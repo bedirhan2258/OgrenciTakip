@@ -42,9 +42,28 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Tablo.KeyDown += Tablo_KeyDown;
 
             //Form Events
-
+            Shown += BaseListForm_Shown;
 
         }
+
+        private void BaseListForm_Shown(object sender, EventArgs e)
+        {
+            Tablo.Focus();
+            ButonGizleGoster();
+            SutunGizleGoster();
+            Tablo.RowFocus();
+        }
+
+        private void SutunGizleGoster()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ButonGizleGoster()
+        {
+            throw new NotImplementedException();
+        }
+
         protected internal void Yukle()
         {
             DegiskenleriDoldur();

@@ -4,7 +4,9 @@ using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
+using OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
+using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Functions
 {
@@ -32,9 +34,10 @@ namespace OgrenciTakip.UI.Win.Functions
             foreach (var prop in currentEntity.GetType().GetProperties())
             {
                 if (prop.PropertyType.Namespace == "System.Collections.Generic") continue;
-                var oldValue = prop.GetValue(oldEntity) ?? string.Empty;
-                //?? kullanarak eğer getvalu(oldEnttiy) ile gelen değer null ise string.Empty atayarak gelen değerin değerini değiştirmiş olduk.
+
                 var currentvalue = prop.GetValue(currentEntity) ?? string.Empty;
+                var oldValue = prop.GetValue(oldEntity) ?? string.Empty;
+
 
                 if (prop.PropertyType == typeof(byte[]))
                 {
@@ -103,6 +106,17 @@ namespace OgrenciTakip.UI.Win.Functions
                 return yil + ay + gun + saat + dakika + saniye + milisaniye + random;
             }
             return islemTuru == IslemTuru.EntityUpdate ? selectedEnttiy.Id : long.Parse(Id());
+        }
+        public static void ControlEnabledChange(this MyButtonEdit baseEdit, Control prmEdit)
+        {
+            switch (prmEdit)
+            {
+                case MyButtonEdit edt:
+                    edt.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
+                    edt.Id = null;
+                    edt.EditValue = null;
+                    break;
+            }
         }
     }
 }

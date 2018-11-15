@@ -32,6 +32,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
             kartTuru = KartTuru.Ilce;
             // formShow = new ShowEditForms<IlceEditForm>();
             navigator = longNavigator.Navigator;
+            Text = Text + $" - ( {_ilAdi} )";
         }
         protected override void Listele()
         {
@@ -39,7 +40,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
         }
         protected override void ShowEditForm(long id)
         {
-            var result = new ShowEditForms<IlceEditForm>().ShowDialogEditForms(KartTuru.Ilce, _ilId, _ilAdi);
+            var result = new ShowEditForms<IlceEditForm>().ShowDialogEditForms(KartTuru.Ilce,id ,_ilId, _ilAdi);
             //İşlem yapılacak
 
         }

@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
+using DevExpress.XtraEditors;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
@@ -17,6 +18,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal long id;
         protected internal bool refreshYapilacak;
         protected MyDataLayoutControl dataLayoutControl;
+        protected MyDataLayoutControl[] datalayoutControls;
         protected IBaseBll bll;
         protected KartTuru kartTuru;
         protected BaseEntity oldEntity;
@@ -37,6 +39,87 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             //Form Events
             Load += BaseEditForm_Load;
+
+            void ControlEvents(Control control)
+            {
+                control.KeyDown += Control_KeyDown;
+                switch (control)
+                {
+                    case MyButtonEdit edt:
+                        edt.IdChanged += Control_IdChanged;
+                        edt.EnabledChange += Control_EnabledChange;
+                        edt.ButtonClick += Control_ButtonClick;
+                        edt.DoubleClick += Control_DoubleClick;
+                        break;
+                    case BaseEdit edt:
+                        edt.EditValueChanged += Control_EditValueChanged;
+                        break;
+                }
+            }
+            if (datalayoutControls == null)
+            {
+                if (dataLayoutControl == null) return;
+                foreach (Control ctrl in dataLayoutControl.Controls)
+                {
+                    ControlEvents(ctrl);
+                }
+            }
+            else
+            {
+                foreach (var layout in datalayoutControls)
+                {
+                    foreach (Control ctrl in layout.Controls)
+                    {
+                        ControlEvents(ctrl);
+                    }
+                }
+            }
+
+        }
+
+        protected virtual void Control_EnabledChange(object sender, EventArgs e){ }
+
+        private void Control_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!isLoaded) return;
+            GuncelNesneOlustur();
+        }
+
+        private void Control_DoubleClick(object sender, EventArgs e)
+        {
+            SecimYap(sender);
+        }
+
+        private void Control_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            SecimYap(sender);
+        }
+
+        private void Control_IdChanged(object sender, IdChangedEventArgs e)
+        {
+            if (!isLoaded) return;
+            GuncelNesneOlustur();
+        }
+
+        private void Control_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Close();
+            if (sender is MyButtonEdit edt)
+            {
+                switch (e.KeyCode)
+                {
+                    //kontrol+shift +delete basılırsa aynı anda bu işlemleri yap demek
+                    case Keys.Delete when e.Control && e.Shift:
+                        edt.Id = null;
+                        edt.EditValue = null;
+                        break;
+                    case Keys.F4:
+                    case Keys.Down when e.Modifiers == Keys.Alt:
+                        SecimYap(edt);
+                        break;
+                }
+            }
         }
 
         private void BaseEditForm_Load(object sender, EventArgs e)

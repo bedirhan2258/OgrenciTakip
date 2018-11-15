@@ -11,11 +11,12 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
     {
         #region Variables
         private readonly long _ilId;
-        private readonly string _ilAdi; 
+        private readonly string _ilAdi;
         #endregion
 
         public IlceEditForm(params object[] prm)
         {
+            InitializeComponent();
             _ilId = (long)prm[0];
             _ilAdi = prm[1].ToString();
 
@@ -30,7 +31,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_ilAdi} )";
             if (islemTuru != IslemTuru.EntityInsert) return;
-            txtKod.Text = ((IlceBLL)bll).YeniKodVer(x => x.Id == _ilId);
+            txtKod.Text = ((IlceBLL)bll).YeniKodVer(x => x.IlId == _ilId);
             txtIlceAdi.Focus();
         }
         protected override void NesneyiKontrollereBagla()

@@ -39,12 +39,14 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
                 _id = value;
 
                 IdChanged?.Invoke(this, new IdChangedEventArgs(oldValue, newValue));
+                EnabledChange(this, EventArgs.Empty);
             }
         }
 
         //delegate yazıldığı zaman hiç bir zaman null a düşmez.
 
-        public event EventHandler<IdChangedEventArgs> IdChanged; 
+        public event EventHandler<IdChangedEventArgs> IdChanged = delegate { };
+        public event EventHandler EnabledChange = delegate { };
         #endregion
 
     }

@@ -81,7 +81,7 @@
             // 
             // txtAciklama
             // 
-            this.txtAciklama.EditValue = "sta";
+            this.txtAciklama.EditValue = "";
             this.txtAciklama.EnterMoveNextControl = true;
             this.txtAciklama.Location = new System.Drawing.Point(56, 60);
             this.txtAciklama.MenuManager = this.ribbonControl;
