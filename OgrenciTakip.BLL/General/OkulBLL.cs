@@ -13,7 +13,7 @@ using OgrenciTakip.BLL.Interfaces;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class OkulBLL : BaseBll<Okul, OgrenciTakipContext>,IBaseGenelBll
+    public class OkulBLL : BaseBll<Okul, OgrenciTakipContext>, IBaseGenelBll, IBaseCommonBll
     {
         public OkulBLL() { }
         public OkulBLL(Control ctrl) : base(ctrl) { }

@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             //Form Events
             Load += BaseEditForm_Load;
-
+            FormClosing += BaseEditForm_FormClosing;
             void ControlEvents(Control control)
             {
                 control.KeyDown += Control_KeyDown;
@@ -77,7 +77,21 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         }
 
-        protected virtual void Control_EnabledChange(object sender, EventArgs e){ }
+        private void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // SablonKaydet();
+            if (btnKaydet.Visibility == BarItemVisibility.Never || !btnKaydet.Enabled) return;
+
+            if (!Kaydet(true))
+                e.Cancel = true;
+        }
+
+        private void SablonKaydet()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
 
         private void Control_EditValueChanged(object sender, EventArgs e)
         {
@@ -135,12 +149,19 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual void SecimYap(object sender) { }
         private void EntityDelete()
         {
-            throw new NotImplementedException();
+
+            if (!((IBaseCommonBll)bll).Delete(oldEntity)) return;
+            refreshYapilacak = true;
+            Close();
         }
 
         private void GeriAl()
         {
-            throw new NotImplementedException();
+            if (Messages.HayirSeciliEvetHayir("Yapılan değişiklikler geri alınacaktır.Onaylıyor musunuz?", "Geri Al Onay") != DialogResult.Yes) return;
+            if (islemTuru == IslemTuru.EntityUpdate)
+                Yukle();
+            else
+                Close();
         }
 
         private bool Kaydet(bool kapanis)
@@ -184,7 +205,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             var result = kapanis ? Messages.KapanisMesaj() : Messages.KayitMesaj();
             switch (result)
             {
-                case System.Windows.Forms.DialogResult.Yes:
+                case DialogResult.Yes:
                     return KayitIslemi();
 
                 case System.Windows.Forms.DialogResult.No:
@@ -194,8 +215,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                     }
                     return true;
 
-                case System.Windows.Forms.DialogResult.Cancel:
-                    return true;
+                case DialogResult.Cancel:
+                    return false;
 
             }
 
@@ -227,6 +248,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         private void Button_ItemClick(object sender, ItemClickEventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             if (e.Item == btnYeni)
             {
                 //Yetki Kontrol Olucak
@@ -250,6 +272,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Close();
             }
+            Cursor.Current = DefaultCursor;
         }
 
 

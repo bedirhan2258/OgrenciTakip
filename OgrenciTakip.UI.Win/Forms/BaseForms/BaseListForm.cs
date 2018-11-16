@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities.Base;
@@ -18,11 +19,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected KartTuru kartTuru;
         protected internal GridView Tablo;
         protected bool aktifKartlariGoster = true;
+        protected internal bool AktifPasifButtonGoster = false;
         protected internal bool multiSelect;
         protected internal BaseEntity selectedEntity;
         protected IBaseBll bll;
         protected ControlNavigator navigator;
         protected internal long? seciliGelecekId;
+        protected BarItem[] ShowItems;
+        protected BarItem[] HideItems;
 
         public BaseListForm()
         {
@@ -40,18 +44,25 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             //Table Events
             Tablo.DoubleClick += Tablo_DoubleClick;
             Tablo.KeyDown += Tablo_KeyDown;
-
+            Tablo.MouseUp += Tablo_MouseUp;
             //Form Events
             Shown += BaseListForm_Shown;
 
+        }
+
+        private void Tablo_MouseUp(object sender, MouseEventArgs e)
+        {
+            e.SagMenuGoster(sagMenu);
         }
 
         private void BaseListForm_Shown(object sender, EventArgs e)
         {
             Tablo.Focus();
             ButonGizleGoster();
-            SutunGizleGoster();
-            Tablo.RowFocus();
+            //  SutunGizleGoster();
+            //.HasValu özelliği gelen değerin null olup olmadığınıda kontrol eder.
+            if (IsMdiChild || !seciliGelecekId.HasValue) return;
+            Tablo.RowFocus("Id", seciliGelecekId);
         }
 
         private void SutunGizleGoster()
@@ -61,7 +72,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         private void ButonGizleGoster()
         {
-            throw new NotImplementedException();
+            btnSec.Visibility = AktifPasifButtonGoster ? BarItemVisibility.Never : IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+            barEnter.Visibility = IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+            barEnterAciklama.Visibility = IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+            btnAktifPasifKartlar.Visibility = AktifPasifButtonGoster ? BarItemVisibility.Always : !IsMdiChild ? BarItemVisibility.Never : BarItemVisibility.Always;
+
+            ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
+            HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
+            //Güncellenecek
         }
 
         protected internal void Yukle()
@@ -87,11 +105,23 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual void ShowEditForm(long id)
         {
             var result = formShow.ShowDialogEditForms(kartTuru, id);
+            ShowEditFormDefault(result);
 
         }
-        private void EntityDelete()
+        protected virtual void ShowEditFormDefault(long id)
         {
-            throw new NotImplementedException();
+            if (id <= 0) return;
+            aktifKartlariGoster = true;
+            FormCaptionAyarla();
+            Tablo.RowFocus("Id", id);
+        }
+        protected virtual void EntityDelete()
+        {
+            var entity = Tablo.GetRow<BaseEntity>();
+            if (entity == null) return;
+            if (!((IBaseCommonBll)bll).Delete(entity)) return;
+            Tablo.DeleteSelectedRows();
+            Tablo.RowFocus(Tablo.FocusedRowHandle);
         }
         private void SelectEntity()
         {
@@ -117,7 +147,23 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         }
         private void FormCaptionAyarla()
         {
-            throw new NotImplementedException();
+            if (btnAktifPasifKartlar == null)
+            {
+                Listele();
+                return;
+            }
+            if (aktifKartlariGoster)
+            {
+                btnAktifPasifKartlar.Caption = "Pasif Kartlar";
+                Tablo.ViewCaption = Text;
+            }
+            else
+            {
+                btnAktifPasifKartlar.Caption = "Aktif Kartlar";
+                Tablo.ViewCaption = Text + " -Pasif Kartlar";
+
+            }
+            Listele();
         }
         private void IslemTuruSec()
         {
@@ -207,6 +253,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                     Tablo.HideCustomization();
                 }
             }
+            else if (e.Item == btnBagliKartlar)
+            {
+                BagliKartAc();
+            }
             else if (e.Item == btnYazdir)
             {
                 Yazdir();
@@ -222,6 +272,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             Cursor.Current = DefaultCursor;
         }
+
+        protected virtual void BagliKartAc() { }
+
         private void Tablo_DoubleClick(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;

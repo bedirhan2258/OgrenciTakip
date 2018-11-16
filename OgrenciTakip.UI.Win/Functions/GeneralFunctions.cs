@@ -118,6 +118,31 @@ namespace OgrenciTakip.UI.Win.Functions
                     break;
             }
         }
+        public static void RowFocus(this GridView tablo, string aranacakKolon, object aranacakDeger)
+        {
+            var rowHandle = 0;
+            for (int i = 0; i < tablo.RowCount; i++)
+            {
+                var bulunanDeger = tablo.GetRowCellValue(i, aranacakKolon);
+                if (aranacakDeger.Equals(bulunanDeger))
+                    rowHandle = i;
+            }
+            tablo.FocusedRowHandle = rowHandle;
+
+        }
+        public static void RowFocus(this GridView tablo, int rowHandle)
+        {
+            if (rowHandle <= 0) return;
+            if (rowHandle == tablo.RowCount - 1)
+                tablo.FocusedRowHandle = rowHandle;
+            else
+                tablo.FocusedRowHandle = rowHandle - 1;
+        }
+        public static void SagMenuGoster(this MouseEventArgs e, PopupMenu sagMenu)
+        {
+            if (e.Button != MouseButtons.Right) return;
+            sagMenu.ShowPopup(Control.MousePosition);
+        }
     }
 }
 

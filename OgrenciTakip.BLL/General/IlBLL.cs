@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class IlBLL : BaseBll<Il, OgrenciTakipContext>, IBaseGenelBll
+    public class IlBLL : BaseBll<Il, OgrenciTakipContext>, IBaseGenelBll, IBaseCommonBll
     {
         public IlBLL() { }
         public IlBLL(Control ctrl) : base(ctrl) { }

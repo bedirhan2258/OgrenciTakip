@@ -12,6 +12,7 @@ using DevExpress.XtraBars;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.UI.Win.Forms.IlForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -41,6 +42,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             if (e.Item == btnOkulKartlari)
             {
                 ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
+            }
+            else if (e.Item == btnIlKartlari)
+            {
+                ShowListForms<IlListForm>.ShowListForm(KartTuru.Il);
             }
         }
     }

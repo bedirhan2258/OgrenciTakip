@@ -20,6 +20,7 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
         {
             Tablo = tablo;
             kartTuru = KartTuru.Okul;
+            Text = Text + "Okul Kartları";
             formShow = new ShowEditForms<OkulEditForm>();
             navigator = longNavigator.Navigator;
         }

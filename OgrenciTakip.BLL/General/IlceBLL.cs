@@ -1,4 +1,5 @@
 ﻿using OgrenciTakip.BLL.Base;
+using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.Entities;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class IlceBLL : BaseBll<Ilce, OgrenciTakipContext>
+    public class IlceBLL : BaseBll<Ilce, OgrenciTakipContext>, IBaseCommonBll
     {
         public IlceBLL() { }
         public IlceBLL(Control ctrl) : base(ctrl) { }

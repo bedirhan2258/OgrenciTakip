@@ -12,7 +12,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
     {
         #region Variables
         private readonly long _ilId;
-        private readonly string _ilAdi; 
+        private readonly string _ilAdi;
         #endregion
         public IlceListForm()
         {
@@ -40,9 +40,8 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
         }
         protected override void ShowEditForm(long id)
         {
-            var result = new ShowEditForms<IlceEditForm>().ShowDialogEditForms(KartTuru.Ilce,id ,_ilId, _ilAdi);
-            //İşlem yapılacak
-
+            var result = new ShowEditForms<IlceEditForm>().ShowDialogEditForms(KartTuru.Ilce, id, _ilId, _ilAdi);
+            ShowEditFormDefault(result);
         }
     }
 }
