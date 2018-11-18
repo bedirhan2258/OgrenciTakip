@@ -35,7 +35,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlForms
             Tablo.GridControl.DataSource = ((IlBLL)bll).List(FilterFunctions.Filter<Il>(aktifKartlariGoster));
         }
         protected override void BagliKartAc()
-        {
+        { 
             
             var entity = Tablo.GetRow<Il>();
             if (entity == null) return;

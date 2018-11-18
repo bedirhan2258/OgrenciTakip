@@ -155,7 +155,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtIl.Size = new System.Drawing.Size(145, 20);
-            this.txtIl.StatusBarAciklama = "İl Seçiniz";
+            this.txtIl.StatusBarAciklama = "İl Seçiniz.";
             this.txtIl.StatusBarKisayol = "F4 :";
             this.txtIl.StatusBarKisayolAciklama = "İl Seç";
             this.txtIl.StyleController = this.myDataLayoutControl;
@@ -189,7 +189,7 @@
             this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKod.Properties.MaxLength = 30;
             this.txtKod.Size = new System.Drawing.Size(145, 20);
-            this.txtKod.StatusBarAciklama = "Kod Giriniz";
+            this.txtKod.StatusBarAciklama = "Kod Giriniz.";
             this.txtKod.StyleController = this.myDataLayoutControl;
             this.txtKod.TabIndex = 5;
             // 

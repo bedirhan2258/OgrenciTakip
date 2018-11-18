@@ -139,7 +139,7 @@
             this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKod.Properties.MaxLength = 30;
             this.txtKod.Size = new System.Drawing.Size(152, 20);
-            this.txtKod.StatusBarAciklama = "Kod Giriniz";
+            this.txtKod.StatusBarAciklama = "Kod Giriniz.";
             this.txtKod.StyleController = this.myDataLayoutControl;
             this.txtKod.TabIndex = 3;
             // 
