@@ -11,6 +11,7 @@ using System.Linq;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Model.Attributes;
 
 namespace OgrenciTakip.BLL.Base
 {
@@ -19,6 +20,46 @@ namespace OgrenciTakip.BLL.Base
         private readonly Control _ctrl;
         private IUnitOfWork<T> _unitOfWork;
 
+        private bool Validation(IslemTuru islemTuru, BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
+        {
+            var errorControl = GetValidationErrorKontrol();
+            if (errorControl == null) return true;
+
+            _ctrl.Controls[errorControl].Focus();
+            return false;
+
+            string GetValidationErrorKontrol()
+            {
+                string MukerrerKod()
+                {
+                    foreach (var property in typeof(T).GetPropertyAttributesFromType<Kod>())
+                    {
+                        if (property.Attribute == null) continue;
+                        if ((islemTuru == IslemTuru.EntityInsert || oldEntity.Kod == currentEntity.Kod) && islemTuru == IslemTuru.EntityUpdate) continue;
+                        if (_unitOfWork.Rep.Count(filter) < 1) continue;
+                        Messages.MukerrerKayitHataMesajı(property.Attribute.Description);
+                        return property.Attribute.ControlName;
+                    }
+                    return null;
+                }
+                string HataliGiris()
+                {
+                    foreach (var property in typeof(T).GetPropertyAttributesFromType<ZorunluAlan>())
+                    {
+                        if (property.Attribute == null) continue;
+                        var value = property.Property.GetValue(currentEntity);
+                        if (property.Property.PropertyType == typeof(long))
+                            if ((long)value == 0) value = null;
+
+                        if (!string.IsNullOrEmpty(value?.ToString())) continue;
+                        Messages.HataliVeriMesajı(property.Attribute.Description);
+                        return property.Attribute.ControlName;
+                    }
+                    return null;
+                }
+                return HataliGiris() ?? MukerrerKod();
+            }
+        }
         protected BaseBll() { }
         protected BaseBll(Control ctrl)
         {
@@ -39,7 +80,9 @@ namespace OgrenciTakip.BLL.Base
         protected bool BaseInsert(BaseEntity entity, Expression<Func<T, bool>> filter)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _unitOfWork);
-            //Insert işlemlerinden geçtiği için validation işlerim yapılmalı bu aşamada daha sonra tekrar dönülüp yazılacak.
+            //validation işlemi
+            if (!Validation(IslemTuru.EntityInsert, null, entity, filter)) return false;
+            //
             _unitOfWork.Rep.Insert(entity.EntityConvert<T>());
             return _unitOfWork.Save();
         }
@@ -47,7 +90,9 @@ namespace OgrenciTakip.BLL.Base
         protected bool BaseUpdate(BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _unitOfWork);
-            //Validation
+            //Validation işlemş
+            if (!Validation(IslemTuru.EntityUpdate, oldEntity, currentEntity, filter)) return false;
+            //
             var degisenAlanlar = oldEntity.DegisenAlanlariGetir(currentEntity);
             if (degisenAlanlar.Count == 0) return true;
             _unitOfWork.Rep.Update(currentEntity.EntityConvert<T>(), degisenAlanlar);

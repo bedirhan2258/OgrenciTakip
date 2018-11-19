@@ -48,6 +48,14 @@ namespace OgrenciTakip.Common.Message
         {
             UyariMesaji("Lütfen Bir Kart Seçiniz.");
         }
+        public static void MukerrerKayitHataMesajı(string alanAdi)
+        {
+            HataMesaji($"Girmiş Olduğunuz {alanAdi} Daha Önce Kullanılmıştır.");
+        }
 
+        public static void HataliVeriMesajı(string alanAdi)
+        {
+            HataMesaji($"{alanAdi} Alanına Geçerli Bir Veri Giriniz.");
+        }
     }
 }

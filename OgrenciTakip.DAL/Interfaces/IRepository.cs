@@ -21,5 +21,6 @@ namespace OgrenciTakip.DAL.Interfaces
         TResult Find<TResult>(Expression<Func<T, bool>> filter, Expression<Func<T, TResult>> selector);
         IQueryable<TResult> Select<TResult>(Expression<Func<T, bool>> filter, Expression<Func<T, TResult>> selector);
         string YeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter, Expression<Func<T, bool>> where = null);
+        int Count(Expression<Func<T, bool>> filter = null);
     }
 }
