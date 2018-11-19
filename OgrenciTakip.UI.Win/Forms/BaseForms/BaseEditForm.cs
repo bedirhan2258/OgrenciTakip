@@ -187,8 +187,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             isLoaded = true;
             GuncelNesneOlustur();
             SablonYukle();
-            //ButtonGizleGoster();
-            id = islemTuru.IdOlustur(oldEntity);
+            //ButtonGizleGoster
             //Guncelleme yapılacak.
 
         }

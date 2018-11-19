@@ -31,6 +31,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_ilAdi} )";
             if (islemTuru != IslemTuru.EntityInsert) return;
+            id = islemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((IlceBLL)bll).YeniKodVer(x => x.IlId == _ilId);
             txtIlceAdi.Focus();
         }

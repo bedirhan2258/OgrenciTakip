@@ -257,27 +257,27 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             else if (e.Item == btnStandarExcelDosyasi)
             {
-
+                Tablo.TabloDisariAktar(DosyaTuru.ExcelStandart, e.Item.Caption, Text);
             }
             else if (e.Item == btnFormatliExcelDosyasi)
             {
-
+                Tablo.TabloDisariAktar(DosyaTuru.ExcelFormatli, e.Item.Caption, Text);
             }
             else if (e.Item == btnExcelDosyasiFormatsiz)
             {
-
+                Tablo.TabloDisariAktar(DosyaTuru.ExcelFormatsiz, e.Item.Caption, Text);
             }
             else if (e.Item == btnWordDosyasi)
             {
-
+                Tablo.TabloDisariAktar(DosyaTuru.WordDosyasi, e.Item.Caption, Text);
             }
             else if (e.Item == btnPdfDosyasi)
             {
-
+                Tablo.TabloDisariAktar(DosyaTuru.PdfDosyasi, e.Item.Caption, Text);
             }
             else if (e.Item == btnTxtDosyası)
             {
-
+                Tablo.TabloDisariAktar(DosyaTuru.TxtDosyasi, e.Item.Caption, Text);
             }
             else if (e.Item == btnYeni)
             {

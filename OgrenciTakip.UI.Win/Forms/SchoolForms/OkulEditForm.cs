@@ -29,6 +29,7 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
             NesneyiKontrollereBagla();
 
             if (islemTuru != IslemTuru.EntityInsert) return;
+            id = islemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((OkulBLL)bll).YeniKodVer();
             txtOkulAdi.Focus();
         }

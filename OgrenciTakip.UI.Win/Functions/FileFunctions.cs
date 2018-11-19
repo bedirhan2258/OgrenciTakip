@@ -1,9 +1,13 @@
 ﻿
+using DevExpress.Export;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting;
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -127,6 +131,83 @@ namespace OgrenciTakip.UI.Win.Functions
             {
                 Messages.HataMesaji(ex.Message);
             }
+        }
+        public static void TabloDisariAktar(this GridView tablo, DosyaTuru dosyaTuru, string dosyaFormati, string excelSayfaAdi = null)
+        {
+            if (Messages.TabloExportMessage(dosyaFormati) != DialogResult.Yes) return;
+            if (!Directory.Exists(Application.StartupPath + @"\Temp"))
+                Directory.CreateDirectory(Application.StartupPath + @"\Temp");
+
+            var dosyaAdi = Guid.NewGuid().ToString();
+            var filePath = $@"{Application.StartupPath}\Temp\{dosyaAdi}";
+            switch (dosyaTuru)
+            {
+                case DosyaTuru.ExcelStandart:
+                    {
+                        var opt = new XlsxExportOptionsEx
+                        {
+                            ExportType = ExportType.Default,
+                            SheetName = excelSayfaAdi,
+                            TextExportMode = TextExportMode.Text,
+
+                        };
+                        filePath = filePath + ".Xlsx";
+                        tablo.ExportToXlsx(filePath, opt);
+                    }
+                    break;
+                case DosyaTuru.ExcelFormatli:
+                    {
+                        var opt = new XlsxExportOptionsEx
+                        {
+                            ExportType = ExportType.WYSIWYG,
+                            SheetName = excelSayfaAdi,
+                            TextExportMode = TextExportMode.Text,
+
+                        };
+                        filePath = filePath + ".Xlsx";
+                        tablo.ExportToXlsx(filePath, opt);
+                    }
+                    break;
+                case DosyaTuru.ExcelFormatsiz:
+                    {
+                        var opt = new CsvExportOptionsEx
+                        {
+                            ExportType = ExportType.WYSIWYG,
+                            TextExportMode = TextExportMode.Text,
+
+                        };
+                        filePath = filePath + ".Csv";
+                        tablo.ExportToCsv(filePath, opt);
+                    }
+                    break;
+
+                case DosyaTuru.WordDosyasi:
+                    {
+                        filePath = filePath + ".Rtf";
+                        tablo.ExportToRtf(filePath);
+                    }
+                    break;
+                case DosyaTuru.PdfDosyasi:
+                    {
+                        filePath = filePath + ".Pdf";
+                        tablo.ExportToPdf(filePath);
+                    }
+                    break;
+                case DosyaTuru.TxtDosyasi:
+                    {
+                        var opt = new TextExportOptions { TextExportMode = TextExportMode.Text };
+
+                        filePath = filePath + ".Txt";
+                        tablo.ExportToText(filePath, opt);
+                    }
+                    break;
+            }
+            if (!File.Exists(filePath))
+            {
+                Messages.HataMesaji("Tablo Verileri Dosyaya Aktarılamadı.");
+                return;
+            }
+            Process.Start(filePath);
         }
     }
 }
