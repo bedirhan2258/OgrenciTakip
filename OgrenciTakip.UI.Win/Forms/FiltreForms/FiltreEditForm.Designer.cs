@@ -81,7 +81,7 @@
             this.txtFiltreMetni.Size = new System.Drawing.Size(385, 114);
             this.txtFiltreMetni.StatusBarAciklama = "Filtre metni giriniz";
             this.txtFiltreMetni.TabIndex = 1;
-            this.txtFiltreMetni.Text = "myFilterControl1";
+            this.txtFiltreMetni.Text = "myFilterControl";
             // 
             // txtFiltreAdi
             // 

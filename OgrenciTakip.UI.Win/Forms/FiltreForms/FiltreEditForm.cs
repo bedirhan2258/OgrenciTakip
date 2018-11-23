@@ -36,19 +36,27 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         protected internal override void Yukle()
         {
             txtFiltreMetni.SourceControl = _filtreGrid;
-            if (islemTuru == IslemTuru.EntityInsert)
-            {
-                oldEntity = new Filtre();
-                id = islemTuru.IdOlustur(oldEntity);
-                txtKod.Text = ((FiltreBLL)bll).YeniKodVer(x => x.KartTuru == _filtreKartTuru);
 
-            }
-            else
+            while (true)
             {
-                oldEntity = ((FiltreBLL)bll).Single(FilterFunctions.Filter<Filtre>(id));
-                if (oldEntity == null)
-                    islemTuru = IslemTuru.EntityInsert;
-                NesneyiKontrollereBagla();
+                if (islemTuru == IslemTuru.EntityInsert)
+                {
+                    oldEntity = new Filtre();
+                    id = islemTuru.IdOlustur(oldEntity);
+                    txtKod.Text = ((FiltreBLL)bll).YeniKodVer(x => x.KartTuru == _filtreKartTuru);
+
+                }
+                else
+                {
+                    oldEntity = ((FiltreBLL)bll).Single(FilterFunctions.Filter<Filtre>(id));
+                    if (oldEntity == null)
+                    {
+                        islemTuru = IslemTuru.EntityInsert;
+                        continue;
+                    }
+                    NesneyiKontrollereBagla();
+                }
+                break;
             }
         }
         protected override void NesneyiKontrollereBagla()
@@ -57,7 +65,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
 
             txtKod.Text = entity.Kod;
             txtFiltreAdi.Text = entity.FiltreAdi;
-            txtFiltreMetni.Text = entity.FiltreMetni;
+            txtFiltreMetni.FilterString = entity.FiltreMetni;
         }
         protected override void GuncelNesneOlustur()
         {
@@ -65,7 +73,8 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
             {
                 Id = id,
                 Kod = txtKod.Text,
-                FiltreAdi = txtFiltreMetni.FilterString,
+                FiltreAdi = txtFiltreAdi.Text,
+                FiltreMetni = txtFiltreMetni.FilterString,
                 KartTuru = _filtreKartTuru
             };
             ButonEnabledDurumu();

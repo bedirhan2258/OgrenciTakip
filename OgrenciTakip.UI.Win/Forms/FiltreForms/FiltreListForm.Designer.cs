@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FiltreListForm));
             this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
@@ -44,6 +45,11 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Size = new System.Drawing.Size(665, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
+            // 
+            // btnGonder
+            // 
+            this.btnGonder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.Image")));
+            this.btnGonder.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGonder.ImageOptions.LargeImage")));
             // 
             // longNavigator
             // 

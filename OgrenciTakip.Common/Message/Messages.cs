@@ -27,7 +27,7 @@ namespace OgrenciTakip.Common.Message
         }
         public static DialogResult SilMesaj(string kartAdi)
         {
-            return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi}.. Silinecektir.Onaylıyor musunuz?", "Silme Onayı");
+            return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi}. Silinecektir.Onaylıyor musunuz?", "Silme Onayı");
         }
 
         public static DialogResult EvetSeciliEvetHayirIptal(string mesaj, string baslik)
@@ -60,6 +60,7 @@ namespace OgrenciTakip.Common.Message
 
         public static DialogResult TabloExportMessage(string dosyaFormati)
         {
-            return EvetSeciliEvetHayir($"İlgili Tablo, {dosyaFormati} Formati Olarak Dışarı Aktarılacaktır.Onaylıyor Musunuz?", "Aktarım Onay");}
+            return EvetSeciliEvetHayir($"İlgili Tablo, {dosyaFormati} Formati Olarak Dışarı Aktarılacaktır.Onaylıyor Musunuz?", "Aktarım Onay");
+        }
     }
 }

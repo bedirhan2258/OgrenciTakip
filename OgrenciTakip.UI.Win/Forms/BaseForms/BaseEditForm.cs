@@ -55,6 +55,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 control.Leave += Control_Leave;
                 switch (control)
                 {
+                    case FilterControl edt:
+                        edt.FilterChanged += Control_EditValueChanged;
+                        break;
                     case MyButtonEdit edt:
                         edt.IdChanged += Control_IdChanged;
                         edt.EnabledChange += Control_EnabledChange;
@@ -317,6 +320,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Kaydet(false);
             }
+            else if (e.Item == btnFarkliKaydet)
+            {
+                //Yetki Kontrolü yapılacak
+                FarkliKaydet();
+            }
             else if (e.Item == btnGeriAl)
             {
                 GeriAl();
@@ -337,6 +345,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Cursor.Current = DefaultCursor;
         }
 
+        private void FarkliKaydet()
+        {
+            if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyormusunuz?", "Kayıt Onay") != DialogResult.Yes) return;
+            islemTuru = IslemTuru.EntityInsert;
+            Yukle();
 
+            if (Kaydet(true))
+                Close();
+        }
     }
 }

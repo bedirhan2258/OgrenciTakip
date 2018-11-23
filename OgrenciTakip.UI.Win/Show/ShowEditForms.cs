@@ -22,7 +22,7 @@ namespace OgrenciTakip.UI.Win.Show
             }
         }
 
-        public long ShowDialogEditForms(KartTuru kartTuru, long id, params object[] prm)
+        public static long ShowDialogEditForms(KartTuru kartTuru, long id, params object[] prm)
         {
             //Yetki kontrolü yapılacak
             using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
@@ -34,5 +34,6 @@ namespace OgrenciTakip.UI.Win.Show
                 return frm.refreshYapilacak ? frm.id : 0;
             }
         }
+
     }
 }

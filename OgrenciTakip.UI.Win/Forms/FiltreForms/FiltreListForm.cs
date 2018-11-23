@@ -19,6 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         {
             InitializeComponent();
             bll = new FiltreBLL();
+
             _filtreKartTuru = (KartTuru)prm[0];
             _filtreGrid = (GridControl)prm[1];
 
@@ -27,7 +28,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         }
         protected override void DegiskenleriDoldur()
         {
-            Tablo = tablo;
+            base.Tablo = tablo;
             kartTuru = KartTuru.Filtre;
             // formShow = new ShowEditForms<IlceEditForm>();
             navigator = longNavigator.Navigator;
@@ -38,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         }
         protected override void ShowEditForm(long id)
         {
-            var result = new ShowEditForms<FiltreEditForm>().ShowDialogEditForms(KartTuru.Filtre, id, _filtreKartTuru, _filtreGrid);
+            var result = ShowEditForms<FiltreEditForm>.ShowDialogEditForms(KartTuru.Filtre, id, _filtreKartTuru, _filtreGrid);
             ShowEditFormDefault(result);
         }
     }
