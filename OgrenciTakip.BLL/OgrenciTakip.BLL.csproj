@@ -57,6 +57,7 @@
     <Compile Include="Functions\Convert.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\ValidationFunctions.cs" />
+    <Compile Include="General\FiltreBLL.cs" />
     <Compile Include="General\IlBLL.cs" />
     <Compile Include="General\IlceBLL.cs" />
     <Compile Include="General\OkulBLL.cs" />

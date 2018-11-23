@@ -71,6 +71,15 @@ namespace OgrenciTakip.UI.Win.Functions
             btnSil.Enabled = !butonEnabledDurumu;
             btnYeni.Enabled = !butonEnabledDurumu;
         }
+        public static void ButtonEnabledDurumu<T>(BarButtonItem btnKaydet, BarButtonItem btnFarkliKaydet, BarButtonItem btnSil, IslemTuru islemTuru, T oldEntity, T currentEntity)
+        {
+            var veriDegisimYeri = veriDegisimYeriGetir(oldEntity, currentEntity);
+            var butonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan; //veridegisimyeri alan gelirse otomatik olarak true olucak
+
+            btnKaydet.Enabled = butonEnabledDurumu;
+            btnFarkliKaydet.Enabled = islemTuru != IslemTuru.EntityInsert;
+            btnSil.Enabled = !butonEnabledDurumu;
+        }
         public static long IdOlustur(this IslemTuru islemTuru, BaseEntity selectedEnttiy)
         {
             string SifirEkle(string deger)

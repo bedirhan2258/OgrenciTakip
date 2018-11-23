@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
@@ -28,6 +29,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected BaseEntity currentEnttiy;
         protected bool isLoaded;
         protected bool kayitSonrasiFormuKapat = true;
+        protected BarItem[] ShowItems;
+        protected BarItem[] HideItems;
 
         public BaseEditForm()
         {
@@ -187,7 +190,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             isLoaded = true;
             GuncelNesneOlustur();
             SablonYukle();
-            //ButtonGizleGoster
+            ButonGizleGoster();
             //Guncelleme yapılacak.
 
         }
@@ -200,6 +203,16 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Close();
         }
 
+        private void ButonGizleGoster()
+        {
+            ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
+            HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
+            //Güncellenecek
+        }
+        protected virtual void FiltreUygula()
+        {
+
+        }
         private void GeriAl()
         {
             if (Messages.HayirSeciliEvetHayir("Yapılan değişiklikler geri alınacaktır.Onaylıyor musunuz?", "Geri Al Onay") != DialogResult.Yes) return;
@@ -312,6 +325,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 //Yetki Kontrolü olacak
                 EntityDelete();
+            }
+            else if (e.Item == btnUygula)
+            {
+                FiltreUygula();
             }
             else if (e.Item == btnCikis)
             {
