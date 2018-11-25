@@ -6,6 +6,9 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
+using System.Collections.Generic;
+using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -151,6 +154,16 @@ namespace OgrenciTakip.UI.Win.Functions
         {
             if (e.Button != MouseButtons.Right) return;
             sagMenu.ShowPopup(Control.MousePosition);
+        }
+        //Bu fonsiyon bilgisayarda kuruu olan printerların ismini yazici adi alınaına yükler
+        public static List<string> YazicilariListele()
+        {
+            return PrinterSettings.InstalledPrinters.Cast<string>().ToList();
+        }
+        public static string DefaultYazici()
+        {
+            var settings = new PrinterSettings();
+            return settings.PrinterName;
         }
     }
 }

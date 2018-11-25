@@ -8,6 +8,7 @@ using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Interfaces;
 using OgrenciTakip.UI.Win.UserControls.Controls;
@@ -58,6 +59,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                     case FilterControl edt:
                         edt.FilterChanged += Control_EditValueChanged;
                         break;
+                    case ComboBoxEdit edt:
+                        edt.EditValueChanged += Control_EditValueChanged;
+                        edt.SelectedValueChanged += Control_SelectedValueChanged;
+                
+                        break;
                     case MyButtonEdit edt:
                         edt.IdChanged += Control_IdChanged;
                         edt.EnabledChange += Control_EnabledChange;
@@ -89,6 +95,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
 
         }
+
+        protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
 
         private void Control_Leave(object sender, EventArgs e)
         {
@@ -298,6 +306,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         {
 
         }
+        protected internal virtual IBaseEntity ReturnEntity() { return null; }
         protected virtual void NesneyiKontrollereBagla() { }
 
         protected virtual void GuncelNesneOlustur() { }
@@ -338,12 +347,24 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 FiltreUygula();
             }
+            else if (e.Item == btnYazdir)
+            {
+                Yazdir();
+            }
+            else if (e.Item == btnBaskiOnizleme)
+            {
+                BaskiOnIzleme();
+            }
             else if (e.Item == btnCikis)
             {
                 Close();
             }
             Cursor.Current = DefaultCursor;
         }
+
+        protected virtual void BaskiOnIzleme() { }
+
+        protected virtual void Yazdir() { }
 
         private void FarkliKaydet()
         {

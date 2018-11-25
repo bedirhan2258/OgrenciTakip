@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
-using DevExpress.XtraBars;
+﻿using DevExpress.XtraBars;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.Common.Enums;
@@ -18,6 +8,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 {
     public partial class AnaForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
+
         public AnaForm()
         {
             InitializeComponent();

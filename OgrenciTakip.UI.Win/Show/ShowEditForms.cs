@@ -1,5 +1,6 @@
 ﻿
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Show.Interfaces;
 using System;
@@ -32,6 +33,16 @@ namespace OgrenciTakip.UI.Win.Show
                 frm.Yukle();
                 frm.ShowDialog();
                 return frm.refreshYapilacak ? frm.id : 0;
+            }
+        }
+        public static T ShowDiagloEditForms<T>(params object[] prm)where T :IBaseEntity
+        {
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+            {
+               
+                frm.Yukle();
+                frm.ShowDialog();
+                return (T)frm.ReturnEntity();
             }
         }
 

@@ -47,6 +47,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 17.1\Components\Bin\Framework\DevExpress.XtraLayout.v17.1.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -133,11 +134,18 @@
     <Compile Include="Functions\FilterFunctions.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\SelectFunctions.cs" />
+    <Compile Include="Functions\TablePrintingFunctions.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneralForms\AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\TabloDokumParametreleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\TabloDokumParametreleri.Designer.cs">
+      <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IStatusbarAciklama.cs" />
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
@@ -262,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\TabloDokumParametreleri.resx">
+      <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -415,6 +426,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\insertrangefilter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printpreview_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printpreview_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -54,6 +54,7 @@
     <Compile Include="Entities\Base\BaseEntityDurum.cs" />
     <Compile Include="Entities\Base\BaseHareketEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
+    <Compile Include="Entities\DokumParametleri.cs" />
     <Compile Include="Entities\Filtre.cs" />
     <Compile Include="Entities\Il.cs" />
     <Compile Include="Entities\Ilce.cs" />
