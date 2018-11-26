@@ -12,36 +12,10 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class IlceBLL : BaseBll<Ilce, OgrenciTakipContext>, IBaseCommonBll
+    public class IlceBLL : BaseGenelBll<Ilce>, IBaseCommonBll
     {
-        public IlceBLL() { }
-        public IlceBLL(Control ctrl) : base(ctrl) { }
+        public IlceBLL() : base(KartTuru.Ilce) { }
+        public IlceBLL(Control ctrl) : base(ctrl, KartTuru.Ilce) { }
 
-        public BaseEntity Single(Expression<Func<Ilce, bool>> filter)
-        {
-            //Bütün alanlarıyla geri getir demek x=>x
-            return BaseSingle(filter, x => x);
-        }
-        public IEnumerable<BaseEntity> List(Expression<Func<Ilce, bool>> filter)
-        {
-            return BaseList(filter, x => x).OrderBy(x => x.Kod).ToList();
-        }
-        public bool Insert(BaseEntity entity, Expression<Func<Ilce, bool>> filter)
-        {
-            return BaseInsert(entity, filter);
-        }
-        public bool Update(BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<Ilce, bool>> filter)
-        {
-            return BaseUpdate(oldEntity, currentEntity, filter);
-        }
-        public bool Delete(BaseEntity entity)
-        {
-            return BaseDelete(entity, KartTuru.Ilce);
-        }
-
-        public string YeniKodVer(Expression<Func<Ilce, bool>> filter)
-        {
-            return BaseYeniKodVer(KartTuru.Ilce, x => x.Kod, filter);
-        }
     }
 }

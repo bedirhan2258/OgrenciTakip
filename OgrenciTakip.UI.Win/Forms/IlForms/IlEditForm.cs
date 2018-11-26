@@ -45,7 +45,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlForms
                 Id = id,
                 Kod = txtKod.Text,
                 IlAdi = txtIlAdi.Text,
-                Aciklama = memoAciklama.Text,
+                Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
             ButonEnabledDurumu();

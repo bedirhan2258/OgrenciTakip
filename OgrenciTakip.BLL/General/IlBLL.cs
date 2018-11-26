@@ -13,35 +13,11 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class IlBLL : BaseBll<Il, OgrenciTakipContext>, IBaseGenelBll, IBaseCommonBll
+    public class IlBLL : BaseGenelBll<Il>, IBaseGenelBll, IBaseCommonBll
     {
-        public IlBLL() { }
-        public IlBLL(Control ctrl) : base(ctrl) { }
 
-        public BaseEntity Single(Expression<Func<Il, bool>> filter)
-        {
-            return BaseSingle(filter, x => x);
-        }
-        public IEnumerable<BaseEntity> List(Expression<Func<Il, bool>> filter)
-        {
-            return BaseList(filter, x => x).OrderBy(x => x.Kod).ToList();
-        }
-        public bool Insert(BaseEntity entity)
-        {
-            return BaseInsert(entity, x => x.Kod == entity.Kod);
-        }
-        public bool Update(BaseEntity oldEntity, BaseEntity currentEntity)
-        {
-            return BaseUpdate(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod);
-        }
-        public bool Delete(BaseEntity entity)
-        {
-            return BaseDelete(entity, KartTuru.Il);
-        }
+        public IlBLL() : base(KartTuru.Il) { }
+        public IlBLL(Control ctrl) : base(ctrl, KartTuru.Il) { }
 
-        public string YeniKodVer()
-        {
-            return BaseYeniKodVer(KartTuru.Il, x => x.Kod);
-        }
     }
 }

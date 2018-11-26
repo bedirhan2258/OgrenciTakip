@@ -59,7 +59,7 @@
             this.myBaslikekle = new DevExpress.XtraLayout.LayoutControlItem();
             this.myRaporBasligi = new DevExpress.XtraLayout.LayoutControlItem();
             this.myRaporKagidaSigdir = new DevExpress.XtraLayout.LayoutControlItem();
-            this.myYazidirmaYonu = new DevExpress.XtraLayout.LayoutControlItem();
+            this.myYazdirmaYonu = new DevExpress.XtraLayout.LayoutControlItem();
             this.myYatayCizgileriGoster = new DevExpress.XtraLayout.LayoutControlItem();
             this.myDikeyCizgileriGoster = new DevExpress.XtraLayout.LayoutControlItem();
             this.mySutunBasliklariniGoster = new DevExpress.XtraLayout.LayoutControlItem();
@@ -86,7 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.myBaslikekle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRaporBasligi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRaporKagidaSigdir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myYazidirmaYonu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myYazdirmaYonu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myYatayCizgileriGoster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDikeyCizgileriGoster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySutunBasliklariniGoster)).BeginInit();
@@ -128,7 +128,7 @@
             // txtYazdirilacakAdet
             // 
             this.txtYazdirilacakAdet.EditValue = new decimal(new int[] {
-            0,
+            1,
             0,
             0,
             0});
@@ -142,8 +142,18 @@
             this.txtYazdirilacakAdet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtYazdirilacakAdet.Properties.Mask.EditMask = "d";
+            this.txtYazdirilacakAdet.Properties.MaxValue = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.txtYazdirilacakAdet.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.txtYazdirilacakAdet.Size = new System.Drawing.Size(62, 20);
-            this.txtYazdirilacakAdet.StatusBarAciklama = null;
+            this.txtYazdirilacakAdet.StatusBarAciklama = "Yazdirilacak Adet Giriniz.";
             this.txtYazdirilacakAdet.StyleController = this.myDataLayoutControl2;
             this.txtYazdirilacakAdet.TabIndex = 8;
             // 
@@ -159,9 +169,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtYaziciAdi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtYaziciAdi.Size = new System.Drawing.Size(323, 20);
-            this.txtYaziciAdi.StatusBarAciklama = null;
+            this.txtYaziciAdi.StatusBarAciklama = "Döküm Alınacak Yazıcıyı Seçiniz.";
             this.txtYaziciAdi.StatusBarKisayol = "F4 :";
-            this.txtYaziciAdi.StatusBarKisayolAciklama = null;
+            this.txtYaziciAdi.StatusBarKisayolAciklama = "Seçim Yap";
             this.txtYaziciAdi.StyleController = this.myDataLayoutControl2;
             this.txtYaziciAdi.TabIndex = 7;
             // 
@@ -177,9 +187,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSutunBasliklariniGoster.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtSutunBasliklariniGoster.Size = new System.Drawing.Size(97, 20);
-            this.txtSutunBasliklariniGoster.StatusBarAciklama = null;
+            this.txtSutunBasliklariniGoster.StatusBarAciklama = "Sütün Başlıklarını Göster.";
             this.txtSutunBasliklariniGoster.StatusBarKisayol = "F4 :";
-            this.txtSutunBasliklariniGoster.StatusBarKisayolAciklama = null;
+            this.txtSutunBasliklariniGoster.StatusBarKisayolAciklama = "Seçim Yap";
             this.txtSutunBasliklariniGoster.StyleController = this.myDataLayoutControl2;
             this.txtSutunBasliklariniGoster.TabIndex = 6;
             // 
@@ -195,9 +205,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDikeyCizgileriGoster.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtDikeyCizgileriGoster.Size = new System.Drawing.Size(97, 20);
-            this.txtDikeyCizgileriGoster.StatusBarAciklama = null;
+            this.txtDikeyCizgileriGoster.StatusBarAciklama = "Dikey Çizgileri Göster.";
             this.txtDikeyCizgileriGoster.StatusBarKisayol = "F4 :";
-            this.txtDikeyCizgileriGoster.StatusBarKisayolAciklama = null;
+            this.txtDikeyCizgileriGoster.StatusBarKisayolAciklama = "Seçim Yap";
             this.txtDikeyCizgileriGoster.StyleController = this.myDataLayoutControl2;
             this.txtDikeyCizgileriGoster.TabIndex = 5;
             // 
@@ -213,9 +223,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtYatayCizgileriGoster.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtYatayCizgileriGoster.Size = new System.Drawing.Size(97, 20);
-            this.txtYatayCizgileriGoster.StatusBarAciklama = null;
+            this.txtYatayCizgileriGoster.StatusBarAciklama = "Yatay Çizgileri Göster.";
             this.txtYatayCizgileriGoster.StatusBarKisayol = "F4 :";
-            this.txtYatayCizgileriGoster.StatusBarKisayolAciklama = null;
+            this.txtYatayCizgileriGoster.StatusBarKisayolAciklama = "Seçim Yap";
             this.txtYatayCizgileriGoster.StyleController = this.myDataLayoutControl2;
             this.txtYatayCizgileriGoster.TabIndex = 4;
             // 
@@ -231,9 +241,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtYazdirmaYonu.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtYazdirmaYonu.Size = new System.Drawing.Size(97, 20);
-            this.txtYazdirmaYonu.StatusBarAciklama = null;
+            this.txtYazdirmaYonu.StatusBarAciklama = "Raporu Yazdirma Yönünü Seçiniz.";
             this.txtYazdirmaYonu.StatusBarKisayol = "F4 :";
-            this.txtYazdirmaYonu.StatusBarKisayolAciklama = null;
+            this.txtYazdirmaYonu.StatusBarKisayolAciklama = "Seçim Yap";
             this.txtYazdirmaYonu.StyleController = this.myDataLayoutControl2;
             this.txtYazdirmaYonu.TabIndex = 3;
             // 
@@ -249,9 +259,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtRaporuKagidaSigdir.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtRaporuKagidaSigdir.Size = new System.Drawing.Size(197, 20);
-            this.txtRaporuKagidaSigdir.StatusBarAciklama = null;
+            this.txtRaporuKagidaSigdir.StatusBarAciklama = "Rapor Kağıda Sığdırılacak.";
             this.txtRaporuKagidaSigdir.StatusBarKisayol = "F4 :";
-            this.txtRaporuKagidaSigdir.StatusBarKisayolAciklama = null;
+            this.txtRaporuKagidaSigdir.StatusBarKisayolAciklama = "Seçim Yap";
             this.txtRaporuKagidaSigdir.StyleController = this.myDataLayoutControl2;
             this.txtRaporuKagidaSigdir.TabIndex = 2;
             // 
@@ -265,7 +275,7 @@
             this.txtRaporBasligi.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRaporBasligi.Properties.MaxLength = 50;
             this.txtRaporBasligi.Size = new System.Drawing.Size(323, 20);
-            this.txtRaporBasligi.StatusBarAciklama = null;
+            this.txtRaporBasligi.StatusBarAciklama = "Rapor Başlığı Giriniz.";
             this.txtRaporBasligi.StyleController = this.myDataLayoutControl2;
             this.txtRaporBasligi.TabIndex = 1;
             // 
@@ -280,10 +290,10 @@
             this.txtBaslikEkle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtBaslikEkle.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtBaslikEkle.Size = new System.Drawing.Size(62, 20);
-            this.txtBaslikEkle.StatusBarAciklama = null;
+            this.txtBaslikEkle.Size = new System.Drawing.Size(97, 20);
+            this.txtBaslikEkle.StatusBarAciklama = "Başlık Eklenecek.";
             this.txtBaslikEkle.StatusBarKisayol = "F4 :";
-            this.txtBaslikEkle.StatusBarKisayolAciklama = null;
+            this.txtBaslikEkle.StatusBarKisayolAciklama = "Seçim Yap";
             this.txtBaslikEkle.StyleController = this.myDataLayoutControl2;
             this.txtBaslikEkle.TabIndex = 0;
             // 
@@ -295,7 +305,7 @@
             this.myBaslikekle,
             this.myRaporBasligi,
             this.myRaporKagidaSigdir,
-            this.myYazidirmaYonu,
+            this.myYazdirmaYonu,
             this.myYatayCizgileriGoster,
             this.myDikeyCizgileriGoster,
             this.mySutunBasliklariniGoster,
@@ -389,18 +399,18 @@
             this.myRaporKagidaSigdir.Text = "Raporu Kağıda Sığdır";
             this.myRaporKagidaSigdir.TextSize = new System.Drawing.Size(106, 13);
             // 
-            // myYazidirmaYonu
+            // myYazdirmaYonu
             // 
-            this.myYazidirmaYonu.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.myYazidirmaYonu.AppearanceItemCaption.Options.UseForeColor = true;
-            this.myYazidirmaYonu.Control = this.txtYazdirmaYonu;
-            this.myYazidirmaYonu.Location = new System.Drawing.Point(0, 72);
-            this.myYazidirmaYonu.Name = "myYazidirmaYonu";
-            this.myYazidirmaYonu.OptionsTableLayoutItem.ColumnSpan = 2;
-            this.myYazidirmaYonu.OptionsTableLayoutItem.RowIndex = 3;
-            this.myYazidirmaYonu.Size = new System.Drawing.Size(210, 24);
-            this.myYazidirmaYonu.Text = "Yazdırma Ayarı";
-            this.myYazidirmaYonu.TextSize = new System.Drawing.Size(106, 13);
+            this.myYazdirmaYonu.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.myYazdirmaYonu.AppearanceItemCaption.Options.UseForeColor = true;
+            this.myYazdirmaYonu.Control = this.txtYazdirmaYonu;
+            this.myYazdirmaYonu.Location = new System.Drawing.Point(0, 72);
+            this.myYazdirmaYonu.Name = "myYazdirmaYonu";
+            this.myYazdirmaYonu.OptionsTableLayoutItem.ColumnSpan = 2;
+            this.myYazdirmaYonu.OptionsTableLayoutItem.RowIndex = 3;
+            this.myYazdirmaYonu.Size = new System.Drawing.Size(210, 24);
+            this.myYazdirmaYonu.Text = "Yazdırma Yönü";
+            this.myYazdirmaYonu.TextSize = new System.Drawing.Size(106, 13);
             // 
             // myYatayCizgileriGoster
             // 
@@ -502,7 +512,7 @@
             this.myDataLayoutControl1.Root = this.layoutControlGroup1;
             this.myDataLayoutControl1.Size = new System.Drawing.Size(680, 270);
             this.myDataLayoutControl1.TabIndex = 0;
-            this.myDataLayoutControl1.Text = "myDataLayoutControl1";
+            this.myDataLayoutControl1.Text = "myDataLayoutControl";
             // 
             // layoutControlGroup1
             // 
@@ -580,7 +590,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.myBaslikekle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRaporBasligi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myRaporKagidaSigdir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myYazidirmaYonu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myYazdirmaYonu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myYatayCizgileriGoster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDikeyCizgileriGoster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mySutunBasliklariniGoster)).EndInit();
@@ -612,7 +622,7 @@
         private DevExpress.XtraLayout.LayoutControlItem myBaslikekle;
         private DevExpress.XtraLayout.LayoutControlItem myRaporBasligi;
         private DevExpress.XtraLayout.LayoutControlItem myRaporKagidaSigdir;
-        private DevExpress.XtraLayout.LayoutControlItem myYazidirmaYonu;
+        private DevExpress.XtraLayout.LayoutControlItem myYazdirmaYonu;
         private DevExpress.XtraLayout.LayoutControlItem myYatayCizgileriGoster;
         private DevExpress.XtraLayout.LayoutControlItem myDikeyCizgileriGoster;
         private DevExpress.XtraLayout.LayoutControlItem mySutunBasliklariniGoster;

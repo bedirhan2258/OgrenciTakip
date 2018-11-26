@@ -12,36 +12,10 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class FiltreBLL : BaseBll<Filtre, OgrenciTakipContext>, IBaseCommonBll
+    public class FiltreBLL : BaseGenelBll<Filtre>, IBaseCommonBll
     {
-        public FiltreBLL() { }
-        public FiltreBLL(Control ctrl) : base(ctrl) { }
-
-        public BaseEntity Single(Expression<Func<Filtre, bool>> filter)
-        {
-            //Bütün alanlarıyla geri getir demek x=>x
-            return BaseSingle(filter, x => x);
-        }
-        public IEnumerable<BaseEntity> List(Expression<Func<Filtre, bool>> filter)
-        {
-            return BaseList(filter, x => x).OrderBy(x => x.Kod).ToList();
-        }
-        public bool Insert(BaseEntity entity, Expression<Func<Filtre, bool>> filter)
-        {
-            return BaseInsert(entity, filter);
-        }
-        public bool Update(BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<Filtre, bool>> filter)
-        {
-            return BaseUpdate(oldEntity, currentEntity, filter);
-        }
-        public bool Delete(BaseEntity entity)
-        {
-            return BaseDelete(entity, KartTuru.Filtre);
-        }
-
-        public string YeniKodVer(Expression<Func<Filtre, bool>> filter)
-        {
-            return BaseYeniKodVer(KartTuru.Filtre, x => x.Kod, filter);
-        }
+        public FiltreBLL() : base(KartTuru.Filtre) { }
+        public FiltreBLL(Control ctrl) : base(ctrl, KartTuru.Filtre) { }
+   
     }
 }

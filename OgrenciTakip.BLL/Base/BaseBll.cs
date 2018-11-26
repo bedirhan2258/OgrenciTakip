@@ -17,8 +17,10 @@ namespace OgrenciTakip.BLL.Base
 {
     public class BaseBll<T, TContext> : IBaseBll where T : BaseEntity where TContext : DbContext
     {
+        #region Varaibles
         private readonly Control _ctrl;
         private IUnitOfWork<T> _unitOfWork;
+        #endregion
 
         private bool Validation(IslemTuru islemTuru, BaseEntity oldEntity, BaseEntity currentEntity, Expression<Func<T, bool>> filter)
         {

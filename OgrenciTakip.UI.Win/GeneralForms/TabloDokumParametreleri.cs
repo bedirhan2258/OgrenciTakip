@@ -18,6 +18,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         #endregion
         public TabloDokumParametreleri(params object[] prm)
         {
+            InitializeComponent();//Bu kodu silmişsinhociz.
             dataLayoutControl = myDataLayoutControl2;
             HideItems = new BarItem[] { btnYeni, btnKaydet, btnGeriAl, btnSil };
             ShowItems = new BarItem[] { btnYazdir, btnBaskiOnizleme };
@@ -29,6 +30,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         {
 
             txtRaporBasligi.Text = _raporBaslik;
+
             txtBaslikEkle.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());
             txtRaporuKagidaSigdir.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<RaporuKagidaSigdirmaTuru>());
             txtYazdirmaYonu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaYonu>());
@@ -75,6 +77,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         }
         protected override void Control_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (sender != txtBaslikEkle) return;
             txtRaporBasligi.Enabled = txtBaslikEkle.Text.GetEnum<EvetHayir>() == EvetHayir.Evet;
         }
     }

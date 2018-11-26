@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Functions
             _ps = new PrintingSystem();
             _tablo = tablo;
             _subeAdi = subeAdi;
-            _dp = ShowEditForms<TabloDokumParametreleri>.ShowDiagloEditForms<DokumParametleri>(raporBaslik);
+            _dp = ShowEditForms<TabloDokumParametreleri>.ShowDialogEditForms<DokumParametleri>(raporBaslik);
 
             RaporDokumu();
         }
@@ -42,13 +42,14 @@ namespace OgrenciTakip.UI.Win.Functions
             _link.Component = _tablo.GridControl;
             _link.PaperKind = PaperKind.Letter;
             _link.Margins = new Margins(59, 59, 115, 48);
-            _link.CreateDocument(_ps);
             _link.CreateMarginalHeaderArea += Link_CreateMarginalHeaderArea;
+            _link.CreateDocument(_ps);
 
             switch (_dp.DokumSekli)
             {
 
-                case DokumSekli.RaporBaskiOnizleme:
+                case DokumSekli.TabloBaskiOnizleme:
+                    ShowRibbonForms<RaporOnizleme>.ShowForm(true, _ps, _dp.RaporBaslik);
                     break;
                 case DokumSekli.TabloYazdir:
                     for (int i = 0; i < _dp.YazdirilacakAdet; i++)

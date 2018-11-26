@@ -13,12 +13,12 @@ using OgrenciTakip.BLL.Interfaces;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class OkulBLL : BaseBll<Okul, OgrenciTakipContext>, IBaseGenelBll, IBaseCommonBll
+    public class OkulBLL : BaseGenelBll<Okul>, IBaseGenelBll, IBaseCommonBll
     {
-        public OkulBLL() { }
-        public OkulBLL(Control ctrl) : base(ctrl) { }
+        public OkulBLL() : base(KartTuru.Okul) { }
+        public OkulBLL(Control ctrl) : base(ctrl, KartTuru.Okul) { }
 
-        public BaseEntity Single(Expression<Func<Okul, bool>> filter)
+        public override BaseEntity Single(Expression<Func<Okul, bool>> filter)
         {
             return BaseSingle(filter, x => new OkulS
             {
@@ -32,8 +32,9 @@ namespace OgrenciTakip.BLL.General
                 Aciklama = x.Aciklama,
                 Durum = x.Durum
             });
+
         }
-        public IEnumerable<BaseEntity> List(Expression<Func<Okul, bool>> filter)
+        public override IEnumerable<BaseEntity> List(Expression<Func<Okul, bool>> filter)
         {
             return BaseList(filter, x => new OkulL
             {
@@ -45,22 +46,6 @@ namespace OgrenciTakip.BLL.General
                 Aciklama = x.Aciklama
             }).OrderBy(x => x.Kod).ToList();
         }
-        public bool Insert(BaseEntity entity)
-        {
-            return BaseInsert(entity, x => x.Kod == entity.Kod);
-        }
-        public bool Update(BaseEntity oldEntity, BaseEntity currentEntity)
-        {
-            return BaseUpdate(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod);
-        }
-        public bool Delete(BaseEntity entity)
-        {
-            return BaseDelete(entity, KartTuru.Okul);
-        }
 
-        public string YeniKodVer()
-        {
-            return BaseYeniKodVer(KartTuru.Okul, x => x.Kod);
-        }
     }
 }

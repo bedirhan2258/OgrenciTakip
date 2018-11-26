@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseBll.cs" />
+    <Compile Include="Base\BaseGenelBll.cs" />
     <Compile Include="Functions\Convert.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\ValidationFunctions.cs" />

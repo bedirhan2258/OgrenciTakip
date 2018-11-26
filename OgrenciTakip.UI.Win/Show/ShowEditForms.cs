@@ -35,11 +35,11 @@ namespace OgrenciTakip.UI.Win.Show
                 return frm.refreshYapilacak ? frm.id : 0;
             }
         }
-        public static T ShowDiagloEditForms<T>(params object[] prm)where T :IBaseEntity
+        public static T ShowDialogEditForms<T>(params object[] prm) where T : IBaseEntity
         {
             using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
             {
-               
+
                 frm.Yukle();
                 frm.ShowDialog();
                 return (T)frm.ReturnEntity();

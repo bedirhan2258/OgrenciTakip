@@ -19,24 +19,29 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
     public partial class BaseEditForm : RibbonForm
     {
         private bool _formSablonKayitEdilecek;
-        protected internal IslemTuru islemTuru;
-        protected internal long id;
-        protected internal bool refreshYapilacak;
-        protected MyDataLayoutControl dataLayoutControl;
-        protected MyDataLayoutControl[] datalayoutControls;
+
+        #region Varaibles
         protected IBaseBll bll;
         protected KartTuru kartTuru;
         protected BaseEntity oldEntity;
         protected BaseEntity currentEnttiy;
+        protected MyDataLayoutControl dataLayoutControl;
+        protected MyDataLayoutControl[] datalayoutControls;
         protected bool isLoaded;
         protected bool kayitSonrasiFormuKapat = true;
         protected BarItem[] ShowItems;
         protected BarItem[] HideItems;
 
+        protected internal IslemTuru islemTuru;
+        protected internal long id;
+        protected internal bool refreshYapilacak;
+        #endregion
+
         public BaseEditForm()
         {
             InitializeComponent();
         }
+
         protected void EventsLoad()
         {
             //Button Events
@@ -62,7 +67,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                     case ComboBoxEdit edt:
                         edt.EditValueChanged += Control_EditValueChanged;
                         edt.SelectedValueChanged += Control_SelectedValueChanged;
-                
+
                         break;
                     case MyButtonEdit edt:
                         edt.IdChanged += Control_IdChanged;
@@ -96,116 +101,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         }
 
-        protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
-
-        private void Control_Leave(object sender, EventArgs e)
-        {
-            statusBarKisayol.Visibility = BarItemVisibility.Never;
-            statusBarKisayolAciklama.Visibility = BarItemVisibility.Never;
-        }
-
-        private void Control_GotFocus(object sender, EventArgs e)
-        {
-            var type = sender.GetType();
-            if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit))
-            {
-                statusBarKisayol.Visibility = BarItemVisibility.Always;
-                statusBarKisayolAciklama.Visibility = BarItemVisibility.Always;
-
-                statusBarAciklama.Caption = ((IStatusBarAciklama)sender).StatusBarAciklama;
-                statusBarKisayol.Caption = ((IStatusBarKisayol)sender).StatusBarKisayol;
-                statusBarKisayolAciklama.Caption = ((IStatusBarKisayol)sender).StatusBarKisayolAciklama;
-            }
-            else if (sender is IStatusBarAciklama ctrl)
-            {
-                statusBarAciklama.Caption = ctrl.StatusBarAciklama;
-            }
-        }
-
-        private void BaseEditForm_SizeChanged(object sender, EventArgs e)
-        {
-            _formSablonKayitEdilecek = true;
-        }
-
-        private void BaseEditForm_LocationChanged(object sender, EventArgs e)
-        {
-            _formSablonKayitEdilecek = true;
-        }
-
-        private void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            SablonKaydet();
-            if (btnKaydet.Visibility == BarItemVisibility.Never || !btnKaydet.Enabled) return;
-
-            if (!Kaydet(true))
-                e.Cancel = true;
-        }
-
-        protected void SablonKaydet()
-        {
-            if (_formSablonKayitEdilecek)
-                Name.FormSablonKaydet(Left, Top, Width, Height, WindowState);
-        }
-        private void SablonYukle()
-        {
-            Name.FormSablonYukle(this);
-        }
-
-        protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
-
-        private void Control_EditValueChanged(object sender, EventArgs e)
-        {
-            if (!isLoaded) return;
-            GuncelNesneOlustur();
-        }
-
-        private void Control_DoubleClick(object sender, EventArgs e)
-        {
-            SecimYap(sender);
-        }
-
-        private void Control_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
-        {
-            SecimYap(sender);
-        }
-
-        private void Control_IdChanged(object sender, IdChangedEventArgs e)
-        {
-            if (!isLoaded) return;
-            GuncelNesneOlustur();
-        }
-
-        private void Control_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-                Close();
-            if (sender is MyButtonEdit edt)
-            {
-                switch (e.KeyCode)
-                {
-                    //kontrol+shift +delete basılırsa aynı anda bu işlemleri yap demek
-                    case Keys.Delete when e.Control && e.Shift:
-                        edt.Id = null;
-                        edt.EditValue = null;
-                        break;
-                    case Keys.F4:
-                    case Keys.Down when e.Modifiers == Keys.Alt:
-                        SecimYap(edt);
-                        break;
-                }
-            }
-        }
-
-        private void BaseEditForm_Load(object sender, EventArgs e)
-        {
-            isLoaded = true;
-            GuncelNesneOlustur();
-            SablonYukle();
-            ButonGizleGoster();
-            //Guncelleme yapılacak.
-
-        }
-        protected virtual void SecimYap(object sender) { }
+        ////////////////////////////////////////////////////////////////////////Fonksiyonlar/////////////////////////////////////////////////7
         private void EntityDelete()
         {
 
@@ -219,18 +115,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
             HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
             //Güncellenecek
-        }
-        protected virtual void FiltreUygula()
-        {
-
-        }
-        private void GeriAl()
-        {
-            if (Messages.HayirSeciliEvetHayir("Yapılan değişiklikler geri alınacaktır.Onaylıyor musunuz?", "Geri Al Onay") != DialogResult.Yes) return;
-            if (islemTuru == IslemTuru.EntityUpdate)
-                Yukle();
-            else
-                Close();
         }
 
         private bool Kaydet(bool kapanis)
@@ -292,6 +176,44 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             return false;
         }
 
+        private void GeriAl()
+        {
+            if (Messages.HayirSeciliEvetHayir("Yapılan değişiklikler geri alınacaktır.Onaylıyor musunuz?", "Geri Al Onay") != DialogResult.Yes) return;
+            if (islemTuru == IslemTuru.EntityUpdate)
+                Yukle();
+            else
+                Close();
+        }
+
+        private void FarkliKaydet()
+        {
+            if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyormusunuz?", "Kayıt Onay") != DialogResult.Yes) return;
+            islemTuru = IslemTuru.EntityInsert;
+            Yukle();
+
+            if (Kaydet(true))
+                Close();
+        }
+
+        private void SablonYukle()
+        {
+            Name.FormSablonYukle(this);
+        }
+
+        private void SablonKaydet()
+        {
+            if (_formSablonKayitEdilecek)
+                Name.FormSablonKaydet(Left, Top, Width, Height, WindowState);
+        }
+
+
+        protected virtual void SecimYap(object sender) { }
+
+        protected virtual void FiltreUygula()
+        {
+
+        }
+
         protected virtual bool EntityUpdate()
         {
             return ((IBaseGenelBll)bll).Update(oldEntity, currentEnttiy);
@@ -302,18 +224,127 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             return ((IBaseGenelBll)bll).Insert(currentEnttiy);
         }
 
+        protected virtual void BaskiOnIzleme() { }
+
+        protected virtual void Yazdir() { }
+
+        protected virtual void NesneyiKontrollereBagla() { }
+
+        protected virtual void GuncelNesneOlustur() { }
+
+
         protected internal virtual void Yukle()
         {
 
         }
-        protected internal virtual IBaseEntity ReturnEntity() { return null; }
-        protected virtual void NesneyiKontrollereBagla() { }
 
-        protected virtual void GuncelNesneOlustur() { }
+        protected internal virtual IBaseEntity ReturnEntity() { return null; }
+
         protected internal virtual void ButonEnabledDurumu()
         {
             if (!isLoaded) return;
             GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy);
+        }
+
+
+        ////////////////////////////////////////////////////////////////////////7777//Eventler////////////////////////////////////////////////////////////////////
+
+
+
+        private void Control_Leave(object sender, EventArgs e)
+        {
+            statusBarKisayol.Visibility = BarItemVisibility.Never;
+            statusBarKisayolAciklama.Visibility = BarItemVisibility.Never;
+        }
+
+        private void Control_GotFocus(object sender, EventArgs e)
+        {
+            var type = sender.GetType();
+            if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit))
+            {
+                statusBarKisayol.Visibility = BarItemVisibility.Always;
+                statusBarKisayolAciklama.Visibility = BarItemVisibility.Always;
+
+                statusBarAciklama.Caption = ((IStatusBarAciklama)sender).StatusBarAciklama;
+                statusBarKisayol.Caption = ((IStatusBarKisayol)sender).StatusBarKisayol;
+                statusBarKisayolAciklama.Caption = ((IStatusBarKisayol)sender).StatusBarKisayolAciklama;
+            }
+            else if (sender is IStatusBarAciklama ctrl)
+            {
+                statusBarAciklama.Caption = ctrl.StatusBarAciklama;
+            }
+        }
+
+        private void BaseEditForm_SizeChanged(object sender, EventArgs e)
+        {
+            _formSablonKayitEdilecek = true;
+        }
+
+        private void BaseEditForm_LocationChanged(object sender, EventArgs e)
+        {
+            _formSablonKayitEdilecek = true;
+        }
+
+        private void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SablonKaydet();
+            if (btnKaydet.Visibility == BarItemVisibility.Never || !btnKaydet.Enabled) return;
+
+            if (!Kaydet(true))
+                e.Cancel = true;
+        }
+
+        private void Control_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!isLoaded) return;
+            GuncelNesneOlustur();
+        }
+
+        private void Control_DoubleClick(object sender, EventArgs e)
+        {
+            SecimYap(sender);
+        }
+
+        private void Control_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            SecimYap(sender);
+        }
+
+        private void Control_IdChanged(object sender, IdChangedEventArgs e)
+        {
+            if (!isLoaded) return;
+            GuncelNesneOlustur();
+        }
+
+        private void Control_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Close();
+            if (sender is MyButtonEdit edt)
+            {
+                switch (e.KeyCode)
+                {
+                    //kontrol+shift +delete basılırsa aynı anda bu işlemleri yap demek
+                    case Keys.Delete when e.Control && e.Shift:
+                        edt.Id = null;
+                        edt.EditValue = null;
+                        break;
+                    case Keys.F4:
+                    case Keys.Down when e.Modifiers == Keys.Alt:
+                        SecimYap(edt);
+                        break;
+                }
+            }
+        }
+
+        private void BaseEditForm_Load(object sender, EventArgs e)
+        {
+            isLoaded = true;
+            GuncelNesneOlustur();
+            SablonYukle();
+            ButonGizleGoster();
+            //Guncelleme yapılacak.
+
         }
 
         private void Button_ItemClick(object sender, ItemClickEventArgs e)
@@ -362,18 +393,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Cursor.Current = DefaultCursor;
         }
 
-        protected virtual void BaskiOnIzleme() { }
+        protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
 
-        protected virtual void Yazdir() { }
+        protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
 
-        private void FarkliKaydet()
-        {
-            if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyormusunuz?", "Kayıt Onay") != DialogResult.Yes) return;
-            islemTuru = IslemTuru.EntityInsert;
-            Yukle();
-
-            if (Kaydet(true))
-                Close();
-        }
     }
 }
