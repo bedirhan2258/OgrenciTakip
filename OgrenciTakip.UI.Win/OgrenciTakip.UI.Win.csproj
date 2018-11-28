@@ -142,6 +142,18 @@
     <Compile Include="Forms\SchoolForms\OkulListForm.Designer.cs">
       <DependentUpon>OkulListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\YabanciDilForms\YabanciDilListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YabanciDilForms\YabanciDilListForm.Designer.cs">
+      <DependentUpon>YabanciDilListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YabanciDilForms\YabanciDİlEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YabanciDilForms\YabanciDİlEditForm.Designer.cs">
+      <DependentUpon>YabanciDİlEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions\FileFunctions.cs" />
     <Compile Include="Functions\FilterFunctions.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
@@ -310,6 +322,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SchoolForms\OkulListForm.resx">
       <DependentUpon>OkulListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YabanciDilForms\YabanciDilListForm.resx">
+      <DependentUpon>YabanciDilListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YabanciDilForms\YabanciDİlEditForm.resx">
+      <DependentUpon>YabanciDİlEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>

@@ -1,48 +1,49 @@
 ﻿
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
-using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 
-namespace OgrenciTakip.UI.Win.IptalNedeniForms
+namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
 {
-    public partial class IptalNedeniEditForm : BaseEditForm
+    public partial class YabanciDİlEditForm : BaseEditForm
     {
-        public IptalNedeniEditForm()
+        public YabanciDİlEditForm()
         {
             InitializeComponent();
 
             dataLayoutControl = myDataLayoutControl;
-            bll = new IptalNedeniBll(myDataLayoutControl);
-            kartTuru = KartTuru.IptalNedeni;
+            bll = new YabanciDilBll(myDataLayoutControl);
+            kartTuru = KartTuru.YabanciDil;
             EventsLoad();
         }
+
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new IptalNedeni() : ((IptalNedeniBll)bll).Single(FilterFunctions.Filter<IptalNedeni>(id));
+            oldEntity = islemTuru == IslemTuru.EntityInsert ? new YabanciDil() : ((YabanciDilBll)bll).Single(FilterFunctions.Filter<YabanciDil>(id));
             NesneyiKontrollereBagla();
 
             if (islemTuru != IslemTuru.EntityInsert) return;
             id = islemTuru.IdOlustur(oldEntity);
-            txtKod.Text = ((IptalNedeniBll)bll).YeniKodVer();
-            txtIptalNedeniAdi.Focus();
+            txtKod.Text = ((YabanciDilBll)bll).YeniKodVer();
+            txtDilAdi.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (IptalNedeni)oldEntity;
+            var entity = (YabanciDil)oldEntity;
             txtKod.Text = entity.Kod;
-            txtIptalNedeniAdi.Text = entity.IptalNedeniAdi;
+            txtDilAdi.Text = entity.DilAdi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new IptalNedeni
+            currentEnttiy = new YabanciDil
             {
                 Id = id,
                 Kod = txtKod.Text,
-                IptalNedeniAdi = txtIptalNedeniAdi.Text,
+                DilAdi = txtDilAdi.Text,
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };

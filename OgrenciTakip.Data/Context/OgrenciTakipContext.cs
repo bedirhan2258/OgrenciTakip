@@ -1,5 +1,6 @@
 namespace OgrenciTakip.Data.Context
 {
+    using Model;
     using Model.Entities;
     using OgrenciTakipMigration;
     using System.Data.Entity;
@@ -33,6 +34,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<Filtre> Filtre { get; set; }
         public DbSet<AileBilgi> AileBilgi { get; set; }
         public DbSet<IptalNedeni> IptalNedeni { get; set; }
+        public DbSet<YabanciDil> YabanciDil { get; set; }
     }
 
 }

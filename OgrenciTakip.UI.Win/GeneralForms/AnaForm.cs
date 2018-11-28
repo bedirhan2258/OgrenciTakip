@@ -5,6 +5,7 @@ using OgrenciTakip.Common.Enums;
 using OgrenciTakip.UI.Win.Forms.IlForms;
 using OgrenciTakip.UI.Win.Forms;
 using OgrenciTakip.UI.Win.IptalNedeniForms;
+using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -49,6 +50,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnIptalNedeniKartlari)
             {
                 ShowListForms<IptalNedeniListForm>.ShowListForm(KartTuru.IptalNedeni);
+            }
+            else if (e.Item == btnYabanciDilKartlari)
+            {
+                ShowListForms<YabanciDilListForm>.ShowListForm(KartTuru.YabanciDil);
             }
         }
     }
