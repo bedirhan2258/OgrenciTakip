@@ -26,6 +26,10 @@ namespace OgrenciTakip.Common.Enums
         [Description("Kontenjan Kartı")]
         Kontenjan = 9,
         [Description("Rehber Kartı")]
-        Rehber = 10
+        Rehber = 10,
+        [Description("Sinif Grup Kartı")]
+        SinifGrup = 11,
+        [Description("Meslek Kartı")]
+        Meslek = 12
     }
 }

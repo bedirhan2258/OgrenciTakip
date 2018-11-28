@@ -38,6 +38,8 @@ namespace OgrenciTakip.Data.Context
         public DbSet<Tesvik> Tesvik { get; set; }
         public DbSet<Kontenjan> Kontenjan { get; set; }
         public DbSet<Rehber> Rehber { get; set; }
+        public DbSet<SinifGrup> SinifGrup { get; set; }
+        public DbSet<Meslek> Meslek { get; set; }
     }
 
 }

@@ -61,8 +61,10 @@
     <Compile Include="Entities\Ilce.cs" />
     <Compile Include="Entities\IptalNedeni.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
+    <Compile Include="Entities\Meslek.cs" />
     <Compile Include="Entities\Okul.cs" />
     <Compile Include="Entities\Rehber.cs" />
+    <Compile Include="Entities\SinifGrup.cs" />
     <Compile Include="Entities\Tesvik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\YabanciDil.cs" />
