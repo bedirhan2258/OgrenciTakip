@@ -70,11 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AileBilgiForms\AileBilgiEditform.cs">
+    <Compile Include="Forms\AileBilgiForms\AileBilgiEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AileBilgiForms\AileBilgiEditform.Designer.cs">
-      <DependentUpon>AileBilgiEditform.cs</DependentUpon>
+    <Compile Include="Forms\AileBilgiForms\AileBilgiEditForm.Designer.cs">
+      <DependentUpon>AileBilgiEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AileBilgiForms\AileBilgiListForm.cs">
       <SubType>Form</SubType>
@@ -130,6 +130,30 @@
     <Compile Include="Forms\IlForms\IlListForm.Designer.cs">
       <DependentUpon>IlListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KontenjanForms\KontenjanEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KontenjanForms\KontenjanEditForm.Designer.cs">
+      <DependentUpon>KontenjanEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KontenjanForms\KontenjanListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
+      <DependentUpon>KontenjanListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RehberForms\RehberEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RehberForms\RehberEditForm.Designer.cs">
+      <DependentUpon>RehberEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RehberForms\RehberListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RehberForms\RehberListForm.Designer.cs">
+      <DependentUpon>RehberListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SchoolForms\OkulEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +165,18 @@
     </Compile>
     <Compile Include="Forms\SchoolForms\OkulListForm.Designer.cs">
       <DependentUpon>OkulListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TesvikForms\TesvikEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TesvikForms\TesvikEditForm.Designer.cs">
+      <DependentUpon>TesvikEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TesvikForms\TesvikListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TesvikForms\TesvikListForm.Designer.cs">
+      <DependentUpon>TesvikListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\YabanciDilForms\YabanciDilListForm.cs">
       <SubType>Form</SubType>
@@ -281,8 +317,8 @@
     <Compile Include="UserControls\Navigators\SmallNavigator.Designer.cs">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditform.resx">
-      <DependentUpon>AileBilgiEditform.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditForm.resx">
+      <DependentUpon>AileBilgiEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiListForm.resx">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
@@ -317,11 +353,29 @@
     <EmbeddedResource Include="Forms\IptalNedeniForms\IptalNedeniListForm.resx">
       <DependentUpon>IptalNedeniListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KontenjanForms\KontenjanEditForm.resx">
+      <DependentUpon>KontenjanEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
+      <DependentUpon>KontenjanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RehberForms\RehberEditForm.resx">
+      <DependentUpon>RehberEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RehberForms\RehberListForm.resx">
+      <DependentUpon>RehberListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SchoolForms\OkulEditForm.resx">
       <DependentUpon>OkulEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SchoolForms\OkulListForm.resx">
       <DependentUpon>OkulListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TesvikForms\TesvikEditForm.resx">
+      <DependentUpon>TesvikEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TesvikForms\TesvikListForm.resx">
+      <DependentUpon>TesvikListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YabanciDilForms\YabanciDilListForm.resx">
       <DependentUpon>YabanciDilListForm.cs</DependentUpon>

@@ -1,34 +1,33 @@
-﻿using DevExpress.XtraBars;
+﻿
+using DevExpress.XtraBars;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities;
-using OgrenciTakip.UI.Win.Forms.AileBilgiForms;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 
-namespace OgrenciTakip.UI.Win.Forms
+namespace OgrenciTakip.UI.Win.Forms.TesvikForms
 {
-    public partial class AileBilgiListForm : BaseListForm
+    public partial class TesvikListForm : BaseListForm
     {
-        public AileBilgiListForm()
+        public TesvikListForm()
         {
             InitializeComponent();
-            bll = new AileBilgiBll();
+            bll = new TesvikBll();
         }
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.AileBilgi;
-            formShow = new ShowEditForms<AileBilgiEditForm>();
+            kartTuru = KartTuru.Tesvik;
+            formShow = new ShowEditForms<TesvikEditForm>();
             navigator = longNavigator.Navigator;
             if (IsMdiChild)
                 ShowItems = new BarItem[] { btnBagliKartlar };
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((AileBilgiBll)bll).List(FilterFunctions.Filter<AileBilgi>(aktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((TesvikBll)bll).List(FilterFunctions.Filter<Tesvik>(aktifKartlariGoster));
         }
-
     }
 }

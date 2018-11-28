@@ -6,6 +6,9 @@ using OgrenciTakip.UI.Win.Forms.IlForms;
 using OgrenciTakip.UI.Win.Forms;
 using OgrenciTakip.UI.Win.IptalNedeniForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
+using OgrenciTakip.UI.Win.Forms.TesvikForms;
+using OgrenciTakip.UI.Win.Forms.KontenjanForms;
+using OgrenciTakip.UI.Win.Forms.RehberForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -54,6 +57,18 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnYabanciDilKartlari)
             {
                 ShowListForms<YabanciDilListForm>.ShowListForm(KartTuru.YabanciDil);
+            }
+            else if (e.Item == btnTesvikKartlari)
+            {
+                ShowListForms<TesvikListForm>.ShowListForm(KartTuru.Tesvik);
+            }
+            else if (e.Item == btnKontenjanKartlari)
+            {
+                ShowListForms<KontenjanListForm>.ShowListForm(KartTuru.Kontenjan);
+            }
+            else if (e.Item == btnRehberKartlari)
+            {
+                ShowListForms<RehberListForm>.ShowListForm(KartTuru.Rehber);
             }
         }
     }

@@ -35,6 +35,9 @@ namespace OgrenciTakip.Data.Context
         public DbSet<AileBilgi> AileBilgi { get; set; }
         public DbSet<IptalNedeni> IptalNedeni { get; set; }
         public DbSet<YabanciDil> YabanciDil { get; set; }
+        public DbSet<Tesvik> Tesvik { get; set; }
+        public DbSet<Kontenjan> Kontenjan { get; set; }
+        public DbSet<Rehber> Rehber { get; set; }
     }
 
 }

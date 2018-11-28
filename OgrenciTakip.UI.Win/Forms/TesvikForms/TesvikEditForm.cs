@@ -4,50 +4,49 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 
-namespace OgrenciTakip.UI.Win.Forms.AileBilgiForms
+namespace OgrenciTakip.UI.Win.Forms.TesvikForms
 {
-    public partial class AileBilgiEditForm : BaseEditForm
+    public partial class TesvikEditForm : BaseEditForm
     {
-        public AileBilgiEditForm()
+        public TesvikEditForm()
         {
             InitializeComponent();
 
             dataLayoutControl = myDataLayoutControl;
-            bll = new AileBilgiBll(myDataLayoutControl);
-            kartTuru = KartTuru.AileBilgi;
+            bll = new TesvikBll(myDataLayoutControl);
+            kartTuru = KartTuru.Tesvik;
             EventsLoad();
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new AileBilgi() : ((AileBilgiBll)bll).Single(FilterFunctions.Filter<AileBilgi>(id));
+            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Tesvik() : ((TesvikBll)bll).Single(FilterFunctions.Filter<Tesvik>(id));
             NesneyiKontrollereBagla();
 
             if (islemTuru != IslemTuru.EntityInsert) return;
             id = islemTuru.IdOlustur(oldEntity);
-            txtKod.Text = ((AileBilgiBll)bll).YeniKodVer();
-            txtBilgiAdi.Focus();
+            txtKod.Text = ((TesvikBll)bll).YeniKodVer();
+            txtTesvikAdi.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (AileBilgi)oldEntity;
+            var entity = (Tesvik)oldEntity;
             txtKod.Text = entity.Kod;
-            txtBilgiAdi.Text = entity.BilgiAdi;
+            txtTesvikAdi.Text = entity.TesvikAdi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new AileBilgi
+            currentEnttiy = new Tesvik
             {
                 Id = id,
                 Kod = txtKod.Text,
-                BilgiAdi = txtBilgiAdi.Text,
+                TesvikAdi = txtTesvikAdi.Text,
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
 
             ButonEnabledDurumu();
         }
-
     }
 }

@@ -1,53 +1,53 @@
-﻿using OgrenciTakip.BLL.General;
+﻿
+using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 
-namespace OgrenciTakip.UI.Win.Forms.AileBilgiForms
+namespace OgrenciTakip.UI.Win.Forms.KontenjanForms
 {
-    public partial class AileBilgiEditForm : BaseEditForm
+    public partial class KontenjanEditForm : BaseEditForm
     {
-        public AileBilgiEditForm()
+        public KontenjanEditForm()
         {
             InitializeComponent();
 
             dataLayoutControl = myDataLayoutControl;
-            bll = new AileBilgiBll(myDataLayoutControl);
-            kartTuru = KartTuru.AileBilgi;
+            bll = new KontenjanBll(myDataLayoutControl);
+            kartTuru = KartTuru.Kontenjan;
             EventsLoad();
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new AileBilgi() : ((AileBilgiBll)bll).Single(FilterFunctions.Filter<AileBilgi>(id));
+            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Kontenjan() : ((KontenjanBll)bll).Single(FilterFunctions.Filter<Kontenjan>(id));
             NesneyiKontrollereBagla();
 
             if (islemTuru != IslemTuru.EntityInsert) return;
             id = islemTuru.IdOlustur(oldEntity);
-            txtKod.Text = ((AileBilgiBll)bll).YeniKodVer();
-            txtBilgiAdi.Focus();
+            txtKod.Text = ((KontenjanBll)bll).YeniKodVer();
+            txtKontenjanAdi.Focus();
         }
         protected override void NesneyiKontrollereBagla()
         {
-            var entity = (AileBilgi)oldEntity;
+            var entity = (Kontenjan)oldEntity;
             txtKod.Text = entity.Kod;
-            txtBilgiAdi.Text = entity.BilgiAdi;
+            txtKontenjanAdi.Text = entity.KontenjanAdi;
             txtAciklama.Text = entity.Aciklama;
             tglDurum.IsOn = entity.Durum;
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new AileBilgi
+            currentEnttiy = new Kontenjan
             {
                 Id = id,
                 Kod = txtKod.Text,
-                BilgiAdi = txtBilgiAdi.Text,
+                KontenjanAdi = txtKontenjanAdi.Text,
                 Aciklama = txtAciklama.Text,
                 Durum = tglDurum.IsOn
             };
 
             ButonEnabledDurumu();
         }
-
     }
 }
