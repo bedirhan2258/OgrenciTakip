@@ -18,6 +18,6 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
         }
         public override bool EnterMoveNextControl { get; set; } = true;
 
-        public string StatusBarAciklama { get; set; } = "Aciklama Griniz.";
+        public string StatusBarAciklama { get; set; } = "Açıklama Giriniz.";
     }
 }

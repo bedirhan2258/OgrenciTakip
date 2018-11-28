@@ -70,6 +70,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AileBilgiForms\AileBilgiEditform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AileBilgiForms\AileBilgiEditform.Designer.cs">
+      <DependentUpon>AileBilgiEditform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AileBilgiForms\AileBilgiListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AileBilgiForms\AileBilgiListForm.Designer.cs">
+      <DependentUpon>AileBilgiListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BaseForms\BaseEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +167,18 @@
     </Compile>
     <Compile Include="Interfaces\IStatusbarAciklama.cs" />
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
+    <Compile Include="Forms\IptalNedeniForms\IptalNedeniEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IptalNedeniForms\IptalNedeniEditForm.Designer.cs">
+      <DependentUpon>IptalNedeniEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IptalNedeniForms\IptalNedeniListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IptalNedeniForms\IptalNedeniListForm.Designer.cs">
+      <DependentUpon>IptalNedeniListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
@@ -245,6 +269,12 @@
     <Compile Include="UserControls\Navigators\SmallNavigator.Designer.cs">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditform.resx">
+      <DependentUpon>AileBilgiEditform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiListForm.resx">
+      <DependentUpon>AileBilgiListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForms\BaseEditForm.resx">
       <DependentUpon>BaseEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IlForms\IlListForm.resx">
       <DependentUpon>IlListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IptalNedeniForms\IptalNedeniEditForm.resx">
+      <DependentUpon>IptalNedeniEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IptalNedeniForms\IptalNedeniListForm.resx">
+      <DependentUpon>IptalNedeniListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SchoolForms\OkulEditForm.resx">
       <DependentUpon>OkulEditForm.cs</DependentUpon>
@@ -446,6 +482,7 @@
   <ItemGroup>
     <None Include="Resources\printpreview_32x32.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -14,6 +14,10 @@ namespace OgrenciTakip.Common.Enums
         [Description("İlçe Kartı")]
         Ilce = 3,
         [Description("Filtre Kartı")]
-        Filtre = 4
+        Filtre = 4,
+        [Description("Aile Bilgi Kartı")]
+        AileBilgi = 5,
+        [Description("İptal Nedeni Kartı")]
+        IptalNedeni = 6
     }
 }
