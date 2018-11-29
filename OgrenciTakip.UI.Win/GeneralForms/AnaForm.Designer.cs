@@ -39,12 +39,14 @@
             this.btnKontenjanKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnRehberKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnSinifGrupKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMeslekKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYakinlikKarti = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnMeslekKartlari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIsyeriKarti = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -63,9 +65,11 @@
             this.btnKontenjanKartlari,
             this.btnRehberKartlari,
             this.btnSinifGrupKartlari,
-            this.btnMeslekKartlari});
+            this.btnMeslekKartlari,
+            this.btnYakinlikKarti,
+            this.btnIsyeriKarti});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 11;
+            this.ribbonControl.MaxItemId = 13;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -126,6 +130,18 @@
             this.btnSinifGrupKartlari.Id = 9;
             this.btnSinifGrupKartlari.Name = "btnSinifGrupKartlari";
             // 
+            // btnMeslekKartlari
+            // 
+            this.btnMeslekKartlari.Caption = "Meslek Kartları";
+            this.btnMeslekKartlari.Id = 10;
+            this.btnMeslekKartlari.Name = "btnMeslekKartlari";
+            // 
+            // btnYakinlikKarti
+            // 
+            this.btnYakinlikKarti.Caption = "Yakınlık Kartları";
+            this.btnYakinlikKarti.Id = 11;
+            this.btnYakinlikKarti.Name = "btnYakinlikKarti";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -145,6 +161,8 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnRehberKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSinifGrupKartlari);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnMeslekKartlari);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnYakinlikKarti);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnIsyeriKarti);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar1
@@ -163,11 +181,11 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnMeslekKartlari
+            // btnIsyeriKarti
             // 
-            this.btnMeslekKartlari.Caption = "Meslek Kartları";
-            this.btnMeslekKartlari.Id = 10;
-            this.btnMeslekKartlari.Name = "btnMeslekKartlari";
+            this.btnIsyeriKarti.Caption = "İşyeri Kartları";
+            this.btnIsyeriKarti.Id = 12;
+            this.btnIsyeriKarti.Name = "btnIsyeriKarti";
             // 
             // AnaForm
             // 
@@ -207,5 +225,7 @@
         private DevExpress.XtraBars.BarButtonItem btnRehberKartlari;
         private DevExpress.XtraBars.BarButtonItem btnSinifGrupKartlari;
         private DevExpress.XtraBars.BarButtonItem btnMeslekKartlari;
+        private DevExpress.XtraBars.BarButtonItem btnYakinlikKarti;
+        private DevExpress.XtraBars.BarButtonItem btnIsyeriKarti;
     }
 }

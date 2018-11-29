@@ -63,6 +63,7 @@
     <Compile Include="General\IlBLL.cs" />
     <Compile Include="General\IlceBLL.cs" />
     <Compile Include="General\IptalNedeniBll.cs" />
+    <Compile Include="General\IsyeriBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
     <Compile Include="General\OkulBLL.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="General\SinifGrupBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
     <Compile Include="General\YabanciDilBll.cs" />
+    <Compile Include="General\YakinlikBll.cs" />
     <Compile Include="Interfaces\IBaseBll.cs" />
     <Compile Include="Interfaces\IBaseCommonBll.cs" />
     <Compile Include="Interfaces\IBaseGenelBll.cs" />

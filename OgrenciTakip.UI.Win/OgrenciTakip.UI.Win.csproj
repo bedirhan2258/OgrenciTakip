@@ -130,6 +130,18 @@
     <Compile Include="Forms\IlForms\IlListForm.Designer.cs">
       <DependentUpon>IlListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IsyeriForms\IsyeriEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IsyeriForms\IsyeriEditForm.Designer.cs">
+      <DependentUpon>IsyeriEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IsyeriForms\IsyeriListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IsyeriForms\IsyeriListForm.Designer.cs">
+      <DependentUpon>IsyeriListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KontenjanForms\KontenjanEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +225,18 @@
     </Compile>
     <Compile Include="Forms\YabanciDilForms\YabanciDİlEditForm.Designer.cs">
       <DependentUpon>YabanciDİlEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YakinlikForms\YakinlikEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YakinlikForms\YakinlikEditForm.Designer.cs">
+      <DependentUpon>YakinlikEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\YakinlikForms\YakinlikListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YakinlikForms\YakinlikListForm.Designer.cs">
+      <DependentUpon>YakinlikListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions\FileFunctions.cs" />
     <Compile Include="Functions\FilterFunctions.cs" />
@@ -377,6 +401,12 @@
     <EmbeddedResource Include="Forms\IptalNedeniForms\IptalNedeniListForm.resx">
       <DependentUpon>IptalNedeniListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IsyeriForms\IsyeriEditForm.resx">
+      <DependentUpon>IsyeriEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IsyeriForms\IsyeriListForm.resx">
+      <DependentUpon>IsyeriListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanEditForm.resx">
       <DependentUpon>KontenjanEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,6 +448,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YabanciDilForms\YabanciDİlEditForm.resx">
       <DependentUpon>YabanciDİlEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YakinlikForms\YakinlikEditForm.resx">
+      <DependentUpon>YakinlikEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YakinlikForms\YakinlikListForm.resx">
+      <DependentUpon>YakinlikListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>

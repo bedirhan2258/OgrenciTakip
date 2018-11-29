@@ -30,6 +30,10 @@ namespace OgrenciTakip.Common.Enums
         [Description("Sinif Grup Kartı")]
         SinifGrup = 11,
         [Description("Meslek Kartı")]
-        Meslek = 12
+        Meslek = 12,
+        [Description("Yakınlık Kartı")]
+        Yakinlik = 13,
+        [Description("Isyeri Kartı")]
+        Isyeri = 14
     }
 }
