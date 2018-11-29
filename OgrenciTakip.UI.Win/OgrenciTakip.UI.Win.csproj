@@ -106,6 +106,18 @@
     <Compile Include="Forms\FiltreForms\FiltreListForm.Designer.cs">
       <DependentUpon>FiltreListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GorevForms\GorevEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GorevForms\GorevEditForm.Designer.cs">
+      <DependentUpon>GorevEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GorevForms\GorevListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GorevForms\GorevListForm.Designer.cs">
+      <DependentUpon>GorevListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IlceForms\IlceEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,18 @@
     </Compile>
     <Compile Include="Forms\IlForms\IlListForm.Designer.cs">
       <DependentUpon>IlListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndirimTuruForms\IndirimTuruEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndirimTuruForms\IndirimTuruEditForm.Designer.cs">
+      <DependentUpon>IndirimTuruEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndirimTuruForms\IndirimTuruListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndirimTuruForms\IndirimTuruListForm.Designer.cs">
+      <DependentUpon>IndirimTuruListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IsyeriForms\IsyeriEditForm.cs">
       <SubType>Form</SubType>
@@ -383,6 +407,12 @@
     <EmbeddedResource Include="Forms\FiltreForms\FiltreListForm.resx">
       <DependentUpon>FiltreListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GorevForms\GorevEditForm.resx">
+      <DependentUpon>GorevEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GorevForms\GorevListForm.resx">
+      <DependentUpon>GorevListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IlceForms\IlceEditForm.resx">
       <DependentUpon>IlceEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +424,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IlForms\IlListForm.resx">
       <DependentUpon>IlListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndirimTuruForms\IndirimTuruEditForm.resx">
+      <DependentUpon>IndirimTuruEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndirimTuruForms\IndirimTuruListForm.resx">
+      <DependentUpon>IndirimTuruListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IptalNedeniForms\IptalNedeniEditForm.resx">
       <DependentUpon>IptalNedeniEditForm.cs</DependentUpon>

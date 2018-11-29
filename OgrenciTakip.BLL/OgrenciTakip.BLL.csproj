@@ -60,8 +60,10 @@
     <Compile Include="Functions\ValidationFunctions.cs" />
     <Compile Include="General\AileBilgiBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
+    <Compile Include="General\GorevBll.cs" />
     <Compile Include="General\IlBLL.cs" />
     <Compile Include="General\IlceBLL.cs" />
+    <Compile Include="General\IndirimTuruBll.cs" />
     <Compile Include="General\IptalNedeniBll.cs" />
     <Compile Include="General\IsyeriBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
