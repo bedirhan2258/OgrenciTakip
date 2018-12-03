@@ -38,6 +38,10 @@ namespace OgrenciTakip.Common.Enums
         [Description("Gorev Kartı")]
         Gorev = 15,
         [Description("İndirim Türü Kartı")]
-        IndirimTuru = 16
+        IndirimTuru = 16,
+        [Description("Evrak Kartı")]
+        Evrak = 17,
+        [Description("Promosyon Kartı")]
+        Promosyon = 18
     }
 }

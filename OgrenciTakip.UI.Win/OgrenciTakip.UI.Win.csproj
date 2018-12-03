@@ -94,6 +94,18 @@
     <Compile Include="Forms\BaseForms\BaseListForm.Designer.cs">
       <DependentUpon>BaseListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakEditForm.Designer.cs">
+      <DependentUpon>EvrakEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EvrakForms\EvrakListForm.Designer.cs">
+      <DependentUpon>EvrakListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FiltreForms\FiltreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +201,18 @@
     </Compile>
     <Compile Include="Forms\MeslekForms\MeslekListForm.Designer.cs">
       <DependentUpon>MeslekListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonEditForm.Designer.cs">
+      <DependentUpon>PromosyonEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PromosyonForms\PromosyonListForm.Designer.cs">
+      <DependentUpon>PromosyonListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RehberForms\RehberEditForm.cs">
       <SubType>Form</SubType>
@@ -401,6 +425,12 @@
     <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
       <DependentUpon>BaseListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EvrakForms\EvrakEditForm.resx">
+      <DependentUpon>EvrakEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EvrakForms\EvrakListForm.resx">
+      <DependentUpon>EvrakListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FiltreForms\FiltreEditForm.resx">
       <DependentUpon>FiltreEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -454,6 +484,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MeslekForms\MeslekListForm.resx">
       <DependentUpon>MeslekListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PromosyonForms\PromosyonEditForm.resx">
+      <DependentUpon>PromosyonEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PromosyonForms\PromosyonListForm.resx">
+      <DependentUpon>PromosyonListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RehberForms\RehberEditForm.resx">
       <DependentUpon>RehberEditForm.cs</DependentUpon>

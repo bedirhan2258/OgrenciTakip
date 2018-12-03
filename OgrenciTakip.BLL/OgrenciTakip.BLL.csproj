@@ -59,6 +59,7 @@
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\ValidationFunctions.cs" />
     <Compile Include="General\AileBilgiBll.cs" />
+    <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
     <Compile Include="General\GorevBll.cs" />
     <Compile Include="General\IlBLL.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
     <Compile Include="General\OkulBLL.cs" />
+    <Compile Include="General\PromosyonBll.cs" />
     <Compile Include="General\RehberBll.cs" />
     <Compile Include="General\SinifGrupBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
