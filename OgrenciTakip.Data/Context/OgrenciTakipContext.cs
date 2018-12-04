@@ -48,6 +48,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<Donem> Donem { get; set; }
         public DbSet<Sube> Sube { get; set; }
         public DbSet<Promosyon> Promosyon { get; set; }
+        public DbSet<Servis> Servis { get; set; }
     }
 
 }

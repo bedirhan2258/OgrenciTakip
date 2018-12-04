@@ -260,7 +260,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         private void Control_GotFocus(object sender, EventArgs e)
         {
             var type = sender.GetType();
-            if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit))
+            if (type == typeof(MyButtonEdit) || type == typeof(MyGridView) || type == typeof(MyPictureEdit) || type == typeof(MyComboBoxEdit) || type == typeof(MyDateEdit) || type == typeof(MyCalcEdit))
             {
                 statusBarKisayol.Visibility = BarItemVisibility.Always;
                 statusBarKisayolAciklama.Visibility = BarItemVisibility.Always;

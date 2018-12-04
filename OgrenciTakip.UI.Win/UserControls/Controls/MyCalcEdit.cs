@@ -14,6 +14,8 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
         {
             Properties.AppearanceFocused.ForeColor = Color.LightCyan;
             Properties.AllowNullInput = DefaultBoolean.False;
+            Properties.DisplayFormat.FormatType = FormatType.Numeric;
+            Properties.DisplayFormat.FormatString = "n2";
             //Bu özellik sayesinde virgülden sonra 2 hane kuruş girmeye olanak sağlıcak.
             Properties.EditMask = "n2";
         }
