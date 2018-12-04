@@ -73,6 +73,7 @@
     <Compile Include="General\PromosyonBll.cs" />
     <Compile Include="General\RehberBll.cs" />
     <Compile Include="General\ServisBll.cs" />
+    <Compile Include="General\SinifBll.cs" />
     <Compile Include="General\SinifGrupBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
     <Compile Include="General\YabanciDilBll.cs" />

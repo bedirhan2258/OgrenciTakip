@@ -52,6 +52,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnSinifKarti = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -77,9 +78,10 @@
             this.btnIndirimTuruKarti,
             this.btnEvrakKarti,
             this.btnPromosyonKarti,
-            this.btnServisKarti});
+            this.btnServisKarti,
+            this.btnSinifKarti});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 18;
+            this.ribbonControl.MaxItemId = 19;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -214,6 +216,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnEvrakKarti);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnPromosyonKarti);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnServisKarti);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSinifKarti);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar1
@@ -231,6 +234,12 @@
             // xtraTabbedMdiManager
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
+            // 
+            // btnSinifKarti
+            // 
+            this.btnSinifKarti.Caption = "Sınıf Kartları";
+            this.btnSinifKarti.Id = 18;
+            this.btnSinifKarti.Name = "btnSinifKarti";
             // 
             // AnaForm
             // 
@@ -277,5 +286,6 @@
         private DevExpress.XtraBars.BarButtonItem btnEvrakKarti;
         private DevExpress.XtraBars.BarButtonItem btnPromosyonKarti;
         private DevExpress.XtraBars.BarButtonItem btnServisKarti;
+        private DevExpress.XtraBars.BarButtonItem btnSinifKarti;
     }
 }

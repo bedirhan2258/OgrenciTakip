@@ -226,16 +226,16 @@
     <Compile Include="Forms\RehberForms\RehberListForm.Designer.cs">
       <DependentUpon>RehberListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SchoolForms\OkulEditForm.cs">
+    <Compile Include="Forms\OkulForms\OkulEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SchoolForms\OkulEditForm.Designer.cs">
+    <Compile Include="Forms\OkulForms\OkulEditForm.Designer.cs">
       <DependentUpon>OkulEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SchoolForms\OkulListForm.cs">
+    <Compile Include="Forms\OkulForms\OkulListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SchoolForms\OkulListForm.Designer.cs">
+    <Compile Include="Forms\OkulForms\OkulListForm.Designer.cs">
       <DependentUpon>OkulListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ServisForms\ServisEditForm.cs">
@@ -249,6 +249,18 @@
     </Compile>
     <Compile Include="Forms\ServisForms\ServisListForm.Designer.cs">
       <DependentUpon>ServisListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifEditForm.Designer.cs">
+      <DependentUpon>SinifEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SinifForms\SinifListForm.Designer.cs">
+      <DependentUpon>SinifListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SinifGrupForms\SinifGrupEditForm.cs">
       <SubType>Form</SubType>
@@ -509,10 +521,10 @@
     <EmbeddedResource Include="Forms\RehberForms\RehberListForm.resx">
       <DependentUpon>RehberListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SchoolForms\OkulEditForm.resx">
+    <EmbeddedResource Include="Forms\OkulForms\OkulEditForm.resx">
       <DependentUpon>OkulEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SchoolForms\OkulListForm.resx">
+    <EmbeddedResource Include="Forms\OkulForms\OkulListForm.resx">
       <DependentUpon>OkulListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServisForms\ServisEditForm.resx">
@@ -520,6 +532,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ServisForms\ServisListForm.resx">
       <DependentUpon>ServisListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SinifForms\SinifEditForm.resx">
+      <DependentUpon>SinifEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SinifForms\SinifListForm.resx">
+      <DependentUpon>SinifListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SinifGrupForms\SinifGrupEditForm.resx">
       <DependentUpon>SinifGrupEditForm.cs</DependentUpon>
