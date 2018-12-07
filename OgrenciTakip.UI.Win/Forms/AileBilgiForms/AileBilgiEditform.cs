@@ -14,6 +14,7 @@ namespace OgrenciTakip.UI.Win.Forms.AileBilgiForms
 
             dataLayoutControl = myDataLayoutControl;
             bll = new AileBilgiBll(myDataLayoutControl);
+            
             kartTuru = KartTuru.AileBilgi;
             EventsLoad();
         }

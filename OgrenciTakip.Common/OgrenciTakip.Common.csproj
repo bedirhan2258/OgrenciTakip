@@ -53,6 +53,7 @@
     <Compile Include="Enums\DokumSekli.cs" />
     <Compile Include="Enums\DosyaTuru.cs" />
     <Compile Include="Enums\EvetHayir.cs" />
+    <Compile Include="Enums\HizmetTipi.cs" />
     <Compile Include="Enums\IslemTuru.cs" />
     <Compile Include="Enums\KartTuru.cs" />
     <Compile Include="Enums\RaporuKagidaSigdirmaTuru.cs" />

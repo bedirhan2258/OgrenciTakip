@@ -19,6 +19,7 @@ using OgrenciTakip.UI.Win.Forms.EvrakForms;
 using OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using OgrenciTakip.UI.Win.Forms.ServisForms;
 using OgrenciTakip.UI.Win.Forms.SinifForms;
+using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -122,6 +123,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnSinifKarti)
             {
                 ShowListForms<SinifListForm>.ShowListForm(KartTuru.Sinif);
+            }
+            else if(e.Item==btnHizmetTuruKarti)
+            {
+                ShowListForms<HizmetTuruListForm>.ShowListForm(KartTuru.HizmetTuru);
             }
         }
     }

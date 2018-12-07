@@ -60,6 +60,7 @@
     <Compile Include="Entities\Donem.cs" />
     <Compile Include="Entities\Filtre.cs" />
     <Compile Include="Entities\Gorev.cs" />
+    <Compile Include="Entities\HizmetTuru.cs" />
     <Compile Include="Entities\Il.cs" />
     <Compile Include="Entities\Ilce.cs" />
     <Compile Include="Entities\IndirimTuru.cs" />
