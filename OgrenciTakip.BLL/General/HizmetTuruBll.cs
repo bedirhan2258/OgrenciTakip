@@ -1,12 +1,11 @@
 ﻿using OgrenciTakip.BLL.Base;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.BLL.General
@@ -15,6 +14,7 @@ namespace OgrenciTakip.BLL.General
     {
         public HizmetTuruBll() : base(KartTuru.HizmetTuru) { }
         public HizmetTuruBll(Control ctrl) : base(ctrl,KartTuru.HizmetTuru) { }
+
     }
 }
 

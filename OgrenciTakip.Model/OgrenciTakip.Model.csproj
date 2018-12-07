@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Attributes\Kod.cs" />
     <Compile Include="Attributes\ZorunluAlan.cs" />
+    <Compile Include="DTO\HizmetDTO.cs" />
     <Compile Include="DTO\OkulDTO.cs" />
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Entities\Donem.cs" />
     <Compile Include="Entities\Filtre.cs" />
     <Compile Include="Entities\Gorev.cs" />
+    <Compile Include="Entities\Hizmet.cs" />
     <Compile Include="Entities\HizmetTuru.cs" />
     <Compile Include="Entities\Il.cs" />
     <Compile Include="Entities\Ilce.cs" />

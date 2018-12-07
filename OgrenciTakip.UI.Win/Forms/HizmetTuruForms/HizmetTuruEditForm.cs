@@ -12,9 +12,7 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetTuruForms
     {
         public HizmetTuruEditForm()
         {
-
             InitializeComponent();
-
             dataLayoutControl = myDataLayoutControl;
             bll = new HizmetTuruBll(myDataLayoutControl);
             txtHizmetTipi.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<HizmetTipi>());

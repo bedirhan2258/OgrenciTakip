@@ -20,6 +20,8 @@ using OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using OgrenciTakip.UI.Win.Forms.ServisForms;
 using OgrenciTakip.UI.Win.Forms.SinifForms;
 using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
+using System;
+using OgrenciTakip.UI.Win.Forms.HizmetForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -31,6 +33,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static long SubeId = 1;
         public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
 
+        public static DateTime EgitimBaslamaTarihi = new DateTime(2017, 09, 15);
+        public static DateTime DonemBitisTarihi = new DateTime(2018,06,20);
+        public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = false;
+        public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = false;
         public AnaForm()
         {
             InitializeComponent();
@@ -124,9 +130,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowListForms<SinifListForm>.ShowListForm(KartTuru.Sinif);
             }
-            else if(e.Item==btnHizmetTuruKarti)
+            else if (e.Item == btnHizmetTuruKarti)
             {
                 ShowListForms<HizmetTuruListForm>.ShowListForm(KartTuru.HizmetTuru);
+            }
+            else if (e.Item == btnHizmetKarti)
+            {
+                ShowListForms<HizmetListForm>.ShowListForm(KartTuru.Hizmet);
             }
         }
     }

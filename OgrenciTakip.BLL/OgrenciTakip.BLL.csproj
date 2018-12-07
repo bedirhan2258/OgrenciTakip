@@ -63,6 +63,7 @@
     <Compile Include="General\FiltreBLL.cs" />
     <Compile Include="General\GorevBll.cs" />
     <Compile Include="General\HizmetTuruBll.cs" />
+    <Compile Include="General\HizmetBll.cs" />
     <Compile Include="General\IlBLL.cs" />
     <Compile Include="General\IlceBLL.cs" />
     <Compile Include="General\IndirimTuruBll.cs" />

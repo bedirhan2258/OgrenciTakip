@@ -130,6 +130,18 @@
     <Compile Include="Forms\GorevForms\GorevListForm.Designer.cs">
       <DependentUpon>GorevListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HizmetForms\HizmetEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HizmetForms\HizmetEditForm.Designer.cs">
+      <DependentUpon>HizmetEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HizmetForms\HizmetListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HizmetForms\HizmetListForm.Designer.cs">
+      <DependentUpon>HizmetListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HizmetTuruForms\HizmetTuruEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +490,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GorevForms\GorevListForm.resx">
       <DependentUpon>GorevListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HizmetForms\HizmetEditForm.resx">
+      <DependentUpon>HizmetEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HizmetForms\HizmetListForm.resx">
+      <DependentUpon>HizmetListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HizmetTuruForms\HizmetTuruEditForm.resx">
       <DependentUpon>HizmetTuruEditForm.cs</DependentUpon>

@@ -294,7 +294,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 e.Cancel = true;
         }
 
-        private void Control_EditValueChanged(object sender, EventArgs e)
+        protected virtual void Control_EditValueChanged(object sender, EventArgs e)
         {
             if (!isLoaded) return;
             GuncelNesneOlustur();
