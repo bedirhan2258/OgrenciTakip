@@ -36,26 +36,26 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.tglDurum = new OgrenciTakip.UI.Win.UserControls.Controls.MyToggleSwitch();
-            this.txtAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
             this.txtIlAdi = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtKod = new OgrenciTakip.UI.Win.UserControls.Controls.MyKodTextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.LayoutControlKod = new DevExpress.XtraLayout.LayoutControlItem();
             this.LayoutControlil = new DevExpress.XtraLayout.LayoutControlItem();
-            this.memoAciklama = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIlAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LayoutControlKod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LayoutControlil)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoAciklama)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -66,8 +66,8 @@
             // 
             // myDataLayoutControl
             // 
-            this.myDataLayoutControl.Controls.Add(this.tglDurum);
             this.myDataLayoutControl.Controls.Add(this.txtAciklama);
+            this.myDataLayoutControl.Controls.Add(this.tglDurum);
             this.myDataLayoutControl.Controls.Add(this.txtIlAdi);
             this.myDataLayoutControl.Controls.Add(this.txtKod);
             this.myDataLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -96,20 +96,6 @@
             this.tglDurum.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
             this.tglDurum.StyleController = this.myDataLayoutControl;
             this.tglDurum.TabIndex = 2;
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.EnterMoveNextControl = true;
-            this.txtAciklama.Location = new System.Drawing.Point(56, 60);
-            this.txtAciklama.MenuManager = this.ribbonControl;
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
-            this.txtAciklama.Properties.Appearance.Options.UseBackColor = true;
-            this.txtAciklama.Properties.MaxLength = 500;
-            this.txtAciklama.Size = new System.Drawing.Size(312, 44);
-            this.txtAciklama.StatusBarAciklama = "Aciklama Griniz.";
-            this.txtAciklama.StyleController = this.myDataLayoutControl;
-            this.txtAciklama.TabIndex = 1;
             // 
             // txtIlAdi
             // 
@@ -150,8 +136,8 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.LayoutControlKod,
             this.LayoutControlil,
-            this.memoAciklama,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem2});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
@@ -201,19 +187,6 @@
             this.LayoutControlil.Text = "İl Adı";
             this.LayoutControlil.TextSize = new System.Drawing.Size(41, 13);
             // 
-            // memoAciklama
-            // 
-            this.memoAciklama.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.memoAciklama.AppearanceItemCaption.Options.UseForeColor = true;
-            this.memoAciklama.Control = this.txtAciklama;
-            this.memoAciklama.Location = new System.Drawing.Point(0, 48);
-            this.memoAciklama.Name = "memoAciklama";
-            this.memoAciklama.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.memoAciklama.OptionsTableLayoutItem.RowIndex = 2;
-            this.memoAciklama.Size = new System.Drawing.Size(360, 48);
-            this.memoAciklama.Text = "Aciklama";
-            this.memoAciklama.TextSize = new System.Drawing.Size(41, 13);
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -225,6 +198,33 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(99, 24);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.EnterMoveNextControl = true;
+            this.txtAciklama.Location = new System.Drawing.Point(56, 60);
+            this.txtAciklama.MenuManager = this.ribbonControl;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAciklama.Properties.MaxLength = 500;
+            this.txtAciklama.Size = new System.Drawing.Size(312, 44);
+            this.txtAciklama.StatusBarAciklama = "Açıklama Giriniz.";
+            this.txtAciklama.StyleController = this.myDataLayoutControl;
+            this.txtAciklama.TabIndex = 1;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem2.Control = this.txtAciklama;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 2;
+            this.layoutControlItem2.Size = new System.Drawing.Size(360, 48);
+            this.layoutControlItem2.Text = "Açıklama";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(41, 13);
             // 
             // IlEditForm
             // 
@@ -242,14 +242,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIlAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LayoutControlKod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LayoutControlil)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoAciklama)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,12 +260,12 @@
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private UserControls.Controls.MyToggleSwitch tglDurum;
-        private UserControls.Controls.MyMemoEdit txtAciklama;
         private UserControls.Controls.MyTextEdit txtIlAdi;
         private UserControls.Controls.MyKodTextEdit txtKod;
         private DevExpress.XtraLayout.LayoutControlItem LayoutControlKod;
         private DevExpress.XtraLayout.LayoutControlItem LayoutControlil;
-        private DevExpress.XtraLayout.LayoutControlItem memoAciklama;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private UserControls.Controls.MyMemoEdit txtAciklama;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
     }
 }

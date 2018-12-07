@@ -12,7 +12,7 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
     {
         public MyMemoEdit()
         {
-            Properties.Appearance.BackColor = Color.LightCyan;
+            Properties.AppearanceFocused.BackColor = Color.LightCyan;
             Properties.MaxLength = 500;
 
         }

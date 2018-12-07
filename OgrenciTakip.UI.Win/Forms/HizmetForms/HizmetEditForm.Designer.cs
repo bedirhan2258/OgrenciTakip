@@ -41,7 +41,6 @@
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.txtUcret = new OgrenciTakip.UI.Win.UserControls.Controls.MyCalcEdit();
             this.tglDurum = new OgrenciTakip.UI.Win.UserControls.Controls.MyToggleSwitch();
-            this.txtAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
             this.txtBitisTarihi = new OgrenciTakip.UI.Win.UserControls.Controls.MyDateEdit();
             this.txtBaslamaTarihi = new OgrenciTakip.UI.Win.UserControls.Controls.MyDateEdit();
             this.txtHizmetTuru = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
@@ -53,15 +52,15 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.txtAciklama = new OgrenciTakip.UI.Win.UserControls.Controls.MyMemoEdit();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUcret.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBitisTarihi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBitisTarihi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaslamaTarihi.Properties.CalendarTimeProperties)).BeginInit();
@@ -75,9 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -88,9 +88,9 @@
             // 
             // myDataLayoutControl
             // 
+            this.myDataLayoutControl.Controls.Add(this.txtAciklama);
             this.myDataLayoutControl.Controls.Add(this.txtUcret);
             this.myDataLayoutControl.Controls.Add(this.tglDurum);
-            this.myDataLayoutControl.Controls.Add(this.txtAciklama);
             this.myDataLayoutControl.Controls.Add(this.txtBitisTarihi);
             this.myDataLayoutControl.Controls.Add(this.txtBaslamaTarihi);
             this.myDataLayoutControl.Controls.Add(this.txtHizmetTuru);
@@ -112,8 +112,8 @@
             this.txtUcret.MenuManager = this.ribbonControl;
             this.txtUcret.Name = "txtUcret";
             this.txtUcret.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.txtUcret.Properties.AppearanceFocused.ForeColor = System.Drawing.Color.LightCyan;
-            this.txtUcret.Properties.AppearanceFocused.Options.UseForeColor = true;
+            this.txtUcret.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtUcret.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtUcret.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtUcret.Properties.DisplayFormat.FormatString = "n2";
@@ -143,20 +143,6 @@
             this.tglDurum.StatusBarAciklama = "Kartın Kullanım Durumunu Seçiniz.";
             this.tglDurum.StyleController = this.myDataLayoutControl;
             this.tglDurum.TabIndex = 6;
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.EnterMoveNextControl = true;
-            this.txtAciklama.Location = new System.Drawing.Point(83, 156);
-            this.txtAciklama.MenuManager = this.ribbonControl;
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
-            this.txtAciklama.Properties.Appearance.Options.UseBackColor = true;
-            this.txtAciklama.Properties.MaxLength = 500;
-            this.txtAciklama.Size = new System.Drawing.Size(285, 43);
-            this.txtAciklama.StatusBarAciklama = "Açıklama Giriniz.";
-            this.txtAciklama.StyleController = this.myDataLayoutControl;
-            this.txtAciklama.TabIndex = 5;
             // 
             // txtBitisTarihi
             // 
@@ -267,9 +253,9 @@
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
-            this.layoutControlItem6,
             this.layoutControlItem7,
-            this.layoutControlItem8});
+            this.layoutControlItem8,
+            this.layoutControlItem6});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
@@ -368,19 +354,6 @@
             this.layoutControlItem5.Text = "Bitiş Tarihi";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(68, 13);
             // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem6.Control = this.txtAciklama;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 144);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem6.OptionsTableLayoutItem.RowIndex = 6;
-            this.layoutControlItem6.Size = new System.Drawing.Size(360, 47);
-            this.layoutControlItem6.Text = "Açıklama";
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(68, 13);
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -405,6 +378,33 @@
             this.layoutControlItem8.Text = "Ücret";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(68, 13);
             // 
+            // txtAciklama
+            // 
+            this.txtAciklama.EnterMoveNextControl = true;
+            this.txtAciklama.Location = new System.Drawing.Point(83, 156);
+            this.txtAciklama.MenuManager = this.ribbonControl;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtAciklama.Properties.MaxLength = 500;
+            this.txtAciklama.Size = new System.Drawing.Size(285, 43);
+            this.txtAciklama.StatusBarAciklama = "Açıklama Giriniz.";
+            this.txtAciklama.StyleController = this.myDataLayoutControl;
+            this.txtAciklama.TabIndex = 5;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem6.Control = this.txtAciklama;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 144);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem6.OptionsTableLayoutItem.RowIndex = 6;
+            this.layoutControlItem6.Size = new System.Drawing.Size(360, 47);
+            this.layoutControlItem6.Text = "Açıklama";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(68, 13);
+            // 
             // HizmetEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,7 +421,6 @@
             this.myDataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtUcret.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tglDurum.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBitisTarihi.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBitisTarihi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBaslamaTarihi.Properties.CalendarTimeProperties)).EndInit();
@@ -435,9 +434,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,9 +446,7 @@
         #endregion
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
-        private UserControls.Controls.MyCalcEdit txtUcret;
         private UserControls.Controls.MyToggleSwitch tglDurum;
-        private UserControls.Controls.MyMemoEdit txtAciklama;
         private UserControls.Controls.MyDateEdit txtBitisTarihi;
         private UserControls.Controls.MyDateEdit txtBaslamaTarihi;
         private UserControls.Controls.MyButtonEdit txtHizmetTuru;
@@ -460,8 +458,10 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private UserControls.Controls.MyCalcEdit txtUcret;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private UserControls.Controls.MyMemoEdit txtAciklama;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }
