@@ -75,6 +75,7 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
         {
             if (sender != txtIl) return;
             txtIl.ControlEnabledChange(txtIlce);
+
         }
     }
 }

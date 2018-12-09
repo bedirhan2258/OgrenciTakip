@@ -202,6 +202,18 @@
     <Compile Include="Forms\IsyeriForms\IsyeriListForm.Designer.cs">
       <DependentUpon>IsyeriListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KasaForms\KasaEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KasaForms\KasaEditForm.Designer.cs">
+      <DependentUpon>KasaEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KasaForms\KasaListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KasaForms\KasaListForm.Designer.cs">
+      <DependentUpon>KasaListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KontenjanForms\KontenjanEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -544,6 +556,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IsyeriForms\IsyeriListForm.resx">
       <DependentUpon>IsyeriListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KasaForms\KasaEditForm.resx">
+      <DependentUpon>KasaEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KasaForms\KasaListForm.resx">
+      <DependentUpon>KasaListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanEditForm.resx">
       <DependentUpon>KontenjanEditForm.cs</DependentUpon>

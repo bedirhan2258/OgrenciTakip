@@ -50,6 +50,7 @@
     <Compile Include="Attributes\Kod.cs" />
     <Compile Include="Attributes\ZorunluAlan.cs" />
     <Compile Include="DTO\HizmetDTO.cs" />
+    <Compile Include="DTO\KasaDTO.cs" />
     <Compile Include="DTO\OkulDTO.cs" />
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Entities\Base\BaseEntityDurum.cs" />
     <Compile Include="Entities\Base\BaseHareketEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
+    <Compile Include="Entities\Kasa.cs" />
     <Compile Include="Entities\DokumParametleri.cs" />
     <Compile Include="Entities\Donem.cs" />
     <Compile Include="Entities\Filtre.cs" />

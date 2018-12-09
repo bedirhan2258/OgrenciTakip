@@ -53,6 +53,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<HizmetTuru> HizmetTuru { get; set; }
         public DbSet<Hizmet> Hizmet { get; set; }
         public DbSet<OzelKod> OzelKod { get; set; }
+        public DbSet<Kasa> Kasa { get; set; }
     }
 
 }

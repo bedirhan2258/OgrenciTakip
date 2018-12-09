@@ -52,6 +52,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Hizmet Kartı")]
         Hizmet = 22,
         [Description("Özel Kod Kartı")]
-        OzelKod = 23
+        OzelKod = 23,
+        [Description("Kasa Kartı")]
+        Kasa = 24
     }
 }
