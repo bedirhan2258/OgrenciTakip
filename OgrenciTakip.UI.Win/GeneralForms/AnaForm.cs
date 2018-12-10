@@ -24,6 +24,7 @@ using System;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
 using OgrenciTakip.UI.Win.Forms.KasaForms;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
+using OgrenciTakip.UI.Win.Forms.AvukatForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -147,6 +148,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnBankaKarti)
             {
                 ShowListForms<BankaListForm>.ShowListForm(KartTuru.Banka);
+            }
+            else if (e.Item == btnAvukatKarti)
+            {
+                ShowListForms<AvukatListForm>.ShowListForm(KartTuru.Avukat);
             }
         }
     }

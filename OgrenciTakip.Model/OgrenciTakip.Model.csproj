@@ -49,12 +49,14 @@
   <ItemGroup>
     <Compile Include="Attributes\Kod.cs" />
     <Compile Include="Attributes\ZorunluAlan.cs" />
+    <Compile Include="DTO\AvukatDTO.cs" />
     <Compile Include="DTO\BankaDTO.cs" />
     <Compile Include="DTO\HizmetDTO.cs" />
     <Compile Include="DTO\KasaDTO.cs" />
     <Compile Include="DTO\OkulDTO.cs" />
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
+    <Compile Include="Entities\Avukat.cs" />
     <Compile Include="Entities\Banka.cs" />
     <Compile Include="Entities\BankaSube.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />

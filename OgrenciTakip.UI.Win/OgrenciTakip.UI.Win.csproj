@@ -82,6 +82,18 @@
     <Compile Include="Forms\AileBilgiForms\AileBilgiListForm.Designer.cs">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AvukatForms\AvukatEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AvukatForms\AvukatEditForm.Designer.cs">
+      <DependentUpon>AvukatEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AvukatForms\AvukatListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AvukatForms\AvukatListForm.Designer.cs">
+      <DependentUpon>AvukatListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BankaForms\BankaEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -514,6 +526,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiListForm.resx">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AvukatForms\AvukatEditForm.resx">
+      <DependentUpon>AvukatEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AvukatForms\AvukatListForm.resx">
+      <DependentUpon>AvukatListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BankaForms\BankaEditForm.resx">
       <DependentUpon>BankaEditForm.cs</DependentUpon>
