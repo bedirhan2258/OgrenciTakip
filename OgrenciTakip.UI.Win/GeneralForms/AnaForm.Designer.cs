@@ -50,12 +50,13 @@
             this.btnSinifKarti = new DevExpress.XtraBars.BarButtonItem();
             this.btnHizmetTuruKarti = new DevExpress.XtraBars.BarButtonItem();
             this.btnHizmetKarti = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKasaKarti = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnKasaKarti = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBankaKarti = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -85,9 +86,10 @@
             this.btnSinifKarti,
             this.btnHizmetTuruKarti,
             this.btnHizmetKarti,
-            this.btnKasaKarti});
+            this.btnKasaKarti,
+            this.btnBankaKarti});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 22;
+            this.ribbonControl.MaxItemId = 23;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -214,6 +216,12 @@
             this.btnHizmetKarti.Id = 20;
             this.btnHizmetKarti.Name = "btnHizmetKarti";
             // 
+            // btnKasaKarti
+            // 
+            this.btnKasaKarti.Caption = "Kasa Kartları";
+            this.btnKasaKarti.Id = 21;
+            this.btnKasaKarti.Name = "btnKasaKarti";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -244,6 +252,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetTuruKarti);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnHizmetKarti);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKasaKarti);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnBankaKarti);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar1
@@ -262,11 +271,11 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnKasaKarti
+            // btnBankaKarti
             // 
-            this.btnKasaKarti.Caption = "Kasa Kartları";
-            this.btnKasaKarti.Id = 21;
-            this.btnKasaKarti.Name = "btnKasaKarti";
+            this.btnBankaKarti.Caption = "Banka Kartları";
+            this.btnBankaKarti.Id = 22;
+            this.btnBankaKarti.Name = "btnBankaKarti";
             // 
             // AnaForm
             // 
@@ -317,5 +326,6 @@
         private DevExpress.XtraBars.BarButtonItem btnHizmetTuruKarti;
         private DevExpress.XtraBars.BarButtonItem btnHizmetKarti;
         private DevExpress.XtraBars.BarButtonItem btnKasaKarti;
+        private DevExpress.XtraBars.BarButtonItem btnBankaKarti;
     }
 }

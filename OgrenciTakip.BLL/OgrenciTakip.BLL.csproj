@@ -59,6 +59,7 @@
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\ValidationFunctions.cs" />
     <Compile Include="General\AileBilgiBll.cs" />
+    <Compile Include="General\BankaBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
     <Compile Include="General\GorevBll.cs" />

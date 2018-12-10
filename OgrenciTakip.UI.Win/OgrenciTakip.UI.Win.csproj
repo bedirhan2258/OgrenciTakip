@@ -82,6 +82,18 @@
     <Compile Include="Forms\AileBilgiForms\AileBilgiListForm.Designer.cs">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BankaForms\BankaEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BankaForms\BankaEditForm.Designer.cs">
+      <DependentUpon>BankaEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BankaForms\BankaListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BankaForms\BankaListForm.Designer.cs">
+      <DependentUpon>BankaListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BaseForms\BaseEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -490,6 +502,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiListForm.resx">
       <DependentUpon>AileBilgiListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BankaForms\BankaEditForm.resx">
+      <DependentUpon>BankaEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BankaForms\BankaListForm.resx">
+      <DependentUpon>BankaListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForms\BaseEditForm.resx">
       <DependentUpon>BaseEditForm.cs</DependentUpon>

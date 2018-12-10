@@ -23,6 +23,7 @@ using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
 using System;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
 using OgrenciTakip.UI.Win.Forms.KasaForms;
+using OgrenciTakip.UI.Win.Forms.BankaForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -35,7 +36,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
 
         public static DateTime EgitimBaslamaTarihi = new DateTime(2017, 09, 15);
-        public static DateTime DonemBitisTarihi = new DateTime(2018,06,20);
+        public static DateTime DonemBitisTarihi = new DateTime(2018, 06, 20);
         public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = false;
         public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = false;
         public AnaForm()
@@ -139,9 +140,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowListForms<HizmetListForm>.ShowListForm(KartTuru.Hizmet);
             }
-            else if(e.Item==btnKasaKarti)
+            else if (e.Item == btnKasaKarti)
             {
                 ShowListForms<KasaListForm>.ShowListForm(KartTuru.Kasa);
+            }
+            else if (e.Item == btnBankaKarti)
+            {
+                ShowListForms<BankaListForm>.ShowListForm(KartTuru.Banka);
             }
         }
     }
