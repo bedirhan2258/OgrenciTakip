@@ -56,6 +56,7 @@
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\Banka.cs" />
+    <Compile Include="Entities\BankaSube.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />
     <Compile Include="Entities\Base\BaseEntityDurum.cs" />
     <Compile Include="Entities\Base\BaseHareketEntity.cs" />
