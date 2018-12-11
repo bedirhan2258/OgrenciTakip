@@ -58,6 +58,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<BankaSube> BankaSube { get; set; }
         public DbSet<Avukat> Avukat { get; set; }
         public DbSet<Cari> Cari { get; set; }
+        public DbSet<OdemeTuru> OdemeTuru { get; set; }
     }
 
 }

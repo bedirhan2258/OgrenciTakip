@@ -286,6 +286,18 @@
     <Compile Include="Forms\MeslekForms\MeslekListForm.Designer.cs">
       <DependentUpon>MeslekListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OdemeTuruForms\OdemeTuruEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OdemeTuruForms\OdemeTuruEditForm.Designer.cs">
+      <DependentUpon>OdemeTuruEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OdemeTuruForms\OdemeTuruListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OdemeTuruForms\OdemeTuruListForm.Designer.cs">
+      <DependentUpon>OdemeTuruListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OzelKodForms\OzelKodEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -646,6 +658,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MeslekForms\MeslekListForm.resx">
       <DependentUpon>MeslekListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OdemeTuruForms\OdemeTuruEditForm.resx">
+      <DependentUpon>OdemeTuruEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OdemeTuruForms\OdemeTuruListForm.resx">
+      <DependentUpon>OdemeTuruListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodEditForm.resx">
       <DependentUpon>OzelKodEditForm.cs</DependentUpon>

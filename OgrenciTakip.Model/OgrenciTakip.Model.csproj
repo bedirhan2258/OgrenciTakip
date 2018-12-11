@@ -79,6 +79,7 @@
     <Compile Include="Entities\Isyeri.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
     <Compile Include="Entities\Meslek.cs" />
+    <Compile Include="Entities\OdemeTuru.cs" />
     <Compile Include="Entities\Okul.cs" />
     <Compile Include="Entities\OzelKod.cs" />
     <Compile Include="Entities\Promosyon.cs" />

@@ -62,6 +62,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Avukat Kartı")]
         Avukat = 27,
         [Description("Cari Kartı")]
-        Cari = 28
+        Cari = 28,
+        [Description("Odeme Türü Kartı")]
+        OdemeTuru = 29
     }
 }
