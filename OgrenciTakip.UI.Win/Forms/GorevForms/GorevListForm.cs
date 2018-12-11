@@ -22,8 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.GorevForms
             kartTuru = KartTuru.Gorev;
             formShow = new ShowEditForms<GorevEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+            
         }
         protected override void Listele()
         {

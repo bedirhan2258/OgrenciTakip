@@ -7,26 +7,26 @@ using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 
-namespace OgrenciTakip.UI.Win.Forms.TesvikForms
+namespace OgrenciTakip.UI.Win.Forms.CariForms
 {
-    public partial class TesvikListForm : BaseListForm
+    public partial class CariListForm : BaseListForm
     {
-        public TesvikListForm()
+        public CariListForm()
         {
             InitializeComponent();
-            bll = new TesvikBll();
+            bll = new CariBll();
         }
+
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Tesvik;
-            formShow = new ShowEditForms<TesvikEditForm>();
+            kartTuru = KartTuru.Cari;
+            formShow = new ShowEditForms<CariEditForm>();
             navigator = longNavigator.Navigator;
-           
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((TesvikBll)bll).List(FilterFunctions.Filter<Tesvik>(aktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((CariBll)bll).List(FilterFunctions.Filter<Cari>(aktifKartlariGoster));
         }
     }
 }

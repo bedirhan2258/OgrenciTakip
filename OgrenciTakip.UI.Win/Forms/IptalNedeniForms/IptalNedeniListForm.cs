@@ -23,8 +23,7 @@ namespace OgrenciTakip.UI.Win.IptalNedeniForms
             kartTuru = KartTuru.IptalNedeni;
             formShow = new ShowEditForms<IptalNedeniEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+           
         }
         protected override void Listele()
         {

@@ -22,8 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms
             kartTuru = KartTuru.AileBilgi;
             formShow = new ShowEditForms<AileBilgiEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+         
         }
         protected override void Listele()
         {

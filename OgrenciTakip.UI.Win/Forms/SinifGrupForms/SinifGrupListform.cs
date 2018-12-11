@@ -24,8 +24,7 @@ namespace OgrenciTakip.UI.Win.Forms.SinifGrupForms
             kartTuru = KartTuru.SinifGrup;
             formShow = new ShowEditForms<SinifGrupEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+            
         }
         protected override void Listele()
         {

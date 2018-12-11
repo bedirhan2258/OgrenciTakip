@@ -22,8 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimTuruForms
             kartTuru = KartTuru.IndirimTuru;
             formShow = new ShowEditForms<IndirimTuruEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+            
         }
         protected override void Listele()
         {

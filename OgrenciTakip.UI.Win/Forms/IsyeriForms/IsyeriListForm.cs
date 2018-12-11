@@ -22,8 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.IsyeriForms
             kartTuru = KartTuru.Isyeri;
             formShow = new ShowEditForms<IsyeriEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+           
         }
         protected override void Listele()
         {

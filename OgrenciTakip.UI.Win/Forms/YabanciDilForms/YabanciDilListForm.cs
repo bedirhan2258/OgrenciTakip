@@ -22,8 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
             kartTuru = KartTuru.YabanciDil;
             formShow = new ShowEditForms<YabanciDİlEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+          
         }
         protected override void Listele()
         {

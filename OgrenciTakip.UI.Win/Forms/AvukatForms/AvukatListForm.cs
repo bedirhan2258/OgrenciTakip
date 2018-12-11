@@ -23,8 +23,7 @@ namespace OgrenciTakip.UI.Win.Forms.AvukatForms
             kartTuru = KartTuru.Avukat;
             formShow = new ShowEditForms<AvukatEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+
         }
         protected override void Listele()
         {

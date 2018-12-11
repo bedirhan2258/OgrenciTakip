@@ -130,6 +130,18 @@
     <Compile Include="Forms\BaseForms\BaseListForm.Designer.cs">
       <DependentUpon>BaseListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CariForms\CariEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariEditForm.Designer.cs">
+      <DependentUpon>CariEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CariForms\CariListForm.Designer.cs">
+      <DependentUpon>CariListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EvrakForms\EvrakEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -550,6 +562,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaseForms\BaseListForm.resx">
       <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariEditForm.resx">
+      <DependentUpon>CariEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CariForms\CariListForm.resx">
+      <DependentUpon>CariListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EvrakForms\EvrakEditForm.resx">
       <DependentUpon>EvrakEditForm.cs</DependentUpon>

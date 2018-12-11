@@ -21,9 +21,7 @@ namespace OgrenciTakip.UI.Win.Forms.RehberForms
             Tablo = tablo;
             kartTuru = KartTuru.Rehber;
             formShow = new ShowEditForms<RehberEditForm>();
-            navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+            navigator = longNavigator.Navigator;    
         }
         protected override void Listele()
         {

@@ -62,6 +62,7 @@
     <Compile Include="General\AvukatBll.cs" />
     <Compile Include="General\BankaBll.cs" />
     <Compile Include="General\BankaSubeBll.cs" />
+    <Compile Include="General\CariBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
     <Compile Include="General\GorevBll.cs" />

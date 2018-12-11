@@ -22,8 +22,7 @@ namespace OgrenciTakip.UI.Win.Forms.MeslekForms
             kartTuru = KartTuru.Meslek;
             formShow = new ShowEditForms<MeslekEditForm>();
             navigator = longNavigator.Navigator;
-            if (IsMdiChild)
-                ShowItems = new BarItem[] { btnBagliKartlar };
+           
         }
         protected override void Listele()
         {
