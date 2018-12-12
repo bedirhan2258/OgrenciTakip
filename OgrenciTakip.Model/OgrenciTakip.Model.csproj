@@ -51,6 +51,7 @@
     <Compile Include="Attributes\ZorunluAlan.cs" />
     <Compile Include="DTO\AvukatDTO.cs" />
     <Compile Include="DTO\BankaDTO.cs" />
+    <Compile Include="DTO\BankaHesapDTO.cs" />
     <Compile Include="DTO\CariDTO.cs" />
     <Compile Include="DTO\HizmetDTO.cs" />
     <Compile Include="DTO\KasaDTO.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\Avukat.cs" />
     <Compile Include="Entities\Banka.cs" />
+    <Compile Include="Entities\BankaHesap.cs" />
     <Compile Include="Entities\BankaSube.cs" />
     <Compile Include="Entities\Base\BaseEntity.cs" />
     <Compile Include="Entities\Base\BaseEntityDurum.cs" />

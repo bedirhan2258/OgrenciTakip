@@ -106,6 +106,18 @@
     <Compile Include="Forms\BankaForms\BankaListForm.Designer.cs">
       <DependentUpon>BankaListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BankaHesapForms\BankaHesapEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BankaHesapForms\BankaHesapEditForm.Designer.cs">
+      <DependentUpon>BankaHesapEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BankaHesapForms\BankaHesapListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BankaHesapForms\BankaHesapListForm.Designer.cs">
+      <DependentUpon>BankaHesapListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BankaSubeForms\BankaSubeEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -562,6 +574,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BankaForms\BankaListForm.resx">
       <DependentUpon>BankaListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BankaHesapForms\BankaHesapEditForm.resx">
+      <DependentUpon>BankaHesapEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BankaHesapForms\BankaHesapListForm.resx">
+      <DependentUpon>BankaHesapListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BankaSubeForms\BankaSubeEditForm.resx">
       <DependentUpon>BankaSubeEditForm.cs</DependentUpon>

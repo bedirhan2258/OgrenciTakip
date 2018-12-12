@@ -64,6 +64,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Cari Kartı")]
         Cari = 28,
         [Description("Odeme Türü Kartı")]
-        OdemeTuru = 29
+        OdemeTuru = 29,
+        [Description("Banka Hesap Kartı")]
+        BankaHesap=30
     }
 }

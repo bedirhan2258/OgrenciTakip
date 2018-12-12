@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\BankaHesapTuru.cs" />
     <Compile Include="Enums\DokumSekli.cs" />
     <Compile Include="Enums\DosyaTuru.cs" />
     <Compile Include="Enums\EvetHayir.cs" />
