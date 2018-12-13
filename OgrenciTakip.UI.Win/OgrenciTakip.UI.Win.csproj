@@ -226,6 +226,18 @@
     <Compile Include="Forms\IlceForms\IlceListForm.Designer.cs">
       <DependentUpon>IlceListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IletisimForms\IletisimEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IletisimForms\IletisimEditForm.Designer.cs">
+      <DependentUpon>IletisimEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IletisimForms\IletisimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IletisimForms\IletisimListForm.Designer.cs">
+      <DependentUpon>IletisimListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IlForms\IlEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -634,6 +646,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IlceForms\IlceListForm.resx">
       <DependentUpon>IlceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IletisimForms\IletisimEditForm.resx">
+      <DependentUpon>IletisimEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IlForms\IlEditForm.resx">
       <DependentUpon>IlEditForm.cs</DependentUpon>

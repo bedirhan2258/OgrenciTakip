@@ -54,6 +54,7 @@
     <Compile Include="DTO\BankaHesapDTO.cs" />
     <Compile Include="DTO\CariDTO.cs" />
     <Compile Include="DTO\HizmetDTO.cs" />
+    <Compile Include="DTO\IletisimDTO.cs" />
     <Compile Include="DTO\KasaDTO.cs" />
     <Compile Include="DTO\OkulDTO.cs" />
     <Compile Include="DTO\SinifDTO.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Entities\Base\BaseHareketEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
     <Compile Include="Entities\Cari.cs" />
+    <Compile Include="Entities\Iletisim.cs" />
     <Compile Include="Entities\Kasa.cs" />
     <Compile Include="Entities\DokumParametleri.cs" />
     <Compile Include="Entities\Donem.cs" />
