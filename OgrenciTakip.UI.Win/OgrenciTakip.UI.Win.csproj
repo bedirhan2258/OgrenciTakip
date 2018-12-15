@@ -650,6 +650,9 @@
     <EmbeddedResource Include="Forms\IletisimForms\IletisimEditForm.resx">
       <DependentUpon>IletisimEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IletisimForms\IletisimListForm.resx">
+      <DependentUpon>IletisimListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\IlForms\IlEditForm.resx">
       <DependentUpon>IlEditForm.cs</DependentUpon>
     </EmbeddedResource>

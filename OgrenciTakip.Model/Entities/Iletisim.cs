@@ -1,4 +1,5 @@
-﻿using OgrenciTakip.Model.Attributes;
+﻿using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.Attributes;
 using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -33,8 +34,8 @@ namespace OgrenciTakip.Model.Entities
         [Column(TypeName = "date")]
         public DateTime? DogumTarihi { get; set; }
 
-        [StringLength(3)]
-        public string KanGrubu { get; set; }
+
+        public KanGrubu KanGrubu { get; set; } = KanGrubu.Bos;
 
         [StringLength(10)]
         public string KimlikSeri { get; set; }
@@ -70,13 +71,13 @@ namespace OgrenciTakip.Model.Entities
         public DateTime? KimlikVerilisTarihi { get; set; }
 
         [StringLength(17)]
-        public string EvTelefonu { get; set; }
+        public string EvTel { get; set; }
 
         [StringLength(17)]
-        public string IsTelefonu1 { get; set; }
+        public string IsTel1 { get; set; }
 
         [StringLength(17)]
-        public string IsTelefonu2 { get; set; }
+        public string IsTel2 { get; set; }
 
         [StringLength(10)]
         public string Dahili1 { get; set; }
@@ -85,10 +86,10 @@ namespace OgrenciTakip.Model.Entities
         public string Dahili2 { get; set; }
 
         [StringLength(17)]
-        public string CepTelefonu1 { get; set; }
+        public string CepTel1 { get; set; }
 
         [StringLength(17)]
-        public string CepTelefonu2 { get; set; }
+        public string CepTel2 { get; set; }
 
         [StringLength(50)]
         public string Web { get; set; }

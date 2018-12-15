@@ -1,4 +1,5 @@
 ﻿
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using System;
@@ -11,7 +12,7 @@ namespace OgrenciTakip.Model.DTO
     {
         public string KimlikIlAdi { get; set; }
         public string KimlikIlceAdi { get; set; }
-        public string EvAdresiIlAdi { get; set; }
+        public string EvAdresIlAdi { get; set; }
         public string EvAdresIlceAdi { get; set; }
         public string IsAdresIlAdi { get; set; }
         public string IsAdresIlceAdi { get; set; }
@@ -31,7 +32,7 @@ namespace OgrenciTakip.Model.DTO
         public string AnaAdi { get; set; }
         public string DogumYeri { get; set; }
         public DateTime? DogumTarihi { get; set; }
-        public string KanGrubu { get; set; }
+        public KanGrubu KanGrubu { get; set; }
         public string KimlikSeri { get; set; }
         public string KimlikSiraNo { get; set; }
         public string KimlikIlAdi { get; set; }
@@ -44,17 +45,17 @@ namespace OgrenciTakip.Model.DTO
         public string KimlikVerilisNedeni { get; set; }
         public string KimlikKayitNo { get; set; }
         public DateTime? KimlikVerilisTarihi { get; set; }
-        public string EvTelefonu { get; set; }
-        public string IsTelefonu1 { get; set; }
-        public string IsTelefonu2 { get; set; }
+        public string EvTel { get; set; }
+        public string IsTel1 { get; set; }
+        public string IsTel2 { get; set; }
         public string Dahili1 { get; set; }
         public string Dahili2 { get; set; }
-        public string CepTelefonu1 { get; set; }
-        public string CepTelefonu2 { get; set; }
+        public string CepTel1 { get; set; }
+        public string CepTel2 { get; set; }
         public string Web { get; set; }
         public string Email { get; set; }
         public string EvAdres { get; set; }
-        public string EvAdresiIlAdi { get; set; }
+        public string EvAdresIlAdi { get; set; }
         public string EvAdresIlceAdi { get; set; }
         public string IsAdres { get; set; }
         public string IsAdresIlAdi { get; set; }

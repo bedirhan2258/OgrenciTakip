@@ -55,12 +55,13 @@
             this.btnAvukatKarti = new DevExpress.XtraBars.BarButtonItem();
             this.btnCariKart = new DevExpress.XtraBars.BarButtonItem();
             this.btnOdemeTuruKarti = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBankaHesapKarti = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnBankaHesapKarti = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIletisimKarti = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -95,13 +96,14 @@
             this.btnAvukatKarti,
             this.btnCariKart,
             this.btnOdemeTuruKarti,
-            this.btnBankaHesapKarti});
+            this.btnBankaHesapKarti,
+            this.btnIletisimKarti});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 27;
+            this.ribbonControl.MaxItemId = 28;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl.Size = new System.Drawing.Size(979, 143);
+            this.ribbonControl.Size = new System.Drawing.Size(1261, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             // 
             // btnOkulKartlari
@@ -254,6 +256,12 @@
             this.btnOdemeTuruKarti.Id = 25;
             this.btnOdemeTuruKarti.Name = "btnOdemeTuruKarti";
             // 
+            // btnBankaHesapKarti
+            // 
+            this.btnBankaHesapKarti.Caption = "Banka Hesap Kartları";
+            this.btnBankaHesapKarti.Id = 26;
+            this.btnBankaHesapKarti.Name = "btnBankaHesapKarti";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -289,6 +297,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCariKart);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnOdemeTuruKarti);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnBankaHesapKarti);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnIletisimKarti);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonStatusBar1
@@ -296,7 +305,7 @@
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 494);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(979, 31);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1261, 31);
             // 
             // ribbonPage2
             // 
@@ -307,17 +316,17 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnBankaHesapKarti
+            // btnIletisimKarti
             // 
-            this.btnBankaHesapKarti.Caption = "Banka Hesap Kartları";
-            this.btnBankaHesapKarti.Id = 26;
-            this.btnBankaHesapKarti.Name = "btnBankaHesapKarti";
+            this.btnIletisimKarti.Caption = "İletişim Kartları";
+            this.btnIletisimKarti.Id = 27;
+            this.btnIletisimKarti.Name = "btnIletisimKarti";
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 525);
+            this.ClientSize = new System.Drawing.Size(1261, 525);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
             this.IsMdiContainer = true;
@@ -367,5 +376,6 @@
         private DevExpress.XtraBars.BarButtonItem btnCariKart;
         private DevExpress.XtraBars.BarButtonItem btnOdemeTuruKarti;
         private DevExpress.XtraBars.BarButtonItem btnBankaHesapKarti;
+        private DevExpress.XtraBars.BarButtonItem btnIletisimKarti;
     }
 }
