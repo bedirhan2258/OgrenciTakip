@@ -7,7 +7,10 @@ using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -164,6 +167,34 @@ namespace OgrenciTakip.UI.Win.Functions
         {
             var settings = new PrinterSettings();
             return settings.PrinterName;
+        }
+
+        public static void ShowPopUpMenu(this MouseEventArgs e, PopupMenu popUpMenu)
+        {
+            if (e.Button != MouseButtons.Right) return;
+            //Açılacak menüyü mouse'ın pozisyonuna göre aç demektir.
+            popUpMenu.ShowPopup(Control.MousePosition);
+        }
+
+        public static byte[] ResimYukle()
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Resim Seç",
+                Filter = "Resim Dosyaları (*.bmp,*.gif,*.jpg,*.png)|*.bmp; *.gif; *.jpg; *.png|Bmp Dosyaları|*.bmp|Gif Dosyaları|*.gif|Jpg Dosyaları|*.jpg|Png Dosyaları|*.png",
+                InitialDirectory = @"C:\"
+            };
+            byte[] Resim()
+            {
+                using (var stream = new MemoryStream())
+                {
+                    Image.FromFile(dialog.FileName).Save(stream, ImageFormat.Png);
+                    return stream.ToArray();
+                }
+
+            }
+            return dialog.ShowDialog() != DialogResult.OK ? null : Resim();
+
         }
     }
 }

@@ -59,6 +59,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 control.KeyDown += Control_KeyDown;
                 control.GotFocus += Control_GotFocus;
                 control.Leave += Control_Leave;
+                control.Enter += Control_Enter;
                 switch (control)
                 {
                     case FilterControl edt:
@@ -100,6 +101,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
 
         }
+
 
         ////////////////////////////////////////////////////////////////////////Fonksiyonlar/////////////////////////////////////////////////7
         private void EntityDelete()
@@ -256,6 +258,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             statusBarKisayol.Visibility = BarItemVisibility.Never;
             statusBarKisayolAciklama.Visibility = BarItemVisibility.Never;
         }
+        protected virtual void Control_Enter(object sender, EventArgs e) { }
+
 
         private void Control_GotFocus(object sender, EventArgs e)
         {

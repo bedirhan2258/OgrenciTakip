@@ -322,6 +322,18 @@
     <Compile Include="Forms\OdemeTuruForms\OdemeTuruListForm.Designer.cs">
       <DependentUpon>OdemeTuruListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OgrenciForms\OgrenciEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OgrenciForms\OgrenciEditForm.Designer.cs">
+      <DependentUpon>OgrenciEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OgrenciForms\OgrenciListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OgrenciForms\OgrenciListForm.Designer.cs">
+      <DependentUpon>OgrenciListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\OzelKodForms\OzelKodEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -446,6 +458,7 @@
     <Compile Include="Functions\FilterFunctions.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\SelectFunctions.cs" />
+    <Compile Include="Functions\SelectPictureFunctions.cs" />
     <Compile Include="Functions\TablePrintingFunctions.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
@@ -700,6 +713,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OdemeTuruForms\OdemeTuruListForm.resx">
       <DependentUpon>OdemeTuruListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OgrenciForms\OgrenciEditForm.resx">
+      <DependentUpon>OgrenciEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodEditForm.resx">
       <DependentUpon>OzelKodEditForm.cs</DependentUpon>
