@@ -1,6 +1,7 @@
 ﻿
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace OgrenciTakip.BLL.Functions
@@ -25,6 +26,11 @@ namespace OgrenciTakip.BLL.Functions
                 }
             }
             return hedef;
+        }
+
+        public static IEnumerable<TTarget> EntityListConvert<TTarget>(this IEnumerable<IBaseEntity> source)
+        {
+            return source?.Select(x => x.EntityConvert<TTarget>()).ToList();
         }
     }
 }
