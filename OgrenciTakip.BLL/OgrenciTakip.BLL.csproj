@@ -72,6 +72,7 @@
     <Compile Include="General\IlBLL.cs" />
     <Compile Include="General\IlceBLL.cs" />
     <Compile Include="General\IletisimBll.cs" />
+    <Compile Include="General\IndirimBll.cs" />
     <Compile Include="General\IndirimTuruBll.cs" />
     <Compile Include="General\IptalNedeniBll.cs" />
     <Compile Include="General\IsyeriBll.cs" />

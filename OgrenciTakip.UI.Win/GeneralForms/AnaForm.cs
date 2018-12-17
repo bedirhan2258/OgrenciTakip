@@ -30,6 +30,7 @@ using OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.IletisimForms;
 using OgrenciTakip.UI.Win.Forms.OgrenciForms;
+using OgrenciTakip.UI.Win.Forms.IndirimForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -177,6 +178,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnOgrenciKarti)
             {
                 ShowListForms<OgrenciListForm>.ShowListForm(KartTuru.Ogrenci);
+            }
+            else if (e.Item == btnIndirimKarti)
+            {
+                ShowListForms<IndirimListForm>.ShowListForm(KartTuru.Indirim);
             }
         }
     }

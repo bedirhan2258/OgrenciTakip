@@ -62,6 +62,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<BankaHesap> BankaHesap { get; set; }
         public DbSet<Iletisim> Iletisim { get; set; }
         public DbSet<Ogrenci> Ogrenci { get; set; }
+        public DbSet<Indirim> Indirim { get; set; }
     }
 
 }

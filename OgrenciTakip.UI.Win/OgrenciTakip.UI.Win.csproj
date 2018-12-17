@@ -250,6 +250,18 @@
     <Compile Include="Forms\IlForms\IlListForm.Designer.cs">
       <DependentUpon>IlListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\IndirimForms\IndirimEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndirimForms\IndirimEditForm.Designer.cs">
+      <DependentUpon>IndirimEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndirimForms\IndirimListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndirimForms\IndirimListForm.Designer.cs">
+      <DependentUpon>IndirimListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IndirimTuruForms\IndirimTuruEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -671,6 +683,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IlForms\IlListForm.resx">
       <DependentUpon>IlListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndirimForms\IndirimEditForm.resx">
+      <DependentUpon>IndirimEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndirimForms\IndirimListForm.resx">
+      <DependentUpon>IndirimListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\IndirimTuruForms\IndirimTuruEditForm.resx">
       <DependentUpon>IndirimTuruEditForm.cs</DependentUpon>

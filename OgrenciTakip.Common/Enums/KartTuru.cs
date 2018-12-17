@@ -70,6 +70,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("İletişim Kartı")]
         Iletisim = 31,
         [Description("Öğrenci Kartı")]
-        Ogrenci = 32
+        Ogrenci = 32,
+        [Description("İndirim Kartı")]
+        Indirim = 33
     }
 }
