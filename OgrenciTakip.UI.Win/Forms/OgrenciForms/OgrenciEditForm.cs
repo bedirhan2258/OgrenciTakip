@@ -134,11 +134,11 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
                 else if (sender == txtOzelKod2)
                     sec.Sec(txtOzelKod2, KartTuru.Ogrenci);
                 else if (sender == txtOzelKod3)
-                    sec.Sec(txtOzelKod2, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod3, KartTuru.Ogrenci);
                 else if (sender == txtOzelKod4)
-                    sec.Sec(txtOzelKod2, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod4, KartTuru.Ogrenci);
                 else if (sender == txtOzelKod5)
-                    sec.Sec(txtOzelKod2, KartTuru.Ogrenci);
+                    sec.Sec(txtOzelKod5, KartTuru.Ogrenci);
         }
         protected override void Control_EnabledChange(object sender, EventArgs e)
         {

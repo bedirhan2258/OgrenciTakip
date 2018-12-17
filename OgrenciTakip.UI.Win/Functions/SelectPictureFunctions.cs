@@ -12,11 +12,20 @@ namespace OgrenciTakip.UI.Win.Functions
     {
         #region Variables
         private static MyPictureEdit _pictureEdit;
-        private static PopupMenu _popUpMenu; 
+        private static PopupMenu _popUpMenu;
         #endregion
 
         private static void RemoveEvents()
         {
+            if (_pictureEdit == null) return;
+
+            _pictureEdit.KeyDown -= _pictureEdit_KeyDown;
+            _pictureEdit.DoubleClick -= _pictureEdit_DoubleClick;
+            _pictureEdit.MouseUp -= PictureEdit_MouseUp;
+            _popUpMenu.Popup -= _popUpMenu_Popup;
+
+            foreach (BarItemLink link in _popUpMenu.ItemLinks)
+                link.Item.ItemClick -= Buttons_ItemClick;
 
         }
 

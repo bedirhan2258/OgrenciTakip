@@ -32,7 +32,7 @@ namespace OgrenciTakip.UI.Win.UserControls.Controls
             {
                 var oldValue = _id;
                 var newValue = value;
-                if (oldValue == newValue)
+                if (newValue.HasValue && oldValue.HasValue && newValue==oldValue)
                 {
                     return;
                 }

@@ -717,6 +717,9 @@
     <EmbeddedResource Include="Forms\OgrenciForms\OgrenciEditForm.resx">
       <DependentUpon>OgrenciEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OgrenciForms\OgrenciListForm.resx">
+      <DependentUpon>OgrenciListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\OzelKodForms\OzelKodEditForm.resx">
       <DependentUpon>OzelKodEditForm.cs</DependentUpon>
     </EmbeddedResource>
