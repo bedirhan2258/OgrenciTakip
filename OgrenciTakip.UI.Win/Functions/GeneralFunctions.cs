@@ -1,9 +1,11 @@
 ﻿
 using DevExpress.XtraBars;
+using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
 using System.Collections.Generic;
@@ -196,6 +198,31 @@ namespace OgrenciTakip.UI.Win.Functions
             return dialog.ShowDialog() != DialogResult.OK ? null : Resim();
 
         }
+
+        public static void RefleshDataSource(this GridView tablo)
+        {
+            var source = tablo.DataController.ListSource.Cast<IBaseHareketEntity>().ToList();
+            if (!source.Any(x => x.Delete)) return;
+
+            var rowHandle = tablo.FocusedRowHandle;
+            tablo.CustomRowFilter += Tablo_CustomRowFilter;
+            tablo.RefleshDataSource();
+            tablo.CustomRowFilter -= Tablo_CustomRowFilter;
+
+            tablo.RowFocus(rowHandle);
+            void Tablo_CustomRowFilter(object sender, RowFilterEventArgs e)
+            {
+                var entity = source[e.ListSourceRow];
+                if (entity == null) return;
+
+                if (!entity.Delete) return;
+
+                e.Visible = false;
+                e.Handled = true;
+            }
+        }
+
+
     }
 }
 

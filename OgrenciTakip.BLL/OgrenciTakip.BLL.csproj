@@ -74,6 +74,7 @@
     <Compile Include="General\IlceBLL.cs" />
     <Compile Include="General\IletisimBll.cs" />
     <Compile Include="General\IndirimBll.cs" />
+    <Compile Include="General\IndiriminUygulanacagiHizmetBilgileriBll.cs" />
     <Compile Include="General\IndirimTuruBll.cs" />
     <Compile Include="General\IptalNedeniBll.cs" />
     <Compile Include="General\IsyeriBll.cs" />
@@ -95,6 +96,8 @@
     <Compile Include="Interfaces\IBaseBll.cs" />
     <Compile Include="Interfaces\IBaseCommonBll.cs" />
     <Compile Include="Interfaces\IBaseGenelBll.cs" />
+    <Compile Include="Interfaces\IBaseHareketGenelBll.cs" />
+    <Compile Include="Interfaces\IBaseHareketSelectBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

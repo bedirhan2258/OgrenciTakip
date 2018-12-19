@@ -1,5 +1,4 @@
 ﻿
-
 using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.DAL.Interfaces;
@@ -18,7 +17,7 @@ namespace OgrenciTakip.BLL.Base
         private IUnitOfWork<T> _uow;
         #endregion
 
-        protected IQueryable<TResult> BaseList<TResult>(Expression<Func<T, bool>> filter, Expression<Func<T, TResult>> selector)
+        protected IQueryable<TResult> List<TResult>(Expression<Func<T, bool>> filter, Expression<Func<T, TResult>> selector)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _uow);
             return _uow.Rep.Select(filter, selector);
@@ -51,7 +50,7 @@ namespace OgrenciTakip.BLL.Base
 
         public void Dispose()
         {
-            _unitOfWork?.Dispose();
+            _uow?.Dispose();
         }
         #endregion
     }

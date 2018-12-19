@@ -30,16 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.insUptNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.InsUptNavigator();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.popupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnHareketEkle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnHareketSil = new DevExpress.XtraBars.BarButtonItem();
             this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.btnHareketSil = new DevExpress.XtraBars.BarButtonItem();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,13 +51,13 @@
             this.insUptNavigator.Size = new System.Drawing.Size(618, 24);
             this.insUptNavigator.TabIndex = 0;
             // 
-            // popupMenu1
+            // popupMenu
             // 
-            this.popupMenu1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.popupMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketEkle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketSil)});
-            this.popupMenu1.Manager = this.barManager;
-            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu.Manager = this.barManager;
+            this.popupMenu.Name = "popupMenu";
             // 
             // btnHareketEkle
             // 
@@ -66,6 +66,14 @@
             this.btnHareketEkle.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
             this.btnHareketEkle.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Insert));
             this.btnHareketEkle.Name = "btnHareketEkle";
+            // 
+            // btnHareketSil
+            // 
+            this.btnHareketSil.Caption = "Hareket Sil";
+            this.btnHareketSil.Id = 2;
+            this.btnHareketSil.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16;
+            this.btnHareketSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Delete));
+            this.btnHareketSil.Name = "btnHareketSil";
             // 
             // barManager
             // 
@@ -118,14 +126,6 @@
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.Name = "barButtonItem1";
             // 
-            // btnHareketSil
-            // 
-            this.btnHareketSil.Caption = "Hareket Sil";
-            this.btnHareketSil.Id = 2;
-            this.btnHareketSil.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16;
-            this.btnHareketSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.Delete));
-            this.btnHareketSil.Name = "btnHareketSil";
-            // 
             // BaseTablo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,7 +137,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "BaseTablo";
             this.Size = new System.Drawing.Size(618, 289);
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,7 +147,7 @@
         #endregion
 
         private Navigators.InsUptNavigator insUptNavigator;
-        private DevExpress.XtraBars.PopupMenu popupMenu1;
+        private DevExpress.XtraBars.PopupMenu popupMenu;
         private DevExpress.XtraBars.BarButtonItem btnHareketEkle;
         private DevExpress.XtraBars.BarManager barManager;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
