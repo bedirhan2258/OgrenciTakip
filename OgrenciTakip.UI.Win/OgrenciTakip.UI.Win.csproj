@@ -576,6 +576,12 @@
     <Compile Include="UserControls\Grid\MyGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.Designer.cs">
+      <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Navigators\InsUptNavigator.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -824,6 +830,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.resx">
+      <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Navigators\InsUptNavigator.resx">
       <DependentUpon>InsUptNavigator.cs</DependentUpon>
     </EmbeddedResource>
@@ -930,6 +939,10 @@
     <ProjectReference Include="..\OgrenciTakip.Common\OgrenciTakip.Common.csproj">
       <Project>{46AC19A6-5358-48C2-8139-C640A1C0CEE8}</Project>
       <Name>OgrenciTakip.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OgrenciTakip.Data\OgrenciTakip.Data.csproj">
+      <Project>{D135CF06-739E-44CF-855D-E66B079574EE}</Project>
+      <Name>OgrenciTakip.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\OgrenciTakip.Model\OgrenciTakip.Model.csproj">
       <Project>{0734F5CF-5794-4E0A-9B41-17B3715278F8}</Project>

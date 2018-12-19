@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
@@ -37,6 +38,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal bool multiSelect;
         protected internal BaseEntity selectedEntity;
         protected internal long? seciliGelecekId;
+        protected internal IList<long> ListeDisiTutulacakKayitlar;
 
         #endregion
 

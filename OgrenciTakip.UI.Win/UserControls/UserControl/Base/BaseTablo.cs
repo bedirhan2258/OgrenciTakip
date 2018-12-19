@@ -14,6 +14,7 @@ using OgrenciTakip.UI.Win.Interfaces;
 using System.Linq;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Model.Entities.Base;
+using System.Collections.Generic;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 {
@@ -27,6 +28,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
         protected BarItem[] ShowItems;
         protected BarItem[] HideItems;
         protected IBaseBll Bll;
+        protected IList<long> ListeDisiTutulacakKayitlar;
 
         public BaseTablo()
         {
