@@ -35,6 +35,14 @@ namespace OgrenciTakip.UI.Win.Functions
 
             return default(T);
         }
+
+        public static T GetRow<T>(this GridView tablo, int rowHandle)
+        {
+            if (tablo.FocusedRowHandle > -1) return (T)tablo.GetRow(rowHandle);
+            Messages.KartSecmemeUyariMesaji();
+            return default(T);
+        }
+
         //oldEntity ile current entity arasında bir fark varsa alan olarak geri gönderiyoruz.
         private static VeriDegisimYeri veriDegisimYeriGetir<T>(T oldEntity, T currentEntity)
         {

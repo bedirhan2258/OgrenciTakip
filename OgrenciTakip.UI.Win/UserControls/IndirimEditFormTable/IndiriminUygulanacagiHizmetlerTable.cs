@@ -29,7 +29,7 @@ namespace OgrenciTakip.UI.Win.UserControls.IndirimEditFormTable
             var source = tablo.DataController.ListSource;
             ListeDisiTutulacakKayitlar = source.Cast<IndiriminUygulanacagiHizmetBilgileriL>().Where(x => !x.Delete).Select(x => x.HizmetId).ToList();
 
-            var entities=ShowListForms<HizmetListForm>.ShowDialogListForm
+            var entities = ShowListForms<HizmetListForm>.ShowDialogListForm : null;
         }
     }
 }
