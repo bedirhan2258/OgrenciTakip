@@ -1,5 +1,6 @@
 ﻿using OgrenciTakip.Model.Attributes;
 using OgrenciTakip.Model.Entities.Base;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,5 +23,7 @@ namespace OgrenciTakip.Model.Entities
         public OzelKod OzelKod1 { get; set; }
         public OzelKod OzelKod2 { get; set; }
 
+         [InverseProperty("Banka")]
+        public ICollection<BankaSube> BankaSube { get; set; }
     }
 }

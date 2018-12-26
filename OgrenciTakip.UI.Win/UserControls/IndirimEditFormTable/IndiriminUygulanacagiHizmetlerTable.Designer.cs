@@ -85,9 +85,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Bu İndirimin Uygulanacağı Hizmet Kartlarını Seçiniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Hizmet Kartı Ekle";
             this.tablo.ViewCaption = "İndirimin Uygulanacağı Hizmetler";
             // 
             // colHizmetAdi
@@ -115,9 +115,9 @@
             this.colIndirimTutari.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIndirimTutari.OptionsFilter.AllowAutoFilter = false;
             this.colIndirimTutari.OptionsFilter.AllowFilter = false;
-            this.colIndirimTutari.StatusBarAciklama = null;
-            this.colIndirimTutari.StatusBarKisayol = null;
-            this.colIndirimTutari.StatusBarKisayolAciklama = null;
+            this.colIndirimTutari.StatusBarAciklama = "İndirim Tutarı Giriniz.";
+            this.colIndirimTutari.StatusBarKisayol = "F4 :";
+            this.colIndirimTutari.StatusBarKisayolAciklama = "Hesap Makinesi";
             this.colIndirimTutari.Visible = true;
             this.colIndirimTutari.VisibleIndex = 1;
             this.colIndirimTutari.Width = 100;
@@ -145,7 +145,7 @@
             this.colIndirimOrani.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIndirimOrani.OptionsFilter.AllowAutoFilter = false;
             this.colIndirimOrani.OptionsFilter.AllowFilter = false;
-            this.colIndirimOrani.StatusBarAciklama = null;
+            this.colIndirimOrani.StatusBarAciklama = "İndirim Oranı Giriniz.";
             this.colIndirimOrani.StatusBarKisayol = null;
             this.colIndirimOrani.StatusBarKisayolAciklama = null;
             this.colIndirimOrani.Visible = true;
@@ -161,6 +161,11 @@
             this.repositoryOran.EditFormat.FormatString = "n0";
             this.repositoryOran.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repositoryOran.Mask.EditMask = "n0";
+            this.repositoryOran.MaxValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.repositoryOran.Name = "repositoryOran";
             // 
             // IndiriminUygulanacagiHizmetlerTable

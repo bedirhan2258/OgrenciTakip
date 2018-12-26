@@ -44,7 +44,7 @@ namespace OgrenciTakip.DAL.Base
                         case 208:
                             Messages.HataMesaji("İşlem Yapmak İstediğiniz Tablo Veri Tabanında Bulunamadı.");
                             break;
-                        case 548:
+                        case 547:
                             Messages.HataMesaji("Seçilen Kartın İşlem Görmüş Kartları Var Kart Silinemez");
                             break;
                         case 2601:

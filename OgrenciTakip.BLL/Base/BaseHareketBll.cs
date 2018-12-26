@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 
 namespace OgrenciTakip.BLL.Base
 {
-    public class BaseHareketBll<T, TContext> : IBaseBll where T : BaseHareketEntity where TContext : DbContext
+    public class BaseHareketBll<T, TContext> : IBaseBll, IBaseHareketGenelBll where T : BaseHareketEntity where TContext : DbContext
     {
         #region Variables
         private IUnitOfWork<T> _uow;
@@ -23,14 +23,14 @@ namespace OgrenciTakip.BLL.Base
             return _uow.Rep.Select(filter, selector);
         }
 
-        protected bool Insert(IList<BaseHareketEntity> entitites)
+        public bool Insert(IList<BaseHareketEntity> entitites)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _uow);
             _uow.Rep.Insert(entitites.EntityListConvert<T>());
             return _uow.Save();
         }
 
-        protected bool Update(IList<BaseHareketEntity> entitites)
+        public bool Update(IList<BaseHareketEntity> entitites)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _uow);
 
@@ -38,7 +38,7 @@ namespace OgrenciTakip.BLL.Base
             return _uow.Save();
         }
 
-        protected bool Delete(IList<BaseHareketEntity> entitites)
+        public bool Delete(IList<BaseHareketEntity> entitites)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _uow);
 

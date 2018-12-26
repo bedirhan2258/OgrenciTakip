@@ -26,6 +26,11 @@ namespace OgrenciTakip.Data.Context
             //geçerli olucak o yüzden gerektiði yerlerde costum olarak biz kendimiz yazýcaz.
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+
+            //Ýle baðlý birden çok ilçe olabilir demiþtik.
+            modelBuilder.Entity<Il>().HasMany(x => x.Ilce).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Banka>().HasMany(x => x.BankaSube).WithRequired().WillCascadeOnDelete(true);
+            modelBuilder.Entity<Indirim>().HasMany(x => x.IndiriminUygulanacagiHizmetBilgileri).WithRequired().WillCascadeOnDelete(true);
         }
 
         public DbSet<Il> Il { get; set; }

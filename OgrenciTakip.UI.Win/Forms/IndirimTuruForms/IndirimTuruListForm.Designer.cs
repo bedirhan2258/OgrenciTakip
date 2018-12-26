@@ -137,7 +137,7 @@
             // colIndirimTuruAdi
             // 
             this.colIndirimTuruAdi.Caption = "İndirim Türü Adı";
-            this.colIndirimTuruAdi.FieldName = "IndirimTuru";
+            this.colIndirimTuruAdi.FieldName = "IndirimTuruAdi";
             this.colIndirimTuruAdi.Name = "colIndirimTuruAdi";
             this.colIndirimTuruAdi.OptionsColumn.AllowEdit = false;
             this.colIndirimTuruAdi.StatusBarAciklama = null;

@@ -2,6 +2,7 @@
 using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
 using OgrenciTakip.UI.Win.Functions;
@@ -31,11 +32,11 @@ namespace OgrenciTakip.UI.Win.UserControls.IndirimEditFormTable
         protected override void HareketEkle()
         {
             //List olarak datasource alıyoruz.
-           
+
             var source = tablo.DataController.ListSource;
             ListeDisiTutulacakKayitlar = source.Cast<IndiriminUygulanacagiHizmetBilgileriL>().Where(x => !x.Delete).Select(x => x.HizmetId).ToList();
 
-            var entities = ShowListForms<HizmetListForm>.ShowDialogListForm(KartTuru.Hizmet, ListeDisiTutulacakKayitlar, true).EntityListConvert<HizmetL>();
+            var entities = ShowListForms<HizmetListForm>.ShowDialogListForm(KartTuru.Hizmet, ListeDisiTutulacakKayitlar, true, false).EntityListConvert<HizmetL>();
             if (entities == null) return;
 
             foreach (var entity in entities)
@@ -63,7 +64,18 @@ namespace OgrenciTakip.UI.Win.UserControls.IndirimEditFormTable
         }
         protected internal override bool HataliGiris()
         {
-            return base.HataliGiris();
+            if (!TableValueChanged) return false;
+            for (int i = 0; i < tablo.DataRowCount; i++)
+            {
+                var entity = tablo.GetRow<IndiriminUygulanacagiHizmetBilgileriL>(i);
+                if (entity.IndirimTutari == 0 || entity.IndirimOrani == 0) continue;
+                tablo.Focus();
+                tablo.FocusedRowHandle = i;
+                Messages.HataMesaji("İndirim Tutarı veya İndirim Oranları Alanlarından Sadece Birinin Değeri Sıfır'dan Büyük Olmalıdır.");
+                    return true;
+            }
+            return false;
+
         }
     }
 }

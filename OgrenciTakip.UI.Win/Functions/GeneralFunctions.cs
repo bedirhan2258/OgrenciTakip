@@ -224,12 +224,13 @@ namespace OgrenciTakip.UI.Win.Functions
         public static void RefleshDataSource(this GridView tablo)
         {
             var source = tablo.DataController.ListSource.Cast<IBaseHareketEntity>().ToList();
-            if (!source.Any(x => x.Delete)) return;
+            if (!source.Any(x =>x.Delete)) return;
 
             var rowHandle = tablo.FocusedRowHandle;
             tablo.CustomRowFilter += Tablo_CustomRowFilter;
-            tablo.RefleshDataSource();
+            tablo.RefreshData();
             tablo.CustomRowFilter -= Tablo_CustomRowFilter;
+
 
             tablo.RowFocus(rowHandle);
             void Tablo_CustomRowFilter(object sender, RowFilterEventArgs e)

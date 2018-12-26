@@ -65,7 +65,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             SablonYukle();
             Listele();
             ButtonGizleGoster();
-            //Tablo_LostFocus(Tablo, EventArgs.Empty);
+            Tablo_LostFocus(Tablo, EventArgs.Empty);
         }
 
         private void SablonKaydet()
@@ -108,6 +108,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 
         protected internal bool Kaydet()
         {
+            insUptNavigator.Navigator.Buttons.DoClick(insUptNavigator.Navigator.Buttons.EndEdit);
             var source = Tablo.DataController.ListSource;
 
             var insert = source.Cast<IBaseHareketEntity>().Where(x => x.Insert && !x.Delete).Cast<BaseHareketEntity>().ToList();
@@ -233,12 +234,12 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 OwnerForm.statusBarKisayol.Visibility = BarItemVisibility.Always;
                 OwnerForm.statusBarKisayolAciklama.Visibility = BarItemVisibility.Always;
 
-                OwnerForm.statusBarAciklama.Caption = ((IStatusBarKisayol)sender).StatusBarAciklama;
-                OwnerForm.statusBarKisayolAciklama.Caption = ((IStatusBarKisayol)sender).StatusBarKisayolAciklama;
-                OwnerForm.statusBarKisayol.Caption = ((IStatusBarKisayol)sender).StatusBarKisayol;
+                OwnerForm.statusBarAciklama.Caption = ((IStatusBarKisayol)e.FocusedColumn).StatusBarAciklama;
+                OwnerForm.statusBarKisayolAciklama.Caption = ((IStatusBarKisayol)e.FocusedColumn).StatusBarKisayolAciklama;
+                OwnerForm.statusBarKisayol.Caption = ((IStatusBarKisayol)e.FocusedColumn).StatusBarKisayol;
             }
             else if (((IStatusBarKisayol)e.FocusedColumn).StatusBarAciklama != null)
-                OwnerForm.statusBarKisayolAciklama.Caption = ((IStatusBarKisayol)sender).StatusBarKisayolAciklama;
+                OwnerForm.statusBarAciklama.Caption = ((IStatusBarKisayol)e.FocusedColumn).StatusBarAciklama;
         }
         private void Tablo_SablonChanged(object sender, EventArgs e)
         {
