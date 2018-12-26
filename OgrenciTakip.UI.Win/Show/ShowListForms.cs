@@ -3,6 +3,7 @@ using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.Functions;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -49,9 +50,13 @@ namespace OgrenciTakip.UI.Win.Show
                 frm.ListeDisiTutulacakKayitlar = listeDisiTutulacakKayitlar;
                 frm.multiSelect = multiSelect;
                 frm.Yukle();
-                frm.ShowDialog();
+                frm.RowSelect = new SelectRowFunctions(frm.Tablo);
 
-                return frm.DialogResult == DialogResult.OK ? frm.selectedEntity : null;
+                if (frm.EklenebilecekEntityVar)
+                    frm.ShowDialog();
+
+
+                return frm.DialogResult == DialogResult.OK ? frm.SelectedEntities : null;
             }
         }
     }

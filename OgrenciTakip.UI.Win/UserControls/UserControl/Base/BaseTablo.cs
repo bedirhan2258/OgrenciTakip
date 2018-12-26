@@ -8,13 +8,14 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using System;
-using DevExpress.XtraPrinting.Native;
+//using DevExpress.XtraPrinting.Native;
 using DevExpress.XtraGrid.Views.Base;
 using OgrenciTakip.UI.Win.Interfaces;
 using System.Linq;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Model.Entities.Base;
 using System.Collections.Generic;
+using DevExpress.Utils.Extensions;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 {
@@ -103,6 +104,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             TableValueChanged = durum;
             OwnerForm.ButonEnabledDurumu();
         }
+        protected virtual internal bool HataliGiris() { return false; }
+
         protected internal bool Kaydet()
         {
             var source = Tablo.DataController.ListSource;
@@ -219,6 +222,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
         }
         private void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
         {
+            if (OwnerForm == null) return;
             OwnerForm.statusBarKisayol.Visibility = BarItemVisibility.Never;
             OwnerForm.statusBarKisayolAciklama.Visibility = BarItemVisibility.Never;
 

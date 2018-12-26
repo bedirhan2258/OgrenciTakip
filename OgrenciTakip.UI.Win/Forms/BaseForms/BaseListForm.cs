@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.UI.Win.Forms.FiltreForms;
@@ -39,7 +40,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal BaseEntity selectedEntity;
         protected internal long? seciliGelecekId;
         protected internal IList<long> ListeDisiTutulacakKayitlar;
-
+        protected internal SelectRowFunctions RowSelect;
+        protected internal bool EklenebilecekEntityVar = false;
+        protected internal IList<BaseEntity> SelectedEntities;
         #endregion
 
         public BaseListForm()
@@ -116,11 +119,17 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         }
 
-        private void SelectEntity()
+        protected virtual void SelectEntity()
         {
             if (multiSelect)
             {
-                //Güncellenecek
+                SelectedEntities = new List<BaseEntity>();
+                if (RowSelect.SelectedRowCount() == 0)
+                {
+                    Messages.KartSecmemeUyariMesaji();
+                    return;
+                }
+                SelectedEntities = RowSelect.GetSelectedRows();
             }
             else
             {
@@ -157,6 +166,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 //Güncellenecek
                 SelectEntity();
+            
             }
             else
             {

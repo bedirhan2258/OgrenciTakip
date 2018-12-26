@@ -25,6 +25,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
         {
             oldEntity = islemTuru == IslemTuru.EntityInsert ? new IndirimS() : ((IndirimBll)bll).Single(FilterFunctions.Filter<Indirim>(id));
             NesneyiKontrollereBagla();
+            TabloYukle();
 
             if (islemTuru != IslemTuru.EntityInsert) return;
             id = islemTuru.IdOlustur(oldEntity);
@@ -59,15 +60,24 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
             ButonEnabledDurumu();
         }
 
+        protected internal override void ButonEnabledDurumu()
+        {
+            if (!isLoaded) return;
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, hizmetTablo.TableValueChanged);
+        }
+
         protected override bool EntityInsert()
         {
+            if (hizmetTablo.HataliGiris()) return false;
+
             return ((IndirimBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
-             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && hizmetTablo.Kaydet();
         }
         protected override bool EntityUpdate()
         {
+            if (hizmetTablo.HataliGiris()) return false;
             return ((IndirimBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
-            x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+            x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && hizmetTablo.Kaydet();
         }
         protected override void SecimYap(object sender)
         {
@@ -76,6 +86,11 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
             using (var sec = new SelectFunctions())
                 if (sender == txtIndirimTuru)
                     sec.Sec(txtIndirimTuru);
+        }
+        protected override void TabloYukle()
+        {
+            hizmetTablo.OwnerForm = this;
+            hizmetTablo.Yukle();
         }
     }
 }

@@ -8,7 +8,9 @@ using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
@@ -78,6 +80,7 @@ namespace OgrenciTakip.UI.Win.Functions
             }
             return VeriDegisimYeri.VeriDegisimiYok;
         }
+
         public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity)
         {
             var veriDegisimYeri = veriDegisimYeriGetir(oldEntity, currentEntity);
@@ -87,6 +90,17 @@ namespace OgrenciTakip.UI.Win.Functions
             btnSil.Enabled = !butonEnabledDurumu;
             btnYeni.Enabled = !butonEnabledDurumu;
         }
+
+        public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity, bool tableValueChanged)
+        {
+            var veriDegisimYeri = tableValueChanged ? VeriDegisimYeri.Tablo : veriDegisimYeriGetir(oldEntity, currentEntity);
+            var butonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan || veriDegisimYeri == VeriDegisimYeri.Tablo; //veridegisimyeri alan gelirse otomatik olarak true olucak
+            btnKaydet.Enabled = butonEnabledDurumu;
+            btnGeriAl.Enabled = butonEnabledDurumu;
+            btnSil.Enabled = !butonEnabledDurumu;
+            btnYeni.Enabled = !butonEnabledDurumu;
+        }
+
         public static void ButtonEnabledDurumu<T>(BarButtonItem btnKaydet, BarButtonItem btnFarkliKaydet, BarButtonItem btnSil, IslemTuru islemTuru, T oldEntity, T currentEntity)
         {
             var veriDegisimYeri = veriDegisimYeriGetir(oldEntity, currentEntity);
@@ -230,6 +244,10 @@ namespace OgrenciTakip.UI.Win.Functions
             }
         }
 
+        public static BindingList<T> ToBingingList<T>(this IEnumerable<BaseHareketEntity> list)
+        {
+            return new BindingList<T>((IList<T>)list);
+        }
 
     }
 }

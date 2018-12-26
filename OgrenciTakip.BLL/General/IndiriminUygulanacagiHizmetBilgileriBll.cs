@@ -7,11 +7,12 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class IndiriminUygulanacagiHizmetBilgileriBll : BaseHareketBll<IndiriminUygulanacagiHizmetBilgileri, OgrenciTakipContext>,IBaseHareketSelectBll<IndiriminUygulanacagiHizmetBilgileri>
+    public class IndiriminUygulanacagiHizmetBilgileriBll : BaseHareketBll<IndiriminUygulanacagiHizmetBilgileri, OgrenciTakipContext>, IBaseHareketSelectBll<IndiriminUygulanacagiHizmetBilgileri>
     {
         public IEnumerable<BaseHareketEntity> List(Expression<Func<IndiriminUygulanacagiHizmetBilgileri, bool>> filter)
         {
@@ -25,7 +26,7 @@ namespace OgrenciTakip.BLL.General
                 IndirimOrani = x.IndirimOrani,
                 SubeId = x.SubeId,
                 DonemId = x.DonemId,
-            });
+            }).ToList();
         }
     }
 }

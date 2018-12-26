@@ -62,5 +62,10 @@ namespace OgrenciTakip.Common.Message
         {
             return EvetSeciliEvetHayir($"İlgili Tablo, {dosyaFormati} Formati Olarak Dışarı Aktarılacaktır.Onaylıyor Musunuz?", "Aktarım Onay");
         }
+
+        public static void KartBulunamadiMesaji(string kartTuru)
+        {
+            UyariMesaji($"İşlem Yapılabilecek {kartTuru} Bulunamadı.");
+        }
     }
 }

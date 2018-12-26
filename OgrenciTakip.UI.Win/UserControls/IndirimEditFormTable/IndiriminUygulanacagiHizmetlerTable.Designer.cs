@@ -32,8 +32,8 @@
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colHizmetAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIndirimTutari = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colIndirimOrani = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryTutar = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.colIndirimOrani = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryOran = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -83,7 +83,6 @@
             this.tablo.OptionsView.ColumnAutoWidth = false;
             this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
             this.tablo.OptionsView.RowAutoHeight = true;
-            this.tablo.OptionsView.ShowAutoFilterRow = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
             this.tablo.StatusBarAciklama = null;
@@ -105,7 +104,7 @@
             this.colHizmetAdi.StatusBarKisayolAciklama = null;
             this.colHizmetAdi.Visible = true;
             this.colHizmetAdi.VisibleIndex = 0;
-            this.colHizmetAdi.Width = 208;
+            this.colHizmetAdi.Width = 216;
             // 
             // colIndirimTutari
             // 
@@ -121,7 +120,19 @@
             this.colIndirimTutari.StatusBarKisayolAciklama = null;
             this.colIndirimTutari.Visible = true;
             this.colIndirimTutari.VisibleIndex = 1;
-            this.colIndirimTutari.Width = 118;
+            this.colIndirimTutari.Width = 100;
+            // 
+            // repositoryTutar
+            // 
+            this.repositoryTutar.AutoHeight = false;
+            this.repositoryTutar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTutar.DisplayFormat.FormatString = "n2";
+            this.repositoryTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryTutar.EditFormat.FormatString = "n2";
+            this.repositoryTutar.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryTutar.Mask.EditMask = "n2";
+            this.repositoryTutar.Name = "repositoryTutar";
             // 
             // colIndirimOrani
             // 
@@ -139,19 +150,6 @@
             this.colIndirimOrani.StatusBarKisayolAciklama = null;
             this.colIndirimOrani.Visible = true;
             this.colIndirimOrani.VisibleIndex = 2;
-            this.colIndirimOrani.Width = 110;
-            // 
-            // repositoryTutar
-            // 
-            this.repositoryTutar.AutoHeight = false;
-            this.repositoryTutar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTutar.DisplayFormat.FormatString = "n2";
-            this.repositoryTutar.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryTutar.EditFormat.FormatString = "n2";
-            this.repositoryTutar.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryTutar.Mask.EditMask = "n2";
-            this.repositoryTutar.Name = "repositoryTutar";
             // 
             // repositoryOran
             // 

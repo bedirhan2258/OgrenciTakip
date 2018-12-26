@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
-using DevExpress.XtraPrinting.Native;
+//using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
@@ -208,7 +209,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 Name.FormSablonKaydet(Left, Top, Width, Height, WindowState);
         }
 
-
         protected virtual void SecimYap(object sender) { }
 
         protected virtual void FiltreUygula()
@@ -233,6 +233,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual void NesneyiKontrollereBagla() { }
 
         protected virtual void GuncelNesneOlustur() { }
+        protected virtual void TabloYukle() { }
 
 
         protected internal virtual void Yukle()

@@ -16,7 +16,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-
 namespace OgrenciTakip.UI.Win.Functions
 {
     public class SelectRowFunctions

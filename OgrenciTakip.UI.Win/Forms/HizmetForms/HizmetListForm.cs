@@ -1,19 +1,39 @@
 ﻿
+using DevExpress.Utils.Extensions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.DTO;
+using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using System;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace OgrenciTakip.UI.Win.Forms.HizmetForms
 {
     public partial class HizmetListForm : BaseListForm
     {
+        private readonly Expression<Func<Hizmet, bool>> _filter;
         public HizmetListForm()
         {
             InitializeComponent();
             bll = new HizmetBll();
+            _filter = x => x.Durum == aktifKartlariGoster
+                && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId;
+        }
+        //this diyerek base olan HizmetListForm() çalıştırılıyor.
+        public HizmetListForm(params object[] prm) : this()
+        {
+            if (prm != null)
+            {
+                var panelGoster = (bool)prm[0];
+                ustPanel.Visible = DateTime.Now.Date > AnaForm.EgitimBaslamaTarihi && panelGoster;
+            }
+
+            _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId;
         }
         protected override void DegiskenleriDoldur()
         {
@@ -25,9 +45,13 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
         }
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((HizmetBll)bll).List(x => x.Durum == aktifKartlariGoster
-            && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
-
+            var list = ((HizmetBll)bll).List(_filter);
+            Tablo.GridControl.DataSource = list;
+            if (!multiSelect) return;
+            if (list.Any())
+                EklenebilecekEntityVar = true;
+            else
+                Messages.KartBulunamadiMesaji("Kart");
         }
         private void TarihAyarla()
         {
@@ -38,6 +62,12 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
 
             txtHizmetBaslamaTarihi.DateTime = DateTime.Now.Date <= AnaForm.EgitimBaslamaTarihi ? AnaForm.EgitimBaslamaTarihi : DateTime.Now.Date > AnaForm.EgitimBaslamaTarihi && DateTime.Now.Date <= AnaForm.DonemBitisTarihi ? DateTime.Now.Date :
                 DateTime.Now.Date > AnaForm.DonemBitisTarihi ? AnaForm.DonemBitisTarihi : DateTime.Now.Date;
+        }
+        protected override void SelectEntity()
+        {
+            base.SelectEntity();
+            if (multiSelect)
+                SelectedEntities.ForEach(x => ((HizmetL)x).BaslamaTarihi = txtHizmetBaslamaTarihi.DateTime.Date);
         }
     }
 }
