@@ -32,11 +32,9 @@
   <ItemGroup>
     <Reference Include="DevExpress.Data.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      
     </Reference>
     <Reference Include="DevExpress.Utils.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      
     </Reference>
     <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -59,9 +57,12 @@
     <Compile Include="Enums\IslemTuru.cs" />
     <Compile Include="Enums\KanGrubu.cs" />
     <Compile Include="Enums\KartTuru.cs" />
+    <Compile Include="Enums\KayitDurumu.cs" />
+    <Compile Include="Enums\KayitSekli.cs" />
     <Compile Include="Enums\OdemeTipi.cs" />
     <Compile Include="Enums\OzelKodTuru.cs" />
     <Compile Include="Enums\RaporuKagidaSigdirmaTuru.cs" />
+    <Compile Include="Enums\SonrakiDonemKayitDurumu.cs" />
     <Compile Include="Enums\VeriDegisimYeri.cs" />
     <Compile Include="Enums\YazdirmaYonu.cs" />
     <Compile Include="Functions\EnumFunctions.cs" />

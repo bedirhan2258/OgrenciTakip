@@ -61,6 +61,7 @@
     <Compile Include="DTO\OgrenciDTO.cs" />
     <Compile Include="DTO\OkulDTO.cs" />
     <Compile Include="DTO\SinifDTO.cs" />
+    <Compile Include="DTO\TahakkukDTO.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\Avukat.cs" />
     <Compile Include="Entities\Banka.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Entities\Sinif.cs" />
     <Compile Include="Entities\SinifGrup.cs" />
     <Compile Include="Entities\Sube.cs" />
+    <Compile Include="Entities\Tahakkuk.cs" />
     <Compile Include="Entities\Tesvik.cs" />
     <Compile Include="Entities\Yakinlik.cs" />
     <Compile Include="Entities\Evrak.cs" />
