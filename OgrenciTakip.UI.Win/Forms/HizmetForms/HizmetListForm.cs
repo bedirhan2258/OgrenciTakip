@@ -16,7 +16,10 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
 {
     public partial class HizmetListForm : BaseListForm
     {
-        private readonly Expression<Func<Hizmet, bool>> _filter;
+        #region Variables
+        private readonly Expression<Func<Hizmet, bool>> _filter; 
+        #endregion
+
         public HizmetListForm()
         {
             InitializeComponent();

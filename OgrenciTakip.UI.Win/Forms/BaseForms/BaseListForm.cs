@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.BLL.Interfaces;
@@ -19,7 +20,7 @@ using OgrenciTakip.UI.Win.Show.Interfaces;
 
 namespace OgrenciTakip.UI.Win.Forms.BaseForms
 {
-    public partial class BaseListForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class BaseListForm : RibbonForm
     {
         #region Varaibles
         private long _filtreId;
@@ -166,7 +167,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 //Güncellenecek
                 SelectEntity();
-            
+
             }
             else
             {
@@ -234,6 +235,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
             //Güncellenecek
         }
+        protected virtual void TahakkukYap() { }
 
         protected virtual void BagliKartAc() { }
 
@@ -374,6 +376,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 FiltreSec();
             }
+            else if (e.Item == btnTahakkukYap)
+            {
+                TahakkukYap();
+            }
             else if (e.Item == btnKolonlar)
             {
                 if (Tablo.CustomizationForm == null)
@@ -404,6 +410,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             Cursor.Current = DefaultCursor;
         }
+
+
 
         private void Tablo_DoubleClick(object sender, EventArgs e)
         {

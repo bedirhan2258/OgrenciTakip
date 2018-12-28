@@ -64,6 +64,10 @@ namespace OgrenciTakip.BLL.General
                 Durum = x.Durum
             });
         }
+        public BaseEntity SingleSummary(Expression<Func<Tahakkuk, bool>> filter)
+        {
+            return BaseSingle(filter, x => x);
+        }
         public override IEnumerable<BaseEntity> List(Expression<Func<Tahakkuk, bool>> filter)
         {
             return BaseList(filter, x => new TahakkukL

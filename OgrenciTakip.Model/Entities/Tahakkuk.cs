@@ -9,7 +9,7 @@ namespace OgrenciTakip.Model.Entities
 {
     public class Tahakkuk : BaseEntityDurum
     {
-        [Index("IX_kod", IsUnique = false)]
+        [Index("IX_kod", IsUnique = false), ZorunluAlan("Öğrenci No", "txtKod")]
         public override string Kod { get; set; }
 
         public long OgrenciId { get; set; }

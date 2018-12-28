@@ -812,6 +812,9 @@
     <EmbeddedResource Include="Forms\TahakkukForms\TahakkukEditForm.resx">
       <DependentUpon>TahakkukEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TahakkukForms\TahakkukListForm.resx">
+      <DependentUpon>TahakkukListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TesvikForms\TesvikEditForm.resx">
       <DependentUpon>TesvikEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1046,6 +1049,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\textbox_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfooter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addfooter_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

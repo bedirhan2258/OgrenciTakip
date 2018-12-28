@@ -82,7 +82,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                         break;
                 }
             }
-            if (datalayoutControls == null)
+            if (dataLayoutControls == null)
             {
                 if (dataLayoutControl == null) return;
                 foreach (Control ctrl in dataLayoutControl.Controls)
@@ -92,7 +92,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             else
             {
-                foreach (var layout in datalayoutControls)
+                foreach (var layout in dataLayoutControls)
                 {
                     foreach (Control ctrl in layout.Controls)
                     {

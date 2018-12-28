@@ -2,9 +2,11 @@
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OgrenciTakip.Model.DTO
 {
+    [NotMapped]
     public class TahakkukS : Tahakkuk
     {
         public string TcKimlikNo { get; set; }
