@@ -90,6 +90,7 @@
     <Compile Include="General\ServisBll.cs" />
     <Compile Include="General\SinifBll.cs" />
     <Compile Include="General\SinifGrupBll.cs" />
+    <Compile Include="General\TahakkukBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
     <Compile Include="General\YabanciDilBll.cs" />
     <Compile Include="General\YakinlikBll.cs" />

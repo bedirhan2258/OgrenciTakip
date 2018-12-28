@@ -27,7 +27,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected BaseEntity oldEntity;
         protected BaseEntity currentEnttiy;
         protected MyDataLayoutControl dataLayoutControl;
-        protected MyDataLayoutControl[] datalayoutControls;
+        protected MyDataLayoutControl[] dataLayoutControls;
         protected bool isLoaded;
         protected bool kayitSonrasiFormuKapat = true;
         protected BarItem[] ShowItems;

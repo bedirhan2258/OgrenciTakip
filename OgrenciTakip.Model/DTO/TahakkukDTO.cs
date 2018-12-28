@@ -34,6 +34,7 @@ namespace OgrenciTakip.Model.DTO
         public string Soyadi { get; set; }
         public string BabaAdi { get; set; }
         public string AnaAdi { get; set; }
+        public string OkulNo { get; set; }
         public DateTime KayitTarihi { get; set; }
         public KayitSekli KayitSekli { get; set; }
         public KayitDurumu KayitDurumu { get; set; }

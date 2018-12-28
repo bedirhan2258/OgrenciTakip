@@ -79,6 +79,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
             txtOzelKod5.Id = entity.OzelKod5Id;
             tglDurum.IsOn = entity.Durum;
         }
+
         protected override void GuncelNesneOlustur()
         {
             currentEnttiy = new Ogrenci
@@ -140,11 +141,13 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
                 else if (sender == txtOzelKod5)
                     sec.Sec(txtOzelKod5, KartTuru.Ogrenci);
         }
+
         protected override void Control_EnabledChange(object sender, EventArgs e)
         {
             if (sender != txtKimlikIl) return;
             txtKimlikIl.ControlEnabledChange(txtKimlikIlce);
         }
+
         protected override void Control_Enter(object sender, EventArgs e)
         {
             if (!(sender is MyPictureEdit resim)) return;

@@ -25,7 +25,7 @@ namespace OgrenciTakip.Model.Entities
         public KayitDurumu KayitDurumu { get; set; } = KayitDurumu.KesinKayit;
 
         [ZorunluAlan("Sınıf Adı", "txtSinif")]
-        public string SinifId { get; set; }
+        public long SinifId { get; set; }
 
         public long? GeldigiOkulId { get; set; }
 
