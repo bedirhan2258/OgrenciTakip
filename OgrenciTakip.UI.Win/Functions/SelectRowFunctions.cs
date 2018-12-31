@@ -67,7 +67,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
             if (tablo is BandedGridView bView)
             {
-                bView.Bands["btnSecim"].Visible = true;
+                bView.Bands["bndSecim"].Visible = true;
                 bView.Bands["bndSecim"].VisibleIndex = 0;
                 bView.Bands["bndSecim"].Columns.Add((BandedGridColumn)_column);
             }

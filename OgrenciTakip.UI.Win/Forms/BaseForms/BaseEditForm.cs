@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
+using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 //using DevExpress.XtraPrinting.Native;
@@ -36,6 +37,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal IslemTuru islemTuru;
         protected internal long id;
         protected internal bool refreshYapilacak;
+        protected bool FarkliSubeIslemi;
         #endregion
 
         public BaseEditForm()
@@ -80,6 +82,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                     case BaseEdit edt:
                         edt.EditValueChanged += Control_EditValueChanged;
                         break;
+                    case TabPane tab:
+                        tab.SelectedPageChanged += Control_SelectedPageChanged;
+                        break;
                 }
             }
             if (dataLayoutControls == null)
@@ -102,6 +107,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
 
         }
+
+
 
 
         ////////////////////////////////////////////////////////////////////////Fonksiyonlar/////////////////////////////////////////////////7
@@ -249,6 +256,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy);
         }
 
+        protected virtual void BagliTabloYukle() { }
+
+        protected virtual bool BagliTabloKaydet() { return false; }
 
         ////////////////////////////////////////////////////////////////////////7777//Eventler////////////////////////////////////////////////////////////////////
 
@@ -348,8 +358,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             GuncelNesneOlustur();
             SablonYukle();
             ButonGizleGoster();
-            //Guncelleme yapılacak.
 
+            if (FarkliSubeIslemi)
+                Messages.UyariMesaji("İşlem Yapılan Kart Çalışılan Şube Veya Dönemde Olmadığı İçin Yapılan Değişiklikler Kayıt Edilemez.");
         }
 
         private void Button_ItemClick(object sender, ItemClickEventArgs e)
@@ -401,6 +412,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
 
         protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
+
+        protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e) { }
 
     }
 }

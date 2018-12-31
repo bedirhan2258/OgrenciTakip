@@ -23,7 +23,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
     {
         private bool _isLoaded;
         private bool _tabloSablonKayitEdilecek;
-        protected GridView Tablo;
+        protected internal GridView Tablo;
         protected internal bool TableValueChanged;
         protected internal BaseEditForm OwnerForm;
         protected BarItem[] ShowItems;
@@ -54,7 +54,10 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.ColumnPositionChanged += Tablo_SablonChanged;
             Tablo.ColumnWidthChanged += Tablo_SablonChanged;
             Tablo.EndSorting += Tablo_SablonChanged;
+            Tablo.DoubleClick += Tablo_DoubleClick;
         }
+
+
 
         protected internal void Yukle()
         {
@@ -105,6 +108,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             OwnerForm.ButonEnabledDurumu();
         }
         protected virtual internal bool HataliGiris() { return false; }
+        protected virtual void OpenEntity() { }
 
         protected internal bool Kaydet()
         {
@@ -145,6 +149,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 HareketEkle();
             else if (e.Item == btnHareketSil)
                 HareketSil();
+            else if (e.Item == btnKartDuzenle)
+                OpenEntity();
 
             Cursor.Current = DefaultCursor;
         }
@@ -219,6 +225,9 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 case Keys.Delete when e.Shift:
                     HareketSil();
                     break;
+                case Keys.F3:
+                    OpenEntity();
+                    break;
             }
         }
         private void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
@@ -247,5 +256,9 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             SablonKaydet();
         }
 
+        private void Tablo_DoubleClick(object sender, EventArgs e)
+        {
+            OpenEntity();
+        }
     }
 }

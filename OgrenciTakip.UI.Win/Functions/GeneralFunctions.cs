@@ -6,7 +6,9 @@ using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
+using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.UserControls.Controls;
+using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -89,6 +91,15 @@ namespace OgrenciTakip.UI.Win.Functions
             btnGeriAl.Enabled = butonEnabledDurumu;
             btnSil.Enabled = !butonEnabledDurumu;
             btnYeni.Enabled = !butonEnabledDurumu;
+        }
+
+        public static void ButtonEnabledDurumu(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil)
+        {
+
+            btnKaydet.Enabled = false;
+            btnGeriAl.Enabled = false;
+            btnSil.Enabled = false;
+            btnYeni.Enabled = false;
         }
 
         public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity, bool tableValueChanged)
@@ -224,7 +235,7 @@ namespace OgrenciTakip.UI.Win.Functions
         public static void RefleshDataSource(this GridView tablo)
         {
             var source = tablo.DataController.ListSource.Cast<IBaseHareketEntity>().ToList();
-            if (!source.Any(x =>x.Delete)) return;
+            if (!source.Any(x => x.Delete)) return;
 
             var rowHandle = tablo.FocusedRowHandle;
             tablo.CustomRowFilter += Tablo_CustomRowFilter;
@@ -250,6 +261,12 @@ namespace OgrenciTakip.UI.Win.Functions
             return new BindingList<T>((IList<T>)list);
         }
 
+        public static BaseTablo AddTable(this BaseTablo tablo, BaseEditForm frm)
+        {
+            tablo.Dock = DockStyle.Fill;
+            tablo.OwnerForm = frm;
+            return tablo;
+        }
     }
 }
 

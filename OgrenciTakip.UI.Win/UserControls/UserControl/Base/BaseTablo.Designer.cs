@@ -38,7 +38,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKartDuzenle = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,8 @@
             // 
             this.popupMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketEkle),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketSil)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketSil),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnKartDuzenle)});
             this.popupMenu.Manager = this.barManager;
             this.popupMenu.Name = "popupMenu";
             // 
@@ -83,10 +84,10 @@
             this.barManager.DockControls.Add(this.barDockControlRight);
             this.barManager.Form = this;
             this.barManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barButtonItem1,
             this.btnHareketEkle,
-            this.btnHareketSil});
-            this.barManager.MaxItemId = 3;
+            this.btnHareketSil,
+            this.btnKartDuzenle});
+            this.barManager.MaxItemId = 5;
             // 
             // barDockControlTop
             // 
@@ -120,11 +121,14 @@
             this.barDockControlRight.Manager = this.barManager;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 289);
             // 
-            // barButtonItem1
+            // btnKartDuzenle
             // 
-            this.barButtonItem1.Caption = "barButtonItem1";
-            this.barButtonItem1.Id = 0;
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btnKartDuzenle.Caption = "Kart Duzenle";
+            this.btnKartDuzenle.Id = 4;
+            this.btnKartDuzenle.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.edit_16x16;
+            this.btnKartDuzenle.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
+            this.btnKartDuzenle.Name = "btnKartDuzenle";
+            this.btnKartDuzenle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // BaseTablo
             // 
@@ -154,7 +158,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnHareketSil;
+        protected DevExpress.XtraBars.BarButtonItem btnKartDuzenle;
     }
 }

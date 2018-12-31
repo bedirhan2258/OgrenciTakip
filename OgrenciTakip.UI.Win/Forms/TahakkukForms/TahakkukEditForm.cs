@@ -1,22 +1,28 @@
 ﻿
 
 using DevExpress.XtraBars;
+using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
+using OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
 using System;
+using System.Linq;
 
 namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 {
     public partial class TahakkukEditForm : BaseEditForm
     {
         private readonly Ogrenci _ogrenci;
+        private BaseTablo _kardesbilgileriTable;
 
         public TahakkukEditForm()
         {
@@ -38,20 +44,40 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             btnYazdir.Caption = "Kayıt Evrakları";
         }
+
         public TahakkukEditForm(params object[] prm) : this()
         {
-            _ogrenci = (Ogrenci)prm[0];
+            if (prm[0] is Ogrenci ogr)
+                _ogrenci = ogr;
+
+            else if (prm[0] is bool yesNo)
+                FarkliSubeIslemi = yesNo;
         }
+
         protected internal override void Yukle()
         {
             oldEntity = islemTuru == IslemTuru.EntityInsert ? new TahakkukS() : ((TahakkukBll)bll).Single(FilterFunctions.Filter<Tahakkuk>(id));
             NesneyiKontrollereBagla();
+            BagliTabloYukle();
+
 
             if (islemTuru != IslemTuru.EntityInsert) return;
             id = islemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((TahakkukBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
 
         }
+
+        protected override void BagliTabloYukle()
+        {
+            bool TableValueChanged(BaseTablo tablo)
+            {
+                return tablo.Tablo.DataController.ListSource.Cast<IBaseHareketEntity>().Any(x => x.Insert || x.Update || x.Delete);
+            }
+
+            if (_kardesbilgileriTable != null)
+                _kardesbilgileriTable.Yukle();
+        }
+
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (TahakkukS)oldEntity;
@@ -127,13 +153,23 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
         protected override bool EntityInsert()
         {
-            return ((TahakkukBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
-             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+            var result = ((TahakkukBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+               x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && BagliTabloKaydet();
+
+            if (result)
+                BagliTabloYukle();
+
+            return result;
         }
         protected override bool EntityUpdate()
         {
-            return ((TahakkukBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
-            x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
+            var result = ((TahakkukBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && BagliTabloKaydet();
+
+            if (result)
+                BagliTabloYukle();
+
+            return result;
         }
         protected override void SecimYap(object sender)
         {
@@ -161,6 +197,46 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                     sec.Sec(txtOzelKod4, KartTuru.Tahakkuk);
                 else if (sender == txtOzelKod5)
                     sec.Sec(txtOzelKod5, KartTuru.Tahakkuk);
+        }
+        protected internal override void ButonEnabledDurumu()
+        {
+            if (!isLoaded) return;
+
+            bool TableValueChanged()
+            {
+                if (_kardesbilgileriTable != null && _kardesbilgileriTable.TableValueChanged) return true;
+                return false;
+            }
+
+            if (FarkliSubeIslemi)
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil);
+            else
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, TableValueChanged());
+        }
+
+        protected override bool BagliTabloKaydet()
+        {
+            if (_kardesbilgileriTable != null && _kardesbilgileriTable.Kaydet()) return false;
+            return true;
+        }
+
+        protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
+        {
+            if (e.Page == pageGenelBilgiler)
+            {
+                txtOkulNo.Focus();
+                txtOkulNo.SelectAll();
+            }
+            else if (e.Page == pageKardesBilgileri)
+            {
+                if (pageKardesBilgileri.Controls.Count == 0)
+                {
+                    _kardesbilgileriTable = new KardesBilgileriTable().AddTable(this);
+                    pageKardesBilgileri.Controls.Add(_kardesbilgileriTable);
+                    _kardesbilgileriTable.Yukle();
+                }
+                pageKardesBilgileri.Controls[0].Focus();
+            }
         }
 
     }

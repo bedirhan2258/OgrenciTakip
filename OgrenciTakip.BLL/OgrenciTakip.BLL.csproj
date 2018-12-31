@@ -78,6 +78,7 @@
     <Compile Include="General\IndirimTuruBll.cs" />
     <Compile Include="General\IptalNedeniBll.cs" />
     <Compile Include="General\IsyeriBll.cs" />
+    <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
