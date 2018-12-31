@@ -2,6 +2,7 @@
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraLayout;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
@@ -266,6 +267,19 @@ namespace OgrenciTakip.UI.Win.Functions
             tablo.Dock = DockStyle.Fill;
             tablo.OwnerForm = frm;
             return tablo;
+        }
+
+        public static void LayoutControlInsert(this LayoutGroup grup, Control control, int columnIndex, int rowIndex, int columnSpan, int rowSpan)
+        {
+            var item = new LayoutControlItem
+            {
+                Control = control,
+                Parent = grup
+            };
+            item.OptionsTableLayoutItem.ColumnIndex = columnIndex;
+            item.OptionsTableLayoutItem.RowIndex = rowIndex;
+            item.OptionsTableLayoutItem.ColumnSpan = columnSpan;
+            item.OptionsTableLayoutItem.RowSpan = rowSpan;
         }
     }
 }

@@ -32,13 +32,11 @@
             this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colTcKimlikNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBabaAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAnaAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOgrenciNo = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colOkulNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colKayitTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -51,16 +49,19 @@
             this.colTesvikAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colRehberAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSubeAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colSonrakiDonemKayitDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSonrakiDonemKayitDurumuAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOzelKod1Adi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2Adi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod3Adi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod4Adi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod5Adi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bndSecim = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -116,6 +117,7 @@
             this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
             this.tablo.BandPanelRowHeight = 40;
             this.tablo.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.bndSecim,
             this.gridBand1,
             this.gridBand2,
             this.gridBand3,
@@ -165,18 +167,6 @@
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
             this.tablo.ViewCaption = "Tahakkuk Kartları";
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Öğrenci Bilgileri";
-            this.gridBand1.Columns.Add(this.colTcKimlikNo);
-            this.gridBand1.Columns.Add(this.colAdi);
-            this.gridBand1.Columns.Add(this.colSoyadi);
-            this.gridBand1.Columns.Add(this.colBabaAdi);
-            this.gridBand1.Columns.Add(this.colAnaAdi);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 500;
             // 
             // colTcKimlikNo
             // 
@@ -239,25 +229,6 @@
             this.colAnaAdi.StatusBarKisayolAciklama = null;
             this.colAnaAdi.Visible = true;
             this.colAnaAdi.Width = 100;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Tahakkuk Bilgileri";
-            this.gridBand2.Columns.Add(this.colOgrenciNo);
-            this.gridBand2.Columns.Add(this.colOkulNo);
-            this.gridBand2.Columns.Add(this.colKayitTarihi);
-            this.gridBand2.Columns.Add(this.colKayitSekli);
-            this.gridBand2.Columns.Add(this.colKayitDurumu);
-            this.gridBand2.Columns.Add(this.colSinifAdi);
-            this.gridBand2.Columns.Add(this.colYabanciDilAdi);
-            this.gridBand2.Columns.Add(this.colGeldigiOkulAdi);
-            this.gridBand2.Columns.Add(this.colKontenjanAdi);
-            this.gridBand2.Columns.Add(this.colTesvikAdi);
-            this.gridBand2.Columns.Add(this.colRehberAdi);
-            this.gridBand2.Columns.Add(this.colSubeAdi);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 1290;
             // 
             // colOgrenciNo
             // 
@@ -404,15 +375,6 @@
             this.colSubeAdi.Visible = true;
             this.colSubeAdi.Width = 150;
             // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Sonraki Dönem";
-            this.gridBand3.Columns.Add(this.colSonrakiDonemKayitDurumu);
-            this.gridBand3.Columns.Add(this.colSonrakiDonemKayitDurumuAciklama);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 400;
-            // 
             // colSonrakiDonemKayitDurumu
             // 
             this.colSonrakiDonemKayitDurumu.Caption = "Kayıt Durumu";
@@ -438,18 +400,6 @@
             this.colSonrakiDonemKayitDurumuAciklama.StatusBarKisayolAciklama = null;
             this.colSonrakiDonemKayitDurumuAciklama.Visible = true;
             this.colSonrakiDonemKayitDurumuAciklama.Width = 250;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "Özel Kod";
-            this.gridBand4.Columns.Add(this.colOzelKod1Adi);
-            this.gridBand4.Columns.Add(this.colOzelKod2Adi);
-            this.gridBand4.Columns.Add(this.colOzelKod3Adi);
-            this.gridBand4.Columns.Add(this.colOzelKod4Adi);
-            this.gridBand4.Columns.Add(this.colOzelKod5Adi);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 600;
             // 
             // colOzelKod1Adi
             // 
@@ -519,6 +469,65 @@
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
             // 
+            // bndSecim
+            // 
+            this.bndSecim.Caption = "Seç";
+            this.bndSecim.Name = "bndSecim";
+            this.bndSecim.Visible = false;
+            this.bndSecim.VisibleIndex = -1;
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Öğrenci Bilgileri";
+            this.gridBand1.Columns.Add(this.colTcKimlikNo);
+            this.gridBand1.Columns.Add(this.colAdi);
+            this.gridBand1.Columns.Add(this.colSoyadi);
+            this.gridBand1.Columns.Add(this.colBabaAdi);
+            this.gridBand1.Columns.Add(this.colAnaAdi);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 500;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Tahakkuk Bilgileri";
+            this.gridBand2.Columns.Add(this.colOgrenciNo);
+            this.gridBand2.Columns.Add(this.colOkulNo);
+            this.gridBand2.Columns.Add(this.colKayitTarihi);
+            this.gridBand2.Columns.Add(this.colKayitSekli);
+            this.gridBand2.Columns.Add(this.colKayitDurumu);
+            this.gridBand2.Columns.Add(this.colSinifAdi);
+            this.gridBand2.Columns.Add(this.colYabanciDilAdi);
+            this.gridBand2.Columns.Add(this.colGeldigiOkulAdi);
+            this.gridBand2.Columns.Add(this.colKontenjanAdi);
+            this.gridBand2.Columns.Add(this.colTesvikAdi);
+            this.gridBand2.Columns.Add(this.colRehberAdi);
+            this.gridBand2.Columns.Add(this.colSubeAdi);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 1290;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Sonraki Dönem";
+            this.gridBand3.Columns.Add(this.colSonrakiDonemKayitDurumu);
+            this.gridBand3.Columns.Add(this.colSonrakiDonemKayitDurumuAciklama);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 400;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "Özel Kod";
+            this.gridBand4.Columns.Add(this.colOzelKod1Adi);
+            this.gridBand4.Columns.Add(this.colOzelKod2Adi);
+            this.gridBand4.Columns.Add(this.colOzelKod3Adi);
+            this.gridBand4.Columns.Add(this.colOzelKod4Adi);
+            this.gridBand4.Columns.Add(this.colOzelKod5Adi);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 600;
+            // 
             // TahakkukListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,13 +555,11 @@
         private UserControls.Grid.MyBandedGridView tablo;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colOgrenciNo;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private UserControls.Grid.MyBandedGridColumn colTcKimlikNo;
         private UserControls.Grid.MyBandedGridColumn colAdi;
         private UserControls.Grid.MyBandedGridColumn colSoyadi;
         private UserControls.Grid.MyBandedGridColumn colBabaAdi;
         private UserControls.Grid.MyBandedGridColumn colAnaAdi;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private UserControls.Grid.MyBandedGridColumn colOkulNo;
         private UserControls.Grid.MyBandedGridColumn colKayitTarihi;
         private UserControls.Grid.MyBandedGridColumn colKayitSekli;
@@ -564,14 +571,17 @@
         private UserControls.Grid.MyBandedGridColumn colTesvikAdi;
         private UserControls.Grid.MyBandedGridColumn colRehberAdi;
         private UserControls.Grid.MyBandedGridColumn colSubeAdi;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private UserControls.Grid.MyBandedGridColumn colSonrakiDonemKayitDurumu;
         private UserControls.Grid.MyBandedGridColumn colSonrakiDonemKayitDurumuAciklama;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private UserControls.Grid.MyBandedGridColumn colOzelKod1Adi;
         private UserControls.Grid.MyBandedGridColumn colOzelKod2Adi;
         private UserControls.Grid.MyBandedGridColumn colOzelKod3Adi;
         private UserControls.Grid.MyBandedGridColumn colOzelKod4Adi;
         private UserControls.Grid.MyBandedGridColumn colOzelKod5Adi;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bndSecim;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
     }
 }

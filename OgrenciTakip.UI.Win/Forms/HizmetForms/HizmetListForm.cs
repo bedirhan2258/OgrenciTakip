@@ -36,7 +36,7 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
                 ustPanel.Visible = DateTime.Now.Date > AnaForm.EgitimBaslamaTarihi && panelGoster;
             }
 
-            _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId;
+            _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId && x.Durum == aktifKartlariGoster;
         }
         protected override void DegiskenleriDoldur()
         {

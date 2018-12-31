@@ -182,6 +182,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
         {
             if (popupMenu == null) return;
             //Sağ tıklayıp sil dediğimiz de tablo üzerinde bir eleman yok sa sil Enable Durumu false gelmes için yaptım.
+            btnKartDuzenle.Enabled = Tablo.RowCount > 0;
             btnHareketSil.Enabled = Tablo.RowCount > 0;
             e.SagMenuGoster(popupMenu);
         }

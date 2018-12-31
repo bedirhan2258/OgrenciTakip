@@ -23,6 +23,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
     {
         private readonly Ogrenci _ogrenci;
         private BaseTablo _kardesbilgileriTable;
+        private BaseTablo _aileBilgileriTable;
 
         public TahakkukEditForm()
         {
@@ -76,6 +77,9 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             if (_kardesbilgileriTable != null)
                 _kardesbilgileriTable.Yukle();
+
+            else if (_aileBilgileriTable != null)
+                _aileBilgileriTable.Yukle();
         }
 
         protected override void NesneyiKontrollereBagla()
@@ -205,6 +209,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             bool TableValueChanged()
             {
                 if (_kardesbilgileriTable != null && _kardesbilgileriTable.TableValueChanged) return true;
+                if (_aileBilgileriTable != null && _aileBilgileriTable.TableValueChanged) return true;
                 return false;
             }
 
@@ -217,6 +222,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         protected override bool BagliTabloKaydet()
         {
             if (_kardesbilgileriTable != null && _kardesbilgileriTable.Kaydet()) return false;
+            if (_aileBilgileriTable != null && _aileBilgileriTable.Kaydet()) return false;
             return true;
         }
 
@@ -235,7 +241,19 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                     pageKardesBilgileri.Controls.Add(_kardesbilgileriTable);
                     _kardesbilgileriTable.Yukle();
                 }
-                pageKardesBilgileri.Controls[0].Focus();
+                _kardesbilgileriTable.Tablo.GridControl.Focus();
+            }
+
+            else if (e.Page == pageAileSinavBilgileri)
+            {
+                if (layoutControlAileSinavBilgileri.Items.Count == 0)
+                {
+                    _aileBilgileriTable = new AileBilgileriTable().AddTable(this);
+                    //  pageAileSinavBilgileri.Controls.Add(_aileBilgileriTable);
+                    layoutControlAileSinavBilgileri.LayoutControlInsert(_aileBilgileriTable, 0, 0, 0, 0);
+                    _aileBilgileriTable.Yukle();
+                }
+                _aileBilgileriTable.Tablo.GridControl.Focus();
             }
         }
 

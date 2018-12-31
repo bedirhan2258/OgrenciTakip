@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Attributes\Kod.cs" />
     <Compile Include="Attributes\ZorunluAlan.cs" />
+    <Compile Include="DTO\AileBilgileriDTO.cs" />
     <Compile Include="DTO\AvukatDTO.cs" />
     <Compile Include="DTO\BankaDTO.cs" />
     <Compile Include="DTO\BankaHesapDTO.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="DTO\TahakkukDTO.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
+    <Compile Include="Entities\AileBilgileri.cs" />
     <Compile Include="Entities\Avukat.cs" />
     <Compile Include="Entities\Banka.cs" />
     <Compile Include="Entities\BankaHesap.cs" />
