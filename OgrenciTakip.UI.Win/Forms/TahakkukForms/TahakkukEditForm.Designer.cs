@@ -48,10 +48,13 @@
             DevExpress.XtraLayout.ColumnDefinition columnDefinition10 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition11 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition14 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition15 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition12 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition13 = new DevExpress.XtraLayout.ColumnDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
             this.DataLayoutGenel = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.tabAlt = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -122,6 +125,8 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.myDataLayoutControl2 = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.layoutControlEvrakPromosyonBilgileri = new DevExpress.XtraLayout.LayoutControlGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -187,9 +192,12 @@
             this.pageAileSinavBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAileSinavBilgileri)).BeginInit();
+            this.pageEvrakPromosyonBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlEvrakPromosyonBilgileri)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -1271,9 +1279,10 @@
             // pageEvrakPromosyonBilgileri
             // 
             this.pageEvrakPromosyonBilgileri.Caption = "Evrak / Promosyon Bilgileri";
+            this.pageEvrakPromosyonBilgileri.Controls.Add(this.myDataLayoutControl2);
             this.pageEvrakPromosyonBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.employeeexcellence_16x161;
             this.pageEvrakPromosyonBilgileri.Name = "pageEvrakPromosyonBilgileri";
-            this.pageEvrakPromosyonBilgileri.Size = new System.Drawing.Size(966, 241);
+            this.pageEvrakPromosyonBilgileri.Size = new System.Drawing.Size(966, 211);
             // 
             // pageIletisimBilgileri
             // 
@@ -1305,20 +1314,20 @@
             this.layoutControlItem2});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            columnDefinition12.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition12.Width = 100D;
-            columnDefinition13.SizeType = System.Windows.Forms.SizeType.Absolute;
-            columnDefinition13.Width = 210D;
+            columnDefinition14.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition14.Width = 100D;
+            columnDefinition15.SizeType = System.Windows.Forms.SizeType.Absolute;
+            columnDefinition15.Width = 210D;
             this.layoutControlGroup1.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition12,
-            columnDefinition13});
-            rowDefinition10.Height = 245D;
-            rowDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition11.Height = 100D;
-            rowDefinition11.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition14,
+            columnDefinition15});
+            rowDefinition11.Height = 245D;
+            rowDefinition11.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition12.Height = 100D;
+            rowDefinition12.SizeType = System.Windows.Forms.SizeType.Percent;
             this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition10,
-            rowDefinition11});
+            rowDefinition11,
+            rowDefinition12});
             this.layoutControlGroup1.Size = new System.Drawing.Size(990, 516);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -1345,6 +1354,38 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(760, 251);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
+            // 
+            // myDataLayoutControl2
+            // 
+            this.myDataLayoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.myDataLayoutControl2.Location = new System.Drawing.Point(0, 0);
+            this.myDataLayoutControl2.Name = "myDataLayoutControl2";
+            this.myDataLayoutControl2.OptionsFocus.EnableAutoTabOrder = false;
+            this.myDataLayoutControl2.Root = this.layoutControlEvrakPromosyonBilgileri;
+            this.myDataLayoutControl2.Size = new System.Drawing.Size(966, 211);
+            this.myDataLayoutControl2.TabIndex = 0;
+            this.myDataLayoutControl2.Text = "myDataLayoutControl2";
+            // 
+            // layoutControlEvrakPromosyonBilgileri
+            // 
+            this.layoutControlEvrakPromosyonBilgileri.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlEvrakPromosyonBilgileri.GroupBordersVisible = false;
+            this.layoutControlEvrakPromosyonBilgileri.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
+            this.layoutControlEvrakPromosyonBilgileri.Name = "layoutControlEvrakPromosyonBilgileri";
+            columnDefinition12.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition12.Width = 50D;
+            columnDefinition13.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition13.Width = 50D;
+            this.layoutControlEvrakPromosyonBilgileri.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
+            columnDefinition12,
+            columnDefinition13});
+            rowDefinition10.Height = 100D;
+            rowDefinition10.SizeType = System.Windows.Forms.SizeType.Percent;
+            this.layoutControlEvrakPromosyonBilgileri.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
+            rowDefinition10});
+            this.layoutControlEvrakPromosyonBilgileri.Padding = new DevExpress.XtraLayout.Utils.Padding(2, 2, 2, 2);
+            this.layoutControlEvrakPromosyonBilgileri.Size = new System.Drawing.Size(966, 211);
+            this.layoutControlEvrakPromosyonBilgileri.TextVisible = false;
             // 
             // TahakkukEditForm
             // 
@@ -1422,9 +1463,12 @@
             this.pageAileSinavBilgileri.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlAileSinavBilgileri)).EndInit();
+            this.pageEvrakPromosyonBilgileri.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlEvrakPromosyonBilgileri)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1502,5 +1546,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlAileSinavBilgileri;
+        private UserControls.Controls.MyDataLayoutControl myDataLayoutControl2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlEvrakPromosyonBilgileri;
     }
 }

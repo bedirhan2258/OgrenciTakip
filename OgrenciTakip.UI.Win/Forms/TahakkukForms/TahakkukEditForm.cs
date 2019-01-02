@@ -25,6 +25,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         private BaseTablo _kardesbilgileriTable;
         private BaseTablo _aileBilgileriTable;
         private BaseTablo _sinavBilgileriTable;
+        private BaseTablo _evrakBilgileriTable;
 
         public TahakkukEditForm()
         {
@@ -84,6 +85,9 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             else if (_sinavBilgileriTable != null)
                 _sinavBilgileriTable.Yukle();
+
+            else if (_evrakBilgileriTable != null)
+                _evrakBilgileriTable.Yukle();
 
         }
 
@@ -234,6 +238,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (_kardesbilgileriTable != null && _kardesbilgileriTable.TableValueChanged) return true;
                 if (_aileBilgileriTable != null && _aileBilgileriTable.TableValueChanged) return true;
                 if (_sinavBilgileriTable != null && _sinavBilgileriTable.TableValueChanged) return true;
+                if (_evrakBilgileriTable != null && _evrakBilgileriTable.TableValueChanged) return true;
 
                 return false;
             }
@@ -249,6 +254,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (_kardesbilgileriTable != null && !_kardesbilgileriTable.Kaydet()) return false;
             if (_aileBilgileriTable != null && !_aileBilgileriTable.Kaydet()) return false;
             if (_sinavBilgileriTable != null && !_sinavBilgileriTable.Kaydet()) return false;
+            if (_evrakBilgileriTable != null && !_evrakBilgileriTable.Kaydet()) return false;
             return true;
         }
 
@@ -284,6 +290,21 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                     _sinavBilgileriTable.Yukle();
                 }
                 _aileBilgileriTable.Tablo.GridControl.Focus();
+            }
+
+            else if (e.Page == pageEvrakPromosyonBilgileri)
+            {
+                if (layoutControlEvrakPromosyonBilgileri.Items.Count == 0)
+                {
+                    _evrakBilgileriTable = new EvrakBilgileriTable().AddTable(this);
+                    layoutControlEvrakPromosyonBilgileri.LayoutControlInsert(_evrakBilgileriTable, 0, 0, 0, 0);
+                    _evrakBilgileriTable.Yukle();
+
+                    //_sinavBilgileriTable = new SinavBilgileriTable().AddTable(this);
+                    //layoutControlAileSinavBilgileri.LayoutControlInsert(_sinavBilgileriTable, 1, 0, 0, 0);
+                    //_sinavBilgileriTable.Yukle();
+                }
+                _evrakBilgileriTable.Tablo.GridControl.Focus();
             }
         }
 

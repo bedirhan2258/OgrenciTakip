@@ -66,6 +66,7 @@
     <Compile Include="General\BankaHesapBll.cs" />
     <Compile Include="General\BankaSubeBll.cs" />
     <Compile Include="General\CariBll.cs" />
+    <Compile Include="General\EvrakBilgileriBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
     <Compile Include="General\GorevBll.cs" />
