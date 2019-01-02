@@ -24,6 +24,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         private readonly Ogrenci _ogrenci;
         private BaseTablo _kardesbilgileriTable;
         private BaseTablo _aileBilgileriTable;
+        private BaseTablo _sinavBilgileriTable;
 
         public TahakkukEditForm()
         {
@@ -80,6 +81,10 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             else if (_aileBilgileriTable != null)
                 _aileBilgileriTable.Yukle();
+
+            else if (_sinavBilgileriTable != null)
+                _sinavBilgileriTable.Yukle();
+
         }
 
         protected override void NesneyiKontrollereBagla()
@@ -157,6 +162,9 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
         protected override bool EntityInsert()
         {
+            if (BagliTabloHataliGirisKontrol())
+                return false;
+
             var result = ((TahakkukBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
                x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && BagliTabloKaydet();
 
@@ -167,6 +175,9 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         }
         protected override bool EntityUpdate()
         {
+            if (BagliTabloHataliGirisKontrol())
+                return false;
+
             var result = ((TahakkukBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && BagliTabloKaydet();
 
@@ -175,6 +186,18 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             return result;
         }
+
+        protected override bool BagliTabloHataliGirisKontrol()
+        {
+            if (_sinavBilgileriTable != null && _sinavBilgileriTable.HataliGiris())
+            {
+                tabUst.SelectedPage = pageAileSinavBilgileri;
+                _sinavBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
+            return false;
+        }
+
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;
@@ -210,6 +233,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             {
                 if (_kardesbilgileriTable != null && _kardesbilgileriTable.TableValueChanged) return true;
                 if (_aileBilgileriTable != null && _aileBilgileriTable.TableValueChanged) return true;
+                if (_sinavBilgileriTable != null && _sinavBilgileriTable.TableValueChanged) return true;
+
                 return false;
             }
 
@@ -221,8 +246,9 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
         protected override bool BagliTabloKaydet()
         {
-            if (_kardesbilgileriTable != null && _kardesbilgileriTable.Kaydet()) return false;
-            if (_aileBilgileriTable != null && _aileBilgileriTable.Kaydet()) return false;
+            if (_kardesbilgileriTable != null && !_kardesbilgileriTable.Kaydet()) return false;
+            if (_aileBilgileriTable != null && !_aileBilgileriTable.Kaydet()) return false;
+            if (_sinavBilgileriTable != null && !_sinavBilgileriTable.Kaydet()) return false;
             return true;
         }
 
@@ -249,9 +275,13 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (layoutControlAileSinavBilgileri.Items.Count == 0)
                 {
                     _aileBilgileriTable = new AileBilgileriTable().AddTable(this);
-                    //  pageAileSinavBilgileri.Controls.Add(_aileBilgileriTable);
+                    // pageAileSinavBilgileri.Controls.Add(_aileBilgileriTable);
                     layoutControlAileSinavBilgileri.LayoutControlInsert(_aileBilgileriTable, 0, 0, 0, 0);
                     _aileBilgileriTable.Yukle();
+
+                    _sinavBilgileriTable = new SinavBilgileriTable().AddTable(this);
+                    layoutControlAileSinavBilgileri.LayoutControlInsert(_sinavBilgileriTable, 1, 0, 0, 0);
+                    _sinavBilgileriTable.Yukle();
                 }
                 _aileBilgileriTable.Tablo.GridControl.Focus();
             }

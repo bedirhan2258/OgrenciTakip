@@ -50,7 +50,6 @@ namespace OgrenciTakip.UI.Win.Forms
             else
                 Messages.KartBulunamadiMesaji("Kart");
 
-            Tablo.GridControl.DataSource = ((AileBilgiBll)bll).List(FilterFunctions.Filter<AileBilgi>(aktifKartlariGoster));
         }
 
     }

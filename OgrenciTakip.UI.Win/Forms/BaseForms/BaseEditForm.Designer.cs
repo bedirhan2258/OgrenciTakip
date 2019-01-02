@@ -148,13 +148,13 @@
             this.btnYeni.Name = "btnYeni";
             toolTipTitleItem1.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem1.Appearance.Options.UseImage = true;
-            toolTipTitleItem1.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem1.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem1.Text = "(Ctrl+Insert)";
             toolTipItem1.LeftIndent = 6;
             toolTipItem1.Text = "Yeni Kart";
             toolTipTitleItem2.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem2.Appearance.Options.UseImage = true;
-            toolTipTitleItem2.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem2.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem2.LeftIndent = 6;
             toolTipTitleItem2.Text = "Formu Yeni Kart Ekleme Modunda Açar.";
             superToolTip1.Items.Add(toolTipTitleItem1);
@@ -173,13 +173,13 @@
             this.btnKaydet.Name = "btnKaydet";
             toolTipTitleItem3.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem3.Appearance.Options.UseImage = true;
-            toolTipTitleItem3.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem3.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem3.Text = "(F2)";
             toolTipItem2.LeftIndent = 6;
             toolTipItem2.Text = "Kaydet";
             toolTipTitleItem4.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem4.Appearance.Options.UseImage = true;
-            toolTipTitleItem4.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem4.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem4.LeftIndent = 6;
             toolTipTitleItem4.Text = "Formda Yapılan Değişikler Onay Alınarak Kayıt Edilir.";
             superToolTip2.Items.Add(toolTipTitleItem3);
@@ -198,13 +198,13 @@
             this.btnGeriAl.Name = "btnGeriAl";
             toolTipTitleItem5.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem5.Appearance.Options.UseImage = true;
-            toolTipTitleItem5.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem5.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem5.Text = "(Ctrl+Z)";
             toolTipItem3.LeftIndent = 6;
             toolTipItem3.Text = "Geri Al";
             toolTipTitleItem6.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem6.Appearance.Options.UseImage = true;
-            toolTipTitleItem6.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem6.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem6.LeftIndent = 6;
             toolTipTitleItem6.Text = "Formdaki Değişiklikler Geri Alınarak Açılış Verileri Yüklenir.";
             superToolTip3.Items.Add(toolTipTitleItem5);
@@ -223,13 +223,13 @@
             this.btnSil.Name = "btnSil";
             toolTipTitleItem7.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem7.Appearance.Options.UseImage = true;
-            toolTipTitleItem7.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem7.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem7.Text = "(Ctr+Delete)";
             toolTipItem4.LeftIndent = 6;
             toolTipItem4.Text = "Sil";
             toolTipTitleItem8.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem8.Appearance.Options.UseImage = true;
-            toolTipTitleItem8.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem8.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem8.LeftIndent = 6;
             toolTipTitleItem8.Text = "Üzerinde Çalıştığınız Kayıt Onay Alınarak Silinir.";
             superToolTip4.Items.Add(toolTipTitleItem7);
@@ -248,13 +248,13 @@
             this.btnCikis.ShortcutKeyDisplayString = "Esc";
             toolTipTitleItem9.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem9.Appearance.Options.UseImage = true;
-            toolTipTitleItem9.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem9.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem9.Text = "(Esc)";
             toolTipItem5.LeftIndent = 6;
             toolTipItem5.Text = "Çıkış";
             toolTipTitleItem10.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem10.Appearance.Options.UseImage = true;
-            toolTipTitleItem10.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem10.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem10.LeftIndent = 6;
             toolTipTitleItem10.Text = "Form Onayınız Alınarak Kapatılır.";
             superToolTip5.Items.Add(toolTipTitleItem9);
@@ -300,13 +300,13 @@
             this.btnFarkliKaydet.Name = "btnFarkliKaydet";
             toolTipTitleItem11.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem11.Appearance.Options.UseImage = true;
-            toolTipTitleItem11.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem11.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem11.Text = "(Shift+F2)";
             toolTipItem6.LeftIndent = 6;
             toolTipItem6.Text = "Farklı Kaydet";
             toolTipTitleItem12.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem12.Appearance.Options.UseImage = true;
-            toolTipTitleItem12.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem12.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem12.LeftIndent = 6;
             toolTipTitleItem12.Text = "Formdaki Mevcut Bilgiler Baz Alınarak Yeni Bir Kayıt Oluşturulur.";
             superToolTip6.Items.Add(toolTipTitleItem11);
@@ -326,13 +326,13 @@
             this.btnUygula.Name = "btnUygula";
             toolTipTitleItem13.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem13.Appearance.Options.UseImage = true;
-            toolTipTitleItem13.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem13.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem13.Text = "(F8)";
             toolTipItem7.LeftIndent = 6;
             toolTipItem7.Text = "Filtre Uygula";
             toolTipTitleItem14.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem14.Appearance.Options.UseImage = true;
-            toolTipTitleItem14.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem14.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem14.LeftIndent = 6;
             toolTipTitleItem14.Text = "Oluşturmuş Olduğunuz Filtre İlgili Tabloya Uygulanır.";
             superToolTip7.Items.Add(toolTipTitleItem13);
@@ -352,13 +352,13 @@
             this.btnYazdir.Name = "btnYazdir";
             toolTipTitleItem15.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem15.Appearance.Options.UseImage = true;
-            toolTipTitleItem15.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem15.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem15.Text = "(Ctrl +P)";
             toolTipItem8.LeftIndent = 6;
             toolTipItem8.Text = "Yazdir";
             toolTipTitleItem16.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem16.Appearance.Options.UseImage = true;
-            toolTipTitleItem16.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem16.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem16.LeftIndent = 6;
             toolTipTitleItem16.Text = "Rapor Yazdırılmak Üzere Yazıcıya Gönderilir.";
             superToolTip8.Items.Add(toolTipTitleItem15);
@@ -378,13 +378,13 @@
             this.btnBaskiOnizleme.Name = "btnBaskiOnizleme";
             toolTipTitleItem17.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem17.Appearance.Options.UseImage = true;
-            toolTipTitleItem17.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem17.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
             toolTipTitleItem17.Text = "(Ctrl +B)";
             toolTipItem9.LeftIndent = 6;
             toolTipItem9.Text = "Baskı Önizleme";
             toolTipTitleItem18.Appearance.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem18.Appearance.Options.UseImage = true;
-            toolTipTitleItem18.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem18.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
             toolTipTitleItem18.LeftIndent = 6;
             toolTipTitleItem18.Text = "Rapor Baskı Önizleme Modunda Açılır.";
             superToolTip9.Items.Add(toolTipTitleItem17);
@@ -399,16 +399,16 @@
             this.btnResimEkle.Caption = "Resim Ekle";
             this.btnResimEkle.Id = 13;
             this.btnResimEkle.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
-            this.btnResimEkle.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnResimEkle.Name = "btnResimEkle";
+            this.btnResimEkle.ShortcutKeyDisplayString = "Insert";
             // 
             // btnResimSil
             // 
             this.btnResimSil.Caption = "Resim Sil";
             this.btnResimSil.Id = 14;
             this.btnResimSil.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.deletelist_16x16;
-            this.btnResimSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnResimSil.Name = "btnResimSil";
+            this.btnResimSil.ShortcutKeyDisplayString = "Delete";
             // 
             // ribbonPage1
             // 

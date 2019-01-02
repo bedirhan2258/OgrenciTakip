@@ -72,6 +72,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<Tahakkuk> Tahakkuk { get; set; }
         public DbSet<KardesBilgileri> KardesBilgileri { get; set; }
         public DbSet<AileBilgileri> AileBilgileri { get; set; }
+        public DbSet<SinavBilgileri> SinavBilgileri { get; set; }
     }
 
 }

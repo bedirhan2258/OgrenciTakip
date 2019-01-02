@@ -126,13 +126,13 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                     return false;
                 }
             if (update.Any())
-                if (!((IBaseHareketGenelBll)Bll).Insert(update))
+                if (!((IBaseHareketGenelBll)Bll).Update(update))
                 {
                     Messages.HataMesaji($"{Tablo.ViewCaption} Tablosundaki Hareketler Güncellenemedi.");
                     return false;
                 }
             if (delete.Any())
-                if (!((IBaseHareketGenelBll)Bll).Insert(delete))
+                if (!((IBaseHareketGenelBll)Bll).Delete(delete))
                 {
                     Messages.HataMesaji($"{Tablo.ViewCaption} Tablosundaki Hareketler Silinemedi.");
                     return false;
