@@ -88,6 +88,7 @@
     <Compile Include="General\OgrenciBll.cs" />
     <Compile Include="General\OkulBLL.cs" />
     <Compile Include="General\OzelKodBll.cs" />
+    <Compile Include="General\PromosyonBilgileriBll.cs" />
     <Compile Include="General\PromosyonBll.cs" />
     <Compile Include="General\RehberBll.cs" />
     <Compile Include="General\ServisBll.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 {
-    partial class EvrakBilgileriTable
+    partial class PromosyonBilgileriTable
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,8 +30,8 @@
         {
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
-            this.colEvrakAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colPromosyonAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.MainView = this.tablo;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(430, 265);
+            this.grid.Size = new System.Drawing.Size(430, 235);
             this.grid.TabIndex = 5;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -60,8 +60,8 @@
             this.tablo.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
             this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colEvrakAdi,
-            this.colKod});
+            this.colKod,
+            this.colPromosyonAdi});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -78,20 +78,7 @@
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
-            this.tablo.ViewCaption = "Evrak Bilgileri";
-            // 
-            // colEvrakAdi
-            // 
-            this.colEvrakAdi.Caption = "Evrak Adı";
-            this.colEvrakAdi.FieldName = "EvrakAdi";
-            this.colEvrakAdi.Name = "colEvrakAdi";
-            this.colEvrakAdi.OptionsColumn.AllowEdit = false;
-            this.colEvrakAdi.StatusBarAciklama = null;
-            this.colEvrakAdi.StatusBarKisayol = null;
-            this.colEvrakAdi.StatusBarKisayolAciklama = null;
-            this.colEvrakAdi.Visible = true;
-            this.colEvrakAdi.VisibleIndex = 1;
-            this.colEvrakAdi.Width = 300;
+            this.tablo.ViewCaption = "Promosyon Bilgileri";
             // 
             // colKod
             // 
@@ -109,13 +96,26 @@
             this.colKod.VisibleIndex = 0;
             this.colKod.Width = 130;
             // 
-            // EvrakBilgileriTable
+            // colPromosyonAdi
+            // 
+            this.colPromosyonAdi.Caption = "Promosyon Adı";
+            this.colPromosyonAdi.FieldName = "PromosyonAdi";
+            this.colPromosyonAdi.Name = "colPromosyonAdi";
+            this.colPromosyonAdi.OptionsColumn.AllowEdit = false;
+            this.colPromosyonAdi.StatusBarAciklama = null;
+            this.colPromosyonAdi.StatusBarKisayol = null;
+            this.colPromosyonAdi.StatusBarKisayolAciklama = null;
+            this.colPromosyonAdi.Visible = true;
+            this.colPromosyonAdi.VisibleIndex = 1;
+            this.colPromosyonAdi.Width = 282;
+            // 
+            // PromosyonBilgileriTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grid);
-            this.Name = "EvrakBilgileriTable";
-            this.Size = new System.Drawing.Size(430, 289);
+            this.Name = "PromosyonBilgileriTable";
+            this.Size = new System.Drawing.Size(430, 259);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
@@ -129,6 +129,6 @@
         private Grid.MyGridControl grid;
         private Grid.MyGridView tablo;
         private Grid.MyGridColumn colKod;
-        private Grid.MyGridColumn colEvrakAdi;
+        private Grid.MyGridColumn colPromosyonAdi;
     }
 }

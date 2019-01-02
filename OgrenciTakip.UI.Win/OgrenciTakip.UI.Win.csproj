@@ -641,6 +641,12 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\KardesBilgileriTable.Designer.cs">
       <DependentUpon>KardesBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\PromosyonBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\PromosyonBilgileriTable.Designer.cs">
+      <DependentUpon>PromosyonBilgileriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\SinavBilgileri.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -897,6 +903,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.resx">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\PromosyonBilgileriTable.resx">
+      <DependentUpon>PromosyonBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

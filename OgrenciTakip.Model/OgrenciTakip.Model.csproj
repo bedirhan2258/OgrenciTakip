@@ -63,6 +63,7 @@
     <Compile Include="DTO\KasaDTO.cs" />
     <Compile Include="DTO\OgrenciDTO.cs" />
     <Compile Include="DTO\OkulDTO.cs" />
+    <Compile Include="DTO\PromosyonBilgileriDTO.cs" />
     <Compile Include="DTO\SinavBilgileriDTO.cs" />
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="DTO\TahakkukDTO.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Entities\Okul.cs" />
     <Compile Include="Entities\OzelKod.cs" />
     <Compile Include="Entities\Promosyon.cs" />
+    <Compile Include="Entities\PromosyonBilgileri.cs" />
     <Compile Include="Entities\Rehber.cs" />
     <Compile Include="Entities\Servis.cs" />
     <Compile Include="Entities\SinavBilgileri.cs" />

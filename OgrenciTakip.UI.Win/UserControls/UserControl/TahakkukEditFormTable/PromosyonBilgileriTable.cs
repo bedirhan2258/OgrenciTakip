@@ -1,11 +1,10 @@
 ﻿
-
 using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
-using OgrenciTakip.Model;
 using OgrenciTakip.Model.DTO;
-using OgrenciTakip.UI.Win.Forms.EvrakForms;
+using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
@@ -13,37 +12,38 @@ using System.Linq;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 {
-    public partial class EvrakBilgileriTable : BaseTablo
+    public partial class PromosyonBilgileriTable : BaseTablo
     {
-        public EvrakBilgileriTable()
+        public PromosyonBilgileriTable()
         {
             InitializeComponent();
-            Bll = new EvrakBilgileriBll();
+            Bll = new PromosyonBilgileriBll();
             Tablo = tablo;
             EventsLoad();
         }
+
         protected override void Listele()
         {
-            tablo.GridControl.DataSource = ((EvrakBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBingingList<EvrakBilgileriL>();
+            tablo.GridControl.DataSource = ((PromosyonBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBingingList<PromosyonBilgileriL>();
         }
 
         protected override void HareketEkle()
         {
 
             var source = tablo.DataController.ListSource;
-            ListeDisiTutulacakKayitlar = source.Cast<EvrakBilgileriL>().Where(x => !x.Delete).Select(x => x.EvrakId).ToList();
+            ListeDisiTutulacakKayitlar = source.Cast<PromosyonBilgileriL>().Where(x => !x.Delete).Select(x => x.PromosyonId).ToList();
 
-            var entities = ShowListForms<EvrakListForm>.ShowDialogListForm(KartTuru.Evrak, ListeDisiTutulacakKayitlar, true, false).EntityListConvert<Evrak>();
+            var entities = ShowListForms<PromosyonListForm>.ShowDialogListForm(KartTuru.Promosyon, ListeDisiTutulacakKayitlar, true, false).EntityListConvert<Promosyon>();
             if (entities == null) return;
 
             foreach (var entity in entities)
             {
-                var row = new EvrakBilgileriL
+                var row = new PromosyonBilgileriL
                 {
+                    PromosyonId = entity.Id,
                     TahakkukId = OwnerForm.id,
-                    EvrakId = entity.Id,
                     Kod = entity.Kod,
-                    EvrakAdi = entity.EvrakAdi,
+                    PromosyonAdi = entity.PromosyonAdi,
                     Insert = true
                 };
                 source.Add(row);
@@ -56,6 +56,5 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             ButtonEnabledDurumu(true);
 
         }
-
     }
 }
