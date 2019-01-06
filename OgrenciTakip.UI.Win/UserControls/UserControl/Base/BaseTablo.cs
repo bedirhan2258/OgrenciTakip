@@ -16,6 +16,8 @@ using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Model.Entities.Base;
 using System.Collections.Generic;
 using DevExpress.Utils.Extensions;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraEditors.Repository;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 {
@@ -41,6 +43,18 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             foreach (BarItem button in barManager.Items)
                 button.ItemClick += Button_ItemClick;
 
+            foreach (GridColumn column in Tablo.Columns)
+            {
+                if (column.ColumnEdit == null) continue;
+
+                var type = column.ColumnEdit.GetType();
+
+                if (type == typeof(RepositoryItemImageComboBox))
+                    ((RepositoryItemImageComboBox)column.ColumnEdit).SelectedValueChanged += ImageComboBox_SelectedValueChanged;
+                if (type == typeof(RepositoryItemCheckEdit))
+                    ((RepositoryItemCheckEdit)column.ColumnEdit).CheckedChanged += CheckEdit_CheckedChanged;
+            }
+
             //Navigator Events
             insUptNavigator.Navigator.ButtonClick += Navigator_ButtonClick;
 
@@ -56,8 +70,6 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.EndSorting += Tablo_SablonChanged;
             Tablo.DoubleClick += Tablo_DoubleClick;
         }
-
-
 
         protected internal void Yukle()
         {
@@ -108,6 +120,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             OwnerForm.ButonEnabledDurumu();
         }
         protected virtual internal bool HataliGiris() { return false; }
+
         protected virtual void OpenEntity() { }
 
         protected internal bool Kaydet()
@@ -154,6 +167,10 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 
             Cursor.Current = DefaultCursor;
         }
+
+        protected virtual void ImageComboBox_SelectedValueChanged(object sender, EventArgs e) { }
+
+        protected virtual void CheckEdit_CheckedChanged(object sender, EventArgs e) { }
 
         private void Navigator_ButtonClick(object sender, NavigatorButtonClickEventArgs e)
         {
@@ -223,7 +240,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 case Keys.Insert when e.Shift:
                     HareketEkle();
                     break;
-                case Keys.Delete when e.Shift:
+                case Keys.Delete when e.Modifiers == Keys.Shift:
                     HareketSil();
                     break;
                 case Keys.F3:
@@ -231,7 +248,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                     break;
             }
         }
-        private void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
+        protected virtual void Tablo_FocusedColumnChanged(object sender, FocusedColumnChangedEventArgs e)
         {
             if (OwnerForm == null) return;
             OwnerForm.statusBarKisayol.Visibility = BarItemVisibility.Never;

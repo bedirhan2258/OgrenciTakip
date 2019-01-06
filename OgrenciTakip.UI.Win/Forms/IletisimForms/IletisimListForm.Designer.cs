@@ -32,7 +32,6 @@
             this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKod = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colTcKimlikNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -40,26 +39,28 @@
             this.colMeslek = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colWeb = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colEmail = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colEvTel = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsTel1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colCepTel1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colEvAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colEvAdresIlAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colEvAdresIlceAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsAdresIlAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsAdresIlceAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colIsYeriAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colGorevAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOzelKod1Adi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2Adi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colId = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bndSecim = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -115,6 +116,7 @@
             this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
             this.tablo.BandPanelRowHeight = 40;
             this.tablo.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.bndSecim,
             this.gridBand1,
             this.gridBand2,
             this.gridBand3,
@@ -163,20 +165,6 @@
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
             this.tablo.ViewCaption = "İletişim Kartları";
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Genel Bilgiler";
-            this.gridBand1.Columns.Add(this.colKod);
-            this.gridBand1.Columns.Add(this.colTcKimlikNo);
-            this.gridBand1.Columns.Add(this.colAdi);
-            this.gridBand1.Columns.Add(this.colSoyadi);
-            this.gridBand1.Columns.Add(this.colMeslek);
-            this.gridBand1.Columns.Add(this.colWeb);
-            this.gridBand1.Columns.Add(this.colEmail);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 850;
             // 
             // colKod
             // 
@@ -263,16 +251,6 @@
             this.colEmail.Visible = true;
             this.colEmail.Width = 150;
             // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Telefon";
-            this.gridBand2.Columns.Add(this.colEvTel);
-            this.gridBand2.Columns.Add(this.colIsTel1);
-            this.gridBand2.Columns.Add(this.colCepTel1);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 330;
-            // 
             // colEvTel
             // 
             this.colEvTel.AppearanceCell.Options.UseTextOptions = true;
@@ -317,19 +295,6 @@
             this.colCepTel1.StatusBarKisayolAciklama = null;
             this.colCepTel1.Visible = true;
             this.colCepTel1.Width = 110;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Adres";
-            this.gridBand3.Columns.Add(this.colEvAdres);
-            this.gridBand3.Columns.Add(this.colEvAdresIlAdi);
-            this.gridBand3.Columns.Add(this.colEvAdresIlceAdi);
-            this.gridBand3.Columns.Add(this.colIsAdres);
-            this.gridBand3.Columns.Add(this.colIsAdresIlAdi);
-            this.gridBand3.Columns.Add(this.colIsAdresIlceAdi);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 940;
             // 
             // colEvAdres
             // 
@@ -409,15 +374,6 @@
             this.colIsAdresIlceAdi.Visible = true;
             this.colIsAdresIlceAdi.Width = 110;
             // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "İş Yeri / Firma";
-            this.gridBand4.Columns.Add(this.colIsYeriAdi);
-            this.gridBand4.Columns.Add(this.colGorevAdi);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 300;
-            // 
             // colIsYeriAdi
             // 
             this.colIsYeriAdi.Caption = "Adı";
@@ -444,15 +400,6 @@
             this.colGorevAdi.Visible = true;
             this.colGorevAdi.Width = 150;
             // 
-            // gridBand5
-            // 
-            this.gridBand5.Caption = "Özel Kod";
-            this.gridBand5.Columns.Add(this.colOzelKod1Adi);
-            this.gridBand5.Columns.Add(this.colOzelKod2Adi);
-            this.gridBand5.Name = "gridBand5";
-            this.gridBand5.VisibleIndex = 4;
-            this.gridBand5.Width = 220;
-            // 
             // colOzelKod1Adi
             // 
             this.colOzelKod1Adi.Caption = "Özel Kod-1";
@@ -477,14 +424,6 @@
             this.colOzelKod2Adi.Visible = true;
             this.colOzelKod2Adi.Width = 110;
             // 
-            // gridBand6
-            // 
-            this.gridBand6.Caption = "Ek Bilgiler";
-            this.gridBand6.Columns.Add(this.colAciklama);
-            this.gridBand6.Name = "gridBand6";
-            this.gridBand6.VisibleIndex = 5;
-            this.gridBand6.Width = 350;
-            // 
             // colAciklama
             // 
             this.colAciklama.Caption = "Açıklama";
@@ -504,6 +443,77 @@
             this.colId.Name = "colId";
             this.colId.OptionsColumn.AllowEdit = false;
             this.colId.OptionsColumn.ShowInCustomizationForm = false;
+            // 
+            // bndSecim
+            // 
+            this.bndSecim.Caption = "Seç";
+            this.bndSecim.Name = "bndSecim";
+            this.bndSecim.Visible = false;
+            this.bndSecim.VisibleIndex = -1;
+            this.bndSecim.Width = 40;
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Genel Bilgiler";
+            this.gridBand1.Columns.Add(this.colKod);
+            this.gridBand1.Columns.Add(this.colTcKimlikNo);
+            this.gridBand1.Columns.Add(this.colAdi);
+            this.gridBand1.Columns.Add(this.colSoyadi);
+            this.gridBand1.Columns.Add(this.colMeslek);
+            this.gridBand1.Columns.Add(this.colWeb);
+            this.gridBand1.Columns.Add(this.colEmail);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 850;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Telefon";
+            this.gridBand2.Columns.Add(this.colEvTel);
+            this.gridBand2.Columns.Add(this.colIsTel1);
+            this.gridBand2.Columns.Add(this.colCepTel1);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 330;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Adres";
+            this.gridBand3.Columns.Add(this.colEvAdres);
+            this.gridBand3.Columns.Add(this.colEvAdresIlAdi);
+            this.gridBand3.Columns.Add(this.colEvAdresIlceAdi);
+            this.gridBand3.Columns.Add(this.colIsAdres);
+            this.gridBand3.Columns.Add(this.colIsAdresIlAdi);
+            this.gridBand3.Columns.Add(this.colIsAdresIlceAdi);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 940;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "İş Yeri / Firma";
+            this.gridBand4.Columns.Add(this.colIsYeriAdi);
+            this.gridBand4.Columns.Add(this.colGorevAdi);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 300;
+            // 
+            // gridBand5
+            // 
+            this.gridBand5.Caption = "Özel Kod";
+            this.gridBand5.Columns.Add(this.colOzelKod1Adi);
+            this.gridBand5.Columns.Add(this.colOzelKod2Adi);
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 4;
+            this.gridBand5.Width = 220;
+            // 
+            // gridBand6
+            // 
+            this.gridBand6.Caption = "Ek Bilgiler";
+            this.gridBand6.Columns.Add(this.colAciklama);
+            this.gridBand6.Name = "gridBand6";
+            this.gridBand6.VisibleIndex = 5;
+            this.gridBand6.Width = 350;
             // 
             // IletisimListForm
             // 
@@ -552,6 +562,7 @@
         private UserControls.Grid.MyBandedGridColumn colOzelKod2Adi;
         private UserControls.Grid.MyBandedGridColumn colAciklama;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn colId;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bndSecim;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;

@@ -31,12 +31,15 @@
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
             this.colVeli = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.repositoryVeli = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.colFaturaAdresi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colYakinlikId = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.repositoryAdres = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.colYakinlikAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.repositoryYakinlik = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colTcKimlikNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colMeslekAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colEvTel = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsTel1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colCepTel1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -46,12 +49,9 @@
             this.colIsAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsAdresIlAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsAdresIlceAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colMeslekAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIsyeriAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colGorevAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.repositoryYakinlik = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.repositoryAdres = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
-            this.repositoryVeli = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.colYakinlikId = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
@@ -60,9 +60,9 @@
             this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryYakinlik)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryAdres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryVeli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryAdres)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryYakinlik)).BeginInit();
             this.SuspendLayout();
             // 
             // grid
@@ -140,9 +140,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "İletişim Bilgileri Seçiniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert :";
+            this.tablo.StatusBarKisayolAciklama = "Seçim  Yap.";
             this.tablo.ViewCaption = "İletişim Bilgileri";
             // 
             // colVeli
@@ -160,6 +160,11 @@
             this.colVeli.Visible = true;
             this.colVeli.Width = 65;
             // 
+            // repositoryVeli
+            // 
+            this.repositoryVeli.AutoHeight = false;
+            this.repositoryVeli.Name = "repositoryVeli";
+            // 
             // colFaturaAdresi
             // 
             this.colFaturaAdresi.Caption = "Fatura Adresi";
@@ -175,19 +180,12 @@
             this.colFaturaAdresi.Visible = true;
             this.colFaturaAdresi.Width = 90;
             // 
-            // colYakinlikId
+            // repositoryAdres
             // 
-            this.colYakinlikId.Caption = "YakinlikId";
-            this.colYakinlikId.FieldName = "YakinlikId";
-            this.colYakinlikId.Name = "colYakinlikId";
-            this.colYakinlikId.OptionsColumn.AllowEdit = false;
-            this.colYakinlikId.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.colYakinlikId.OptionsColumn.ShowInCustomizationForm = false;
-            this.colYakinlikId.OptionsFilter.AllowAutoFilter = false;
-            this.colYakinlikId.OptionsFilter.AllowFilter = false;
-            this.colYakinlikId.StatusBarAciklama = null;
-            this.colYakinlikId.StatusBarKisayol = null;
-            this.colYakinlikId.StatusBarKisayolAciklama = null;
+            this.repositoryAdres.AutoHeight = false;
+            this.repositoryAdres.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryAdres.Name = "repositoryAdres";
             // 
             // colYakinlikAdi
             // 
@@ -203,6 +201,14 @@
             this.colYakinlikAdi.StatusBarKisayolAciklama = "Seçim Yap.";
             this.colYakinlikAdi.Visible = true;
             this.colYakinlikAdi.Width = 90;
+            // 
+            // repositoryYakinlik
+            // 
+            this.repositoryYakinlik.AutoHeight = false;
+            this.repositoryYakinlik.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryYakinlik.Name = "repositoryYakinlik";
+            this.repositoryYakinlik.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // colTcKimlikNo
             // 
@@ -248,6 +254,21 @@
             this.colSoyadi.StatusBarKisayolAciklama = null;
             this.colSoyadi.Visible = true;
             this.colSoyadi.Width = 110;
+            // 
+            // colMeslekAdi
+            // 
+            this.colMeslekAdi.Caption = "Meslek";
+            this.colMeslekAdi.FieldName = "MeslekAdi";
+            this.colMeslekAdi.Name = "colMeslekAdi";
+            this.colMeslekAdi.OptionsColumn.AllowEdit = false;
+            this.colMeslekAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colMeslekAdi.OptionsFilter.AllowAutoFilter = false;
+            this.colMeslekAdi.OptionsFilter.AllowFilter = false;
+            this.colMeslekAdi.StatusBarAciklama = null;
+            this.colMeslekAdi.StatusBarKisayol = null;
+            this.colMeslekAdi.StatusBarKisayolAciklama = null;
+            this.colMeslekAdi.Visible = true;
+            this.colMeslekAdi.Width = 110;
             // 
             // colEvTel
             // 
@@ -388,26 +409,11 @@
             this.colIsAdresIlceAdi.Visible = true;
             this.colIsAdresIlceAdi.Width = 100;
             // 
-            // colMeslekAdi
-            // 
-            this.colMeslekAdi.Caption = "Meslek";
-            this.colMeslekAdi.FieldName = "MeslekAdi";
-            this.colMeslekAdi.Name = "colMeslekAdi";
-            this.colMeslekAdi.OptionsColumn.AllowEdit = false;
-            this.colMeslekAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.colMeslekAdi.OptionsFilter.AllowAutoFilter = false;
-            this.colMeslekAdi.OptionsFilter.AllowFilter = false;
-            this.colMeslekAdi.StatusBarAciklama = null;
-            this.colMeslekAdi.StatusBarKisayol = null;
-            this.colMeslekAdi.StatusBarKisayolAciklama = null;
-            this.colMeslekAdi.Visible = true;
-            this.colMeslekAdi.Width = 110;
-            // 
             // colIsyeriAdi
             // 
             this.colIsyeriAdi.Caption = "Adı";
             this.colIsyeriAdi.CustomizationCaption = "İşyeri Adı";
-            this.colIsyeriAdi.FieldName = "Isyeri";
+            this.colIsyeriAdi.FieldName = "IsyeriAdi";
             this.colIsyeriAdi.Name = "colIsyeriAdi";
             this.colIsyeriAdi.OptionsColumn.AllowEdit = false;
             this.colIsyeriAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
@@ -434,25 +440,19 @@
             this.colGorevAdi.Visible = true;
             this.colGorevAdi.Width = 110;
             // 
-            // repositoryYakinlik
+            // colYakinlikId
             // 
-            this.repositoryYakinlik.AutoHeight = false;
-            this.repositoryYakinlik.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryYakinlik.Name = "repositoryYakinlik";
-            this.repositoryYakinlik.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            // 
-            // repositoryAdres
-            // 
-            this.repositoryAdres.AutoHeight = false;
-            this.repositoryAdres.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryAdres.Name = "repositoryAdres";
-            // 
-            // repositoryVeli
-            // 
-            this.repositoryVeli.AutoHeight = false;
-            this.repositoryVeli.Name = "repositoryVeli";
+            this.colYakinlikId.Caption = "YakinlikId";
+            this.colYakinlikId.FieldName = "YakinlikId";
+            this.colYakinlikId.Name = "colYakinlikId";
+            this.colYakinlikId.OptionsColumn.AllowEdit = false;
+            this.colYakinlikId.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colYakinlikId.OptionsColumn.ShowInCustomizationForm = false;
+            this.colYakinlikId.OptionsFilter.AllowAutoFilter = false;
+            this.colYakinlikId.OptionsFilter.AllowFilter = false;
+            this.colYakinlikId.StatusBarAciklama = null;
+            this.colYakinlikId.StatusBarKisayol = null;
+            this.colYakinlikId.StatusBarKisayolAciklama = null;
             // 
             // gridBand1
             // 
@@ -524,9 +524,9 @@
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryYakinlik)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryAdres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryVeli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryAdres)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryYakinlik)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,10 +555,10 @@
         private Grid.MyBandedGridColumn colMeslekAdi;
         private Grid.MyBandedGridColumn colIsyeriAdi;
         private Grid.MyBandedGridColumn colGorevAdi;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryVeli;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox repositoryAdres;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryYakinlik;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;

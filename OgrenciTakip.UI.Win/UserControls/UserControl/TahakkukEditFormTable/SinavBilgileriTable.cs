@@ -56,7 +56,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 {
                     tablo.FocusedRowHandle = i;
                     tablo.FocusedColumn = colSinavAdi;
-                    tablo.SetColumnError(colSinavAdi, "Sınav Adı Geçerli Bir Değer Giriniz.");
+                    tablo.SetColumnError(colSinavAdi, "Sınav Adı Alanına Geçerli Bir Değer Giriniz.");
                 }
                 if (string.IsNullOrEmpty(entity.PuanTuru))
                 {

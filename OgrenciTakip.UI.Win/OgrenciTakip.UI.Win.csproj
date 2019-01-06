@@ -487,6 +487,7 @@
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\SelectFunctions.cs" />
     <Compile Include="Functions\SelectPictureFunctions.cs" />
+    <Compile Include="Functions\SelectRepositoryFunctions.cs" />
     <Compile Include="Functions\SelectRowFunctions.cs" />
     <Compile Include="Functions\TablePrintingFunctions.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
@@ -653,11 +654,11 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\PromosyonBilgileriTable.Designer.cs">
       <DependentUpon>PromosyonBilgileriTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\SinavBilgileri.cs">
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\SinavBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\SinavBilgileri.Designer.cs">
-      <DependentUpon>SinavBilgileri.cs</DependentUpon>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\SinavBilgileriTable.Designer.cs">
+      <DependentUpon>SinavBilgileriTable.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\AileBilgiForms\AileBilgiEditForm.resx">
       <DependentUpon>AileBilgiEditForm.cs</DependentUpon>

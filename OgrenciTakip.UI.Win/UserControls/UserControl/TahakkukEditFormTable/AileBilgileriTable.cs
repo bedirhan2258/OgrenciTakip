@@ -21,6 +21,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             Tablo = tablo;
             EventsLoad();
         }
+
         protected override void Listele()
         {
             tablo.GridControl.DataSource = ((AileBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBingingList<AileBilgileriL>();
