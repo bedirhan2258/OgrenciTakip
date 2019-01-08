@@ -393,6 +393,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap historyitem_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("historyitem_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap historyitem_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("historyitem_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap insertrangefilter_16x16 {
             get {
                 object obj = ResourceManager.GetObject("insertrangefilter_16x16", resourceCulture);
@@ -496,6 +516,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap printpreview_32x32 {
             get {
                 object obj = ResourceManager.GetObject("printpreview_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap removeitem_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("removeitem_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap removeitem_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("removeitem_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

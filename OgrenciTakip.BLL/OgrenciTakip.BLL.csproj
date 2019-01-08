@@ -73,6 +73,7 @@
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
     <Compile Include="General\GorevBll.cs" />
+    <Compile Include="General\HizmetBilgileriBll.cs" />
     <Compile Include="General\HizmetTuruBll.cs" />
     <Compile Include="General\HizmetBll.cs" />
     <Compile Include="General\IlBLL.cs" />

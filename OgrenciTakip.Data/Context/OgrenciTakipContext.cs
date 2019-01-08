@@ -78,6 +78,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<IletisimBilgileri> IletisimBilgileri { get; set; }
         public DbSet<EposBilgileri> EposBilgileri { get; set; }
         public DbSet<BilgiNotlari> BilgiNotlari { get; set; }
+        public DbSet<HizmetBilgileri> HizmetBilgileri { get; set; }
     }
 
 }

@@ -34,6 +34,8 @@
             this.btnHareketEkle = new DevExpress.XtraBars.BarButtonItem();
             this.btnHareketSil = new DevExpress.XtraBars.BarButtonItem();
             this.btnKartDuzenle = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIptalEt = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIptalGeriAl = new DevExpress.XtraBars.BarButtonItem();
             this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -56,7 +58,9 @@
             this.popupMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketEkle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketSil),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnKartDuzenle)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnKartDuzenle),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnIptalEt),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnIptalGeriAl)});
             this.popupMenu.Manager = this.barManager;
             this.popupMenu.Name = "popupMenu";
             // 
@@ -85,6 +89,26 @@
             this.btnKartDuzenle.Name = "btnKartDuzenle";
             this.btnKartDuzenle.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnIptalEt
+            // 
+            this.btnIptalEt.Caption = "Iptal Et";
+            this.btnIptalEt.Id = 5;
+            this.btnIptalEt.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.removeitem_16x16;
+            this.btnIptalEt.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.removeitem_32x32;
+            this.btnIptalEt.Name = "btnIptalEt";
+            this.btnIptalEt.ShortcutKeyDisplayString = "Ctrl+T";
+            this.btnIptalEt.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnIptalGeriAl
+            // 
+            this.btnIptalGeriAl.Caption = "Iptal Geri Al";
+            this.btnIptalGeriAl.Id = 6;
+            this.btnIptalGeriAl.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.historyitem_16x16;
+            this.btnIptalGeriAl.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.historyitem_32x32;
+            this.btnIptalGeriAl.Name = "btnIptalGeriAl";
+            this.btnIptalGeriAl.ShortcutKeyDisplayString = "Ctrl+R";
+            this.btnIptalGeriAl.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // barManager
             // 
             this.barManager.DockControls.Add(this.barDockControlTop);
@@ -95,8 +119,10 @@
             this.barManager.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnHareketEkle,
             this.btnHareketSil,
-            this.btnKartDuzenle});
-            this.barManager.MaxItemId = 5;
+            this.btnKartDuzenle,
+            this.btnIptalEt,
+            this.btnIptalGeriAl});
+            this.barManager.MaxItemId = 7;
             // 
             // barDockControlTop
             // 
@@ -159,5 +185,7 @@
         private DevExpress.XtraBars.BarButtonItem btnHareketSil;
         protected DevExpress.XtraBars.BarButtonItem btnKartDuzenle;
         protected Navigators.InsUptNavigator insUptNavigator;
+        protected DevExpress.XtraBars.BarButtonItem btnIptalEt;
+        protected DevExpress.XtraBars.BarButtonItem btnIptalGeriAl;
     }
 }
