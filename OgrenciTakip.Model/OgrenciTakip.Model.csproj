@@ -53,6 +53,7 @@
     <Compile Include="DTO\AvukatDTO.cs" />
     <Compile Include="DTO\BankaDTO.cs" />
     <Compile Include="DTO\BankaHesapDTO.cs" />
+    <Compile Include="DTO\BilgiNotlariDTO.cs" />
     <Compile Include="DTO\CariDTO.cs" />
     <Compile Include="DTO\EposBilgileriDTO.cs" />
     <Compile Include="DTO\EvrakBilgileriDTO.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Entities\Base\BaseHareketEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseEntity.cs" />
     <Compile Include="Entities\Base\Interfaces\IBaseHareketEntity.cs" />
+    <Compile Include="Entities\BilgiNotlari.cs" />
     <Compile Include="Entities\Cari.cs" />
     <Compile Include="Entities\EposBilgileri.cs" />
     <Compile Include="Entities\EvrakBilgileri.cs" />
