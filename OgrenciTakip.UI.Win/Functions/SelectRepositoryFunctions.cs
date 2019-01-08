@@ -7,7 +7,9 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.Forms.BankaForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using OgrenciTakip.UI.Win.Show;
 
@@ -109,6 +111,20 @@ namespace OgrenciTakip.UI.Win.Functions
                         {
                             _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
                             _tablo.SetFocusedRowCellValue(_nameColumn, entity.YakinlikAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+
+                case "repositoryBanka":
+                    {
+                        var id = _tablo.GetRowCellId(_idColumn);
+
+                        var entity = (BankaL)ShowListForms<BankaListForm>.ShowDialogListForm(KartTuru.Banka, id);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.BankaAdi);
                             _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
                         }
                     }

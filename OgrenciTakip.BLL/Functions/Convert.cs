@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace OgrenciTakip.BLL.Functions
 {
-    public static class Convert
+    public static class Converts
     {
         public static TTarget EntityConvert<TTarget>(this IBaseEntity source)
         {

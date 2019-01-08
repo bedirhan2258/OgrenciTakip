@@ -57,6 +57,7 @@
     <Compile Include="Base\BaseGenelBll.cs" />
     <Compile Include="Base\BaseHareketBll.cs" />
     <Compile Include="Functions\Convert.cs" />
+    <Compile Include="Functions\Crypto.cs" />
     <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="Functions\ValidationFunctions.cs" />
     <Compile Include="General\AileBilgiBll.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="General\BankaHesapBll.cs" />
     <Compile Include="General\BankaSubeBll.cs" />
     <Compile Include="General\CariBll.cs" />
+    <Compile Include="General\EposBilgileriBll.cs" />
     <Compile Include="General\EvrakBilgileriBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
