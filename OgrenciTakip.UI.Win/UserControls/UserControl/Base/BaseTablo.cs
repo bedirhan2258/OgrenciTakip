@@ -123,6 +123,10 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 
         protected virtual void OpenEntity() { }
 
+        protected virtual void SutunGizleGoster() { }
+
+        protected virtual void RowCellAllowEdit() { }
+
         protected internal bool Kaydet()
         {
             insUptNavigator.Navigator.Buttons.DoClick(insUptNavigator.Navigator.Buttons.EndEdit);
@@ -195,12 +199,16 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 
             ButtonEnabledDurumu(true);
         }
-        private void Tablo_MouseUp(object sender, MouseEventArgs e)
+        protected virtual void Tablo_MouseUp(object sender, MouseEventArgs e)
         {
             if (popupMenu == null) return;
             //Sağ tıklayıp sil dediğimiz de tablo üzerinde bir eleman yok sa sil Enable Durumu false gelmes için yaptım.
+            if (e.Button != MouseButtons.Right) return;
+
             btnKartDuzenle.Enabled = Tablo.RowCount > 0;
             btnHareketSil.Enabled = Tablo.RowCount > 0;
+            btnIptalEt.Enabled = Tablo.RowCount > 0;
+            btnIptalGeriAl.Enabled = Tablo.RowCount > 0;
             e.SagMenuGoster(popupMenu);
         }
 

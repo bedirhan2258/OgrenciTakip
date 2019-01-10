@@ -10,7 +10,9 @@ using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
+using OgrenciTakip.UI.Win.Forms.SchoolForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
+using OgrenciTakip.UI.Win.IptalNedeniForms;
 using OgrenciTakip.UI.Win.Show;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -22,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Functions
         private static ControlNavigator _navigator;
         private static RepositoryItemButtonEdit _buttonEdit;
         private static GridColumn _idColumn;
-        private static GridColumn _nameColumn; 
+        private static GridColumn _nameColumn;
         #endregion
 
         private static void RemoveEvent()
@@ -125,6 +127,34 @@ namespace OgrenciTakip.UI.Win.Functions
                         {
                             _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
                             _tablo.SetFocusedRowCellValue(_nameColumn, entity.BankaAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+
+                case "repositoryIptalNedeni":
+                    {
+                        var id = _tablo.GetRowCellId(_idColumn);
+
+                        var entity = (IptalNedeni)ShowListForms<IptalNedeniListForm>.ShowDialogListForm(KartTuru.IptalNedeni, id);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.IptalNedeniAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+
+                case "repositoryGittigiOKul":
+                    {
+                        var id = _tablo.GetRowCellId(_idColumn);
+
+                        var entity = (OkulL)ShowListForms<OkulListForm>.ShowDialogListForm(KartTuru.Okul, id);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.OkulAdi);
                             _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
                         }
                     }

@@ -22,7 +22,7 @@ namespace OgrenciTakip.Model.Entities
         public decimal BrutUcret { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal KistDusulenUcret { get; set; }
+        public decimal KistDonemDusulenUcret { get; set; }
 
         [Column(TypeName = "money")]
         public decimal NetUcret { get; set; }

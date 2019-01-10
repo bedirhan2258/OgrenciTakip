@@ -182,10 +182,10 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.BarButtonItem btnHareketSil;
         protected DevExpress.XtraBars.BarButtonItem btnKartDuzenle;
         protected Navigators.InsUptNavigator insUptNavigator;
         protected DevExpress.XtraBars.BarButtonItem btnIptalEt;
         protected DevExpress.XtraBars.BarButtonItem btnIptalGeriAl;
+        protected DevExpress.XtraBars.BarButtonItem btnHareketSil;
     }
 }

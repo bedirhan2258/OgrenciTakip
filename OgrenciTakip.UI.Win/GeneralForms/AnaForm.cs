@@ -48,6 +48,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static DateTime DonemBitisTarihi = new DateTime(2018, 06, 20);
         public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = false;
         public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = false;
+        public static bool GunTarihininOncesineIptalTarihiGirilebilir = false;
+        public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = false;
+        public static bool HizmetTahakkukKurusKullan;
+
         public AnaForm()
         {
             InitializeComponent();

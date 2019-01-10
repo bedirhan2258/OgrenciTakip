@@ -1,5 +1,4 @@
 ﻿
-
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
@@ -104,6 +103,10 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             else if (_bilgiNotlariTable != null)
                 _bilgiNotlariTable.Yukle();
+
+            //Table eklendiği için herhalukalde gelicek null gelme ihtimali yok.
+            hizmetBilgileriTable.OwnerForm = this;
+            hizmetBilgileriTable.Yukle();
 
         }
 
@@ -238,6 +241,13 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 return true;
             }
 
+            if (hizmetBilgileriTable.HataliGiris())
+            {
+                tabAlt.SelectedPage = pageHizmetBilgileri;
+                hizmetBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
+
             return false;
         }
 
@@ -282,6 +292,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (_iletisimBilgileriTable != null && _iletisimBilgileriTable.TableValueChanged) return true;
                 if (_eposBilgileriTable != null && _eposBilgileriTable.TableValueChanged) return true;
                 if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
+                if (hizmetBilgileriTable.TableValueChanged) return true;
 
                 return false;
             }
@@ -302,6 +313,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (_iletisimBilgileriTable != null && !_iletisimBilgileriTable.Kaydet()) return false;
             if (_eposBilgileriTable != null && !_eposBilgileriTable.Kaydet()) return false;
             if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
+            if (!hizmetBilgileriTable.Kaydet()) return false;
             return true;
         }
 
@@ -392,6 +404,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 _bilgiNotlariTable.Tablo.GridControl.Focus();
 
             }
+
+            else if (e.Page == pageHizmetBilgileri)
+            {
+                hizmetBilgileriTable.Tablo.GridControl.Focus();
+            }
+
         }
 
     }

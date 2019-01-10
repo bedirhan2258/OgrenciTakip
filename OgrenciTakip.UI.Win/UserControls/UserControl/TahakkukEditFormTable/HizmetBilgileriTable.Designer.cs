@@ -36,8 +36,10 @@
             this.colServisId = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colServisYeriAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIslemTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colBaslamaTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBrutUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.colKistDusulenUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colNetUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIptalEdildi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -45,13 +47,23 @@
             this.colAlinanHizmetGunSayisi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colGunlukUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIptalTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryIptalTarihi = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colIptalNedeniId = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colNedeniAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colIptalNedeniAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryIptalNedeni = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colGittigiOkulId = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colGittigiOkulAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryGittigiOKul = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colIptalAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalNedeni)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryGittigiOKul)).BeginInit();
             this.SuspendLayout();
             // 
             // grid
@@ -60,6 +72,12 @@
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.MainView = this.tablo;
             this.grid.Name = "grid";
+            this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryTarih,
+            this.repositoryDecimal,
+            this.repositoryIptalNedeni,
+            this.repositoryGittigiOKul,
+            this.repositoryIptalTarihi});
             this.grid.Size = new System.Drawing.Size(618, 265);
             this.grid.TabIndex = 5;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -94,7 +112,7 @@
             this.colGunlukUcret,
             this.colIptalTarihi,
             this.colIptalNedeniId,
-            this.colNedeniAdi,
+            this.colIptalNedeniAdi,
             this.colGittigiOkulId,
             this.colGittigiOkulAdi,
             this.colIptalAciklama});
@@ -188,7 +206,10 @@
             // 
             // colIslemTarihi
             // 
+            this.colIslemTarihi.AppearanceCell.Options.UseTextOptions = true;
+            this.colIslemTarihi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colIslemTarihi.Caption = "İşlem Tarihi";
+            this.colIslemTarihi.ColumnEdit = this.repositoryTarih;
             this.colIslemTarihi.FieldName = "IslemTarihi";
             this.colIslemTarihi.Name = "colIslemTarihi";
             this.colIslemTarihi.OptionsColumn.AllowEdit = false;
@@ -201,12 +222,25 @@
             this.colIslemTarihi.StatusBarKisayol = null;
             this.colIslemTarihi.StatusBarKisayolAciklama = null;
             this.colIslemTarihi.Visible = true;
-            this.colIslemTarihi.VisibleIndex = 1;
+            this.colIslemTarihi.VisibleIndex = 5;
             this.colIslemTarihi.Width = 100;
+            // 
+            // repositoryTarih
+            // 
+            this.repositoryTarih.AutoHeight = false;
+            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryTarih.Name = "repositoryTarih";
             // 
             // colBaslamaTarihi
             // 
+            this.colBaslamaTarihi.AppearanceCell.Options.UseTextOptions = true;
+            this.colBaslamaTarihi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colBaslamaTarihi.Caption = "Başlama Tarihi";
+            this.colBaslamaTarihi.ColumnEdit = this.repositoryTarih;
             this.colBaslamaTarihi.FieldName = "BaslamaTarihi";
             this.colBaslamaTarihi.Name = "colBaslamaTarihi";
             this.colBaslamaTarihi.OptionsColumn.AllowEdit = false;
@@ -219,12 +253,13 @@
             this.colBaslamaTarihi.StatusBarKisayol = null;
             this.colBaslamaTarihi.StatusBarKisayolAciklama = null;
             this.colBaslamaTarihi.Visible = true;
-            this.colBaslamaTarihi.VisibleIndex = 2;
+            this.colBaslamaTarihi.VisibleIndex = 1;
             this.colBaslamaTarihi.Width = 100;
             // 
             // colBrutUcret
             // 
             this.colBrutUcret.Caption = "Brüt Ücret";
+            this.colBrutUcret.ColumnEdit = this.repositoryDecimal;
             this.colBrutUcret.FieldName = "BrutUcret";
             this.colBrutUcret.Name = "colBrutUcret";
             this.colBrutUcret.OptionsColumn.AllowEdit = false;
@@ -239,12 +274,25 @@
             this.colBrutUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutUcret", "{0:n2}")});
             this.colBrutUcret.Visible = true;
-            this.colBrutUcret.VisibleIndex = 3;
+            this.colBrutUcret.VisibleIndex = 2;
             this.colBrutUcret.Width = 100;
+            // 
+            // repositoryDecimal
+            // 
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Mask.EditMask = "n2";
+            this.repositoryDecimal.Name = "repositoryDecimal";
             // 
             // colKistDusulenUcret
             // 
             this.colKistDusulenUcret.Caption = "Kıst Dönem Düşülen Ücret";
+            this.colKistDusulenUcret.ColumnEdit = this.repositoryDecimal;
             this.colKistDusulenUcret.FieldName = "KistDusulenUcret";
             this.colKistDusulenUcret.Name = "colKistDusulenUcret";
             this.colKistDusulenUcret.OptionsColumn.AllowEdit = false;
@@ -259,12 +307,13 @@
             this.colKistDusulenUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDusulenUcret", "{0:n2}")});
             this.colKistDusulenUcret.Visible = true;
-            this.colKistDusulenUcret.VisibleIndex = 4;
+            this.colKistDusulenUcret.VisibleIndex = 3;
             this.colKistDusulenUcret.Width = 100;
             // 
             // colNetUcret
             // 
             this.colNetUcret.Caption = "Net Ücret";
+            this.colNetUcret.ColumnEdit = this.repositoryDecimal;
             this.colNetUcret.FieldName = "NetUcret";
             this.colNetUcret.Name = "colNetUcret";
             this.colNetUcret.OptionsColumn.AllowEdit = false;
@@ -279,7 +328,7 @@
             this.colNetUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetUcret", "{0:n2}")});
             this.colNetUcret.Visible = true;
-            this.colNetUcret.VisibleIndex = 5;
+            this.colNetUcret.VisibleIndex = 4;
             this.colNetUcret.Width = 100;
             // 
             // colIptalEdildi
@@ -349,7 +398,10 @@
             // 
             // colIptalTarihi
             // 
+            this.colIptalTarihi.AppearanceCell.Options.UseTextOptions = true;
+            this.colIptalTarihi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colIptalTarihi.Caption = "İptal Tarihi";
+            this.colIptalTarihi.ColumnEdit = this.repositoryIptalTarihi;
             this.colIptalTarihi.FieldName = "IptalTarihi";
             this.colIptalTarihi.Name = "colIptalTarihi";
             this.colIptalTarihi.OptionsColumn.AllowEdit = false;
@@ -365,6 +417,16 @@
             this.colIptalTarihi.VisibleIndex = 9;
             this.colIptalTarihi.Width = 100;
             // 
+            // repositoryIptalTarihi
+            // 
+            this.repositoryIptalTarihi.AutoHeight = false;
+            this.repositoryIptalTarihi.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryIptalTarihi.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryIptalTarihi.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryIptalTarihi.Name = "repositoryIptalTarihi";
+            // 
             // colIptalNedeniId
             // 
             this.colIptalNedeniId.Caption = "IptalNedeniId";
@@ -376,22 +438,31 @@
             this.colIptalNedeniId.StatusBarKisayol = null;
             this.colIptalNedeniId.StatusBarKisayolAciklama = null;
             // 
-            // colNedeniAdi
+            // colIptalNedeniAdi
             // 
-            this.colNedeniAdi.Caption = "İptal Nedeni";
-            this.colNedeniAdi.FieldName = "IptalNedeniAdi";
-            this.colNedeniAdi.Name = "colNedeniAdi";
-            this.colNedeniAdi.OptionsColumn.AllowEdit = false;
-            this.colNedeniAdi.OptionsColumn.AllowMove = false;
-            this.colNedeniAdi.OptionsColumn.AllowShowHide = false;
-            this.colNedeniAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.colNedeniAdi.OptionsFilter.AllowAutoFilter = false;
-            this.colNedeniAdi.OptionsFilter.AllowFilter = false;
-            this.colNedeniAdi.StatusBarAciklama = null;
-            this.colNedeniAdi.StatusBarKisayol = null;
-            this.colNedeniAdi.StatusBarKisayolAciklama = null;
-            this.colNedeniAdi.Visible = true;
-            this.colNedeniAdi.VisibleIndex = 10;
+            this.colIptalNedeniAdi.Caption = "İptal Nedeni";
+            this.colIptalNedeniAdi.ColumnEdit = this.repositoryIptalNedeni;
+            this.colIptalNedeniAdi.FieldName = "IptalNedeniAdi";
+            this.colIptalNedeniAdi.Name = "colIptalNedeniAdi";
+            this.colIptalNedeniAdi.OptionsColumn.AllowEdit = false;
+            this.colIptalNedeniAdi.OptionsColumn.AllowMove = false;
+            this.colIptalNedeniAdi.OptionsColumn.AllowShowHide = false;
+            this.colIptalNedeniAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colIptalNedeniAdi.OptionsFilter.AllowAutoFilter = false;
+            this.colIptalNedeniAdi.OptionsFilter.AllowFilter = false;
+            this.colIptalNedeniAdi.StatusBarAciklama = null;
+            this.colIptalNedeniAdi.StatusBarKisayol = null;
+            this.colIptalNedeniAdi.StatusBarKisayolAciklama = null;
+            this.colIptalNedeniAdi.Visible = true;
+            this.colIptalNedeniAdi.VisibleIndex = 10;
+            // 
+            // repositoryIptalNedeni
+            // 
+            this.repositoryIptalNedeni.AutoHeight = false;
+            this.repositoryIptalNedeni.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryIptalNedeni.Name = "repositoryIptalNedeni";
+            this.repositoryIptalNedeni.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // colGittigiOkulId
             // 
@@ -407,6 +478,7 @@
             // colGittigiOkulAdi
             // 
             this.colGittigiOkulAdi.Caption = "Gittiği Okul";
+            this.colGittigiOkulAdi.ColumnEdit = this.repositoryGittigiOKul;
             this.colGittigiOkulAdi.FieldName = "GittigiOkulAdi";
             this.colGittigiOkulAdi.Name = "colGittigiOkulAdi";
             this.colGittigiOkulAdi.OptionsColumn.AllowEdit = false;
@@ -421,6 +493,14 @@
             this.colGittigiOkulAdi.Visible = true;
             this.colGittigiOkulAdi.VisibleIndex = 11;
             this.colGittigiOkulAdi.Width = 150;
+            // 
+            // repositoryGittigiOKul
+            // 
+            this.repositoryGittigiOKul.AutoHeight = false;
+            this.repositoryGittigiOKul.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryGittigiOKul.Name = "repositoryGittigiOKul";
+            this.repositoryGittigiOKul.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // colIptalAciklama
             // 
@@ -450,6 +530,13 @@
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalNedeni)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryGittigiOKul)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,9 +562,14 @@
         private Grid.MyGridColumn colGunlukUcret;
         private Grid.MyGridColumn colIptalTarihi;
         private Grid.MyGridColumn colIptalNedeniId;
-        private Grid.MyGridColumn colNedeniAdi;
+        private Grid.MyGridColumn colIptalNedeniAdi;
         private Grid.MyGridColumn colGittigiOkulId;
         private Grid.MyGridColumn colGittigiOkulAdi;
         private Grid.MyGridColumn colIptalAciklama;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryTarih;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryIptalNedeni;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryGittigiOKul;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryIptalTarihi;
     }
 }
