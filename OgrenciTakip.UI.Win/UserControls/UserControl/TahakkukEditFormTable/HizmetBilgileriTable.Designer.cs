@@ -40,7 +40,7 @@
             this.colBaslamaTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBrutUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.colKistDusulenUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colKistDonemDusulenUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colNetUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIptalEdildi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colEgitimDonemiGunSayisi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -104,7 +104,7 @@
             this.colIslemTarihi,
             this.colBaslamaTarihi,
             this.colBrutUcret,
-            this.colKistDusulenUcret,
+            this.colKistDonemDusulenUcret,
             this.colNetUcret,
             this.colIptalEdildi,
             this.colEgitimDonemiGunSayisi,
@@ -289,26 +289,26 @@
             this.repositoryDecimal.Mask.EditMask = "n2";
             this.repositoryDecimal.Name = "repositoryDecimal";
             // 
-            // colKistDusulenUcret
+            // colKistDonemDusulenUcret
             // 
-            this.colKistDusulenUcret.Caption = "Kıst Dönem Düşülen Ücret";
-            this.colKistDusulenUcret.ColumnEdit = this.repositoryDecimal;
-            this.colKistDusulenUcret.FieldName = "KistDusulenUcret";
-            this.colKistDusulenUcret.Name = "colKistDusulenUcret";
-            this.colKistDusulenUcret.OptionsColumn.AllowEdit = false;
-            this.colKistDusulenUcret.OptionsColumn.AllowMove = false;
-            this.colKistDusulenUcret.OptionsColumn.AllowShowHide = false;
-            this.colKistDusulenUcret.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
-            this.colKistDusulenUcret.OptionsFilter.AllowAutoFilter = false;
-            this.colKistDusulenUcret.OptionsFilter.AllowFilter = false;
-            this.colKistDusulenUcret.StatusBarAciklama = null;
-            this.colKistDusulenUcret.StatusBarKisayol = null;
-            this.colKistDusulenUcret.StatusBarKisayolAciklama = null;
-            this.colKistDusulenUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            this.colKistDonemDusulenUcret.Caption = "Kıst Dönem Düşülen Ücret";
+            this.colKistDonemDusulenUcret.ColumnEdit = this.repositoryDecimal;
+            this.colKistDonemDusulenUcret.FieldName = "KistDonemDusulenUcret";
+            this.colKistDonemDusulenUcret.Name = "colKistDonemDusulenUcret";
+            this.colKistDonemDusulenUcret.OptionsColumn.AllowEdit = false;
+            this.colKistDonemDusulenUcret.OptionsColumn.AllowMove = false;
+            this.colKistDonemDusulenUcret.OptionsColumn.AllowShowHide = false;
+            this.colKistDonemDusulenUcret.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
+            this.colKistDonemDusulenUcret.OptionsFilter.AllowAutoFilter = false;
+            this.colKistDonemDusulenUcret.OptionsFilter.AllowFilter = false;
+            this.colKistDonemDusulenUcret.StatusBarAciklama = null;
+            this.colKistDonemDusulenUcret.StatusBarKisayol = null;
+            this.colKistDonemDusulenUcret.StatusBarKisayolAciklama = null;
+            this.colKistDonemDusulenUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDusulenUcret", "{0:n2}")});
-            this.colKistDusulenUcret.Visible = true;
-            this.colKistDusulenUcret.VisibleIndex = 3;
-            this.colKistDusulenUcret.Width = 100;
+            this.colKistDonemDusulenUcret.Visible = true;
+            this.colKistDonemDusulenUcret.VisibleIndex = 3;
+            this.colKistDonemDusulenUcret.Width = 100;
             // 
             // colNetUcret
             // 
@@ -344,6 +344,8 @@
             // 
             // colEgitimDonemiGunSayisi
             // 
+            this.colEgitimDonemiGunSayisi.AppearanceCell.Options.UseTextOptions = true;
+            this.colEgitimDonemiGunSayisi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEgitimDonemiGunSayisi.Caption = "Eğitim Dönemi Gün Sayısı";
             this.colEgitimDonemiGunSayisi.FieldName = "EgitimDonemiGunSayisi";
             this.colEgitimDonemiGunSayisi.Name = "colEgitimDonemiGunSayisi";
@@ -358,10 +360,12 @@
             this.colEgitimDonemiGunSayisi.StatusBarKisayolAciklama = null;
             this.colEgitimDonemiGunSayisi.Visible = true;
             this.colEgitimDonemiGunSayisi.VisibleIndex = 6;
-            this.colEgitimDonemiGunSayisi.Width = 100;
+            this.colEgitimDonemiGunSayisi.Width = 85;
             // 
             // colAlinanHizmetGunSayisi
             // 
+            this.colAlinanHizmetGunSayisi.AppearanceCell.Options.UseTextOptions = true;
+            this.colAlinanHizmetGunSayisi.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colAlinanHizmetGunSayisi.Caption = "Alınan Hizmet Gün Sayısı";
             this.colAlinanHizmetGunSayisi.FieldName = "AlinanHizmetGunSayisi";
             this.colAlinanHizmetGunSayisi.Name = "colAlinanHizmetGunSayisi";
@@ -376,11 +380,12 @@
             this.colAlinanHizmetGunSayisi.StatusBarKisayolAciklama = null;
             this.colAlinanHizmetGunSayisi.Visible = true;
             this.colAlinanHizmetGunSayisi.VisibleIndex = 7;
-            this.colAlinanHizmetGunSayisi.Width = 100;
+            this.colAlinanHizmetGunSayisi.Width = 85;
             // 
             // colGunlukUcret
             // 
             this.colGunlukUcret.Caption = "Günlük Ücret";
+            this.colGunlukUcret.ColumnEdit = this.repositoryDecimal;
             this.colGunlukUcret.FieldName = "GunlukUcret";
             this.colGunlukUcret.Name = "colGunlukUcret";
             this.colGunlukUcret.OptionsColumn.AllowEdit = false;
@@ -394,7 +399,7 @@
             this.colGunlukUcret.StatusBarKisayolAciklama = null;
             this.colGunlukUcret.Visible = true;
             this.colGunlukUcret.VisibleIndex = 8;
-            this.colGunlukUcret.Width = 100;
+            this.colGunlukUcret.Width = 85;
             // 
             // colIptalTarihi
             // 
@@ -455,6 +460,7 @@
             this.colIptalNedeniAdi.StatusBarKisayolAciklama = null;
             this.colIptalNedeniAdi.Visible = true;
             this.colIptalNedeniAdi.VisibleIndex = 10;
+            this.colIptalNedeniAdi.Width = 150;
             // 
             // repositoryIptalNedeni
             // 
@@ -492,7 +498,7 @@
             this.colGittigiOkulAdi.StatusBarKisayolAciklama = null;
             this.colGittigiOkulAdi.Visible = true;
             this.colGittigiOkulAdi.VisibleIndex = 11;
-            this.colGittigiOkulAdi.Width = 150;
+            this.colGittigiOkulAdi.Width = 200;
             // 
             // repositoryGittigiOKul
             // 
@@ -504,7 +510,7 @@
             // 
             // colIptalAciklama
             // 
-            this.colIptalAciklama.Caption = "Açıklama";
+            this.colIptalAciklama.Caption = "İptal  Açıklama";
             this.colIptalAciklama.FieldName = "IptalAciklama";
             this.colIptalAciklama.Name = "colIptalAciklama";
             this.colIptalAciklama.OptionsColumn.AllowEdit = false;
@@ -554,7 +560,7 @@
         private Grid.MyGridColumn colIslemTarihi;
         private Grid.MyGridColumn colBaslamaTarihi;
         private Grid.MyGridColumn colBrutUcret;
-        private Grid.MyGridColumn colKistDusulenUcret;
+        private Grid.MyGridColumn colKistDonemDusulenUcret;
         private Grid.MyGridColumn colNetUcret;
         private Grid.MyGridColumn colIptalEdildi;
         private Grid.MyGridColumn colEgitimDonemiGunSayisi;

@@ -60,7 +60,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                     BrutUcret = entity.Ucret,
                     KistDonemDusulenUcret = 0,
                     IptalEdildi = false,
-                    Insert = false
+                    Insert = true
                 };
                 if (servis != null)
                 {
@@ -132,7 +132,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
         {
             base.Tablo_MouseUp(sender, e);
 
-            var entity = tablo.GetRow<HizmetBilgileriL>();
+            var entity = (HizmetBilgileriL)tablo.GetRow(Tablo.FocusedRowHandle);
             if (entity == null) return;
 
             btnHareketSil.Enabled = !entity.IptalEdildi;
