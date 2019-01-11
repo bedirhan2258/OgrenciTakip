@@ -59,5 +59,22 @@ namespace OgrenciTakip.UI.Win.Show
                 return frm.DialogResult == DialogResult.OK ? frm.SelectedEntities : null;
             }
         }
+
+        public static IEnumerable<IBaseEntity> ShowDialogListForm(KartTuru kartTuru, bool multiSelect, params object[] prm)
+        {
+            //Yetki kontrolü Yap.
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+            {
+                frm.multiSelect = multiSelect;
+                frm.Yukle();
+                frm.RowSelect = new SelectRowFunctions(frm.Tablo);
+
+                if (frm.EklenebilecekEntityVar)
+                    frm.ShowDialog();
+
+
+                return frm.DialogResult == DialogResult.OK ? frm.SelectedEntities : null;
+            }
+        }
     }
 }

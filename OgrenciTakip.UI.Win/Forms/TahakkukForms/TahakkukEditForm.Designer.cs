@@ -1512,7 +1512,6 @@
 
         private UserControls.Controls.MyDataLayoutControl DataLayoutGenel;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private DevExpress.XtraBars.Navigation.TabPane tabAlt;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageHizmetBilgileri;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageIndirimBilgileri;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageOdemePlani;
@@ -1582,6 +1581,7 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlAileSinavBilgileri;
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl2;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlEvrakPromosyonBilgileri;
-        private UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
+        private DevExpress.XtraBars.Navigation.TabPane tabAlt;
+        protected internal UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
     }
 }
