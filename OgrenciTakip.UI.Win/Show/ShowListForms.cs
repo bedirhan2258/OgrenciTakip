@@ -69,7 +69,7 @@ namespace OgrenciTakip.UI.Win.Show
                 frm.Yukle();
                 frm.RowSelect = new SelectRowFunctions(frm.Tablo);
 
-                if (frm.EklenebilecekEntityVar)
+                //if (frm.EklenebilecekEntityVar)
                     frm.ShowDialog();
 
 

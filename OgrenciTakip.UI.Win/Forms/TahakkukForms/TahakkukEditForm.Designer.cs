@@ -128,6 +128,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.indirimBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -135,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabAlt)).BeginInit();
             this.tabAlt.SuspendLayout();
             this.pageHizmetBilgileri.SuspendLayout();
+            this.pageIndirimBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabUst)).BeginInit();
             this.tabUst.SuspendLayout();
             this.pageGenelBilgiler.SuspendLayout();
@@ -273,6 +275,7 @@
             // pageIndirimBilgileri
             // 
             this.pageIndirimBilgileri.Caption = "İndirim Bilgileri";
+            this.pageIndirimBilgileri.Controls.Add(this.indirimBilgileriTable);
             this.pageIndirimBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.employeethank_16x16;
             this.pageIndirimBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             this.pageIndirimBilgileri.Name = "pageIndirimBilgileri";
@@ -1420,6 +1423,14 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
+            // indirimBilgileriTable
+            // 
+            this.indirimBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.indirimBilgileriTable.Location = new System.Drawing.Point(0, 0);
+            this.indirimBilgileriTable.Name = "indirimBilgileriTable";
+            this.indirimBilgileriTable.Size = new System.Drawing.Size(756, 217);
+            this.indirimBilgileriTable.TabIndex = 0;
+            // 
             // TahakkukEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1438,6 +1449,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabAlt)).EndInit();
             this.tabAlt.ResumeLayout(false);
             this.pageHizmetBilgileri.ResumeLayout(false);
+            this.pageIndirimBilgileri.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabUst)).EndInit();
             this.tabUst.ResumeLayout(false);
             this.pageGenelBilgiler.ResumeLayout(false);
@@ -1583,5 +1595,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlEvrakPromosyonBilgileri;
         private DevExpress.XtraBars.Navigation.TabPane tabAlt;
         protected internal UserControls.UserControl.TahakkukEditFormTable.HizmetBilgileriTable hizmetBilgileriTable;
+        protected internal UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable indirimBilgileriTable;
     }
 }

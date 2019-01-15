@@ -21,7 +21,7 @@ using DevExpress.XtraEditors.Repository;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 {
-    public partial class BaseTablo : XtraUserControl
+    public partial class    BaseTablo : XtraUserControl
     {
         private bool _isLoaded;
         private bool _tabloSablonKayitEdilecek;
@@ -69,6 +69,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.ColumnWidthChanged += Tablo_SablonChanged;
             Tablo.EndSorting += Tablo_SablonChanged;
             Tablo.DoubleClick += Tablo_DoubleClick;
+            Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged;
         }
 
         protected internal void Yukle()
@@ -189,7 +190,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             if (e.Button == insUptNavigator.Navigator.Buttons.Append || e.Button == insUptNavigator.Navigator.Buttons.Remove)
                 e.Handled = true;
         }
-        private void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
+        protected virtual void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
         {
             if (!_isLoaded) return;
 
@@ -285,6 +286,12 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
         private void Tablo_DoubleClick(object sender, EventArgs e)
         {
             OpenEntity();
+        }
+
+        private void Tablo_FocusedRowObjectChanged(object sender, FocusedRowObjectChangedEventArgs e)
+        {
+            SutunGizleGoster();
+            RowCellAllowEdit();
         }
     }
 }

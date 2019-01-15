@@ -33,25 +33,25 @@
             this.colIndirimAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colHizmetAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIslemTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colIptalTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryIptalTarihi = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colBrutIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.colKistDonemDusulenIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colNetIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIptalNedeniId = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colIptalNedeniAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colIptalAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.repositoryIptalTarihi = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.repositoryIptalNedeni = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.colIptalAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalNedeni)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalNedeni)).BeginInit();
             this.SuspendLayout();
             // 
             // insUptNavigator
@@ -111,6 +111,7 @@
             this.tablo.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
             this.tablo.OptionsView.RowAutoHeight = true;
+            this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
             this.tablo.StatusBarAciklama = null;
@@ -132,7 +133,7 @@
             this.colIndirimAdi.StatusBarKisayolAciklama = null;
             this.colIndirimAdi.Visible = true;
             this.colIndirimAdi.VisibleIndex = 0;
-            this.colIndirimAdi.Width = 200;
+            this.colIndirimAdi.Width = 165;
             // 
             // colHizmetAdi
             // 
@@ -148,7 +149,7 @@
             this.colHizmetAdi.StatusBarKisayolAciklama = null;
             this.colHizmetAdi.Visible = true;
             this.colHizmetAdi.VisibleIndex = 1;
-            this.colHizmetAdi.Width = 200;
+            this.colHizmetAdi.Width = 165;
             // 
             // colIslemTarihi
             // 
@@ -169,6 +170,16 @@
             this.colIslemTarihi.VisibleIndex = 2;
             this.colIslemTarihi.Width = 90;
             // 
+            // repositoryTarih
+            // 
+            this.repositoryTarih.AutoHeight = false;
+            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryTarih.Name = "repositoryTarih";
+            // 
             // colIptalTarihi
             // 
             this.colIptalTarihi.AppearanceCell.Options.UseTextOptions = true;
@@ -185,8 +196,18 @@
             this.colIptalTarihi.StatusBarKisayol = null;
             this.colIptalTarihi.StatusBarKisayolAciklama = null;
             this.colIptalTarihi.Visible = true;
-            this.colIptalTarihi.VisibleIndex = 3;
+            this.colIptalTarihi.VisibleIndex = 6;
             this.colIptalTarihi.Width = 90;
+            // 
+            // repositoryIptalTarihi
+            // 
+            this.repositoryIptalTarihi.AutoHeight = false;
+            this.repositoryIptalTarihi.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryIptalTarihi.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryIptalTarihi.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryIptalTarihi.Name = "repositoryIptalTarihi";
             // 
             // colBrutIndirim
             // 
@@ -201,9 +222,23 @@
             this.colBrutIndirim.StatusBarAciklama = null;
             this.colBrutIndirim.StatusBarKisayol = null;
             this.colBrutIndirim.StatusBarKisayolAciklama = null;
+            this.colBrutIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutIndirim", "{0:n2}")});
             this.colBrutIndirim.Visible = true;
-            this.colBrutIndirim.VisibleIndex = 4;
+            this.colBrutIndirim.VisibleIndex = 3;
             this.colBrutIndirim.Width = 100;
+            // 
+            // repositoryDecimal
+            // 
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Mask.EditMask = "n2";
+            this.repositoryDecimal.Name = "repositoryDecimal";
             // 
             // colKistDonemDusulenIndirim
             // 
@@ -218,8 +253,10 @@
             this.colKistDonemDusulenIndirim.StatusBarAciklama = null;
             this.colKistDonemDusulenIndirim.StatusBarKisayol = null;
             this.colKistDonemDusulenIndirim.StatusBarKisayolAciklama = null;
+            this.colKistDonemDusulenIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenIndirim", "{0:n2}")});
             this.colKistDonemDusulenIndirim.Visible = true;
-            this.colKistDonemDusulenIndirim.VisibleIndex = 5;
+            this.colKistDonemDusulenIndirim.VisibleIndex = 4;
             this.colKistDonemDusulenIndirim.Width = 100;
             // 
             // colNetIndirim
@@ -235,8 +272,10 @@
             this.colNetIndirim.StatusBarAciklama = null;
             this.colNetIndirim.StatusBarKisayol = null;
             this.colNetIndirim.StatusBarKisayolAciklama = null;
+            this.colNetIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetIndirim", "{0:n2}")});
             this.colNetIndirim.Visible = true;
-            this.colNetIndirim.VisibleIndex = 6;
+            this.colNetIndirim.VisibleIndex = 5;
             this.colNetIndirim.Width = 100;
             // 
             // colIptalNedeniId
@@ -270,6 +309,13 @@
             this.colIptalNedeniAdi.VisibleIndex = 7;
             this.colIptalNedeniAdi.Width = 150;
             // 
+            // repositoryIptalNedeni
+            // 
+            this.repositoryIptalNedeni.AutoHeight = false;
+            this.repositoryIptalNedeni.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryIptalNedeni.Name = "repositoryIptalNedeni";
+            // 
             // colIptalAciklama
             // 
             this.colIptalAciklama.Caption = "İptal Açıklama";
@@ -286,45 +332,6 @@
             this.colIptalAciklama.VisibleIndex = 8;
             this.colIptalAciklama.Width = 250;
             // 
-            // repositoryIptalTarihi
-            // 
-            this.repositoryIptalTarihi.AutoHeight = false;
-            this.repositoryIptalTarihi.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryIptalTarihi.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryIptalTarihi.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.repositoryIptalTarihi.Name = "repositoryIptalTarihi";
-            // 
-            // repositoryIptalNedeni
-            // 
-            this.repositoryIptalNedeni.AutoHeight = false;
-            this.repositoryIptalNedeni.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.repositoryIptalNedeni.Name = "repositoryIptalNedeni";
-            // 
-            // repositoryDecimal
-            // 
-            this.repositoryDecimal.AutoHeight = false;
-            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
-            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
-            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.Mask.EditMask = "n2";
-            this.repositoryDecimal.Name = "repositoryDecimal";
-            // 
-            // repositoryTarih
-            // 
-            this.repositoryTarih.AutoHeight = false;
-            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.repositoryTarih.Name = "repositoryTarih";
-            // 
             // IndirimBilgileriTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,12 +343,12 @@
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalNedeni)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalTarihi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryIptalNedeni)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

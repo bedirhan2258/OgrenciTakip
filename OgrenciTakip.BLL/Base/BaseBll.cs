@@ -54,7 +54,7 @@ namespace OgrenciTakip.BLL.Base
                             if ((long)value == 0) value = null;
 
                         if (!string.IsNullOrEmpty(value?.ToString())) continue;
-                        Messages.HataliVeriMesajı(property.Attribute.Description);
+                        Messages.HataliVeriMesaji(property.Attribute.Description);
                         return property.Attribute.ControlName;
                     }
                     return null;

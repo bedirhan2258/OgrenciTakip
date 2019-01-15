@@ -53,7 +53,7 @@ namespace OgrenciTakip.Common.Message
             HataMesaji($"Girmiş Olduğunuz {alanAdi} Daha Önce Kullanılmıştır.");
         }
 
-        public static void HataliVeriMesajı(string alanAdi)
+        public static void HataliVeriMesaji(string alanAdi)
         {
             HataMesaji($"{alanAdi} Alanına Geçerli Bir Veri Giriniz.");
         }
@@ -70,6 +70,11 @@ namespace OgrenciTakip.Common.Message
          public static void TabloEksikBilgiMesaji(string tabloAdi)
         {
             UyariMesaji($"{tabloAdi}nda Eksik Bilgi Girişi Var. Lütfen Kontrol Ediniz.");
+        }
+
+        public static void IptalHareketSilinemezMesaji()
+        {
+            HataMesaji("İptal Edilen Hareketler Silinemez.");
         }
     }
 }

@@ -305,7 +305,7 @@
             this.colKistDonemDusulenUcret.StatusBarKisayol = null;
             this.colKistDonemDusulenUcret.StatusBarKisayolAciklama = null;
             this.colKistDonemDusulenUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDusulenUcret", "{0:n2}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenUcret", "{0:n2}")});
             this.colKistDonemDusulenUcret.Visible = true;
             this.colKistDonemDusulenUcret.VisibleIndex = 3;
             this.colKistDonemDusulenUcret.Width = 100;
