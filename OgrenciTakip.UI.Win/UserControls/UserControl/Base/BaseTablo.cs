@@ -21,7 +21,7 @@ using DevExpress.XtraEditors.Repository;
 
 namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 {
-    public partial class    BaseTablo : XtraUserControl
+    public partial class BaseTablo : XtraUserControl
     {
         private bool _isLoaded;
         private bool _tabloSablonKayitEdilecek;
@@ -127,6 +127,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
         protected virtual void SutunGizleGoster() { }
 
         protected virtual void RowCellAllowEdit() { }
+
+        protected virtual void IptalEt() { }
 
         protected internal bool Kaydet()
         {

@@ -76,5 +76,10 @@ namespace OgrenciTakip.Common.Message
         {
             HataMesaji("İptal Edilen Hareketler Silinemez.");
         }
+
+        public static DialogResult IptalMesaj(string kartAdi)
+        {
+            return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} İptal Edilecektir.Onaylıyor musunuz?", "İptal Onayı");
+        }
     }
 }

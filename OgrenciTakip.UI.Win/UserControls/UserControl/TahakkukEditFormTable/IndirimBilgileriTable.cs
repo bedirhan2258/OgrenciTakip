@@ -1,5 +1,6 @@
 ﻿
 
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
 using OgrenciTakip.BLL.Functions;
@@ -178,6 +179,26 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             entity.Delete = true;
             tablo.RefleshDataSource();
             TopluIndirimHesapla();
+            ButtonEnabledDurumu(true);
+        }
+
+        protected internal void TopluHareketSil(long hizmetId)
+        {
+            var source = tablo.DataController.ListSource.Cast<IndirimBilgileriL>();
+            if (source == null) return;
+
+            var silinenKayitVarmi = false;
+
+            source.ForEach(x =>
+            {
+                if (x.IptalEdildi || x.HizmetId != hizmetId) return;
+                x.Delete = true;
+                silinenKayitVarmi = true;
+            });
+
+            if (!silinenKayitVarmi) return;
+
+            tablo.RefleshDataSource();
             ButtonEnabledDurumu(true);
         }
 
