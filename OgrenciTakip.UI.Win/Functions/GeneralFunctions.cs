@@ -289,6 +289,16 @@ namespace OgrenciTakip.UI.Win.Functions
             item.OptionsTableLayoutItem.ColumnSpan = columnSpan;
             item.OptionsTableLayoutItem.RowSpan = rowSpan;
         }
+
+        public static void RowCellEnabled(this GridView tablo)
+        {
+            var rowHandle = tablo.FocusedRowHandle;
+
+            tablo.FocusedRowHandle = 0;
+            tablo.ClearSelection();
+
+            tablo.FocusedRowHandle = rowHandle;
+        }
     }
 }
 

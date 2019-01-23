@@ -119,7 +119,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                     tablo.SetColumnError(colIptalNedeniAdi, "İptal Nedeni Alanına  Geçerli Bir Değer Giriniz.");
                 }
 
-                if (!tablo.HasColumnErrors)
+                if (tablo.HasColumnErrors)
                 {
                     Messages.TabloEksikBilgiMesaji($"{tablo.ViewCaption} Tablosu");
                     return true;
@@ -202,6 +202,46 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             entity.IptalEdildi = true;
             entity.Update = true;
             UcretHesapla(entity);
+
+            ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIptalEt(entity);
+            tablo.UpdateSummary();
+            tablo.RowCellEnabled();
+            tablo.FocusedColumn = colIptalAciklama;
+            ButtonEnabledDurumu(true);
+        }
+
+        protected override void IptalGeriAl()
+        {
+            bool AyniHizmetAlindi(long hizmetId)
+            {
+                return tablo.DataController.ListSource.Cast<HizmetBilgileriL>().Any(x => x.HizmetId == hizmetId && !x.IptalEdildi && !x.Delete);
+            }
+
+            var entity = tablo.GetRow<HizmetBilgileriL>();
+            if (entity == null || !entity.IptalEdildi) return;
+            if (Messages.IptalGeriAlMesaj(entity.HizmetAdi) != DialogResult.Yes) return;
+
+            if (AyniHizmetAlindi(entity.HizmetId))
+            {
+                Messages.HataMesaji("İptal İşleminin Geri Alınması Durumunda Aynı Hizmetten Birden Fazla Alım Durumu Oluşuyor.");
+                return;
+            }
+
+            entity.HizmetAdi = entity.HizmetAdi.Remove(entity.HizmetAdi.Length - 27, 27);
+            entity.IptalEdildi = false;
+            entity.IptalTarihi = null;
+            entity.IptalNedeniId = null;
+            entity.IptalNedeniAdi = null;
+            entity.GittigiOkulId = null;
+            entity.GittigiOkulAdi = null;
+            entity.IptalAciklama = null;
+            entity.Update = true;
+
+            ((TahakkukEditForm)OwnerForm).indirimBilgileriTable.TopluIptalGeriAl(entity.Id);
+            UcretHesapla(entity);
+            tablo.UpdateSummary();
+            tablo.RowCellEnabled();
+            ButtonEnabledDurumu(true);
         }
 
         protected override void RowCellAllowEdit()

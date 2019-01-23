@@ -81,5 +81,10 @@ namespace OgrenciTakip.Common.Message
         {
             return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} İptal Edilecektir.Onaylıyor musunuz?", "İptal Onayı");
         }
+
+        public static DialogResult IptalGeriAlMesaj(string kartAdi)
+        {
+            return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} Kartına Uygulanan İptal İşlemi Geri Alınacaktır.Onaylıyor musunuz?", "İptal Gerial Onayı");
+        }
     }
 }

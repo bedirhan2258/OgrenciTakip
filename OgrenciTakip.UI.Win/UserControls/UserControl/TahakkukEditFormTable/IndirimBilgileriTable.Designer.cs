@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colIndirimAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -44,6 +47,7 @@
             this.colIptalNedeniAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.repositoryIptalNedeni = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colIptalAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colIptalEdildi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
@@ -92,12 +96,31 @@
             this.colHizmetAdi,
             this.colIslemTarihi,
             this.colIptalTarihi,
+            this.colIptalEdildi,
             this.colBrutIndirim,
             this.colKistDonemDusulenIndirim,
             this.colNetIndirim,
             this.colIptalNedeniId,
             this.colIptalNedeniAdi,
             this.colIptalAciklama});
+            gridFormatRule1.ApplyToRow = true;
+            gridFormatRule1.Name = "Format0";
+            gridFormatRule1.Rule = null;
+            gridFormatRule2.ApplyToRow = true;
+            gridFormatRule2.Column = this.colIptalEdildi;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleValue1.Appearance.BackColor = System.Drawing.Color.MistyRose;
+            formatConditionRuleValue1.Appearance.FontStyleDelta = System.Drawing.FontStyle.Italic;
+            formatConditionRuleValue1.Appearance.ForeColor = System.Drawing.Color.Red;
+            formatConditionRuleValue1.Appearance.Options.HighPriority = true;
+            formatConditionRuleValue1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleValue1.Appearance.Options.UseFont = true;
+            formatConditionRuleValue1.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue1.Value1 = true;
+            gridFormatRule2.Rule = formatConditionRuleValue1;
+            this.tablo.FormatRules.Add(gridFormatRule1);
+            this.tablo.FormatRules.Add(gridFormatRule2);
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -332,6 +355,17 @@
             this.colIptalAciklama.VisibleIndex = 8;
             this.colIptalAciklama.Width = 250;
             // 
+            // colIptalEdildi
+            // 
+            this.colIptalEdildi.Caption = "İptalEdildi";
+            this.colIptalEdildi.FieldName = "IptalEdildi";
+            this.colIptalEdildi.Name = "colIptalEdildi";
+            this.colIptalEdildi.OptionsColumn.AllowEdit = false;
+            this.colIptalEdildi.OptionsColumn.ShowInCustomizationForm = false;
+            this.colIptalEdildi.StatusBarAciklama = null;
+            this.colIptalEdildi.StatusBarKisayol = null;
+            this.colIptalEdildi.StatusBarKisayolAciklama = null;
+            // 
             // IndirimBilgileriTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,5 +406,6 @@
         private Grid.MyGridColumn colIptalNedeniAdi;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryIptalNedeni;
         private Grid.MyGridColumn colIptalAciklama;
+        private Grid.MyGridColumn colIptalEdildi;
     }
 }

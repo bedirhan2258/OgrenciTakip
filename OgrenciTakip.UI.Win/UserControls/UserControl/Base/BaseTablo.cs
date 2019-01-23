@@ -130,6 +130,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 
         protected virtual void IptalEt() { }
 
+        protected virtual void IptalGeriAl() { }
+
         protected internal bool Kaydet()
         {
             insUptNavigator.Navigator.Buttons.DoClick(insUptNavigator.Navigator.Buttons.EndEdit);
@@ -171,6 +173,10 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 HareketSil();
             else if (e.Item == btnKartDuzenle)
                 OpenEntity();
+            else if (e.Item == btnIptalEt)
+                IptalEt();
+            else if (e.Item == btnIptalGeriAl)
+                IptalGeriAl();
 
             Cursor.Current = DefaultCursor;
         }
@@ -256,6 +262,12 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                     break;
                 case Keys.F3:
                     OpenEntity();
+                    break;
+                case Keys.T when e.Control:
+                    IptalEt();
+                    break;
+                case Keys.R when e.Control:
+                    IptalGeriAl();
                     break;
             }
         }
