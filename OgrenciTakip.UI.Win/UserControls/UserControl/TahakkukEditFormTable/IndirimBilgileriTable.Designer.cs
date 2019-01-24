@@ -137,9 +137,9 @@
             this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Öğrenciye Uygulanan İndirimleri Seçiniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Seçim Yap.";
             this.tablo.ViewCaption = "İndirim Bilgileri";
             // 
             // colIndirimAdi
@@ -242,9 +242,9 @@
             this.colBrutIndirim.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colBrutIndirim.OptionsFilter.AllowAutoFilter = false;
             this.colBrutIndirim.OptionsFilter.AllowFilter = false;
-            this.colBrutIndirim.StatusBarAciklama = null;
-            this.colBrutIndirim.StatusBarKisayol = null;
-            this.colBrutIndirim.StatusBarKisayolAciklama = null;
+            this.colBrutIndirim.StatusBarAciklama = "Tutar Giriniz.";
+            this.colBrutIndirim.StatusBarKisayol = "F4";
+            this.colBrutIndirim.StatusBarKisayolAciklama = "Hesap Makinesi.";
             this.colBrutIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutIndirim", "{0:n2}")});
             this.colBrutIndirim.Visible = true;
@@ -273,9 +273,9 @@
             this.colKistDonemDusulenIndirim.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colKistDonemDusulenIndirim.OptionsFilter.AllowAutoFilter = false;
             this.colKistDonemDusulenIndirim.OptionsFilter.AllowFilter = false;
-            this.colKistDonemDusulenIndirim.StatusBarAciklama = null;
-            this.colKistDonemDusulenIndirim.StatusBarKisayol = null;
-            this.colKistDonemDusulenIndirim.StatusBarKisayolAciklama = null;
+            this.colKistDonemDusulenIndirim.StatusBarAciklama = "Tutar Giriniz.";
+            this.colKistDonemDusulenIndirim.StatusBarKisayol = "F4";
+            this.colKistDonemDusulenIndirim.StatusBarKisayolAciklama = "Hesap Makinesi.";
             this.colKistDonemDusulenIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenIndirim", "{0:n2}")});
             this.colKistDonemDusulenIndirim.Visible = true;
@@ -325,9 +325,9 @@
             this.colIptalNedeniAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalNedeniAdi.OptionsFilter.AllowAutoFilter = false;
             this.colIptalNedeniAdi.OptionsFilter.AllowFilter = false;
-            this.colIptalNedeniAdi.StatusBarAciklama = null;
-            this.colIptalNedeniAdi.StatusBarKisayol = null;
-            this.colIptalNedeniAdi.StatusBarKisayolAciklama = null;
+            this.colIptalNedeniAdi.StatusBarAciklama = "İptal Nedeni Seçiniz.";
+            this.colIptalNedeniAdi.StatusBarKisayol = "F4";
+            this.colIptalNedeniAdi.StatusBarKisayolAciklama = "Seçim Yap.";
             this.colIptalNedeniAdi.Visible = true;
             this.colIptalNedeniAdi.VisibleIndex = 7;
             this.colIptalNedeniAdi.Width = 150;
@@ -348,7 +348,7 @@
             this.colIptalAciklama.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalAciklama.OptionsFilter.AllowAutoFilter = false;
             this.colIptalAciklama.OptionsFilter.AllowFilter = false;
-            this.colIptalAciklama.StatusBarAciklama = null;
+            this.colIptalAciklama.StatusBarAciklama = "İptal Açıklaması Giriniz.";
             this.colIptalAciklama.StatusBarKisayol = null;
             this.colIptalAciklama.StatusBarKisayolAciklama = null;
             this.colIptalAciklama.Visible = true;
@@ -362,9 +362,9 @@
             this.colIptalEdildi.Name = "colIptalEdildi";
             this.colIptalEdildi.OptionsColumn.AllowEdit = false;
             this.colIptalEdildi.OptionsColumn.ShowInCustomizationForm = false;
-            this.colIptalEdildi.StatusBarAciklama = null;
-            this.colIptalEdildi.StatusBarKisayol = null;
-            this.colIptalEdildi.StatusBarKisayolAciklama = null;
+            this.colIptalEdildi.StatusBarAciklama = "Tarih Seçiniz.";
+            this.colIptalEdildi.StatusBarKisayol = "F4";
+            this.colIptalEdildi.StatusBarKisayolAciklama = "Seçim Yap.";
             // 
             // IndirimBilgileriTable
             // 

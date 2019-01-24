@@ -148,9 +148,9 @@
             this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Öğrenciye Verilen Hizmetleri Seçiniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Seçim Yap.";
             this.tablo.ViewCaption = "Hizmet Bilgileri";
             // 
             // colHizmetId
@@ -431,9 +431,9 @@
             this.colIptalTarihi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalTarihi.OptionsFilter.AllowAutoFilter = false;
             this.colIptalTarihi.OptionsFilter.AllowFilter = false;
-            this.colIptalTarihi.StatusBarAciklama = null;
-            this.colIptalTarihi.StatusBarKisayol = null;
-            this.colIptalTarihi.StatusBarKisayolAciklama = null;
+            this.colIptalTarihi.StatusBarAciklama = "Tarih Seçiniz.";
+            this.colIptalTarihi.StatusBarKisayol = "F4";
+            this.colIptalTarihi.StatusBarKisayolAciklama = "Seçim Yap.";
             this.colIptalTarihi.Visible = true;
             this.colIptalTarihi.VisibleIndex = 9;
             this.colIptalTarihi.Width = 100;
@@ -471,9 +471,9 @@
             this.colIptalNedeniAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalNedeniAdi.OptionsFilter.AllowAutoFilter = false;
             this.colIptalNedeniAdi.OptionsFilter.AllowFilter = false;
-            this.colIptalNedeniAdi.StatusBarAciklama = null;
-            this.colIptalNedeniAdi.StatusBarKisayol = null;
-            this.colIptalNedeniAdi.StatusBarKisayolAciklama = null;
+            this.colIptalNedeniAdi.StatusBarAciklama = "İptal Nedeni Seçiniz.";
+            this.colIptalNedeniAdi.StatusBarKisayol = "F4";
+            this.colIptalNedeniAdi.StatusBarKisayolAciklama = "Seçim Yap.";
             this.colIptalNedeniAdi.Visible = true;
             this.colIptalNedeniAdi.VisibleIndex = 10;
             this.colIptalNedeniAdi.Width = 150;
@@ -509,9 +509,9 @@
             this.colGittigiOkulAdi.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colGittigiOkulAdi.OptionsFilter.AllowAutoFilter = false;
             this.colGittigiOkulAdi.OptionsFilter.AllowFilter = false;
-            this.colGittigiOkulAdi.StatusBarAciklama = null;
-            this.colGittigiOkulAdi.StatusBarKisayol = null;
-            this.colGittigiOkulAdi.StatusBarKisayolAciklama = null;
+            this.colGittigiOkulAdi.StatusBarAciklama = "Okul Seçiniz.";
+            this.colGittigiOkulAdi.StatusBarKisayol = "F4";
+            this.colGittigiOkulAdi.StatusBarKisayolAciklama = "Seçim Yap.";
             this.colGittigiOkulAdi.Visible = true;
             this.colGittigiOkulAdi.VisibleIndex = 11;
             this.colGittigiOkulAdi.Width = 200;
@@ -535,7 +535,7 @@
             this.colIptalAciklama.OptionsColumn.AllowSort = DevExpress.Utils.DefaultBoolean.False;
             this.colIptalAciklama.OptionsFilter.AllowAutoFilter = false;
             this.colIptalAciklama.OptionsFilter.AllowFilter = false;
-            this.colIptalAciklama.StatusBarAciklama = null;
+            this.colIptalAciklama.StatusBarAciklama = "İptal Açıklaması Giriniz.";
             this.colIptalAciklama.StatusBarKisayol = null;
             this.colIptalAciklama.StatusBarKisayolAciklama = null;
             this.colIptalAciklama.Visible = true;

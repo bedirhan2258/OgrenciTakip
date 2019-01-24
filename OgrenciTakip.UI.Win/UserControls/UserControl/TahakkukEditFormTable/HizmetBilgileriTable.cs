@@ -309,7 +309,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 e.FocusedColumn.Sec(tablo, insUptNavigator.Navigator, repositoryIptalNedeni, colIptalNedeniId);
 
             else if (e.FocusedColumn == colGittigiOkulAdi)
-                e.FocusedColumn.Sec(tablo, insUptNavigator.Navigator, repositoryGittigiOKul, colGittigiOkulAdi);
+                e.FocusedColumn.Sec(tablo, insUptNavigator.Navigator, repositoryGittigiOKul, colGittigiOkulId);
 
             else if (e.FocusedColumn == colIptalTarihi)
             {
