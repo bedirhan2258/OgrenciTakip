@@ -223,6 +223,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         }
 
+        protected virtual void TaksitOlustur() { }
+
         protected virtual bool EntityUpdate()
         {
             return ((IBaseGenelBll)bll).Update(oldEntity, currentEnttiy);
@@ -396,6 +398,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 FiltreUygula();
             }
+            else if (e.Item == btnTaksitOlustur)
+            {
+                TaksitOlustur();
+            }
             else if (e.Item == btnYazdir)
             {
                 Yazdir();
@@ -408,8 +414,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Close();
             }
+
             Cursor.Current = DefaultCursor;
         }
+
+
 
         protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
 

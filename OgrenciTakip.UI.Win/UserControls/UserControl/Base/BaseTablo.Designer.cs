@@ -41,6 +41,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnBelgeHareketleri = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +61,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnHareketSil),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnKartDuzenle),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnIptalEt),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnIptalGeriAl)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnIptalGeriAl),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBelgeHareketleri)});
             this.popupMenu.Manager = this.barManager;
             this.popupMenu.Name = "popupMenu";
             // 
@@ -121,8 +123,9 @@
             this.btnHareketSil,
             this.btnKartDuzenle,
             this.btnIptalEt,
-            this.btnIptalGeriAl});
-            this.barManager.MaxItemId = 7;
+            this.btnIptalGeriAl,
+            this.btnBelgeHareketleri});
+            this.barManager.MaxItemId = 8;
             // 
             // barDockControlTop
             // 
@@ -156,6 +159,15 @@
             this.barDockControlRight.Manager = this.barManager;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 289);
             // 
+            // btnBelgeHareketleri
+            // 
+            this.btnBelgeHareketleri.Caption = "BelgeHareketleri";
+            this.btnBelgeHareketleri.Id = 7;
+            this.btnBelgeHareketleri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.documentmap_16x16;
+            this.btnBelgeHareketleri.Name = "btnBelgeHareketleri";
+            this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F4";
+            this.btnBelgeHareketleri.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // BaseTablo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,5 +199,6 @@
         protected DevExpress.XtraBars.BarButtonItem btnIptalEt;
         protected DevExpress.XtraBars.BarButtonItem btnIptalGeriAl;
         protected DevExpress.XtraBars.BarButtonItem btnHareketSil;
+        protected DevExpress.XtraBars.BarButtonItem btnBelgeHareketleri;
     }
 }

@@ -67,7 +67,7 @@ namespace OgrenciTakip.Common.Message
         {
             UyariMesaji($"İşlem Yapılabilecek {kartTuru} Bulunamadı.");
         }
-         public static void TabloEksikBilgiMesaji(string tabloAdi)
+        public static void TabloEksikBilgiMesaji(string tabloAdi)
         {
             UyariMesaji($"{tabloAdi}nda Eksik Bilgi Girişi Var. Lütfen Kontrol Ediniz.");
         }
@@ -85,6 +85,11 @@ namespace OgrenciTakip.Common.Message
         public static DialogResult IptalGeriAlMesaj(string kartAdi)
         {
             return HayirSeciliEvetHayir($"Seçtiğiniz {kartAdi} Kartına Uygulanan İptal İşlemi Geri Alınacaktır.Onaylıyor musunuz?", "İptal Gerial Onayı");
+        }
+
+        public static void SecimHataMesaji(string alanAdi)
+        {
+            HataMesaji($"{alanAdi} Seçimi Yapmalısınız.");
         }
     }
 }

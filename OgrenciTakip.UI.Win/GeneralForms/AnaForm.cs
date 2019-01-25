@@ -45,7 +45,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         public static DateTime EgitimBaslamaTarihi = new DateTime(2017, 09, 15);
         public static DateTime DonemBaslamaTarihi = new DateTime(2017, 07, 01);
-        public static DateTime DonemBitisTarihi = new DateTime(2018, 06, 20);
+        public static DateTime DonemBitisTarihi = new DateTime(2018, 06, 30);
         public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = false;
         public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = false;
         public static bool GunTarihininOncesineIptalTarihiGirilebilir = false;
@@ -53,6 +53,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static bool HizmetTahakkukKurusKullan;
         public static bool IndirimTahakkukKurusKullan = false;
         public static bool GittigiOkulZorunlu = true;
+        public static DateTime MaksimumTaksitTarihi = new DateTime(2018, 06, 30);
+        public static byte MaksimumTaksitSayisi = 12;
 
         public AnaForm()
         {
