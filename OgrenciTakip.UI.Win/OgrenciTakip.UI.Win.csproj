@@ -499,6 +499,7 @@
     <Compile Include="Functions\SelectRepositoryFunctions.cs" />
     <Compile Include="Functions\SelectRowFunctions.cs" />
     <Compile Include="Functions\TablePrintingFunctions.cs" />
+    <Compile Include="Functions\YaziyaCevir.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>

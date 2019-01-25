@@ -210,7 +210,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Name.FormSablonYukle(this);
         }
 
-        private void SablonKaydet()
+        public void SablonKaydet()
         {
             if (_formSablonKayitEdilecek)
                 Name.FormSablonKaydet(Left, Top, Width, Height, WindowState);
@@ -304,7 +304,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             _formSablonKayitEdilecek = true;
         }
 
-        private void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
+        protected virtual void BaseEditForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             SablonKaydet();
             if (btnKaydet.Visibility == BarItemVisibility.Never || !btnKaydet.Enabled) return;

@@ -3,6 +3,7 @@ using OgrenciTakip.Model;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
+using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.BankaSubeForms;
 using OgrenciTakip.UI.Win.Forms.GorevForms;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
@@ -33,11 +34,19 @@ namespace OgrenciTakip.UI.Win.Functions
         private MyButtonEdit _btnEdit;
         private MyButtonEdit _prmEdit;
         private KartTuru _kartTuru;
+        private OdemeTipi _odemeTipi;
         #endregion
 
         public void Sec(MyButtonEdit btnEdit)
         {
             _btnEdit = btnEdit;
+            SecimYap();
+        }
+
+        public void Sec(MyButtonEdit btnEdit, OdemeTipi odemeTipi)
+        {
+            _btnEdit = btnEdit;
+            _odemeTipi = odemeTipi;
             SecimYap();
         }
 
@@ -292,6 +301,18 @@ namespace OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.AdiSoyadi;
+                        }
+                    }
+                    break;
+
+                case "txtBankaHesap":
+                    {
+                        var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, _btnEdit.Id, _odemeTipi);
+                        if (entity != null)
+                        {
+                            _btnEdit.Tag = entity.BlokeGunSayisi;
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.HesapAdi;
                         }
                     }
                     break;
