@@ -10,6 +10,7 @@ using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
+using OgrenciTakip.UI.Win.Forms.BankaSubeForms;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using OgrenciTakip.UI.Win.IptalNedeniForms;
@@ -25,6 +26,8 @@ namespace OgrenciTakip.UI.Win.Functions
         private static RepositoryItemButtonEdit _buttonEdit;
         private static GridColumn _idColumn;
         private static GridColumn _nameColumn;
+        private static GridColumn _prmIdColumn;
+        private static GridColumn _prmNameColumn;
         #endregion
 
         private static void RemoveEvent()
@@ -51,6 +54,24 @@ namespace OgrenciTakip.UI.Win.Functions
             _buttonEdit.DoubleClick += ButtonEdit_DoubleClick;
             _tablo.KeyDown += Tablo_KeyDown;
         }
+
+        public static void Sec(this GridColumn nameColumn, GridView tablo, ControlNavigator navigator, RepositoryItemButtonEdit buttonEdit, GridColumn idColumn, GridColumn prmIdColumn, GridColumn prmNameColumn)
+        {
+            RemoveEvent();
+            _tablo = tablo;
+            _navigator = navigator;
+            _buttonEdit = buttonEdit;
+            _idColumn = idColumn;
+            _nameColumn = nameColumn;
+            _prmIdColumn = prmIdColumn;
+            _prmNameColumn = prmNameColumn;
+
+            _buttonEdit.ButtonClick += ButtonEdit_ButtonClick;
+            _buttonEdit.KeyDown += ButtonEdit_KeyDown;
+            _buttonEdit.DoubleClick += ButtonEdit_DoubleClick;
+            _tablo.KeyDown += Tablo_KeyDown;
+        }
+
 
         private static void ButtonEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -106,6 +127,7 @@ namespace OgrenciTakip.UI.Win.Functions
             {
                 case "repositoryYakinlik":
                     {
+
                         var id = _tablo.GetRowCellId(_idColumn);
 
                         var entity = (Yakinlik)ShowListForms<YakinlikListForm>.ShowDialogListForm(KartTuru.Yakinlik, id);
@@ -120,6 +142,8 @@ namespace OgrenciTakip.UI.Win.Functions
 
                 case "repositoryBanka":
                     {
+                        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+
                         var id = _tablo.GetRowCellId(_idColumn);
 
                         var entity = (BankaL)ShowListForms<BankaListForm>.ShowDialogListForm(KartTuru.Banka, id);
@@ -132,8 +156,28 @@ namespace OgrenciTakip.UI.Win.Functions
                     }
                     break;
 
+                case "repositoryBankaSube":
+                    {
+                        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+
+                        var id = _tablo.GetRowCellId(_idColumn);
+                        var bankaId = _tablo.GetRowCellId(_prmIdColumn);
+                        var bankaAdi = _tablo.GetFocusedRowCellValue(_prmNameColumn).ToString();
+
+                        var entity = (BankaSube)ShowListForms<BankaSubeListForm>.ShowDialogListForm(KartTuru.BankaSube, id, bankaId, bankaAdi);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.SubeAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+
                 case "repositoryIptalNedeni":
                     {
+                        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+
                         var id = _tablo.GetRowCellId(_idColumn);
 
                         var entity = (IptalNedeni)ShowListForms<IptalNedeniListForm>.ShowDialogListForm(KartTuru.IptalNedeni, id);
@@ -148,6 +192,8 @@ namespace OgrenciTakip.UI.Win.Functions
 
                 case "repositoryGittigiOKul":
                     {
+                        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+
                         var id = _tablo.GetRowCellId(_idColumn);
 
                         var entity = (OkulL)ShowListForms<OkulListForm>.ShowDialogListForm(KartTuru.Okul, id);

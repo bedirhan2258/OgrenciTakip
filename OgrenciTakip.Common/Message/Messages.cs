@@ -67,6 +67,7 @@ namespace OgrenciTakip.Common.Message
         {
             UyariMesaji($"İşlem Yapılabilecek {kartTuru} Bulunamadı.");
         }
+
         public static void TabloEksikBilgiMesaji(string tabloAdi)
         {
             UyariMesaji($"{tabloAdi}nda Eksik Bilgi Girişi Var. Lütfen Kontrol Ediniz.");
@@ -90,6 +91,11 @@ namespace OgrenciTakip.Common.Message
         public static void SecimHataMesaji(string alanAdi)
         {
             HataMesaji($"{alanAdi} Seçimi Yapmalısınız.");
+        }
+
+        public static void OdemeBelgesiSilinemezMesaj(bool dahaSonra)
+        {
+            UyariMesaji(dahaSonra ? "Ödeme Belgesinin Daha Sonra İşlem Görmüş Hareketleri Var. Ödeme Belgesi Silinemez" : "Ödeme Belgesinin İşlem Görmüş Harektleri Var.Ödeme Belgesi Silinemez");
         }
     }
 }

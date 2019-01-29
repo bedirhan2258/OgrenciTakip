@@ -35,6 +35,17 @@ namespace OgrenciTakip.UI.Win.Show
                 return frm.refreshYapilacak ? frm.id : 0;
             }
         }
+
+        public static bool ShowDialogEditForms(params object[] prm)
+        {
+            //Yetki kontrolü yapılacak
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+            {
+                frm.Yukle();
+                return frm.DialogResult == DialogResult.OK;
+            }
+        }
+
         public static T ShowDialogEditForms<T>(params object[] prm) where T : IBaseEntity
         {
             using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))

@@ -29,15 +29,15 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         private bool _maksimumTaksitSayisinaUlasildi;
         #endregion
 
-        public TopluOdemePlaniEditForm(IList source, long tahakkukId, decimal bakiye, DateTime kayitTarihi, int dahaOnceGirilenTaksitSayisi, bool maksimumTaksitSayisinaUlasildi)
+        public TopluOdemePlaniEditForm(params object[] prm)
         {
             InitializeComponent();
-            _source = source;
-            _tahakkukId = tahakkukId;
-            _bakiye = bakiye;
-            _kayitTarihi = kayitTarihi;
-            _dahaOnceGirilenTaksitSayisi = dahaOnceGirilenTaksitSayisi;
-            _maksimumTaksitSayisinaUlasildi = maksimumTaksitSayisinaUlasildi;
+
+            _source = (IList)prm[0];
+            _tahakkukId = (long)prm[1];
+            _bakiye = (decimal)prm[2];
+            _kayitTarihi = (DateTime)prm[3];
+            _dahaOnceGirilenTaksitSayisi = (int)prm[4];
 
             dataLayoutControl = myDataLayoutControl;
             EventsLoad();
@@ -56,10 +56,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             txtTaksitSayisi.Properties.MinValue = 1;
             txtTaksitSayisi.Properties.MaxValue = AnaForm.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi;
 
-            if (AnaForm.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi > 0) return;
-            Messages.HataMesaji("Maksimum Taksit Sayısı Aşılıyor.");
-            _maksimumTaksitSayisinaUlasildi = true;
-
+            if (AnaForm.MaksimumTaksitSayisi - _dahaOnceGirilenTaksitSayisi > 0)
+                ShowDialog();
+            else
+            {
+                Messages.HataMesaji("Maksimum Taksit Sayısı Aşılıyor.");
+            }
         }
 
         private void ControlEnabledChange(OdemeTipi odemeTipi)
