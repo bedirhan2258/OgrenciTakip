@@ -36,12 +36,12 @@
             this.btnKartDuzenle = new DevExpress.XtraBars.BarButtonItem();
             this.btnIptalEt = new DevExpress.XtraBars.BarButtonItem();
             this.btnIptalGeriAl = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBelgeHareketleri = new DevExpress.XtraBars.BarButtonItem();
             this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.btnBelgeHareketleri = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +111,15 @@
             this.btnIptalGeriAl.ShortcutKeyDisplayString = "Ctrl+R";
             this.btnIptalGeriAl.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnBelgeHareketleri
+            // 
+            this.btnBelgeHareketleri.Caption = "BelgeHareketleri";
+            this.btnBelgeHareketleri.Id = 7;
+            this.btnBelgeHareketleri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.documentmap_16x16;
+            this.btnBelgeHareketleri.Name = "btnBelgeHareketleri";
+            this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F4";
+            this.btnBelgeHareketleri.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // barManager
             // 
             this.barManager.DockControls.Add(this.barDockControlTop);
@@ -159,15 +168,6 @@
             this.barDockControlRight.Manager = this.barManager;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 289);
             // 
-            // btnBelgeHareketleri
-            // 
-            this.btnBelgeHareketleri.Caption = "BelgeHareketleri";
-            this.btnBelgeHareketleri.Id = 7;
-            this.btnBelgeHareketleri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.documentmap_16x16;
-            this.btnBelgeHareketleri.Name = "btnBelgeHareketleri";
-            this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F4";
-            this.btnBelgeHareketleri.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            // 
             // BaseTablo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,10 +195,10 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         protected DevExpress.XtraBars.BarButtonItem btnKartDuzenle;
-        protected Navigators.InsUptNavigator insUptNavigator;
         protected DevExpress.XtraBars.BarButtonItem btnIptalEt;
         protected DevExpress.XtraBars.BarButtonItem btnIptalGeriAl;
         protected DevExpress.XtraBars.BarButtonItem btnHareketSil;
         protected DevExpress.XtraBars.BarButtonItem btnBelgeHareketleri;
+        protected internal Navigators.InsUptNavigator insUptNavigator;
     }
 }

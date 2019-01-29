@@ -329,7 +329,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             SecimYap(sender);
         }
 
-        private void Control_IdChanged(object sender, IdChangedEventArgs e)
+        protected virtual void Control_IdChanged(object sender, IdChangedEventArgs e)
         {
             if (!isLoaded) return;
             GuncelNesneOlustur();

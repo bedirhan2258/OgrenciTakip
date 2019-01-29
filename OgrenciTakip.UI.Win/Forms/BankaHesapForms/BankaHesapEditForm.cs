@@ -61,6 +61,8 @@ namespace OgrenciTakip.UI.Win.Forms.BankaHesapForms
         }
         protected override void GuncelNesneOlustur()
         {
+            BankaHesapTuru hesap= txtHesapTuru.Text.GetEnum<BankaHesapTuru>();
+
             currentEnttiy = new BankaHesap
             {
                 Id = id,

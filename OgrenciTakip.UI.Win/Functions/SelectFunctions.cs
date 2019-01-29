@@ -14,6 +14,7 @@ using OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using OgrenciTakip.UI.Win.Forms.KontenjanForms;
 using OgrenciTakip.UI.Win.Forms.MeslekForms;
+using OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using OgrenciTakip.UI.Win.Forms.OzelKodForms;
 using OgrenciTakip.UI.Win.Forms.RehberForms;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
@@ -313,6 +314,18 @@ namespace OgrenciTakip.UI.Win.Functions
                             _btnEdit.Tag = entity.BlokeGunSayisi;
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.HesapAdi;
+                        }
+                    }
+                    break;
+
+                case "txtOdemeTuru":
+                    {
+                        var entity = (OdemeTuru)ShowListForms<OdemeTuruListForm>.ShowDialogListForm(KartTuru.OdemeTuru, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Tag = entity.OdemeTipi;
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.OdemeTuruAdi;
                         }
                     }
                     break;

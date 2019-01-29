@@ -23,6 +23,8 @@ namespace OgrenciTakip.UI.Win.Forms.BankaHesapForms
             bll = new BankaHesapBll();
             _filter = x => x.Durum == aktifKartlariGoster && x.SubeId == AnaForm.SubeId;
         }
+
+
         public BankaHesapListForm(params object[] prm) : this()
         {
             if (prm[0].GetType() == typeof(BankaHesapTuru))

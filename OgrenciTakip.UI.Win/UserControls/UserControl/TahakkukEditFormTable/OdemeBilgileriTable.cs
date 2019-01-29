@@ -92,7 +92,6 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             colVade.OptionsColumn.AllowEdit = entity.SonHareketId == null;
             colTutar.OptionsColumn.AllowEdit = entity.SonHareketId == null;
             colTakipNo.OptionsColumn.AllowEdit = entity.SonHareketId == null;
-            colBlokeGunSayisi.OptionsColumn.AllowEdit = entity.SonHareketId == null;
             colBankaAdi.OptionsColumn.AllowEdit = entity.SonHareketId == null;
             colBankaSubeAdi.OptionsColumn.AllowEdit = entity.SonHareketId == null;
             colHesapNo.OptionsColumn.AllowEdit = entity.SonHareketId == null;

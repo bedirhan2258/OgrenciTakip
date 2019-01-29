@@ -7,9 +7,11 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
+using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.BankaSubeForms;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
@@ -169,6 +171,24 @@ namespace OgrenciTakip.UI.Win.Functions
                         {
                             _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
                             _tablo.SetFocusedRowCellValue(_nameColumn, entity.SubeAdi);
+                            _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                        }
+                    }
+                    break;
+
+                case "repositoryBankaHesap":
+                    {
+                        if (!_nameColumn.OptionsColumn.AllowEdit) return;
+
+                        var id = _tablo.GetRowCellId(_idColumn);
+                        var odemeTipi = _tablo.GetFocusedRowCellValue("OdemeTipi").ToString().GetEnum<OdemeTipi>();
+
+                        var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, id, odemeTipi);
+                        if (entity != null)
+                        {
+                            _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                            _tablo.SetFocusedRowCellValue(_nameColumn, entity.HesapAdi);
+                            _tablo.SetFocusedRowCellValue("BlokeGunSayisi", entity.BlokeGunSayisi);
                             _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
                         }
                     }

@@ -33,6 +33,12 @@ namespace OgrenciTakip.Common.Functions
         }
         public static T GetEnum<T>(this string description)
         {
+            //Enumu gönderdiğimiz zaman enum type olarak kendisini almış oluyoruz.Bu işlemi toplu ödeme bilgileri tabledeki çek seçeerkenki hatada 
+            //dolayısıyla yazdım.
+
+            if (Enum.IsDefined(typeof(T), description))
+                return (T)Enum.Parse(typeof(T), description, true);
+
             //Burada gelen enumların değerlerini yakalıyruz.Descriptionlarını yukarıki fonksiyonda  yakalıyoruz.
             var enumNames = Enum.GetNames(typeof(T));
             foreach (var e in enumNames.Select(x => Enum.Parse(typeof(T), x)).Where(y => description == ToName((Enum)y)))

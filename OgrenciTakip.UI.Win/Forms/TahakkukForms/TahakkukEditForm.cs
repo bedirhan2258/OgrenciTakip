@@ -14,6 +14,7 @@ using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
 using System;
+using System.Drawing;
 using System.Linq;
 
 namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
@@ -110,6 +111,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
             indirimBilgileriTable.OwnerForm = this;
             indirimBilgileriTable.Yukle();
+
+            odemeBilgileriTable.OwnerForm = this;
+            odemeBilgileriTable.Yukle();
+            odemeBilgileriTable.insUptNavigator.Navigator.TextLocation = NavigatorButtonsTextLocation.Begin;
+            odemeBilgileriTable.insUptNavigator.Navigator.TextStringFormat = "Taksit ( {0} / {1} )";
+            odemeBilgileriTable.insUptNavigator.Navigator.Appearance.ForeColor = SystemColors.HotTrack;
 
         }
 
@@ -251,6 +258,13 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 return true;
             }
 
+            if (odemeBilgileriTable.HataliGiris())
+            {
+                tabAlt.SelectedPage = pageOdemeBilgileri;
+                odemeBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
+
             return false;
         }
 
@@ -297,6 +311,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (_bilgiNotlariTable != null && _bilgiNotlariTable.TableValueChanged) return true;
                 if (hizmetBilgileriTable.TableValueChanged) return true;
                 if (indirimBilgileriTable.TableValueChanged) return true;
+                if (odemeBilgileriTable.TableValueChanged) return true;
 
                 return false;
             }
@@ -319,6 +334,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (_bilgiNotlariTable != null && !_bilgiNotlariTable.Kaydet()) return false;
             if (!hizmetBilgileriTable.Kaydet()) return false;
             if (!indirimBilgileriTable.Kaydet()) return false;
+            if (!odemeBilgileriTable.Kaydet()) return false;
             return true;
         }
 
@@ -419,6 +435,12 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             {
                 indirimBilgileriTable.Tablo.GridControl.Focus();
             }
+
+            else if (e.Page == pageOdemeBilgileri)
+            {
+                odemeBilgileriTable.Tablo.GridControl.Focus();
+            }
+
         }
 
     }

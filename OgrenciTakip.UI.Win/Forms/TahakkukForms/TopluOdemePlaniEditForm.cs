@@ -9,6 +9,7 @@ using OgrenciTakip.Model.DTO;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
 using System.Collections;
 using System.Windows.Forms;
@@ -78,7 +79,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
         private bool HataliGiris()
         {
-            if (txtIlkTaksitTarihi.DateTime.Date.AddMonths((int)txtTaksitSayisi.Value) > AnaForm.MaksimumTaksitTarihi)
+            if (txtIlkTaksitTarihi.DateTime.Date.AddMonths((int)txtTaksitSayisi.Value - 1) > AnaForm.MaksimumTaksitTarihi)
             {
                 Messages.HataMesaji("Maksimum Taksit Tarihi Aşılıyor.");
                 return true;
@@ -105,7 +106,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 return true;
             }
 
-            if (_odemeTipi == OdemeTipi.Senet || _odemeTipi == OdemeTipi.Cek && string.IsNullOrEmpty(txtAsilBorclu.Text))
+            if ((_odemeTipi == OdemeTipi.Senet || _odemeTipi == OdemeTipi.Cek) && string.IsNullOrEmpty(txtAsilBorclu.Text))
             {
                 Messages.HataliVeriMesaji("Asıl Borçlu");
                 txtAsilBorclu.Focus();
@@ -216,7 +217,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             }
         }
 
-        protected override void Control_EditValueChanged(object sender, EventArgs e)
+        protected override void Control_IdChanged(object sender, IdChangedEventArgs e)
         {
             if (sender == txtOdemeTuru)
             {
