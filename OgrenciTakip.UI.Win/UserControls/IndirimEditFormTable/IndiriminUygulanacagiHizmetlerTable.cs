@@ -27,7 +27,7 @@ namespace OgrenciTakip.UI.Win.UserControls.IndirimEditFormTable
         {
             //Bana sorgu sonucundan toList tipinde bişey geliyor fakat bunu benım TobinngList şeklinde cast etmem gerekiyor.Çünkü Yeni butonu pasif olarak gelıyor.
             //Bunu için generafucntions class içinde TobindingList adlı method oluşturuldu.
-            tablo.GridControl.DataSource = ((IndiriminUygulanacagiHizmetBilgileriBll)Bll).List(x => x.IndirimId == OwnerForm.id).ToBingingList<IndiriminUygulanacagiHizmetBilgileriL>();
+            tablo.GridControl.DataSource = ((IndiriminUygulanacagiHizmetBilgileriBll)Bll).List(x => x.IndirimId == OwnerForm.id).ToBindingList<IndiriminUygulanacagiHizmetBilgileriL>();
         }
         protected override void HareketEkle()
         {

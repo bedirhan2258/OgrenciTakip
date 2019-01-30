@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
         }
         protected override void Listele()
         {
-            tablo.GridControl.DataSource = ((BilgiNotlariBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBingingList<BilgiNotlariL>();
+            tablo.GridControl.DataSource = ((BilgiNotlariBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBindingList<BilgiNotlariL>();
         }
 
         protected override void HareketEkle()

@@ -265,7 +265,7 @@ namespace OgrenciTakip.UI.Win.Functions
             }
         }
 
-        public static BindingList<T> ToBingingList<T>(this IEnumerable<BaseHareketEntity> list)
+        public static BindingList<T> ToBindingList<T>(this IEnumerable<BaseHareketEntity> list)
         {
             return new BindingList<T>((IList<T>)list);
         }

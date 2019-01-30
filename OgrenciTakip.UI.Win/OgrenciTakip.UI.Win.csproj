@@ -658,6 +658,12 @@
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.Designer.cs">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\GeriOdemeBilgileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\TahakkukEditFormTable\GeriOdemeBilgileriTable.Designer.cs">
+      <DependentUpon>GeriOdemeBilgileriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -959,6 +965,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\EvrakBilgileriTable.resx">
       <DependentUpon>EvrakBilgileriTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\GeriOdemeBilgileriTable.resx">
+      <DependentUpon>GeriOdemeBilgileriTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\TahakkukEditFormTable\HizmetBilgileriTable.resx">
       <DependentUpon>HizmetBilgileriTable.cs</DependentUpon>

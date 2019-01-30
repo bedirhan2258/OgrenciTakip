@@ -118,6 +118,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             odemeBilgileriTable.insUptNavigator.Navigator.TextStringFormat = "Taksit ( {0} / {1} )";
             odemeBilgileriTable.insUptNavigator.Navigator.Appearance.ForeColor = SystemColors.HotTrack;
 
+            geriOdemeBilgileriTable.OwnerForm = this;
+            geriOdemeBilgileriTable.Yukle();
         }
 
         protected override void NesneyiKontrollereBagla()
@@ -265,6 +267,13 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 return true;
             }
 
+            if (geriOdemeBilgileriTable.HataliGiris())
+            {
+                tabAlt.SelectedPage = pageGeriOdemeBilgileri;
+                geriOdemeBilgileriTable.Tablo.GridControl.Focus();
+                return true;
+            }
+
             return false;
         }
 
@@ -312,6 +321,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 if (hizmetBilgileriTable.TableValueChanged) return true;
                 if (indirimBilgileriTable.TableValueChanged) return true;
                 if (odemeBilgileriTable.TableValueChanged) return true;
+                if (geriOdemeBilgileriTable.TableValueChanged) return true;
 
                 return false;
             }
@@ -335,6 +345,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (!hizmetBilgileriTable.Kaydet()) return false;
             if (!indirimBilgileriTable.Kaydet()) return false;
             if (!odemeBilgileriTable.Kaydet()) return false;
+            if (!geriOdemeBilgileriTable.Kaydet()) return false;
             return true;
         }
 
@@ -439,6 +450,11 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             else if (e.Page == pageOdemeBilgileri)
             {
                 odemeBilgileriTable.Tablo.GridControl.Focus();
+            }
+
+            else if (e.Page == pageGeriOdemeBilgileri)
+            {
+                geriOdemeBilgileriTable.Tablo.GridControl.Focus();
             }
 
         }

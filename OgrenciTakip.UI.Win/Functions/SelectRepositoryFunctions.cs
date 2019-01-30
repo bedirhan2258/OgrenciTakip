@@ -13,6 +13,7 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
 using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.BankaSubeForms;
+using OgrenciTakip.UI.Win.Forms.KasaForms;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
 using OgrenciTakip.UI.Win.Forms.YakinlikForms;
 using OgrenciTakip.UI.Win.IptalNedeniForms;
@@ -223,6 +224,38 @@ namespace OgrenciTakip.UI.Win.Functions
                             _tablo.SetFocusedRowCellValue(_nameColumn, entity.OkulAdi);
                             _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
                         }
+                    }
+                    break;
+
+                case "repositoryHesap":
+                    {
+
+                        var id = _tablo.GetRowCellId(_idColumn);
+
+                        switch (_tablo.GetRow<GeriOdemeBilgileriL>().HesapTuru)
+                        {
+                            case GeriOdemeHesapTuru.Banka:
+                                {
+                                    var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, id, OdemeTipi.Elden);
+
+                                    if (entity == null) return;
+                                    _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                                    _tablo.SetFocusedRowCellValue(_nameColumn, entity.HesapAdi);
+                                    _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                                    break;
+                                }
+
+                            case GeriOdemeHesapTuru.Kasa:
+                                {
+                                    var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, id);
+                                    if (entity == null) return;
+                                    _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
+                                    _tablo.SetFocusedRowCellValue(_nameColumn, entity.KasaAdi);
+                                    _navigator.Buttons.DoClick(_navigator.Buttons.EndEdit);
+                                    break;
+                                }
+                        }
+
                     }
                     break;
             }

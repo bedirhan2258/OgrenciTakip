@@ -62,7 +62,8 @@
             this.pageIndirimBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.indirimBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable();
             this.pageOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.pageGeriOdemeler = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.odemeBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.OdemeBilgileriTable();
+            this.pageGeriOdemeBilgileri = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.tabUst = new DevExpress.XtraBars.Navigation.TabPane();
             this.pageGenelBilgiler = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.DataLayoutGenelBilgiler = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
@@ -129,7 +130,7 @@
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.odemeBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.OdemeBilgileriTable();
+            this.geriOdemeBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.GeriOdemeBilgileriTable();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataLayoutGenel)).BeginInit();
@@ -139,6 +140,7 @@
             this.pageHizmetBilgileri.SuspendLayout();
             this.pageIndirimBilgileri.SuspendLayout();
             this.pageOdemeBilgileri.SuspendLayout();
+            this.pageGeriOdemeBilgileri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabUst)).BeginInit();
             this.tabUst.SuspendLayout();
             this.pageGenelBilgiler.SuspendLayout();
@@ -242,14 +244,14 @@
             this.tabAlt.Controls.Add(this.pageHizmetBilgileri);
             this.tabAlt.Controls.Add(this.pageIndirimBilgileri);
             this.tabAlt.Controls.Add(this.pageOdemeBilgileri);
-            this.tabAlt.Controls.Add(this.pageGeriOdemeler);
+            this.tabAlt.Controls.Add(this.pageGeriOdemeBilgileri);
             this.tabAlt.Location = new System.Drawing.Point(12, 257);
             this.tabAlt.Name = "tabAlt";
             this.tabAlt.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.pageHizmetBilgileri,
             this.pageIndirimBilgileri,
             this.pageOdemeBilgileri,
-            this.pageGeriOdemeler});
+            this.pageGeriOdemeBilgileri});
             this.tabAlt.RegularSize = new System.Drawing.Size(756, 247);
             this.tabAlt.SelectedPage = this.pageHizmetBilgileri;
             this.tabAlt.Size = new System.Drawing.Size(756, 247);
@@ -300,16 +302,25 @@
             this.pageOdemeBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             this.pageOdemeBilgileri.Name = "pageOdemeBilgileri";
             this.pageOdemeBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            this.pageOdemeBilgileri.Size = new System.Drawing.Size(756, 217);
+            this.pageOdemeBilgileri.Size = new System.Drawing.Size(756, 247);
             // 
-            // pageGeriOdemeler
+            // odemeBilgileriTable
             // 
-            this.pageGeriOdemeler.Caption = "Geri Ödemeler";
-            this.pageGeriOdemeler.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.saledetalis_16x16;
-            this.pageGeriOdemeler.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            this.pageGeriOdemeler.Name = "pageGeriOdemeler";
-            this.pageGeriOdemeler.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
-            this.pageGeriOdemeler.Size = new System.Drawing.Size(756, 247);
+            this.odemeBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.odemeBilgileriTable.Location = new System.Drawing.Point(0, 0);
+            this.odemeBilgileriTable.Name = "odemeBilgileriTable";
+            this.odemeBilgileriTable.Size = new System.Drawing.Size(756, 247);
+            this.odemeBilgileriTable.TabIndex = 0;
+            // 
+            // pageGeriOdemeBilgileri
+            // 
+            this.pageGeriOdemeBilgileri.Caption = "Geri Ödemeler";
+            this.pageGeriOdemeBilgileri.Controls.Add(this.geriOdemeBilgileriTable);
+            this.pageGeriOdemeBilgileri.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.saledetalis_16x16;
+            this.pageGeriOdemeBilgileri.ItemShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
+            this.pageGeriOdemeBilgileri.Name = "pageGeriOdemeBilgileri";
+            this.pageGeriOdemeBilgileri.Properties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
+            this.pageGeriOdemeBilgileri.Size = new System.Drawing.Size(756, 247);
             // 
             // tabUst
             // 
@@ -1434,13 +1445,13 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // odemeBilgileriTable
+            // geriOdemeBilgileriTable
             // 
-            this.odemeBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.odemeBilgileriTable.Location = new System.Drawing.Point(0, 0);
-            this.odemeBilgileriTable.Name = "odemeBilgileriTable";
-            this.odemeBilgileriTable.Size = new System.Drawing.Size(756, 217);
-            this.odemeBilgileriTable.TabIndex = 0;
+            this.geriOdemeBilgileriTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.geriOdemeBilgileriTable.Location = new System.Drawing.Point(0, 0);
+            this.geriOdemeBilgileriTable.Name = "geriOdemeBilgileriTable";
+            this.geriOdemeBilgileriTable.Size = new System.Drawing.Size(756, 247);
+            this.geriOdemeBilgileriTable.TabIndex = 0;
             // 
             // TahakkukEditForm
             // 
@@ -1462,6 +1473,7 @@
             this.pageHizmetBilgileri.ResumeLayout(false);
             this.pageIndirimBilgileri.ResumeLayout(false);
             this.pageOdemeBilgileri.ResumeLayout(false);
+            this.pageGeriOdemeBilgileri.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabUst)).EndInit();
             this.tabUst.ResumeLayout(false);
             this.pageGenelBilgiler.ResumeLayout(false);
@@ -1539,7 +1551,7 @@
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageHizmetBilgileri;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageIndirimBilgileri;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageOdemeBilgileri;
-        private DevExpress.XtraBars.Navigation.TabNavigationPage pageGeriOdemeler;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage pageGeriOdemeBilgileri;
         private DevExpress.XtraBars.Navigation.TabPane tabUst;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageGenelBilgiler;
         private DevExpress.XtraBars.Navigation.TabNavigationPage pageKardesBilgileri;
@@ -1609,5 +1621,6 @@
         protected internal UserControls.UserControl.TahakkukEditFormTable.IndirimBilgileriTable indirimBilgileriTable;
         protected internal UserControls.Controls.MyDateEdit txtKayitTarihi;
         private UserControls.UserControl.TahakkukEditFormTable.OdemeBilgileriTable odemeBilgileriTable;
+        private UserControls.UserControl.TahakkukEditFormTable.GeriOdemeBilgileriTable geriOdemeBilgileriTable;
     }
 }
