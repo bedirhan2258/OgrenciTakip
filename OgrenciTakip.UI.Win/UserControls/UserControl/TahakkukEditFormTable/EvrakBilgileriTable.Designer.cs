@@ -36,6 +36,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
             // 
+            // insUptNavigator
+            // 
+            this.insUptNavigator.Size = new System.Drawing.Size(430, 24);
+            // 
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,9 +79,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Evrak Bilgileri Seçiniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert :";
+            this.tablo.StatusBarKisayolAciklama = "Seçim Yap.";
             this.tablo.ViewCaption = "Evrak Bilgileri";
             // 
             // colEvrakAdi
@@ -116,6 +120,7 @@
             this.Controls.Add(this.grid);
             this.Name = "EvrakBilgileriTable";
             this.Size = new System.Drawing.Size(430, 289);
+            this.Controls.SetChildIndex(this.insUptNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();

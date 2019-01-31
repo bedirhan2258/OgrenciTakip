@@ -98,9 +98,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Sınav Bilgilerini Giriniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Bilgi Giriniz.";
             this.tablo.ViewCaption = "Sınav Bilgileri";
             // 
             // colSinavAdi
@@ -108,7 +108,7 @@
             this.colSinavAdi.Caption = "Sınav Adı";
             this.colSinavAdi.FieldName = "SinavAdi";
             this.colSinavAdi.Name = "colSinavAdi";
-            this.colSinavAdi.StatusBarAciklama = null;
+            this.colSinavAdi.StatusBarAciklama = "Sınav Adı Giriniz.";
             this.colSinavAdi.StatusBarKisayol = null;
             this.colSinavAdi.StatusBarKisayolAciklama = null;
             this.colSinavAdi.Visible = true;
@@ -123,9 +123,9 @@
             this.colTarih.ColumnEdit = this.repositoryTarih;
             this.colTarih.FieldName = "Tarih";
             this.colTarih.Name = "colTarih";
-            this.colTarih.StatusBarAciklama = null;
-            this.colTarih.StatusBarKisayol = null;
-            this.colTarih.StatusBarKisayolAciklama = null;
+            this.colTarih.StatusBarAciklama = "Tarih Seçiniz.";
+            this.colTarih.StatusBarKisayol = "F4 :";
+            this.colTarih.StatusBarKisayolAciklama = "Seçim Yap.";
             this.colTarih.Visible = true;
             this.colTarih.VisibleIndex = 1;
             this.colTarih.Width = 100;
@@ -146,7 +146,7 @@
             this.colPuanTuru.Caption = "Puan Türü";
             this.colPuanTuru.FieldName = "PuanTuru";
             this.colPuanTuru.Name = "colPuanTuru";
-            this.colPuanTuru.StatusBarAciklama = null;
+            this.colPuanTuru.StatusBarAciklama = "Puan  Türü Giriniz.";
             this.colPuanTuru.StatusBarKisayol = null;
             this.colPuanTuru.StatusBarKisayolAciklama = null;
             this.colPuanTuru.Visible = true;
@@ -159,7 +159,7 @@
             this.colPuan.ColumnEdit = this.repositoryPuan;
             this.colPuan.FieldName = "Puan";
             this.colPuan.Name = "colPuan";
-            this.colPuan.StatusBarAciklama = null;
+            this.colPuan.StatusBarAciklama = "Puan Giriniz.";
             this.colPuan.StatusBarKisayol = null;
             this.colPuan.StatusBarKisayolAciklama = null;
             this.colPuan.Visible = true;
@@ -189,7 +189,7 @@
             this.colSira.ColumnEdit = this.repositorySira;
             this.colSira.FieldName = "Sira";
             this.colSira.Name = "colSira";
-            this.colSira.StatusBarAciklama = null;
+            this.colSira.StatusBarAciklama = "Sınav Sırası Giriniz.";
             this.colSira.StatusBarKisayol = null;
             this.colSira.StatusBarKisayolAciklama = null;
             this.colSira.Visible = true;
@@ -215,7 +215,7 @@
             this.colYuzde.ColumnEdit = this.repositoryYuzde;
             this.colYuzde.FieldName = "Yuzde";
             this.colYuzde.Name = "colYuzde";
-            this.colYuzde.StatusBarAciklama = null;
+            this.colYuzde.StatusBarAciklama = "Sınav Başarı Yüzdesi Giriniz.";
             this.colYuzde.StatusBarKisayol = null;
             this.colYuzde.StatusBarKisayolAciklama = null;
             this.colYuzde.Visible = true;
@@ -244,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grid);
             this.Name = "SinavBilgileriTable";
+            this.Controls.SetChildIndex(this.insUptNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();

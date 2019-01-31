@@ -36,6 +36,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
             // 
+            // insUptNavigator
+            // 
+            this.insUptNavigator.Location = new System.Drawing.Point(0, 245);
+            this.insUptNavigator.Size = new System.Drawing.Size(549, 24);
+            // 
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -75,9 +80,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Aile Bilgileri Ekleyiniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Bilgi Ekle";
             this.tablo.ViewCaption = "Aile Bilgileri";
             // 
             // colBilgiAdi
@@ -98,7 +103,7 @@
             this.colAciklama.Caption = "Açıklama";
             this.colAciklama.FieldName = "Aciklama";
             this.colAciklama.Name = "colAciklama";
-            this.colAciklama.StatusBarAciklama = null;
+            this.colAciklama.StatusBarAciklama = "Açıklama Giriniz.";
             this.colAciklama.StatusBarKisayol = null;
             this.colAciklama.StatusBarKisayolAciklama = null;
             this.colAciklama.Visible = true;
@@ -112,6 +117,7 @@
             this.Controls.Add(this.grid);
             this.Name = "AileBilgileriTable";
             this.Size = new System.Drawing.Size(549, 269);
+            this.Controls.SetChildIndex(this.insUptNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();

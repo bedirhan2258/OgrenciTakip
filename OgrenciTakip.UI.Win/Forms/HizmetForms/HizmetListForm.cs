@@ -37,13 +37,14 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
             }
 
             _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId && x.Durum == aktifKartlariGoster;
+           
         }
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
             kartTuru = KartTuru.Hizmet;
             formShow = new ShowEditForms<HizmetEditForm>();
-            navigator = longNavigator.Navigator;
+            navigator = longNavigator.Navigator; 
             TarihAyarla();
         }
         protected override void Listele()

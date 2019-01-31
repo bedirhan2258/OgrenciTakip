@@ -41,7 +41,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
         {
             var source = tablo.DataController.ListSource;
             ListeDisiTutulacakKayitlar = source.Cast<HizmetBilgileriL>().Where(x => !x.IptalEdildi && !x.Delete).Select(x => x.HizmetId).ToList();
-            var entities = ShowListForms<HizmetListForm>.ShowDialogListForm(KartTuru.Hizmet, ListeDisiTutulacakKayitlar, true, false).EntityListConvert<HizmetL>();
+            var entities = ShowListForms<HizmetListForm>.ShowDialogListForm(KartTuru.Hizmet, ListeDisiTutulacakKayitlar, true, true).EntityListConvert<HizmetL>();
             if (entities == null) return;
 
             foreach (var entity in entities)
@@ -61,6 +61,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                     HizmetTuruId = entity.HizmetTuruId,
                     HizmetTipi = entity.HizmetTipi,
                     IslemTarihi = DateTime.Now.Date,
+                    //Başlama Tarihi Doğru gelmiyor sorulcak
                     BaslamaTarihi = entity.BaslamaTarihi,
                     BrutUcret = entity.Ucret,
                     KistDonemDusulenUcret = 0,

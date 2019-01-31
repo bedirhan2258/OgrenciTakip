@@ -103,6 +103,7 @@
             this.tablo.OptionsView.ColumnAutoWidth = false;
             this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
             this.tablo.OptionsView.RowAutoHeight = true;
+            this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
             this.tablo.StatusBarAciklama = "Geri Ödeme Bilgileri Giriniz.";
@@ -207,6 +208,8 @@
             this.colTutar.StatusBarAciklama = "Tutar Giriniz.";
             this.colTutar.StatusBarKisayol = "F4 :";
             this.colTutar.StatusBarKisayolAciklama = "Hesap Makinesi.";
+            this.colTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tutar", "{0:n2}")});
             this.colTutar.Visible = true;
             this.colTutar.VisibleIndex = 3;
             this.colTutar.Width = 110;

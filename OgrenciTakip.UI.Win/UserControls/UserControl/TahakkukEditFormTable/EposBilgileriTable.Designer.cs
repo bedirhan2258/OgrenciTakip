@@ -109,9 +109,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Epos Bilgileri Giriniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Bilgi Giriniz.";
             this.tablo.ViewCaption = "Epos Bilgileri";
             // 
             // colAdi

@@ -37,7 +37,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
         {
             decimal BakiyeHesapla()
             {
-                return 0;
+                var bakiye = ((TahakkukEditForm)OwnerForm).txtFark.Value;
+                return bakiye <= 0 ? 0 : bakiye;
             }
 
             var source = tablo.DataController.ListSource;

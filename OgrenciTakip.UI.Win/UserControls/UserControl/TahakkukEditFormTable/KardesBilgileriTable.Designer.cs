@@ -41,6 +41,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
             // 
+            // insUptNavigator
+            // 
+            this.insUptNavigator.Location = new System.Drawing.Point(0, 304);
+            this.insUptNavigator.Size = new System.Drawing.Size(830, 24);
+            // 
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -86,9 +91,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Kardeş Öğrencileri Seçiniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert :";
+            this.tablo.StatusBarKisayolAciklama = "Seçim Yap.";
             this.tablo.ViewCaption = "Kardeş Bilgileri";
             // 
             // colAdi
@@ -191,6 +196,7 @@
             this.Controls.Add(this.grid);
             this.Name = "KardesBilgileriTable";
             this.Size = new System.Drawing.Size(830, 328);
+            this.Controls.SetChildIndex(this.insUptNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();

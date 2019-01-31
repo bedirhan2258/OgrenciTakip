@@ -88,9 +88,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Bilgi Notu Giriniz.";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Not Giriniz.";
             this.tablo.ViewCaption = "Bilgi Notları";
             // 
             // colTarih
@@ -104,9 +104,9 @@
             this.colTarih.OptionsColumn.FixedWidth = true;
             this.colTarih.OptionsFilter.AllowAutoFilter = false;
             this.colTarih.OptionsFilter.AllowFilter = false;
-            this.colTarih.StatusBarAciklama = null;
-            this.colTarih.StatusBarKisayol = null;
-            this.colTarih.StatusBarKisayolAciklama = null;
+            this.colTarih.StatusBarAciklama = "Tarih Seç.";
+            this.colTarih.StatusBarKisayol = "F4 :";
+            this.colTarih.StatusBarKisayolAciklama = "Seçim Yap.";
             this.colTarih.Visible = true;
             this.colTarih.VisibleIndex = 0;
             this.colTarih.Width = 140;
@@ -135,7 +135,7 @@
             this.colBilgiNotu.Name = "colBilgiNotu";
             this.colBilgiNotu.OptionsFilter.AllowAutoFilter = false;
             this.colBilgiNotu.OptionsFilter.AllowFilter = false;
-            this.colBilgiNotu.StatusBarAciklama = null;
+            this.colBilgiNotu.StatusBarAciklama = "Not Giriniz.";
             this.colBilgiNotu.StatusBarKisayol = null;
             this.colBilgiNotu.StatusBarKisayolAciklama = null;
             this.colBilgiNotu.Visible = true;
