@@ -93,6 +93,7 @@
     <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
+    <Compile Include="General\MakbuzBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
     <Compile Include="General\OdemeBilgileriBll.cs" />
     <Compile Include="General\OdemeTuruBll.cs" />
