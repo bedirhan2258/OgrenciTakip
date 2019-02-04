@@ -22,10 +22,10 @@ namespace OgrenciTakip.UI.Win.Forms.EvrakForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Evrak() : ((EvrakBll)bll).Single(FilterFunctions.Filter<Evrak>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Evrak() : ((EvrakBll)bll).Single(FilterFunctions.Filter<Evrak>(id));
             NesneyiKontrollereBagla();
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((EvrakBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
             txtEvrakAdi.Focus();
         }

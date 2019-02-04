@@ -22,11 +22,11 @@ namespace OgrenciTakip.UI.Win.Forms.OdemeTuruForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new OdemeTuru() : ((OdemeTuruBll)bll).Single(FilterFunctions.Filter<OdemeTuru>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OdemeTuru() : ((OdemeTuruBll)bll).Single(FilterFunctions.Filter<OdemeTuru>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((OdemeTuruBll)bll).YeniKodVer();
             txtOdemeTuruAdi.Focus();
         }

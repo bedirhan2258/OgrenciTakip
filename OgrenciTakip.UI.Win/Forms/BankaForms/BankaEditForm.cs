@@ -22,11 +22,11 @@ namespace OgrenciTakip.UI.Win.Forms.BankaForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new BankaS() : ((BankaBll)bll).Single(FilterFunctions.Filter<Banka>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new BankaS() : ((BankaBll)bll).Single(FilterFunctions.Filter<Banka>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((BankaBll)bll).YeniKodVer();
             txtBankaAdi.Focus();
         }

@@ -34,7 +34,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected BarItem[] ShowItems;
         protected BarItem[] HideItems;
 
-        protected internal IslemTuru islemTuru;
+        protected internal IslemTuru BaseIslemTuru;
         protected internal long id;
         protected internal bool refreshYapilacak;
         protected bool FarkliSubeIslemi;
@@ -57,6 +57,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             SizeChanged += BaseEditForm_SizeChanged;
             Load += BaseEditForm_Load;
             FormClosing += BaseEditForm_FormClosing;
+            Shown += BaseEditForm_Shown;
+
             void ControlEvents(Control control)
             {
                 control.KeyDown += Control_KeyDown;
@@ -108,17 +110,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         }
 
-
-
-
         ////////////////////////////////////////////////////////////////////////Fonksiyonlar/////////////////////////////////////////////////7
-        private void EntityDelete()
-        {
 
-            if (!((IBaseCommonBll)bll).Delete(oldEntity)) return;
-            refreshYapilacak = true;
-            Close();
-        }
 
         private void ButonGizleGoster()
         {
@@ -133,7 +126,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Cursor.Current = Cursors.WaitCursor;
 
-                switch (islemTuru)
+                switch (BaseIslemTuru)
                 {
                     case IslemTuru.EntityInsert:
                         if (EntityInsert())
@@ -157,7 +150,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                     }
                     else
                     {
-                        islemTuru = islemTuru == IslemTuru.EntityInsert ? IslemTuru.EntityUpdate : islemTuru;
+                        BaseIslemTuru = BaseIslemTuru == IslemTuru.EntityInsert ? IslemTuru.EntityUpdate : BaseIslemTuru;
                     }
                     return true;
                 }
@@ -189,7 +182,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         private void GeriAl()
         {
             if (Messages.HayirSeciliEvetHayir("Yapılan değişiklikler geri alınacaktır.Onaylıyor musunuz?", "Geri Al Onay") != DialogResult.Yes) return;
-            if (islemTuru == IslemTuru.EntityUpdate)
+            if (BaseIslemTuru == IslemTuru.EntityUpdate)
                 Yukle();
             else
                 Close();
@@ -198,7 +191,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         private void FarkliKaydet()
         {
             if (Messages.EvetSeciliEvetHayir("Bu Filtre Referans Alınarak Yeni Bir Filtre Oluşturulacaktır. Onaylıyormusunuz?", "Kayıt Onay") != DialogResult.Yes) return;
-            islemTuru = IslemTuru.EntityInsert;
+            BaseIslemTuru = IslemTuru.EntityInsert;
             Yukle();
 
             if (Kaydet(true))
@@ -233,6 +226,14 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual bool EntityInsert()
         {
             return ((IBaseGenelBll)bll).Insert(currentEnttiy);
+        }
+
+        protected virtual void EntityDelete()
+        {
+
+            if (!((IBaseCommonBll)bll).Delete(oldEntity)) return;
+            refreshYapilacak = true;
+            Close();
         }
 
         protected virtual void BaskiOnIzleme() { }
@@ -313,6 +314,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 e.Cancel = true;
         }
 
+        protected virtual void BaseEditForm_Shown(object sender, EventArgs e) { }
+
         protected virtual void Control_EditValueChanged(object sender, EventArgs e)
         {
             if (!isLoaded) return;
@@ -373,7 +376,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             if (e.Item == btnYeni)
             {
                 //Yetki Kontrol Olucak
-                islemTuru = IslemTuru.EntityInsert;
+                BaseIslemTuru = IslemTuru.EntityInsert;
                 Yukle();
             }
             else if (e.Item == btnKaydet)

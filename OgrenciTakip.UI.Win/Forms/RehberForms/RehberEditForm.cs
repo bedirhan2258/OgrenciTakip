@@ -20,11 +20,11 @@ namespace OgrenciTakip.UI.Win.Forms.RehberForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Rehber() : ((RehberBll)bll).Single(FilterFunctions.Filter<Rehber>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Rehber() : ((RehberBll)bll).Single(FilterFunctions.Filter<Rehber>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((RehberBll)bll).YeniKodVer();
             txtAdiSoyadi.Focus();
         }

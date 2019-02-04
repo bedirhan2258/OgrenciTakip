@@ -22,11 +22,11 @@ namespace OgrenciTakip.UI.Win.Forms.CariForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new CariS() : ((CariBll)bll).Single(FilterFunctions.Filter<Cari>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new CariS() : ((CariBll)bll).Single(FilterFunctions.Filter<Cari>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((CariBll)bll).YeniKodVer();
             txtCariAdi.Focus();
         }

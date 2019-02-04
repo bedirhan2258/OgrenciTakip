@@ -25,11 +25,11 @@ namespace OgrenciTakip.UI.Win.Forms.AvukatForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new AvukatS() : ((AvukatBll)bll).Single(FilterFunctions.Filter<Avukat>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new AvukatS() : ((AvukatBll)bll).Single(FilterFunctions.Filter<Avukat>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((AvukatBll)bll).YeniKodVer();
             txtAdiSoyadi.Focus();
         }

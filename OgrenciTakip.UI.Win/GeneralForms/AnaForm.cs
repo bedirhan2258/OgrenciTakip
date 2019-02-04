@@ -48,14 +48,22 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static DateTime DonemBitisTarihi = new DateTime(2018, 06, 30);
         public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = true;
         public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
-        public static bool GunTarihininOncesineIptalTarihiGirilebilir = false;
-        public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = false;
+        public static bool GunTarihininOncesineIptalTarihiGirilebilir = true;
+        public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
+        public static bool GunTarihininOncesineMakbuzTarihiGirilebilir = true;
+        public static bool GunTarihininSonrasinaMakbuzTarihiGirilebilir = true;
         public static bool HizmetTahakkukKurusKullan;
         public static bool IndirimTahakkukKurusKullan;
         public static bool OdemePlaniKurusKullan;
         public static bool GittigiOkulZorunlu = true;
         public static DateTime MaksimumTaksitTarihi = new DateTime(2018, 06, 30);
         public static byte MaksimumTaksitSayisi = 12;
+        public static long? DefaultKasaHesapId;
+        public static string DefaultKasaHesapAdi;
+        public static long? DefaultBankaHesapId;
+        public static string DefaultBankaHesapAdi;
+        public static long? DefaultAvukatHesapId;
+        public static string DefaultAvukatHesapAdi;
 
         public AnaForm()
         {
@@ -160,7 +168,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             }
             else if (e.Item == btnKasaKarti)
             {
-                ShowListForms<KasaListForm>.ShowListForm(KartTuru.Kasa);
+                ShowListForms<CarliListForm>.ShowListForm(KartTuru.Kasa);
             }
             else if (e.Item == btnBankaKarti)
             {

@@ -20,11 +20,11 @@ namespace OgrenciTakip.UI.Win.IptalNedeniForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new IptalNedeni() : ((IptalNedeniBll)bll).Single(FilterFunctions.Filter<IptalNedeni>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new IptalNedeni() : ((IptalNedeniBll)bll).Single(FilterFunctions.Filter<IptalNedeni>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((IptalNedeniBll)bll).YeniKodVer();
             txtIptalNedeniAdi.Focus();
         }

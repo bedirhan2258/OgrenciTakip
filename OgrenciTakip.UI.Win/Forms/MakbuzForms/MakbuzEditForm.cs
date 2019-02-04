@@ -1,0 +1,292 @@
+﻿
+using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
+using DevExpress.XtraLayout.Utils;
+using OgrenciTakip.BLL.General;
+using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.DTO;
+using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.GeneralForms;
+using System;
+using System.Linq;
+
+namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
+{
+    public partial class MakbuzEditForm : BaseEditForm
+    {
+        #region Variables
+        private readonly MakbuzTuru _makbuzTuru;
+        private readonly MakbuzHesapTuru _hesapTuru;
+        #endregion
+
+        public MakbuzEditForm()
+        {
+            InitializeComponent();
+            dataLayoutControl = myDataLayoutControl;
+            bll = new MakbuzBll(myDataLayoutControl);
+            kartTuru = KartTuru.Makbuz;
+            EventsLoad();
+
+            HideItems = new BarItem[] { btnYeni };
+            ShowItems = new BarItem[] { btnYazdir };
+
+            kayitSonrasiFormuKapat = false;
+        }
+
+        protected internal override void Yukle()
+        {
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new MakbuzS() : ((MakbuzBll)bll).Single(FilterFunctions.Filter<Makbuz>(id));
+            AlanIslemleri();
+            NesneyiKontrollereBagla();
+
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
+            txtMakbuzNo.Text = ((MakbuzBll)bll).YeniKodVer(x => x.DonemId == AnaForm.DonemId && x.SubeId == AnaForm.SubeId);
+        }
+
+        protected override void NesneyiKontrollereBagla()
+        {
+            var entity = (MakbuzS)oldEntity;
+
+            txtMakbuzNo.Text = entity.Kod;
+            txtTarih.DateTime = entity.Tarih;
+            txtHesapTuru.SelectedItem = _hesapTuru.ToName();
+
+            if (BaseIslemTuru == IslemTuru.EntityInsert)
+            {
+                switch (_hesapTuru)
+                {
+                    case MakbuzHesapTuru.Kasa when AnaForm.DefaultKasaHesapId != null:
+                        txtHesap.Id = AnaForm.DefaultKasaHesapId;
+                        txtHesap.Text = AnaForm.DefaultKasaHesapAdi;
+                        break;
+                    case MakbuzHesapTuru.Banka when AnaForm.DefaultBankaHesapId != null:
+                        txtHesap.Id = AnaForm.DefaultBankaHesapId;
+                        txtHesap.Text = AnaForm.DefaultBankaHesapAdi;
+                        break;
+                    case MakbuzHesapTuru.Avukat when AnaForm.DefaultAvukatHesapId != null:
+                        txtHesap.Id = AnaForm.DefaultAvukatHesapId;
+                        txtHesap.Text = AnaForm.DefaultAvukatHesapAdi;
+                        break;
+                    case MakbuzHesapTuru.Transfer when _makbuzTuru == MakbuzTuru.GelenBelgeyiOnaylama:
+                        txtHesap.Id = AnaForm.SubeId;
+                        txtHesap.Text = AnaForm.SubeAdi;
+                        break;
+                }
+            }
+            else
+            {
+                txtHesap.Id = entity.AvukatHesapId ?? entity.BankaHesapId ?? entity.CariHesapId ?? entity.KasaHesapId ?? entity.SubeHesapId;
+                txtHesap.Text = entity.HesapAdi;
+            }
+        }
+        protected override void GuncelNesneOlustur()
+        {
+            var hesapTuru = txtHesapTuru.Text.GetEnum<MakbuzHesapTuru>();
+
+            currentEnttiy = new Makbuz
+            {
+                Id = id,
+                Kod = txtMakbuzNo.Text,
+                Tarih = txtTarih.DateTime.Date,
+                MakbuzTuru = _makbuzTuru,
+                HesapTuru = hesapTuru,
+                AvukatHesapId = hesapTuru == MakbuzHesapTuru.Avukat ? txtHesap.Id : null,
+                BankaHesapId = hesapTuru == MakbuzHesapTuru.Banka || hesapTuru == MakbuzHesapTuru.Epos || hesapTuru == MakbuzHesapTuru.Ots || hesapTuru == MakbuzHesapTuru.Pos ? txtHesap.Id : null,
+                CariHesapId = hesapTuru == MakbuzHesapTuru.Cari || hesapTuru == MakbuzHesapTuru.Mahsup ? txtHesap.Id : null,
+                KasaHesapId = hesapTuru == MakbuzHesapTuru.Kasa ? txtHesap.Id : null,
+                SubeHesapId = hesapTuru == MakbuzHesapTuru.Transfer ? txtHesap.Id : null,
+                HareketSayisi = 0,
+                MakbuzToplami = 0,
+                DonemId = AnaForm.DonemId,
+                SubeId = AnaForm.SubeId
+            };
+            ButonEnabledDurumu();
+        }
+
+        protected internal override void ButonEnabledDurumu()
+        {
+            if (!isLoaded) return;
+
+            if (FarkliSubeIslemi)
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil);
+            else
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy);
+            //TableValueChanged());
+        }
+
+        protected override bool EntityInsert()
+        {
+            //GuncelNesneOlustur();
+            if (HataliGiris()) return false;
+
+            //if (BagliTabloHataliGirisKontrol())  return false;
+
+            var result = ((TahakkukBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+               x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId); //&& BagliTabloKaydet();
+
+            //if (result && !kayitSonrasiFormuKapat)
+            // BagliTabloYukle();
+
+            return result;
+        }
+
+        protected override bool EntityUpdate()
+        {
+            //GuncelNesneOlustur();
+            if (HataliGiris()) return false;
+            //if (BagliTabloHataliGirisKontrol()) return false;
+
+            var result = ((TahakkukBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId); //&& BagliTabloKaydet();
+
+            //if (result && !kayitSonrasiFormuKapat)
+            //BagliTabloYukle();
+
+            return result;
+        }
+
+        protected override void EntityDelete()
+        {
+            //Tabloda TobluHareketSil() Çağırılacak.
+
+            if (((MakbuzBll)bll).Delete(oldEntity)) return;
+            refreshYapilacak = true;
+            Close();
+        }
+
+        private bool HataliGiris()
+        {
+            if (!txtHesap.Visible || txtHesap.Id != null) return false;
+
+            Messages.SecimHataMesaji("Hesap");
+            txtHesap.Focus();
+            return true;
+        }
+
+        private void AlanIslemleri()
+        {
+            Text = $"{Text} - {_makbuzTuru.ToName()}";
+            txtTarih.Properties.MinValue = AnaForm.GunTarihininOncesineMakbuzTarihiGirilebilir ? AnaForm.DonemBaslamaTarihi : DateTime.Now.Date;
+            txtTarih.Properties.MaxValue = AnaForm.GunTarihininSonrasinaMakbuzTarihiGirilebilir ? AnaForm.DonemBitisTarihi : DateTime.Now.Date;
+
+            switch (_makbuzTuru)
+            {
+                case MakbuzTuru.BlokeyeAlma:
+                case MakbuzTuru.BlokeCozumu:
+                    txtHesapTuru.Properties.Items.AddRange(Enum.GetValues(typeof(MakbuzHesapTuru)).Cast<MakbuzHesapTuru>().Where(x => x == MakbuzHesapTuru.Epos || x == MakbuzHesapTuru.Ots || x == MakbuzHesapTuru.Pos).Select(x => x.ToName()).ToList());
+                    break;
+
+                case MakbuzTuru.PorfoyeGeriIade:
+                case MakbuzTuru.PorfoyeKarsiliksizIade:
+                    txtHesapTuru.Properties.Items.AddRange(Enum.GetValues(typeof(MakbuzHesapTuru)).Cast<MakbuzHesapTuru>().Where(x => x == MakbuzHesapTuru.Avukat || x == MakbuzHesapTuru.Banka || x == MakbuzHesapTuru.Cari).Select(x => x.ToName()).ToList());
+                    break;
+
+                case MakbuzTuru.OdenmisOlarakIsaretleme:
+                case MakbuzTuru.KarsiliksizOlarakIsaretleme:
+                case MakbuzTuru.MusteriyeGeriIade:
+                case MakbuzTuru.TahsiliImkansızHaleGelme:
+                    txtHesapTuru.Properties.Items.Add(_hesapTuru.ToName());
+                    layoutHesapAdi.Visibility = LayoutVisibility.Never;
+                    break;
+
+                default:
+                    txtHesapTuru.Properties.Items.Add(_hesapTuru.ToName());
+
+                    break;
+            }
+        }
+
+        private void MakbuzTuruEnabled()
+        {
+            switch (_makbuzTuru)
+            {
+                case MakbuzTuru.BlokeyeAlma:
+                case MakbuzTuru.BlokeCozumu:
+                case MakbuzTuru.PorfoyeGeriIade:
+                case MakbuzTuru.PorfoyeKarsiliksizIade:
+                case MakbuzTuru.AvukataGonderme:
+                case MakbuzTuru.AvukatYoluylaTahsilEtme:
+                case MakbuzTuru.BankayaTahsileGonderme:
+                case MakbuzTuru.BankaYoluylaTahsilEtme:
+                case MakbuzTuru.CiroEtme:
+                case MakbuzTuru.BaskaSubeyeGonderme:
+                    //Bağlı Tabloya İhtiyaç Var.
+                    break;
+
+                case MakbuzTuru.GelenBelgeyiOnaylama:
+                    txtHesapTuru.Enabled = false;
+                    txtHesap.Enabled = false;
+                    break;
+            }
+        }
+
+        protected override void SecimYap(object sender)
+        {
+            if (!(sender is ButtonEdit)) return;
+
+            using (var sec = new SelectFunctions())
+            {
+                switch (txtHesapTuru.Text.GetEnum<MakbuzHesapTuru>())
+                {
+                    case MakbuzHesapTuru.Avukat:
+                        sec.Sec(txtHesap, KartTuru.Avukat);
+                        break;
+
+                    case MakbuzHesapTuru.Banka:
+                        sec.Sec(txtHesap, KartTuru.BankaHesap, BankaHesapTuru.VadesizMevduatHesabi);
+                        break;
+
+                    case MakbuzHesapTuru.Cari:
+                    case MakbuzHesapTuru.Mahsup:
+                        sec.Sec(txtHesap, KartTuru.Cari);
+                        break;
+
+                    case MakbuzHesapTuru.Epos:
+                        sec.Sec(txtHesap, KartTuru.Banka, BankaHesapTuru.EpostBlokeHesabi);
+                        break;
+
+                    case MakbuzHesapTuru.Ots:
+                        sec.Sec(txtHesap, KartTuru.Banka, BankaHesapTuru.OtsBlokeHesabi);
+                        break;
+
+                    case MakbuzHesapTuru.Pos:
+                        sec.Sec(txtHesap, KartTuru.Banka, BankaHesapTuru.PostBlokeHesabi);
+                        break;
+
+                    case MakbuzHesapTuru.Kasa:
+                        sec.Sec(txtHesap, KartTuru.Kasa);
+                        break;
+
+                        //case MakbuzHesapTuru.Transfer:
+                        //    sec.Sec(txtHesap, KartTuru.Sube);
+                        //    break;
+
+                }
+            }
+
+        }
+
+        protected override void Control_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (sender != txtHesapTuru) return;
+            txtHesap.Id = null;
+            txtHesap.Text = null;
+            txtHesap.Focus();
+        }
+
+        protected override void BaseEditForm_Shown(object sender, EventArgs e)
+        {
+            if (layoutHesapAdi.Visible && txtHesap.Id == null)
+                txtHesap.Focus();
+
+            //else
+            //Tabloya Focuslan
+        }
+
+    }
+}

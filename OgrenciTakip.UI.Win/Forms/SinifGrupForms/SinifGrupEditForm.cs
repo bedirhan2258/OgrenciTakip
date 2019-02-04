@@ -21,11 +21,11 @@ namespace OgrenciTakip.UI.Win.Forms.SinifGrupForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new SinifGrup() : ((SinifGrupBll)bll).Single(FilterFunctions.Filter<SinifGrup>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new SinifGrup() : ((SinifGrupBll)bll).Single(FilterFunctions.Filter<SinifGrup>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((SinifGrupBll)bll).YeniKodVer();
             txtGrupAdi.Focus();
         }

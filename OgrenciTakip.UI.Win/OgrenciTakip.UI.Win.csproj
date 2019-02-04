@@ -317,6 +317,18 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzEditForm.Designer.cs">
+      <DependentUpon>MakbuzEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\MakbuzListForm.Designer.cs">
+      <DependentUpon>MakbuzListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MeslekForms\MeslekEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -831,6 +843,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MakbuzForms\MakbuzEditForm.resx">
+      <DependentUpon>MakbuzEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MeslekForms\MeslekEditForm.resx">
       <DependentUpon>MeslekEditForm.cs</DependentUpon>

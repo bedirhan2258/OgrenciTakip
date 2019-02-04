@@ -27,11 +27,11 @@ namespace OgrenciTakip.UI.Win.Forms.BankaSubeForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new BankaSube() : ((BankaSubeBll)bll).Single(FilterFunctions.Filter<BankaSube>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new BankaSube() : ((BankaSubeBll)bll).Single(FilterFunctions.Filter<BankaSube>(id));
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_bankaAdi} )";
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((BankaSubeBll)bll).YeniKodVer(x => x.BankaId == _bankaId);
             txtSubeAdi.Focus();
         }

@@ -20,11 +20,11 @@ namespace OgrenciTakip.UI.Win.Forms.MeslekForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Meslek() : ((MeslekBll)bll).Single(FilterFunctions.Filter<Meslek>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Meslek() : ((MeslekBll)bll).Single(FilterFunctions.Filter<Meslek>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((MeslekBll)bll).YeniKodVer();
             txtMeslekAdi.Focus();
         }

@@ -27,11 +27,11 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Ilce() : ((IlceBLL)bll).Single(FilterFunctions.Filter<Ilce>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Ilce() : ((IlceBLL)bll).Single(FilterFunctions.Filter<Ilce>(id));
             NesneyiKontrollereBagla();
             Text = Text + $" - ( {_ilAdi} )";
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((IlceBLL)bll).YeniKodVer(x => x.IlId == _ilId);
             txtIlceAdi.Focus();
         }

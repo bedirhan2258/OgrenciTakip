@@ -19,11 +19,11 @@ namespace OgrenciTakip.UI.Win.Forms.TesvikForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Tesvik() : ((TesvikBll)bll).Single(FilterFunctions.Filter<Tesvik>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Tesvik() : ((TesvikBll)bll).Single(FilterFunctions.Filter<Tesvik>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((TesvikBll)bll).YeniKodVer();
             txtTesvikAdi.Focus();
         }

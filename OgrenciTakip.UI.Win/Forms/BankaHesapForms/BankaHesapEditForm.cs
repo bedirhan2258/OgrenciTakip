@@ -27,11 +27,11 @@ namespace OgrenciTakip.UI.Win.Forms.BankaHesapForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new BankaHesapS() : ((BankaHesapBll)bll).Single(FilterFunctions.Filter<BankaHesap>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new BankaHesapS() : ((BankaHesapBll)bll).Single(FilterFunctions.Filter<BankaHesap>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((BankaHesapBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId);
             txtHesapAdi.Focus();
         }

@@ -25,11 +25,11 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new HizmetS() : ((HizmetBll)bll).Single(FilterFunctions.Filter<Hizmet>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new HizmetS() : ((HizmetBll)bll).Single(FilterFunctions.Filter<Hizmet>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((HizmetBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
             txtBaslamaTarihi.DateTime = txtBaslamaTarihi.Properties.MinValue;
             txtBitisTarihi.DateTime = txtBitisTarihi.Properties.MaxValue;

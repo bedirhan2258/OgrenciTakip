@@ -21,11 +21,11 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new YabanciDil() : ((YabanciDilBll)bll).Single(FilterFunctions.Filter<YabanciDil>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new YabanciDil() : ((YabanciDilBll)bll).Single(FilterFunctions.Filter<YabanciDil>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((YabanciDilBll)bll).YeniKodVer();
             txtDilAdi.Focus();
         }

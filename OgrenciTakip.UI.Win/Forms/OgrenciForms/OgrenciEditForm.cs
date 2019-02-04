@@ -28,11 +28,11 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new OgrenciS() : ((OgrenciBll)bll).Single(FilterFunctions.Filter<Ogrenci>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OgrenciS() : ((OgrenciBll)bll).Single(FilterFunctions.Filter<Ogrenci>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((OgrenciBll)bll).YeniKodVer();
             txtTcKimlikNo.Focus();
         }

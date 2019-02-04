@@ -24,11 +24,11 @@ namespace OgrenciTakip.UI.Win.Forms.SinifForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new SinifS() : ((SinifBll)bll).Single(FilterFunctions.Filter<Sinif>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new SinifS() : ((SinifBll)bll).Single(FilterFunctions.Filter<Sinif>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((SinifBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId);
             txtSinifAdi.Focus();
         }

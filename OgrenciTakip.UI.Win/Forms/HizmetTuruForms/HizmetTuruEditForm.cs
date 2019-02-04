@@ -22,11 +22,11 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetTuruForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new HizmetTuru() : ((HizmetTuruBll)bll).Single(FilterFunctions.Filter<HizmetTuru>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new HizmetTuru() : ((HizmetTuruBll)bll).Single(FilterFunctions.Filter<HizmetTuru>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((HizmetTuruBll)bll).YeniKodVer();
             txtHizmetTuruAdi.Focus();
         }

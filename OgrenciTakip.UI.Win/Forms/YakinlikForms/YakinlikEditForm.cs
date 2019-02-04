@@ -21,11 +21,11 @@ namespace OgrenciTakip.UI.Win.Forms.YakinlikForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Yakinlik() : ((YakinlikBll)bll).Single(FilterFunctions.Filter<Yakinlik>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Yakinlik() : ((YakinlikBll)bll).Single(FilterFunctions.Filter<Yakinlik>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((YakinlikBll)bll).YeniKodVer();
             txtYakinlikAdi.Focus();
         }

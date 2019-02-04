@@ -28,11 +28,11 @@ namespace OgrenciTakip.UI.Win.Forms.OzelKodForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new OzelKod() : ((OzelKodBll)bll).Single(FilterFunctions.Filter<OzelKod>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OzelKod() : ((OzelKodBll)bll).Single(FilterFunctions.Filter<OzelKod>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((OzelKodBll)bll).YeniKodVer(x => x.KodTuru == _ozelKodTuru && x.KartTuru == _ozelKodKartTuru);
             txtOzelKodAdi.Focus();
         }

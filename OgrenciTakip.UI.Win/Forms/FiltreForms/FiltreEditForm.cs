@@ -39,10 +39,10 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
 
             while (true)
             {
-                if (islemTuru == IslemTuru.EntityInsert)
+                if (BaseIslemTuru == IslemTuru.EntityInsert)
                 {
                     oldEntity = new Filtre();
-                    id = islemTuru.IdOlustur(oldEntity);
+                    id = BaseIslemTuru.IdOlustur(oldEntity);
                     txtKod.Text = ((FiltreBLL)bll).YeniKodVer(x => x.KartTuru == _filtreKartTuru);
 
                 }
@@ -51,7 +51,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
                     oldEntity = ((FiltreBLL)bll).Single(FilterFunctions.Filter<Filtre>(id));
                     if (oldEntity == null)
                     {
-                        islemTuru = IslemTuru.EntityInsert;
+                        BaseIslemTuru = IslemTuru.EntityInsert;
                         continue;
                     }
                     NesneyiKontrollereBagla();
@@ -96,7 +96,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         protected internal override void ButonEnabledDurumu()
         {
             if (!isLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnFarkliKaydet, btnSil, islemTuru, oldEntity, currentEnttiy);
+            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnFarkliKaydet, btnSil, BaseIslemTuru, oldEntity, currentEnttiy);
 
         }
     }

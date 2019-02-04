@@ -23,12 +23,12 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new IndirimS() : ((IndirimBll)bll).Single(FilterFunctions.Filter<Indirim>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new IndirimS() : ((IndirimBll)bll).Single(FilterFunctions.Filter<Indirim>(id));
             NesneyiKontrollereBagla();
             TabloYukle();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((IndirimBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
             txtIndirimAdi.Focus();
         }

@@ -15,7 +15,7 @@ namespace OgrenciTakip.UI.Win.Show
             //Yetki kontrolü yapılacak
             using (var frm = (TForm)Activator.CreateInstance(typeof(TForm)))
             {
-                frm.islemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
+                frm.BaseIslemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
                 frm.id = id;
                 frm.Yukle();
                 frm.ShowDialog();
@@ -28,7 +28,7 @@ namespace OgrenciTakip.UI.Win.Show
             //Yetki kontrolü yapılacak
             using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
             {
-                frm.islemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
+                frm.BaseIslemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
                 frm.id = id;
                 frm.Yukle();
                 frm.ShowDialog();

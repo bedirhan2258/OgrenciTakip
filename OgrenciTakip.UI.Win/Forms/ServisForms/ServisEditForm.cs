@@ -20,10 +20,10 @@ namespace OgrenciTakip.UI.Win.Forms.ServisForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Servis() : ((ServisBll)bll).Single(FilterFunctions.Filter<Servis>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Servis() : ((ServisBll)bll).Single(FilterFunctions.Filter<Servis>(id));
             NesneyiKontrollereBagla();
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((ServisBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
             txtServisYeri.Focus();
         }

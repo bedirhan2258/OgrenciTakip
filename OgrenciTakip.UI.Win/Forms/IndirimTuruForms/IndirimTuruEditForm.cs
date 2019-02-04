@@ -20,11 +20,11 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimTuruForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new IndirimTuru() : ((IndirimTuruBll)bll).Single(FilterFunctions.Filter<IndirimTuru>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new IndirimTuru() : ((IndirimTuruBll)bll).Single(FilterFunctions.Filter<IndirimTuru>(id));
             NesneyiKontrollereBagla();
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((IndirimTuruBll)bll).YeniKodVer();
             txtIndirimTuruAdi.Focus();
         }

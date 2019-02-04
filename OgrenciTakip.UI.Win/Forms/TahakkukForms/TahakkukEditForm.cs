@@ -65,13 +65,13 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
 
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new TahakkukS() : ((TahakkukBll)bll).Single(FilterFunctions.Filter<Tahakkuk>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new TahakkukS() : ((TahakkukBll)bll).Single(FilterFunctions.Filter<Tahakkuk>(id));
             NesneyiKontrollereBagla();
             BagliTabloYukle();
 
 
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((TahakkukBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
 
         }
@@ -172,11 +172,11 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             var entity = (TahakkukS)oldEntity;
 
 
-            txtTcKimlikNo.Text = islemTuru == IslemTuru.EntityInsert ? _ogrenci.TcKimlikNo : entity.TcKimlikNo;
-            txtAdi.Text = islemTuru == IslemTuru.EntityInsert ? _ogrenci.Adi : entity.Adi;
-            txtSoyadi.Text = islemTuru == IslemTuru.EntityInsert ? _ogrenci.Soyadi : entity.Soyadi;
-            txtBabaAdi.Text = islemTuru == IslemTuru.EntityInsert ? _ogrenci.BabaAdi : entity.BabaAdi;
-            txtAnaAdi.Text = islemTuru == IslemTuru.EntityInsert ? _ogrenci.AnaAdi : entity.AnaAdi;
+            txtTcKimlikNo.Text = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.TcKimlikNo : entity.TcKimlikNo;
+            txtAdi.Text = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.Adi : entity.Adi;
+            txtSoyadi.Text = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.Soyadi : entity.Soyadi;
+            txtBabaAdi.Text = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.BabaAdi : entity.BabaAdi;
+            txtAnaAdi.Text = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.AnaAdi : entity.AnaAdi;
             txtDurum.Text = entity.Durum ? IptalDurumu.DevamEdiyor.ToName() : IptalDurumu.IptalEdildi.ToName();
             txtKod.Text = entity.Kod;
             txtOkulNo.Text = entity.OkulNo;
@@ -214,7 +214,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             {
                 Id = id,
                 Kod = txtKod.Text,
-                OgrenciId = islemTuru == IslemTuru.EntityInsert ? _ogrenci.Id : ((TahakkukS)oldEntity).OgrenciId,
+                OgrenciId = BaseIslemTuru == IslemTuru.EntityInsert ? _ogrenci.Id : ((TahakkukS)oldEntity).OgrenciId,
                 OkulNo = txtOkulNo.Text,
                 KayitTarihi = txtKayitTarihi.DateTime.Date,
                 KayitSekli = txtKayitSekli.Text.GetEnum<KayitSekli>(),

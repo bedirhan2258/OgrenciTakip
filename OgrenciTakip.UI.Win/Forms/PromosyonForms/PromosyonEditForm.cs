@@ -21,10 +21,10 @@ namespace OgrenciTakip.UI.Win.Forms.PromosyonForms
         }
         protected internal override void Yukle()
         {
-            oldEntity = islemTuru == IslemTuru.EntityInsert ? new Promosyon() : ((PromosyonBll)bll).Single(FilterFunctions.Filter<Promosyon>(id));
+            oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Promosyon() : ((PromosyonBll)bll).Single(FilterFunctions.Filter<Promosyon>(id));
             NesneyiKontrollereBagla();
-            if (islemTuru != IslemTuru.EntityInsert) return;
-            id = islemTuru.IdOlustur(oldEntity);
+            if (BaseIslemTuru != IslemTuru.EntityInsert) return;
+            id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((PromosyonBll)bll).YeniKodVer(x => x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
             txtPromosyonAdi.Focus();
         }
