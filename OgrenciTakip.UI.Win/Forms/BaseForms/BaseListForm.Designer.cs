@@ -134,6 +134,33 @@
             this.btnAktifPasifKartlar = new DevExpress.XtraBars.BarButtonItem();
             this.btnBagliKartlar = new DevExpress.XtraBars.BarButtonItem();
             this.btnTahakkukYap = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYeniMakbuz = new DevExpress.XtraBars.BarSubItem();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.btnAvukataGonderme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAvukatYoluylaTahsilEtme = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
+            this.btnTahsilEtmeBanka = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBankayaTahsileGonderme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBankaYoluylaTahsilEtme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBlokeyeAlma = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBlokeCozumu = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
+            this.btnCiroEtme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMahsupEtme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnOdenmisOlarakIsaretleme = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
+            this.btnMusteriyeGeriIade = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPortfoyeGeriIade = new DevExpress.XtraBars.BarButtonItem();
+            this.btnPortfoyeKarsiliksizIade = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
+            this.btnBaskaSubeyeGonderme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGelenBelgeyiOnaylama = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTahsilEtmeKasa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKarsiliksizOlarakIsaretleme = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTahsiliImkansizHaleGelme = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -190,9 +217,36 @@
             this.btnPdfDosyasi,
             this.btnTxtDosyası,
             this.btnBagliKartlar,
-            this.btnTahakkukYap});
+            this.btnTahakkukYap,
+            this.btnYeniMakbuz,
+            this.barSubItem2,
+            this.barSubItem3,
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barSubItem4,
+            this.barSubItem5,
+            this.barSubItem6,
+            this.barSubItem7,
+            this.btnAvukataGonderme,
+            this.btnAvukatYoluylaTahsilEtme,
+            this.btnTahsilEtmeBanka,
+            this.btnBankayaTahsileGonderme,
+            this.btnBankaYoluylaTahsilEtme,
+            this.btnBlokeyeAlma,
+            this.btnBlokeCozumu,
+            this.btnCiroEtme,
+            this.btnMahsupEtme,
+            this.btnOdenmisOlarakIsaretleme,
+            this.btnMusteriyeGeriIade,
+            this.btnPortfoyeGeriIade,
+            this.btnPortfoyeKarsiliksizIade,
+            this.btnBaskaSubeyeGonderme,
+            this.btnGelenBelgeyiOnaylama,
+            this.btnTahsilEtmeKasa,
+            this.btnKarsiliksizOlarakIsaretleme,
+            this.btnTahsiliImkansizHaleGelme});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 43;
+            this.ribbonControl.MaxItemId = 70;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -773,6 +827,242 @@
             this.btnTahakkukYap.SuperTip = superToolTip13;
             this.btnTahakkukYap.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnYeniMakbuz
+            // 
+            this.btnYeniMakbuz.Caption = "Yeni";
+            this.btnYeniMakbuz.Id = 43;
+            this.btnYeniMakbuz.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnYeniMakbuz.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
+            this.btnYeniMakbuz.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
+            this.btnYeniMakbuz.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem6),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem7),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilEtmeKasa),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnKarsiliksizOlarakIsaretleme),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsiliImkansizHaleGelme)});
+            this.btnYeniMakbuz.Name = "btnYeniMakbuz";
+            this.btnYeniMakbuz.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "Avukat İşlemleri";
+            this.barSubItem2.Id = 44;
+            this.barSubItem2.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAvukataGonderme),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnAvukatYoluylaTahsilEtme)});
+            this.barSubItem2.Name = "barSubItem2";
+            // 
+            // btnAvukataGonderme
+            // 
+            this.btnAvukataGonderme.Caption = "Avukata Gönderme";
+            this.btnAvukataGonderme.Id = 52;
+            this.btnAvukataGonderme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnAvukataGonderme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A));
+            this.btnAvukataGonderme.Name = "btnAvukataGonderme";
+            // 
+            // btnAvukatYoluylaTahsilEtme
+            // 
+            this.btnAvukatYoluylaTahsilEtme.Caption = "Avukat Yoluyla Tahsil Etme";
+            this.btnAvukatYoluylaTahsilEtme.Id = 53;
+            this.btnAvukatYoluylaTahsilEtme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnAvukatYoluylaTahsilEtme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V));
+            this.btnAvukatYoluylaTahsilEtme.Name = "btnAvukatYoluylaTahsilEtme";
+            // 
+            // barSubItem4
+            // 
+            this.barSubItem4.Caption = "Banka İşlemleri";
+            this.barSubItem4.Id = 48;
+            this.barSubItem4.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.barSubItem4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilEtmeBanka),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBankayaTahsileGonderme),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBankaYoluylaTahsilEtme),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBlokeyeAlma),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBlokeCozumu)});
+            this.barSubItem4.Name = "barSubItem4";
+            // 
+            // btnTahsilEtmeBanka
+            // 
+            this.btnTahsilEtmeBanka.Caption = "Tahsil Etme Banka";
+            this.btnTahsilEtmeBanka.Id = 54;
+            this.btnTahsilEtmeBanka.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnTahsilEtmeBanka.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B));
+            this.btnTahsilEtmeBanka.Name = "btnTahsilEtmeBanka";
+            // 
+            // btnBankayaTahsileGonderme
+            // 
+            this.btnBankayaTahsileGonderme.Caption = "Bankaya Tahsile Gonderme";
+            this.btnBankayaTahsileGonderme.Id = 55;
+            this.btnBankayaTahsileGonderme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnBankayaTahsileGonderme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H));
+            this.btnBankayaTahsileGonderme.Name = "btnBankayaTahsileGonderme";
+            // 
+            // btnBankaYoluylaTahsilEtme
+            // 
+            this.btnBankaYoluylaTahsilEtme.Caption = "Banka Yoluyla Tahsil Etme";
+            this.btnBankaYoluylaTahsilEtme.Id = 56;
+            this.btnBankaYoluylaTahsilEtme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnBankaYoluylaTahsilEtme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U));
+            this.btnBankaYoluylaTahsilEtme.Name = "btnBankaYoluylaTahsilEtme";
+            // 
+            // btnBlokeyeAlma
+            // 
+            this.btnBlokeyeAlma.Caption = "Blokeye Alma";
+            this.btnBlokeyeAlma.Id = 57;
+            this.btnBlokeyeAlma.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnBlokeyeAlma.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
+            this.btnBlokeyeAlma.Name = "btnBlokeyeAlma";
+            // 
+            // btnBlokeCozumu
+            // 
+            this.btnBlokeCozumu.Caption = "Bloke Çözümü";
+            this.btnBlokeCozumu.Id = 58;
+            this.btnBlokeCozumu.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnBlokeCozumu.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L));
+            this.btnBlokeCozumu.Name = "btnBlokeCozumu";
+            // 
+            // barSubItem5
+            // 
+            this.barSubItem5.Caption = "Cari İşlemler";
+            this.barSubItem5.Id = 49;
+            this.barSubItem5.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.barSubItem5.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCiroEtme),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnMahsupEtme),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnOdenmisOlarakIsaretleme)});
+            this.barSubItem5.Name = "barSubItem5";
+            // 
+            // btnCiroEtme
+            // 
+            this.btnCiroEtme.Caption = "Ciro Etme";
+            this.btnCiroEtme.Id = 59;
+            this.btnCiroEtme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnCiroEtme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C));
+            this.btnCiroEtme.Name = "btnCiroEtme";
+            // 
+            // btnMahsupEtme
+            // 
+            this.btnMahsupEtme.Caption = "Mahsup Etme";
+            this.btnMahsupEtme.Id = 60;
+            this.btnMahsupEtme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnMahsupEtme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
+            this.btnMahsupEtme.Name = "btnMahsupEtme";
+            // 
+            // btnOdenmisOlarakIsaretleme
+            // 
+            this.btnOdenmisOlarakIsaretleme.Caption = "Ödenmiş Olarak İşaretleme";
+            this.btnOdenmisOlarakIsaretleme.Id = 61;
+            this.btnOdenmisOlarakIsaretleme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnOdenmisOlarakIsaretleme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D));
+            this.btnOdenmisOlarakIsaretleme.Name = "btnOdenmisOlarakIsaretleme";
+            // 
+            // barSubItem6
+            // 
+            this.barSubItem6.Caption = "İade İşlemleri";
+            this.barSubItem6.Id = 50;
+            this.barSubItem6.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.barSubItem6.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnMusteriyeGeriIade),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPortfoyeGeriIade),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnPortfoyeKarsiliksizIade)});
+            this.barSubItem6.Name = "barSubItem6";
+            // 
+            // btnMusteriyeGeriIade
+            // 
+            this.btnMusteriyeGeriIade.Caption = "Müşteriye Geri İade";
+            this.btnMusteriyeGeriIade.Id = 62;
+            this.btnMusteriyeGeriIade.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnMusteriyeGeriIade.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T));
+            this.btnMusteriyeGeriIade.Name = "btnMusteriyeGeriIade";
+            // 
+            // btnPortfoyeGeriIade
+            // 
+            this.btnPortfoyeGeriIade.Caption = "Portföye Geri İade";
+            this.btnPortfoyeGeriIade.Id = 63;
+            this.btnPortfoyeGeriIade.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnPortfoyeGeriIade.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R));
+            this.btnPortfoyeGeriIade.Name = "btnPortfoyeGeriIade";
+            // 
+            // btnPortfoyeKarsiliksizIade
+            // 
+            this.btnPortfoyeKarsiliksizIade.Caption = "Portföye Karşılıksız Geri İade";
+            this.btnPortfoyeKarsiliksizIade.Id = 64;
+            this.btnPortfoyeKarsiliksizIade.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnPortfoyeKarsiliksizIade.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y));
+            this.btnPortfoyeKarsiliksizIade.Name = "btnPortfoyeKarsiliksizIade";
+            // 
+            // barSubItem7
+            // 
+            this.barSubItem7.Caption = "Şube İşlemleri";
+            this.barSubItem7.Id = 51;
+            this.barSubItem7.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnBaskaSubeyeGonderme),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGelenBelgeyiOnaylama)});
+            this.barSubItem7.Name = "barSubItem7";
+            // 
+            // btnBaskaSubeyeGonderme
+            // 
+            this.btnBaskaSubeyeGonderme.Caption = "Başka Şubeye Gönderme";
+            this.btnBaskaSubeyeGonderme.Id = 65;
+            this.btnBaskaSubeyeGonderme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnBaskaSubeyeGonderme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G));
+            this.btnBaskaSubeyeGonderme.Name = "btnBaskaSubeyeGonderme";
+            // 
+            // btnGelenBelgeyiOnaylama
+            // 
+            this.btnGelenBelgeyiOnaylama.Caption = "Gelen Belgeyi Onaylama";
+            this.btnGelenBelgeyiOnaylama.Id = 66;
+            this.btnGelenBelgeyiOnaylama.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnGelenBelgeyiOnaylama.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O));
+            this.btnGelenBelgeyiOnaylama.Name = "btnGelenBelgeyiOnaylama";
+            // 
+            // btnTahsilEtmeKasa
+            // 
+            this.btnTahsilEtmeKasa.Caption = "Tahsil Etme ( Kasa )";
+            this.btnTahsilEtmeKasa.Id = 67;
+            this.btnTahsilEtmeKasa.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnTahsilEtmeKasa.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K));
+            this.btnTahsilEtmeKasa.Name = "btnTahsilEtmeKasa";
+            // 
+            // btnKarsiliksizOlarakIsaretleme
+            // 
+            this.btnKarsiliksizOlarakIsaretleme.Caption = "Karşılıksız Olarak İşaretleme";
+            this.btnKarsiliksizOlarakIsaretleme.Id = 68;
+            this.btnKarsiliksizOlarakIsaretleme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnKarsiliksizOlarakIsaretleme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I));
+            this.btnKarsiliksizOlarakIsaretleme.Name = "btnKarsiliksizOlarakIsaretleme";
+            // 
+            // btnTahsiliImkansizHaleGelme
+            // 
+            this.btnTahsiliImkansizHaleGelme.Caption = "Tahsili İmkansız Hale Gelme";
+            this.btnTahsiliImkansizHaleGelme.Id = 69;
+            this.btnTahsiliImkansizHaleGelme.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnTahsiliImkansizHaleGelme.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M), (System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z));
+            this.btnTahsiliImkansizHaleGelme.Name = "btnTahsiliImkansizHaleGelme";
+            // 
+            // barSubItem3
+            // 
+            this.barSubItem3.Caption = "Banka İşlemleri";
+            this.barSubItem3.Id = 45;
+            this.barSubItem3.Name = "barSubItem3";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Banka İşlemleri";
+            this.barButtonItem1.Id = 46;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Cari İşlemler";
+            this.barButtonItem2.Id = 47;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -783,6 +1073,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYeni);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnYeniMakbuz);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSil);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnSec);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDuzenle);
@@ -865,24 +1156,14 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.BarButtonItem btnSil;
         private DevExpress.XtraBars.BarButtonItem btnSec;
         private DevExpress.XtraBars.BarButtonItem btnDuzenle;
         private DevExpress.XtraBars.BarButtonItem btnYenile;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem btnCikis;
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
-        private DevExpress.XtraBars.BarStaticItem barInsert;
-        private DevExpress.XtraBars.BarStaticItem barInsertAciklama;
-        private DevExpress.XtraBars.BarStaticItem barDelete;
-        private DevExpress.XtraBars.BarStaticItem barDeleteAciklama;
-        private DevExpress.XtraBars.BarStaticItem barEnter;
         private DevExpress.XtraBars.BarStaticItem barEnterAciklama;
-        private DevExpress.XtraBars.BarStaticItem barDuzelt;
-        private DevExpress.XtraBars.BarStaticItem barDuzeltAciklama;
-        private DevExpress.XtraBars.BarStaticItem barYenile;
         private DevExpress.XtraBars.BarStaticItem barYenileAciklama;
-        private DevExpress.XtraBars.BarButtonItem btnAktifPasifKartlar;
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarButtonItem btnStandarExcelDosyasi;
         private DevExpress.XtraBars.BarButtonItem btnFormatliExcelDosyasi;
@@ -908,5 +1189,42 @@
         protected DevExpress.XtraBars.BarStaticItem barCikisAciklama;
         protected DevExpress.XtraBars.BarButtonItem btnYeni;
         protected DevExpress.XtraBars.BarButtonItem btnTahakkukYap;
+        private DevExpress.XtraBars.BarSubItem barSubItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        protected DevExpress.XtraBars.BarButtonItem btnTahsiliImkansizHaleGelme;
+        protected DevExpress.XtraBars.BarSubItem barSubItem2;
+        protected DevExpress.XtraBars.BarButtonItem btnAvukataGonderme;
+        protected DevExpress.XtraBars.BarButtonItem btnAvukatYoluylaTahsilEtme;
+        protected DevExpress.XtraBars.BarSubItem barSubItem4;
+        protected DevExpress.XtraBars.BarButtonItem btnTahsilEtmeBanka;
+        protected DevExpress.XtraBars.BarButtonItem btnBankayaTahsileGonderme;
+        protected DevExpress.XtraBars.BarButtonItem btnBankaYoluylaTahsilEtme;
+        protected DevExpress.XtraBars.BarButtonItem btnBlokeyeAlma;
+        protected DevExpress.XtraBars.BarButtonItem btnBlokeCozumu;
+        protected DevExpress.XtraBars.BarSubItem barSubItem5;
+        protected DevExpress.XtraBars.BarButtonItem btnCiroEtme;
+        protected DevExpress.XtraBars.BarButtonItem btnMahsupEtme;
+        protected DevExpress.XtraBars.BarButtonItem btnOdenmisOlarakIsaretleme;
+        protected DevExpress.XtraBars.BarSubItem barSubItem6;
+        protected DevExpress.XtraBars.BarButtonItem btnMusteriyeGeriIade;
+        protected DevExpress.XtraBars.BarButtonItem btnPortfoyeGeriIade;
+        protected DevExpress.XtraBars.BarButtonItem btnPortfoyeKarsiliksizIade;
+        protected DevExpress.XtraBars.BarSubItem barSubItem7;
+        protected DevExpress.XtraBars.BarButtonItem btnBaskaSubeyeGonderme;
+        protected DevExpress.XtraBars.BarButtonItem btnGelenBelgeyiOnaylama;
+        protected DevExpress.XtraBars.BarButtonItem btnTahsilEtmeKasa;
+        protected DevExpress.XtraBars.BarButtonItem btnKarsiliksizOlarakIsaretleme;
+        protected DevExpress.XtraBars.BarSubItem btnYeniMakbuz;
+        protected DevExpress.XtraBars.BarButtonItem btnSil;
+        protected DevExpress.XtraBars.BarStaticItem barInsert;
+        protected DevExpress.XtraBars.BarStaticItem barDelete;
+        protected DevExpress.XtraBars.BarStaticItem barEnter;
+        protected DevExpress.XtraBars.BarStaticItem barDuzelt;
+        protected DevExpress.XtraBars.BarStaticItem barDuzeltAciklama;
+        protected DevExpress.XtraBars.BarStaticItem barYenile;
+        protected DevExpress.XtraBars.BarStaticItem barDeleteAciklama;
+        protected DevExpress.XtraBars.BarButtonItem btnAktifPasifKartlar;
+        protected DevExpress.XtraBars.BarStaticItem barInsertAciklama;
     }
 }

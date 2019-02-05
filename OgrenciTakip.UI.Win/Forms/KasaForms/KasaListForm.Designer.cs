@@ -1,6 +1,6 @@
 ﻿namespace OgrenciTakip.UI.Win.Forms.KasaForms
 {
-    partial class CarliListForm
+    partial class KasaListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarliListForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KasaListForm));
             this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();

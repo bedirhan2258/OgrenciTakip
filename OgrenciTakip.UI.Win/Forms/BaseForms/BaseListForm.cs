@@ -78,9 +78,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             SizeChanged += BaseListForm_SizeChanged;
         }
 
-
-
-
         //************************************************************************Fonksiyonlar*****************************************************
 
         private void SutunGizleGoster()
@@ -313,7 +310,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Tablo.RowFocus("Id", seciliGelecekId);
         }
 
-        private void Button_ItemClick(object sender, ItemClickEventArgs e)
+        protected virtual void Button_ItemClick(object sender, ItemClickEventArgs e)
         {
             //İmlecin tıklananın üstünde olmasını sağlar.
 
@@ -410,8 +407,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             Cursor.Current = DefaultCursor;
         }
-
-
 
         private void Tablo_DoubleClick(object sender, EventArgs e)
         {

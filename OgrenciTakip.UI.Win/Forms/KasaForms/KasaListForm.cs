@@ -7,9 +7,9 @@ using OgrenciTakip.UI.Win.Show;
 
 namespace OgrenciTakip.UI.Win.Forms.KasaForms
 {
-    public partial class CarliListForm : BaseListForm
+    public partial class KasaListForm : BaseListForm
     {
-        public CarliListForm()
+        public KasaListForm()
         {
             InitializeComponent();
             bll = new KasaBll();

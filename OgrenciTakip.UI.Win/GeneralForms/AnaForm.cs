@@ -32,6 +32,7 @@ using OgrenciTakip.UI.Win.Forms.IletisimForms;
 using OgrenciTakip.UI.Win.Forms.OgrenciForms;
 using OgrenciTakip.UI.Win.Forms.IndirimForms;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
+using OgrenciTakip.UI.Win.Forms.MakbuzForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -168,7 +169,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             }
             else if (e.Item == btnKasaKarti)
             {
-                ShowListForms<CarliListForm>.ShowListForm(KartTuru.Kasa);
+                ShowListForms<KasaListForm>.ShowListForm(KartTuru.Kasa);
             }
             else if (e.Item == btnBankaKarti)
             {
@@ -205,6 +206,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnTahakkukKarti)
             {
                 ShowListForms<TahakkukListForm>.ShowListForm(KartTuru.Tahakkuk);
+            }
+            else if (e.Item == btnMakbuzKarti)
+            {
+                ShowListForms<MakbuzListForm>.ShowListForm(KartTuru.Makbuz);
             }
         }
     }

@@ -247,7 +247,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
                             case GeriOdemeHesapTuru.Kasa:
                                 {
-                                    var entity = (KasaL)ShowListForms<CarliListForm>.ShowDialogListForm(KartTuru.Kasa, id);
+                                    var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, id);
                                     if (entity == null) return;
                                     _tablo.SetFocusedRowCellValue(_idColumn, entity.Id);
                                     _tablo.SetFocusedRowCellValue(_nameColumn, entity.KasaAdi);

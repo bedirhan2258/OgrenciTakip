@@ -95,9 +95,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtHesap.Size = new System.Drawing.Size(218, 20);
-            this.txtHesap.StatusBarAciklama = null;
+            this.txtHesap.StatusBarAciklama = "Hesap Adı Seçiniz.";
             this.txtHesap.StatusBarKisayol = "F4 :";
-            this.txtHesap.StatusBarKisayolAciklama = null;
+            this.txtHesap.StatusBarKisayolAciklama = "Seçim Yap.";
             this.txtHesap.StyleController = this.myDataLayoutControl;
             this.txtHesap.TabIndex = 3;
             // 
@@ -113,9 +113,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtHesapTuru.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtHesapTuru.Size = new System.Drawing.Size(118, 20);
-            this.txtHesapTuru.StatusBarAciklama = null;
+            this.txtHesapTuru.StatusBarAciklama = "Hesap Türü Seçiniz.";
             this.txtHesapTuru.StatusBarKisayol = "F4 :";
-            this.txtHesapTuru.StatusBarKisayolAciklama = null;
+            this.txtHesapTuru.StatusBarKisayolAciklama = "Seçim Yap.";
             this.txtHesapTuru.StyleController = this.myDataLayoutControl;
             this.txtHesapTuru.TabIndex = 2;
             // 
@@ -137,7 +137,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtTarih.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.txtTarih.Size = new System.Drawing.Size(98, 20);
-            this.txtTarih.StatusBarAciklama = null;
+            this.txtTarih.StatusBarAciklama = "Tarih Seçiniz.";
             this.txtTarih.StatusBarKisayol = "F4 :";
             this.txtTarih.StatusBarKisayolAciklama = "Tarih Seç";
             this.txtTarih.StyleController = this.myDataLayoutControl;
@@ -149,11 +149,13 @@
             this.txtMakbuzNo.Location = new System.Drawing.Point(70, 12);
             this.txtMakbuzNo.MenuManager = this.ribbonControl;
             this.txtMakbuzNo.Name = "txtMakbuzNo";
+            this.txtMakbuzNo.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtMakbuzNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtMakbuzNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtMakbuzNo.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtMakbuzNo.Properties.MaxLength = 50;
             this.txtMakbuzNo.Size = new System.Drawing.Size(98, 20);
-            this.txtMakbuzNo.StatusBarAciklama = null;
+            this.txtMakbuzNo.StatusBarAciklama = "Makbuz No Giriniz.";
             this.txtMakbuzNo.StyleController = this.myDataLayoutControl;
             this.txtMakbuzNo.TabIndex = 0;
             // 

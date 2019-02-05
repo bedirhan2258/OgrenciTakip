@@ -6,6 +6,7 @@ using OgrenciTakip.UI.Win.Forms.AvukatForms;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
 using OgrenciTakip.UI.Win.Forms.BankaHesapForms;
 using OgrenciTakip.UI.Win.Forms.BankaSubeForms;
+using OgrenciTakip.UI.Win.Forms.CariForms;
 using OgrenciTakip.UI.Win.Forms.GorevForms;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
 using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
@@ -358,7 +359,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
                             case KartTuru.Kasa:
                                 {
-                                    var entity = (KasaL)ShowListForms<CarliListForm>.ShowDialogListForm(KartTuru.Kasa, _btnEdit.Id);
+                                    var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, _btnEdit.Id);
                                     if (entity != null)
                                     {
                                         _btnEdit.Id = entity.Id;
@@ -380,7 +381,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
                             case KartTuru.Cari:
                                 {
-                                    var entity = (CariL)ShowListForms<CarliListForm>.ShowDialogListForm(KartTuru.Cari, _btnEdit.Id);
+                                    var entity = (CariL)ShowListForms<CariListForm>.ShowDialogListForm(KartTuru.Cari, _btnEdit.Id);
                                     if (entity != null)
                                     {
                                         _btnEdit.Id = entity.Id;

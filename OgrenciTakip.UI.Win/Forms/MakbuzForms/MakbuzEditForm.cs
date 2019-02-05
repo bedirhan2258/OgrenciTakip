@@ -23,7 +23,8 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         private readonly MakbuzHesapTuru _hesapTuru;
         #endregion
 
-        public MakbuzEditForm()
+
+        public MakbuzEditForm(params object[] prm)
         {
             InitializeComponent();
             dataLayoutControl = myDataLayoutControl;
@@ -35,6 +36,9 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             ShowItems = new BarItem[] { btnYazdir };
 
             kayitSonrasiFormuKapat = false;
+
+            _makbuzTuru = (MakbuzTuru)prm[0];
+            _hesapTuru = (MakbuzHesapTuru)prm[1];
         }
 
         protected internal override void Yukle()
@@ -46,6 +50,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             id = BaseIslemTuru.IdOlustur(oldEntity);
             txtMakbuzNo.Text = ((MakbuzBll)bll).YeniKodVer(x => x.DonemId == AnaForm.DonemId && x.SubeId == AnaForm.SubeId);
+            txtTarih.DateTime = DateTime.Now.Date;
         }
 
         protected override void NesneyiKontrollereBagla()
@@ -126,7 +131,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 
             //if (BagliTabloHataliGirisKontrol())  return false;
 
-            var result = ((TahakkukBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            var result = ((MakbuzBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
                x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId); //&& BagliTabloKaydet();
 
             //if (result && !kayitSonrasiFormuKapat)
@@ -141,7 +146,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             if (HataliGiris()) return false;
             //if (BagliTabloHataliGirisKontrol()) return false;
 
-            var result = ((TahakkukBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            var result = ((MakbuzBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId); //&& BagliTabloKaydet();
 
             //if (result && !kayitSonrasiFormuKapat)
@@ -247,15 +252,15 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
                         break;
 
                     case MakbuzHesapTuru.Epos:
-                        sec.Sec(txtHesap, KartTuru.Banka, BankaHesapTuru.EpostBlokeHesabi);
+                        sec.Sec(txtHesap, KartTuru.BankaHesap, BankaHesapTuru.EpostBlokeHesabi);
                         break;
 
                     case MakbuzHesapTuru.Ots:
-                        sec.Sec(txtHesap, KartTuru.Banka, BankaHesapTuru.OtsBlokeHesabi);
+                        sec.Sec(txtHesap, KartTuru.BankaHesap, BankaHesapTuru.OtsBlokeHesabi);
                         break;
 
                     case MakbuzHesapTuru.Pos:
-                        sec.Sec(txtHesap, KartTuru.Banka, BankaHesapTuru.PostBlokeHesabi);
+                        sec.Sec(txtHesap, KartTuru.BankaHesap, BankaHesapTuru.PostBlokeHesabi);
                         break;
 
                     case MakbuzHesapTuru.Kasa:

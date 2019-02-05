@@ -847,6 +847,9 @@
     <EmbeddedResource Include="Forms\MakbuzForms\MakbuzEditForm.resx">
       <DependentUpon>MakbuzEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MakbuzForms\MakbuzListForm.resx">
+      <DependentUpon>MakbuzListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MeslekForms\MeslekEditForm.resx">
       <DependentUpon>MeslekEditForm.cs</DependentUpon>
     </EmbeddedResource>
