@@ -164,7 +164,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             Close();
         }
 
-        private bool HataliGiris()
+        protected internal bool HataliGiris()
         {
             if (!txtHesap.Visible || txtHesap.Id != null) return false;
 

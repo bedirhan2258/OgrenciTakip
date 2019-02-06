@@ -317,6 +317,12 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MakbuzForms\BelgeSecimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MakbuzForms\BelgeSecimForm.Designer.cs">
+      <DependentUpon>BelgeSecimForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MakbuzForms\MakbuzEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -616,10 +622,16 @@
     <Compile Include="UserControls\Grid\MyGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControls\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.cs">
+    <Compile Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.Designer.cs">
+    <Compile Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.Designer.cs">
+      <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.Designer.cs">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Navigators\InsUptNavigator.cs">
@@ -844,6 +856,9 @@
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MakbuzForms\BelgeSecimForm.resx">
+      <DependentUpon>BelgeSecimForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MakbuzForms\MakbuzEditForm.resx">
       <DependentUpon>MakbuzEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -957,7 +972,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.resx">
+    <EmbeddedResource Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.resx">
+      <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.resx">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Navigators\InsUptNavigator.resx">
