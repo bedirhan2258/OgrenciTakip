@@ -94,6 +94,7 @@
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\MakbuzBll.cs" />
+    <Compile Include="General\MakbuzHareketleriBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
     <Compile Include="General\OdemeBilgileriBll.cs" />
     <Compile Include="General\OdemeTuruBll.cs" />

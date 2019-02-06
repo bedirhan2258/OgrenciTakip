@@ -2,6 +2,8 @@
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities.Base;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -59,5 +61,6 @@ namespace OgrenciTakip.Model.Entities
         public BankaHesap BankaHesap { get; set; }
         public Banka Banka { get; set; }
         public BankaSube BankaSube { get; set; }
+        public ICollection<MakbuzHareketleri> MakbuzHareketleri { get; set; }
     }
 }

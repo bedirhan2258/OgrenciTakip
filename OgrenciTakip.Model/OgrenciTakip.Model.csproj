@@ -71,6 +71,7 @@
     <Compile Include="DTO\KardesBilgilerDTO.cs" />
     <Compile Include="DTO\KasaDTO.cs" />
     <Compile Include="DTO\MakbuzDTO.cs" />
+    <Compile Include="DTO\MakbuzHareketleriDTO.cs" />
     <Compile Include="DTO\OdemeBilgileriDTO.cs" />
     <Compile Include="DTO\OgrenciDTO.cs" />
     <Compile Include="DTO\OkulDTO.cs" />
@@ -114,7 +115,9 @@
     <Compile Include="Entities\IptalNedeni.cs" />
     <Compile Include="Entities\Isyeri.cs" />
     <Compile Include="Entities\Kontenjan.cs" />
+    <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\Makbuz.cs" />
+    <Compile Include="Entities\MakbuzHareketleri.cs" />
     <Compile Include="Entities\Meslek.cs" />
     <Compile Include="Entities\OdemeBilgileri.cs" />
     <Compile Include="Entities\OdemeTuru.cs" />
