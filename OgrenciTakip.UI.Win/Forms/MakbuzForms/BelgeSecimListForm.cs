@@ -1,5 +1,4 @@
 ﻿
-
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
@@ -9,12 +8,13 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.GeneralForms;
 using System;
+using OgrenciTakip.UI.Win.Functions;
 using System.Linq;
 using System.Linq.Expressions;
 
 namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 {
-    public partial class BelgeSecimForm : BaseListForm
+    public partial class BelgeSecimListForm : BaseListForm
     {
         #region Variables
         private readonly Expression<Func<OdemeBilgileri, bool>> _filter;
@@ -23,12 +23,12 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         private readonly long _hesapId;
         #endregion
 
-        public BelgeSecimForm(params object[] prm)
+        public BelgeSecimListForm(params object[] prm)
         {
             InitializeComponent();
 
             _makbuzTuru = (MakbuzTuru)prm[0];
-            _makbuzHesapTuru = (MakbuzHesapTuru)prm[1];
+            _hesapTuru = (MakbuzHesapTuru)prm[1];
             _hesapId = (long)prm[2];
 
             _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.Tahakkuk.DonemId == AnaForm.DonemId;
@@ -52,5 +52,23 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             else
                 Messages.KartBulunamadiMesaji("Kart");
         }
+
+        protected override void SutunGizleGoster()
+        {
+            if (tablo.DataRowCount == 0) return;
+            var entity = tablo.GetRow<BelgeSecimL>(false);
+            if (entity == null) return;
+
+            bndBelgeDetayBilgileri.Visible = entity.OdemeTipi == OdemeTipi.Cek || entity.OdemeTipi == OdemeTipi.Senet;
+            colTakipNo.Visible = entity.OdemeTipi == OdemeTipi.Pos;
+            colBankaHesapAdi.Visible = entity.OdemeTipi == OdemeTipi.Epos || entity.OdemeTipi == OdemeTipi.Ots || entity.OdemeTipi == OdemeTipi.Pos;
+            colBankaAdi.Visible = entity.OdemeTipi == OdemeTipi.Cek;
+            colBankaSubeAdi.Visible = entity.OdemeTipi == OdemeTipi.Cek;
+            colHesapNo.Visible = entity.OdemeTipi == OdemeTipi.Cek;
+            colBelgeNo.Visible = entity.OdemeTipi == OdemeTipi.Cek;
+            colAsilBorclu.Visible = entity.OdemeTipi == OdemeTipi.Cek || entity.OdemeTipi == OdemeTipi.Senet;
+            colCiranta.Visible = entity.OdemeTipi == OdemeTipi.Cek || entity.OdemeTipi == OdemeTipi.Senet;
+        }
+
     }
 }

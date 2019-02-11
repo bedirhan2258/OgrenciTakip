@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
     public partial class MakbuzEditForm : BaseEditForm
     {
         #region Variables
-        private readonly MakbuzTuru _makbuzTuru;
+        protected internal readonly MakbuzTuru MakbuzTuru;
         private readonly MakbuzHesapTuru _hesapTuru;
         #endregion
 
@@ -37,7 +37,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 
             kayitSonrasiFormuKapat = false;
 
-            _makbuzTuru = (MakbuzTuru)prm[0];
+            MakbuzTuru = (MakbuzTuru)prm[0];
             _hesapTuru = (MakbuzHesapTuru)prm[1];
         }
 
@@ -77,7 +77,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
                         txtHesap.Id = AnaForm.DefaultAvukatHesapId;
                         txtHesap.Text = AnaForm.DefaultAvukatHesapAdi;
                         break;
-                    case MakbuzHesapTuru.Transfer when _makbuzTuru == MakbuzTuru.GelenBelgeyiOnaylama:
+                    case MakbuzHesapTuru.Transfer when MakbuzTuru == MakbuzTuru.GelenBelgeyiOnaylama:
                         txtHesap.Id = AnaForm.SubeId;
                         txtHesap.Text = AnaForm.SubeAdi;
                         break;
@@ -98,7 +98,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
                 Id = id,
                 Kod = txtMakbuzNo.Text,
                 Tarih = txtTarih.DateTime.Date,
-                MakbuzTuru = _makbuzTuru,
+                MakbuzTuru = MakbuzTuru,
                 HesapTuru = hesapTuru,
                 AvukatHesapId = hesapTuru == MakbuzHesapTuru.Avukat ? txtHesap.Id : null,
                 BankaHesapId = hesapTuru == MakbuzHesapTuru.Banka || hesapTuru == MakbuzHesapTuru.Epos || hesapTuru == MakbuzHesapTuru.Ots || hesapTuru == MakbuzHesapTuru.Pos ? txtHesap.Id : null,
@@ -175,11 +175,11 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 
         private void AlanIslemleri()
         {
-            Text = $"{Text} - {_makbuzTuru.ToName()}";
+            Text = $"{Text} - {MakbuzTuru.ToName()}";
             txtTarih.Properties.MinValue = AnaForm.GunTarihininOncesineMakbuzTarihiGirilebilir ? AnaForm.DonemBaslamaTarihi : DateTime.Now.Date;
             txtTarih.Properties.MaxValue = AnaForm.GunTarihininSonrasinaMakbuzTarihiGirilebilir ? AnaForm.DonemBitisTarihi : DateTime.Now.Date;
 
-            switch (_makbuzTuru)
+            switch (MakbuzTuru)
             {
                 case MakbuzTuru.BlokeyeAlma:
                 case MakbuzTuru.BlokeCozumu:
@@ -206,9 +206,9 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             }
         }
 
-        private void MakbuzTuruEnabled()
+        protected internal void MakbuzTuruEnabled()
         {
-            switch (_makbuzTuru)
+            switch (MakbuzTuru)
             {
                 case MakbuzTuru.BlokeyeAlma:
                 case MakbuzTuru.BlokeCozumu:

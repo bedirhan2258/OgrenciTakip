@@ -35,29 +35,29 @@
             this.colSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSinifAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOgrenciSubeAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colPortfoyNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBelgeSubeAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOdemeTuruAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBankaHesapAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTakipNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colPortfoyNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colGirisTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colVade = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colHesabaGecisTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.colIslemOncesiTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIslemTutari = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colBelgeDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBankaAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBankaSubeAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colBelgeNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colHesapNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAsilBorclu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colCiranta = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colBelgeDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bndBelgeDetayBilgileri = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
@@ -106,7 +106,7 @@
             this.tablo.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
             this.gridBand1,
             this.gridBand2,
-            this.gridBand3});
+            this.bndBelgeDetayBilgileri});
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.colOgrenciNo,
             this.colAdi,
@@ -213,6 +213,18 @@
             this.colOgrenciSubeAdi.Visible = true;
             this.colOgrenciSubeAdi.Width = 200;
             // 
+            // colPortfoyNo
+            // 
+            this.colPortfoyNo.Caption = "Portföy No";
+            this.colPortfoyNo.FieldName = "OdemeBilgileriId";
+            this.colPortfoyNo.Name = "colPortfoyNo";
+            this.colPortfoyNo.OptionsColumn.AllowEdit = false;
+            this.colPortfoyNo.StatusBarAciklama = null;
+            this.colPortfoyNo.StatusBarKisayol = null;
+            this.colPortfoyNo.StatusBarKisayolAciklama = null;
+            this.colPortfoyNo.Visible = true;
+            this.colPortfoyNo.Width = 100;
+            // 
             // colBelgeSubeAdi
             // 
             this.colBelgeSubeAdi.Caption = "Şube Adı";
@@ -263,18 +275,6 @@
             this.colTakipNo.Visible = true;
             this.colTakipNo.Width = 100;
             // 
-            // colPortfoyNo
-            // 
-            this.colPortfoyNo.Caption = "Portföy No";
-            this.colPortfoyNo.FieldName = "OdemeBilgileriId";
-            this.colPortfoyNo.Name = "colPortfoyNo";
-            this.colPortfoyNo.OptionsColumn.AllowEdit = false;
-            this.colPortfoyNo.StatusBarAciklama = null;
-            this.colPortfoyNo.StatusBarKisayol = null;
-            this.colPortfoyNo.StatusBarKisayolAciklama = null;
-            this.colPortfoyNo.Visible = true;
-            this.colPortfoyNo.Width = 100;
-            // 
             // colGirisTarihi
             // 
             this.colGirisTarihi.AppearanceCell.Options.UseTextOptions = true;
@@ -289,6 +289,16 @@
             this.colGirisTarihi.StatusBarKisayolAciklama = null;
             this.colGirisTarihi.Visible = true;
             this.colGirisTarihi.Width = 100;
+            // 
+            // repositoryTarih
+            // 
+            this.repositoryTarih.AutoHeight = false;
+            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryTarih.Name = "repositoryTarih";
             // 
             // colVade
             // 
@@ -333,6 +343,18 @@
             this.colTutar.Visible = true;
             this.colTutar.Width = 100;
             // 
+            // repositoryDecimal
+            // 
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Mask.EditMask = "n2";
+            this.repositoryDecimal.Name = "repositoryDecimal";
+            // 
             // colIslemOncesiTutar
             // 
             this.colIslemOncesiTutar.Caption = "Kalan";
@@ -358,6 +380,18 @@
             this.colIslemTutari.StatusBarKisayolAciklama = null;
             this.colIslemTutari.Visible = true;
             this.colIslemTutari.Width = 100;
+            // 
+            // colBelgeDurumu
+            // 
+            this.colBelgeDurumu.Caption = "Belge Durumu";
+            this.colBelgeDurumu.FieldName = "BelgeDurumu";
+            this.colBelgeDurumu.Name = "colBelgeDurumu";
+            this.colBelgeDurumu.OptionsColumn.AllowEdit = false;
+            this.colBelgeDurumu.StatusBarAciklama = null;
+            this.colBelgeDurumu.StatusBarKisayol = null;
+            this.colBelgeDurumu.StatusBarKisayolAciklama = null;
+            this.colBelgeDurumu.Visible = true;
+            this.colBelgeDurumu.Width = 200;
             // 
             // colBankaAdi
             // 
@@ -430,40 +464,6 @@
             this.colCiranta.Visible = true;
             this.colCiranta.Width = 200;
             // 
-            // colBelgeDurumu
-            // 
-            this.colBelgeDurumu.Caption = "Belge Durumu";
-            this.colBelgeDurumu.FieldName = "BelgeDurumu";
-            this.colBelgeDurumu.Name = "colBelgeDurumu";
-            this.colBelgeDurumu.OptionsColumn.AllowEdit = false;
-            this.colBelgeDurumu.StatusBarAciklama = null;
-            this.colBelgeDurumu.StatusBarKisayol = null;
-            this.colBelgeDurumu.StatusBarKisayolAciklama = null;
-            this.colBelgeDurumu.Visible = true;
-            this.colBelgeDurumu.Width = 200;
-            // 
-            // repositoryTarih
-            // 
-            this.repositoryTarih.AutoHeight = false;
-            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.repositoryTarih.Name = "repositoryTarih";
-            // 
-            // repositoryDecimal
-            // 
-            this.repositoryDecimal.AutoHeight = false;
-            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
-            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
-            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.Mask.EditMask = "n2";
-            this.repositoryDecimal.Name = "repositoryDecimal";
-            // 
             // gridBand1
             // 
             this.gridBand1.Caption = "Öğrenci Bilgileri";
@@ -495,18 +495,18 @@
             this.gridBand2.VisibleIndex = 1;
             this.gridBand2.Width = 1500;
             // 
-            // gridBand3
+            // bndBelgeDetayBilgileri
             // 
-            this.gridBand3.Caption = "Belge Detay Bilgiler";
-            this.gridBand3.Columns.Add(this.colBankaAdi);
-            this.gridBand3.Columns.Add(this.colBankaSubeAdi);
-            this.gridBand3.Columns.Add(this.colBelgeNo);
-            this.gridBand3.Columns.Add(this.colHesapNo);
-            this.gridBand3.Columns.Add(this.colAsilBorclu);
-            this.gridBand3.Columns.Add(this.colCiranta);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 1000;
+            this.bndBelgeDetayBilgileri.Caption = "Belge Detay Bilgiler";
+            this.bndBelgeDetayBilgileri.Columns.Add(this.colBankaAdi);
+            this.bndBelgeDetayBilgileri.Columns.Add(this.colBankaSubeAdi);
+            this.bndBelgeDetayBilgileri.Columns.Add(this.colBelgeNo);
+            this.bndBelgeDetayBilgileri.Columns.Add(this.colHesapNo);
+            this.bndBelgeDetayBilgileri.Columns.Add(this.colAsilBorclu);
+            this.bndBelgeDetayBilgileri.Columns.Add(this.colCiranta);
+            this.bndBelgeDetayBilgileri.Name = "bndBelgeDetayBilgileri";
+            this.bndBelgeDetayBilgileri.VisibleIndex = 2;
+            this.bndBelgeDetayBilgileri.Width = 1000;
             // 
             // MakbuzHareketleriTable
             // 
@@ -531,13 +531,11 @@
 
         private Grid.MyBandedGridControl grid;
         private Grid.MyBandedGridView tablo;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private Grid.MyBandedGridColumn colOgrenciNo;
         private Grid.MyBandedGridColumn colAdi;
         private Grid.MyBandedGridColumn colSoyadi;
         private Grid.MyBandedGridColumn colSinifAdi;
         private Grid.MyBandedGridColumn colOgrenciSubeAdi;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private Grid.MyBandedGridColumn colPortfoyNo;
         private Grid.MyBandedGridColumn colBelgeSubeAdi;
         private Grid.MyBandedGridColumn colOdemeTuruAdi;
@@ -552,12 +550,14 @@
         private Grid.MyBandedGridColumn colIslemOncesiTutar;
         private Grid.MyBandedGridColumn colIslemTutari;
         private Grid.MyBandedGridColumn colBelgeDurumu;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand3;
         private Grid.MyBandedGridColumn colBankaAdi;
         private Grid.MyBandedGridColumn colBankaSubeAdi;
         private Grid.MyBandedGridColumn colBelgeNo;
         private Grid.MyBandedGridColumn colHesapNo;
         private Grid.MyBandedGridColumn colAsilBorclu;
         private Grid.MyBandedGridColumn colCiranta;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bndBelgeDetayBilgileri;
     }
 }

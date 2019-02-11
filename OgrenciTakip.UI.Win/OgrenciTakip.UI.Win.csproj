@@ -317,11 +317,11 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MakbuzForms\BelgeSecimForm.cs">
+    <Compile Include="Forms\MakbuzForms\BelgeSecimListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MakbuzForms\BelgeSecimForm.Designer.cs">
-      <DependentUpon>BelgeSecimForm.cs</DependentUpon>
+    <Compile Include="Forms\MakbuzForms\BelgeSecimListForm.Designer.cs">
+      <DependentUpon>BelgeSecimListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MakbuzForms\MakbuzEditForm.cs">
       <SubType>Form</SubType>
@@ -856,8 +856,8 @@
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MakbuzForms\BelgeSecimForm.resx">
-      <DependentUpon>BelgeSecimForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MakbuzForms\BelgeSecimListForm.resx">
+      <DependentUpon>BelgeSecimListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MakbuzForms\MakbuzEditForm.resx">
       <DependentUpon>MakbuzEditForm.cs</DependentUpon>

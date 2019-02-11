@@ -80,10 +80,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         //************************************************************************Fonksiyonlar*****************************************************
 
-        private void SutunGizleGoster()
-        {
-            throw new NotImplementedException();
-        }
+        protected virtual void SutunGizleGoster() { }
 
         private void ButonGizleGoster()
         {

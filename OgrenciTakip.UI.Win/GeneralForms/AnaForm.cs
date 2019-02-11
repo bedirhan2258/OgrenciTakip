@@ -65,6 +65,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static string DefaultBankaHesapAdi;
         public static long? DefaultAvukatHesapId;
         public static string DefaultAvukatHesapAdi;
+        public static long KullaniciId = 1;
 
         public AnaForm()
         {

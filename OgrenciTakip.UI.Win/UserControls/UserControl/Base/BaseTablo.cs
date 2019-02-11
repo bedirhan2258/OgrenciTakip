@@ -70,6 +70,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.EndSorting += Tablo_SablonChanged;
             Tablo.DoubleClick += Tablo_DoubleClick;
             Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged;
+            Tablo.RowCountChanged += Tablo_RowCountChanged;
         }
 
         protected internal void Yukle()
@@ -307,5 +308,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             SutunGizleGoster();
             RowCellAllowEdit();
         }
+
+        protected virtual void Tablo_RowCountChanged(object sender, EventArgs e) { }
     }
 }

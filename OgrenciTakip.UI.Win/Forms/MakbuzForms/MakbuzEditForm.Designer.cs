@@ -278,13 +278,13 @@
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
-        private UserControls.Controls.MyButtonEdit txtHesap;
-        private UserControls.Controls.MyComboBoxEdit txtHesapTuru;
         private UserControls.Controls.MyDateEdit txtTarih;
         private UserControls.Controls.MyTextEdit txtMakbuzNo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutHesapAdi;
+        protected internal UserControls.Controls.MyComboBoxEdit txtHesapTuru;
+        protected internal UserControls.Controls.MyButtonEdit txtHesap;
     }
 }

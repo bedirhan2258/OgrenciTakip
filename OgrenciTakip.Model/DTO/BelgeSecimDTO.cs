@@ -12,7 +12,7 @@ namespace OgrenciTakip.Model.DTO
         public string Soyadi { get; set; }
         public string SinifAdi { get; set; }
         public string OgrenciSubeAdi { get; set; }
-        public long OdemeBilgileriId { get; set; }
+        public int OdemeBilgileriId { get; set; }
         public string BelgeSubeAdi { get; set; }
         public string OdemeTuruAdi { get; set; }
         public OdemeTipi OdemeTipi { get; set; }
