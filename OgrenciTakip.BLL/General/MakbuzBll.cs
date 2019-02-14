@@ -65,5 +65,9 @@ namespace OgrenciTakip.BLL.General
             }).OrderBy(x => x.Kod).ToList();
         }
 
+        public override bool Delete(BaseEntity entity)
+        {
+            return BaseDelete(entity, KartTuru.Makbuz, false);
+        }
     }
 }

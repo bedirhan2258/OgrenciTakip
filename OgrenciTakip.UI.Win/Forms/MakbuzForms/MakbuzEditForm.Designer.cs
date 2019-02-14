@@ -45,6 +45,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutHesapAdi = new DevExpress.XtraLayout.LayoutControlItem();
+            this.makbuzHareketleriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable.MakbuzHareketleriTable();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
@@ -59,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutHesapAdi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -69,6 +72,7 @@
             // 
             // myDataLayoutControl
             // 
+            this.myDataLayoutControl.Controls.Add(this.makbuzHareketleriTable);
             this.myDataLayoutControl.Controls.Add(this.txtHesap);
             this.myDataLayoutControl.Controls.Add(this.txtHesapTuru);
             this.myDataLayoutControl.Controls.Add(this.txtTarih);
@@ -167,7 +171,8 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
-            this.layoutHesapAdi});
+            this.layoutHesapAdi,
+            this.layoutControlItem4});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -245,6 +250,26 @@
             this.layoutHesapAdi.Text = "Hesap Adı";
             this.layoutHesapAdi.TextSize = new System.Drawing.Size(55, 13);
             // 
+            // makbuzHareketleriTable
+            // 
+            this.makbuzHareketleriTable.Location = new System.Drawing.Point(12, 60);
+            this.makbuzHareketleriTable.Name = "makbuzHareketleriTable";
+            this.makbuzHareketleriTable.Size = new System.Drawing.Size(966, 444);
+            this.makbuzHareketleriTable.TabIndex = 4;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem4.Control = this.makbuzHareketleriTable;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 4;
+            this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 2;
+            this.layoutControlItem4.Size = new System.Drawing.Size(970, 448);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem4.TextVisible = false;
+            // 
             // MakbuzEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +294,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutHesapAdi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +312,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutHesapAdi;
         protected internal UserControls.Controls.MyComboBoxEdit txtHesapTuru;
         protected internal UserControls.Controls.MyButtonEdit txtHesap;
+        private UserControls.UserControl.GenelEditFormTable.MakbuzHareketleriTable makbuzHareketleriTable;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

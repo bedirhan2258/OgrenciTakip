@@ -47,7 +47,7 @@ namespace OgrenciTakip.BLL.Base
             return BaseUpdate(oldEntity, currentEntity, filter);
         }
 
-        public bool Delete(BaseEntity entity)
+        public virtual bool Delete(BaseEntity entity)
         {
             return BaseDelete(entity, _kartTuru);
         }

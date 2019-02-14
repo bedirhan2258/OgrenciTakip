@@ -26,10 +26,11 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         public BelgeSecimListForm(params object[] prm)
         {
             InitializeComponent();
+            bll = new BelgeSecimBll();
 
             _makbuzTuru = (MakbuzTuru)prm[0];
             _hesapTuru = (MakbuzHesapTuru)prm[1];
-            _hesapId = (long)prm[2];
+            _hesapId = prm[2] != null ? (long)prm[2] : 0;
 
             _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.Tahakkuk.DonemId == AnaForm.DonemId;
         }
@@ -40,6 +41,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             Tablo = tablo;
             kartTuru = KartTuru.Hizmet;
             navigator = longNavigator.Navigator;
+            Text = $"{Text}-{_makbuzTuru.ToName()} - ( {_hesapTuru.ToName()} )";
         }
 
         protected override void Listele()

@@ -3,6 +3,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
 using DevExpress.XtraLayout.Utils;
 using OgrenciTakip.BLL.General;
+using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Common.Message;
@@ -12,6 +13,7 @@ using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
 using System;
+using System.Globalization;
 using System.Linq;
 
 namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
@@ -46,6 +48,8 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new MakbuzS() : ((MakbuzBll)bll).Single(FilterFunctions.Filter<Makbuz>(id));
             AlanIslemleri();
             NesneyiKontrollereBagla();
+            TabloYukle();
+            MakbuzTuruEnabled();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             id = BaseIslemTuru.IdOlustur(oldEntity);
@@ -92,7 +96,6 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         protected override void GuncelNesneOlustur()
         {
             var hesapTuru = txtHesapTuru.Text.GetEnum<MakbuzHesapTuru>();
-
             currentEnttiy = new Makbuz
             {
                 Id = id,
@@ -105,8 +108,8 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
                 CariHesapId = hesapTuru == MakbuzHesapTuru.Cari || hesapTuru == MakbuzHesapTuru.Mahsup ? txtHesap.Id : null,
                 KasaHesapId = hesapTuru == MakbuzHesapTuru.Kasa ? txtHesap.Id : null,
                 SubeHesapId = hesapTuru == MakbuzHesapTuru.Transfer ? txtHesap.Id : null,
-                HareketSayisi = 0,
-                MakbuzToplami = 0,
+                HareketSayisi = makbuzHareketleriTable.Tablo.DataRowCount,
+                MakbuzToplami = decimal.Parse(makbuzHareketleriTable.colIslemTutari.SummaryText),
                 DonemId = AnaForm.DonemId,
                 SubeId = AnaForm.SubeId
             };
@@ -120,46 +123,43 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             if (FarkliSubeIslemi)
                 GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil);
             else
-                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy);
-            //TableValueChanged());
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, makbuzHareketleriTable.TableValueChanged);
         }
 
         protected override bool EntityInsert()
         {
-            //GuncelNesneOlustur();
+            GuncelNesneOlustur();
             if (HataliGiris()) return false;
-
-            //if (BagliTabloHataliGirisKontrol())  return false;
+            if (makbuzHareketleriTable.HataliGiris()) return false;
 
             var result = ((MakbuzBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
-               x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId); //&& BagliTabloKaydet();
+               x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && makbuzHareketleriTable.Kaydet();
 
-            //if (result && !kayitSonrasiFormuKapat)
-            // BagliTabloYukle();
+            if (result && !kayitSonrasiFormuKapat)
+                makbuzHareketleriTable.Yukle();
 
             return result;
         }
 
         protected override bool EntityUpdate()
         {
-            //GuncelNesneOlustur();
+            GuncelNesneOlustur();
             if (HataliGiris()) return false;
-            //if (BagliTabloHataliGirisKontrol()) return false;
+            if (makbuzHareketleriTable.HataliGiris()) return false;
 
             var result = ((MakbuzBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
-             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId); //&& BagliTabloKaydet();
+             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && makbuzHareketleriTable.Kaydet();
 
-            //if (result && !kayitSonrasiFormuKapat)
-            //BagliTabloYukle();
+            if (result && !kayitSonrasiFormuKapat)
+                makbuzHareketleriTable.Yukle();
 
             return result;
         }
 
         protected override void EntityDelete()
         {
-            //Tabloda TobluHareketSil() Çağırılacak.
-
-            if (((MakbuzBll)bll).Delete(oldEntity)) return;
+            if (makbuzHareketleriTable.TopluHareketSil()) return;
+            if (!((IBaseCommonBll)bll).Delete(oldEntity)) return;
             refreshYapilacak = true;
             Close();
         }
@@ -220,7 +220,8 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
                 case MakbuzTuru.BankaYoluylaTahsilEtme:
                 case MakbuzTuru.CiroEtme:
                 case MakbuzTuru.BaskaSubeyeGonderme:
-                    //Bağlı Tabloya İhtiyaç Var.
+                    txtHesap.Enabled = makbuzHareketleriTable.Tablo.DataRowCount == 0;
+                    txtHesapTuru.Enabled = makbuzHareketleriTable.Tablo.DataRowCount == 0;
                     break;
 
                 case MakbuzTuru.GelenBelgeyiOnaylama:
@@ -276,6 +277,12 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 
         }
 
+        protected override void TabloYukle()
+        {
+            makbuzHareketleriTable.OwnerForm = this;
+            makbuzHareketleriTable.Yukle();
+        }
+
         protected override void Control_SelectedValueChanged(object sender, EventArgs e)
         {
             if (sender != txtHesapTuru) return;
@@ -288,9 +295,8 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         {
             if (layoutHesapAdi.Visible && txtHesap.Id == null)
                 txtHesap.Focus();
-
-            //else
-            //Tabloya Focuslan
+            else
+                makbuzHareketleriTable.Tablo.GridControl.Focus();
         }
 
     }

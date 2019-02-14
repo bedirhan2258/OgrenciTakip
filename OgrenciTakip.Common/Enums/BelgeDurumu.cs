@@ -7,9 +7,9 @@ namespace OgrenciTakip.Common.Enums
     {
         [Description("Portfoyde")]
         Portfoyde = 1,
-        [Description("Tahsil Etme Kasa")]
+        [Description("Tahsil Etme ( Kasa )  ")]
         TahsilEtmeKasa = 2,
-        [Description("Tahsil Etme Banka")]
+        [Description("Tahsil Etme ( Banka )")]
         TahsilEtmeBanka = 3,
         [Description("Kısmi Tahsil Edildi")]
         KismiTahsilEdildi = 4,

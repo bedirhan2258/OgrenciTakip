@@ -70,6 +70,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Tablo.FilterEditorCreated += Tablo_FilterEditorCreated;
             Tablo.ColumnFilterChanged += Tablo_ColumnFilterChanged;
             Tablo.CustomDrawFooterCell += Tablo_CustomDrawFooterCell;
+            Tablo.FocusedRowObjectChanged += Tablo_FocusedRowObjectChanged;
+            Tablo.RowDeleted += Tablo_RowDeleted;
             //Form Events
             Shown += BaseListForm_Shown;
             Load += BaseListForm_Load;
@@ -77,6 +79,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             LocationChanged += BaseListForm_LocationChanged;
             SizeChanged += BaseListForm_SizeChanged;
         }
+
+
 
         //************************************************************************Fonksiyonlar*****************************************************
 
@@ -247,7 +251,15 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             if (e.Column.Summary.Count > 0)
                 e.Appearance.TextOptions.HAlignment = e.Column.ColumnEdit.Appearance.HAlignment;
         }
+        private void Tablo_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            SutunGizleGoster();
+        }
 
+        private void Tablo_RowDeleted(object sender, DevExpress.Data.RowDeletedEventArgs e)
+        {
+            SutunGizleGoster();
+        }
         private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
         {
             e.ShowFilterEditor = false;
@@ -301,7 +313,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         {
             Tablo.Focus();
             ButonGizleGoster();
-            //  SutunGizleGoster();
+            SutunGizleGoster();
             //.HasValu özelliği gelen değerin null olup olmadığınıda kontrol eder.
             if (IsMdiChild || !seciliGelecekId.HasValue) return;
             Tablo.RowFocus("Id", seciliGelecekId);

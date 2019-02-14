@@ -169,7 +169,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
 
                 if (silinemeyenBelgeSayisi > 0)
                 {
-                    Messages.HataliVeriMesaji($"Makbuz İçerisinde Daha Sonra İşlem Görmüş {silinemeyenBelgeSayisi} Adet Belge Bulunmaktadır. Makbuz Tamamen İptal Edilemez");
+                    Messages.HataMesaji($"Makbuz İçerisinde Daha Sonra İşlem Görmüş {silinemeyenBelgeSayisi} Adet Belge Bulunmaktadır. Makbuz Tamamen İptal Edilemez");
                     return false;
                 }
 
