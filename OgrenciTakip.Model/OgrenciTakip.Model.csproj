@@ -56,6 +56,7 @@
     <Compile Include="DTO\AvukatDTO.cs" />
     <Compile Include="DTO\BankaDTO.cs" />
     <Compile Include="DTO\BankaHesapDTO.cs" />
+    <Compile Include="DTO\BelgeHareketleriDTO.cs" />
     <Compile Include="DTO\BelgeSecimDTO.cs" />
     <Compile Include="DTO\BilgiNotlariDTO.cs" />
     <Compile Include="DTO\CariDTO.cs" />

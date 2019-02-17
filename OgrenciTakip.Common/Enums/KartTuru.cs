@@ -78,6 +78,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Makbuz Kartı")]
         Makbuz = 35,
         [Description("Belge Seçim Kartı")]
-        BelgeSecim = 36
+        BelgeSecim = 36,
+        [Description("Belge Hareketleri")]
+        BelgeHareketleri = 37
     }
 }

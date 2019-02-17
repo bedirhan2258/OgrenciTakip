@@ -15,7 +15,7 @@ namespace OgrenciTakip.BLL.General
 {
     public class MakbuzHareketleriBll : BaseHareketBll<MakbuzHareketleri, OgrenciTakipContext>, IBaseHareketSelectBll<MakbuzHareketleri>
     {
-        public new IEnumerable<BaseHareketEntity> List(Expression<Func<MakbuzHareketleri, bool>> filter)
+        public IEnumerable<BaseHareketEntity> List(Expression<Func<MakbuzHareketleri, bool>> filter)
         {
             return List(filter, x => new MakbuzHareketleriL
             {

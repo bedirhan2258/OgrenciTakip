@@ -69,6 +69,7 @@
     <Compile Include="General\BankaBll.cs" />
     <Compile Include="General\BankaHesapBll.cs" />
     <Compile Include="General\BankaSubeBll.cs" />
+    <Compile Include="General\BelgeHareketleriBll.cs" />
     <Compile Include="General\BelgeSecimBll.cs" />
     <Compile Include="General\BilgiNotlariBll.cs" />
     <Compile Include="General\CariBll.cs" />
