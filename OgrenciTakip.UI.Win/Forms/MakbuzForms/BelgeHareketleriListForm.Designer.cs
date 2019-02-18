@@ -57,6 +57,18 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition13 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl1 = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
+            this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
+            this.colTarih = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.colMakbuzNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colMakbuzTuru = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.colIslemOncesiTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colIslemTutari = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colBelgeDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.txtBelgeNo = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtHesapNo = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtBankaSubeAdi = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
@@ -94,23 +106,16 @@
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
-            this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.colTarih = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colMakbuzNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colMakbuzTuru = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colIslemOncesiTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colIslemTutari = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colBelgeDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).BeginInit();
             this.myDataLayoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBelgeNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHesapNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankaSubeAdi.Properties)).BeginInit();
@@ -151,12 +156,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,6 +225,184 @@
             this.myDataLayoutControl1.Size = new System.Drawing.Size(821, 456);
             this.myDataLayoutControl1.TabIndex = 2;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
+            // 
+            // longNavigator
+            // 
+            this.longNavigator.Location = new System.Drawing.Point(12, 422);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(797, 22);
+            this.longNavigator.TabIndex = 22;
+            // 
+            // grid
+            // 
+            this.grid.Location = new System.Drawing.Point(12, 203);
+            this.grid.MainView = this.tablo;
+            this.grid.MenuManager = this.ribbonControl;
+            this.grid.Name = "grid";
+            this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryTarih,
+            this.repositoryDecimal});
+            this.grid.Size = new System.Drawing.Size(797, 215);
+            this.grid.TabIndex = 21;
+            this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.tablo});
+            // 
+            // tablo
+            // 
+            this.tablo.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.tablo.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.tablo.Appearance.FooterPanel.Options.UseFont = true;
+            this.tablo.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.tablo.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.tablo.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.tablo.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.tablo.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.tablo.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
+            this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTarih,
+            this.colMakbuzNo,
+            this.colMakbuzTuru,
+            this.colTutar,
+            this.colIslemOncesiTutar,
+            this.colIslemTutari,
+            this.colBelgeDurumu});
+            this.tablo.GridControl = this.grid;
+            this.tablo.Name = "tablo";
+            this.tablo.OptionsMenu.EnableColumnMenu = false;
+            this.tablo.OptionsMenu.EnableFooterMenu = false;
+            this.tablo.OptionsMenu.EnableGroupPanelMenu = false;
+            this.tablo.OptionsMenu.ShowAutoFilterRowItem = false;
+            this.tablo.OptionsNavigation.EnterMoveNextColumn = true;
+            this.tablo.OptionsPrint.AutoWidth = false;
+            this.tablo.OptionsPrint.PrintFooter = false;
+            this.tablo.OptionsPrint.PrintGroupFooter = false;
+            this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
+            this.tablo.OptionsView.RowAutoHeight = true;
+            this.tablo.OptionsView.ShowGroupPanel = false;
+            this.tablo.OptionsView.ShowViewCaption = true;
+            this.tablo.StatusBarAciklama = null;
+            this.tablo.StatusBarKisayol = null;
+            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.ViewCaption = "Belge Hareketleri";
+            // 
+            // colTarih
+            // 
+            this.colTarih.AppearanceCell.Options.UseTextOptions = true;
+            this.colTarih.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTarih.Caption = "Tarih";
+            this.colTarih.ColumnEdit = this.repositoryTarih;
+            this.colTarih.FieldName = "Tarih";
+            this.colTarih.Name = "colTarih";
+            this.colTarih.OptionsColumn.AllowEdit = false;
+            this.colTarih.StatusBarAciklama = null;
+            this.colTarih.StatusBarKisayol = null;
+            this.colTarih.StatusBarKisayolAciklama = null;
+            this.colTarih.Visible = true;
+            this.colTarih.VisibleIndex = 0;
+            this.colTarih.Width = 89;
+            // 
+            // repositoryTarih
+            // 
+            this.repositoryTarih.AutoHeight = false;
+            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.repositoryTarih.Name = "repositoryTarih";
+            // 
+            // colMakbuzNo
+            // 
+            this.colMakbuzNo.Caption = "Makbuz No";
+            this.colMakbuzNo.FieldName = "MakbuzNo";
+            this.colMakbuzNo.Name = "colMakbuzNo";
+            this.colMakbuzNo.OptionsColumn.AllowEdit = false;
+            this.colMakbuzNo.StatusBarAciklama = null;
+            this.colMakbuzNo.StatusBarKisayol = null;
+            this.colMakbuzNo.StatusBarKisayolAciklama = null;
+            this.colMakbuzNo.Visible = true;
+            this.colMakbuzNo.VisibleIndex = 1;
+            this.colMakbuzNo.Width = 114;
+            // 
+            // colMakbuzTuru
+            // 
+            this.colMakbuzTuru.Caption = "Makbuz Türü";
+            this.colMakbuzTuru.FieldName = "MakbuzTuru";
+            this.colMakbuzTuru.Name = "colMakbuzTuru";
+            this.colMakbuzTuru.OptionsColumn.AllowEdit = false;
+            this.colMakbuzTuru.StatusBarAciklama = null;
+            this.colMakbuzTuru.StatusBarKisayol = null;
+            this.colMakbuzTuru.StatusBarKisayolAciklama = null;
+            this.colMakbuzTuru.Visible = true;
+            this.colMakbuzTuru.VisibleIndex = 2;
+            this.colMakbuzTuru.Width = 114;
+            // 
+            // colTutar
+            // 
+            this.colTutar.Caption = "Belge Tutari";
+            this.colTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTutar.FieldName = "Tutar";
+            this.colTutar.Name = "colTutar";
+            this.colTutar.OptionsColumn.AllowEdit = false;
+            this.colTutar.StatusBarAciklama = null;
+            this.colTutar.StatusBarKisayol = null;
+            this.colTutar.StatusBarKisayolAciklama = null;
+            this.colTutar.Visible = true;
+            this.colTutar.VisibleIndex = 3;
+            this.colTutar.Width = 100;
+            // 
+            // repositoryDecimal
+            // 
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Name = "repositoryDecimal";
+            // 
+            // colIslemOncesiTutar
+            // 
+            this.colIslemOncesiTutar.Caption = "İşlem Öncesi Tutar";
+            this.colIslemOncesiTutar.ColumnEdit = this.repositoryDecimal;
+            this.colIslemOncesiTutar.FieldName = "IslemOncesiTutar";
+            this.colIslemOncesiTutar.Name = "colIslemOncesiTutar";
+            this.colIslemOncesiTutar.OptionsColumn.AllowEdit = false;
+            this.colIslemOncesiTutar.StatusBarAciklama = null;
+            this.colIslemOncesiTutar.StatusBarKisayol = null;
+            this.colIslemOncesiTutar.StatusBarKisayolAciklama = null;
+            this.colIslemOncesiTutar.Visible = true;
+            this.colIslemOncesiTutar.VisibleIndex = 4;
+            this.colIslemOncesiTutar.Width = 100;
+            // 
+            // colIslemTutari
+            // 
+            this.colIslemTutari.Caption = "İşlem Tutarı";
+            this.colIslemTutari.ColumnEdit = this.repositoryDecimal;
+            this.colIslemTutari.FieldName = "IslemTutari";
+            this.colIslemTutari.Name = "colIslemTutari";
+            this.colIslemTutari.OptionsColumn.AllowEdit = false;
+            this.colIslemTutari.StatusBarAciklama = null;
+            this.colIslemTutari.StatusBarKisayol = null;
+            this.colIslemTutari.StatusBarKisayolAciklama = null;
+            this.colIslemTutari.Visible = true;
+            this.colIslemTutari.VisibleIndex = 5;
+            this.colIslemTutari.Width = 100;
+            // 
+            // colBelgeDurumu
+            // 
+            this.colBelgeDurumu.Caption = "Belge Durumu";
+            this.colBelgeDurumu.FieldName = "BelgeDurumu";
+            this.colBelgeDurumu.Name = "colBelgeDurumu";
+            this.colBelgeDurumu.OptionsColumn.AllowEdit = false;
+            this.colBelgeDurumu.StatusBarAciklama = null;
+            this.colBelgeDurumu.StatusBarKisayol = null;
+            this.colBelgeDurumu.StatusBarKisayolAciklama = null;
+            this.colBelgeDurumu.Visible = true;
+            this.colBelgeDurumu.VisibleIndex = 6;
+            this.colBelgeDurumu.Width = 162;
             // 
             // txtBelgeNo
             // 
@@ -898,59 +1076,6 @@
             this.layoutControlItem17.Text = "Belge No";
             this.layoutControlItem17.TextSize = new System.Drawing.Size(79, 13);
             // 
-            // grid
-            // 
-            this.grid.Location = new System.Drawing.Point(12, 203);
-            this.grid.MainView = this.tablo;
-            this.grid.MenuManager = this.ribbonControl;
-            this.grid.Name = "grid";
-            this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryTarih,
-            this.repositoryDecimal});
-            this.grid.Size = new System.Drawing.Size(797, 215);
-            this.grid.TabIndex = 21;
-            this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.tablo});
-            // 
-            // tablo
-            // 
-            this.tablo.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.tablo.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.FooterPanel.Options.UseFont = true;
-            this.tablo.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.tablo.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.HeaderPanel.Options.UseForeColor = true;
-            this.tablo.Appearance.HeaderPanel.Options.UseTextOptions = true;
-            this.tablo.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.tablo.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
-            this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTarih,
-            this.colMakbuzNo,
-            this.colMakbuzTuru,
-            this.colTutar,
-            this.colIslemOncesiTutar,
-            this.colIslemTutari,
-            this.colBelgeDurumu});
-            this.tablo.GridControl = this.grid;
-            this.tablo.Name = "tablo";
-            this.tablo.OptionsMenu.EnableColumnMenu = false;
-            this.tablo.OptionsMenu.EnableFooterMenu = false;
-            this.tablo.OptionsMenu.EnableGroupPanelMenu = false;
-            this.tablo.OptionsMenu.ShowAutoFilterRowItem = false;
-            this.tablo.OptionsNavigation.EnterMoveNextColumn = true;
-            this.tablo.OptionsPrint.AutoWidth = false;
-            this.tablo.OptionsPrint.PrintFooter = false;
-            this.tablo.OptionsPrint.PrintGroupFooter = false;
-            this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
-            this.tablo.OptionsView.RowAutoHeight = true;
-            this.tablo.OptionsView.ShowGroupPanel = false;
-            this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
-            this.tablo.ViewCaption = "Belge Hareketleri";
-            // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -963,129 +1088,6 @@
             this.layoutControlItem18.Size = new System.Drawing.Size(801, 219);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
-            // 
-            // colTarih
-            // 
-            this.colTarih.AppearanceCell.Options.UseTextOptions = true;
-            this.colTarih.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTarih.Caption = "Tarih";
-            this.colTarih.ColumnEdit = this.repositoryTarih;
-            this.colTarih.FieldName = "Tarih";
-            this.colTarih.Name = "colTarih";
-            this.colTarih.OptionsColumn.AllowEdit = false;
-            this.colTarih.StatusBarAciklama = null;
-            this.colTarih.StatusBarKisayol = null;
-            this.colTarih.StatusBarKisayolAciklama = null;
-            this.colTarih.Visible = true;
-            this.colTarih.VisibleIndex = 0;
-            this.colTarih.Width = 89;
-            // 
-            // colMakbuzNo
-            // 
-            this.colMakbuzNo.Caption = "Makbuz No";
-            this.colMakbuzNo.FieldName = "MakbuzNo";
-            this.colMakbuzNo.Name = "colMakbuzNo";
-            this.colMakbuzNo.OptionsColumn.AllowEdit = false;
-            this.colMakbuzNo.StatusBarAciklama = null;
-            this.colMakbuzNo.StatusBarKisayol = null;
-            this.colMakbuzNo.StatusBarKisayolAciklama = null;
-            this.colMakbuzNo.Visible = true;
-            this.colMakbuzNo.VisibleIndex = 1;
-            this.colMakbuzNo.Width = 114;
-            // 
-            // colMakbuzTuru
-            // 
-            this.colMakbuzTuru.Caption = "Makbuz Türü";
-            this.colMakbuzTuru.FieldName = "MakbuzTuru";
-            this.colMakbuzTuru.Name = "colMakbuzTuru";
-            this.colMakbuzTuru.OptionsColumn.AllowEdit = false;
-            this.colMakbuzTuru.StatusBarAciklama = null;
-            this.colMakbuzTuru.StatusBarKisayol = null;
-            this.colMakbuzTuru.StatusBarKisayolAciklama = null;
-            this.colMakbuzTuru.Visible = true;
-            this.colMakbuzTuru.VisibleIndex = 2;
-            this.colMakbuzTuru.Width = 114;
-            // 
-            // colTutar
-            // 
-            this.colTutar.Caption = "Belge Tutari";
-            this.colTutar.ColumnEdit = this.repositoryDecimal;
-            this.colTutar.FieldName = "Tutar";
-            this.colTutar.Name = "colTutar";
-            this.colTutar.OptionsColumn.AllowEdit = false;
-            this.colTutar.StatusBarAciklama = null;
-            this.colTutar.StatusBarKisayol = null;
-            this.colTutar.StatusBarKisayolAciklama = null;
-            this.colTutar.Visible = true;
-            this.colTutar.VisibleIndex = 3;
-            this.colTutar.Width = 100;
-            // 
-            // colIslemOncesiTutar
-            // 
-            this.colIslemOncesiTutar.Caption = "İşlem Öncesi Tutar";
-            this.colIslemOncesiTutar.ColumnEdit = this.repositoryDecimal;
-            this.colIslemOncesiTutar.FieldName = "IslemOncesiTutar";
-            this.colIslemOncesiTutar.Name = "colIslemOncesiTutar";
-            this.colIslemOncesiTutar.OptionsColumn.AllowEdit = false;
-            this.colIslemOncesiTutar.StatusBarAciklama = null;
-            this.colIslemOncesiTutar.StatusBarKisayol = null;
-            this.colIslemOncesiTutar.StatusBarKisayolAciklama = null;
-            this.colIslemOncesiTutar.Visible = true;
-            this.colIslemOncesiTutar.VisibleIndex = 4;
-            this.colIslemOncesiTutar.Width = 100;
-            // 
-            // colIslemTutari
-            // 
-            this.colIslemTutari.Caption = "İşlem Tutarı";
-            this.colIslemTutari.ColumnEdit = this.repositoryDecimal;
-            this.colIslemTutari.FieldName = "IslemTutari";
-            this.colIslemTutari.Name = "colIslemTutari";
-            this.colIslemTutari.OptionsColumn.AllowEdit = false;
-            this.colIslemTutari.StatusBarAciklama = null;
-            this.colIslemTutari.StatusBarKisayol = null;
-            this.colIslemTutari.StatusBarKisayolAciklama = null;
-            this.colIslemTutari.Visible = true;
-            this.colIslemTutari.VisibleIndex = 5;
-            this.colIslemTutari.Width = 100;
-            // 
-            // colBelgeDurumu
-            // 
-            this.colBelgeDurumu.Caption = "Belge Durumu";
-            this.colBelgeDurumu.FieldName = "BelgeDurumu";
-            this.colBelgeDurumu.Name = "colBelgeDurumu";
-            this.colBelgeDurumu.OptionsColumn.AllowEdit = false;
-            this.colBelgeDurumu.StatusBarAciklama = null;
-            this.colBelgeDurumu.StatusBarKisayol = null;
-            this.colBelgeDurumu.StatusBarKisayolAciklama = null;
-            this.colBelgeDurumu.Visible = true;
-            this.colBelgeDurumu.VisibleIndex = 6;
-            this.colBelgeDurumu.Width = 162;
-            // 
-            // repositoryTarih
-            // 
-            this.repositoryTarih.AutoHeight = false;
-            this.repositoryTarih.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryTarih.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.repositoryTarih.Name = "repositoryTarih";
-            // 
-            // repositoryDecimal
-            // 
-            this.repositoryDecimal.AutoHeight = false;
-            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
-            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.Name = "repositoryDecimal";
-            // 
-            // longNavigator
-            // 
-            this.longNavigator.Location = new System.Drawing.Point(12, 422);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(797, 22);
-            this.longNavigator.TabIndex = 22;
             // 
             // layoutControlItem19
             // 
@@ -1114,6 +1116,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).EndInit();
             this.myDataLayoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBelgeNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHesapNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankaSubeAdi.Properties)).EndInit();
@@ -1154,12 +1161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryTarih)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

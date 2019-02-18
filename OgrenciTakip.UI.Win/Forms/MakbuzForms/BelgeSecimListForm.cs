@@ -11,6 +11,8 @@ using System;
 using OgrenciTakip.UI.Win.Functions;
 using System.Linq;
 using System.Linq.Expressions;
+using OgrenciTakip.UI.Win.Show;
+using DevExpress.XtraBars;
 
 namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 {
@@ -26,7 +28,9 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         public BelgeSecimListForm(params object[] prm)
         {
             InitializeComponent();
-            bll = new BelgeSecimBll();
+            //bll = new BelgeSecimBll();
+            HideItems = new BarItem[] { btnYeni, btnSil, btnDuzenle, barInsert, barInsertAciklama, barDelete, barDeleteAciklama, barDuzelt, barDuzeltAciklama };
+            ShowItems = new BarItem[] { btnBelgeHareketleri };
 
             _makbuzTuru = (MakbuzTuru)prm[0];
             _hesapTuru = (MakbuzHesapTuru)prm[1];
@@ -46,13 +50,17 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 
         protected override void Listele()
         {
-            var list = ((BelgeSecimBll)bll).List(_filter, _makbuzTuru, _hesapTuru, _hesapTuru.ToName().GetEnum<OdemeTipi>(), _hesapId, AnaForm.SubeId);
-            Tablo.GridControl.DataSource = list;
-            if (!multiSelect) return;
-            if (list.Any())
-                EklenebilecekEntityVar = true;
-            else
-                Messages.KartBulunamadiMesaji("Kart");
+            using (var bll = new BelgeSecimBll())
+            {
+                var list = bll.List(_filter, _makbuzTuru, _hesapTuru, _hesapTuru.ToName().GetEnum<OdemeTipi>(), _hesapId, AnaForm.SubeId);
+                Tablo.GridControl.DataSource = list;
+                if (!multiSelect) return;
+                if (list.Any())
+                    EklenebilecekEntityVar = true;
+                else
+                    Messages.KartBulunamadiMesaji("Kart");
+            }
+
         }
 
         protected override void SutunGizleGoster()
@@ -70,6 +78,14 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             colBelgeNo.Visible = entity.OdemeTipi == OdemeTipi.Cek;
             colAsilBorclu.Visible = entity.OdemeTipi == OdemeTipi.Cek || entity.OdemeTipi == OdemeTipi.Senet;
             colCiranta.Visible = entity.OdemeTipi == OdemeTipi.Cek || entity.OdemeTipi == OdemeTipi.Senet;
+        }
+
+        protected override void BelgeHareketleri()
+        {
+            var entity = tablo.GetRow<BelgeSecimL>();
+            if (entity == null) return;
+
+            ShowListForms<BelgeHareketleriListForm>.ShowDialogListForm(KartTuru.BelgeHareketleri, null, entity.OdemeBilgileriId);
         }
 
     }

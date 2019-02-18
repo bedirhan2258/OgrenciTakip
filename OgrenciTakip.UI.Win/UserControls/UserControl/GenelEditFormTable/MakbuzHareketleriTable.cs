@@ -1,5 +1,6 @@
 ﻿
 using DevExpress.Utils.Extensions;
+using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Views.Base;
 using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.General;
@@ -26,6 +27,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
             Bll = new MakbuzHareketleriBll();
             Tablo = tablo;
             EventsLoad();
+            ShowItems = new BarItem[] { btnBelgeHareketleri };
         }
 
         protected override void Listele()
@@ -207,6 +209,14 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
                 return true;
             }
             return false;
+        }
+
+        protected override void BelgeHareketleri()
+        {
+            var entity = tablo.GetRow<MakbuzHareketleriL>();
+            if (entity == null) return;
+
+            ShowListForms<BelgeHareketleriListForm>.ShowDialogListForm(KartTuru.BelgeHareketleri, null, entity.OdemeBilgileriId);
         }
 
         protected override void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)

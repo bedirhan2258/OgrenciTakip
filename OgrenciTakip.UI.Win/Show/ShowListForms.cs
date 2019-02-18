@@ -30,6 +30,7 @@ namespace OgrenciTakip.UI.Win.Show
             frm.Yukle();
             frm.Show();
         }
+
         public static BaseEntity ShowDialogListForm(KartTuru kartTuru, long? seciliGelecekId, params object[] prm)
         {
             //Burada yetki kontrolü yapılacak
@@ -37,7 +38,9 @@ namespace OgrenciTakip.UI.Win.Show
             {
                 frm.seciliGelecekId = seciliGelecekId;
                 frm.Yukle();
-                frm.ShowDialog();
+
+                if (!frm.IsDisposed)
+                    frm.ShowDialog();
 
                 return frm.DialogResult == DialogResult.OK ? frm.selectedEntity : null;
             }
@@ -70,7 +73,7 @@ namespace OgrenciTakip.UI.Win.Show
                 frm.RowSelect = new SelectRowFunctions(frm.Tablo);
 
                 //if (frm.EklenebilecekEntityVar)
-                    frm.ShowDialog();
+                frm.ShowDialog();
 
 
                 return frm.DialogResult == DialogResult.OK ? frm.SelectedEntities : null;

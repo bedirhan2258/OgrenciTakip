@@ -235,6 +235,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         }
         protected virtual void TahakkukYap() { }
 
+        protected virtual void BelgeHareketleri() { }
+
         protected virtual void BagliKartAc() { }
 
         //*******************************************************************Eventler**************************************************************
@@ -397,6 +399,12 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                     Tablo.HideCustomization();
                 }
             }
+
+            else if (e.Item == btnBelgeHareketleri)
+            {
+                BelgeHareketleri();
+            }
+
             else if (e.Item == btnBagliKartlar)
             {
                 BagliKartAc();
@@ -414,6 +422,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 aktifKartlariGoster = !aktifKartlariGoster;
                 FormCaptionAyarla();
             }
+
             Cursor.Current = DefaultCursor;
         }
 

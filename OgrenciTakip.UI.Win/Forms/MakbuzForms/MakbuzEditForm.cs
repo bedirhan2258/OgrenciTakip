@@ -41,6 +41,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
 
             MakbuzTuru = (MakbuzTuru)prm[0];
             _hesapTuru = (MakbuzHesapTuru)prm[1];
+            FarkliSubeIslemi = prm.Length > 2 && prm[2].GetType() == typeof(bool);
         }
 
         protected internal override void Yukle()

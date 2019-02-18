@@ -164,6 +164,9 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             return true;
 
         }
+
+        protected virtual void BelgeHareketleri() { }
+
         private void Button_ItemClick(object sender, ItemClickEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -178,6 +181,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 IptalEt();
             else if (e.Item == btnIptalGeriAl)
                 IptalGeriAl();
+            else if (e.Item == btnBelgeHareketleri)
+                BelgeHareketleri();
 
             Cursor.Current = DefaultCursor;
         }
@@ -269,6 +274,9 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                     break;
                 case Keys.R when e.Control:
                     IptalGeriAl();
+                    break;
+                case Keys.F6:
+                    BelgeHareketleri();
                     break;
             }
         }

@@ -5,6 +5,7 @@ using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.DTO;
+using OgrenciTakip.UI.Win.Forms.MakbuzForms;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
@@ -195,6 +196,14 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             entity.Delete = true;
             tablo.RefleshDataSource();
             ButtonEnabledDurumu(true);
+        }
+
+        protected override void BelgeHareketleri()
+        {
+            var entity = tablo.GetRow<OdemeBilgileriL>();
+            if (entity == null) return;
+
+            ShowListForms<BelgeHareketleriListForm>.ShowDialogListForm(KartTuru.BelgeHareketleri, null, entity.Id);
         }
 
         protected override void Tablo_CellValueChanged(object sender, CellValueChangedEventArgs e)
