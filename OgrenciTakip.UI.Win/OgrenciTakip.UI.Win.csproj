@@ -401,6 +401,18 @@
     <Compile Include="Forms\PromosyonForms\PromosyonListForm.Designer.cs">
       <DependentUpon>PromosyonListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RaporForms\RaporEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RaporForms\RaporEditForm.Designer.cs">
+      <DependentUpon>RaporEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RaporForms\RaporListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RaporForms\RaporListForm.Designer.cs">
+      <DependentUpon>RaporListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RehberForms\RehberEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -909,6 +921,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PromosyonForms\PromosyonListForm.resx">
       <DependentUpon>PromosyonListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RaporForms\RaporEditForm.resx">
+      <DependentUpon>RaporEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RaporForms\RaporListForm.resx">
+      <DependentUpon>RaporListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RehberForms\RehberEditForm.resx">
       <DependentUpon>RehberEditForm.cs</DependentUpon>

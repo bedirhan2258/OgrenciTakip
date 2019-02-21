@@ -80,6 +80,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Belge Seçim Kartı")]
         BelgeSecim = 36,
         [Description("Belge Hareketleri")]
-        BelgeHareketleri = 37
+        BelgeHareketleri = 37,
+        [Description("Rapor Kartı")]
+        Rapor = 38
     }
 }

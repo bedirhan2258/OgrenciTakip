@@ -127,6 +127,7 @@
             // myPictureEdit1
             // 
             this.myPictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.myPictureEdit1.EditValue = ((object)(resources.GetObject("myPictureEdit1.EditValue")));
             this.myPictureEdit1.EnterMoveNextControl = true;
             this.myPictureEdit1.Location = new System.Drawing.Point(12, 12);
             this.myPictureEdit1.MenuManager = this.ribbonControl;
@@ -425,7 +426,6 @@
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
         private UserControls.Controls.MyPictureEdit myPictureEdit1;
-        private UserControls.Navigators.SmallNavigator smallNavigator;
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colRaporAdi;
@@ -439,5 +439,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        public UserControls.Navigators.SmallNavigator smallNavigator;
     }
 }

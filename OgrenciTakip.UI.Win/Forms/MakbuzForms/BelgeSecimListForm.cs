@@ -29,7 +29,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         {
             InitializeComponent();
             //bll = new BelgeSecimBll();
-            HideItems = new BarItem[] { btnYeni, btnSil, btnDuzenle, barInsert, barInsertAciklama, barDelete, barDeleteAciklama, barDuzelt, barDuzeltAciklama };
+            HideItems = new BarItem[] { btnYeni, btnSil, btnDuzelt, barInsert, barInsertAciklama, barDelete, barDeleteAciklama, barDuzelt, barDuzeltAciklama };
             ShowItems = new BarItem[] { btnBelgeHareketleri };
 
             _makbuzTuru = (MakbuzTuru)prm[0];

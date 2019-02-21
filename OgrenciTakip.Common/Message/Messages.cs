@@ -97,5 +97,11 @@ namespace OgrenciTakip.Common.Message
         {
             UyariMesaji(dahaSonra ? "Ödeme Belgesinin Daha Sonra İşlem Görmüş Hareketleri Var. Ödeme Belgesi Silinemez" : "Ödeme Belgesinin İşlem Görmüş Harektleri Var.Ödeme Belgesi Silinemez");
         }
+
+        public static DialogResult RaporuTasarimaGonderMesaj()
+        {
+            return HayirSeciliEvetHayir("Rapor Tasarım Görünümde Açılacaktır.Onaylıyor musunuz?", "Onay");
+        }
+
     }
 }

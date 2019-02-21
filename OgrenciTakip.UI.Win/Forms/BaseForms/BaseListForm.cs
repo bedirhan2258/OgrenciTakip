@@ -170,7 +170,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             else
             {
                 //PerformClick MdiChild değilsen btnDüzenle butonuna basılmış gibi işlem yapılmaını sağlar.
-                btnDuzenle.PerformClick();
+                btnDuzelt.PerformClick();
             }
         }
 
@@ -236,6 +236,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual void TahakkukYap() { }
 
         protected virtual void BelgeHareketleri() { }
+
+        protected virtual void Duzelt() { }
 
         protected virtual void BagliKartAc() { }
 
@@ -363,7 +365,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 //Burada yetki kontrolü yapılacak.
                 ShowEditForm(-1);
             }
-            else if (e.Item == btnDuzenle)
+            else if (e.Item == btnDuzelt)
             {
                 ShowEditForm(Tablo.GetRowId());
             }
@@ -412,6 +414,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             else if (e.Item == btnYazdir)
             {
                 Yazdir();
+            }
+            else if(e.Item==btnTasarimDegistir)
+            {
+                Duzelt();
             }
             else if (e.Item == btnCikis)
             {

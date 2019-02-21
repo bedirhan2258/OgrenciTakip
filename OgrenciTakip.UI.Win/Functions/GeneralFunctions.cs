@@ -4,6 +4,7 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
+using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
@@ -12,7 +13,6 @@ using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -298,6 +298,15 @@ namespace OgrenciTakip.UI.Win.Functions
             tablo.ClearSelection();
 
             tablo.FocusedRowHandle = rowHandle;
+        }
+
+        public static void CreateDropDownMenu(this BarButtonItem baseButton, BarItem[] buttonItems)
+        {
+            baseButton.ButtonStyle = BarButtonStyle.CheckDropDown;
+            var popUpMenu = new PopupMenu();
+            buttonItems.ForEach(x => x.Visibility = BarItemVisibility.Always);
+            popUpMenu.ItemLinks.AddRange(buttonItems);
+            baseButton.DropDownControl = popUpMenu;
         }
     }
 }
