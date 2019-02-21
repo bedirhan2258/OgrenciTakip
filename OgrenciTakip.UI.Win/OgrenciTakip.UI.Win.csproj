@@ -536,6 +536,12 @@
     <Compile Include="GeneralForms\RaporOnizleme.Designer.cs">
       <DependentUpon>RaporOnizleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\RaporSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\RaporSecim.Designer.cs">
+      <DependentUpon>RaporSecim.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\TabloDokumParametreleri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -967,6 +973,9 @@
     <EmbeddedResource Include="GeneralForms\RaporOnizleme.resx">
       <DependentUpon>RaporOnizleme.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\RaporSecim.resx">
+      <DependentUpon>RaporSecim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\TabloDokumParametreleri.resx">
       <DependentUpon>TabloDokumParametreleri.cs</DependentUpon>
     </EmbeddedResource>
@@ -1246,6 +1255,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\saledetalis_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

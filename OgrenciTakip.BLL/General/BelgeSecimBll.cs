@@ -12,7 +12,7 @@ using System.Linq.Expressions;
 
 namespace OgrenciTakip.BLL.General
 {
-   public class BelgeSecimBll : BaseHareketBll<OdemeBilgileri, OgrenciTakipContext>
+    public class BelgeSecimBll : BaseHareketBll<OdemeBilgileri, OgrenciTakipContext>
     {
         public IEnumerable<BaseEntity> List(Expression<Func<OdemeBilgileri, bool>> filter, MakbuzTuru makbuzTuru, MakbuzHesapTuru hesapTuru, OdemeTipi odemeTipi, long? hesapId, long subeId)
         {
