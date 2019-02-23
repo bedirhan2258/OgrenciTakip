@@ -1,5 +1,7 @@
 ﻿using DevExpress.XtraBars.Ribbon;
+using OgrenciTakip.Common.Enums;
 using System;
+using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Show
 {
@@ -13,6 +15,16 @@ namespace OgrenciTakip.UI.Win.Show
                     frm.ShowDialog();
             else
                 frm.Show();
+        }
+
+        public static long ShowDialogForm(KartTuru kartTuru, params object[] prm)
+        {
+            var frm = (TFrom)Activator.CreateInstance(typeof(TFrom), prm);
+            using (frm)
+            {
+                frm.ShowDialog();
+                return frm.DialogResult == DialogResult.OK ? (long)frm.Tag : 0;
+            }
         }
 
     }

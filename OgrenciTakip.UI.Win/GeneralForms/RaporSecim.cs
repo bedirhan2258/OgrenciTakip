@@ -1,5 +1,8 @@
 ﻿
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
+using DevExpress.XtraReports;
+using DevExpress.XtraReports.UI;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
@@ -7,8 +10,11 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.Forms.RaporForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
+using OgrenciTakip.UI.Win.UserControls.Controls;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
@@ -55,8 +61,118 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             if (row == null) return;
 
             var entity = (Rapor)((RaporBll)bll).Single(x => x.Id == row.Id);
-            
+            var result = ShowRibbonForms<RaporTasarim>.ShowDialogForm(KartTuru.RaporTasarim, entity);
+            ShowEditFormDefault(result);
+
+            Cursor.Current = DefaultCursor;
         }
 
+        protected override void ShowEditForm(long id)
+        {
+            var row = Tablo.GetRow<RaporL>();
+            if (row == null) return;
+
+            var entity = (Rapor)((RaporBll)bll).Single(x => x.Id == row.Id);
+            var result = ShowEditForms<RaporEditForm>.ShowDialogEditForms(KartTuru.Rapor, id, entity.RaporTuru, entity.RaporBolumTuru, entity.Dosya);
+            ShowEditFormDefault(result);
+        }
+
+        private IList<MyXtraReport> RaporHazirla()
+        {
+            var raporlar = new List<MyXtraReport>();
+            var topluRapor = new MyXtraReport();
+
+            topluRapor.CreateDocument();
+            topluRapor.Baslik = "Toplu Rapor";
+            topluRapor.PrintingSystem.ContinuousPageNumbering = false;
+
+            foreach (var row in RowSelect.GetSelectedRows())
+            {
+                var entity = (Rapor)((RaporBll)bll).Single(x => x.Id == row.Id);
+                var rapor = entity.Dosya.ByteToStream().StreamToReport();
+                ReportDataSource(rapor);
+                rapor.CreateDocument();
+
+                switch (txtYazdirmaSekli.Text.GetEnum<YazdirmaSekli>())
+                {
+                    case YazdirmaSekli.TektekYazdir:
+                        raporlar.Add(rapor);
+                        break;
+                    case YazdirmaSekli.TopluYazdir:
+                        topluRapor.Pages.AddRange(rapor.Pages);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            if (topluRapor.Pages.Count == 0) return raporlar;
+            raporlar.Add(topluRapor);
+            return raporlar;
+        }
+
+        private void ReportDataSource(IReport rapor)
+        {
+            switch (rapor)
+            {
+                default:
+                    break;
+            }
+        }
+
+        protected override void Yazdir()
+        {
+            if (Messages.EvetSeciliEvetHayir("Rapor Yazdırılmak Üzere Seçtiğiniz Yazıcıya Gönderilecektir.Onaylıyor musunuz?", "Onay") != DialogResult.Yes) return;
+            var raporlar = RaporHazirla();
+
+            for (int i = 0; i < txtYazdirilacakAdet.Value; i++)
+            {
+                raporlar.ForEach(x => x.Print(txtYaziciAdi.Text));
+            }
+        }
+
+        protected override void BaskiOnizleme()
+        {
+            var raporlar = RaporHazirla();
+
+            raporlar.ForEach(x => ShowRibbonForms<RaporOnizleme>.ShowForm(true, x.PrintingSystem, x.Baslik));
+        }
+
+        protected override void Button_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            base.Button_ItemClick(sender, e);
+
+            void RaporOlustur(KartTuru raporTuru, RaporBolumTuru raporBolumTuru, XtraReport rapor)
+            {
+                if (Messages.RaporuTasarimaGonderMesaj() != DialogResult.Yes) return;
+
+                Cursor.Current = Cursors.WaitCursor;
+
+                var entity = new Rapor
+                {
+                    Kod = ((RaporBll)bll).YeniKodVer(x => x.RaporTuru == raporTuru),
+                    RaporTuru = raporTuru,
+                    RaporBolumTuru = raporBolumTuru,
+                    RaporAdi = raporTuru.ToName(),
+                    Dosya = rapor.ReportToStream().GetBuffer(),
+                    Durum = true
+                };
+                var result = ShowRibbonForms<RaporTasarim>.ShowDialogForm(KartTuru.RaporTasarim, entity);
+                ShowEditFormDefault(result);
+
+                Cursor.Current = DefaultCursor;
+            }
+
+            if (e.Item == btnYeniRapor)
+            {
+                var link = (BarSubItemLink)e.Item.Links[0];
+                link.Focus();
+                link.OpenMenu();
+                link.Item.ItemLinks[0].Focus();
+            }
+
+            else if (e.Item == btnOgrenciKartı)
+                
+        }
     }
 }

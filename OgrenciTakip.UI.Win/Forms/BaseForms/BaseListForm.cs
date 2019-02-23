@@ -218,6 +218,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         {
             TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, AnaForm.SubeAdi);
         }
+        protected virtual void BaskiOnizleme() { }
 
         protected internal void Yukle()
         {
@@ -415,7 +416,11 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Yazdir();
             }
-            else if(e.Item==btnTasarimDegistir)
+            else if (e.Item == btnBaskiOnizleme)
+            {
+                BaskiOnizleme();
+            }
+            else if (e.Item == btnTasarimDegistir)
             {
                 Duzelt();
             }

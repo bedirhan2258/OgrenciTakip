@@ -82,6 +82,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Belge Hareketleri")]
         BelgeHareketleri = 37,
         [Description("Rapor Kartı")]
-        Rapor = 38
+        Rapor = 38,
+        [Description("Rapor Tasarım")]
+        RaporTasarim = 39
     }
 }

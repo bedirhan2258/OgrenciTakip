@@ -5,6 +5,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
 using DevExpress.XtraPrinting.Native;
+using DevExpress.XtraReports.UI;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
@@ -308,6 +309,24 @@ namespace OgrenciTakip.UI.Win.Functions
             popUpMenu.ItemLinks.AddRange(buttonItems);
             baseButton.DropDownControl = popUpMenu;
         }
+
+        public static MyXtraReport StreamToReport(this MemoryStream stream)
+        {
+            return (MyXtraReport)XtraReport.FromStream(stream, true);
+        }
+
+        public static MemoryStream ByteToStream(this byte[] report)
+        {
+            return new MemoryStream(report);
+        }
+
+        public static MemoryStream ReportToStream(this XtraReport rapor)
+        {
+            var stream = new MemoryStream();
+            rapor.SaveLayout(stream);
+            return stream;
+        }
+
     }
 }
 

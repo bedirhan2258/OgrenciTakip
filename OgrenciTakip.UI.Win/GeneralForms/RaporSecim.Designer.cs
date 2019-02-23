@@ -43,13 +43,13 @@
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colRaporAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.mySpinEdit1 = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
+            this.txtYazdirilacakAdet = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
             this.txtYazdirmaSekli = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.txtYaziciAdi = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtYazdirilacakAdet = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -59,13 +59,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.myPictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mySpinEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYazdirilacakAdet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYazdirmaSekli.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYaziciAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYazdirilacakAdet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
@@ -107,12 +107,17 @@
             this.btnYeniMakbuz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.Image")));
             this.btnYeniMakbuz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniMakbuz.ImageOptions.LargeImage")));
             // 
+            // btnYeniRapor
+            // 
+            this.btnYeniRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.Image")));
+            this.btnYeniRapor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.LargeImage")));
+            // 
             // myDataLayoutControl
             // 
             this.myDataLayoutControl.Controls.Add(this.myPictureEdit1);
             this.myDataLayoutControl.Controls.Add(this.smallNavigator);
             this.myDataLayoutControl.Controls.Add(this.grid);
-            this.myDataLayoutControl.Controls.Add(this.mySpinEdit1);
+            this.myDataLayoutControl.Controls.Add(this.txtYazdirilacakAdet);
             this.myDataLayoutControl.Controls.Add(this.txtYazdirmaSekli);
             this.myDataLayoutControl.Controls.Add(this.txtYaziciAdi);
             this.myDataLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -212,27 +217,27 @@
             this.colRaporAdi.Visible = true;
             this.colRaporAdi.VisibleIndex = 0;
             // 
-            // mySpinEdit1
+            // txtYazdirilacakAdet
             // 
-            this.mySpinEdit1.EditValue = new decimal(new int[] {
+            this.txtYazdirilacakAdet.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.mySpinEdit1.EnterMoveNextControl = true;
-            this.mySpinEdit1.Location = new System.Drawing.Point(606, 36);
-            this.mySpinEdit1.MenuManager = this.ribbonControl;
-            this.mySpinEdit1.Name = "mySpinEdit1";
-            this.mySpinEdit1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.mySpinEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.mySpinEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.mySpinEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtYazdirilacakAdet.EnterMoveNextControl = true;
+            this.txtYazdirilacakAdet.Location = new System.Drawing.Point(606, 36);
+            this.txtYazdirilacakAdet.MenuManager = this.ribbonControl;
+            this.txtYazdirilacakAdet.Name = "txtYazdirilacakAdet";
+            this.txtYazdirilacakAdet.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.txtYazdirilacakAdet.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtYazdirilacakAdet.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtYazdirilacakAdet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.mySpinEdit1.Properties.Mask.EditMask = "d";
-            this.mySpinEdit1.Size = new System.Drawing.Size(132, 20);
-            this.mySpinEdit1.StatusBarAciklama = null;
-            this.mySpinEdit1.StyleController = this.myDataLayoutControl;
-            this.mySpinEdit1.TabIndex = 6;
+            this.txtYazdirilacakAdet.Properties.Mask.EditMask = "d";
+            this.txtYazdirilacakAdet.Size = new System.Drawing.Size(132, 20);
+            this.txtYazdirilacakAdet.StatusBarAciklama = null;
+            this.txtYazdirilacakAdet.StyleController = this.myDataLayoutControl;
+            this.txtYazdirilacakAdet.TabIndex = 6;
             // 
             // txtYazdirmaSekli
             // 
@@ -277,7 +282,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.txtYazdirilacakAdet,
+            this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6});
@@ -338,18 +343,18 @@
             this.layoutControlItem2.Text = "Yazdırma Şekli";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(81, 13);
             // 
-            // txtYazdirilacakAdet
+            // layoutControlItem3
             // 
-            this.txtYazdirilacakAdet.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.txtYazdirilacakAdet.AppearanceItemCaption.Options.UseForeColor = true;
-            this.txtYazdirilacakAdet.Control = this.mySpinEdit1;
-            this.txtYazdirilacakAdet.Location = new System.Drawing.Point(510, 24);
-            this.txtYazdirilacakAdet.Name = "txtYazdirilacakAdet";
-            this.txtYazdirilacakAdet.OptionsTableLayoutItem.ColumnIndex = 3;
-            this.txtYazdirilacakAdet.OptionsTableLayoutItem.RowIndex = 1;
-            this.txtYazdirilacakAdet.Size = new System.Drawing.Size(220, 24);
-            this.txtYazdirilacakAdet.Text = "Yazdırılacak Adet";
-            this.txtYazdirilacakAdet.TextSize = new System.Drawing.Size(81, 13);
+            this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem3.Control = this.txtYazdirilacakAdet;
+            this.layoutControlItem3.Location = new System.Drawing.Point(510, 24);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 3;
+            this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem3.Size = new System.Drawing.Size(220, 24);
+            this.layoutControlItem3.Text = "Yazdırılacak Adet";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 13);
             // 
             // layoutControlItem4
             // 
@@ -407,13 +412,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.myPictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mySpinEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtYazdirilacakAdet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYazdirmaSekli.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYaziciAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtYazdirilacakAdet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
@@ -429,13 +434,13 @@
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colRaporAdi;
-        private UserControls.Controls.MySpinEdit mySpinEdit1;
+        private UserControls.Controls.MySpinEdit txtYazdirilacakAdet;
         private UserControls.Controls.MyComboBoxEdit txtYazdirmaSekli;
         private UserControls.Controls.MyComboBoxEdit txtYaziciAdi;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraLayout.LayoutControlItem txtYazdirilacakAdet;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
