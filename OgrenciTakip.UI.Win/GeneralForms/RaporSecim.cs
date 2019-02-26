@@ -12,6 +12,7 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Forms.RaporForms;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using System.Collections.Generic;
@@ -21,7 +22,16 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 {
     public partial class RaporSecim : BaseListForm
     {
-        public RaporSecim()
+        #region Variables
+        private readonly OgrenciR _ogrenciBilgileri;
+        private readonly IEnumerable<IletisimBilgileriR> _iletisimBilgileri;
+        private readonly IEnumerable<HizmetBilgileriR> _hizmetBilgileri;
+        private readonly IEnumerable<IndirimBilgileriR> _indirimBilgileri;
+        private readonly IEnumerable<OdemeBilgileriR> _odemeBilgileri;
+        private readonly IEnumerable<GeriOdemeBilgileriR> _geriOdemeBilgileri;
+        #endregion
+
+        public RaporSecim(params object[] prm)
         {
             InitializeComponent();
 
@@ -37,6 +47,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             txtYazdirmaSekli.SelectedItem = YazdirmaSekli.TektekYazdir.ToName();
             txtYazdirmaSekli.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaSekli>());
+
+            _ogrenciBilgileri = (OgrenciR)prm[0];
+            _iletisimBilgileri = (IEnumerable<IletisimBilgileriR>)prm[1];
+            _hizmetBilgileri = (IEnumerable<HizmetBilgileriR>)prm[2];
+            _indirimBilgileri = (IEnumerable<IndirimBilgileriR>)prm[3];
+            _odemeBilgileri = (IEnumerable<OdemeBilgileriR>)prm[4];
+            _geriOdemeBilgileri = (IEnumerable<GeriOdemeBilgileriR>)prm[5];
         }
 
         protected override void DegiskenleriDoldur()
@@ -115,7 +132,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         {
             switch (rapor)
             {
-                default:
+                case OgrenciKartiRaporu rpr:
                     break;
             }
         }
@@ -170,9 +187,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 link.OpenMenu();
                 link.Item.ItemLinks[0].Focus();
             }
-            
-            //else if (e.Item == btnOgrenciKartı)
-            //    RaporOlustur(KartTuru.OgrenciKartiRaporu,RaporBolumTuru.TahakkukRaporlari,);
+
+            else if (e.Item == btnOgrenciKartı)
+                RaporOlustur(KartTuru.OgrenciKartiRaporu, RaporBolumTuru.TahakkukRaporlari, new OgrenciKartiRaporu());
 
         }
     }
