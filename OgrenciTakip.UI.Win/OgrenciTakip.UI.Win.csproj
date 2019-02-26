@@ -605,6 +605,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\XtraReports\Tahakkuk\OgrenciKartiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Tahakkuk\OgrenciKartiRaporu.Designer.cs">
+      <DependentUpon>OgrenciKartiRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
     <Compile Include="Show\ShowEditForms.cs" />
     <Compile Include="Show\ShowListForms.cs" />
@@ -671,9 +677,6 @@
     </Compile>
     <Compile Include="UserControls\Controls\MyXtraReport.cs">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="UserControls\Controls\MyXtraReport.Designer.cs">
-      <DependentUpon>MyXtraReport.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Grid\MyBandedGridControl.cs">
       <SubType>Component</SubType>
@@ -1046,6 +1049,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\OgrenciKartiRaporu.resx">
+      <DependentUpon>OgrenciKartiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.resx">
       <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -1317,6 +1323,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\design_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\FormReports\" />
+    <Folder Include="Reports\XtraReports\Fatura\" />
+    <Folder Include="Reports\XtraReports\Makbuz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

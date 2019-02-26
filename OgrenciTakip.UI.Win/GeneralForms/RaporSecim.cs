@@ -170,9 +170,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 link.OpenMenu();
                 link.Item.ItemLinks[0].Focus();
             }
+            
+            //else if (e.Item == btnOgrenciKartı)
+            //    RaporOlustur(KartTuru.OgrenciKartiRaporu,RaporBolumTuru.TahakkukRaporlari,);
 
-            else if (e.Item == btnOgrenciKartı)
-                
         }
     }
 }
