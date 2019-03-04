@@ -16,6 +16,7 @@ using OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
@@ -45,8 +46,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             txtYaziciAdi.Properties.Items.AddRange(GeneralFunctions.YazicilariListele());
             txtYaziciAdi.EditValue = GeneralFunctions.DefaultYazici();
 
-            txtYazdirmaSekli.SelectedItem = YazdirmaSekli.TektekYazdir.ToName();
+           
             txtYazdirmaSekli.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaSekli>());
+            txtYazdirmaSekli.SelectedItem = YazdirmaSekli.TekTekYazdir.ToName();
 
             _ogrenciBilgileri = (OgrenciR)prm[0];
             _iletisimBilgileri = (IEnumerable<IletisimBilgileriR>)prm[1];
@@ -112,7 +114,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
                 switch (txtYazdirmaSekli.Text.GetEnum<YazdirmaSekli>())
                 {
-                    case YazdirmaSekli.TektekYazdir:
+                    case YazdirmaSekli.TekTekYazdir:
                         raporlar.Add(rapor);
                         break;
                     case YazdirmaSekli.TopluYazdir:
@@ -133,6 +135,21 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             switch (rapor)
             {
                 case OgrenciKartiRaporu rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    rpr.Hizmet_Bilgileri.DataSource = _hizmetBilgileri;
+                    rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => new { x.IndirimAdi, x.IptalTarihi, x.IslemTarihi })
+                        .Select(x => new
+                        {
+                            x.Key.IndirimAdi,
+                            x.Key.IptalTarihi,
+                            x.Key.IslemTarihi,
+                            BrutIndirim = x.Sum(y => y.BrutIndirim),
+                            KistDonemDusulenIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
+                            NetIndirim = x.Sum(y => y.NetIndirim)
+                        });
+                    rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri;
+                    rpr.Iletisim_Bilgileri.DataSource = _iletisimBilgileri;
+                    rpr.Geri_Odeme_Bilgileri.DataSource = _geriOdemeBilgileri;
                     break;
             }
         }

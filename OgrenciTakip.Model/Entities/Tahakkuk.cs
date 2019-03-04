@@ -2,6 +2,7 @@
 using OgrenciTakip.Model.Attributes;
 using OgrenciTakip.Model.Entities.Base;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -60,6 +61,7 @@ namespace OgrenciTakip.Model.Entities
         public OzelKod OzelKod5 { get; set; }
         public Donem Donem { get; set; }
         public Sube Sube { get; set; }
+        public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
     }
 }
 

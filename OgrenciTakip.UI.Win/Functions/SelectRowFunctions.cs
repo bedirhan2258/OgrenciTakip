@@ -109,7 +109,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
             _tablo = null;
 
-        }   
+        }
 
         public SelectRowFunctions(GridView tablo)
         {
@@ -137,7 +137,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
         public bool IsRowSelected(int rowHandle)
         {
-            var row = _tablo.GetRow<BaseEntity>(rowHandle);
+            var row = (BaseEntity)_tablo.GetRow(rowHandle);
             return GetSelectedRowIndex(row) > -1;
         }
 
@@ -156,7 +156,7 @@ namespace OgrenciTakip.UI.Win.Functions
             _selectedRow.Clear();
             Update();
         }
-        
+
         public void RowSelection(int rowHandle)
         {
             if (!_tablo.IsDataRow(rowHandle)) return;

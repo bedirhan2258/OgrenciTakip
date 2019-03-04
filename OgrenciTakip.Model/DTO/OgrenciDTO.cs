@@ -97,7 +97,6 @@ namespace OgrenciTakip.Model.DTO
         public string SubeTelefon { get; set; }
         public string SubeFax { get; set; }
         public string SubeIbanNo { get; set; }
-        public string SubeBankaHesapAdi { get; set; }
         public byte[] SubeLogo { get; set; }
 
         public IletisimBilgileriR VeliBilgileri { get; set; }

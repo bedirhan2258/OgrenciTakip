@@ -39,6 +39,7 @@ namespace OgrenciTakip.Model.DTO
         public string TcKimlikNo { get; set; }
         public string Adi { get; set; }
         public string Soyadi { get; set; }
+        public string AdiSoyadi { get; set; }
         public string EvTel { get; set; }
         public string IsTel1 { get; set; }
         public string IsTel2 { get; set; }

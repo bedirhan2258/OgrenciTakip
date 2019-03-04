@@ -1,9 +1,12 @@
 ﻿
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraReports.UserDesigner;
+using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.Forms.RaporForms;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Show;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
@@ -23,6 +26,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             InitializeComponent();
 
             _rapor = (Rapor)prm[0];
+            Yukle();
         }
 
         protected internal void Yukle()
@@ -30,16 +34,25 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             var stream = new MemoryStream(_rapor.Dosya);
             var rapor = stream.StreamToReport();
             reportDesigner.AddCommandHandler(this);
-            //reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowClose = false;
-            //reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowDock = false;
-            //reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowFloat = false;
+            reportDesigner.OpenReport(rapor);
+            reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowClose = false;
+            reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowDock = false;
+            reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowFloat = false;
             reportDesigner.ActiveDesignPanel.Report.DisplayName = _rapor.RaporAdi;
         }
 
         private void Kaydet()
         {
+            _rapor.Dosya = reportDesigner.ActiveDesignPanel.Report.ReportToStream().GetBuffer();
+            var result = ShowEditForms<RaporEditForm>.ShowDialogEditForms(KartTuru.Rapor, _rapor.Id, _rapor.RaporTuru, _rapor.RaporBolumTuru, _rapor.Dosya);
+            if (result <= 0) return;
 
+            reportDesigner.ActiveDesignPanel.ReportState = ReportState.Saved;
+            DialogResult = DialogResult.OK;
+            Tag = result;
+            Close();
         }
+
         private void FarkliKaydet()
         {
 

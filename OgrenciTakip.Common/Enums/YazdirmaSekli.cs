@@ -6,7 +6,7 @@ namespace OgrenciTakip.Common.Enums
     public enum YazdirmaSekli
     {
         [Description("Tek Tek Yazdır")]
-        TektekYazdir = 1,
+        TekTekYazdir = 1,
         [Description("Toplu Yazdır")]
         TopluYazdir =2
     }

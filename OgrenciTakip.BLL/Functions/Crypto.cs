@@ -9,6 +9,7 @@ namespace OgrenciTakip.BLL.Functions
 {
     public static class Crypto
     {
+
         public static string Encrypt(this string sifrelenecekVeri, string anahtar)
         {
             if (sifrelenecekVeri == null) return null;
@@ -81,5 +82,6 @@ namespace OgrenciTakip.BLL.Functions
 
             return Encoding.UTF8.GetString(sifresiCozulmusVeri);
         }
+
     }
 }

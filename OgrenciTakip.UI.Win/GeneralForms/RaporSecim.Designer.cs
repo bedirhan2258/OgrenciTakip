@@ -74,7 +74,7 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(750, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(688, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
@@ -112,6 +112,10 @@
             this.btnYeniRapor.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.Image")));
             this.btnYeniRapor.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnYeniRapor.ImageOptions.LargeImage")));
             // 
+            // barSubItem8
+            // 
+            this.barSubItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem8.ImageOptions.Image")));
+            // 
             // myDataLayoutControl
             // 
             this.myDataLayoutControl.Controls.Add(this.myPictureEdit1);
@@ -125,7 +129,7 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.layoutControlGroup1;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(750, 386);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(688, 384);
             this.myDataLayoutControl.TabIndex = 2;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
@@ -144,11 +148,12 @@
             this.myPictureEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.myPictureEdit1.Properties.AppearanceFocused.BackColor = System.Drawing.Color.Transparent;
             this.myPictureEdit1.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.myPictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.myPictureEdit1.Properties.NullText = "Resim Yok";
             this.myPictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.myPictureEdit1.Properties.ShowMenu = false;
             this.myPictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.myPictureEdit1.Size = new System.Drawing.Size(196, 362);
+            this.myPictureEdit1.Size = new System.Drawing.Size(196, 360);
             this.myPictureEdit1.StatusBarAciklama = null;
             this.myPictureEdit1.StatusBarKisayol = "F4 :";
             this.myPictureEdit1.StatusBarKisayolAciklama = null;
@@ -157,9 +162,9 @@
             // 
             // smallNavigator
             // 
-            this.smallNavigator.Location = new System.Drawing.Point(212, 354);
+            this.smallNavigator.Location = new System.Drawing.Point(212, 352);
             this.smallNavigator.Name = "smallNavigator";
-            this.smallNavigator.Size = new System.Drawing.Size(526, 20);
+            this.smallNavigator.Size = new System.Drawing.Size(464, 20);
             this.smallNavigator.TabIndex = 8;
             // 
             // grid
@@ -168,7 +173,7 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(526, 290);
+            this.grid.Size = new System.Drawing.Size(464, 288);
             this.grid.TabIndex = 7;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -211,11 +216,13 @@
             this.colRaporAdi.FieldName = "RaporAdi";
             this.colRaporAdi.Name = "colRaporAdi";
             this.colRaporAdi.OptionsColumn.AllowEdit = false;
+            this.colRaporAdi.OptionsColumn.FixedWidth = true;
             this.colRaporAdi.StatusBarAciklama = null;
             this.colRaporAdi.StatusBarKisayol = null;
             this.colRaporAdi.StatusBarKisayolAciklama = null;
             this.colRaporAdi.Visible = true;
             this.colRaporAdi.VisibleIndex = 0;
+            this.colRaporAdi.Width = 393;
             // 
             // txtYazdirilacakAdet
             // 
@@ -234,7 +241,7 @@
             this.txtYazdirilacakAdet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtYazdirilacakAdet.Properties.Mask.EditMask = "d";
-            this.txtYazdirilacakAdet.Size = new System.Drawing.Size(132, 20);
+            this.txtYazdirilacakAdet.Size = new System.Drawing.Size(70, 20);
             this.txtYazdirilacakAdet.StatusBarAciklama = null;
             this.txtYazdirilacakAdet.StyleController = this.myDataLayoutControl;
             this.txtYazdirilacakAdet.TabIndex = 6;
@@ -268,7 +275,7 @@
             this.txtYaziciAdi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtYaziciAdi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtYaziciAdi.Size = new System.Drawing.Size(442, 20);
+            this.txtYaziciAdi.Size = new System.Drawing.Size(380, 20);
             this.txtYaziciAdi.StatusBarAciklama = null;
             this.txtYaziciAdi.StatusBarKisayol = "F4 :";
             this.txtYaziciAdi.StatusBarKisayolAciklama = null;
@@ -314,7 +321,7 @@
             rowDefinition2,
             rowDefinition3,
             rowDefinition4});
-            this.layoutControlGroup1.Size = new System.Drawing.Size(750, 386);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(688, 384);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -326,7 +333,7 @@
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem1.OptionsTableLayoutItem.ColumnSpan = 3;
-            this.layoutControlItem1.Size = new System.Drawing.Size(530, 24);
+            this.layoutControlItem1.Size = new System.Drawing.Size(468, 24);
             this.layoutControlItem1.Text = "Yazıcı Adı";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(81, 13);
             // 
@@ -352,7 +359,7 @@
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.ColumnIndex = 3;
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem3.Size = new System.Drawing.Size(220, 24);
+            this.layoutControlItem3.Size = new System.Drawing.Size(158, 24);
             this.layoutControlItem3.Text = "Yazdırılacak Adet";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(81, 13);
             // 
@@ -366,7 +373,7 @@
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem4.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem4.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem4.Size = new System.Drawing.Size(530, 294);
+            this.layoutControlItem4.Size = new System.Drawing.Size(468, 292);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -375,12 +382,12 @@
             this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem5.Control = this.smallNavigator;
-            this.layoutControlItem5.Location = new System.Drawing.Point(200, 342);
+            this.layoutControlItem5.Location = new System.Drawing.Point(200, 340);
             this.layoutControlItem5.Name = "layoutControlItem5";
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem5.Size = new System.Drawing.Size(530, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(468, 24);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -392,7 +399,7 @@
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.OptionsTableLayoutItem.RowSpan = 4;
-            this.layoutControlItem6.Size = new System.Drawing.Size(200, 366);
+            this.layoutControlItem6.Size = new System.Drawing.Size(200, 364);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -400,8 +407,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 519);
+            this.ClientSize = new System.Drawing.Size(688, 517);
             this.Controls.Add(this.myDataLayoutControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "RaporSecim";
             this.Text = "Rapor Seçim";
             this.Controls.SetChildIndex(this.ribbonControl, 0);

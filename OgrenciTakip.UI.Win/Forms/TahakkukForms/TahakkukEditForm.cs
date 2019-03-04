@@ -2,6 +2,7 @@
 using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
+using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
@@ -12,6 +13,7 @@ using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable;
 using System;
@@ -379,9 +381,9 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 Toplamlar();
 
             if (FarkliSubeIslemi)
-                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil);
+                Functions.GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil);
             else
-                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, TableValueChanged());
+                Functions.GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, TableValueChanged());
         }
 
         protected override bool BagliTabloKaydet()
@@ -443,6 +445,33 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
                 txtDurum.Text = IptalDurumu.DevamEdiyor.ToName();
 
             return true;
+        }
+
+        protected override void Yazdir()
+        {
+            if (pageIletisimBilgileri.Controls.Count == 0)
+            {
+                _iletisimBilgileriTable = new IletisimBilgileriTable().AddTable(this);
+                pageIletisimBilgileri.Controls.Add(_iletisimBilgileriTable);
+                _iletisimBilgileriTable.Yukle();
+            }
+
+            if (pageEposBilgileri.Controls.Count == 0)
+            {
+                _eposBilgileriTable = new EposBilgileriTable().AddTable(this);
+                pageEposBilgileri.Controls.Add(_eposBilgileriTable);
+                _eposBilgileriTable.Yukle();
+            }
+
+            var ogrenciBilgileri = ((TahakkukBll)bll).SingleDetail(x => x.Id == id);
+            var iletisimBilgileri = _iletisimBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<IletisimBilgileriR>();
+            var hizmetBilgileri = hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<HizmetBilgileriR>();
+            var indirimBilgileri = indirimBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<IndirimBilgileriR>();
+            var odemeBilgileri = odemeBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<OdemeBilgileriR>();
+            var geriOdemeBilgileri = geriOdemeBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<GeriOdemeBilgileriR>();
+            //var eposBilgileri = _eposBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<EposBilgileriR>();
+
+            ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, true, ogrenciBilgileri, iletisimBilgileri, hizmetBilgileri, indirimBilgileri, odemeBilgileri, geriOdemeBilgileri);
         }
 
         protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)
