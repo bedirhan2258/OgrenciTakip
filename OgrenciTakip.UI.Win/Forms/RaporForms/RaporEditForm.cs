@@ -35,7 +35,7 @@ namespace OgrenciTakip.UI.Win.Forms.RaporForms
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             id = BaseIslemTuru.IdOlustur(oldEntity);
-            txtKod.Text = ((RaporBll)bll).YeniKodVer();
+            txtKod.Text = ((RaporBll)bll).YeniKodVer(x => x.RaporBolumTuru == _raporBolumTuru);
             txtRaporAdi.Focus();
         }
 
@@ -67,12 +67,12 @@ namespace OgrenciTakip.UI.Win.Forms.RaporForms
 
         protected override bool EntityInsert()
         {
-            return ((RaporBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.RaporTuru == _raporTuru);
+            return ((RaporBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.RaporBolumTuru == _raporBolumTuru);
         }
 
         protected override bool EntityUpdate()
         {
-            return ((RaporBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.RaporTuru == _raporTuru);
+            return ((RaporBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.RaporBolumTuru == _raporBolumTuru);
         }
     }
 }

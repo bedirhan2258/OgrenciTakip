@@ -2,9 +2,9 @@
 
 namespace OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk
 {
-    public partial class OgrenciKartiRaporu : MyXtraReport
+    public partial class BankaOdemePlaniRaporu : MyXtraReport
     {
-        public OgrenciKartiRaporu()
+        public BankaOdemePlaniRaporu()
         {
             InitializeComponent();
         }

@@ -46,7 +46,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             txtYaziciAdi.Properties.Items.AddRange(GeneralFunctions.YazicilariListele());
             txtYaziciAdi.EditValue = GeneralFunctions.DefaultYazici();
 
-           
+
             txtYazdirmaSekli.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaSekli>());
             txtYazdirmaSekli.SelectedItem = YazdirmaSekli.TekTekYazdir.ToName();
 
@@ -151,6 +151,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                     rpr.Iletisim_Bilgileri.DataSource = _iletisimBilgileri;
                     rpr.Geri_Odeme_Bilgileri.DataSource = _geriOdemeBilgileri;
                     break;
+
+                case BankaOdemePlaniRaporu rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    var secilenOdemeler = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Ots);
+                    rpr.ToplamTutarYazi.Text = secilenOdemeler.Sum(x => x.Tutar).YaziIleTutar();
+                    rpr.Odeme_Bilgileri.DataSource = secilenOdemeler;
+                    break;
             }
         }
 
@@ -207,6 +214,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnOgrenciKartı)
                 RaporOlustur(KartTuru.OgrenciKartiRaporu, RaporBolumTuru.TahakkukRaporlari, new OgrenciKartiRaporu());
+
+            else if (e.Item == btnBankaOdemePlani)
+                RaporOlustur(KartTuru.BankaOdemePlaniRaporu, RaporBolumTuru.TahakkukRaporlari, new BankaOdemePlaniRaporu());
 
         }
     }
