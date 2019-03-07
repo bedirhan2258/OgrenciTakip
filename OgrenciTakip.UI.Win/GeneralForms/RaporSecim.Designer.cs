@@ -227,7 +227,7 @@
             // txtYazdirilacakAdet
             // 
             this.txtYazdirilacakAdet.EditValue = new decimal(new int[] {
-            0,
+            1,
             0,
             0,
             0});
@@ -241,6 +241,16 @@
             this.txtYazdirilacakAdet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtYazdirilacakAdet.Properties.Mask.EditMask = "d";
+            this.txtYazdirilacakAdet.Properties.MaxValue = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.txtYazdirilacakAdet.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.txtYazdirilacakAdet.Size = new System.Drawing.Size(70, 20);
             this.txtYazdirilacakAdet.StatusBarAciklama = null;
             this.txtYazdirilacakAdet.StyleController = this.myDataLayoutControl;

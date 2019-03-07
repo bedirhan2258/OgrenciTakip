@@ -471,7 +471,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             var geriOdemeBilgileri = geriOdemeBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<GeriOdemeBilgileriR>();
             //var eposBilgileri = _eposBilgileriTable.Tablo.DataController.ListSource.Cast<IBaseEntity>().EntityListConvert<EposBilgileriR>();
 
-            ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, true, ogrenciBilgileri, iletisimBilgileri, hizmetBilgileri, indirimBilgileri, odemeBilgileri, geriOdemeBilgileri);
+            ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, false, ogrenciBilgileri, iletisimBilgileri, hizmetBilgileri, indirimBilgileri, odemeBilgileri, geriOdemeBilgileri);
         }
 
         protected override void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e)

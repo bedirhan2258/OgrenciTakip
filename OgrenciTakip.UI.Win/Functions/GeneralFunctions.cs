@@ -187,6 +187,7 @@ namespace OgrenciTakip.UI.Win.Functions
                 if (aranacakDeger.Equals(bulunanDeger))
                     rowHandle = i;
             }
+            tablo.Focus();
             tablo.FocusedRowHandle = rowHandle;
 
         }

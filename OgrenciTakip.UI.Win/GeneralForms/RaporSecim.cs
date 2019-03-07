@@ -158,6 +158,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                     rpr.ToplamTutarYazi.Text = secilenOdemeler.Sum(x => x.Tutar).YaziIleTutar();
                     rpr.Odeme_Bilgileri.DataSource = secilenOdemeler;
                     break;
+
+                case MebKayitSozlesmesiRaporu rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    break;
             }
         }
 
@@ -176,7 +180,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         {
             var raporlar = RaporHazirla();
 
-            raporlar.ForEach(x => ShowRibbonForms<RaporOnizleme>.ShowForm(true, x.PrintingSystem, x.Baslik));
+            raporlar.ForEach(x => ShowRibbonForms<RaporOnizleme>.ShowForm(false, x.PrintingSystem, x.Baslik));
         }
 
         protected override void Button_ItemClick(object sender, ItemClickEventArgs e)
@@ -217,6 +221,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnBankaOdemePlani)
                 RaporOlustur(KartTuru.BankaOdemePlaniRaporu, RaporBolumTuru.TahakkukRaporlari, new BankaOdemePlaniRaporu());
+
+            else if (e.Item == btnMebKayitSozlesmesi)
+                RaporOlustur(KartTuru.MebKayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new MebKayitSozlesmesiRaporu());
 
         }
     }

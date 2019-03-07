@@ -88,6 +88,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Öğrenci Kartı Raporu")]
         OgrenciKartiRaporu = 40,
         [Description("Banka Ödeme Planı Raporu")]
-        BankaOdemePlaniRaporu = 41
+        BankaOdemePlaniRaporu = 41,
+        [Description("Meb Kayıt Sözleşmesi Raporu")]
+        MebKayitSozlesmesiRaporu = 41
     }
 }

@@ -55,7 +55,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         private void FarkliKaydet()
         {
+            _rapor.Id = 0;
+            _rapor.Dosya = reportDesigner.ActiveDesignPanel.Report.ReportToStream().GetBuffer();
+            var result = ShowEditForms<RaporEditForm>.ShowDialogEditForms(KartTuru.Rapor, _rapor.Id, _rapor.RaporTuru, _rapor.RaporBolumTuru, _rapor.Dosya);
+            if (result <= 0) return;
 
+            reportDesigner.ActiveDesignPanel.ReportState = ReportState.Saved;
+            DialogResult = DialogResult.OK;
+            Tag = result;
+            Close();
         }
 
         public bool CanHandleCommand(ReportCommand command, ref bool useNextHandler)
