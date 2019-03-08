@@ -416,6 +416,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 Yazdir();
             }
+            else if (e.Item == btnTabloYazdir)
+            {
+                TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, AnaForm.SubeAdi);
+            }
             else if (e.Item == btnBaskiOnizleme)
             {
                 BaskiOnizleme();

@@ -11,6 +11,7 @@ using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Forms.RaporForms;
+using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk;
 using OgrenciTakip.UI.Win.Show;
@@ -162,6 +163,17 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 case MebKayitSozlesmesiRaporu rpr:
                     rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
                     break;
+
+                case IndirimDilekcesiRaporu rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => x.IndirimAdi).Select(x => new
+                    {
+                        IndirimAdi = x.Key,
+                        BrutIndirim = x.Sum(y => y.BrutIndirim),
+                        KistDonemDusulenIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
+                        NetIndirim = x.Sum(y => y.NetIndirim)
+                    });
+                    break;
             }
         }
 
@@ -224,6 +236,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnMebKayitSozlesmesi)
                 RaporOlustur(KartTuru.MebKayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new MebKayitSozlesmesiRaporu());
+
+            else if (e.Item == btnIndirimTalepDilekcesi)
+                RaporOlustur(KartTuru.IndirimDilekcesiRaporu, RaporBolumTuru.TahakkukRaporlari, new IndirimDilekcesiRaporu());
 
         }
     }

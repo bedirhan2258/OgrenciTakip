@@ -497,6 +497,12 @@
     <Compile Include="Forms\SinifGrupForms\SinifGrupListForm.Designer.cs">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.Designer.cs">
+      <DependentUpon>IndirimDilekcesiRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TahakkukForms\TahakkukEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1008,6 +1014,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SinifGrupForms\SinifGrupListform.resx">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.resx">
+      <DependentUpon>IndirimDilekcesiRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TahakkukForms\TahakkukEditForm.resx">
       <DependentUpon>TahakkukEditForm.cs</DependentUpon>
