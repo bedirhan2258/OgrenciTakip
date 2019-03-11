@@ -174,6 +174,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                         NetIndirim = x.Sum(y => y.NetIndirim)
                     });
                     break;
+                case KayitSozlesmesiRaporu rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    break;
             }
         }
 
@@ -239,6 +242,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnIndirimTalepDilekcesi)
                 RaporOlustur(KartTuru.IndirimDilekcesiRaporu, RaporBolumTuru.TahakkukRaporlari, new IndirimDilekcesiRaporu());
+
+            else if (e.Item == btnKayitSozlemesi)
+                RaporOlustur(KartTuru.KayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new KayitSozlesmesiRaporu());
+
 
         }
     }

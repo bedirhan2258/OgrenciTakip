@@ -92,6 +92,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Meb Kayıt Sözleşmesi Raporu")]
         MebKayitSozlesmesiRaporu = 42,
         [Description("İndirim Dilekçesi Raporu")]
-        IndirimDilekcesiRaporu = 43
+        IndirimDilekcesiRaporu = 43,
+        [Description("Kayıt Sozleşmesi Raporu")]
+        KayitSozlesmesiRaporu = 44
     }
 }
