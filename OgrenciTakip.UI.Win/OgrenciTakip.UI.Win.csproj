@@ -624,6 +624,12 @@
     <Compile Include="Reports\XtraReports\Tahakkuk\KayitSozlesmesiRaporu.Designer.cs">
       <DependentUpon>KayitSozlesmesiRaporu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReports\Tahakkuk\KrediKartliOdemeTalimatiRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Tahakkuk\KrediKartliOdemeTalimatiRaporu.Designer.cs">
+      <DependentUpon>KrediKartliOdemeTalimatiRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Tahakkuk\MebKayitSozlesmesiRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1082,6 +1088,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\KayitSozlesmesiRaporu.resx">
       <DependentUpon>KayitSozlesmesiRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\KrediKartliOdemeTalimatiRaporu.resx">
+      <DependentUpon>KrediKartliOdemeTalimatiRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\MebKayitSozlesmesiRaporu.resx">
       <DependentUpon>MebKayitSozlesmesiRaporu.cs</DependentUpon>

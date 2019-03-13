@@ -31,6 +31,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         private readonly IEnumerable<IndirimBilgileriR> _indirimBilgileri;
         private readonly IEnumerable<OdemeBilgileriR> _odemeBilgileri;
         private readonly IEnumerable<GeriOdemeBilgileriR> _geriOdemeBilgileri;
+        private readonly IEnumerable<EposBilgileriR> _eposBilgileri;
         #endregion
 
         public RaporSecim(params object[] prm)
@@ -57,6 +58,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             _indirimBilgileri = (IEnumerable<IndirimBilgileriR>)prm[3];
             _odemeBilgileri = (IEnumerable<OdemeBilgileriR>)prm[4];
             _geriOdemeBilgileri = (IEnumerable<GeriOdemeBilgileriR>)prm[5];
+            _eposBilgileri = (IEnumerable<EposBilgileriR>)prm[6];
         }
 
         protected override void DegiskenleriDoldur()
@@ -177,6 +179,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 case KayitSozlesmesiRaporu rpr:
                     rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
                     break;
+                case KrediKartliOdemeTalimatiRaporu rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    rpr.Epos_Bilgileri.DataSource = _eposBilgileri;
+                    rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Epos);
+                    break;
             }
         }
 
@@ -246,7 +253,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnKayitSozlemesi)
                 RaporOlustur(KartTuru.KayitSozlesmesiRaporu, RaporBolumTuru.TahakkukRaporlari, new KayitSozlesmesiRaporu());
 
-
+            else if (e.Item == btnKrediKartliOdemeTalimati)
+                RaporOlustur(KartTuru.KrediKartliOdemeTalimatiRaporu, RaporBolumTuru.TahakkukRaporlari, new KrediKartliOdemeTalimatiRaporu());
         }
     }
 }

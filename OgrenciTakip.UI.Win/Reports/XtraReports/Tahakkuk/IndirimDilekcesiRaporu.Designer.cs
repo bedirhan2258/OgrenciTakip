@@ -158,7 +158,7 @@
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPictureBox1});
-            this.TopMargin.HeightF = 195.8333F;
+            this.TopMargin.HeightF = 177.0833F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -521,7 +521,7 @@
             this.Ogrenci_Bilgileri,
             this.Indirim_Bilgileri});
             this.DataSource = this.Ogrenci_Bilgileri;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 196, 100);
+            this.Margins = new System.Drawing.Printing.Margins(100, 100, 177, 100);
             this.Version = "18.1";
             ((System.ComponentModel.ISupportInitialize)(this.Ogrenci_Bilgileri)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();

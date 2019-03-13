@@ -94,6 +94,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("İndirim Dilekçesi Raporu")]
         IndirimDilekcesiRaporu = 43,
         [Description("Kayıt Sozleşmesi Raporu")]
-        KayitSozlesmesiRaporu = 44
+        KayitSozlesmesiRaporu = 44,
+        [Description("Kredi Kartlı Ödeme Talimatı Raporu")]
+        KrediKartliOdemeTalimatiRaporu = 45
     }
 }
