@@ -182,7 +182,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 case KrediKartliOdemeTalimatiRaporu rpr:
                     rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
                     rpr.Epos_Bilgileri.DataSource = _eposBilgileri;
-                    rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Epos);
+                    rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Epos).OrderBy(x => x.Vade);
+                    break;
+                case OdemeSenediRaporu rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Senet).OrderBy(x => x.Vade);
                     break;
             }
         }
@@ -255,6 +259,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnKrediKartliOdemeTalimati)
                 RaporOlustur(KartTuru.KrediKartliOdemeTalimatiRaporu, RaporBolumTuru.TahakkukRaporlari, new KrediKartliOdemeTalimatiRaporu());
+
+            else if (e.Item == btnOdemeSenedi)
+                RaporOlustur(KartTuru.OdemeSenediRaporu, RaporBolumTuru.TahakkukRaporlari, new OdemeSenediRaporu());
         }
     }
 }
