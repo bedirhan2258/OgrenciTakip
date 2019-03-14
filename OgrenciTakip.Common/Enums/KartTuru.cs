@@ -98,6 +98,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Kredi Kartlı Ödeme Talimatı Raporu")]
         KrediKartliOdemeTalimatiRaporu = 45,
         [Description("Ödeme Senedi Raporu")]
-        OdemeSenediRaporu = 46
+        OdemeSenediRaporu = 46,
+        [Description("Kullanıcı Tanımlı Rapor")]
+        KullaniciTanimliRapor = 47,
     }
 }

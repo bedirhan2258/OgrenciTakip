@@ -176,17 +176,39 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                         NetIndirim = x.Sum(y => y.NetIndirim)
                     });
                     break;
+
                 case KayitSozlesmesiRaporu rpr:
                     rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
                     break;
+
                 case KrediKartliOdemeTalimatiRaporu rpr:
                     rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
                     rpr.Epos_Bilgileri.DataSource = _eposBilgileri;
                     rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Epos).OrderBy(x => x.Vade);
                     break;
+
                 case OdemeSenediRaporu rpr:
                     rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
                     rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri.Where(x => x.OdemeTipi == OdemeTipi.Senet).OrderBy(x => x.Vade);
+                    break;
+
+                case KullaniciTanimliRapor rpr:
+                    rpr.Ogrenci_Bilgileri.DataSource = _ogrenciBilgileri;
+                    rpr.Hizmet_Bilgileri.DataSource = _hizmetBilgileri;
+                    rpr.Indirim_Bilgileri.DataSource = _indirimBilgileri.GroupBy(x => new { x.IndirimAdi, x.IptalTarihi, x.IslemTarihi })
+                        .Select(x => new
+                        {
+                            x.Key.IndirimAdi,
+                            x.Key.IptalTarihi,
+                            x.Key.IslemTarihi,
+                            BrutIndirim = x.Sum(y => y.BrutIndirim),
+                            KistDonemDusulenIndirim = x.Sum(y => y.KistDonemDusulenIndirim),
+                            NetIndirim = x.Sum(y => y.NetIndirim)
+                        });
+                    rpr.Odeme_Bilgileri.DataSource = _odemeBilgileri;
+                    rpr.Iletisim_Bilgileri.DataSource = _iletisimBilgileri;
+                    rpr.GeriOdeme_Bilgileri.DataSource = _geriOdemeBilgileri;
+                    rpr.Epos_Bilgileri.DataSource = _eposBilgileri;
                     break;
             }
         }
@@ -262,6 +284,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnOdemeSenedi)
                 RaporOlustur(KartTuru.OdemeSenediRaporu, RaporBolumTuru.TahakkukRaporlari, new OdemeSenediRaporu());
+
+            else if (e.Item == btnBosRapor)
+                RaporOlustur(KartTuru.KullaniciTanimliRapor, RaporBolumTuru.TahakkukRaporlari, new KullaniciTanimliRapor());
         }
     }
 }

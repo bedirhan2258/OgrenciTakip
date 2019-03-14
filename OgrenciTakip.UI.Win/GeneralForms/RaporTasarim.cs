@@ -33,7 +33,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         {
             var stream = new MemoryStream(_rapor.Dosya);
             var rapor = stream.StreamToReport();
-            reportDesigner.AddCommandHandler(this);
+            reportDesigner.AddCommandHandler(this); 
             reportDesigner.OpenReport(rapor);
             reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowClose = false;
             reportDesigner.XtraTabbedMdiManager.View.DocumentProperties.AllowDock = false;
@@ -43,7 +43,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         private void Kaydet()
         {
-            _rapor.Dosya = reportDesigner.ActiveDesignPanel.Report.ReportToStream().GetBuffer();
+            _rapor.Dosya = reportDesigner.ActiveDesignPanel.Report.ReportToStream().ToArray();
             var result = ShowEditForms<RaporEditForm>.ShowDialogEditForms(KartTuru.Rapor, _rapor.Id, _rapor.RaporTuru, _rapor.RaporBolumTuru, _rapor.Dosya);
             if (result <= 0) return;
 
