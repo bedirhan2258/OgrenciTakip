@@ -247,7 +247,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                     rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
                     break;
 
-                case TeslimatMakbuzu rpr:
+                case TeslimatMakbuzuRaporu rpr:
+                    rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+                    break;
+
+                case IadeMakbuzuRaporu rpr:
+                    rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+                    break;
+
+                case GenelMakbuzRaporu rpr:
                     rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
                     break;
             }
@@ -332,7 +340,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 RaporOlustur(KartTuru.TahsilatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TahsilatMakbuzuRaporu());
 
             else if (e.Item == btnTeslimatMakbuzu)
-                RaporOlustur(KartTuru.TeslimatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TeslimatMakbuzu());
+                RaporOlustur(KartTuru.TeslimatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TeslimatMakbuzuRaporu());
+
+            else if (e.Item == btnGeriIadeMakbuzu)
+                RaporOlustur(KartTuru.IadeMakbuzu, RaporBolumTuru.MakbuzRaporlari, new IadeMakbuzuRaporu());
+
+            else if (e.Item == btnGenelMakbuz)
+                RaporOlustur(KartTuru.GenelMakbuz, RaporBolumTuru.MakbuzRaporlari, new GenelMakbuzRaporu());
         }
     }
 }

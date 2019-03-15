@@ -1,6 +1,6 @@
 ﻿namespace OgrenciTakip.UI.Win.Reports.XtraReports.Makbuz
 {
-    partial class TeslimatMakbuzu
+    partial class TeslimatMakbuzuRaporu
     {
         /// <summary>
         /// Required designer variable.
@@ -925,8 +925,10 @@
             this.xrTableCell108.StylePriority.UseBorders = false;
             this.xrTableCell108.StylePriority.UseFont = false;
             this.xrTableCell108.StylePriority.UsePadding = false;
+            this.xrTableCell108.StylePriority.UseTextAlignment = false;
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell108.Summary = xrSummary2;
+            this.xrTableCell108.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell108.TextFormatString = "{0:n2}";
             this.xrTableCell108.Weight = 0.59554206178353541D;
             // 
@@ -945,8 +947,10 @@
             this.xrTableCell6.StylePriority.UseBorders = false;
             this.xrTableCell6.StylePriority.UseFont = false;
             this.xrTableCell6.StylePriority.UsePadding = false;
+            this.xrTableCell6.StylePriority.UseTextAlignment = false;
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell6.Summary = xrSummary3;
+            this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell6.TextFormatString = "{0:n2}";
             this.xrTableCell6.Weight = 0.59554206178353541D;
             // 
@@ -970,7 +974,7 @@
             this.Makbuz_Bilgileri.DataSource = typeof(OgrenciTakip.Model.DTO.MakbuzHareketleriR);
             this.Makbuz_Bilgileri.Name = "Makbuz_Bilgileri";
             // 
-            // TeslimatMakbuzu
+            // TeslimatMakbuzuRaporu
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -978,7 +982,7 @@
             this.BottomMargin,
             this.PageHeader,
             this.ReportFooter});
-            this.Baslik = "Tahsilat Makbuzu";
+            this.Baslik = "Teslimat Makbuzu";
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Makbuz_Bilgileri});
             this.DataSource = this.Makbuz_Bilgileri;

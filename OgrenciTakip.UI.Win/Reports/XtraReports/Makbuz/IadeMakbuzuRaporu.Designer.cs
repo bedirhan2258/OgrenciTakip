@@ -1,6 +1,6 @@
 ﻿namespace OgrenciTakip.UI.Win.Reports.XtraReports.Makbuz
 {
-    partial class TahsilatMakbuzuRaporu
+    partial class IadeMakbuzuRaporu
     {
         /// <summary>
         /// Required designer variable.
@@ -799,7 +799,7 @@
             this.xrTableCell1.StylePriority.UseBorders = false;
             this.xrTableCell1.StylePriority.UseFont = false;
             this.xrTableCell1.StylePriority.UseTextAlignment = false;
-            this.xrTableCell1.Text = "TAHSİLAT MAKBUZU - [MakbuzTuru]\r\n\r\n";
+            this.xrTableCell1.Text = "İADE MAKBUZU - [MakbuzTuru]\r\n\r\n";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell1.Weight = 6.916667022705079D;
             // 
@@ -1063,7 +1063,7 @@
             this.xrTableCell7.StylePriority.UseBorders = false;
             this.xrTableCell7.StylePriority.UseFont = false;
             this.xrTableCell7.StylePriority.UseTextAlignment = false;
-            this.xrTableCell7.Text = " Tahsil Eden Adı,Soyadı,İmza\r\n";
+            this.xrTableCell7.Text = "Teslim Alan Adı,Soyadı,İmza\r\n";
             this.xrTableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell7.Weight = 1D;
             // 
@@ -1165,8 +1165,10 @@
             this.xrTableCell108.StylePriority.UseBorders = false;
             this.xrTableCell108.StylePriority.UseFont = false;
             this.xrTableCell108.StylePriority.UsePadding = false;
+            this.xrTableCell108.StylePriority.UseTextAlignment = false;
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrTableCell108.Summary = xrSummary2;
+            this.xrTableCell108.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell108.TextFormatString = "{0:n2}";
             this.xrTableCell108.Weight = 0.59554206178353541D;
             // 
@@ -1212,7 +1214,7 @@
             this.Makbuz_Bilgileri.DataSource = typeof(OgrenciTakip.Model.DTO.MakbuzHareketleriR);
             this.Makbuz_Bilgileri.Name = "Makbuz_Bilgileri";
             // 
-            // TahsilatMakbuzuRaporu
+            // IadeMakbuzuRaporu
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -1220,7 +1222,7 @@
             this.BottomMargin,
             this.PageHeader,
             this.ReportFooter});
-            this.Baslik = "Tahsilat Makbuzu";
+            this.Baslik = "İade Makbuzu";
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Makbuz_Bilgileri});
             this.DataSource = this.Makbuz_Bilgileri;

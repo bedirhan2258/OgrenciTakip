@@ -497,17 +497,29 @@
     <Compile Include="Forms\SinifGrupForms\SinifGrupListForm.Designer.cs">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.Designer.cs">
+      <DependentUpon>GenelMakbuzRaporu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\IadeMakbuzuRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\IadeMakbuzuRaporu.Designer.cs">
+      <DependentUpon>IadeMakbuzuRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.Designer.cs">
       <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzu.cs">
+    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzuRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzu.Designer.cs">
-      <DependentUpon>TeslimatMakbuzu.cs</DependentUpon>
+    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzuRaporu.Designer.cs">
+      <DependentUpon>TeslimatMakbuzuRaporu.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.cs">
       <SubType>Component</SubType>
@@ -1051,11 +1063,17 @@
     <EmbeddedResource Include="Forms\SinifGrupForms\SinifGrupListform.resx">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.resx">
+      <DependentUpon>GenelMakbuzRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\IadeMakbuzuRaporu.resx">
+      <DependentUpon>IadeMakbuzuRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.resx">
       <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\XtraReports\Makbuz\TeslimatMakbuzu.resx">
-      <DependentUpon>TeslimatMakbuzu.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\TeslimatMakbuzuRaporu.resx">
+      <DependentUpon>TeslimatMakbuzuRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.resx">
       <DependentUpon>IndirimDilekcesiRaporu.cs</DependentUpon>

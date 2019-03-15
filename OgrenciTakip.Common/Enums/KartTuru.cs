@@ -105,5 +105,9 @@ namespace OgrenciTakip.Common.Enums
         TahsilatMakbuzu = 48,
         [Description("Teslimat Makbuzu")]
         TeslimatMakbuzu = 49,
+        [Description("İade Makbuzu")]
+        IadeMakbuzu = 50,
+        [Description("Genel Makbuz")]
+        GenelMakbuz = 51
     }
 }
