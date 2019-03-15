@@ -103,5 +103,7 @@ namespace OgrenciTakip.Common.Enums
         KullaniciTanimliRapor = 47,
         [Description("Tahsilat Makbuzu")]
         TahsilatMakbuzu = 48,
+        [Description("Teslimat Makbuzu")]
+        TeslimatMakbuzu = 49,
     }
 }

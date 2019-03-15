@@ -246,6 +246,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 case TahsilatMakbuzuRaporu rpr:
                     rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
                     break;
+
+                case TeslimatMakbuzu rpr:
+                    rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+                    break;
             }
         }
 
@@ -326,6 +330,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnTahsilatMakbuzu)
                 RaporOlustur(KartTuru.TahsilatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TahsilatMakbuzuRaporu());
+
+            else if (e.Item == btnTeslimatMakbuzu)
+                RaporOlustur(KartTuru.TeslimatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TeslimatMakbuzu());
         }
     }
 }

@@ -503,6 +503,12 @@
     <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.Designer.cs">
       <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\TeslimatMakbuzu.Designer.cs">
+      <DependentUpon>TeslimatMakbuzu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1047,6 +1053,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.resx">
       <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\TeslimatMakbuzu.resx">
+      <DependentUpon>TeslimatMakbuzu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.resx">
       <DependentUpon>IndirimDilekcesiRaporu.cs</DependentUpon>
