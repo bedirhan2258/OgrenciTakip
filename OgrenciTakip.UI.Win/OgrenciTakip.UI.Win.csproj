@@ -497,6 +497,12 @@
     <Compile Include="Forms\SinifGrupForms\SinifGrupListForm.Designer.cs">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.Designer.cs">
+      <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1039,6 +1045,9 @@
     <EmbeddedResource Include="Forms\SinifGrupForms\SinifGrupListform.resx">
       <DependentUpon>SinifGrupListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Makbuz\TahsilatMakbuzuRaporu.resx">
+      <DependentUpon>TahsilatMakbuzuRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\IndirimDilekcesiRaporu.resx">
       <DependentUpon>IndirimDilekcesiRaporu.cs</DependentUpon>
     </EmbeddedResource>
@@ -1391,7 +1400,6 @@
   <ItemGroup>
     <Folder Include="Reports\FormReports\" />
     <Folder Include="Reports\XtraReports\Fatura\" />
-    <Folder Include="Reports\XtraReports\Makbuz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

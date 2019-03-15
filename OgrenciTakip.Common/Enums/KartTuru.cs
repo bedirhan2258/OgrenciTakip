@@ -101,5 +101,7 @@ namespace OgrenciTakip.Common.Enums
         OdemeSenediRaporu = 46,
         [Description("Kullanıcı Tanımlı Rapor")]
         KullaniciTanimliRapor = 47,
+        [Description("Tahsilat Makbuzu")]
+        TahsilatMakbuzu = 48,
     }
 }

@@ -13,6 +13,7 @@ using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Forms.RaporForms;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Reports.XtraReports.Makbuz;
 using OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
@@ -32,6 +33,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         private readonly IEnumerable<OdemeBilgileriR> _odemeBilgileri;
         private readonly IEnumerable<GeriOdemeBilgileriR> _geriOdemeBilgileri;
         private readonly IEnumerable<EposBilgileriR> _eposBilgileri;
+        private readonly IEnumerable<MakbuzHareketleriR> _makbuzBilgileri;
+        private readonly RaporBolumTuru _raporBolumTuru;
         #endregion
 
         public RaporSecim(params object[] prm)
@@ -47,18 +50,26 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             txtYaziciAdi.Properties.Items.AddRange(GeneralFunctions.YazicilariListele());
             txtYaziciAdi.EditValue = GeneralFunctions.DefaultYazici();
-
-
             txtYazdirmaSekli.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YazdirmaSekli>());
             txtYazdirmaSekli.SelectedItem = YazdirmaSekli.TekTekYazdir.ToName();
+            _raporBolumTuru = (RaporBolumTuru)prm[0];
 
-            _ogrenciBilgileri = (OgrenciR)prm[0];
-            _iletisimBilgileri = (IEnumerable<IletisimBilgileriR>)prm[1];
-            _hizmetBilgileri = (IEnumerable<HizmetBilgileriR>)prm[2];
-            _indirimBilgileri = (IEnumerable<IndirimBilgileriR>)prm[3];
-            _odemeBilgileri = (IEnumerable<OdemeBilgileriR>)prm[4];
-            _geriOdemeBilgileri = (IEnumerable<GeriOdemeBilgileriR>)prm[5];
-            _eposBilgileri = (IEnumerable<EposBilgileriR>)prm[6];
+            if (_raporBolumTuru == RaporBolumTuru.TahakkukRaporlari)
+            {
+                _ogrenciBilgileri = (OgrenciR)prm[1];
+                _iletisimBilgileri = (IEnumerable<IletisimBilgileriR>)prm[2];
+                _hizmetBilgileri = (IEnumerable<HizmetBilgileriR>)prm[3];
+                _indirimBilgileri = (IEnumerable<IndirimBilgileriR>)prm[4];
+                _odemeBilgileri = (IEnumerable<OdemeBilgileriR>)prm[5];
+                _geriOdemeBilgileri = (IEnumerable<GeriOdemeBilgileriR>)prm[6];
+                _eposBilgileri = (IEnumerable<EposBilgileriR>)prm[7];
+            }
+
+            else if (_raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)
+            {
+                _makbuzBilgileri = (List<MakbuzHareketleriR>)prm[1];
+            }
+
         }
 
         protected override void DegiskenleriDoldur()
@@ -66,12 +77,33 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             Tablo = tablo;
             kartTuru = KartTuru.Rapor;
             navigator = smallNavigator.Navigator;
+
+            if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar || _raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)
+            {
+                switch (_raporBolumTuru)
+                {
+                    case RaporBolumTuru.MakbuzRaporlari:
+                        {
+                            var showItems = new BarItem[] { btnGenelMakbuz, btnTahsilatMakbuzu, btnTeslimatMakbuzu, btnGeriIadeMakbuzu };
+                            ShowItems = ShowItems.Concat(showItems).ToArray();
+                        }
+                        break;
+                }
+
+                var hideItems = new BarItem[]
+                {
+                    btnBosRapor,btnOgrenciKartı,btnBankaOdemePlani,btnIndirimTalepDilekcesi,btnMebKayitSozlesmesi,btnKayitSozlemesi,
+                    btnKrediKartliOdemeTalimati,btnOdemeSenedi
+                };
+                HideItems = HideItems.Concat(hideItems).ToArray();
+
+            }
         }
 
         protected override void Listele()
         {
             RowSelect?.ClearSelection();
-            Tablo.GridControl.DataSource = ((RaporBll)bll).List(FilterFunctions.Filter<Rapor>(aktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((RaporBll)bll).List(x => x.RaporBolumTuru == _raporBolumTuru && x.Durum == aktifKartlariGoster);
         }
 
         protected override void Duzelt()
@@ -210,6 +242,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                     rpr.GeriOdeme_Bilgileri.DataSource = _geriOdemeBilgileri;
                     rpr.Epos_Bilgileri.DataSource = _eposBilgileri;
                     break;
+
+                case TahsilatMakbuzuRaporu rpr:
+                    rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
+                    break;
             }
         }
 
@@ -287,6 +323,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnBosRapor)
                 RaporOlustur(KartTuru.KullaniciTanimliRapor, RaporBolumTuru.TahakkukRaporlari, new KullaniciTanimliRapor());
+
+            else if (e.Item == btnTahsilatMakbuzu)
+                RaporOlustur(KartTuru.TahsilatMakbuzu, RaporBolumTuru.MakbuzRaporlari, new TahsilatMakbuzuRaporu());
         }
     }
 }

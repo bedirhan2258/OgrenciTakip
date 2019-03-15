@@ -12,7 +12,9 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Win.Show;
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
@@ -282,6 +284,44 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         {
             makbuzHareketleriTable.OwnerForm = this;
             makbuzHareketleriTable.Yukle();
+        }
+
+        protected override void Yazdir()
+        {
+            var source = new List<MakbuzHareketleriR>();
+
+            for (int i = 0; i < makbuzHareketleriTable.Tablo.DataRowCount; i++)
+            {
+                var entity = makbuzHareketleriTable.Tablo.GetRow<MakbuzHareketleriL>(i);
+                if (entity == null) return;
+                var row = new MakbuzHareketleriR
+                {
+                    OgrenciNo = entity.OgrenciNo,
+                    Adi = entity.Adi,
+                    Soyadi = entity.Soyadi,
+                    SinifAdi = entity.SinifAdi,
+                    SubeAdi = entity.OgrenciSubeAdi,
+                    PortfoyNo = entity.OdemeBilgileriId,
+                    OdemeTuruAdi = entity.OdemeTuruAdi,
+                    Vade = entity.Vade,
+                    AsilBorclu = entity.AsilBorclu,
+                    Ciranta = entity.Ciranta,
+                    BankaveSubeAdi = entity.BankaAdi + " / " + entity.BankaSubeAdi,
+                    BelgeNo = entity.BelgeNo,
+                    HesapNo = entity.HesapNo,
+                    Tutar = entity.Tutar,
+                    IslemOncesiTutar = entity.IslemOncesiTutar,
+                    IslemTutari = entity.IslemTutari,
+                    Tarih = txtTarih.DateTime.Date,
+                    MakbuzNo = txtMakbuzNo.Text,
+                    MakbuzTuru = MakbuzTuru.ToName(),
+                    HesapTuru = _hesapTuru.ToName(),
+                    HesapAdi = txtHesap.Text,
+                    BelgeDurumu = entity.BelgeDurumu.ToName()
+                };
+                source.Add(row);
+            }
+            ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, false, RaporBolumTuru.MakbuzRaporlari, source);
         }
 
         protected override void Control_SelectedValueChanged(object sender, EventArgs e)
