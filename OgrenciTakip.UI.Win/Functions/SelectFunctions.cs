@@ -82,6 +82,7 @@ namespace OgrenciTakip.UI.Win.Functions
             switch (_btnEdit.Name)
             {
                 case "txtIl":
+                case "txtAdresIl":
                 case "txtEvAdresIl":
                 case "txtIsAdresIl":
                 case "txtKimlikIl":
@@ -96,6 +97,7 @@ namespace OgrenciTakip.UI.Win.Functions
                     break;
 
                 case "txtIlce":
+                case "txtAdresIlce":
                 case "txtEvAdresIlce":
                 case "txtIsAdresIlce":
                 case "txtKimlikIlce":
@@ -390,16 +392,16 @@ namespace OgrenciTakip.UI.Win.Functions
                                     break;
                                 }
 
-                            //case KartTuru.Sube:
-                            //    {
-                            //        var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id, true);
-                            //        if (entity != null)
-                            //        {
-                            //            _btnEdit.Id = entity.Id;
-                            //            _btnEdit.EditValue = entity.SubeAdi;
-                            //        }
-                            //        break;
-                            //    }
+                                //case KartTuru.Sube:
+                                //    {
+                                //        var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id, true);
+                                //        if (entity != null)
+                                //        {
+                                //            _btnEdit.Id = entity.Id;
+                                //            _btnEdit.EditValue = entity.SubeAdi;
+                                //        }
+                                //        break;
+                                //    }
                         }
                     }
                     break;

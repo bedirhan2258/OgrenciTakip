@@ -111,6 +111,7 @@
     <Compile Include="General\SinavBilgileriBll.cs" />
     <Compile Include="General\SinifBll.cs" />
     <Compile Include="General\SinifGrupBll.cs" />
+    <Compile Include="General\SubeBll.cs" />
     <Compile Include="General\TahakkukBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
     <Compile Include="General\YabanciDilBll.cs" />

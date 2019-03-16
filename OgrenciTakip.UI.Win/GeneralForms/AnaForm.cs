@@ -33,6 +33,7 @@ using OgrenciTakip.UI.Win.Forms.OgrenciForms;
 using OgrenciTakip.UI.Win.Forms.IndirimForms;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Forms.MakbuzForms;
+using OgrenciTakip.UI.Win.Forms.SubeForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -211,6 +212,10 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnMakbuzKarti)
             {
                 ShowListForms<MakbuzListForm>.ShowListForm(KartTuru.Makbuz);
+            }
+            else if (e.Item == btnSubeKartlari)
+            {
+                ShowListForms<SubeListForm>.ShowListForm(KartTuru.Sube);
             }
         }
     }

@@ -8,6 +8,8 @@ namespace OgrenciTakip.Model.Entities
 {
     public class Sube : BaseEntityDurum
     {
+        public override string Kod { get; set; }
+
         [Required, StringLength(50), ZorunluAlan("Şube Adı", "txtSubeAdi")]
         public string SubeAdi { get; set; }
 
@@ -20,6 +22,8 @@ namespace OgrenciTakip.Model.Entities
         [ZorunluAlan("İlçe Adi", "txtAdresIlce")]
         public long AdresIlceId { get; set; }
 
+        public string AdresIlAdi { get; set; }
+
         [StringLength(17)]
         public string Telefon { get; set; }
 
@@ -31,6 +35,11 @@ namespace OgrenciTakip.Model.Entities
 
         [Column(TypeName = "image")]
         public byte[] Logo { get; set; }
+
+        [StringLength(30)]
+        public string GrupAdi { get; set; }
+
+        public int? SiraNo { get; set; }
 
         public Il AdresIl { get; set; }
         public Ilce AdresIlce { get; set; }

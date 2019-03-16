@@ -190,9 +190,12 @@
             // 
             // xrPictureBox1
             // 
+            this.xrPictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Image", "[SubeLogo]")});
             this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 38.12501F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(650F, 84.45832F);
+            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.AutoSize;
             // 
             // BottomMargin
             // 
