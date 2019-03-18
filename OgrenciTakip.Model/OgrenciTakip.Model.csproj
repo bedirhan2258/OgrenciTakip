@@ -63,6 +63,7 @@
     <Compile Include="DTO\CariDTO.cs" />
     <Compile Include="DTO\EposBilgileriDTO.cs" />
     <Compile Include="DTO\EvrakBilgileriDTO.cs" />
+    <Compile Include="DTO\FaturaDTO.cs" />
     <Compile Include="DTO\GeriOdemeBilgileriDTO.cs" />
     <Compile Include="DTO\HizmetBilgileriDTO.cs" />
     <Compile Include="DTO\HizmetDTO.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Entities\Cari.cs" />
     <Compile Include="Entities\EposBilgileri.cs" />
     <Compile Include="Entities\EvrakBilgileri.cs" />
+    <Compile Include="Entities\Fatura.cs" />
     <Compile Include="Entities\GeriOdemeBilgileri.cs" />
     <Compile Include="Entities\HizmetBilgileri.cs" />
     <Compile Include="Entities\Iletisim.cs" />

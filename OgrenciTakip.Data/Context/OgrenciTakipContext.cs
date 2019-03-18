@@ -85,6 +85,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<Makbuz> Makbuz { get; set; }
         public DbSet<MakbuzHareketleri> MakbuzHareketleri { get; set; }
         public DbSet<Rapor> Rapor { get; set; }
+        public DbSet<Fatura> Fatura { get; set; }
     }
 
 }
