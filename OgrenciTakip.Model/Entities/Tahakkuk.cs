@@ -62,6 +62,8 @@ namespace OgrenciTakip.Model.Entities
         public Donem Donem { get; set; }
         public Sube Sube { get; set; }
         public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
+        public ICollection<HizmetBilgileri> HizmetBilgileri { get; set; }
+        public ICollection<IndirimBilgileri> IndirimBilgileri { get; set; }
     }
 }
 

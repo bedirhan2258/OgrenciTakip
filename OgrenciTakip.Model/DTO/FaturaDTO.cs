@@ -76,4 +76,22 @@ namespace OgrenciTakip.Model.DTO
         public bool Update { get; set; }
         public bool Delete { get; set; }
     }
+
+    public class FaturaAlinanHizmetlerL
+    {
+        public long HizmetId { get; set; }
+        public long TahakkukId { get; set; }
+        public string OkulNo { get; set; }
+        public string Adi { get; set; }
+        public string Soyadi { get; set; }
+        public string SinifAdi { get; set; }
+        public string VeliAdi { get; set; }
+        public string VeliSoyadi { get; set; }
+        public string VeliYakinlikAdi { get; set; }
+        public string VeliMeslekAdi { get; set; }
+        public string HizmetAdi { get; set; }
+        public decimal BrutUcret { get; set; }
+        public decimal Indirim { get; set; }
+        public decimal NetUcret { get; set; }
+    }
 }

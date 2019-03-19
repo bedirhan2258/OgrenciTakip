@@ -110,6 +110,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Genel Makbuz")]
         GenelMakbuz = 51,
         [Description("Şube Kartı")]
-        Sube = 52
+        Sube = 52,
+        [Description("Fatura Kartı")]
+        Fatura = 53
     }
 }

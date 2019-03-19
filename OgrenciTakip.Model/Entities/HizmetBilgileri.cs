@@ -43,6 +43,7 @@ namespace OgrenciTakip.Model.Entities
         [StringLength(1000)]
         public string IptalAciklama { get; set; }
 
+    
         public Tahakkuk Tahakkuk { get; set; }
         public Hizmet Hizmet { get; set; }
         public HizmetTuru HizmetTuru { get; set; }
