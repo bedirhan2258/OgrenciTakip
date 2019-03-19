@@ -64,6 +64,7 @@ namespace OgrenciTakip.Model.Entities
         public ICollection<IletisimBilgileri> IletisimBilgileri { get; set; }
         public ICollection<HizmetBilgileri> HizmetBilgileri { get; set; }
         public ICollection<IndirimBilgileri> IndirimBilgileri { get; set; }
+        public ICollection<Fatura> FaturaBilgileri { get; set; }
     }
 }
 

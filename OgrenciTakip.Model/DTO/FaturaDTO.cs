@@ -14,7 +14,7 @@ namespace OgrenciTakip.Model.DTO
         public KayitSekli KayitSekli { get; set; }
         public KayitDurumu KayitDurumu { get; set; }
         public IptalDurumu IptalDurumu { get; set; }
-        public string OkulNo { get; set; }
+        public string OgrenciNo { get; set; }
         public string Adi { get; set; }
         public string Soyadi { get; set; }
         public string SinifAdi { get; set; }

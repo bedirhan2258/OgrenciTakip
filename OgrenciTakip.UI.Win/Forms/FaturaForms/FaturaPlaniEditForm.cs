@@ -9,7 +9,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
     public partial class FaturaPlaniEditForm : BaseEditForm
     {
         #region Variables
-        private readonly long _tahakkukId;
+        //private readonly long _tahakkukId;
         #endregion
 
         public FaturaPlaniEditForm()
@@ -23,18 +23,18 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             btnSil.Caption = "İptal Et";
         }
 
-        public FaturaPlaniEditForm(params object[] prm) : this()
-        {
-            _tahakkukId = (long)prm[0];
-        }
+        //public FaturaPlaniEditForm(params object[] prm) : this()
+        //{
+        //    _tahakkukId = (long)prm[0];
+        //}
 
         protected internal override void Yukle()
         {
             using (var bll = new HizmetBilgileriBll())
             {
-                var list = bll.FaturaPlaniList(x => x.TahakkukId == _tahakkukId).ToList();
+                var list = bll.FaturaPlaniList(x => x.TahakkukId == id).ToList();
 
-                txtOkulNo.Text = list[0].OkulNo;
+                txtOgrenciNo.Text = list[0].OkulNo;
                 txtAdi.Text = list[0].Adi;
                 txtSoyadi.Text = list[0].Soyadi;
                 txtSinif.Text = list[0].SinifAdi;
@@ -44,7 +44,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
                 txtMeslek.Text = list[0].VeliMeslekAdi;
 
                 tablo.GridControl.DataSource = list;
-                id = list[0].TahakkukId;
+                // id = list[0].TahakkukId;
             }
         }
 

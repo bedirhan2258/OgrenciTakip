@@ -57,7 +57,7 @@
             this.txtSinif = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtSoyadi = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.txtAdi = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
-            this.txtOkulNo = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
+            this.txtOgrenciNo = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -70,6 +70,7 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
@@ -83,7 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSinif.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyadi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrenciNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
@@ -96,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -114,7 +116,7 @@
             this.myDataLayoutControl.Controls.Add(this.txtSinif);
             this.myDataLayoutControl.Controls.Add(this.txtSoyadi);
             this.myDataLayoutControl.Controls.Add(this.txtAdi);
-            this.myDataLayoutControl.Controls.Add(this.txtOkulNo);
+            this.myDataLayoutControl.Controls.Add(this.txtOgrenciNo);
             this.myDataLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myDataLayoutControl.Location = new System.Drawing.Point(0, 102);
             this.myDataLayoutControl.Name = "myDataLayoutControl";
@@ -130,6 +132,8 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
+            this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryDecimal});
             this.grid.Size = new System.Drawing.Size(542, 166);
             this.grid.TabIndex = 15;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -137,9 +141,7 @@
             // 
             // tablo
             // 
-            this.tablo.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.tablo.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
-            this.tablo.Appearance.FooterPanel.Options.UseFont = true;
             this.tablo.Appearance.FooterPanel.Options.UseForeColor = true;
             this.tablo.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
             this.tablo.Appearance.HeaderPanel.Options.UseForeColor = true;
@@ -164,6 +166,7 @@
             this.tablo.OptionsView.ColumnAutoWidth = false;
             this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
             this.tablo.OptionsView.RowAutoHeight = true;
+            this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
             this.tablo.StatusBarAciklama = null;
@@ -182,17 +185,20 @@
             this.colHizmetAdi.StatusBarKisayolAciklama = null;
             this.colHizmetAdi.Visible = true;
             this.colHizmetAdi.VisibleIndex = 0;
-            this.colHizmetAdi.Width = 192;
+            this.colHizmetAdi.Width = 185;
             // 
             // colBrutUcret
             // 
             this.colBrutUcret.Caption = "Brüt Ücret";
+            this.colBrutUcret.ColumnEdit = this.repositoryDecimal;
             this.colBrutUcret.FieldName = "BrutUcret";
             this.colBrutUcret.Name = "colBrutUcret";
             this.colBrutUcret.OptionsColumn.AllowEdit = false;
             this.colBrutUcret.StatusBarAciklama = null;
             this.colBrutUcret.StatusBarKisayol = null;
             this.colBrutUcret.StatusBarKisayolAciklama = null;
+            this.colBrutUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutUcret", "{0:n2}")});
             this.colBrutUcret.Visible = true;
             this.colBrutUcret.VisibleIndex = 1;
             this.colBrutUcret.Width = 110;
@@ -200,12 +206,15 @@
             // colIndirim
             // 
             this.colIndirim.Caption = "İndirim";
+            this.colIndirim.ColumnEdit = this.repositoryDecimal;
             this.colIndirim.FieldName = "Indirim";
             this.colIndirim.Name = "colIndirim";
             this.colIndirim.OptionsColumn.AllowEdit = false;
             this.colIndirim.StatusBarAciklama = null;
             this.colIndirim.StatusBarKisayol = null;
             this.colIndirim.StatusBarKisayolAciklama = null;
+            this.colIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Indirim", "{0:n2}")});
             this.colIndirim.Visible = true;
             this.colIndirim.VisibleIndex = 2;
             this.colIndirim.Width = 110;
@@ -213,18 +222,22 @@
             // colNetUcret
             // 
             this.colNetUcret.Caption = "Net Ücret";
+            this.colNetUcret.ColumnEdit = this.repositoryDecimal;
             this.colNetUcret.FieldName = "NetUcret";
             this.colNetUcret.Name = "colNetUcret";
             this.colNetUcret.OptionsColumn.AllowEdit = false;
             this.colNetUcret.StatusBarAciklama = null;
             this.colNetUcret.StatusBarKisayol = null;
             this.colNetUcret.StatusBarKisayolAciklama = null;
+            this.colNetUcret.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetUcret", "{0:n2}")});
             this.colNetUcret.Visible = true;
             this.colNetUcret.VisibleIndex = 3;
             this.colNetUcret.Width = 110;
             // 
             // txtMeslek
             // 
+            this.txtMeslek.Enabled = false;
             this.txtMeslek.EnterMoveNextControl = true;
             this.txtMeslek.Location = new System.Drawing.Point(284, 114);
             this.txtMeslek.MenuManager = this.ribbonControl;
@@ -239,6 +252,7 @@
             // 
             // txtYakinlik
             // 
+            this.txtYakinlik.Enabled = false;
             this.txtYakinlik.EnterMoveNextControl = true;
             this.txtYakinlik.Location = new System.Drawing.Point(284, 90);
             this.txtYakinlik.MenuManager = this.ribbonControl;
@@ -253,6 +267,7 @@
             // 
             // txtVeliSoyadi
             // 
+            this.txtVeliSoyadi.Enabled = false;
             this.txtVeliSoyadi.EnterMoveNextControl = true;
             this.txtVeliSoyadi.Location = new System.Drawing.Point(284, 66);
             this.txtVeliSoyadi.MenuManager = this.ribbonControl;
@@ -267,6 +282,7 @@
             // 
             // txtVeliAdi
             // 
+            this.txtVeliAdi.Enabled = false;
             this.txtVeliAdi.EnterMoveNextControl = true;
             this.txtVeliAdi.Location = new System.Drawing.Point(284, 42);
             this.txtVeliAdi.MenuManager = this.ribbonControl;
@@ -281,6 +297,7 @@
             // 
             // txtSinif
             // 
+            this.txtSinif.Enabled = false;
             this.txtSinif.EnterMoveNextControl = true;
             this.txtSinif.Location = new System.Drawing.Point(84, 114);
             this.txtSinif.MenuManager = this.ribbonControl;
@@ -295,6 +312,7 @@
             // 
             // txtSoyadi
             // 
+            this.txtSoyadi.Enabled = false;
             this.txtSoyadi.EnterMoveNextControl = true;
             this.txtSoyadi.Location = new System.Drawing.Point(84, 90);
             this.txtSoyadi.MenuManager = this.ribbonControl;
@@ -309,6 +327,7 @@
             // 
             // txtAdi
             // 
+            this.txtAdi.Enabled = false;
             this.txtAdi.EnterMoveNextControl = true;
             this.txtAdi.Location = new System.Drawing.Point(84, 66);
             this.txtAdi.MenuManager = this.ribbonControl;
@@ -321,19 +340,20 @@
             this.txtAdi.StyleController = this.myDataLayoutControl;
             this.txtAdi.TabIndex = 8;
             // 
-            // txtOkulNo
+            // txtOgrenciNo
             // 
-            this.txtOkulNo.EnterMoveNextControl = true;
-            this.txtOkulNo.Location = new System.Drawing.Point(84, 42);
-            this.txtOkulNo.MenuManager = this.ribbonControl;
-            this.txtOkulNo.Name = "txtOkulNo";
-            this.txtOkulNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtOkulNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtOkulNo.Properties.MaxLength = 50;
-            this.txtOkulNo.Size = new System.Drawing.Size(112, 20);
-            this.txtOkulNo.StatusBarAciklama = null;
-            this.txtOkulNo.StyleController = this.myDataLayoutControl;
-            this.txtOkulNo.TabIndex = 7;
+            this.txtOgrenciNo.Enabled = false;
+            this.txtOgrenciNo.EnterMoveNextControl = true;
+            this.txtOgrenciNo.Location = new System.Drawing.Point(84, 42);
+            this.txtOgrenciNo.MenuManager = this.ribbonControl;
+            this.txtOgrenciNo.Name = "txtOgrenciNo";
+            this.txtOgrenciNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtOgrenciNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtOgrenciNo.Properties.MaxLength = 50;
+            this.txtOgrenciNo.Size = new System.Drawing.Size(112, 20);
+            this.txtOgrenciNo.StatusBarAciklama = null;
+            this.txtOgrenciNo.StyleController = this.myDataLayoutControl;
+            this.txtOgrenciNo.TabIndex = 7;
             // 
             // layoutControlGroup1
             // 
@@ -403,11 +423,11 @@
             // 
             this.layoutControlItem4.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem4.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem4.Control = this.txtOkulNo;
+            this.layoutControlItem4.Control = this.txtOgrenciNo;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(176, 24);
-            this.layoutControlItem4.Text = "Okul No";
+            this.layoutControlItem4.Text = "Öğrenci No";
             this.layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(55, 20);
             this.layoutControlItem4.TextToControlDistance = 5;
@@ -556,6 +576,17 @@
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
+            // repositoryDecimal
+            // 
+            this.repositoryDecimal.Appearance.Options.UseTextOptions = true;
+            this.repositoryDecimal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Name = "repositoryDecimal";
+            // 
             // FaturaPlaniEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,7 +610,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSinif.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoyadi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOkulNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOgrenciNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
@@ -592,6 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,7 +637,7 @@
         private UserControls.Controls.MyTextEdit txtSinif;
         private UserControls.Controls.MyTextEdit txtSoyadi;
         private UserControls.Controls.MyTextEdit txtAdi;
-        private UserControls.Controls.MyTextEdit txtOkulNo;
+        private UserControls.Controls.MyTextEdit txtOgrenciNo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
@@ -626,5 +658,6 @@
         private UserControls.Grid.MyGridColumn colBrutUcret;
         private UserControls.Grid.MyGridColumn colIndirim;
         private UserControls.Grid.MyGridColumn colNetUcret;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
     }
 }

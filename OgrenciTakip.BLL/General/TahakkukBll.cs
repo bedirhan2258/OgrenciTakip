@@ -17,6 +17,7 @@ namespace OgrenciTakip.BLL.General
     public class TahakkukBll : BaseGenelBll<Tahakkuk>, IBaseCommonBll
     {
         public TahakkukBll() : base(KartTuru.Tahakkuk) { }
+
         public TahakkukBll(Control ctrl) : base(ctrl, KartTuru.Tahakkuk) { }
 
         public override BaseEntity Single(Expression<Func<Tahakkuk, bool>> filter)
@@ -232,6 +233,64 @@ namespace OgrenciTakip.BLL.General
 
                 }).FirstOrDefault(),
             });
+        }
+
+        public IEnumerable<FaturaL> FaturaTahakkukList(Expression<Func<Tahakkuk, bool>> filter)
+        {
+            return BaseList(filter, x => new
+            {
+                Tahakkuk = x,
+                VeliBilgileri = x.IletisimBilgileri.Where(y => y.Veli).Select(y => new
+                {
+                    y.Iletisim,
+                    y.Yakinlik
+                }).FirstOrDefault(),
+
+                HizmetBilgileri = x.HizmetBilgileri.GroupBy(y => y.TahakkukId).DefaultIfEmpty().Select(y => new
+                {
+                    NetHizmet = y.Select(z => z.NetUcret).DefaultIfEmpty(0).Sum(),
+                }).FirstOrDefault(),
+
+                IndirimBilgileri = x.IndirimBilgileri.GroupBy(y => y.TahakkukId).DefaultIfEmpty().Select(y => new
+                {
+                    NetIndirim = y.Select(z => z.NetIndirim).DefaultIfEmpty(0).Sum(),
+                }).FirstOrDefault(),
+
+                FaturaBilgileri = x.FaturaBilgileri.GroupBy(y => y.TahakkukId).DefaultIfEmpty().Select(y => new
+                {
+                    Aciklama = y.Select(z => z.Aciklama).FirstOrDefault(),
+                    PlanTutar = y.Select(z => z.PlanTutar).DefaultIfEmpty(0).Sum(),
+                    PlanIndirimTutar = y.Select(z => z.PlanIndirimTutari).DefaultIfEmpty(0).Sum(),
+                    PlanNetTutar = y.Select(z => z.PlanNetTutar).DefaultIfEmpty(0).Sum(),
+                }).FirstOrDefault(),
+
+            }).Select(x => new FaturaL
+            {
+                Id = x.Tahakkuk.Id,
+                OgrenciNo = x.Tahakkuk.Kod,
+                Adi = x.Tahakkuk.Ogrenci.Adi,
+                Soyadi = x.Tahakkuk.Ogrenci.Soyadi,
+                SinifAdi = x.Tahakkuk.Sinif.SinifAdi,
+                KayitTarihi = x.Tahakkuk.KayitTarihi,
+                KayitSekli = x.Tahakkuk.KayitSekli,
+                KayitDurumu = x.Tahakkuk.KayitDurumu,
+                IptalDurumu = x.Tahakkuk.Durum ? IptalDurumu.DevamEdiyor : IptalDurumu.IptalEdildi,
+                VeliAdi = x.VeliBilgileri.Iletisim.Adi,
+                VeliSoyadi = x.VeliBilgileri.Iletisim.Soyadi,
+                VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
+                VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
+                HizmetTutar = x.HizmetBilgileri.NetHizmet,
+                HizmetIndirim = x.IndirimBilgileri.NetIndirim,
+                HizmetNetTutar = x.HizmetBilgileri.NetHizmet - x.IndirimBilgileri.NetIndirim,
+                PlanTutar = x.FaturaBilgileri.PlanTutar,
+                PlanIndirim = x.FaturaBilgileri.PlanIndirimTutar,
+                PlanNetTutar = x.FaturaBilgileri.PlanNetTutar,
+                OzelKod1 = x.Tahakkuk.OzelKod1.OzelKodAdi,
+                OzelKod2 = x.Tahakkuk.OzelKod2.OzelKodAdi,
+                OzelKod3 = x.Tahakkuk.OzelKod3.OzelKodAdi,
+                OzelKod4 = x.Tahakkuk.OzelKod4.OzelKodAdi,
+                OzelKod5 = x.Tahakkuk.OzelKod5.OzelKodAdi,
+            }).OrderBy(x => x.OgrenciNo).ToList();
         }
     }
 }

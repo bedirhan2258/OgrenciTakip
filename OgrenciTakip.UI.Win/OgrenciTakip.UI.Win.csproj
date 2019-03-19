@@ -934,6 +934,9 @@
     <EmbeddedResource Include="Forms\FaturaForms\FaturaPlaniEditForm.resx">
       <DependentUpon>FaturaPlaniEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaForms\FaturaPlaniListForm.resx">
+      <DependentUpon>FaturaPlaniListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FiltreForms\FiltreEditForm.resx">
       <DependentUpon>FiltreEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1460,6 +1463,7 @@
   <ItemGroup>
     <Folder Include="Reports\FormReports\" />
     <Folder Include="Reports\XtraReports\Fatura\" />
+    <Folder Include="UserControls\FaturaEditFormTable\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
