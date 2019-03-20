@@ -769,6 +769,12 @@
     <Compile Include="UserControls\Controls\MyXtraReport.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\FaturaEditFormTable\FaturaPlaniTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\FaturaEditFormTable\FaturaPlaniTable.Designer.cs">
+      <DependentUpon>FaturaPlaniTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Grid\MyBandedGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1188,6 +1194,9 @@
     <EmbeddedResource Include="Reports\XtraReports\Tahakkuk\OgrenciKartiRaporu.resx">
       <DependentUpon>OgrenciKartiRaporu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FaturaEditFormTable\FaturaPlaniTable.resx">
+      <DependentUpon>FaturaPlaniTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.resx">
       <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -1463,7 +1472,6 @@
   <ItemGroup>
     <Folder Include="Reports\FormReports\" />
     <Folder Include="Reports\XtraReports\Fatura\" />
-    <Folder Include="UserControls\FaturaEditFormTable\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

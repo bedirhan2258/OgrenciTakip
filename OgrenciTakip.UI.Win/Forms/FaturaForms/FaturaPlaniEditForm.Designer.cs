@@ -48,6 +48,7 @@
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colHizmetAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colBrutUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.colIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colNetUcret = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.txtMeslek = new OgrenciTakip.UI.Win.UserControls.Controls.MyTextEdit();
@@ -70,13 +71,13 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYakinlik.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVeliSoyadi.Properties)).BeginInit();
@@ -97,7 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -202,6 +202,17 @@
             this.colBrutUcret.Visible = true;
             this.colBrutUcret.VisibleIndex = 1;
             this.colBrutUcret.Width = 110;
+            // 
+            // repositoryDecimal
+            // 
+            this.repositoryDecimal.Appearance.Options.UseTextOptions = true;
+            this.repositoryDecimal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Name = "repositoryDecimal";
             // 
             // colIndirim
             // 
@@ -576,17 +587,6 @@
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
-            // repositoryDecimal
-            // 
-            this.repositoryDecimal.Appearance.Options.UseTextOptions = true;
-            this.repositoryDecimal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.repositoryDecimal.AutoHeight = false;
-            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
-            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.Name = "repositoryDecimal";
-            // 
             // FaturaPlaniEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,6 +603,7 @@
             this.myDataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMeslek.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYakinlik.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVeliSoyadi.Properties)).EndInit();
@@ -623,7 +624,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -652,12 +652,12 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private UserControls.Grid.MyGridControl grid;
-        private UserControls.Grid.MyGridView tablo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private UserControls.Grid.MyGridColumn colHizmetAdi;
         private UserControls.Grid.MyGridColumn colBrutUcret;
         private UserControls.Grid.MyGridColumn colIndirim;
         private UserControls.Grid.MyGridColumn colNetUcret;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
+        protected internal UserControls.Grid.MyGridView tablo;
     }
 }
