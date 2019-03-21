@@ -36,13 +36,13 @@
             this.repositoryTarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colPlanTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.colPlanIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colPlanIndirimTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colPlanNetTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colFaturaNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukTarih = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colTahakkukIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colTahakkukIndirimTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukNetTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -96,12 +96,12 @@
             this.colAciklama,
             this.colPlanTarih,
             this.colPlanTutar,
-            this.colPlanIndirim,
+            this.colPlanIndirimTutar,
             this.colPlanNetTutar,
             this.colFaturaNo,
             this.colTahakkukTarih,
             this.colTahakkukTutar,
-            this.colTahakkukIndirim,
+            this.colTahakkukIndirimTutar,
             this.colTahakkukNetTutar});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
@@ -121,6 +121,7 @@
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.ViewCaption = "Fatura Planı";
             // 
             // gridBand1
             // 
@@ -128,11 +129,11 @@
             this.gridBand1.Columns.Add(this.colAciklama);
             this.gridBand1.Columns.Add(this.colPlanTarih);
             this.gridBand1.Columns.Add(this.colPlanTutar);
-            this.gridBand1.Columns.Add(this.colPlanIndirim);
+            this.gridBand1.Columns.Add(this.colPlanIndirimTutar);
             this.gridBand1.Columns.Add(this.colPlanNetTutar);
             this.gridBand1.Name = "gridBand1";
             this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 580;
+            this.gridBand1.Width = 660;
             // 
             // colAciklama
             // 
@@ -144,7 +145,7 @@
             this.colAciklama.StatusBarKisayol = null;
             this.colAciklama.StatusBarKisayolAciklama = null;
             this.colAciklama.Visible = true;
-            this.colAciklama.Width = 220;
+            this.colAciklama.Width = 300;
             // 
             // colPlanTarih
             // 
@@ -198,21 +199,21 @@
             this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.repositoryDecimal.Name = "repositoryDecimal";
             // 
-            // colPlanIndirim
+            // colPlanIndirimTutar
             // 
-            this.colPlanIndirim.Caption = "İndirim";
-            this.colPlanIndirim.ColumnEdit = this.repositoryDecimal;
-            this.colPlanIndirim.CustomizationCaption = "Plan Indirim";
-            this.colPlanIndirim.FieldName = "PlanIndirim";
-            this.colPlanIndirim.Name = "colPlanIndirim";
-            this.colPlanIndirim.OptionsColumn.AllowEdit = false;
-            this.colPlanIndirim.StatusBarAciklama = null;
-            this.colPlanIndirim.StatusBarKisayol = null;
-            this.colPlanIndirim.StatusBarKisayolAciklama = null;
-            this.colPlanIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanIndirim", "{0:n2}")});
-            this.colPlanIndirim.Visible = true;
-            this.colPlanIndirim.Width = 90;
+            this.colPlanIndirimTutar.Caption = "İndirim";
+            this.colPlanIndirimTutar.ColumnEdit = this.repositoryDecimal;
+            this.colPlanIndirimTutar.CustomizationCaption = "Plan Indirim";
+            this.colPlanIndirimTutar.FieldName = "PlanIndirimTutar";
+            this.colPlanIndirimTutar.Name = "colPlanIndirimTutar";
+            this.colPlanIndirimTutar.OptionsColumn.AllowEdit = false;
+            this.colPlanIndirimTutar.StatusBarAciklama = null;
+            this.colPlanIndirimTutar.StatusBarKisayol = null;
+            this.colPlanIndirimTutar.StatusBarKisayolAciklama = null;
+            this.colPlanIndirimTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanIndirimTutar", "{0:n2}")});
+            this.colPlanIndirimTutar.Visible = true;
+            this.colPlanIndirimTutar.Width = 90;
             // 
             // colPlanNetTutar
             // 
@@ -236,7 +237,7 @@
             this.gridBand2.Columns.Add(this.colFaturaNo);
             this.gridBand2.Columns.Add(this.colTahakkukTarih);
             this.gridBand2.Columns.Add(this.colTahakkukTutar);
-            this.gridBand2.Columns.Add(this.colTahakkukIndirim);
+            this.gridBand2.Columns.Add(this.colTahakkukIndirimTutar);
             this.gridBand2.Columns.Add(this.colTahakkukNetTutar);
             this.gridBand2.Name = "gridBand2";
             this.gridBand2.VisibleIndex = 1;
@@ -286,21 +287,21 @@
             this.colTahakkukTutar.Visible = true;
             this.colTahakkukTutar.Width = 90;
             // 
-            // colTahakkukIndirim
+            // colTahakkukIndirimTutar
             // 
-            this.colTahakkukIndirim.Caption = "İndirim";
-            this.colTahakkukIndirim.ColumnEdit = this.repositoryDecimal;
-            this.colTahakkukIndirim.CustomizationCaption = "Tahakkuk Indirim";
-            this.colTahakkukIndirim.FieldName = "TahakkukIndirim";
-            this.colTahakkukIndirim.Name = "colTahakkukIndirim";
-            this.colTahakkukIndirim.OptionsColumn.AllowEdit = false;
-            this.colTahakkukIndirim.StatusBarAciklama = null;
-            this.colTahakkukIndirim.StatusBarKisayol = null;
-            this.colTahakkukIndirim.StatusBarKisayolAciklama = null;
-            this.colTahakkukIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TahakkukIndirim", "{0:n2}")});
-            this.colTahakkukIndirim.Visible = true;
-            this.colTahakkukIndirim.Width = 90;
+            this.colTahakkukIndirimTutar.Caption = "İndirim";
+            this.colTahakkukIndirimTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTahakkukIndirimTutar.CustomizationCaption = "Tahakkuk Indirim";
+            this.colTahakkukIndirimTutar.FieldName = "TahakkukIndirimTutar";
+            this.colTahakkukIndirimTutar.Name = "colTahakkukIndirimTutar";
+            this.colTahakkukIndirimTutar.OptionsColumn.AllowEdit = false;
+            this.colTahakkukIndirimTutar.StatusBarAciklama = null;
+            this.colTahakkukIndirimTutar.StatusBarKisayol = null;
+            this.colTahakkukIndirimTutar.StatusBarKisayolAciklama = null;
+            this.colTahakkukIndirimTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TahakkukIndirimTutar", "{0:n2}")});
+            this.colTahakkukIndirimTutar.Visible = true;
+            this.colTahakkukIndirimTutar.Width = 90;
             // 
             // colTahakkukNetTutar
             // 
@@ -340,19 +341,19 @@
         #endregion
         private Grid.MyBandedGridControl grid;
         private Grid.MyBandedGridView tablo;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private Grid.MyBandedGridColumn colAciklama;
         private Grid.MyBandedGridColumn colPlanTarih;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryTarih;
         private Grid.MyBandedGridColumn colPlanTutar;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
-        private Grid.MyBandedGridColumn colPlanIndirim;
+        private Grid.MyBandedGridColumn colPlanIndirimTutar;
         private Grid.MyBandedGridColumn colPlanNetTutar;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
         private Grid.MyBandedGridColumn colFaturaNo;
         private Grid.MyBandedGridColumn colTahakkukTarih;
         private Grid.MyBandedGridColumn colTahakkukTutar;
-        private Grid.MyBandedGridColumn colTahakkukIndirim;
+        private Grid.MyBandedGridColumn colTahakkukIndirimTutar;
         private Grid.MyBandedGridColumn colTahakkukNetTutar;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand2;
     }
 }

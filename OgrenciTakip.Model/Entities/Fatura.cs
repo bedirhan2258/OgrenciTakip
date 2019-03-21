@@ -9,7 +9,7 @@ namespace OgrenciTakip.Model.Entities
         public long TahakkukId { get; set; }
         public DateTime PlanTarih { get; set; }
         public decimal PlanTutar { get; set; }
-        public decimal PlanIndirimTutari { get; set; }
+        public decimal PlanIndirimTutar { get; set; }
         public decimal PlanNetTutar { get; set; }
         public string Aciklama { get; set; }
         public int? FaturaNo { get; set; }

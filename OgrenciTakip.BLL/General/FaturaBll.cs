@@ -23,14 +23,15 @@ namespace OgrenciTakip.BLL.General
                 Aciklama = x.Aciklama,
                 PlanTarih = x.PlanTarih,
                 PlanTutar = x.PlanTutar,
-                PlanIndirimTutari = x.PlanIndirimTutari,
+                PlanIndirimTutar = x.PlanIndirimTutar,
                 PlanNetTutar = x.PlanNetTutar,
                 FaturaNo = x.FaturaNo,
                 TahakkukTarih = x.TahakkukTarih,
                 TahakkukTutar = x.TopamTutar,
                 TahakkukIndirimTutar = x.TahakkukIndirimTutar,
+                TahakkukNetTutar = x.TahakkukNetTutar
 
-            }).OrderBy(x=>x.PlanTarih).ToList();
+            }).OrderBy(x => x.PlanTarih).ToList();
         }
     }
 }

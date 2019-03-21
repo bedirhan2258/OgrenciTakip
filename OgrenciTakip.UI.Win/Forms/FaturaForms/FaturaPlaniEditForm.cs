@@ -1,9 +1,14 @@
 ﻿using DevExpress.XtraBars;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.DTO;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable;
+using System;
 using System.Linq;
-
+using System.Windows.Forms;
 namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 {
     public partial class FaturaPlaniEditForm : BaseEditForm
@@ -30,6 +35,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 
         protected internal override void Yukle()
         {
+            TabloYukle();
             using (var bll = new HizmetBilgileriBll())
             {
                 var list = bll.FaturaPlaniList(x => x.TahakkukId == id).ToList();
@@ -46,6 +52,45 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
                 tablo.GridControl.DataSource = list;
                 // id = list[0].TahakkukId;
             }
+        }
+
+        protected internal override void ButonEnabledDurumu()
+        {
+            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnGeriAl, faturaPlaniTable.TableValueChanged);
+        }
+
+        protected override void TabloYukle()
+        {
+            faturaPlaniTable.OwnerForm = this;
+            faturaPlaniTable.Yukle();
+        }
+
+        protected override bool EntityInsert()
+        {
+            return faturaPlaniTable.Kaydet();
+        }
+
+        protected override bool EntityUpdate()
+        {
+            return faturaPlaniTable.Kaydet();
+        }
+
+        protected override void EntityDelete()
+        {
+            if (Messages.HayirSeciliEvetHayir("Fatura Planı İptal Edilecek Onaylıyor Musunuz?", "İptal Onay") != DialogResult.Yes) return;
+
+            var source = faturaPlaniTable.Tablo.DataController.ListSource.Cast<FaturaPlaniL>().Where(x => x.TahakkukTarih == null).ToList();
+            if (source.Count == 0) return;
+
+            source.ForEach(x => x.Delete = true);
+            faturaPlaniTable.Tablo.RefleshDataSource();
+            faturaPlaniTable.TableValueChanged = true;
+            ButonEnabledDurumu();
+        }
+
+        protected override void BaseEditForm_Shown(object sender, EventArgs e)
+        {
+            faturaPlaniTable.Tablo.Focus();
         }
 
     }

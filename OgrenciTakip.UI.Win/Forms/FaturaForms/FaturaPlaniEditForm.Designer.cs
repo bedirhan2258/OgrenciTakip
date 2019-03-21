@@ -71,6 +71,8 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.faturaPlaniTable = new OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable.FaturaPlaniTable();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
@@ -98,16 +100,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(966, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(990, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // myDataLayoutControl
             // 
+            this.myDataLayoutControl.Controls.Add(this.faturaPlaniTable);
             this.myDataLayoutControl.Controls.Add(this.grid);
             this.myDataLayoutControl.Controls.Add(this.txtMeslek);
             this.myDataLayoutControl.Controls.Add(this.txtYakinlik);
@@ -122,7 +126,7 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.layoutControlGroup1;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(966, 419);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(990, 516);
             this.myDataLayoutControl.TabIndex = 2;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
@@ -134,7 +138,7 @@
             this.grid.Name = "grid";
             this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryDecimal});
-            this.grid.Size = new System.Drawing.Size(542, 166);
+            this.grid.Size = new System.Drawing.Size(566, 166);
             this.grid.TabIndex = 15;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -373,7 +377,8 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
             this.layoutControlGroup3,
-            this.layoutControlItem9});
+            this.layoutControlItem9,
+            this.layoutControlItem10});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             columnDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -393,7 +398,7 @@
             this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
             rowDefinition9,
             rowDefinition10});
-            this.layoutControlGroup1.Size = new System.Drawing.Size(966, 419);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(990, 516);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -583,15 +588,35 @@
             this.layoutControlItem9.Location = new System.Drawing.Point(400, 0);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.OptionsTableLayoutItem.ColumnIndex = 2;
-            this.layoutControlItem9.Size = new System.Drawing.Size(546, 170);
+            this.layoutControlItem9.Size = new System.Drawing.Size(570, 170);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
+            // 
+            // faturaPlaniTable
+            // 
+            this.faturaPlaniTable.Location = new System.Drawing.Point(12, 182);
+            this.faturaPlaniTable.Name = "faturaPlaniTable";
+            this.faturaPlaniTable.Size = new System.Drawing.Size(966, 322);
+            this.faturaPlaniTable.TabIndex = 16;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem10.Control = this.faturaPlaniTable;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 170);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem10.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem10.Size = new System.Drawing.Size(970, 326);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
             // 
             // FaturaPlaniEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 552);
+            this.ClientSize = new System.Drawing.Size(990, 649);
             this.Controls.Add(this.myDataLayoutControl);
             this.Name = "FaturaPlaniEditForm";
             this.Text = "Fatura Planı Kartı";
@@ -624,6 +649,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,5 +685,7 @@
         private UserControls.Grid.MyGridColumn colNetUcret;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
         protected internal UserControls.Grid.MyGridView tablo;
+        private UserControls.FaturaEditFormTable.FaturaPlaniTable faturaPlaniTable;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
     }
 }

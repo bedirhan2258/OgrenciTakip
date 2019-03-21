@@ -260,7 +260,7 @@ namespace OgrenciTakip.BLL.General
                 {
                     Aciklama = y.Select(z => z.Aciklama).FirstOrDefault(),
                     PlanTutar = y.Select(z => z.PlanTutar).DefaultIfEmpty(0).Sum(),
-                    PlanIndirimTutar = y.Select(z => z.PlanIndirimTutari).DefaultIfEmpty(0).Sum(),
+                    PlanIndirimTutar = y.Select(z => z.PlanIndirimTutar).DefaultIfEmpty(0).Sum(),
                     PlanNetTutar = y.Select(z => z.PlanNetTutar).DefaultIfEmpty(0).Sum(),
                 }).FirstOrDefault(),
 

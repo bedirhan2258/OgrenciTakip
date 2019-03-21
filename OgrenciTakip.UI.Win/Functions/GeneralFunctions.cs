@@ -58,7 +58,7 @@ namespace OgrenciTakip.UI.Win.Functions
         }
 
         //oldEntity ile current entity arasında bir fark varsa alan olarak geri gönderiyoruz.
-        private static VeriDegisimYeri veriDegisimYeriGetir<T>(T oldEntity, T currentEntity)
+        private static VeriDegisimYeri VeriDegisimYeriGetir<T>(T oldEntity, T currentEntity)
         {
 
             foreach (var prop in currentEntity.GetType().GetProperties())
@@ -95,7 +95,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
         public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity)
         {
-            var veriDegisimYeri = veriDegisimYeriGetir(oldEntity, currentEntity);
+            var veriDegisimYeri = VeriDegisimYeriGetir(oldEntity, currentEntity);
             var butonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan; //veridegisimyeri alan gelirse otomatik olarak true olucak
             btnKaydet.Enabled = butonEnabledDurumu;
             btnGeriAl.Enabled = butonEnabledDurumu;
@@ -114,7 +114,7 @@ namespace OgrenciTakip.UI.Win.Functions
 
         public static void ButtonEnabledDurumu<T>(BarButtonItem btnYeni, BarButtonItem btnKaydet, BarButtonItem btnGeriAl, BarButtonItem btnSil, T oldEntity, T currentEntity, bool tableValueChanged)
         {
-            var veriDegisimYeri = tableValueChanged ? VeriDegisimYeri.Tablo : veriDegisimYeriGetir(oldEntity, currentEntity);
+            var veriDegisimYeri = tableValueChanged ? VeriDegisimYeri.Tablo : VeriDegisimYeriGetir(oldEntity, currentEntity);
             var butonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan || veriDegisimYeri == VeriDegisimYeri.Tablo; //veridegisimyeri alan gelirse otomatik olarak true olucak
             btnKaydet.Enabled = butonEnabledDurumu;
             btnGeriAl.Enabled = butonEnabledDurumu;
@@ -124,13 +124,22 @@ namespace OgrenciTakip.UI.Win.Functions
 
         public static void ButtonEnabledDurumu<T>(BarButtonItem btnKaydet, BarButtonItem btnFarkliKaydet, BarButtonItem btnSil, IslemTuru islemTuru, T oldEntity, T currentEntity)
         {
-            var veriDegisimYeri = veriDegisimYeriGetir(oldEntity, currentEntity);
+            var veriDegisimYeri = VeriDegisimYeriGetir(oldEntity, currentEntity);
             var butonEnabledDurumu = veriDegisimYeri == VeriDegisimYeri.Alan; //veridegisimyeri alan gelirse otomatik olarak true olucak
 
             btnKaydet.Enabled = butonEnabledDurumu;
             btnFarkliKaydet.Enabled = islemTuru != IslemTuru.EntityInsert;
             btnSil.Enabled = !butonEnabledDurumu;
         }
+
+        public static void ButtonEnabledDurumu(BarButtonItem btnKaydet, BarButtonItem btnGeriAl, bool tableValueChanged)
+        {
+            var butonEnabledDurumu = tableValueChanged;
+            btnKaydet.Enabled = butonEnabledDurumu;
+            btnGeriAl.Enabled = butonEnabledDurumu;
+        }
+
+
         public static long IdOlustur(this IslemTuru islemTuru, BaseEntity selectedEnttiy)
         {
             string SifirEkle(string deger)

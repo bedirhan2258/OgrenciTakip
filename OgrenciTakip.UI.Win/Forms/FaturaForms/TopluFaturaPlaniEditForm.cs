@@ -10,13 +10,14 @@ using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections;
 
 namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 {
     public partial class TopluFaturaPlaniEditForm : BaseEditForm
     {
         private readonly IList<FaturaAlinanHizmetlerL> _alinanHizmetlerSource;
-        private readonly IList<FaturaPlaniL> _faturaPlaniSource;
+        private readonly IList _faturaPlaniSource;
 
         public TopluFaturaPlaniEditForm()
         {
@@ -31,10 +32,10 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 
         }
 
-        public TopluFaturaPlaniEditForm(params object[] prm)
+        public TopluFaturaPlaniEditForm(params object[] prm) : this()
         {
             _alinanHizmetlerSource = (IList<FaturaAlinanHizmetlerL>)prm[0];
-            _faturaPlaniSource = (IList<FaturaPlaniL>)prm[1];
+            _faturaPlaniSource = (IList)prm[1];
         }
 
 
@@ -76,8 +77,8 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             var ozelTahakkuk = txtOzetTahakkuk.Text.GetEnum<EvetHayir>();
             var ozetAciklama = txtOzetTahakkukAciklama.Text;
 
-            var girilenBrutTutarToplami = _faturaPlaniSource.Where(x => !x.Delete).Sum(x => x.PlanTutar);
-            var girilenIndirimTutarToplami = _faturaPlaniSource.Where(x => !x.Delete).Sum(x => x.PlanIndirimTutari);
+            var girilenBrutTutarToplami = _faturaPlaniSource.Cast<FaturaPlaniL>().Where(x => !x.Delete).Sum(x => x.PlanTutar);
+            var girilenIndirimTutarToplami = _faturaPlaniSource.Cast<FaturaPlaniL>().Where(x => !x.Delete).Sum(x => x.PlanIndirimTutar);
 
             var girilecekBrutTutar = sabitTutar > 0 ? sabitTutar : Math.Round((hizmetlerToplami - girilenBrutTutarToplami) / faturaAdet, AnaForm.FaturaTahakkukKurusKullan ? 2 : 0);
             var girilecekIndirimTutar = sabitTutar > 0 ? 0 : Math.Round((indirimlerToplami - girilenIndirimTutarToplami) / faturaAdet, AnaForm.FaturaTahakkukKurusKullan ? 2 : 0);
@@ -97,7 +98,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
                     Aciklama = ozelTahakkuk == EvetHayir.Evet ? ozetAciklama : AlinanHizmetler(alinanHizmetler) + " Bedeli",
                     PlanTarih = ilkFaturaTarih.AddMonths(i),
                     PlanTutar = girilecekBrutTutar,
-                    PlanIndirimTutari = girilecekIndirimTutar,
+                    PlanIndirimTutar = girilecekIndirimTutar,
                     PlanNetTutar = girilecekNetTutar,
                     Insert = true,
 
@@ -114,9 +115,9 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 
                 if (i + 1 == faturaAdet && sabitTutar == 0)
                 {
-                    row.PlanTutar = hizmetlerToplami - _faturaPlaniSource.Where(x => !x.Delete).Sum(x => x.PlanTutar);
-                    row.PlanIndirimTutari = _faturaPlaniSource.Where(x => !x.Delete).Sum(x => x.PlanIndirimTutari);
-                    row.PlanNetTutar = row.PlanTutar - row.PlanIndirimTutari;
+                    row.PlanTutar = hizmetlerToplami - _faturaPlaniSource.Cast<FaturaPlaniL>().Where(x => !x.Delete).Sum(x => x.PlanTutar);
+                    row.PlanIndirimTutar = indirimlerToplami - _faturaPlaniSource.Cast<FaturaPlaniL>().Where(x => !x.Delete).Sum(x => x.PlanIndirimTutar);
+                    row.PlanNetTutar = row.PlanTutar - row.PlanIndirimTutar;
                 }
 
                 _faturaPlaniSource.Add(row);
