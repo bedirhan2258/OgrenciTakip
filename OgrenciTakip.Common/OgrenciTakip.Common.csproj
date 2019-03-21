@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\AdresTuru.cs" />
+    <Compile Include="Enums\Aylar.cs" />
     <Compile Include="Enums\BankaHesapTuru.cs" />
     <Compile Include="Enums\BelgeDurumu.cs" />
     <Compile Include="Enums\Cinsiyet.cs" />

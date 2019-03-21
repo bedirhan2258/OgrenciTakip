@@ -26,12 +26,12 @@ namespace OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable
         protected override void HareketEkle()
         {
             var alinanHizmetlerSource = ((FaturaPlaniEditForm)OwnerForm).tablo.DataController.ListSource.Cast<FaturaAlinanHizmetlerL>().ToList();
-            var faturaPlaniSource = tablo.DataController.ListSource;
+            var faturaPlaniSource = tablo.DataController.ListSource.Cast<FaturaPlaniL>().ToList();
 
             tablo.Focus();
             tablo.RefleshDataSource();
             tablo.FocusedRowHandle = tablo.DataRowCount - 1;
-           // tablo.FocusedColumn = colIslemTutari;
+            // tablo.FocusedColumn = colIslemTutari;
             SutunGizleGoster();
             RowCellAllowEdit();
             ButtonEnabledDurumu(true);
