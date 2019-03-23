@@ -197,6 +197,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
             this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.EditFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Mask.EditMask = "n2";
             this.repositoryDecimal.Name = "repositoryDecimal";
             // 
             // colPlanIndirimTutar

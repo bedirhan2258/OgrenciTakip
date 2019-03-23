@@ -425,7 +425,7 @@
         private UserControls.Controls.MyTextEdit txtOzetTahakkukAciklama;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.ProgressBarControl progressBarControl;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlProgress;
+        protected internal DevExpress.XtraEditors.ProgressBarControl progressBarControl;
     }
 }

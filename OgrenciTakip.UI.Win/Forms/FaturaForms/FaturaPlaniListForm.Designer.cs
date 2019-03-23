@@ -28,46 +28,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FaturaPlaniListForm));
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOkulNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSinif = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colVeliAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeliSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colYakinlik = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colMeslek = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKayitTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.repositoryITarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colKayitSekli = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colKayitDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIptalDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colBrutTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.colIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colNetTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colPlanTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colPlanIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colPlanNetTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOzelKod1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod3 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod4 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod5 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.progressBarControl = new DevExpress.XtraEditors.ProgressBarControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryITarih)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryITarih.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -187,6 +193,24 @@
             this.colOzelKod3,
             this.colOzelKod4,
             this.colOzelKod5});
+            gridFormatRule1.ApplyToRow = true;
+            gridFormatRule1.Column = this.colNetTutar;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleExpression1.Appearance.BackColor = System.Drawing.Color.IndianRed;
+            formatConditionRuleExpression1.Appearance.Options.HighPriority = true;
+            formatConditionRuleExpression1.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression1.Expression = "[HizmetNetTutar] <>[PlanNetTutar]";
+            gridFormatRule1.Rule = formatConditionRuleExpression1;
+            gridFormatRule2.ApplyToRow = true;
+            gridFormatRule2.Column = this.colNetTutar;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleExpression2.Appearance.BackColor = System.Drawing.Color.LemonChiffon;
+            formatConditionRuleExpression2.Appearance.Options.HighPriority = true;
+            formatConditionRuleExpression2.Appearance.Options.UseBackColor = true;
+            formatConditionRuleExpression2.Expression = "[HizmetNetTutar]==0";
+            gridFormatRule2.Rule = formatConditionRuleExpression2;
+            this.tablo.FormatRules.Add(gridFormatRule1);
+            this.tablo.FormatRules.Add(gridFormatRule2);
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
@@ -207,6 +231,17 @@
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
             this.tablo.ViewCaption = "Fatura Planı Kartları";
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Öğrenci Bilgileri";
+            this.gridBand1.Columns.Add(this.colOkulNo);
+            this.gridBand1.Columns.Add(this.colAdi);
+            this.gridBand1.Columns.Add(this.colSoyadi);
+            this.gridBand1.Columns.Add(this.colSinif);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 375;
             // 
             // colOkulNo
             // 
@@ -254,6 +289,17 @@
             this.colSinif.StatusBarKisayolAciklama = null;
             this.colSinif.Visible = true;
             this.colSinif.Width = 100;
+            // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Veli Bilgileri";
+            this.gridBand2.Columns.Add(this.colVeliAdi);
+            this.gridBand2.Columns.Add(this.colVeliSoyadi);
+            this.gridBand2.Columns.Add(this.colYakinlik);
+            this.gridBand2.Columns.Add(this.colMeslek);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 400;
             // 
             // colVeliAdi
             // 
@@ -304,6 +350,17 @@
             this.colMeslek.StatusBarKisayolAciklama = null;
             this.colMeslek.Visible = true;
             this.colMeslek.Width = 100;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Kayıt Bilgileri";
+            this.gridBand3.Columns.Add(this.colKayitTarihi);
+            this.gridBand3.Columns.Add(this.colKayitSekli);
+            this.gridBand3.Columns.Add(this.colKayitDurumu);
+            this.gridBand3.Columns.Add(this.colIptalDurumu);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 2;
+            this.gridBand3.Width = 400;
             // 
             // colKayitTarihi
             // 
@@ -366,6 +423,16 @@
             this.colIptalDurumu.Visible = true;
             this.colIptalDurumu.Width = 100;
             // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "Hizmet Bilgileri";
+            this.gridBand4.Columns.Add(this.colBrutTutar);
+            this.gridBand4.Columns.Add(this.colIndirim);
+            this.gridBand4.Columns.Add(this.colNetTutar);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 3;
+            this.gridBand4.Width = 300;
+            // 
             // colBrutTutar
             // 
             this.colBrutTutar.Caption = "Tutar";
@@ -423,6 +490,16 @@
             this.colNetTutar.Visible = true;
             this.colNetTutar.Width = 100;
             // 
+            // gridBand5
+            // 
+            this.gridBand5.Caption = "Fatura Planı";
+            this.gridBand5.Columns.Add(this.colPlanTutar);
+            this.gridBand5.Columns.Add(this.colPlanIndirim);
+            this.gridBand5.Columns.Add(this.colPlanNetTutar);
+            this.gridBand5.Name = "gridBand5";
+            this.gridBand5.VisibleIndex = 4;
+            this.gridBand5.Width = 300;
+            // 
             // colPlanTutar
             // 
             this.colPlanTutar.Caption = "Tutar";
@@ -470,6 +547,18 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanNetTutar", "{0:n2}")});
             this.colPlanNetTutar.Visible = true;
             this.colPlanNetTutar.Width = 100;
+            // 
+            // gridBand6
+            // 
+            this.gridBand6.Caption = "Özel Kod";
+            this.gridBand6.Columns.Add(this.colOzelKod1);
+            this.gridBand6.Columns.Add(this.colOzelKod2);
+            this.gridBand6.Columns.Add(this.colOzelKod3);
+            this.gridBand6.Columns.Add(this.colOzelKod4);
+            this.gridBand6.Columns.Add(this.colOzelKod5);
+            this.gridBand6.Name = "gridBand6";
+            this.gridBand6.VisibleIndex = 5;
+            this.gridBand6.Width = 550;
             // 
             // colOzelKod1
             // 
@@ -531,76 +620,22 @@
             this.colOzelKod5.Visible = true;
             this.colOzelKod5.Width = 110;
             // 
-            // gridBand1
+            // progressBarControl
             // 
-            this.gridBand1.Caption = "Öğrenci Bilgileri";
-            this.gridBand1.Columns.Add(this.colOkulNo);
-            this.gridBand1.Columns.Add(this.colAdi);
-            this.gridBand1.Columns.Add(this.colSoyadi);
-            this.gridBand1.Columns.Add(this.colSinif);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 375;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Veli Bilgileri";
-            this.gridBand2.Columns.Add(this.colVeliAdi);
-            this.gridBand2.Columns.Add(this.colVeliSoyadi);
-            this.gridBand2.Columns.Add(this.colYakinlik);
-            this.gridBand2.Columns.Add(this.colMeslek);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 400;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Kayıt Bilgileri";
-            this.gridBand3.Columns.Add(this.colKayitTarihi);
-            this.gridBand3.Columns.Add(this.colKayitSekli);
-            this.gridBand3.Columns.Add(this.colKayitDurumu);
-            this.gridBand3.Columns.Add(this.colIptalDurumu);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 2;
-            this.gridBand3.Width = 400;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "Hizmet Bilgileri";
-            this.gridBand4.Columns.Add(this.colBrutTutar);
-            this.gridBand4.Columns.Add(this.colIndirim);
-            this.gridBand4.Columns.Add(this.colNetTutar);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 3;
-            this.gridBand4.Width = 300;
-            // 
-            // gridBand5
-            // 
-            this.gridBand5.Caption = "Fatura Planı";
-            this.gridBand5.Columns.Add(this.colPlanTutar);
-            this.gridBand5.Columns.Add(this.colPlanIndirim);
-            this.gridBand5.Columns.Add(this.colPlanNetTutar);
-            this.gridBand5.Name = "gridBand5";
-            this.gridBand5.VisibleIndex = 4;
-            this.gridBand5.Width = 300;
-            // 
-            // gridBand6
-            // 
-            this.gridBand6.Caption = "Özel Kod";
-            this.gridBand6.Columns.Add(this.colOzelKod1);
-            this.gridBand6.Columns.Add(this.colOzelKod2);
-            this.gridBand6.Columns.Add(this.colOzelKod3);
-            this.gridBand6.Columns.Add(this.colOzelKod4);
-            this.gridBand6.Columns.Add(this.colOzelKod5);
-            this.gridBand6.Name = "gridBand6";
-            this.gridBand6.VisibleIndex = 5;
-            this.gridBand6.Width = 550;
+            this.progressBarControl.Location = new System.Drawing.Point(345, 242);
+            this.progressBarControl.MenuManager = this.ribbonControl;
+            this.progressBarControl.Name = "progressBarControl";
+            this.progressBarControl.Properties.ShowTitle = true;
+            this.progressBarControl.Size = new System.Drawing.Size(382, 33);
+            this.progressBarControl.TabIndex = 4;
+            this.progressBarControl.Visible = false;
             // 
             // FaturaPlaniListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 412);
+            this.Controls.Add(this.progressBarControl);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
             this.Name = "FaturaPlaniListForm";
@@ -608,12 +643,14 @@
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
+            this.Controls.SetChildIndex(this.progressBarControl, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryITarih.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryITarih)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryDecimal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,5 +692,6 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand4;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand5;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand6;
+        private DevExpress.XtraEditors.ProgressBarControl progressBarControl;
     }
 }

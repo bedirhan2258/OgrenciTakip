@@ -230,7 +230,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
                 }
             }
             Messages.BilgiMesaji("Fatura Planı Oluşturma İşlemi Başarılı Bir Şekilde Tamamlanmıştır.");
-            refreshYapilacak = true;
+            DialogResult = DialogResult.OK;
             Close();
         }
 

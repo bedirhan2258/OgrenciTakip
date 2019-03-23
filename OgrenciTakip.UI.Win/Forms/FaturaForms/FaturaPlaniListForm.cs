@@ -9,6 +9,8 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.UI.Win.Show;
 using DevExpress.XtraBars;
 using System.Collections.Generic;
+using System.Windows.Forms;
+using System.Linq;
 
 namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 {
@@ -57,12 +59,46 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             var source = new List<FaturaL>();
 
             for (int i = 0; i < tablo.DataRowCount; i++)
-            {
                 source.Add(tablo.GetRow<FaturaL>(i));
-            }
+
+            if (source.Count == 0) return;
 
             if (ShowEditForms<TopluFaturaPlaniEditForm>.ShowDialogEditForms(KartTuru.Fatura, source))
                 Listele();
+        }
+
+        protected override void EntityDelete()
+        {
+            if (Messages.HayirSeciliEvetHayir("Seçilen Öğrencilere Ait Hareket Görmeyen Tüm Fatura Planları İptal Edilecektir. Onaylıyor Musunuz", "İptal Onay") != DialogResult.Yes) return;
+
+            var source = new List<FaturaL>();
+
+            for (int i = 0; i < tablo.DataRowCount; i++)
+                source.Add(tablo.GetRow<FaturaL>(i));
+            if (source.Count == 0) return;
+
+            using (var bll = new FaturaBll())
+            {
+                var position = 0.0;
+                progressBarControl.Visible = true;
+                progressBarControl.Left = (ClientSize.Width - progressBarControl.Width) / 2;
+                progressBarControl.Top = (ClientSize.Height - progressBarControl.Height) / 2;
+
+                source.ForEach(x =>
+                {
+                    var yuzde = 100.0 / source.Count;
+                    position += yuzde;
+                    var planSource = bll.List(y => y.TahakkukId == x.Id).Where(y => ((FaturaPlaniL)y).TahakkukTarih == null).ToList();
+                    bll.Delete(planSource);
+
+                    progressBarControl.Position = (int)position;
+                    progressBarControl.Update();
+                });
+            }
+
+            progressBarControl.Visible = false;
+            Messages.BilgiMesaji("Seçilen Öğrencilere Ait Fatura Planları Başarılı Bir Şekilde İptal Edilmiştir.");
+            Listele();
         }
 
     }

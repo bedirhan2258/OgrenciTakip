@@ -33,5 +33,21 @@ namespace OgrenciTakip.BLL.General
 
             }).OrderBy(x => x.PlanTarih).ToList();
         }
+
+        public IEnumerable<DateTime> FaturaDonemList(Expression<Func<Fatura, bool>> filter)
+        {
+            return List(filter, x => new
+            {
+                x.PlanTarih
+            }).GroupBy(x => x.PlanTarih).Select(x => x.Key).ToList();
+        }
+
+        public int MaxFaturaNo(Expression<Func<Fatura, bool>> filter)
+        {
+            return List(filter, x => new
+            {
+                x.FaturaNo
+            }).DefaultIfEmpty().Max(x => x.FaturaNo ?? 0);
+        }
     }
 }

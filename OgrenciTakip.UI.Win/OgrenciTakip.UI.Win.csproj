@@ -209,6 +209,12 @@
     <Compile Include="Forms\FaturaForms\FaturaPlaniListForm.Designer.cs">
       <DependentUpon>FaturaPlaniListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaTahakkukEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FaturaForms\FaturaTahakkukEditForm.Designer.cs">
+      <DependentUpon>FaturaTahakkukEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FaturaForms\TopluFaturaPlaniEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -948,6 +954,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FaturaForms\FaturaPlaniListForm.resx">
       <DependentUpon>FaturaPlaniListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FaturaForms\FaturaTahakkukEditForm.resx">
+      <DependentUpon>FaturaTahakkukEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FaturaForms\TopluFaturaPlaniEditForm.resx">
       <DependentUpon>TopluFaturaPlaniEditForm.cs</DependentUpon>
