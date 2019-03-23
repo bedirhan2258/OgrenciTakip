@@ -23,6 +23,13 @@ namespace OgrenciTakip.BLL.Base
             return _uow.Rep.Select(filter, selector);
         }
 
+        public virtual bool InsertSingle(BaseHareketEntity entity)
+        {
+            GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _uow);
+            _uow.Rep.Insert(entity.EntityConvert<T>());
+            return _uow.Save();
+        }
+
         public virtual bool Insert(IList<BaseHareketEntity> entities)
         {
             GeneralFunctions.CreateOfUnitOfWork<T, TContext>(ref _uow);

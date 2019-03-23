@@ -7,6 +7,8 @@ using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.UI.Win.Show;
+using DevExpress.XtraBars;
+using System.Collections.Generic;
 
 namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 {
@@ -16,6 +18,12 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
         {
             InitializeComponent();
             bll = new TahakkukBll();
+            HideItems = new BarItem[] { btnYeni, barInsert, barInsertAciklama, barDelete, barDeleteAciklama, btnAktifPasifKartlar };
+            ShowItems = new BarItem[] { btnTahakkukYap };
+            btnSil.Caption = "Fatura Planı İptal Et";
+            btnTahakkukYap.Caption = "Toplu Fatura Planı";
+            btnYazdir.CreateDropDownMenu(new BarItem[] { btnTabloYazdir });
+
         }
 
         protected override void DegiskenleriDoldur()
@@ -42,12 +50,20 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 
             var result = ShowEditForms<FaturaPlaniEditForm>.ShowDialogEditForms(KartTuru.Fatura, id, null);
             ShowEditFormDefault(result);
-
         }
 
-        private void grid_Click(object sender, System.EventArgs e)
+        protected override void TahakkukYap()
         {
+            var source = new List<FaturaL>();
 
+            for (int i = 0; i < tablo.DataRowCount; i++)
+            {
+                source.Add(tablo.GetRow<FaturaL>(i));
+            }
+
+            if (ShowEditForms<TopluFaturaPlaniEditForm>.ShowDialogEditForms(KartTuru.Fatura, source))
+                Listele();
         }
+
     }
 }

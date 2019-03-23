@@ -136,7 +136,6 @@
             this.grid.TabIndex = 3;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
-            this.grid.Click += new System.EventHandler(this.grid_Click);
             // 
             // tablo
             // 

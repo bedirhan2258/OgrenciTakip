@@ -14,7 +14,12 @@ namespace OgrenciTakip.Common.Message
 
         public static void UyariMesaji(string uyariMesaji)
         {
-            XtraMessageBox.Show(uyariMesaji, "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            XtraMessageBox.Show(uyariMesaji, "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        public static void BilgiMesaji(string bilgiMesaji)
+        {
+            XtraMessageBox.Show(bilgiMesaji, "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static DialogResult EvetSeciliEvetHayir(string mesaj, string baslik)

@@ -95,12 +95,12 @@
             this.btnBaskiOnizleme = new DevExpress.XtraBars.BarButtonItem();
             this.btnResimEkle = new DevExpress.XtraBars.BarButtonItem();
             this.btnResimSil = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTaksitOlustur = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.resimMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.btnTaksitOlustur = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             this.SuspendLayout();
@@ -417,6 +417,28 @@
             this.btnResimSil.Name = "btnResimSil";
             this.btnResimSil.ShortcutKeyDisplayString = "Delete";
             // 
+            // btnTaksitOlustur
+            // 
+            this.btnTaksitOlustur.Caption = "Taksit Oluştur";
+            this.btnTaksitOlustur.Id = 15;
+            this.btnTaksitOlustur.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnTaksitOlustur.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
+            this.btnTaksitOlustur.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
+            this.btnTaksitOlustur.Name = "btnTaksitOlustur";
+            toolTipTitleItem19.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem19.Text = "(F2)";
+            toolTipItem10.LeftIndent = 6;
+            toolTipItem10.Text = "Taksit Oluştur.";
+            toolTipTitleItem20.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem20.LeftIndent = 6;
+            toolTipTitleItem20.Text = "Girdiğiniz Kriterlere Göre Taksit(ler) Oluşturulur.";
+            superToolTip10.Items.Add(toolTipTitleItem19);
+            superToolTip10.Items.Add(toolTipItem10);
+            superToolTip10.Items.Add(toolTipSeparatorItem10);
+            superToolTip10.Items.Add(toolTipTitleItem20);
+            this.btnTaksitOlustur.SuperTip = superToolTip10;
+            this.btnTaksitOlustur.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -461,28 +483,6 @@
             this.resimMenu.Name = "resimMenu";
             this.resimMenu.Ribbon = this.ribbonControl;
             // 
-            // btnTaksitOlustur
-            // 
-            this.btnTaksitOlustur.Caption = "Taksit Oluştur";
-            this.btnTaksitOlustur.Id = 15;
-            this.btnTaksitOlustur.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
-            this.btnTaksitOlustur.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_32x32;
-            this.btnTaksitOlustur.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
-            this.btnTaksitOlustur.Name = "btnTaksitOlustur";
-            toolTipTitleItem19.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
-            toolTipTitleItem19.Text = "(F2)";
-            toolTipItem10.LeftIndent = 6;
-            toolTipItem10.Text = "Taksit Oluştur.";
-            toolTipTitleItem20.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem20.LeftIndent = 6;
-            toolTipTitleItem20.Text = "Girdiğiniz Kriterlere Göre Taksit(ler) Oluşturulur.";
-            superToolTip10.Items.Add(toolTipTitleItem19);
-            superToolTip10.Items.Add(toolTipItem10);
-            superToolTip10.Items.Add(toolTipSeparatorItem10);
-            superToolTip10.Items.Add(toolTipTitleItem20);
-            this.btnTaksitOlustur.SuperTip = superToolTip10;
-            this.btnTaksitOlustur.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            // 
             // BaseEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,7 +515,6 @@
         protected DevExpress.XtraBars.BarButtonItem btnYeni;
         protected DevExpress.XtraBars.BarButtonItem btnGeriAl;
         protected DevExpress.XtraBars.BarButtonItem btnKaydet;
-        protected DevExpress.XtraBars.BarButtonItem btnSil;
         protected DevExpress.XtraBars.BarButtonItem btnYazdir;
         protected DevExpress.XtraBars.BarButtonItem btnBaskiOnizleme;
         private DevExpress.XtraBars.BarButtonItem btnResimEkle;
@@ -525,5 +524,6 @@
         protected internal DevExpress.XtraBars.BarStaticItem statusBarKisayol;
         protected internal DevExpress.XtraBars.BarStaticItem statusBarKisayolAciklama;
         protected DevExpress.XtraBars.BarButtonItem btnTaksitOlustur;
+        protected internal DevExpress.XtraBars.BarButtonItem btnSil;
     }
 }

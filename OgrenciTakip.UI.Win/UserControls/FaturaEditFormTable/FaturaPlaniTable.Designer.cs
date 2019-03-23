@@ -118,9 +118,9 @@
             this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Öğrenciye Kesilen - Kesilecek Fatura Bilgileri";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Fatura Planı Ekle.";
             this.tablo.ViewCaption = "Fatura Planı";
             // 
             // gridBand1

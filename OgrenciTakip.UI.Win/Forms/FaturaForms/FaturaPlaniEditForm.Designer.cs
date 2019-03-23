@@ -44,6 +44,7 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.faturaPlaniTable = new OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable.FaturaPlaniTable();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colHizmetAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
@@ -71,7 +72,6 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.faturaPlaniTable = new OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable.FaturaPlaniTable();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
@@ -130,6 +130,13 @@
             this.myDataLayoutControl.TabIndex = 2;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
+            // faturaPlaniTable
+            // 
+            this.faturaPlaniTable.Location = new System.Drawing.Point(12, 182);
+            this.faturaPlaniTable.Name = "faturaPlaniTable";
+            this.faturaPlaniTable.Size = new System.Drawing.Size(966, 322);
+            this.faturaPlaniTable.TabIndex = 16;
+            // 
             // grid
             // 
             this.grid.Location = new System.Drawing.Point(412, 12);
@@ -173,7 +180,7 @@
             this.tablo.OptionsView.ShowFooter = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
+            this.tablo.StatusBarAciklama = "Öğrenciye Verilen Hizmetler.";
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
             this.tablo.ViewCaption = "Hizmet Bilgileri";
@@ -591,13 +598,6 @@
             this.layoutControlItem9.Size = new System.Drawing.Size(570, 170);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
-            // 
-            // faturaPlaniTable
-            // 
-            this.faturaPlaniTable.Location = new System.Drawing.Point(12, 182);
-            this.faturaPlaniTable.Name = "faturaPlaniTable";
-            this.faturaPlaniTable.Size = new System.Drawing.Size(966, 322);
-            this.faturaPlaniTable.TabIndex = 16;
             // 
             // layoutControlItem10
             // 

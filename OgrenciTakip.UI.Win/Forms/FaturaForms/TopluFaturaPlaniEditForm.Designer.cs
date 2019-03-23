@@ -45,14 +45,14 @@
             this.txtSabitTutar = new OgrenciTakip.UI.Win.UserControls.Controls.MyCalcEdit();
             this.txtAdet = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
             this.txtIlkFaturaTarih = new OgrenciTakip.UI.Win.UserControls.Controls.MyDateEdit();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlProgress = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
@@ -65,20 +65,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdet.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIlkFaturaTarih.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIlkFaturaTarih.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlProgress)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(603, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(465, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // myDataLayoutControl
@@ -94,8 +94,8 @@
             this.myDataLayoutControl.Location = new System.Drawing.Point(0, 102);
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
-            this.myDataLayoutControl.Root = this.layoutControlGroup1;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(603, 152);
+            this.myDataLayoutControl.Root = this.layoutControlGroup;
+            this.myDataLayoutControl.Size = new System.Drawing.Size(465, 146);
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
@@ -105,7 +105,7 @@
             this.progressBarControl.MenuManager = this.ribbonControl;
             this.progressBarControl.Name = "progressBarControl";
             this.progressBarControl.Properties.ShowTitle = true;
-            this.progressBarControl.Size = new System.Drawing.Size(579, 32);
+            this.progressBarControl.Size = new System.Drawing.Size(441, 26);
             this.progressBarControl.StyleController = this.myDataLayoutControl;
             this.progressBarControl.TabIndex = 6;
             // 
@@ -136,7 +136,7 @@
             this.txtOzetTahakkukAciklama.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtOzetTahakkukAciklama.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtOzetTahakkukAciklama.Properties.MaxLength = 50;
-            this.txtOzetTahakkukAciklama.Size = new System.Drawing.Size(379, 20);
+            this.txtOzetTahakkukAciklama.Size = new System.Drawing.Size(241, 20);
             this.txtOzetTahakkukAciklama.StatusBarAciklama = "Açıklama Giriniz.";
             this.txtOzetTahakkukAciklama.StyleController = this.myDataLayoutControl;
             this.txtOzetTahakkukAciklama.TabIndex = 4;
@@ -183,7 +183,7 @@
             // txtAdet
             // 
             this.txtAdet.EditValue = new decimal(new int[] {
-            0,
+            1,
             0,
             0,
             0});
@@ -197,6 +197,16 @@
             this.txtAdet.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtAdet.Properties.Mask.EditMask = "d";
+            this.txtAdet.Properties.MaxValue = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.txtAdet.Properties.MinValue = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.txtAdet.Size = new System.Drawing.Size(53, 20);
             this.txtAdet.StatusBarAciklama = "Adet Giriniz.";
             this.txtAdet.StyleController = this.myDataLayoutControl;
@@ -226,20 +236,20 @@
             this.txtIlkFaturaTarih.StyleController = this.myDataLayoutControl;
             this.txtIlkFaturaTarih.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // layoutControlGroup
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup.GroupBordersVisible = false;
+            this.layoutControlGroup.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem3,
             this.layoutControlItem4,
             this.layoutControlItem5,
             this.layoutControlItem6,
-            this.layoutControlItem7});
-            this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
-            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlProgress});
+            this.layoutControlGroup.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
+            this.layoutControlGroup.Name = "layoutControlGroup";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
             columnDefinition1.Width = 200D;
             columnDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -248,7 +258,7 @@
             columnDefinition3.Width = 60D;
             columnDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
             columnDefinition4.Width = 150D;
-            this.layoutControlGroup1.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
+            this.layoutControlGroup.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
             columnDefinition1,
             columnDefinition2,
             columnDefinition3,
@@ -263,14 +273,14 @@
             rowDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
             rowDefinition5.Height = 30D;
             rowDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
-            this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
+            this.layoutControlGroup.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
             rowDefinition1,
             rowDefinition2,
             rowDefinition3,
             rowDefinition4,
             rowDefinition5});
-            this.layoutControlGroup1.Size = new System.Drawing.Size(603, 152);
-            this.layoutControlGroup1.TextVisible = false;
+            this.layoutControlGroup.Size = new System.Drawing.Size(465, 146);
+            this.layoutControlGroup.TextVisible = false;
             // 
             // layoutControlItem1
             // 
@@ -332,7 +342,7 @@
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem5.OptionsTableLayoutItem.ColumnSpan = 3;
             this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem5.Size = new System.Drawing.Size(383, 24);
+            this.layoutControlItem5.Size = new System.Drawing.Size(245, 24);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -348,27 +358,28 @@
             this.layoutControlItem6.Text = "Açıklama Bölümünde Ay Bilgisi";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(140, 13);
             // 
-            // layoutControlItem7
+            // layoutControlProgress
             // 
-            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem7.Control = this.progressBarControl;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 96);
-            this.layoutControlItem7.MinSize = new System.Drawing.Size(197, 18);
-            this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.OptionsTableLayoutItem.ColumnSpan = 4;
-            this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 4;
-            this.layoutControlItem7.Size = new System.Drawing.Size(583, 36);
-            this.layoutControlItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem7.TextVisible = false;
+            this.layoutControlProgress.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlProgress.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlProgress.Control = this.progressBarControl;
+            this.layoutControlProgress.Location = new System.Drawing.Point(0, 96);
+            this.layoutControlProgress.MinSize = new System.Drawing.Size(197, 18);
+            this.layoutControlProgress.Name = "layoutControlProgress";
+            this.layoutControlProgress.OptionsTableLayoutItem.ColumnSpan = 4;
+            this.layoutControlProgress.OptionsTableLayoutItem.RowIndex = 4;
+            this.layoutControlProgress.Size = new System.Drawing.Size(445, 30);
+            this.layoutControlProgress.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.layoutControlProgress.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlProgress.TextVisible = false;
             // 
             // TopluFaturaPlaniEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 285);
+            this.ClientSize = new System.Drawing.Size(465, 279);
             this.Controls.Add(this.myDataLayoutControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "TopluFaturaPlaniEditForm";
             this.Text = "Fatura Planı Oluştur";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
@@ -385,14 +396,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAdet.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIlkFaturaTarih.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIlkFaturaTarih.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlProgress)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,7 +412,7 @@
         #endregion
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
-        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup;
         private UserControls.Controls.MySpinEdit txtAdet;
         private UserControls.Controls.MyDateEdit txtIlkFaturaTarih;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
@@ -415,6 +426,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.ProgressBarControl progressBarControl;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlProgress;
     }
 }
