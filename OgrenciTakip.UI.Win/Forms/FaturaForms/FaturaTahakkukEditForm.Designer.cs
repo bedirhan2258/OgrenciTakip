@@ -41,39 +41,39 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txtKdvSekli = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.txtFaturaAdresi = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtKdvOrani = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtSonFaturaNo = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtFaturaDonemi = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.txtFaturaNo = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
+            this.txtFaturaDonemi = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
+            this.txtSonFaturaNo = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
+            this.txtKdvOrani = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
+            this.txtFaturaAdresi = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
+            this.txtKdvSekli = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKdvSekli.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaAdresi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKdvOrani.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSonFaturaNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaDonemi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaturaNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaDonemi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSonFaturaNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKdvOrani.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaAdresi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKdvSekli.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +99,131 @@
             this.myDataLayoutControl.Size = new System.Drawing.Size(990, 366);
             this.myDataLayoutControl.TabIndex = 2;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
+            // 
+            // txtFaturaNo
+            // 
+            this.txtFaturaNo.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtFaturaNo.EnterMoveNextControl = true;
+            this.txtFaturaNo.Location = new System.Drawing.Point(437, 66);
+            this.txtFaturaNo.MenuManager = this.ribbonControl;
+            this.txtFaturaNo.Name = "txtFaturaNo";
+            this.txtFaturaNo.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.txtFaturaNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtFaturaNo.Properties.Appearance.Options.UseFont = true;
+            this.txtFaturaNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtFaturaNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFaturaNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtFaturaNo.Properties.Mask.EditMask = "d";
+            this.txtFaturaNo.Size = new System.Drawing.Size(99, 20);
+            this.txtFaturaNo.StatusBarAciklama = "Fatura No Giriniz.";
+            this.txtFaturaNo.StyleController = this.myDataLayoutControl;
+            this.txtFaturaNo.TabIndex = 9;
+            // 
+            // txtFaturaDonemi
+            // 
+            this.txtFaturaDonemi.EnterMoveNextControl = true;
+            this.txtFaturaDonemi.Location = new System.Drawing.Point(437, 42);
+            this.txtFaturaDonemi.MenuManager = this.ribbonControl;
+            this.txtFaturaDonemi.Name = "txtFaturaDonemi";
+            this.txtFaturaDonemi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtFaturaDonemi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFaturaDonemi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtFaturaDonemi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtFaturaDonemi.Size = new System.Drawing.Size(99, 20);
+            this.txtFaturaDonemi.StatusBarAciklama = "Fatura Dönemini Seçiniz.";
+            this.txtFaturaDonemi.StatusBarKisayol = "F4 :";
+            this.txtFaturaDonemi.StatusBarKisayolAciklama = "Seçim Yap.";
+            this.txtFaturaDonemi.StyleController = this.myDataLayoutControl;
+            this.txtFaturaDonemi.TabIndex = 8;
+            // 
+            // txtSonFaturaNo
+            // 
+            this.txtSonFaturaNo.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtSonFaturaNo.EnterMoveNextControl = true;
+            this.txtSonFaturaNo.Location = new System.Drawing.Point(250, 66);
+            this.txtSonFaturaNo.MenuManager = this.ribbonControl;
+            this.txtSonFaturaNo.Name = "txtSonFaturaNo";
+            this.txtSonFaturaNo.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.txtSonFaturaNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtSonFaturaNo.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtSonFaturaNo.Properties.Mask.EditMask = "d";
+            this.txtSonFaturaNo.Size = new System.Drawing.Size(86, 20);
+            this.txtSonFaturaNo.StatusBarAciklama = null;
+            this.txtSonFaturaNo.StyleController = this.myDataLayoutControl;
+            this.txtSonFaturaNo.TabIndex = 7;
+            // 
+            // txtKdvOrani
+            // 
+            this.txtKdvOrani.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtKdvOrani.EnterMoveNextControl = true;
+            this.txtKdvOrani.Location = new System.Drawing.Point(97, 66);
+            this.txtKdvOrani.MenuManager = this.ribbonControl;
+            this.txtKdvOrani.Name = "txtKdvOrani";
+            this.txtKdvOrani.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.txtKdvOrani.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKdvOrani.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKdvOrani.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKdvOrani.Properties.Mask.EditMask = "d";
+            this.txtKdvOrani.Properties.MaxValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.txtKdvOrani.Size = new System.Drawing.Size(63, 20);
+            this.txtKdvOrani.StatusBarAciklama = "Kdv Oranını Giriniz.";
+            this.txtKdvOrani.StyleController = this.myDataLayoutControl;
+            this.txtKdvOrani.TabIndex = 6;
+            // 
+            // txtFaturaAdresi
+            // 
+            this.txtFaturaAdresi.EnterMoveNextControl = true;
+            this.txtFaturaAdresi.Location = new System.Drawing.Point(250, 42);
+            this.txtFaturaAdresi.MenuManager = this.ribbonControl;
+            this.txtFaturaAdresi.Name = "txtFaturaAdresi";
+            this.txtFaturaAdresi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtFaturaAdresi.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtFaturaAdresi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtFaturaAdresi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtFaturaAdresi.Size = new System.Drawing.Size(86, 20);
+            this.txtFaturaAdresi.StatusBarAciklama = "Faturanın Kesileceği Adresi Seçiniz.";
+            this.txtFaturaAdresi.StatusBarKisayol = "F4 :";
+            this.txtFaturaAdresi.StatusBarKisayolAciklama = "Seçim Yap.";
+            this.txtFaturaAdresi.StyleController = this.myDataLayoutControl;
+            this.txtFaturaAdresi.TabIndex = 5;
+            // 
+            // txtKdvSekli
+            // 
+            this.txtKdvSekli.EnterMoveNextControl = true;
+            this.txtKdvSekli.Location = new System.Drawing.Point(97, 42);
+            this.txtKdvSekli.MenuManager = this.ribbonControl;
+            this.txtKdvSekli.Name = "txtKdvSekli";
+            this.txtKdvSekli.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKdvSekli.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKdvSekli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKdvSekli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtKdvSekli.Size = new System.Drawing.Size(63, 20);
+            this.txtKdvSekli.StatusBarAciklama = "Kdb Hesaplama Şekli Seçiniz.";
+            this.txtKdvSekli.StatusBarKisayol = "F4 :";
+            this.txtKdvSekli.StatusBarKisayolAciklama = "Seçim Yap.";
+            this.txtKdvSekli.StyleController = this.myDataLayoutControl;
+            this.txtKdvSekli.TabIndex = 4;
             // 
             // layoutControlGroup1
             // 
@@ -128,35 +253,6 @@
             rowDefinition6});
             this.layoutControlGroup1.Size = new System.Drawing.Size(990, 366);
             this.layoutControlGroup1.TextVisible = false;
-            // 
-            // txtKdvSekli
-            // 
-            this.txtKdvSekli.EnterMoveNextControl = true;
-            this.txtKdvSekli.Location = new System.Drawing.Point(98, 42);
-            this.txtKdvSekli.MenuManager = this.ribbonControl;
-            this.txtKdvSekli.Name = "txtKdvSekli";
-            this.txtKdvSekli.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtKdvSekli.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtKdvSekli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtKdvSekli.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtKdvSekli.Size = new System.Drawing.Size(62, 20);
-            this.txtKdvSekli.StatusBarAciklama = "Kdb Hesaplama Şekli Seçiniz.";
-            this.txtKdvSekli.StatusBarKisayol = "F4 :";
-            this.txtKdvSekli.StatusBarKisayolAciklama = "Seçim Yap.";
-            this.txtKdvSekli.StyleController = this.myDataLayoutControl;
-            this.txtKdvSekli.TabIndex = 4;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem1.Control = this.txtKdvSekli;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(140, 24);
-            this.layoutControlItem1.Text = "Kdv Şekli";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(70, 13);
             // 
             // layoutControlGroup2
             // 
@@ -189,23 +285,16 @@
             this.layoutControlGroup2.Size = new System.Drawing.Size(340, 92);
             this.layoutControlGroup2.Text = "Tahakkuk Bilgileri";
             // 
-            // txtFaturaAdresi
+            // layoutControlItem1
             // 
-            this.txtFaturaAdresi.EnterMoveNextControl = true;
-            this.txtFaturaAdresi.Location = new System.Drawing.Point(251, 42);
-            this.txtFaturaAdresi.MenuManager = this.ribbonControl;
-            this.txtFaturaAdresi.Name = "txtFaturaAdresi";
-            this.txtFaturaAdresi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtFaturaAdresi.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtFaturaAdresi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtFaturaAdresi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtFaturaAdresi.Size = new System.Drawing.Size(85, 20);
-            this.txtFaturaAdresi.StatusBarAciklama = "Faturanın Kesileceği Adresi Seçiniz.";
-            this.txtFaturaAdresi.StatusBarKisayol = "F4 :";
-            this.txtFaturaAdresi.StatusBarKisayolAciklama = "Seçim Yap.";
-            this.txtFaturaAdresi.StyleController = this.myDataLayoutControl;
-            this.txtFaturaAdresi.TabIndex = 5;
+            this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem1.Control = this.txtKdvSekli;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(140, 24);
+            this.layoutControlItem1.Text = "Kdv Şekli";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(70, 13);
             // 
             // layoutControlItem2
             // 
@@ -220,33 +309,6 @@
             this.layoutControlItem2.Text = "Fatura Adresi";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(70, 13);
             // 
-            // txtKdvOrani
-            // 
-            this.txtKdvOrani.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtKdvOrani.EnterMoveNextControl = true;
-            this.txtKdvOrani.Location = new System.Drawing.Point(98, 66);
-            this.txtKdvOrani.MenuManager = this.ribbonControl;
-            this.txtKdvOrani.Name = "txtKdvOrani";
-            this.txtKdvOrani.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.txtKdvOrani.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtKdvOrani.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtKdvOrani.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtKdvOrani.Properties.Mask.EditMask = "d";
-            this.txtKdvOrani.Properties.MaxValue = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.txtKdvOrani.Size = new System.Drawing.Size(62, 20);
-            this.txtKdvOrani.StatusBarAciklama = "Kdv Oranını Giriniz.";
-            this.txtKdvOrani.StyleController = this.myDataLayoutControl;
-            this.txtKdvOrani.TabIndex = 6;
-            // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -258,26 +320,6 @@
             this.layoutControlItem3.Size = new System.Drawing.Size(140, 26);
             this.layoutControlItem3.Text = "Kdv Oranı";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // txtSonFaturaNo
-            // 
-            this.txtSonFaturaNo.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtSonFaturaNo.EnterMoveNextControl = true;
-            this.txtSonFaturaNo.Location = new System.Drawing.Point(251, 66);
-            this.txtSonFaturaNo.MenuManager = this.ribbonControl;
-            this.txtSonFaturaNo.Name = "txtSonFaturaNo";
-            this.txtSonFaturaNo.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.txtSonFaturaNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtSonFaturaNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtSonFaturaNo.Properties.Mask.EditMask = "d";
-            this.txtSonFaturaNo.Size = new System.Drawing.Size(85, 20);
-            this.txtSonFaturaNo.StatusBarAciklama = null;
-            this.txtSonFaturaNo.StyleController = this.myDataLayoutControl;
-            this.txtSonFaturaNo.TabIndex = 7;
             // 
             // layoutControlItem4
             // 
@@ -293,35 +335,6 @@
             this.layoutControlItem4.Size = new System.Drawing.Size(176, 26);
             this.layoutControlItem4.Text = "Son Fatura No";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // txtFaturaDonemi
-            // 
-            this.txtFaturaDonemi.EnterMoveNextControl = true;
-            this.txtFaturaDonemi.Location = new System.Drawing.Point(438, 42);
-            this.txtFaturaDonemi.MenuManager = this.ribbonControl;
-            this.txtFaturaDonemi.Name = "txtFaturaDonemi";
-            this.txtFaturaDonemi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtFaturaDonemi.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtFaturaDonemi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtFaturaDonemi.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtFaturaDonemi.Size = new System.Drawing.Size(98, 20);
-            this.txtFaturaDonemi.StatusBarAciklama = "Fatura Dönemini Seçiniz.";
-            this.txtFaturaDonemi.StatusBarKisayol = "F4 :";
-            this.txtFaturaDonemi.StatusBarKisayolAciklama = "Seçim Yap.";
-            this.txtFaturaDonemi.StyleController = this.myDataLayoutControl;
-            this.txtFaturaDonemi.TabIndex = 8;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
-            this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem5.Control = this.txtFaturaDonemi;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(176, 24);
-            this.layoutControlItem5.Text = "Fatura Dönemi";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(70, 13);
             // 
             // layoutControlGroup3
             // 
@@ -350,29 +363,16 @@
             this.layoutControlGroup3.Size = new System.Drawing.Size(200, 92);
             this.layoutControlGroup3.Text = "Fatura Dönemi";
             // 
-            // txtFaturaNo
+            // layoutControlItem5
             // 
-            this.txtFaturaNo.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtFaturaNo.EnterMoveNextControl = true;
-            this.txtFaturaNo.Location = new System.Drawing.Point(438, 66);
-            this.txtFaturaNo.MenuManager = this.ribbonControl;
-            this.txtFaturaNo.Name = "txtFaturaNo";
-            this.txtFaturaNo.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
-            this.txtFaturaNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtFaturaNo.Properties.Appearance.Options.UseFont = true;
-            this.txtFaturaNo.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtFaturaNo.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtFaturaNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtFaturaNo.Properties.Mask.EditMask = "d";
-            this.txtFaturaNo.Size = new System.Drawing.Size(98, 20);
-            this.txtFaturaNo.StatusBarAciklama = "Fatura No Giriniz.";
-            this.txtFaturaNo.StyleController = this.myDataLayoutControl;
-            this.txtFaturaNo.TabIndex = 9;
+            this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem5.Control = this.txtFaturaDonemi;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(176, 24);
+            this.layoutControlItem5.Text = "Fatura Dönemi";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(70, 13);
             // 
             // layoutControlItem6
             // 
@@ -400,20 +400,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKdvSekli.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaAdresi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtKdvOrani.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSonFaturaNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaDonemi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaturaNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaDonemi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSonFaturaNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKdvOrani.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFaturaAdresi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKdvSekli.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -423,20 +423,20 @@
         #endregion
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
-        private UserControls.Controls.MySpinEdit txtSonFaturaNo;
-        private UserControls.Controls.MySpinEdit txtKdvOrani;
-        private UserControls.Controls.MyComboBoxEdit txtFaturaAdresi;
-        private UserControls.Controls.MyComboBoxEdit txtKdvSekli;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private UserControls.Controls.MySpinEdit txtFaturaNo;
-        private UserControls.Controls.MyComboBoxEdit txtFaturaDonemi;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        protected internal UserControls.Controls.MyComboBoxEdit txtFaturaDonemi;
+        protected internal UserControls.Controls.MySpinEdit txtSonFaturaNo;
+        protected internal UserControls.Controls.MySpinEdit txtKdvOrani;
+        protected internal UserControls.Controls.MyComboBoxEdit txtFaturaAdresi;
+        protected internal UserControls.Controls.MyComboBoxEdit txtKdvSekli;
+        protected internal UserControls.Controls.MySpinEdit txtFaturaNo;
     }
 }

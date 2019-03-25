@@ -188,7 +188,6 @@
 
         #endregion
         private DevExpress.XtraBars.PopupMenu popupMenu;
-        private DevExpress.XtraBars.BarButtonItem btnHareketEkle;
         private DevExpress.XtraBars.BarManager barManager;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -200,5 +199,6 @@
         protected DevExpress.XtraBars.BarButtonItem btnHareketSil;
         protected DevExpress.XtraBars.BarButtonItem btnBelgeHareketleri;
         protected internal Navigators.InsUptNavigator insUptNavigator;
+        protected DevExpress.XtraBars.BarButtonItem btnHareketEkle;
     }
 }

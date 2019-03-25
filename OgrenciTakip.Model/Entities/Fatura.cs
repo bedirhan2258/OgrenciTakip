@@ -45,7 +45,7 @@ namespace OgrenciTakip.Model.Entities
         [Column(TypeName = "money")]
         public decimal? KdvTutari { get; set; }
         [Column(TypeName = "money")]
-        public decimal? TopamTutar { get; set; }
+        public decimal? ToplamTutar { get; set; }
 
         [StringLength(50)]
         public string TutarYazi { get; set; }

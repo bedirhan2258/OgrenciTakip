@@ -44,9 +44,10 @@ namespace OgrenciTakip.Model.DTO
         public KayitDurumu KayitDurumu { get; set; }
         public IptalDurumu IptalDurumu { get; set; }
         public string OkulNo { get; set; }
-        public string TcKimlikNO { get; set; }
+        public string TcKimlikNo { get; set; }
         public string Adi { get; set; }
         public string Soyadi { get; set; }
+        public string SinifAdi { get; set; }
         public string VeliTcKimlikNo { get; set; }
         public string VeliAdi { get; set; }
         public string VeliSoyadi { get; set; }

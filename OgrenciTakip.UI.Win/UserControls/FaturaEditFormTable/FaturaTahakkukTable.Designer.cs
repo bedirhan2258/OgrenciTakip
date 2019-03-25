@@ -34,58 +34,58 @@
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression2 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOgrenciNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colTcKimlikNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colSinif = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colVeliAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colVeliSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colYakinlik = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colMeslek = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colKayitTarihi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.repositoryITarih = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colKayitSekli = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colKayitDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colIptalDurumu = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.colPlanTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colPlanIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colPlanNetTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colVeliTcKimlikNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colVeliAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colVeliSoyadi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colYakinlik = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colMeslek = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colEvAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colEvAdresIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colEvAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colIsAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colIsAdresIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colIsAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colOzelKod1 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod2 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod3 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod4 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colOzelKod5 = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colTcKimlikNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colVeliTcKimlikNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsAdresIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colIsAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEvAdresIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEvAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colEvAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colPlanTarih = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colPlanTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.repositoryDecimal = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.colPlanIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colPlanNetTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colFaturaNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukTarih = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukIndirim = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukNetTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colTahakkukTutarYazi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colKdvSekli = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colKdvOrani = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukKdvHaricTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukKdvTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colTahakkukToplamTutar = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colKdvSekli = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colKdvOrani = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colFaturaAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colFaturaAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colFaturaAdresIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand6 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand5 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.colFaturaAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colTahakkukTutarYazi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryITarih)).BeginInit();
@@ -220,6 +220,18 @@
             this.tablo.StatusBarKisayolAciklama = null;
             this.tablo.ViewCaption = "Fatura Planı Kartları";
             // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Öğrenci Bilgileri";
+            this.gridBand1.Columns.Add(this.colOgrenciNo);
+            this.gridBand1.Columns.Add(this.colTcKimlikNo);
+            this.gridBand1.Columns.Add(this.colAdi);
+            this.gridBand1.Columns.Add(this.colSoyadi);
+            this.gridBand1.Columns.Add(this.colSinif);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 475;
+            // 
             // colOgrenciNo
             // 
             this.colOgrenciNo.Caption = "No";
@@ -231,6 +243,18 @@
             this.colOgrenciNo.StatusBarKisayolAciklama = null;
             this.colOgrenciNo.Visible = true;
             this.colOgrenciNo.Width = 100;
+            // 
+            // colTcKimlikNo
+            // 
+            this.colTcKimlikNo.Caption = "Tc Kimlik No";
+            this.colTcKimlikNo.FieldName = "TcKimlikNo";
+            this.colTcKimlikNo.Name = "colTcKimlikNo";
+            this.colTcKimlikNo.OptionsColumn.AllowEdit = false;
+            this.colTcKimlikNo.StatusBarAciklama = null;
+            this.colTcKimlikNo.StatusBarKisayol = null;
+            this.colTcKimlikNo.StatusBarKisayolAciklama = null;
+            this.colTcKimlikNo.Visible = true;
+            this.colTcKimlikNo.Width = 100;
             // 
             // colAdi
             // 
@@ -267,55 +291,16 @@
             this.colSinif.Visible = true;
             this.colSinif.Width = 100;
             // 
-            // colVeliAdi
+            // gridBand3
             // 
-            this.colVeliAdi.Caption = "Adı";
-            this.colVeliAdi.CustomizationCaption = "Veli Adı";
-            this.colVeliAdi.FieldName = "VeliAdi";
-            this.colVeliAdi.Name = "colVeliAdi";
-            this.colVeliAdi.OptionsColumn.AllowEdit = false;
-            this.colVeliAdi.StatusBarAciklama = null;
-            this.colVeliAdi.StatusBarKisayol = null;
-            this.colVeliAdi.StatusBarKisayolAciklama = null;
-            this.colVeliAdi.Visible = true;
-            this.colVeliAdi.Width = 100;
-            // 
-            // colVeliSoyadi
-            // 
-            this.colVeliSoyadi.Caption = "Soyadı";
-            this.colVeliSoyadi.CustomizationCaption = "Veli Soyadı";
-            this.colVeliSoyadi.FieldName = "VeliSoyadi";
-            this.colVeliSoyadi.Name = "colVeliSoyadi";
-            this.colVeliSoyadi.OptionsColumn.AllowEdit = false;
-            this.colVeliSoyadi.StatusBarAciklama = null;
-            this.colVeliSoyadi.StatusBarKisayol = null;
-            this.colVeliSoyadi.StatusBarKisayolAciklama = null;
-            this.colVeliSoyadi.Visible = true;
-            this.colVeliSoyadi.Width = 100;
-            // 
-            // colYakinlik
-            // 
-            this.colYakinlik.Caption = "Yakınlık";
-            this.colYakinlik.FieldName = "VeliYakinlikAdi";
-            this.colYakinlik.Name = "colYakinlik";
-            this.colYakinlik.OptionsColumn.AllowEdit = false;
-            this.colYakinlik.StatusBarAciklama = null;
-            this.colYakinlik.StatusBarKisayol = null;
-            this.colYakinlik.StatusBarKisayolAciklama = null;
-            this.colYakinlik.Visible = true;
-            this.colYakinlik.Width = 100;
-            // 
-            // colMeslek
-            // 
-            this.colMeslek.Caption = "Meslek";
-            this.colMeslek.FieldName = "VeliMeslekAdi";
-            this.colMeslek.Name = "colMeslek";
-            this.colMeslek.OptionsColumn.AllowEdit = false;
-            this.colMeslek.StatusBarAciklama = null;
-            this.colMeslek.StatusBarKisayol = null;
-            this.colMeslek.StatusBarKisayolAciklama = null;
-            this.colMeslek.Visible = true;
-            this.colMeslek.Width = 100;
+            this.gridBand3.Caption = "Kayıt Bilgileri";
+            this.gridBand3.Columns.Add(this.colKayitTarihi);
+            this.gridBand3.Columns.Add(this.colKayitSekli);
+            this.gridBand3.Columns.Add(this.colKayitDurumu);
+            this.gridBand3.Columns.Add(this.colIptalDurumu);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 1;
+            this.gridBand3.Width = 400;
             // 
             // colKayitTarihi
             // 
@@ -378,64 +363,169 @@
             this.colIptalDurumu.Visible = true;
             this.colIptalDurumu.Width = 100;
             // 
-            // repositoryDecimal
+            // gridBand2
             // 
-            this.repositoryDecimal.Appearance.Options.UseTextOptions = true;
-            this.repositoryDecimal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.repositoryDecimal.AutoHeight = false;
-            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
-            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.repositoryDecimal.Name = "repositoryDecimal";
+            this.gridBand2.Caption = "Veli Bilgileri";
+            this.gridBand2.Columns.Add(this.colVeliTcKimlikNo);
+            this.gridBand2.Columns.Add(this.colVeliAdi);
+            this.gridBand2.Columns.Add(this.colVeliSoyadi);
+            this.gridBand2.Columns.Add(this.colYakinlik);
+            this.gridBand2.Columns.Add(this.colMeslek);
+            this.gridBand2.Columns.Add(this.colEvAdres);
+            this.gridBand2.Columns.Add(this.colEvAdresIlce);
+            this.gridBand2.Columns.Add(this.colEvAdresIl);
+            this.gridBand2.Columns.Add(this.colIsAdres);
+            this.gridBand2.Columns.Add(this.colIsAdresIlce);
+            this.gridBand2.Columns.Add(this.colIsAdresIl);
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 2;
+            this.gridBand2.Width = 1275;
             // 
-            // colPlanTutar
+            // colVeliTcKimlikNo
             // 
-            this.colPlanTutar.Caption = "Tutar";
-            this.colPlanTutar.ColumnEdit = this.repositoryDecimal;
-            this.colPlanTutar.CustomizationCaption = "Plan Tutar";
-            this.colPlanTutar.FieldName = "PlanTutar";
-            this.colPlanTutar.Name = "colPlanTutar";
-            this.colPlanTutar.OptionsColumn.AllowEdit = false;
-            this.colPlanTutar.StatusBarAciklama = null;
-            this.colPlanTutar.StatusBarKisayol = null;
-            this.colPlanTutar.StatusBarKisayolAciklama = null;
-            this.colPlanTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanTutar", "{0:n2}")});
-            this.colPlanTutar.Visible = true;
-            this.colPlanTutar.Width = 100;
+            this.colVeliTcKimlikNo.Caption = "Tc Kimlik No";
+            this.colVeliTcKimlikNo.CustomizationCaption = "Veli Tc Kimlik No";
+            this.colVeliTcKimlikNo.FieldName = "VeliTcKimlikNo";
+            this.colVeliTcKimlikNo.Name = "colVeliTcKimlikNo";
+            this.colVeliTcKimlikNo.OptionsColumn.AllowEdit = false;
+            this.colVeliTcKimlikNo.StatusBarAciklama = null;
+            this.colVeliTcKimlikNo.StatusBarKisayol = null;
+            this.colVeliTcKimlikNo.StatusBarKisayolAciklama = null;
+            this.colVeliTcKimlikNo.Visible = true;
             // 
-            // colPlanIndirim
+            // colVeliAdi
             // 
-            this.colPlanIndirim.Caption = "İndirim";
-            this.colPlanIndirim.ColumnEdit = this.repositoryDecimal;
-            this.colPlanIndirim.CustomizationCaption = "Plan İndirim";
-            this.colPlanIndirim.FieldName = "PlanIndirim";
-            this.colPlanIndirim.Name = "colPlanIndirim";
-            this.colPlanIndirim.OptionsColumn.AllowEdit = false;
-            this.colPlanIndirim.StatusBarAciklama = null;
-            this.colPlanIndirim.StatusBarKisayol = null;
-            this.colPlanIndirim.StatusBarKisayolAciklama = null;
-            this.colPlanIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanIndirim", "{0:n2}")});
-            this.colPlanIndirim.Visible = true;
-            this.colPlanIndirim.Width = 100;
+            this.colVeliAdi.Caption = "Adı";
+            this.colVeliAdi.CustomizationCaption = "Veli Adı";
+            this.colVeliAdi.FieldName = "VeliAdi";
+            this.colVeliAdi.Name = "colVeliAdi";
+            this.colVeliAdi.OptionsColumn.AllowEdit = false;
+            this.colVeliAdi.StatusBarAciklama = null;
+            this.colVeliAdi.StatusBarKisayol = null;
+            this.colVeliAdi.StatusBarKisayolAciklama = null;
+            this.colVeliAdi.Visible = true;
+            this.colVeliAdi.Width = 100;
             // 
-            // colPlanNetTutar
+            // colVeliSoyadi
             // 
-            this.colPlanNetTutar.Caption = "Net Tutar";
-            this.colPlanNetTutar.ColumnEdit = this.repositoryDecimal;
-            this.colPlanNetTutar.CustomizationCaption = "Plan Net Tutar";
-            this.colPlanNetTutar.FieldName = "PlanNetTutar";
-            this.colPlanNetTutar.Name = "colPlanNetTutar";
-            this.colPlanNetTutar.OptionsColumn.AllowEdit = false;
-            this.colPlanNetTutar.StatusBarAciklama = null;
-            this.colPlanNetTutar.StatusBarKisayol = null;
-            this.colPlanNetTutar.StatusBarKisayolAciklama = null;
-            this.colPlanNetTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanNetTutar", "{0:n2}")});
-            this.colPlanNetTutar.Visible = true;
-            this.colPlanNetTutar.Width = 100;
+            this.colVeliSoyadi.Caption = "Soyadı";
+            this.colVeliSoyadi.CustomizationCaption = "Veli Soyadı";
+            this.colVeliSoyadi.FieldName = "VeliSoyadi";
+            this.colVeliSoyadi.Name = "colVeliSoyadi";
+            this.colVeliSoyadi.OptionsColumn.AllowEdit = false;
+            this.colVeliSoyadi.StatusBarAciklama = null;
+            this.colVeliSoyadi.StatusBarKisayol = null;
+            this.colVeliSoyadi.StatusBarKisayolAciklama = null;
+            this.colVeliSoyadi.Visible = true;
+            this.colVeliSoyadi.Width = 100;
+            // 
+            // colYakinlik
+            // 
+            this.colYakinlik.Caption = "Yakınlık";
+            this.colYakinlik.FieldName = "VeliYakinlikAdi";
+            this.colYakinlik.Name = "colYakinlik";
+            this.colYakinlik.OptionsColumn.AllowEdit = false;
+            this.colYakinlik.StatusBarAciklama = null;
+            this.colYakinlik.StatusBarKisayol = null;
+            this.colYakinlik.StatusBarKisayolAciklama = null;
+            this.colYakinlik.Visible = true;
+            this.colYakinlik.Width = 100;
+            // 
+            // colMeslek
+            // 
+            this.colMeslek.Caption = "Meslek";
+            this.colMeslek.FieldName = "VeliMeslekAdi";
+            this.colMeslek.Name = "colMeslek";
+            this.colMeslek.OptionsColumn.AllowEdit = false;
+            this.colMeslek.StatusBarAciklama = null;
+            this.colMeslek.StatusBarKisayol = null;
+            this.colMeslek.StatusBarKisayolAciklama = null;
+            this.colMeslek.Visible = true;
+            this.colMeslek.Width = 100;
+            // 
+            // colEvAdres
+            // 
+            this.colEvAdres.Caption = "Ev Adresi";
+            this.colEvAdres.FieldName = "EvAdres";
+            this.colEvAdres.Name = "colEvAdres";
+            this.colEvAdres.OptionsColumn.AllowEdit = false;
+            this.colEvAdres.StatusBarAciklama = null;
+            this.colEvAdres.StatusBarKisayol = null;
+            this.colEvAdres.StatusBarKisayolAciklama = null;
+            this.colEvAdres.Visible = true;
+            this.colEvAdres.Width = 200;
+            // 
+            // colEvAdresIlce
+            // 
+            this.colEvAdresIlce.Caption = "Ev Adres İlçe";
+            this.colEvAdresIlce.FieldName = "EvAdresIlce";
+            this.colEvAdresIlce.Name = "colEvAdresIlce";
+            this.colEvAdresIlce.OptionsColumn.AllowEdit = false;
+            this.colEvAdresIlce.StatusBarAciklama = null;
+            this.colEvAdresIlce.StatusBarKisayol = null;
+            this.colEvAdresIlce.StatusBarKisayolAciklama = null;
+            this.colEvAdresIlce.Visible = true;
+            this.colEvAdresIlce.Width = 100;
+            // 
+            // colEvAdresIl
+            // 
+            this.colEvAdresIl.Caption = "Ev Adres İl";
+            this.colEvAdresIl.FieldName = "EvAdresIl";
+            this.colEvAdresIl.Name = "colEvAdresIl";
+            this.colEvAdresIl.OptionsColumn.AllowEdit = false;
+            this.colEvAdresIl.StatusBarAciklama = null;
+            this.colEvAdresIl.StatusBarKisayol = null;
+            this.colEvAdresIl.StatusBarKisayolAciklama = null;
+            this.colEvAdresIl.Visible = true;
+            this.colEvAdresIl.Width = 100;
+            // 
+            // colIsAdres
+            // 
+            this.colIsAdres.Caption = "İş Adresi";
+            this.colIsAdres.FieldName = "IsAdres";
+            this.colIsAdres.Name = "colIsAdres";
+            this.colIsAdres.OptionsColumn.AllowEdit = false;
+            this.colIsAdres.StatusBarAciklama = null;
+            this.colIsAdres.StatusBarKisayol = null;
+            this.colIsAdres.StatusBarKisayolAciklama = null;
+            this.colIsAdres.Visible = true;
+            this.colIsAdres.Width = 200;
+            // 
+            // colIsAdresIlce
+            // 
+            this.colIsAdresIlce.Caption = "İş Adres İlçe";
+            this.colIsAdresIlce.FieldName = "IsAdresIlce";
+            this.colIsAdresIlce.Name = "colIsAdresIlce";
+            this.colIsAdresIlce.OptionsColumn.AllowEdit = false;
+            this.colIsAdresIlce.StatusBarAciklama = null;
+            this.colIsAdresIlce.StatusBarKisayol = null;
+            this.colIsAdresIlce.StatusBarKisayolAciklama = null;
+            this.colIsAdresIlce.Visible = true;
+            this.colIsAdresIlce.Width = 100;
+            // 
+            // colIsAdresIl
+            // 
+            this.colIsAdresIl.Caption = "İş Adres İl";
+            this.colIsAdresIl.FieldName = "IsAdresIl";
+            this.colIsAdresIl.Name = "colIsAdresIl";
+            this.colIsAdresIl.OptionsColumn.AllowEdit = false;
+            this.colIsAdresIl.StatusBarAciklama = null;
+            this.colIsAdresIl.StatusBarKisayol = null;
+            this.colIsAdresIl.StatusBarKisayolAciklama = null;
+            this.colIsAdresIl.Visible = true;
+            this.colIsAdresIl.Width = 100;
+            // 
+            // gridBand6
+            // 
+            this.gridBand6.Caption = "Özel Kod";
+            this.gridBand6.Columns.Add(this.colOzelKod1);
+            this.gridBand6.Columns.Add(this.colOzelKod2);
+            this.gridBand6.Columns.Add(this.colOzelKod3);
+            this.gridBand6.Columns.Add(this.colOzelKod4);
+            this.gridBand6.Columns.Add(this.colOzelKod5);
+            this.gridBand6.Name = "gridBand6";
+            this.gridBand6.VisibleIndex = 3;
+            this.gridBand6.Width = 550;
             // 
             // colOzelKod1
             // 
@@ -497,95 +587,17 @@
             this.colOzelKod5.Visible = true;
             this.colOzelKod5.Width = 110;
             // 
-            // colTcKimlikNo
+            // gridBand4
             // 
-            this.colTcKimlikNo.Caption = "Tc Kimlik No";
-            this.colTcKimlikNo.FieldName = "TcKimlikNo";
-            this.colTcKimlikNo.Name = "colTcKimlikNo";
-            this.colTcKimlikNo.OptionsColumn.AllowEdit = false;
-            this.colTcKimlikNo.StatusBarAciklama = null;
-            this.colTcKimlikNo.StatusBarKisayol = null;
-            this.colTcKimlikNo.StatusBarKisayolAciklama = null;
-            this.colTcKimlikNo.Visible = true;
-            this.colTcKimlikNo.Width = 88;
-            // 
-            // colVeliTcKimlikNo
-            // 
-            this.colVeliTcKimlikNo.Caption = "Tc Kimlik No";
-            this.colVeliTcKimlikNo.CustomizationCaption = "Veli Tc Kimlik No";
-            this.colVeliTcKimlikNo.FieldName = "VeliTcKimlikNo";
-            this.colVeliTcKimlikNo.Name = "colVeliTcKimlikNo";
-            this.colVeliTcKimlikNo.OptionsColumn.AllowEdit = false;
-            this.colVeliTcKimlikNo.StatusBarAciklama = null;
-            this.colVeliTcKimlikNo.StatusBarKisayol = null;
-            this.colVeliTcKimlikNo.StatusBarKisayolAciklama = null;
-            this.colVeliTcKimlikNo.Visible = true;
-            // 
-            // colIsAdresIlce
-            // 
-            this.colIsAdresIlce.Caption = "İş Adres İlçe";
-            this.colIsAdresIlce.FieldName = "IsAdresIlce";
-            this.colIsAdresIlce.Name = "colIsAdresIlce";
-            this.colIsAdresIlce.OptionsColumn.AllowEdit = false;
-            this.colIsAdresIlce.StatusBarAciklama = null;
-            this.colIsAdresIlce.StatusBarKisayol = null;
-            this.colIsAdresIlce.StatusBarKisayolAciklama = null;
-            this.colIsAdresIlce.Visible = true;
-            // 
-            // colIsAdresIl
-            // 
-            this.colIsAdresIl.Caption = "İş Adres İl";
-            this.colIsAdresIl.FieldName = "IsAdresIl";
-            this.colIsAdresIl.Name = "colIsAdresIl";
-            this.colIsAdresIl.OptionsColumn.AllowEdit = false;
-            this.colIsAdresIl.StatusBarAciklama = null;
-            this.colIsAdresIl.StatusBarKisayol = null;
-            this.colIsAdresIl.StatusBarKisayolAciklama = null;
-            this.colIsAdresIl.Visible = true;
-            // 
-            // colIsAdres
-            // 
-            this.colIsAdres.Caption = "İş Adresi";
-            this.colIsAdres.FieldName = "IsAdres";
-            this.colIsAdres.Name = "colIsAdres";
-            this.colIsAdres.OptionsColumn.AllowEdit = false;
-            this.colIsAdres.StatusBarAciklama = null;
-            this.colIsAdres.StatusBarKisayol = null;
-            this.colIsAdres.StatusBarKisayolAciklama = null;
-            this.colIsAdres.Visible = true;
-            // 
-            // colEvAdresIlce
-            // 
-            this.colEvAdresIlce.Caption = "Ev Adres İlçe";
-            this.colEvAdresIlce.FieldName = "EvAdresIlce";
-            this.colEvAdresIlce.Name = "colEvAdresIlce";
-            this.colEvAdresIlce.OptionsColumn.AllowEdit = false;
-            this.colEvAdresIlce.StatusBarAciklama = null;
-            this.colEvAdresIlce.StatusBarKisayol = null;
-            this.colEvAdresIlce.StatusBarKisayolAciklama = null;
-            this.colEvAdresIlce.Visible = true;
-            // 
-            // colEvAdresIl
-            // 
-            this.colEvAdresIl.Caption = "Ev Adres İl";
-            this.colEvAdresIl.FieldName = "EvAdresIl";
-            this.colEvAdresIl.Name = "colEvAdresIl";
-            this.colEvAdresIl.OptionsColumn.AllowEdit = false;
-            this.colEvAdresIl.StatusBarAciklama = null;
-            this.colEvAdresIl.StatusBarKisayol = null;
-            this.colEvAdresIl.StatusBarKisayolAciklama = null;
-            this.colEvAdresIl.Visible = true;
-            // 
-            // colEvAdres
-            // 
-            this.colEvAdres.Caption = "Ev Adresi";
-            this.colEvAdres.FieldName = "EvAdres";
-            this.colEvAdres.Name = "colEvAdres";
-            this.colEvAdres.OptionsColumn.AllowEdit = false;
-            this.colEvAdres.StatusBarAciklama = null;
-            this.colEvAdres.StatusBarKisayol = null;
-            this.colEvAdres.StatusBarKisayolAciklama = null;
-            this.colEvAdres.Visible = true;
+            this.gridBand4.Caption = "Tahakkuku Yapılacak Fatura Bilgileri";
+            this.gridBand4.Columns.Add(this.colAciklama);
+            this.gridBand4.Columns.Add(this.colPlanTarih);
+            this.gridBand4.Columns.Add(this.colPlanTutar);
+            this.gridBand4.Columns.Add(this.colPlanIndirim);
+            this.gridBand4.Columns.Add(this.colPlanNetTutar);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 4;
+            this.gridBand4.Width = 700;
             // 
             // colAciklama
             // 
@@ -597,10 +609,14 @@
             this.colAciklama.StatusBarKisayol = null;
             this.colAciklama.StatusBarKisayolAciklama = null;
             this.colAciklama.Visible = true;
+            this.colAciklama.Width = 300;
             // 
             // colPlanTarih
             // 
+            this.colPlanTarih.AppearanceCell.Options.UseTextOptions = true;
+            this.colPlanTarih.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colPlanTarih.Caption = "Tarih";
+            this.colPlanTarih.ColumnEdit = this.repositoryITarih;
             this.colPlanTarih.CustomizationCaption = "Plan Tarih";
             this.colPlanTarih.FieldName = "PlanTarih";
             this.colPlanTarih.Name = "colPlanTarih";
@@ -609,229 +625,66 @@
             this.colPlanTarih.StatusBarKisayol = null;
             this.colPlanTarih.StatusBarKisayolAciklama = null;
             this.colPlanTarih.Visible = true;
+            this.colPlanTarih.Width = 100;
             // 
-            // colFaturaNo
+            // colPlanTutar
             // 
-            this.colFaturaNo.Caption = "Fatura No";
-            this.colFaturaNo.FieldName = "FaturaNo";
-            this.colFaturaNo.Name = "colFaturaNo";
-            this.colFaturaNo.OptionsColumn.AllowEdit = false;
-            this.colFaturaNo.StatusBarAciklama = null;
-            this.colFaturaNo.StatusBarKisayol = null;
-            this.colFaturaNo.StatusBarKisayolAciklama = null;
-            this.colFaturaNo.Visible = true;
+            this.colPlanTutar.Caption = "Tutar";
+            this.colPlanTutar.ColumnEdit = this.repositoryDecimal;
+            this.colPlanTutar.CustomizationCaption = "Plan Tutar";
+            this.colPlanTutar.FieldName = "PlanTutar";
+            this.colPlanTutar.Name = "colPlanTutar";
+            this.colPlanTutar.OptionsColumn.AllowEdit = false;
+            this.colPlanTutar.StatusBarAciklama = null;
+            this.colPlanTutar.StatusBarKisayol = null;
+            this.colPlanTutar.StatusBarKisayolAciklama = null;
+            this.colPlanTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanTutar", "{0:n2}")});
+            this.colPlanTutar.Visible = true;
+            this.colPlanTutar.Width = 100;
             // 
-            // colTahakkukTarih
+            // repositoryDecimal
             // 
-            this.colTahakkukTarih.Caption = "Tarih";
-            this.colTahakkukTarih.CustomizationCaption = "Tahakkuk Tarih";
-            this.colTahakkukTarih.FieldName = "TahakkukTarih";
-            this.colTahakkukTarih.Name = "colTahakkukTarih";
-            this.colTahakkukTarih.OptionsColumn.AllowEdit = false;
-            this.colTahakkukTarih.StatusBarAciklama = null;
-            this.colTahakkukTarih.StatusBarKisayol = null;
-            this.colTahakkukTarih.StatusBarKisayolAciklama = null;
-            this.colTahakkukTarih.Visible = true;
+            this.repositoryDecimal.Appearance.Options.UseTextOptions = true;
+            this.repositoryDecimal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.repositoryDecimal.AutoHeight = false;
+            this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryDecimal.DisplayFormat.FormatString = "{0:n2}";
+            this.repositoryDecimal.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryDecimal.Name = "repositoryDecimal";
             // 
-            // colTahakkukTutar
+            // colPlanIndirim
             // 
-            this.colTahakkukTutar.Caption = "Tutar";
-            this.colTahakkukTutar.CustomizationCaption = "Tahakkuk Tutar";
-            this.colTahakkukTutar.FieldName = "TahakkukTutar";
-            this.colTahakkukTutar.Name = "colTahakkukTutar";
-            this.colTahakkukTutar.OptionsColumn.AllowEdit = false;
-            this.colTahakkukTutar.StatusBarAciklama = null;
-            this.colTahakkukTutar.StatusBarKisayol = null;
-            this.colTahakkukTutar.StatusBarKisayolAciklama = null;
-            this.colTahakkukTutar.Visible = true;
+            this.colPlanIndirim.Caption = "İndirim";
+            this.colPlanIndirim.ColumnEdit = this.repositoryDecimal;
+            this.colPlanIndirim.CustomizationCaption = "Plan İndirim";
+            this.colPlanIndirim.FieldName = "PlanIndirim";
+            this.colPlanIndirim.Name = "colPlanIndirim";
+            this.colPlanIndirim.OptionsColumn.AllowEdit = false;
+            this.colPlanIndirim.StatusBarAciklama = null;
+            this.colPlanIndirim.StatusBarKisayol = null;
+            this.colPlanIndirim.StatusBarKisayolAciklama = null;
+            this.colPlanIndirim.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanIndirim", "{0:n2}")});
+            this.colPlanIndirim.Visible = true;
+            this.colPlanIndirim.Width = 100;
             // 
-            // colTahakkukIndirim
+            // colPlanNetTutar
             // 
-            this.colTahakkukIndirim.Caption = "İndirim";
-            this.colTahakkukIndirim.CustomizationCaption = "Tahakkuk İndirim";
-            this.colTahakkukIndirim.FieldName = "TahakkukIndirim";
-            this.colTahakkukIndirim.Name = "colTahakkukIndirim";
-            this.colTahakkukIndirim.OptionsColumn.AllowEdit = false;
-            this.colTahakkukIndirim.StatusBarAciklama = null;
-            this.colTahakkukIndirim.StatusBarKisayol = null;
-            this.colTahakkukIndirim.StatusBarKisayolAciklama = null;
-            this.colTahakkukIndirim.Visible = true;
-            // 
-            // colTahakkukNetTutar
-            // 
-            this.colTahakkukNetTutar.Caption = "Net Tutar";
-            this.colTahakkukNetTutar.CustomizationCaption = "Tahakkuk Net Tutar";
-            this.colTahakkukNetTutar.FieldName = "TahakkukNetTutar";
-            this.colTahakkukNetTutar.Name = "colTahakkukNetTutar";
-            this.colTahakkukNetTutar.OptionsColumn.AllowEdit = false;
-            this.colTahakkukNetTutar.StatusBarAciklama = null;
-            this.colTahakkukNetTutar.StatusBarKisayol = null;
-            this.colTahakkukNetTutar.StatusBarKisayolAciklama = null;
-            this.colTahakkukNetTutar.Visible = true;
-            // 
-            // colTahakkukTutarYazi
-            // 
-            this.colTahakkukTutarYazi.Caption = "TahakkukTutarYazi";
-            this.colTahakkukTutarYazi.FieldName = "TahakkukTutarYazi";
-            this.colTahakkukTutarYazi.Name = "colTahakkukTutarYazi";
-            this.colTahakkukTutarYazi.OptionsColumn.AllowEdit = false;
-            this.colTahakkukTutarYazi.OptionsColumn.ShowInCustomizationForm = false;
-            this.colTahakkukTutarYazi.StatusBarAciklama = null;
-            this.colTahakkukTutarYazi.StatusBarKisayol = null;
-            this.colTahakkukTutarYazi.StatusBarKisayolAciklama = null;
-            // 
-            // colTahakkukKdvHaricTutar
-            // 
-            this.colTahakkukKdvHaricTutar.Caption = "Kdv Hariç Tutar";
-            this.colTahakkukKdvHaricTutar.FieldName = "TahakkukKdvHaricTutar";
-            this.colTahakkukKdvHaricTutar.Name = "colTahakkukKdvHaricTutar";
-            this.colTahakkukKdvHaricTutar.OptionsColumn.AllowEdit = false;
-            this.colTahakkukKdvHaricTutar.StatusBarAciklama = null;
-            this.colTahakkukKdvHaricTutar.StatusBarKisayol = null;
-            this.colTahakkukKdvHaricTutar.StatusBarKisayolAciklama = null;
-            this.colTahakkukKdvHaricTutar.Visible = true;
-            // 
-            // colTahakkukKdvTutar
-            // 
-            this.colTahakkukKdvTutar.Caption = "Kdv";
-            this.colTahakkukKdvTutar.FieldName = "TahakkukKdvTutar";
-            this.colTahakkukKdvTutar.Name = "colTahakkukKdvTutar";
-            this.colTahakkukKdvTutar.OptionsColumn.AllowEdit = false;
-            this.colTahakkukKdvTutar.StatusBarAciklama = null;
-            this.colTahakkukKdvTutar.StatusBarKisayol = null;
-            this.colTahakkukKdvTutar.StatusBarKisayolAciklama = null;
-            this.colTahakkukKdvTutar.Visible = true;
-            // 
-            // colTahakkukToplamTutar
-            // 
-            this.colTahakkukToplamTutar.Caption = "Toplam Tutar";
-            this.colTahakkukToplamTutar.FieldName = "TahakkukToplamTutar";
-            this.colTahakkukToplamTutar.Name = "colTahakkukToplamTutar";
-            this.colTahakkukToplamTutar.OptionsColumn.AllowEdit = false;
-            this.colTahakkukToplamTutar.StatusBarAciklama = null;
-            this.colTahakkukToplamTutar.StatusBarKisayol = null;
-            this.colTahakkukToplamTutar.StatusBarKisayolAciklama = null;
-            this.colTahakkukToplamTutar.Visible = true;
-            // 
-            // colKdvSekli
-            // 
-            this.colKdvSekli.Caption = "Kdv Şekli";
-            this.colKdvSekli.FieldName = "KdvSekli";
-            this.colKdvSekli.Name = "colKdvSekli";
-            this.colKdvSekli.OptionsColumn.AllowEdit = false;
-            this.colKdvSekli.StatusBarAciklama = null;
-            this.colKdvSekli.StatusBarKisayol = null;
-            this.colKdvSekli.StatusBarKisayolAciklama = null;
-            this.colKdvSekli.Visible = true;
-            // 
-            // colKdvOrani
-            // 
-            this.colKdvOrani.Caption = "Kdv Oranı";
-            this.colKdvOrani.FieldName = "KdvOrani";
-            this.colKdvOrani.Name = "colKdvOrani";
-            this.colKdvOrani.OptionsColumn.AllowEdit = false;
-            this.colKdvOrani.StatusBarAciklama = null;
-            this.colKdvOrani.StatusBarKisayol = null;
-            this.colKdvOrani.StatusBarKisayolAciklama = null;
-            this.colKdvOrani.Visible = true;
-            // 
-            // colFaturaAdres
-            // 
-            this.colFaturaAdres.Caption = "Fatura Adresi";
-            this.colFaturaAdres.FieldName = "FaturaAdres";
-            this.colFaturaAdres.Name = "colFaturaAdres";
-            this.colFaturaAdres.OptionsColumn.AllowEdit = false;
-            this.colFaturaAdres.StatusBarAciklama = null;
-            this.colFaturaAdres.StatusBarKisayol = null;
-            this.colFaturaAdres.StatusBarKisayolAciklama = null;
-            this.colFaturaAdres.Visible = true;
-            // 
-            // colFaturaAdresIl
-            // 
-            this.colFaturaAdresIl.Caption = "Fatura Adres İl";
-            this.colFaturaAdresIl.FieldName = "FaturaAdresIl";
-            this.colFaturaAdresIl.Name = "colFaturaAdresIl";
-            this.colFaturaAdresIl.OptionsColumn.AllowEdit = false;
-            this.colFaturaAdresIl.StatusBarAciklama = null;
-            this.colFaturaAdresIl.StatusBarKisayol = null;
-            this.colFaturaAdresIl.StatusBarKisayolAciklama = null;
-            this.colFaturaAdresIl.Visible = true;
-            // 
-            // colFaturaAdresIlce
-            // 
-            this.colFaturaAdresIlce.Caption = "Fatura Adres İlçe";
-            this.colFaturaAdresIlce.FieldName = "FaturaAdresIlce";
-            this.colFaturaAdresIlce.Name = "colFaturaAdresIlce";
-            this.colFaturaAdresIlce.OptionsColumn.AllowEdit = false;
-            this.colFaturaAdresIlce.StatusBarAciklama = null;
-            this.colFaturaAdresIlce.StatusBarKisayol = null;
-            this.colFaturaAdresIlce.StatusBarKisayolAciklama = null;
-            this.colFaturaAdresIlce.Visible = true;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Öğrenci Bilgileri";
-            this.gridBand1.Columns.Add(this.colOgrenciNo);
-            this.gridBand1.Columns.Add(this.colTcKimlikNo);
-            this.gridBand1.Columns.Add(this.colAdi);
-            this.gridBand1.Columns.Add(this.colSoyadi);
-            this.gridBand1.Columns.Add(this.colSinif);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 463;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Kayıt Bilgileri";
-            this.gridBand3.Columns.Add(this.colKayitTarihi);
-            this.gridBand3.Columns.Add(this.colKayitSekli);
-            this.gridBand3.Columns.Add(this.colKayitDurumu);
-            this.gridBand3.Columns.Add(this.colIptalDurumu);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 1;
-            this.gridBand3.Width = 400;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Veli Bilgileri";
-            this.gridBand2.Columns.Add(this.colVeliTcKimlikNo);
-            this.gridBand2.Columns.Add(this.colVeliAdi);
-            this.gridBand2.Columns.Add(this.colVeliSoyadi);
-            this.gridBand2.Columns.Add(this.colYakinlik);
-            this.gridBand2.Columns.Add(this.colMeslek);
-            this.gridBand2.Columns.Add(this.colEvAdres);
-            this.gridBand2.Columns.Add(this.colEvAdresIlce);
-            this.gridBand2.Columns.Add(this.colEvAdresIl);
-            this.gridBand2.Columns.Add(this.colIsAdres);
-            this.gridBand2.Columns.Add(this.colIsAdresIlce);
-            this.gridBand2.Columns.Add(this.colIsAdresIl);
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 2;
-            this.gridBand2.Width = 925;
-            // 
-            // gridBand6
-            // 
-            this.gridBand6.Caption = "Özel Kod";
-            this.gridBand6.Columns.Add(this.colOzelKod1);
-            this.gridBand6.Columns.Add(this.colOzelKod2);
-            this.gridBand6.Columns.Add(this.colOzelKod3);
-            this.gridBand6.Columns.Add(this.colOzelKod4);
-            this.gridBand6.Columns.Add(this.colOzelKod5);
-            this.gridBand6.Name = "gridBand6";
-            this.gridBand6.VisibleIndex = 3;
-            this.gridBand6.Width = 550;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "Tahakkuku Yapılacak Fatura Bilgileri";
-            this.gridBand4.Columns.Add(this.colAciklama);
-            this.gridBand4.Columns.Add(this.colPlanTarih);
-            this.gridBand4.Columns.Add(this.colPlanTutar);
-            this.gridBand4.Columns.Add(this.colPlanIndirim);
-            this.gridBand4.Columns.Add(this.colPlanNetTutar);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 4;
-            this.gridBand4.Width = 450;
+            this.colPlanNetTutar.Caption = "Net Tutar";
+            this.colPlanNetTutar.ColumnEdit = this.repositoryDecimal;
+            this.colPlanNetTutar.CustomizationCaption = "Plan Net Tutar";
+            this.colPlanNetTutar.FieldName = "PlanNetTutar";
+            this.colPlanNetTutar.Name = "colPlanNetTutar";
+            this.colPlanNetTutar.OptionsColumn.AllowEdit = false;
+            this.colPlanNetTutar.StatusBarAciklama = null;
+            this.colPlanNetTutar.StatusBarKisayol = null;
+            this.colPlanNetTutar.StatusBarKisayolAciklama = null;
+            this.colPlanNetTutar.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PlanNetTutar", "{0:n2}")});
+            this.colPlanNetTutar.Visible = true;
+            this.colPlanNetTutar.Width = 100;
             // 
             // gridBand5
             // 
@@ -851,7 +704,187 @@
             this.gridBand5.Columns.Add(this.colFaturaAdresIl);
             this.gridBand5.Name = "gridBand5";
             this.gridBand5.VisibleIndex = 5;
-            this.gridBand5.Width = 975;
+            this.gridBand5.Width = 1375;
+            // 
+            // colFaturaNo
+            // 
+            this.colFaturaNo.Caption = "Fatura No";
+            this.colFaturaNo.FieldName = "FaturaNo";
+            this.colFaturaNo.Name = "colFaturaNo";
+            this.colFaturaNo.OptionsColumn.AllowEdit = false;
+            this.colFaturaNo.StatusBarAciklama = null;
+            this.colFaturaNo.StatusBarKisayol = null;
+            this.colFaturaNo.StatusBarKisayolAciklama = null;
+            this.colFaturaNo.Visible = true;
+            // 
+            // colTahakkukTarih
+            // 
+            this.colTahakkukTarih.AppearanceCell.Options.UseTextOptions = true;
+            this.colTahakkukTarih.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colTahakkukTarih.Caption = "Tarih";
+            this.colTahakkukTarih.ColumnEdit = this.repositoryITarih;
+            this.colTahakkukTarih.CustomizationCaption = "Tahakkuk Tarih";
+            this.colTahakkukTarih.FieldName = "TahakkukTarih";
+            this.colTahakkukTarih.Name = "colTahakkukTarih";
+            this.colTahakkukTarih.OptionsColumn.AllowEdit = false;
+            this.colTahakkukTarih.StatusBarAciklama = null;
+            this.colTahakkukTarih.StatusBarKisayol = null;
+            this.colTahakkukTarih.StatusBarKisayolAciklama = null;
+            this.colTahakkukTarih.Visible = true;
+            this.colTahakkukTarih.Width = 100;
+            // 
+            // colTahakkukTutar
+            // 
+            this.colTahakkukTutar.Caption = "Tutar";
+            this.colTahakkukTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTahakkukTutar.CustomizationCaption = "Tahakkuk Tutar";
+            this.colTahakkukTutar.FieldName = "TahakkukTutar";
+            this.colTahakkukTutar.Name = "colTahakkukTutar";
+            this.colTahakkukTutar.OptionsColumn.AllowEdit = false;
+            this.colTahakkukTutar.StatusBarAciklama = null;
+            this.colTahakkukTutar.StatusBarKisayol = null;
+            this.colTahakkukTutar.StatusBarKisayolAciklama = null;
+            this.colTahakkukTutar.Visible = true;
+            this.colTahakkukTutar.Width = 100;
+            // 
+            // colTahakkukIndirim
+            // 
+            this.colTahakkukIndirim.Caption = "İndirim";
+            this.colTahakkukIndirim.ColumnEdit = this.repositoryDecimal;
+            this.colTahakkukIndirim.CustomizationCaption = "Tahakkuk İndirim";
+            this.colTahakkukIndirim.FieldName = "TahakkukIndirim";
+            this.colTahakkukIndirim.Name = "colTahakkukIndirim";
+            this.colTahakkukIndirim.OptionsColumn.AllowEdit = false;
+            this.colTahakkukIndirim.StatusBarAciklama = null;
+            this.colTahakkukIndirim.StatusBarKisayol = null;
+            this.colTahakkukIndirim.StatusBarKisayolAciklama = null;
+            this.colTahakkukIndirim.Visible = true;
+            this.colTahakkukIndirim.Width = 100;
+            // 
+            // colTahakkukNetTutar
+            // 
+            this.colTahakkukNetTutar.Caption = "Net Tutar";
+            this.colTahakkukNetTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTahakkukNetTutar.CustomizationCaption = "Tahakkuk Net Tutar";
+            this.colTahakkukNetTutar.FieldName = "TahakkukNetTutar";
+            this.colTahakkukNetTutar.Name = "colTahakkukNetTutar";
+            this.colTahakkukNetTutar.OptionsColumn.AllowEdit = false;
+            this.colTahakkukNetTutar.StatusBarAciklama = null;
+            this.colTahakkukNetTutar.StatusBarKisayol = null;
+            this.colTahakkukNetTutar.StatusBarKisayolAciklama = null;
+            this.colTahakkukNetTutar.Visible = true;
+            this.colTahakkukNetTutar.Width = 100;
+            // 
+            // colKdvSekli
+            // 
+            this.colKdvSekli.Caption = "Kdv Şekli";
+            this.colKdvSekli.FieldName = "KdvSekli";
+            this.colKdvSekli.Name = "colKdvSekli";
+            this.colKdvSekli.OptionsColumn.AllowEdit = false;
+            this.colKdvSekli.StatusBarAciklama = null;
+            this.colKdvSekli.StatusBarKisayol = null;
+            this.colKdvSekli.StatusBarKisayolAciklama = null;
+            this.colKdvSekli.Visible = true;
+            this.colKdvSekli.Width = 100;
+            // 
+            // colKdvOrani
+            // 
+            this.colKdvOrani.Caption = "Kdv Oranı";
+            this.colKdvOrani.FieldName = "KdvOrani";
+            this.colKdvOrani.Name = "colKdvOrani";
+            this.colKdvOrani.OptionsColumn.AllowEdit = false;
+            this.colKdvOrani.StatusBarAciklama = null;
+            this.colKdvOrani.StatusBarKisayol = null;
+            this.colKdvOrani.StatusBarKisayolAciklama = null;
+            this.colKdvOrani.Visible = true;
+            this.colKdvOrani.Width = 100;
+            // 
+            // colTahakkukKdvHaricTutar
+            // 
+            this.colTahakkukKdvHaricTutar.Caption = "Kdv Hariç Tutar";
+            this.colTahakkukKdvHaricTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTahakkukKdvHaricTutar.FieldName = "TahakkukKdvHaricTutar";
+            this.colTahakkukKdvHaricTutar.Name = "colTahakkukKdvHaricTutar";
+            this.colTahakkukKdvHaricTutar.OptionsColumn.AllowEdit = false;
+            this.colTahakkukKdvHaricTutar.StatusBarAciklama = null;
+            this.colTahakkukKdvHaricTutar.StatusBarKisayol = null;
+            this.colTahakkukKdvHaricTutar.StatusBarKisayolAciklama = null;
+            this.colTahakkukKdvHaricTutar.Visible = true;
+            this.colTahakkukKdvHaricTutar.Width = 100;
+            // 
+            // colTahakkukKdvTutar
+            // 
+            this.colTahakkukKdvTutar.Caption = "Kdv";
+            this.colTahakkukKdvTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTahakkukKdvTutar.FieldName = "TahakkukKdvTutar";
+            this.colTahakkukKdvTutar.Name = "colTahakkukKdvTutar";
+            this.colTahakkukKdvTutar.OptionsColumn.AllowEdit = false;
+            this.colTahakkukKdvTutar.StatusBarAciklama = null;
+            this.colTahakkukKdvTutar.StatusBarKisayol = null;
+            this.colTahakkukKdvTutar.StatusBarKisayolAciklama = null;
+            this.colTahakkukKdvTutar.Visible = true;
+            this.colTahakkukKdvTutar.Width = 100;
+            // 
+            // colTahakkukToplamTutar
+            // 
+            this.colTahakkukToplamTutar.Caption = "Toplam Tutar";
+            this.colTahakkukToplamTutar.ColumnEdit = this.repositoryDecimal;
+            this.colTahakkukToplamTutar.FieldName = "TahakkukToplamTutar";
+            this.colTahakkukToplamTutar.Name = "colTahakkukToplamTutar";
+            this.colTahakkukToplamTutar.OptionsColumn.AllowEdit = false;
+            this.colTahakkukToplamTutar.StatusBarAciklama = null;
+            this.colTahakkukToplamTutar.StatusBarKisayol = null;
+            this.colTahakkukToplamTutar.StatusBarKisayolAciklama = null;
+            this.colTahakkukToplamTutar.Visible = true;
+            this.colTahakkukToplamTutar.Width = 100;
+            // 
+            // colFaturaAdres
+            // 
+            this.colFaturaAdres.Caption = "Fatura Adresi";
+            this.colFaturaAdres.FieldName = "FaturaAdres";
+            this.colFaturaAdres.Name = "colFaturaAdres";
+            this.colFaturaAdres.OptionsColumn.AllowEdit = false;
+            this.colFaturaAdres.StatusBarAciklama = null;
+            this.colFaturaAdres.StatusBarKisayol = null;
+            this.colFaturaAdres.StatusBarKisayolAciklama = null;
+            this.colFaturaAdres.Visible = true;
+            this.colFaturaAdres.Width = 200;
+            // 
+            // colFaturaAdresIlce
+            // 
+            this.colFaturaAdresIlce.Caption = "Fatura Adres İlçe";
+            this.colFaturaAdresIlce.FieldName = "FaturaAdresIlce";
+            this.colFaturaAdresIlce.Name = "colFaturaAdresIlce";
+            this.colFaturaAdresIlce.OptionsColumn.AllowEdit = false;
+            this.colFaturaAdresIlce.StatusBarAciklama = null;
+            this.colFaturaAdresIlce.StatusBarKisayol = null;
+            this.colFaturaAdresIlce.StatusBarKisayolAciklama = null;
+            this.colFaturaAdresIlce.Visible = true;
+            this.colFaturaAdresIlce.Width = 100;
+            // 
+            // colFaturaAdresIl
+            // 
+            this.colFaturaAdresIl.Caption = "Fatura Adres İl";
+            this.colFaturaAdresIl.FieldName = "FaturaAdresIl";
+            this.colFaturaAdresIl.Name = "colFaturaAdresIl";
+            this.colFaturaAdresIl.OptionsColumn.AllowEdit = false;
+            this.colFaturaAdresIl.StatusBarAciklama = null;
+            this.colFaturaAdresIl.StatusBarKisayol = null;
+            this.colFaturaAdresIl.StatusBarKisayolAciklama = null;
+            this.colFaturaAdresIl.Visible = true;
+            this.colFaturaAdresIl.Width = 100;
+            // 
+            // colTahakkukTutarYazi
+            // 
+            this.colTahakkukTutarYazi.Caption = "TahakkukTutarYazi";
+            this.colTahakkukTutarYazi.FieldName = "TahakkukTutarYazi";
+            this.colTahakkukTutarYazi.Name = "colTahakkukTutarYazi";
+            this.colTahakkukTutarYazi.OptionsColumn.AllowEdit = false;
+            this.colTahakkukTutarYazi.OptionsColumn.ShowInCustomizationForm = false;
+            this.colTahakkukTutarYazi.StatusBarAciklama = null;
+            this.colTahakkukTutarYazi.StatusBarKisayol = null;
+            this.colTahakkukTutarYazi.StatusBarKisayolAciklama = null;
+            this.colTahakkukTutarYazi.Width = 100;
             // 
             // FaturaTahakkukTable
             // 
