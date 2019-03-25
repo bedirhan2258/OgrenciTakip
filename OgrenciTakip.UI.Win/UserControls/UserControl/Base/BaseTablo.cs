@@ -96,7 +96,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             Tablo.TabloSablonYukle(Tablo.ViewCaption);
         }
 
-        protected virtual void Listele() { }
+        protected internal virtual void Listele() { }
 
         private void ButtonGizleGoster()
         {

@@ -32,7 +32,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             EventsLoad();
             ShowItems = new BarItem[] { btnIptalEt, btnIptalGeriAl };
         }
-        protected override void Listele()
+        protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((IndirimBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBindingList<IndirimBilgileriL>();
         }

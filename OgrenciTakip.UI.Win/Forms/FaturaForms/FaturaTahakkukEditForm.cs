@@ -2,6 +2,7 @@
 using System;
 using DevExpress.DataProcessing;
 using DevExpress.XtraBars;
+using DevExpress.XtraBars.Navigation;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
@@ -36,7 +37,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             txtFaturaAdresi.SelectedItem = AdresTuru.EvAdresi.ToName();
             FaturaDonemiYukle();
             FaturaNoYukle();
-
+            TabloYukle();
         }
 
         private void FaturaDonemiYukle()
@@ -59,8 +60,32 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 
         protected internal override void ButonEnabledDurumu()
         {
-            //Geçici olarak false   
-            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnGeriAl, false);
+            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnGeriAl, faturaTahakkukTable.TableValueChanged);
         }
+
+        protected override void TabloYukle()
+        {
+            faturaTahakkukTable.OwnerForm = this;
+            faturaTahakkukTable.Yukle();
+        }
+
+        protected override bool EntityUpdate()
+        {
+            if (!faturaTahakkukTable.Kaydet()) return false;
+
+            faturaTahakkukTable.Yukle();
+            FaturaNoYukle();
+            return true;
+        }
+
+        protected override void Control_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (sender != txtFaturaDonemi) return;
+
+            faturaTahakkukTable.Listele();
+            faturaTahakkukTable.Tablo.Focus();
+
+        }
+
     }
 }

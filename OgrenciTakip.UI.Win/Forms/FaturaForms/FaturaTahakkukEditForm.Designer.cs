@@ -41,6 +41,7 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.faturaTahakkukTable = new OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable.FaturaTahakkukTable();
             this.txtFaturaNo = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
             this.txtFaturaDonemi = new OgrenciTakip.UI.Win.UserControls.Controls.MyComboBoxEdit();
             this.txtSonFaturaNo = new OgrenciTakip.UI.Win.UserControls.Controls.MySpinEdit();
@@ -56,6 +57,7 @@
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
@@ -75,16 +77,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(990, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(980, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // myDataLayoutControl
             // 
+            this.myDataLayoutControl.Controls.Add(this.faturaTahakkukTable);
             this.myDataLayoutControl.Controls.Add(this.txtFaturaNo);
             this.myDataLayoutControl.Controls.Add(this.txtFaturaDonemi);
             this.myDataLayoutControl.Controls.Add(this.txtSonFaturaNo);
@@ -96,9 +100,16 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.layoutControlGroup1;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(990, 366);
+            this.myDataLayoutControl.Size = new System.Drawing.Size(980, 466);
             this.myDataLayoutControl.TabIndex = 2;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
+            // 
+            // faturaTahakkukTable
+            // 
+            this.faturaTahakkukTable.Location = new System.Drawing.Point(12, 104);
+            this.faturaTahakkukTable.Name = "faturaTahakkukTable";
+            this.faturaTahakkukTable.Size = new System.Drawing.Size(956, 350);
+            this.faturaTahakkukTable.TabIndex = 10;
             // 
             // txtFaturaNo
             // 
@@ -130,6 +141,8 @@
             this.txtFaturaDonemi.Location = new System.Drawing.Point(437, 42);
             this.txtFaturaDonemi.MenuManager = this.ribbonControl;
             this.txtFaturaDonemi.Name = "txtFaturaDonemi";
+            this.txtFaturaDonemi.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtFaturaDonemi.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtFaturaDonemi.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtFaturaDonemi.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtFaturaDonemi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -165,7 +178,7 @@
             // txtKdvOrani
             // 
             this.txtKdvOrani.EditValue = new decimal(new int[] {
-            0,
+            8,
             0,
             0,
             0});
@@ -231,7 +244,8 @@
             this.layoutControlGroup1.GroupBordersVisible = false;
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2,
-            this.layoutControlGroup3});
+            this.layoutControlGroup3,
+            this.layoutControlItem7});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             columnDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -251,7 +265,7 @@
             this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
             rowDefinition5,
             rowDefinition6});
-            this.layoutControlGroup1.Size = new System.Drawing.Size(990, 366);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(980, 466);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -386,11 +400,24 @@
             this.layoutControlItem6.Text = "Fatura No";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(70, 13);
             // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem7.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem7.Control = this.faturaTahakkukTable;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 92);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 1;
+            this.layoutControlItem7.Size = new System.Drawing.Size(960, 354);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
             // FaturaTahakkukEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 499);
+            this.ClientSize = new System.Drawing.Size(980, 599);
             this.Controls.Add(this.myDataLayoutControl);
             this.Name = "FaturaTahakkukEditForm";
             this.Text = "Fatura Tahakkuk Kartı";
@@ -415,6 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,5 +466,7 @@
         protected internal UserControls.Controls.MyComboBoxEdit txtFaturaAdresi;
         protected internal UserControls.Controls.MyComboBoxEdit txtKdvSekli;
         protected internal UserControls.Controls.MySpinEdit txtFaturaNo;
+        private UserControls.FaturaEditFormTable.FaturaTahakkukTable faturaTahakkukTable;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }

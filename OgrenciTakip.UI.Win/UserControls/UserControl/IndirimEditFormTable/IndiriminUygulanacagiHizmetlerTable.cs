@@ -23,7 +23,7 @@ namespace OgrenciTakip.UI.Win.UserControls.IndirimEditFormTable
             Tablo = tablo;
             EventsLoad();
         }
-        protected override void Listele()
+        protected internal override void Listele()
         {
             //Bana sorgu sonucundan toList tipinde bişey geliyor fakat bunu benım TobinngList şeklinde cast etmem gerekiyor.Çünkü Yeni butonu pasif olarak gelıyor.
             //Bunu için generafucntions class içinde TobindingList adlı method oluşturuldu.

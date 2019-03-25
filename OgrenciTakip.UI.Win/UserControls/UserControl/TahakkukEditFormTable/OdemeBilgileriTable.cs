@@ -29,7 +29,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             ShowItems = new BarItem[] { btnBelgeHareketleri };
         }
 
-        protected override void Listele()
+        protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((OdemeBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBindingList<OdemeBilgileriL>();
         }

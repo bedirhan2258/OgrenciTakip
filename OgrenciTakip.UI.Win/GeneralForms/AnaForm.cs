@@ -221,7 +221,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             }
             else if (e.Item == btnFaturaKartlari)
             {
-                ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Sube);
+                ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Fatura);
+            }
+            else if(e.Item==btnFaturaTahakkukKarti)
+            {
+                ShowEditForms<FaturaTahakkukEditForm>.ShowDialogEditForms(KartTuru.Fatura);
             }
         }
     }

@@ -31,7 +31,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             repositoryAdres.Items.AddEnum<AdresTuru>();
         }
 
-        protected override void Listele()
+        protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((IletisimBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBindingList<IletisimBilgileriL>();
         }

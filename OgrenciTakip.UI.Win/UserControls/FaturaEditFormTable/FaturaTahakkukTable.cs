@@ -28,7 +28,7 @@ namespace OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable
             insUptNavigator.Navigator.Buttons.Remove.Hint = "Tahakkuk iptal Et";
         }
 
-        protected override void Listele()
+        protected internal override void Listele()
         {
             var selectedItem = ((FaturaTahakkukEditForm)OwnerForm).txtFaturaDonemi.SelectedItem;
             if (selectedItem == null) return;
@@ -59,24 +59,25 @@ namespace OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable
 
             for (int i = 0; i < tablo.DataRowCount; i++)
             {
-                var entity = tablo.GetRow<FaturaPlaniL>();
+                var entity = tablo.GetRow<FaturaPlaniL>(i);
                 if (entity == null) return;
 
                 entity.FaturaNo = faturaNo + i;
                 entity.TahakkukTarih = entity.PlanTarih;
                 entity.TahakkukTutar = entity.PlanTutar;
-                entity.TahakkukIndirimTutar = entity.PlanNetTutar;
+                entity.TahakkukIndirimTutar = entity.PlanIndirimTutar;
+                entity.TahakkukNetTutar = entity.PlanNetTutar;
                 entity.KdvOrani = kdvOrani;
-                entity.KdvTutari = KdvHesapla(entity.TahakkukNetTutar.Value);
-                entity.KdvHaricTutar = kdvSekli == KdvSekli.Haric ? entity.TahakkukNetTutar : entity.TahakkukNetTutar - entity.KdvTutari;
-                entity.ToplamTutar = entity.KdvHaricTutar + entity.KdvTutari;
+                entity.KdvTutar = KdvHesapla(entity.TahakkukNetTutar.Value);
+                entity.KdvHaricTutar = kdvSekli == KdvSekli.Haric ? entity.TahakkukNetTutar : entity.TahakkukNetTutar - entity.KdvTutar;
+                entity.ToplamTutar = entity.KdvHaricTutar + entity.KdvTutar;
                 entity.TutarYazi = entity.TahakkukNetTutar.Value.YaziIleTutar();
                 entity.KdvSekli = kdvSekli;
-                entity.FaturaAdres = adresTuru == AdresTuru.EvAdresi ? entity.VeliEvAdres : entity.VeliIsAdres;
-                entity.FaturaAdresIlId = adresTuru == AdresTuru.EvAdresi ? entity.VeliEvAdresIlId : entity.VeliIsAdresIlId;
-                entity.FaturaAdresIlAdi = adresTuru == AdresTuru.EvAdresi ? entity.VeliEvAdresIlAdi : entity.VeliIsAdresIlAdi;
-                entity.FaturaAdresIlceId = adresTuru == AdresTuru.EvAdresi ? entity.VeliEvAdresIlceId : entity.VeliIsAdresIlceId;
-                entity.FaturaAdresIlceAdi = adresTuru == AdresTuru.EvAdresi ? entity.VeliEvAdresIlceAdi : entity.VeliIsAdresIlceAdi;
+                entity.FaturaAdres = adresTuru == AdresTuru.EvAdresi ? entity.EvAdres : entity.IsAdres;
+                entity.FaturaAdresIlId = adresTuru == AdresTuru.EvAdresi ? entity.EvAdresIlId : entity.IsAdresIlId;
+                entity.FaturaAdresIlAdi = adresTuru == AdresTuru.EvAdresi ? entity.EvAdresIlAdi : entity.IsAdresIlAdi;
+                entity.FaturaAdresIlceId = adresTuru == AdresTuru.EvAdresi ? entity.EvAdresIlceId : entity.IsAdresIlceId;
+                entity.FaturaAdresIlceAdi = adresTuru == AdresTuru.EvAdresi ? entity.EvAdresIlceAdi : entity.IsAdresIlceAdi;
                 entity.Update = true;
             }
 
@@ -90,15 +91,16 @@ namespace OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable
 
             for (int i = 0; i < tablo.DataRowCount; i++)
             {
-                var entity = tablo.GetRow<FaturaPlaniL>();
+                var entity = tablo.GetRow<FaturaPlaniL>(i);
                 if (entity == null) return;
 
                 entity.FaturaNo = null;
                 entity.TahakkukTarih = null;
                 entity.TahakkukTutar = null;
                 entity.TahakkukIndirimTutar = null;
+                entity.TahakkukNetTutar = null;
                 entity.KdvOrani = null;
-                entity.KdvTutari = null;
+                entity.KdvTutar = null;
                 entity.KdvHaricTutar = null;
                 entity.ToplamTutar = null;
                 entity.TutarYazi = null;
@@ -110,7 +112,8 @@ namespace OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable
                 entity.FaturaAdresIlceAdi = null;
                 entity.Update = true;
             }
+            tablo.RefreshData();
         }
-
+        
     }
 }

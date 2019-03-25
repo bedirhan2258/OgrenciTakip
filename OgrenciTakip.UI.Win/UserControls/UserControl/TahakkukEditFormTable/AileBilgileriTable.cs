@@ -22,7 +22,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             EventsLoad();
         }
 
-        protected override void Listele()
+        protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((AileBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBindingList<AileBilgileriL>();
         }

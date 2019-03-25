@@ -30,7 +30,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
             ShowItems = new BarItem[] { btnBelgeHareketleri };
         }
 
-        protected override void Listele()
+        protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((MakbuzHareketleriBll)Bll).List(x => x.MakbuzId == OwnerForm.id).ToBindingList<MakbuzHareketleriL>();
         }

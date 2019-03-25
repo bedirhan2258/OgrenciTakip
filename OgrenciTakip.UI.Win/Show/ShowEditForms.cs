@@ -46,7 +46,7 @@ namespace OgrenciTakip.UI.Win.Show
             }
         }
 
-        public static bool ShowDialogEditForms(KartTuru kartTuru,params object[] prm)
+        public static bool ShowDialogEditForms(KartTuru kartTuru, params object[] prm)
         {
             //Yetki kontrolü yapılacak
             using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
@@ -54,6 +54,17 @@ namespace OgrenciTakip.UI.Win.Show
                 frm.Yukle();
                 frm.ShowDialog();
                 return frm.DialogResult == DialogResult.OK;
+            }
+        }
+
+        public static void ShowDialogEditForms(KartTuru kartTuru)
+        {
+            //Yetki kontrolü yapılacak
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm)))
+            {
+                frm.BaseIslemTuru = IslemTuru.EntityUpdate;
+                frm.Yukle();
+                frm.ShowDialog();
             }
         }
 

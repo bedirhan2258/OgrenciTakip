@@ -1,4 +1,5 @@
 ﻿
+using DevExpress.DataAccess.ObjectBinding;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
@@ -53,16 +54,16 @@ namespace OgrenciTakip.Model.DTO
         public string VeliSoyadi { get; set; }
         public string VeliYakinlikAdi { get; set; }
         public string VeliMeslekAdi { get; set; }
-        public string VeliEvAdres { get; set; }
-        public long? VeliEvAdresIlId { get; set; }
-        public string VeliEvAdresIlAdi { get; set; }
-        public long? VeliEvAdresIlceId { get; set; }
-        public string VeliEvAdresIlceAdi { get; set; }
-        public string VeliIsAdres { get; set; }
-        public long? VeliIsAdresIlId { get; set; }
-        public string VeliIsAdresIlAdi { get; set; }
-        public long? VeliIsAdresIlceId { get; set; }
-        public string VeliIsAdresIlceAdi { get; set; }
+        public string EvAdres { get; set; }
+        public long? EvAdresIlId { get; set; }
+        public string EvAdresIlAdi { get; set; }
+        public long? EvAdresIlceId { get; set; }
+        public string EvAdresIlceAdi { get; set; }
+        public string IsAdres { get; set; }
+        public long? IsAdresIlId { get; set; }
+        public string IsAdresIlAdi { get; set; }
+        public long? IsAdresIlceId { get; set; }
+        public string IsAdresIlceAdi { get; set; }
         public string FaturaAdresIlAdi { get; set; }
         public string FaturaAdresIlceAdi { get; set; }
         public string OzelKod1 { get; set; }
@@ -95,4 +96,39 @@ namespace OgrenciTakip.Model.DTO
         public decimal Indirim { get; set; }
         public decimal NetUcret { get; set; }
     }
+
+    [HighlightedClass]
+    public class FaturaR : IBaseEntity
+    {
+        public long TahakkukId { get; set; }
+        public string OkulNo { get; set; }
+        public string Adi { get; set; }
+        public string Soyadi { get; set; }
+        public string SinifAdi { get; set; }
+        public string VeliTcKimlikNo { get; set; }
+        public string VeliAdi { get; set; }
+        public string VeliSoyadi { get; set; }
+        public string VeliYakinlikAdi { get; set; }
+        public string VeliMeslekAdi { get; set; }
+        public string FaturaAdres { get; set; }
+        public string FaturaAdresIlAdi { get; set; }
+        public string FaturaAdresIlceAdi { get; set; }
+        public int? FaturaNo { get; set; }
+        public DateTime? Tarih { get; set; }
+        public decimal? Tutar { get; set; }
+        public decimal? Indirim { get; set; }
+        public decimal? NetTutar { get; set; }
+        public KdvSekli? KdvSekli { get; set; }
+        public byte? KdvOrani { get; set; }
+        public decimal? KdvHaricTutar { get; set; }
+        public decimal? KdvTutari { get; set; }
+        public decimal? ToplamTutar { get; set; }
+        public decimal? PlanTutar { get; set; }
+        public decimal? PlanIndirim { get; set; }
+        public decimal? PlanNetTutar { get; set; }
+        public string TutarYazi { get; set; }
+        public string Sube { get; set; }
+        public string Donem { get; set; }
+    }
+
 }

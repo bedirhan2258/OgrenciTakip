@@ -22,7 +22,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             repositoryHesapTuru.Items.AddEnum<GeriOdemeHesapTuru>();
         }
 
-        protected override void Listele()
+        protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((GeriOdemeBilgileriBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBindingList<GeriOdemeBilgileriL>();
         }

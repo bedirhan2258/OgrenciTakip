@@ -23,7 +23,7 @@ namespace OgrenciTakip.UI.Win.UserControls.FaturaEditFormTable
             EventsLoad();
         }
 
-        protected override void Listele()
+        protected internal override void Listele()
         {
             tablo.GridControl.DataSource = ((FaturaBll)Bll).List(x => x.TahakkukId == OwnerForm.id).ToBindingList<FaturaPlaniL>();
         }
