@@ -126,6 +126,7 @@ namespace OgrenciTakip.Model.DTO
         public decimal? PlanTutar { get; set; }
         public decimal? PlanIndirim { get; set; }
         public decimal? PlanNetTutar { get; set; }
+        public string Aciklama { get; set; }
         public string TutarYazi { get; set; }
         public string Sube { get; set; }
         public string Donem { get; set; }

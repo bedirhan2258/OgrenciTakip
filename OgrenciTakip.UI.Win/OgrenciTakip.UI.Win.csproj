@@ -539,6 +539,12 @@
     <Compile Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.Designer.cs">
       <DependentUpon>FaturaDonemIcmalRaporu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaRaporu.Designer.cs">
+      <DependentUpon>FaturaRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1137,6 +1143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.resx">
       <DependentUpon>FaturaDonemIcmalRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaRaporu.resx">
+      <DependentUpon>FaturaRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.resx">
       <DependentUpon>GenelMakbuzRaporu.cs</DependentUpon>
