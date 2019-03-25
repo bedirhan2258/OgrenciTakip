@@ -533,6 +533,12 @@
     <Compile Include="Forms\SubeForms\SubeListForm.Designer.cs">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.Designer.cs">
+      <DependentUpon>FaturaDonemIcmalRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1129,6 +1135,9 @@
     <EmbeddedResource Include="Forms\SubeForms\SubeListForm.resx">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.resx">
+      <DependentUpon>FaturaDonemIcmalRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Makbuz\GenelMakbuzRaporu.resx">
       <DependentUpon>GenelMakbuzRaporu.cs</DependentUpon>
     </EmbeddedResource>
@@ -1498,7 +1507,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Reports\FormReports\" />
-    <Folder Include="Reports\XtraReports\Fatura\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

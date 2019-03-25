@@ -105,7 +105,7 @@ namespace OgrenciTakip.Model.DTO
         public string Adi { get; set; }
         public string Soyadi { get; set; }
         public string SinifAdi { get; set; }
-        public string VeliTcKimlikNo { get; set; }
+        public string TcKimlikNo { get; set; }
         public string VeliAdi { get; set; }
         public string VeliSoyadi { get; set; }
         public string VeliYakinlikAdi { get; set; }
