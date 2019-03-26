@@ -13,6 +13,7 @@ using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Forms.RaporForms;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Reports.XtraReports.Fatura;
 using OgrenciTakip.UI.Win.Reports.XtraReports.Makbuz;
 using OgrenciTakip.UI.Win.Reports.XtraReports.Tahakkuk;
 using OgrenciTakip.UI.Win.Show;
@@ -34,6 +35,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         private readonly IEnumerable<GeriOdemeBilgileriR> _geriOdemeBilgileri;
         private readonly IEnumerable<EposBilgileriR> _eposBilgileri;
         private readonly IEnumerable<MakbuzHareketleriR> _makbuzBilgileri;
+        private readonly IEnumerable<FaturaR> _faturaBilgileri;
         private readonly RaporBolumTuru _raporBolumTuru;
         #endregion
 
@@ -70,6 +72,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 _makbuzBilgileri = (List<MakbuzHareketleriR>)prm[1];
             }
 
+            else if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar)
+            {
+                _faturaBilgileri = (List<FaturaR>)prm[1];
+            }
+
+
         }
 
         protected override void DegiskenleriDoldur()
@@ -85,6 +93,20 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                     case RaporBolumTuru.MakbuzRaporlari:
                         {
                             var showItems = new BarItem[] { btnGenelMakbuz, btnTahsilatMakbuzu, btnTeslimatMakbuzu, btnGeriIadeMakbuzu };
+                            ShowItems = ShowItems.Concat(showItems).ToArray();
+                        }
+                        break;
+
+                    case RaporBolumTuru.FaturaDonemRaporlari:
+                        {
+                            var showItems = new BarItem[] { btnFatura, btnDonemIcmalRaporu };
+                            ShowItems = ShowItems.Concat(showItems).ToArray();
+                        }
+                        break;
+
+                    case RaporBolumTuru.FaturaGenelRaporlar:
+                        {
+                            var showItems = new BarItem[] { btnOgrenciIcmalRaporu };
                             ShowItems = ShowItems.Concat(showItems).ToArray();
                         }
                         break;
@@ -258,6 +280,18 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 case GenelMakbuzRaporu rpr:
                     rpr.Makbuz_Bilgileri.DataSource = _makbuzBilgileri;
                     break;
+
+                case FaturaRaporu rpr:
+                    rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
+                    break;
+
+                case FaturaDonemIcmalRaporu rpr:
+                    rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
+                    break;
+
+                case FaturaOgrenciIcmalRaporu rpr:
+                    rpr.Fatura_Bilgileri.DataSource = _faturaBilgileri;
+                    break;
             }
         }
 
@@ -347,6 +381,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnGenelMakbuz)
                 RaporOlustur(KartTuru.GenelMakbuz, RaporBolumTuru.MakbuzRaporlari, new GenelMakbuzRaporu());
+
+            else if (e.Item == btnFatura)
+                RaporOlustur(KartTuru.FaturaRaporu, RaporBolumTuru.FaturaDonemRaporlari, new FaturaRaporu());
+
+            else if (e.Item == btnDonemIcmalRaporu)
+                RaporOlustur(KartTuru.FaturaDonemIcmalRaporu, RaporBolumTuru.FaturaDonemRaporlari, new FaturaDonemIcmalRaporu());
+
+            else if (e.Item == btnOgrenciIcmalRaporu)
+                RaporOlustur(KartTuru.FaturaOgrenciIcmalRaporu, RaporBolumTuru.FaturaGenelRaporlar, new FaturaOgrenciIcmalRaporu());
         }
     }
 }

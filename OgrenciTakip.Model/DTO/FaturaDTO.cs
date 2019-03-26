@@ -110,6 +110,7 @@ namespace OgrenciTakip.Model.DTO
         public string VeliSoyadi { get; set; }
         public string VeliYakinlikAdi { get; set; }
         public string VeliMeslekAdi { get; set; }
+        public string VeliTcKimlikNo { get; set; }
         public string FaturaAdres { get; set; }
         public string FaturaAdresIlAdi { get; set; }
         public string FaturaAdresIlceAdi { get; set; }

@@ -11,6 +11,7 @@ using DevExpress.XtraBars;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
+using DevExpress.Utils.Extensions;
 
 namespace OgrenciTakip.UI.Win.Forms.FaturaForms
 {
@@ -101,5 +102,60 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
             Listele();
         }
 
+        protected override void Yazdir()
+        {
+            var source = new List<FaturaR>();
+
+            using (var bll = new FaturaBll())
+            {
+                for (int i = 0; i < tablo.DataRowCount; i++)
+                {
+                    var entity = tablo.GetRow<FaturaL>(i);
+                    if (entity == null) return;
+
+                    var list = bll.FaturaTahakkukList(x => x.TahakkukId == entity.Id).Cast<FaturaPlaniL>();
+                    list.ForEach(x =>
+                    {
+                        var row = new FaturaR
+                        {
+                            TahakkukId = x.TahakkukId,
+                            OkulNo = x.OkulNo,
+                            TcKimlikNo = x.TcKimlikNo,
+                            Adi = x.Adi,
+                            Soyadi = x.Soyadi,
+                            SinifAdi = x.SinifAdi,
+                            VeliTcKimlikNo = x.VeliTcKimlikNo,
+                            VeliAdi = x.VeliAdi,
+                            VeliSoyadi = x.VeliSoyadi,
+                            VeliYakinlikAdi = x.VeliYakinlikAdi,
+                            VeliMeslekAdi = x.VeliMeslekAdi,
+                            FaturaNo = x.FaturaNo,
+                            FaturaAdres = x.FaturaAdres,
+                            FaturaAdresIlAdi = x.FaturaAdresIlAdi,
+                            FaturaAdresIlceAdi = x.FaturaAdresIlceAdi,
+                            Aciklama = x.Aciklama,
+                            Tarih = x.TahakkukTarih,
+                            Tutar = x.TahakkukTutar,
+                            Indirim = x.TahakkukIndirimTutar,
+                            NetTutar = x.TahakkukNetTutar,
+                            KdvSekli = x.KdvSekli,
+                            KdvOrani = x.KdvOrani,
+                            KdvHaricTutar = x.KdvHaricTutar,
+                            KdvTutari = x.KdvTutar,
+                            ToplamTutar = x.ToplamTutar,
+                            TutarYazi = x.TutarYazi,
+                            PlanTutar = entity.PlanTutar,
+                            PlanIndirim = entity.PlanIndirim,
+                            PlanNetTutar = entity.PlanNetTutar,
+                            Sube = x.Sube,
+                            Donem = x.Donem
+                        };
+                        source.Add(row);
+                    });
+                }
+
+            }
+            ShowListForms<RaporSecim>.ShowDialogListForm(KartTuru.Rapor, false, RaporBolumTuru.FaturaGenelRaporlar, source);
+        }
     }
 }

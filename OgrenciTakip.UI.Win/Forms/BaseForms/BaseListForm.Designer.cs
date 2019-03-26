@@ -182,6 +182,8 @@
             this.btnTahsilatMakbuzu = new DevExpress.XtraBars.BarButtonItem();
             this.btnTeslimatMakbuzu = new DevExpress.XtraBars.BarButtonItem();
             this.btnGeriIadeMakbuzu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnFatura = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDonemIcmalRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.btnTabloYazdir = new DevExpress.XtraBars.BarButtonItem();
             this.btnTasarimDegistir = new DevExpress.XtraBars.BarButtonItem();
@@ -192,6 +194,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.sagMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.btnOgrenciIcmalRaporu = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sagMenu)).BeginInit();
             this.SuspendLayout();
@@ -291,9 +294,12 @@
             this.btnTahsilatMakbuzu,
             this.barButtonItem5,
             this.btnTeslimatMakbuzu,
-            this.btnGeriIadeMakbuzu});
+            this.btnGeriIadeMakbuzu,
+            this.btnFatura,
+            this.btnDonemIcmalRaporu,
+            this.btnOgrenciIcmalRaporu});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 91;
+            this.ribbonControl.MaxItemId = 94;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -1162,7 +1168,10 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.btnGenelMakbuz),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTahsilatMakbuzu),
             new DevExpress.XtraBars.LinkPersistInfo(this.btnTeslimatMakbuzu),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnGeriIadeMakbuzu)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnGeriIadeMakbuzu),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnFatura),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDonemIcmalRaporu),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnOgrenciIcmalRaporu)});
             this.btnOnTanimliRaporlar.Name = "btnOnTanimliRaporlar";
             // 
             // btnOgrenciKartı
@@ -1245,6 +1254,22 @@
             this.btnGeriIadeMakbuzu.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
             this.btnGeriIadeMakbuzu.Name = "btnGeriIadeMakbuzu";
             this.btnGeriIadeMakbuzu.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnFatura
+            // 
+            this.btnFatura.Caption = "Fatura";
+            this.btnFatura.Id = 91;
+            this.btnFatura.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnFatura.Name = "btnFatura";
+            this.btnFatura.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnDonemIcmalRaporu
+            // 
+            this.btnDonemIcmalRaporu.Caption = "Dönem İcmal Raporu";
+            this.btnDonemIcmalRaporu.Id = 92;
+            this.btnDonemIcmalRaporu.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnDonemIcmalRaporu.Name = "btnDonemIcmalRaporu";
+            this.btnDonemIcmalRaporu.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // barButtonItem4
             // 
@@ -1371,6 +1396,14 @@
             this.sagMenu.Name = "sagMenu";
             this.sagMenu.Ribbon = this.ribbonControl;
             // 
+            // btnOgrenciIcmalRaporu
+            // 
+            this.btnOgrenciIcmalRaporu.Caption = "Öğrenci İcmal Raporu";
+            this.btnOgrenciIcmalRaporu.Id = 93;
+            this.btnOgrenciIcmalRaporu.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.addfile_16x16;
+            this.btnOgrenciIcmalRaporu.Name = "btnOgrenciIcmalRaporu";
+            this.btnOgrenciIcmalRaporu.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // BaseListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1487,5 +1520,8 @@
         protected DevExpress.XtraBars.BarButtonItem btnTahsilatMakbuzu;
         protected DevExpress.XtraBars.BarButtonItem btnTeslimatMakbuzu;
         protected DevExpress.XtraBars.BarButtonItem btnGeriIadeMakbuzu;
+        protected internal DevExpress.XtraBars.BarButtonItem btnFatura;
+        protected internal DevExpress.XtraBars.BarButtonItem btnDonemIcmalRaporu;
+        protected internal DevExpress.XtraBars.BarButtonItem btnOgrenciIcmalRaporu;
     }
 }

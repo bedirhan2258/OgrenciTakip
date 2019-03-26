@@ -112,6 +112,12 @@ namespace OgrenciTakip.Common.Enums
         [Description("Şube Kartı")]
         Sube = 52,
         [Description("Fatura Kartı")]
-        Fatura = 53
+        Fatura = 53,
+        [Description("Fatura Raporu")]
+        FaturaRaporu = 54,
+        [Description("Fatura Dönem İcmal Raporu")]
+        FaturaDonemIcmalRaporu = 55,
+        [Description("Fatura Öğrenci İcmal Raporu")]
+        FaturaOgrenciIcmalRaporu = 53
     }
 }
