@@ -1,5 +1,4 @@
-﻿
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
@@ -30,7 +29,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
         {
             oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new OgrenciS() : ((OgrenciBll)bll).Single(FilterFunctions.Filter<Ogrenci>(id));
             NesneyiKontrollereBagla();
-
+            TabloYukle();
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             id = BaseIslemTuru.IdOlustur(oldEntity);
             txtKod.Text = ((OgrenciBll)bll).YeniKodVer();
@@ -120,6 +119,12 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
             ButonEnabledDurumu();
         }
 
+        protected override void TabloYukle()
+        {
+            tahakkukBilgileriTable.OwnerForm = this;
+            tahakkukBilgileriTable.Yukle();
+        }
+
         protected override void SecimYap(object sender)
         {
             if (!(sender is ButtonEdit)) return;
@@ -153,5 +158,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
             if (!(sender is MyPictureEdit resim)) return;
             resim.Sec(resimMenu);
         }
+
+
     }
 }

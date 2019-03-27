@@ -68,7 +68,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
         {
             var entity = tablo.GetRow<KardesBilgileriL>();
             if (entity == null) return;
-            ShowEditForms<TahakkukEditForm>.ShowDialogEditForms(KartTuru.Tahakkuk, entity.KardesTahakkukId, entity.SubeId == AnaForm.SubeId);
+            ShowEditForms<TahakkukEditForm>.ShowDialogEditForms(KartTuru.Tahakkuk, entity.KardesTahakkukId, entity.SubeId != AnaForm.SubeId || entity.DonemId != AnaForm.DonemId);
         }
     }
 }

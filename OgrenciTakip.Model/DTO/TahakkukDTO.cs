@@ -56,5 +56,23 @@ namespace OgrenciTakip.Model.DTO
         public string SubeAdi { get; set; }
         public bool Durum { get; set; }
     }
+
+    public class OgrenciTahakkukL
+    {
+        public long TahakkukId { get; set; }
+        public long SubeId { get; set; }
+        public string SubeAdi { get; set; }
+        public long DonemId { get; set; }
+        public string DonemAdi { get; set; }
+        public decimal BrutHizmet { get; set; }
+        public decimal KistDonemDusulenHizmet { get; set; }
+        public decimal NetHizmet { get; set; }
+        public decimal BrutIndirim { get; set; }
+        public decimal KistDonemDusulenIndirim { get; set; }
+        public decimal NetIndirim { get; set; }
+        public decimal NetUcret { get; set; }
+        public decimal IndirimOrani { get; set; }
+
+    }
 }
 

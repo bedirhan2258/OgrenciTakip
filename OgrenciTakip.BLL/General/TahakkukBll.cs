@@ -292,5 +292,42 @@ namespace OgrenciTakip.BLL.General
                 OzelKod5 = x.Tahakkuk.OzelKod5.OzelKodAdi,
             }).OrderBy(x => x.OgrenciNo).ToList();
         }
+
+        public IEnumerable<OgrenciTahakkukL> OgrenciTahakkukList(Expression<Func<Tahakkuk, bool>> filter)
+        {
+            return BaseList(filter, x => new
+            {
+                Tahakkuk = x,
+                HizmetBilgileri = x.HizmetBilgileri.GroupBy(y => y.TahakkukId).DefaultIfEmpty().Select(y => new
+                {
+                    BrutHizmet = y.Select(z => z.BrutUcret).DefaultIfEmpty(0).Sum(),
+                    KistDonemDusulenHizmet = y.Select(z => z.KistDonemDusulenUcret).DefaultIfEmpty(0).Sum(),
+                    NetHizmet = y.Select(z => z.NetUcret).DefaultIfEmpty(0).Sum(),
+                }).FirstOrDefault(),
+
+                IndirimBilgileri = x.IndirimBilgileri.GroupBy(y => y.TahakkukId).DefaultIfEmpty().Select(y => new
+                {
+                    BrutIndirim = y.Select(z => z.BrutIndirim).DefaultIfEmpty(0).Sum(),
+                    KistDonemDusulenIndirim = y.Select(z => z.KistDonemDusulenIndirim).DefaultIfEmpty(0).Sum(),
+                    NetIndirim = y.Select(z => z.NetIndirim).DefaultIfEmpty(0).Sum(),
+                }).FirstOrDefault(),
+
+            }).Select(x => new OgrenciTahakkukL
+            {
+                TahakkukId = x.Tahakkuk.Id,
+                SubeId = x.Tahakkuk.SubeId,
+                SubeAdi = x.Tahakkuk.Sube.SubeAdi,
+                DonemId = x.Tahakkuk.DonemId,
+                DonemAdi = x.Tahakkuk.Donem.DonemAdi,
+                BrutHizmet = x.HizmetBilgileri.BrutHizmet,
+                KistDonemDusulenHizmet = x.HizmetBilgileri.KistDonemDusulenHizmet,
+                NetHizmet = x.HizmetBilgileri.NetHizmet,
+                BrutIndirim = x.IndirimBilgileri.BrutIndirim,
+                KistDonemDusulenIndirim = x.IndirimBilgileri.KistDonemDusulenIndirim,
+                NetIndirim = x.IndirimBilgileri.NetIndirim,
+                NetUcret = x.HizmetBilgileri.NetHizmet - x.IndirimBilgileri.NetIndirim,
+                IndirimOrani = x.HizmetBilgileri.NetHizmet == 0 ? 0 : x.IndirimBilgileri.NetIndirim / x.HizmetBilgileri.NetHizmet * 100
+            }).OrderBy(x => x.TahakkukId).ToList();
+        }
     }
 }

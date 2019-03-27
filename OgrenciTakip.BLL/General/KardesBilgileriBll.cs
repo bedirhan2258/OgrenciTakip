@@ -30,6 +30,7 @@ namespace OgrenciTakip.BLL.General
                 KayitDurumu = x.KardesTahakkuk.KayitDurumu,
                 IptalDurumu = x.KardesTahakkuk.Durum ? IptalDurumu.DevamEdiyor : IptalDurumu.IptalEdildi,
                 SubeAdi = x.KardesTahakkuk.Sube.SubeAdi,
+                DonemId = x.KardesTahakkuk.DonemId,
                 SubeId = x.KardesTahakkuk.SubeId
             }).ToList();
         }

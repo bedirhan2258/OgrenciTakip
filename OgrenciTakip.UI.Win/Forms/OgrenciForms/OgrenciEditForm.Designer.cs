@@ -110,7 +110,10 @@
             this.layoutControlItem25 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem24 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem23 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tahakkukBilgileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable.TahakkukBilgileriTable();
+            this.layoutControlItem31 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).BeginInit();
@@ -176,6 +179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -186,6 +190,7 @@
             // 
             // myDataLayoutControl
             // 
+            this.myDataLayoutControl.Controls.Add(this.tahakkukBilgileriTable);
             this.myDataLayoutControl.Controls.Add(this.txtKod);
             this.myDataLayoutControl.Controls.Add(this.tglDurum);
             this.myDataLayoutControl.Controls.Add(this.imgResim);
@@ -276,7 +281,6 @@
             this.imgResim.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.imgResim.Properties.ShowMenu = false;
             this.imgResim.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.imgResim.Properties.ZoomAccelerationFactor = 1D;
             this.imgResim.Size = new System.Drawing.Size(146, 164);
             this.imgResim.StatusBarAciklama = "Resim Seçiniz.";
             this.imgResim.StatusBarKisayol = "F4 :";
@@ -770,9 +774,9 @@
             this.layoutControlItem26,
             this.layoutControlItem25,
             this.layoutControlItem24,
-            this.layoutControlItem23});
+            this.layoutControlItem23,
+            this.layoutControlItem31});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
-            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
             columnDefinition1.Width = 132D;
@@ -1284,6 +1288,26 @@
             this.layoutControlItem23.TextSize = new System.Drawing.Size(70, 20);
             this.layoutControlItem23.TextToControlDistance = 5;
             // 
+            // tahakkukBilgileriTable
+            // 
+            this.tahakkukBilgileriTable.Location = new System.Drawing.Point(12, 228);
+            this.tahakkukBilgileriTable.Name = "tahakkukBilgileriTable";
+            this.tahakkukBilgileriTable.Size = new System.Drawing.Size(857, 221);
+            this.tahakkukBilgileriTable.TabIndex = 30;
+            // 
+            // layoutControlItem31
+            // 
+            this.layoutControlItem31.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem31.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem31.Control = this.tahakkukBilgileriTable;
+            this.layoutControlItem31.Location = new System.Drawing.Point(0, 216);
+            this.layoutControlItem31.Name = "layoutControlItem31";
+            this.layoutControlItem31.OptionsTableLayoutItem.ColumnSpan = 9;
+            this.layoutControlItem31.OptionsTableLayoutItem.RowIndex = 9;
+            this.layoutControlItem31.Size = new System.Drawing.Size(861, 225);
+            this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem31.TextVisible = false;
+            // 
             // OgrenciEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1295,6 +1319,7 @@
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtKod.Properties)).EndInit();
@@ -1360,6 +1385,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem31)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1429,5 +1455,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem25;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem24;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem23;
+        private UserControls.UserControl.TahakkukEditFormTable.TahakkukBilgileriTable tahakkukBilgileriTable;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem31;
     }
 }

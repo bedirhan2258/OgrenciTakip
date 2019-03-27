@@ -18,6 +18,7 @@ namespace OgrenciTakip.Model.DTO
         public IptalDurumu IptalDurumu { get; set; }
         public string SubeAdi { get; set; }
         public long SubeId { get; set; }
+        public long DonemId { get; set; }
 
         public bool Insert { get; set; }
         public bool Update { get; set; }
