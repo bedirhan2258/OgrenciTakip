@@ -108,5 +108,10 @@ namespace OgrenciTakip.Common.Message
             return HayirSeciliEvetHayir("Rapor Tasarım Görünümde Açılacaktır.Onaylıyor musunuz?", "Onay");
         }
 
+        public static DialogResult RaporKapatMesaj()
+        {
+            return HayirSeciliEvetHayir("Rapor Kapatılacaktır Onaylıyor Musunuz?", "Onay");
+        }
+
     }
 }

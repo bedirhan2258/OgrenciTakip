@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Ogrenci;
+            BaseKartTuru = KartTuru.Ogrenci;
             formShow = new ShowEditForms<OgrenciEditForm>();
             navigator = longNavigator.Navigator;
 

@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.IsyeriForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Isyeri;
+            BaseKartTuru = KartTuru.Isyeri;
             formShow = new ShowEditForms<IsyeriEditForm>();
             navigator = longNavigator.Navigator;
            

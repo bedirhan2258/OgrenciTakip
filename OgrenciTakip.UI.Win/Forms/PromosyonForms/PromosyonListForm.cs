@@ -32,7 +32,7 @@ namespace OgrenciTakip.UI.Win.Forms.PromosyonForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Promosyon;
+            BaseKartTuru = KartTuru.Promosyon;
             navigator = longNavigator.Navigator;
             formShow = new ShowEditForms<PromosyonEditForm>();
         }

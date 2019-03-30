@@ -29,7 +29,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Ilce;
+            BaseKartTuru = KartTuru.Ilce;
             // formShow = new ShowEditForms<IlceEditForm>();
             navigator = longNavigator.Navigator;
             Text = Text + $" - ( {_ilAdi} )";

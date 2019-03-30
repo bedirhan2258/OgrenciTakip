@@ -34,7 +34,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Tahakkuk;
+            BaseKartTuru = KartTuru.Tahakkuk;
             formShow = new ShowEditForms<TahakkukEditForm>();
             navigator = longNavigator.Navigator;
         }

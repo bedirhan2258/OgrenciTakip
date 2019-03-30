@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimTuruForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.IndirimTuru;
+            BaseKartTuru = KartTuru.IndirimTuru;
             formShow = new ShowEditForms<IndirimTuruEditForm>();
             navigator = longNavigator.Navigator;
             

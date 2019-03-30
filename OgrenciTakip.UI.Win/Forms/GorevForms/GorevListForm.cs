@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.GorevForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Gorev;
+            BaseKartTuru = KartTuru.Gorev;
             formShow = new ShowEditForms<GorevEditForm>();
             navigator = longNavigator.Navigator;
             

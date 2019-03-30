@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.YakinlikForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Yakinlik;
+            BaseKartTuru = KartTuru.Yakinlik;
             formShow = new ShowEditForms<YakinlikEditForm>();
             navigator = longNavigator.Navigator;
            

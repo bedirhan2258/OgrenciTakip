@@ -20,7 +20,7 @@ namespace OgrenciTakip.UI.Win.Forms.AvukatForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Avukat;
+            BaseKartTuru = KartTuru.Avukat;
             formShow = new ShowEditForms<AvukatEditForm>();
             navigator = longNavigator.Navigator;
 

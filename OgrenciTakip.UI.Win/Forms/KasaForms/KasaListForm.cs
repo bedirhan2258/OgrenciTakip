@@ -17,7 +17,7 @@ namespace OgrenciTakip.UI.Win.Forms.KasaForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Kasa;
+            BaseKartTuru = KartTuru.Kasa;
             formShow = new ShowEditForms<KasaEditForm>();
             navigator = longNavigator.Navigator;
         }

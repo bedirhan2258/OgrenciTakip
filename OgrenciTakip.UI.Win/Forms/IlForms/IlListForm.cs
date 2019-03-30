@@ -23,7 +23,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Il;
+            BaseKartTuru = KartTuru.Il;
             formShow = new ShowEditForms<IlEditForm>();
             navigator = longNavigator.Navigator;
             if (IsMdiChild)

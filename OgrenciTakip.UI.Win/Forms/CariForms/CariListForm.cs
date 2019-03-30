@@ -20,7 +20,7 @@ namespace OgrenciTakip.UI.Win.Forms.CariForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Cari;
+            BaseKartTuru = KartTuru.Cari;
             formShow = new ShowEditForms<CariEditForm>();
             navigator = longNavigator.Navigator;
         }

@@ -20,7 +20,7 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetTuruForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.HizmetTuru;
+            BaseKartTuru = KartTuru.HizmetTuru;
             formShow = new ShowEditForms<HizmetTuruEditForm>();
             navigator = longNavigator.Navigator;
          

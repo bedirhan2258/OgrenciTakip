@@ -42,7 +42,7 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Hizmet;
+            BaseKartTuru = KartTuru.Hizmet;
             formShow = new ShowEditForms<HizmetEditForm>();
             navigator = longNavigator.Navigator; 
             TarihAyarla();

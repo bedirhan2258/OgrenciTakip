@@ -35,7 +35,7 @@ namespace OgrenciTakip.UI.Win.Forms.EvrakForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Evrak;
+            BaseKartTuru = KartTuru.Evrak;
             navigator = longNavigator.Navigator;
             formShow = new ShowEditForms<EvrakEditForm>();
         }

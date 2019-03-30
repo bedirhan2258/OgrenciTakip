@@ -23,7 +23,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Banka;
+            BaseKartTuru = KartTuru.Banka;
             formShow = new ShowEditForms<BankaEditForm>();
             navigator = longNavigator.Navigator;
             if (IsMdiChild)

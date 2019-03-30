@@ -32,7 +32,7 @@ namespace OgrenciTakip.UI.Win.Forms.FaturaForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Fatura;
+            BaseKartTuru = KartTuru.Fatura;
             navigator = longNavigator.Navigator;
         }
 

@@ -43,7 +43,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Hizmet;
+            BaseKartTuru = KartTuru.Hizmet;
             navigator = longNavigator.Navigator;
             Text = $"{Text}-{_makbuzTuru.ToName()} - ( {_hesapTuru.ToName()} )";
         }

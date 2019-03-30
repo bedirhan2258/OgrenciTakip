@@ -30,7 +30,7 @@ namespace OgrenciTakip.UI.Win.Forms.RaporForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Rapor;
+            BaseKartTuru = KartTuru.Rapor;
             formShow = new ShowEditForms<RaporEditForm>();
             navigator = longNavigator.Navigator;
         }

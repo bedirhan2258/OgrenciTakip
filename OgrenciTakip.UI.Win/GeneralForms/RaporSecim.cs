@@ -83,7 +83,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Rapor;
+            BaseKartTuru = KartTuru.Rapor;
             navigator = smallNavigator.Navigator;
 
             if (_raporBolumTuru == RaporBolumTuru.FaturaDonemRaporlari || _raporBolumTuru == RaporBolumTuru.FaturaGenelRaporlar || _raporBolumTuru == RaporBolumTuru.MakbuzRaporlari)

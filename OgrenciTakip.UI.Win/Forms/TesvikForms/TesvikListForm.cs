@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.TesvikForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Tesvik;
+            BaseKartTuru = KartTuru.Tesvik;
             formShow = new ShowEditForms<TesvikEditForm>();
             navigator = longNavigator.Navigator;
            

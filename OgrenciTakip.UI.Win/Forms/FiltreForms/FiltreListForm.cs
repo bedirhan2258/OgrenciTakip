@@ -29,7 +29,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         protected override void DegiskenleriDoldur()
         {
             base.Tablo = tablo;
-            kartTuru = KartTuru.Filtre;
+            BaseKartTuru = KartTuru.Filtre;
             // formShow = new ShowEditForms<IlceEditForm>();
             navigator = longNavigator.Navigator;
         }

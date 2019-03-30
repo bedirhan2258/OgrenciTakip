@@ -33,7 +33,7 @@ namespace OgrenciTakip.UI.Win.Forms.IletisimForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Iletisim;
+            BaseKartTuru = KartTuru.Iletisim;
             formShow = new ShowEditForms<IletisimEditForm>();
             navigator = longNavigator.Navigator;
         }

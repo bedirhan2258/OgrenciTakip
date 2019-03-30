@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.RehberForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Rehber;
+            BaseKartTuru = KartTuru.Rehber;
             formShow = new ShowEditForms<RehberEditForm>();
             navigator = longNavigator.Navigator;    
         }

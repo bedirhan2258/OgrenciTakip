@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaSubeForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.BankaSube;
+            BaseKartTuru = KartTuru.BankaSube;
             navigator = longNavigator.Navigator;
             Text = Text + $" - ( {_bankaAdi} ) ";
         }

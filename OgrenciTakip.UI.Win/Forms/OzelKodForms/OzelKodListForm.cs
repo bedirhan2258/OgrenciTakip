@@ -25,7 +25,7 @@ namespace OgrenciTakip.UI.Win.Forms.OzelKodForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.OzelKod;
+            BaseKartTuru = KartTuru.OzelKod;
             navigator = longNavigator.Navigator;
             Text = $"{Text} - ( {_ozelKodTuru.ToName()} )";
         }

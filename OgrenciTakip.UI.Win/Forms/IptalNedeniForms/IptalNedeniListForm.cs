@@ -20,7 +20,7 @@ namespace OgrenciTakip.UI.Win.IptalNedeniForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.IptalNedeni;
+            BaseKartTuru = KartTuru.IptalNedeni;
             formShow = new ShowEditForms<IptalNedeniEditForm>();
             navigator = longNavigator.Navigator;
            

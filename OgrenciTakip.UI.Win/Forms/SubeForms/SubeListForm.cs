@@ -33,7 +33,7 @@ namespace OgrenciTakip.UI.Win.Forms.SubeForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Sube;
+            BaseKartTuru = KartTuru.Sube;
             formShow = new ShowEditForms<SubeEditForm>();
             navigator = longNavigator.Navigator;
         }

@@ -28,7 +28,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.BelgeHareketleri;
+            BaseKartTuru = KartTuru.BelgeHareketleri;
             navigator = longNavigator.Navigator;
             navigator.TextStringFormat = "Belge Hareketleri ( {0} / {1} )";
         }

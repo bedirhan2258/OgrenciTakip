@@ -35,6 +35,7 @@ using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Forms.MakbuzForms;
 using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Forms.FaturaForms;
+using System.Collections.Generic;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -69,6 +70,8 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static long? DefaultAvukatHesapId;
         public static string DefaultAvukatHesapAdi;
         public static long KullaniciId = 1;
+        public static bool RaporlariOnayAlmadanKapat = false;
+        public static List<long> YetkiliOlunanSubeler = new List<long> { 1, 2019031701050868106 };
 
         public AnaForm()
         {
@@ -223,7 +226,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Fatura);
             }
-            else if(e.Item==btnFaturaTahakkukKarti)
+            else if (e.Item == btnFaturaTahakkukKarti)
             {
                 ShowEditForms<FaturaTahakkukEditForm>.ShowDialogEditForms(KartTuru.Fatura);
             }

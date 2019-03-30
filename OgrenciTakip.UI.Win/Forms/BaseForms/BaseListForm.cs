@@ -28,7 +28,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         private bool _formSablonKayitEdilecek;
 
         protected IBaseFormShow formShow;
-        protected KartTuru kartTuru;
+        protected KartTuru BaseKartTuru;
         protected IBaseBll bll;
         protected BarItem[] ShowItems;
         protected BarItem[] HideItems;
@@ -176,7 +176,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         private void FiltreSec()
         {
-            var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, kartTuru, Tablo.GridControl);
+            var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
             if (entity == null) return;
             _filtreId = entity.Id;
             Tablo.ActiveFilterString = entity.FiltreMetni;
@@ -190,7 +190,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         protected virtual void ShowEditForm(long id)
         {
-            var result = formShow.ShowDialogEditForms(kartTuru, id);
+            var result = formShow.ShowDialogEditForms(BaseKartTuru, id);
             ShowEditFormDefault(result);
 
         }
@@ -253,7 +253,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         private void Tablo_CustomDrawFooterCell(object sender, FooterCellCustomDrawEventArgs e)
         {
             if (!Tablo.OptionsView.ShowFooter) return;
-            if (e.Column.Summary.Count > 0)
+            if (e.Column.Summary.Count > 0 && e.Column.ColumnEdit != null)
                 e.Appearance.TextOptions.HAlignment = e.Column.ColumnEdit.Appearance.HAlignment;
         }
         private void Tablo_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
@@ -268,7 +268,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
         {
             e.ShowFilterEditor = false;
-            ShowEditForms<FiltreEditForm>.ShowDialogEditForms(KartTuru.Filtre, _filtreId, kartTuru, Tablo.GridControl);
+            ShowEditForms<FiltreEditForm>.ShowDialogEditForms(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
 
         }
 

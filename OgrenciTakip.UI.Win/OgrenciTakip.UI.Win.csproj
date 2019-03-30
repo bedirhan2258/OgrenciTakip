@@ -533,6 +533,12 @@
     <Compile Include="Forms\SubeForms\SubeListForm.Designer.cs">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\Base\BaseRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\Base\BaseRapor.Designer.cs">
+      <DependentUpon>BaseRapor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1153,6 +1159,9 @@
     <EmbeddedResource Include="Forms\SubeForms\SubeListForm.resx">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\Base\BaseRapor.resx">
+      <DependentUpon>BaseRapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.resx">
       <DependentUpon>FaturaDonemIcmalRaporu.cs</DependentUpon>
     </EmbeddedResource>
@@ -1533,7 +1542,40 @@
     <None Include="Resources\design_32x32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reports\FormReports\" />
+    <None Include="Resources\design_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\design_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptytablerowseparator_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emptytablerowseparator_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\separator_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\separator_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

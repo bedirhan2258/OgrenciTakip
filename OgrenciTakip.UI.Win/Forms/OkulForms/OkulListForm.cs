@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Okul;
+            BaseKartTuru = KartTuru.Okul;
             Text = Text + "Okul Kartları";
             formShow = new ShowEditForms<OkulEditForm>();
             navigator = longNavigator.Navigator;

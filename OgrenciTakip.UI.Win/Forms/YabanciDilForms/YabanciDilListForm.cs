@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.YabanciDil;
+            BaseKartTuru = KartTuru.YabanciDil;
             formShow = new ShowEditForms<YabanciDİlEditForm>();
             navigator = longNavigator.Navigator;
           

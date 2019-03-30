@@ -53,7 +53,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaHesapForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.BankaHesap;
+            BaseKartTuru = KartTuru.BankaHesap;
             formShow = new ShowEditForms<BankaHesapEditForm>();
             navigator = longNavigator.Navigator;
         }

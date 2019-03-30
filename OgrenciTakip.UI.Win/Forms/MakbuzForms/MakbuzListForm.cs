@@ -24,7 +24,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Makbuz;
+            BaseKartTuru = KartTuru.Makbuz;
             formShow = new ShowEditForms<MakbuzEditForm>();
             navigator = longNavigator.Navigator;
         }

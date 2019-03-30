@@ -19,7 +19,7 @@ namespace OgrenciTakip.UI.Win.Forms.MeslekForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Meslek;
+            BaseKartTuru = KartTuru.Meslek;
             formShow = new ShowEditForms<MeslekEditForm>();
             navigator = longNavigator.Navigator;
            

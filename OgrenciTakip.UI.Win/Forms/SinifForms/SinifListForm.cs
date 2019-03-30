@@ -17,7 +17,7 @@ namespace OgrenciTakip.UI.Win.Forms.SinifForms
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            kartTuru = KartTuru.Sinif;
+            BaseKartTuru = KartTuru.Sinif;
             navigator = longNavigator.Navigator;
             formShow = new ShowEditForms<SinifEditForm>();
         }
