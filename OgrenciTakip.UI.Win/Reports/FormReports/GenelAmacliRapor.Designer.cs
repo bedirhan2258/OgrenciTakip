@@ -145,7 +145,7 @@
             this.colVeliIsAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeliIsAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeliIsAdresIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.longNavigator1 = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
             this.btnRaporHazirla = new OgrenciTakip.UI.Win.UserControls.Controls.MySimpleButton();
             this.txtIptalDurumu = new OgrenciTakip.UI.Win.UserControls.Controls.MyCheckedComboBoxEdit();
             this.txtKayitDurumu = new OgrenciTakip.UI.Win.UserControls.Controls.MyCheckedComboBoxEdit();
@@ -211,7 +211,7 @@
             // myDataLayoutControl
             // 
             this.myDataLayoutControl.Controls.Add(this.grid);
-            this.myDataLayoutControl.Controls.Add(this.longNavigator1);
+            this.myDataLayoutControl.Controls.Add(this.longNavigator);
             this.myDataLayoutControl.Controls.Add(this.btnRaporHazirla);
             this.myDataLayoutControl.Controls.Add(this.txtIptalDurumu);
             this.myDataLayoutControl.Controls.Add(this.txtKayitDurumu);
@@ -2058,12 +2058,12 @@
             this.colVeliIsAdresIlce.Visible = true;
             this.colVeliIsAdresIlce.Width = 90;
             // 
-            // longNavigator1
+            // longNavigator
             // 
-            this.longNavigator1.Location = new System.Drawing.Point(2, 402);
-            this.longNavigator1.Name = "longNavigator1";
-            this.longNavigator1.Size = new System.Drawing.Size(1011, 22);
-            this.longNavigator1.TabIndex = 9;
+            this.longNavigator.Location = new System.Drawing.Point(2, 402);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1011, 22);
+            this.longNavigator.TabIndex = 9;
             // 
             // btnRaporHazirla
             // 
@@ -2293,7 +2293,7 @@
             // 
             this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem6.Control = this.longNavigator1;
+            this.layoutControlItem6.Control = this.longNavigator;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 398);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.OptionsTableLayoutItem.ColumnSpan = 7;
@@ -2352,7 +2352,7 @@
         #endregion
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
-        private UserControls.Navigators.LongNavigator longNavigator1;
+        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Controls.MySimpleButton btnRaporHazirla;
         private UserControls.Controls.MyCheckedComboBoxEdit txtIptalDurumu;
         private UserControls.Controls.MyCheckedComboBoxEdit txtKayitDurumu;

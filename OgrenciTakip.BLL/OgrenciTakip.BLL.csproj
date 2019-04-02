@@ -78,6 +78,7 @@
     <Compile Include="General\EvrakBll.cs" />
     <Compile Include="General\FaturaBll.cs" />
     <Compile Include="General\FiltreBLL.cs" />
+    <Compile Include="General\GenelAmacliRaporBll.cs" />
     <Compile Include="General\GeriOdemeBilgileriBll.cs" />
     <Compile Include="General\GorevBll.cs" />
     <Compile Include="General\HizmetBilgileriBll.cs" />

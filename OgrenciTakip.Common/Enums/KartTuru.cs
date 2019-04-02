@@ -118,6 +118,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Fatura Dönem İcmal Raporu")]
         FaturaDonemIcmalRaporu = 55,
         [Description("Fatura Öğrenci İcmal Raporu")]
-        FaturaOgrenciIcmalRaporu = 53
+        FaturaOgrenciIcmalRaporu = 53,
+        [Description("Genel Amaçlı Rapor")]
+        GenelAmacliRapor = 54
     }
 }

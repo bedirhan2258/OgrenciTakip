@@ -55,7 +55,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
             ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
         }
 
-        protected internal void DegiskenleriDoldur() { }
+        protected virtual void DegiskenleriDoldur() { }
 
         private void EventsLoad()
         {

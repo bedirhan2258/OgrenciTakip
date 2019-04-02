@@ -337,6 +337,11 @@ namespace OgrenciTakip.UI.Win.Functions
             return stream;
         }
 
+        public static IEnumerable<T> CheckedComboBoxList<T>(this MyCheckedComboBoxEdit comboBox)
+        {
+            return comboBox.Properties.Items.Where(x => x.CheckState == CheckState.Checked).Select(x => (T)x.Value);
+        }
+
     }
 }
 
