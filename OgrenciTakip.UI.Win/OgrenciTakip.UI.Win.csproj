@@ -746,6 +746,7 @@
     </Compile>
     <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
     <Compile Include="Show\ShowEditForms.cs" />
+    <Compile Include="Show\ShowEditReports.cs" />
     <Compile Include="Show\ShowListForms.cs" />
     <Compile Include="Show\ShowRibbonForms.cs" />
     <Compile Include="UserControls\Controls\EmailTextEdit.cs">

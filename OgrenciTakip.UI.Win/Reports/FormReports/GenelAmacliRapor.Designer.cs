@@ -134,7 +134,7 @@
             this.colVeliKartNo = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeliEvAdres = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeliEvAdresIl = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
-            this.colVeliEvAdresIlce = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
+            this.colVeliEvAdresIlceAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeriAnaAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeliBabaAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
             this.colVeliDogumYeri = new OgrenciTakip.UI.Win.UserControls.Grid.MyBandedGridColumn();
@@ -325,7 +325,7 @@
             this.colVeliEmail,
             this.colVeliEvAdres,
             this.colVeliEvAdresIl,
-            this.colVeliEvAdresIlce,
+            this.colVeliEvAdresIlceAdi,
             this.colVeliIsAdres,
             this.colVeliIsAdresIl,
             this.colVeliIsAdresIlce,
@@ -364,6 +364,29 @@
             this.tablo.FormatRules.Add(gridFormatRule1);
             this.tablo.GridControl = this.grid;
             this.tablo.GroupCount = 1;
+            this.tablo.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutHizmet", this.colBrutHizmet, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenHizmet", this.colKistDonemDusulenHizmet, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetHizmet", this.colNetHizmet, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutIndirim", this.colBrutIndirim, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenIndirim", this.colKistDonemDusulenIndirim, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetIndirim", this.colNetIndirim, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetUcret", this.colNetUcret, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Custom, "IndirimOrani", this.colIndirimOrani, "{0:f} %"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Acik", this.colAcik, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Cek", this.colCek, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Elden", this.colElden, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Epos", this.colEpos, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Ots", this.colOts, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Pos", this.colPos, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Senet", this.colSenet, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ToplamOdeme", this.colToplamOdeme, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GeriOdenen", this.colGeriOdeme, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Iade", this.colGeriIade, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetOdeme", this.colNetOdeme, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tahsil", this.colTahsilEdilen, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tahsilde", this.colTahsildeOlan, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Kalan", this.colKalan, "{0:n2}")});
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
             this.tablo.OptionsMenu.EnableFooterMenu = false;
@@ -613,7 +636,7 @@
             this.colTesvik.AppearanceHeader.Options.UseTextOptions = true;
             this.colTesvik.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTesvik.Caption = "Teşvik Türü";
-            this.colTesvik.FieldName = "TesvikTuru";
+            this.colTesvik.FieldName = "TesvikAdi";
             this.colTesvik.Name = "colTesvik";
             this.colTesvik.OptionsColumn.AllowEdit = false;
             this.colTesvik.StatusBarAciklama = null;
@@ -761,6 +784,9 @@
             // 
             // colNetUcret
             // 
+            this.colNetUcret.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.colNetUcret.AppearanceCell.Options.HighPriority = true;
+            this.colNetUcret.AppearanceCell.Options.UseBackColor = true;
             this.colNetUcret.AppearanceHeader.Options.UseTextOptions = true;
             this.colNetUcret.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNetUcret.Caption = "Net Ücret";
@@ -1049,6 +1075,9 @@
             // 
             // colToplamOdeme
             // 
+            this.colToplamOdeme.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.colToplamOdeme.AppearanceCell.Options.HighPriority = true;
+            this.colToplamOdeme.AppearanceCell.Options.UseBackColor = true;
             this.colToplamOdeme.AppearanceCell.Options.UseTextOptions = true;
             this.colToplamOdeme.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colToplamOdeme.AppearanceHeader.Options.UseTextOptions = true;
@@ -1090,7 +1119,7 @@
             this.colGeriOdeme.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colGeriOdeme.Caption = "Geri Ödeme";
             this.colGeriOdeme.ColumnEdit = this.repositoryDecimal;
-            this.colGeriOdeme.FieldName = "GeriOdeme";
+            this.colGeriOdeme.FieldName = "GeriOdenen";
             this.colGeriOdeme.Name = "colGeriOdeme";
             this.colGeriOdeme.OptionsColumn.AllowEdit = false;
             this.colGeriOdeme.StatusBarAciklama = null;
@@ -1103,6 +1132,9 @@
             // 
             // colNetOdeme
             // 
+            this.colNetOdeme.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.colNetOdeme.AppearanceCell.Options.HighPriority = true;
+            this.colNetOdeme.AppearanceCell.Options.UseBackColor = true;
             this.colNetOdeme.AppearanceHeader.Options.UseTextOptions = true;
             this.colNetOdeme.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNetOdeme.Caption = "Net Ödeme";
@@ -1252,7 +1284,7 @@
             this.colKanGrubu.AppearanceHeader.Options.UseTextOptions = true;
             this.colKanGrubu.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colKanGrubu.Caption = "Kan Grubu";
-            this.colKanGrubu.FieldName = "Kan Grubu";
+            this.colKanGrubu.FieldName = "KanGrubu";
             this.colKanGrubu.Name = "colKanGrubu";
             this.colKanGrubu.OptionsColumn.AllowEdit = false;
             this.colKanGrubu.StatusBarAciklama = null;
@@ -1577,6 +1609,9 @@
             // 
             // colKalan
             // 
+            this.colKalan.AppearanceCell.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.colKalan.AppearanceCell.Options.HighPriority = true;
+            this.colKalan.AppearanceCell.Options.UseBackColor = true;
             this.colKalan.AppearanceHeader.Options.UseTextOptions = true;
             this.colKalan.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colKalan.Caption = "Kalan";
@@ -1618,7 +1653,7 @@
             this.bandVeliBilgileri.Columns.Add(this.colVeliKartNo);
             this.bandVeliBilgileri.Columns.Add(this.colVeliEvAdres);
             this.bandVeliBilgileri.Columns.Add(this.colVeliEvAdresIl);
-            this.bandVeliBilgileri.Columns.Add(this.colVeliEvAdresIlce);
+            this.bandVeliBilgileri.Columns.Add(this.colVeliEvAdresIlceAdi);
             this.bandVeliBilgileri.Columns.Add(this.colVeriAnaAdi);
             this.bandVeliBilgileri.Columns.Add(this.colVeliBabaAdi);
             this.bandVeliBilgileri.Columns.Add(this.colVeliDogumYeri);
@@ -1784,7 +1819,7 @@
             this.colVeliIsTel2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colVeliIsTel2.Caption = "İş Telefonu-2";
             this.colVeliIsTel2.CustomizationCaption = "Veli İş Telefonu-2";
-            this.colVeliIsTel2.FieldName = "colVeliIsTel2";
+            this.colVeliIsTel2.FieldName = "VeliIsTel2";
             this.colVeliIsTel2.Name = "colVeliIsTel2";
             this.colVeliIsTel2.OptionsColumn.AllowEdit = false;
             this.colVeliIsTel2.StatusBarAciklama = null;
@@ -1889,20 +1924,20 @@
             this.colVeliEvAdresIl.Visible = true;
             this.colVeliEvAdresIl.Width = 90;
             // 
-            // colVeliEvAdresIlce
+            // colVeliEvAdresIlceAdi
             // 
-            this.colVeliEvAdresIlce.AppearanceHeader.Options.UseTextOptions = true;
-            this.colVeliEvAdresIlce.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colVeliEvAdresIlce.Caption = "İlçe";
-            this.colVeliEvAdresIlce.CustomizationCaption = "Veli Ev Adres İlçe";
-            this.colVeliEvAdresIlce.FieldName = "colVeliEvAdresIlce";
-            this.colVeliEvAdresIlce.Name = "colVeliEvAdresIlce";
-            this.colVeliEvAdresIlce.OptionsColumn.AllowEdit = false;
-            this.colVeliEvAdresIlce.StatusBarAciklama = null;
-            this.colVeliEvAdresIlce.StatusBarKisayol = null;
-            this.colVeliEvAdresIlce.StatusBarKisayolAciklama = null;
-            this.colVeliEvAdresIlce.Visible = true;
-            this.colVeliEvAdresIlce.Width = 90;
+            this.colVeliEvAdresIlceAdi.AppearanceHeader.Options.UseTextOptions = true;
+            this.colVeliEvAdresIlceAdi.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colVeliEvAdresIlceAdi.Caption = "İlçe";
+            this.colVeliEvAdresIlceAdi.CustomizationCaption = "Veli Ev Adres İlçe";
+            this.colVeliEvAdresIlceAdi.FieldName = "VeliEvAdresIlceAdi";
+            this.colVeliEvAdresIlceAdi.Name = "colVeliEvAdresIlceAdi";
+            this.colVeliEvAdresIlceAdi.OptionsColumn.AllowEdit = false;
+            this.colVeliEvAdresIlceAdi.StatusBarAciklama = null;
+            this.colVeliEvAdresIlceAdi.StatusBarKisayol = null;
+            this.colVeliEvAdresIlceAdi.StatusBarKisayolAciklama = null;
+            this.colVeliEvAdresIlceAdi.Visible = true;
+            this.colVeliEvAdresIlceAdi.Width = 90;
             // 
             // colVeriAnaAdi
             // 
@@ -2429,7 +2464,7 @@
         private UserControls.Grid.MyBandedGridColumn colVeliEmail;
         private UserControls.Grid.MyBandedGridColumn colVeliEvAdres;
         private UserControls.Grid.MyBandedGridColumn colVeliEvAdresIl;
-        private UserControls.Grid.MyBandedGridColumn colVeliEvAdresIlce;
+        private UserControls.Grid.MyBandedGridColumn colVeliEvAdresIlceAdi;
         private UserControls.Grid.MyBandedGridColumn colVeliIsAdres;
         private UserControls.Grid.MyBandedGridColumn colVeliIsAdresIl;
         private UserControls.Grid.MyBandedGridColumn colVeliIsAdresIlce;

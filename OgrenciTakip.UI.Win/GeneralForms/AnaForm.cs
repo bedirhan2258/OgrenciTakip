@@ -36,6 +36,7 @@ using OgrenciTakip.UI.Win.Forms.MakbuzForms;
 using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Forms.FaturaForms;
 using System.Collections.Generic;
+using OgrenciTakip.UI.Win.Reports.FormReports;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -229,6 +230,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnFaturaTahakkukKarti)
             {
                 ShowEditForms<FaturaTahakkukEditForm>.ShowDialogEditForms(KartTuru.Fatura);
+            }
+
+            else if (e.Item == btnGenelAmacliRapor)
+            {
+                ShowEditReports<GenelAmacliRapor>.ShowEditReport(KartTuru.GenelAmacliRapor);
             }
         }
     }

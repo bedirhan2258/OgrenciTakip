@@ -18,7 +18,7 @@ namespace OgrenciTakip.Model.DTO
         public int Kiz { get; set; }
         public int Erkek { get; set; }
         public string Telefon { get; set; }
-        public string KanGrubu { get; set; }
+        public KanGrubu? KanGrubu { get; set; }
         public string BabaAdi { get; set; }
         public string AnaAdi { get; set; }
         public string DogumYeri { get; set; }
@@ -62,7 +62,7 @@ namespace OgrenciTakip.Model.DTO
         public string VeliAnaAdi { get; set; }
         public string VeliDogumYeri { get; set; }
         public DateTime? VeliDogumTarihi { get; set; }
-        public string VeliKanGrubu { get; set; }
+        public KanGrubu? VeliKanGrubu { get; set; }
         public string VeliEvTel { get; set; }
         public string VeliIsTel1 { get; set; }
         public string VeliIsTel2 { get; set; }

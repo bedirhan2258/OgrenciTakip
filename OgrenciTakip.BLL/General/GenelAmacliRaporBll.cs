@@ -57,7 +57,7 @@ namespace OgrenciTakip.BLL.General
                     Iade = y.Select(z => z.MakbuzHareketleri.Where(c => c.BelgeDurumu == BelgeDurumu.MusteriyeGeriIade).Select(c => c.IslemTutari).DefaultIfEmpty(0).Sum()).DefaultIfEmpty(0).Sum(),
 
                     Tahsilde = y.Select(z => z.MakbuzHareketleri.Where(c => c.BelgeDurumu == BelgeDurumu.AvukataGonderme || c.BelgeDurumu == BelgeDurumu.BankayaTahsileGonderme || c.BelgeDurumu == BelgeDurumu.CiroEtme || c.BelgeDurumu == BelgeDurumu.BlokeyeAlma).Select(c => c.IslemTutari).DefaultIfEmpty(0).Sum()).DefaultIfEmpty(0).Sum() - y.Select(z => z.MakbuzHareketleri.Where(c => c.BelgeDurumu == BelgeDurumu.KismiAvukatYoluylaTahsilEtme || c.BelgeDurumu == BelgeDurumu.AvukatYoluylaTahsilEtme ||
-                    c.BelgeDurumu == BelgeDurumu.BankayaTahsileGonderme || c.BelgeDurumu == BelgeDurumu.BlokeCozumu || c.BelgeDurumu == BelgeDurumu.OdenmisOlarakIsaretleme || c.BelgeDurumu == BelgeDurumu.PortfoyeGeriIade || c.BelgeDurumu == BelgeDurumu.PortfoyeKarsiliksizIade).Select(c => c.IslemTutari).DefaultIfEmpty(0).Sum()).DefaultIfEmpty(0).Sum(),
+                    c.BelgeDurumu == BelgeDurumu.BankaYoluylaTahsilEtme || c.BelgeDurumu == BelgeDurumu.BlokeCozumu || c.BelgeDurumu == BelgeDurumu.OdenmisOlarakIsaretleme || c.BelgeDurumu == BelgeDurumu.PortfoyeGeriIade || c.BelgeDurumu == BelgeDurumu.PortfoyeKarsiliksizIade).Select(c => c.IslemTutari).DefaultIfEmpty(0).Sum()).DefaultIfEmpty(0).Sum(),
                 }).FirstOrDefault(),
 
                 GeriOdemeBilgileri = x.GeriOdemeBilgileri.GroupBy(y => y.TahakkukId).DefaultIfEmpty().Select(y => new
@@ -78,7 +78,7 @@ namespace OgrenciTakip.BLL.General
                 Kiz = x.Tahakkuk.Ogrenci.Cinsiyet == Cinsiyet.Kiz ? 1 : 0,
                 Erkek = x.Tahakkuk.Ogrenci.Cinsiyet == Cinsiyet.Erkek ? 1 : 0,
                 Telefon = x.Tahakkuk.Ogrenci.Telefon,
-                KanGrubu = x.Tahakkuk.Ogrenci.KanGrubu.ToName(),
+                KanGrubu = x.Tahakkuk.Ogrenci.KanGrubu,
                 BabaAdi = x.Tahakkuk.Ogrenci.BabaAdi,
                 AnaAdi = x.Tahakkuk.Ogrenci.AnaAdi,
                 DogumYeri = x.Tahakkuk.Ogrenci.DogumYeri,
@@ -119,7 +119,7 @@ namespace OgrenciTakip.BLL.General
                 VeliAnaAdi = x.VeliBilgileri.Iletisim.AnaAdi,
                 VeliDogumYeri = x.VeliBilgileri.Iletisim.DogumYeri,
                 VeliDogumTarihi = x.VeliBilgileri.Iletisim.DogumTarihi,
-                VeliKanGrubu = x.VeliBilgileri.Iletisim.KanGrubu.ToName(),
+                VeliKanGrubu = x.VeliBilgileri.Iletisim.KanGrubu,
                 VeliEvTel = x.VeliBilgileri.Iletisim.EvTel,
                 VeliIsTel1 = x.VeliBilgileri.Iletisim.IsTel1,
                 VeliIsTel2 = x.VeliBilgileri.Iletisim.IsTel2,
