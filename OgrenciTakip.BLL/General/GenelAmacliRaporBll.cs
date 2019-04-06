@@ -107,6 +107,7 @@ namespace OgrenciTakip.BLL.General
                 TesvikAdi = x.Tahakkuk.Tesvik.TesvikAdi,
                 SubeId = x.Tahakkuk.SubeId,
                 SubeAdi = x.Tahakkuk.Sube.SubeAdi,
+                DonemId = x.Tahakkuk.DonemId,
                 OzelKod1 = x.Tahakkuk.OzelKod1.OzelKodAdi,
                 OzelKod2 = x.Tahakkuk.OzelKod2.OzelKodAdi,
                 OzelKod3 = x.Tahakkuk.OzelKod3.OzelKodAdi,

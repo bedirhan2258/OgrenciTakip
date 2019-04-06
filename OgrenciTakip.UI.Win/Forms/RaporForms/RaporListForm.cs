@@ -37,7 +37,7 @@ namespace OgrenciTakip.UI.Win.Forms.RaporForms
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((RaporBll)bll).List(FilterFunctions.Filter<Rapor>(aktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((RaporBll)bll).List(x => x.Durum == aktifKartlariGoster && x.RaporTuru == _raporTuru);
         }
 
         protected override void ShowEditForm(long id)

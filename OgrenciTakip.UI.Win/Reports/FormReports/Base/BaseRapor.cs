@@ -250,10 +250,15 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                 }
             }
 
-            //else if (e.Item == btnYazdir)
-            //{
-            //    Yazdir();
-            //}
+            else if (e.Item == btnYazdir)
+            {
+                switch (RaporTuru)
+                {
+                    case KartTuru.GenelAmacliRapor:
+                        TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text);
+                        break;
+                }
+            }
 
             else if (e.Item == btnRaporSablonları)
             {

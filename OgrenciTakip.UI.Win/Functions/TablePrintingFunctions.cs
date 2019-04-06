@@ -14,16 +14,31 @@ namespace OgrenciTakip.UI.Win.Functions
     {
         private static GridView _tablo;
         private static string _subeAdi;
+        private static string _kayitSekli;
+        private static string _kayitDurumu;
+        private static string _iptalDurumu;
+        private static string _p1Baslik;
+        private static string _p1Value;
+        private static string _p2Baslik;
+        private static string _p2Value;
         private static PrintableComponentLink _link;
         private static PrintingSystem _ps;
         private static DokumParametleri _dp;
 
-        public static void Yazdir(GridView tablo, string raporBaslik, string subeAdi)
+        public static void Yazdir(GridView tablo, string raporBaslik, string subeAdi, string kayitSekli = null, string kayitDurum = null, string iptalDurumu = null, string p1Baslik = null, string p1Value = null, string p2Baslik = null, string p2Value = null)
         {
             _link = new PrintableComponentLink();
             _ps = new PrintingSystem();
             _tablo = tablo;
             _subeAdi = subeAdi;
+            _kayitSekli = kayitSekli;
+            _kayitDurumu = kayitDurum;
+            _iptalDurumu = iptalDurumu;
+            _p1Baslik = p1Baslik;
+            _p1Value = p1Value;
+            _p2Baslik = p2Baslik;
+            _p2Value = p2Value;
+
             _dp = ShowEditForms<TabloDokumParametreleri>.ShowDialogEditForms<DokumParametleri>(raporBaslik);
 
             RaporDokumu();
@@ -119,6 +134,100 @@ namespace OgrenciTakip.UI.Win.Functions
 
             _ps.Graph.DrawBrick(donemValueBrick, new RectangleF(55, 40, 200, 15));
 
+            if (_kayitSekli != null)
+            {
+                var kayitSekliBaslikBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = boldFont,
+                    Text = "Kayıt Şekli :"
+                };
+
+                _ps.Graph.DrawBrick(kayitSekliBaslikBrick, new RectangleF(0, 55, 55, 15));
+
+                var kayitSekliValueBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = regularFont,
+                    Text = $": {_kayitSekli}"
+                };
+
+                _ps.Graph.DrawBrick(kayitSekliValueBrick, new RectangleF(55, 55, 250, 15));
+            }
+
+            if (_kayitDurumu != null)
+            {
+                var kayitDurumuBaslikBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = boldFont,
+                    Text = "Kayıt Durumu :"
+                };
+
+                _ps.Graph.DrawBrick(kayitDurumuBaslikBrick, new RectangleF(250, 40, 70, 15));
+
+                var kayitDurumuValueBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = regularFont,
+                    Text = $": {_kayitDurumu}"
+                };
+
+                _ps.Graph.DrawBrick(kayitDurumuValueBrick, new RectangleF(340, 40, 150, 15));
+            }
+
+            if (_iptalDurumu != null)
+            {
+                var baslikBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = boldFont,
+                    Text = "iptal Durumu :"
+                };
+
+                _ps.Graph.DrawBrick(baslikBrick, new RectangleF(250, 55, 70, 15));
+
+                var valueBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = regularFont,
+                    Text = $": {_iptalDurumu}"
+                };
+
+                _ps.Graph.DrawBrick(valueBrick, new RectangleF(340, 55, 150, 15));
+            }
+
+            if (_p1Baslik != null)
+            {
+                var baslikBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = boldFont,
+                    Text = _p1Baslik    
+                };
+
+                _ps.Graph.DrawBrick(baslikBrick, new RectangleF(500, 40, 67, 15));
+
+                var valueBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = regularFont,
+                    Text = $": {_p1Value}"
+                };
+
+                _ps.Graph.DrawBrick(valueBrick, new RectangleF(567, 40, 150, 15));
+            }
+
+            if (_p2Baslik != null)
+            {
+                var baslikBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = boldFont,
+                    Text = _p2Baslik
+                };
+
+                _ps.Graph.DrawBrick(baslikBrick, new RectangleF(250, 55, 90, 15));
+
+                var valueBrick = new TextBrick(BorderSide.None, 0, Color.Transparent, Color.Transparent, Color.Black)
+                {
+                    Font = regularFont,
+                    Text = $": {_p2Value}"
+                };
+
+                _ps.Graph.DrawBrick(valueBrick, new RectangleF(340, 55, 150, 15));
+            }
         }
 
         private static void RaporuKagidaSigdir()

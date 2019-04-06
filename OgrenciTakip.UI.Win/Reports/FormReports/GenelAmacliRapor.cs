@@ -1,8 +1,14 @@
-﻿using OgrenciTakip.BLL.General;
+﻿using DevExpress.Data;
+using DevExpress.XtraGrid;
+using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Model.DTO;
+using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Reports.FormReports.Base;
+using OgrenciTakip.UI.Win.Show;
+using System;
 using System.Linq;
 
 namespace OgrenciTakip.UI.Win.Reports.FormReports
@@ -50,5 +56,37 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
 
         }
 
+        protected override void ShowEditForm()
+        {
+            var entity = tablo.GetRow<GenelAmacliRaporL>();
+            if (entity == null) return;
+            ShowEditForms<TahakkukEditForm>.ShowDialogEditForms(KartTuru.Tahakkuk, entity.TahakkukId, entity.SubeId != AnaForm.SubeId || entity.DonemId != AnaForm.DonemId);
+        }
+
+        protected override void Tablo_CustomSummaryCalculate(object sender, CustomSummaryEventArgs e)
+        {
+            if (e.SummaryProcess != CustomSummaryProcess.Finalize) return;
+
+            var item = (GridSummaryItem)e.Item;
+            if (item.FieldName != "IndirimOrani") return;
+
+            //Grup toplami için hesaplama
+            if (e.IsGroupSummary)
+            {
+                var hizmetlerToplami = Convert.ToDecimal(Tablo.GetGroupSummaryValue(e.GroupRowHandle, (GridGroupSummaryItem)Tablo.GroupSummary["NetHizmet"]));
+                var indirimlerToplami = Convert.ToDecimal(Tablo.GetGroupSummaryValue(e.GroupRowHandle, (GridGroupSummaryItem)Tablo.GroupSummary["NetIndirim"]));
+
+                e.TotalValue = hizmetlerToplami == 0 ? 0 : indirimlerToplami / hizmetlerToplami * 100;
+            }
+
+            else if (e.IsTotalSummary)
+            {
+                var hizmetlerToplami = Convert.ToDecimal(colNetHizmet.SummaryItem.SummaryValue);
+                var indirimlerToplami = Convert.ToDecimal(colNetIndirim.SummaryItem.SummaryValue);
+
+                e.TotalValue = hizmetlerToplami == 0 ? 0 : indirimlerToplami / hizmetlerToplami * 100;
+            }
+        }
     }
+
 }

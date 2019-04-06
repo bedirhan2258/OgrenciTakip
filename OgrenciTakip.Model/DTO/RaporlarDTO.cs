@@ -9,6 +9,7 @@ namespace OgrenciTakip.Model.DTO
         public long OgrenciId { get; set; }
         public long TahakkukId { get; set; }
         public long SubeId { get; set; }
+        public long DonemId { get; set; }
         public string OgrenciNo { get; set; }
         public string OkulNo { get; set; }
         public string TcKimlikNo { get; set; }

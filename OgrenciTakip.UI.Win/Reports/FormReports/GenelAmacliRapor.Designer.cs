@@ -367,10 +367,10 @@
             this.tablo.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutHizmet", this.colBrutHizmet, "{0:n2}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenHizmet", this.colKistDonemDusulenHizmet, "{0:n2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetHizmet", this.colNetHizmet, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetHizmet", this.colNetHizmet, "{0:n2}", "NetHizmet"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BrutIndirim", this.colBrutIndirim, "{0:n2}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "KistDonemDusulenIndirim", this.colKistDonemDusulenIndirim, "{0:n2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetIndirim", this.colNetIndirim, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetIndirim", this.colNetIndirim, "{0:n2}", "NetIndirim"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetUcret", this.colNetUcret, "{0:n2}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Custom, "IndirimOrani", this.colIndirimOrani, "{0:f} %"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Acik", this.colAcik, "{0:n2}"),
@@ -687,6 +687,8 @@
             // 
             // repositoryDecimal
             // 
+            this.repositoryDecimal.Appearance.Options.UseTextOptions = true;
+            this.repositoryDecimal.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.repositoryDecimal.AutoHeight = false;
             this.repositoryDecimal.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -821,6 +823,8 @@
             // 
             // repositoryYuzde
             // 
+            this.repositoryYuzde.Appearance.Options.UseTextOptions = true;
+            this.repositoryYuzde.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.repositoryYuzde.AutoHeight = false;
             this.repositoryYuzde.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2120,6 +2124,8 @@
             this.txtIptalDurumu.Location = new System.Drawing.Point(688, 4);
             this.txtIptalDurumu.MenuManager = this.ribbonControl;
             this.txtIptalDurumu.Name = "txtIptalDurumu";
+            this.txtIptalDurumu.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
+            this.txtIptalDurumu.Properties.Appearance.Options.UseBackColor = true;
             this.txtIptalDurumu.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtIptalDurumu.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtIptalDurumu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2137,6 +2143,8 @@
             this.txtKayitDurumu.Location = new System.Drawing.Point(372, 28);
             this.txtKayitDurumu.MenuManager = this.ribbonControl;
             this.txtKayitDurumu.Name = "txtKayitDurumu";
+            this.txtKayitDurumu.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKayitDurumu.Properties.Appearance.Options.UseBackColor = true;
             this.txtKayitDurumu.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtKayitDurumu.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKayitDurumu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2154,6 +2162,8 @@
             this.txtKayitSekli.Location = new System.Drawing.Point(82, 28);
             this.txtKayitSekli.MenuManager = this.ribbonControl;
             this.txtKayitSekli.Name = "txtKayitSekli";
+            this.txtKayitSekli.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
+            this.txtKayitSekli.Properties.Appearance.Options.UseBackColor = true;
             this.txtKayitSekli.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtKayitSekli.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKayitSekli.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -2171,7 +2181,9 @@
             this.txtSubeler.Location = new System.Drawing.Point(82, 4);
             this.txtSubeler.MenuManager = this.ribbonControl;
             this.txtSubeler.Name = "txtSubeler";
+            this.txtSubeler.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
             this.txtSubeler.Properties.Appearance.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.txtSubeler.Properties.Appearance.Options.UseBackColor = true;
             this.txtSubeler.Properties.Appearance.Options.UseForeColor = true;
             this.txtSubeler.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtSubeler.Properties.AppearanceFocused.Options.UseBackColor = true;
