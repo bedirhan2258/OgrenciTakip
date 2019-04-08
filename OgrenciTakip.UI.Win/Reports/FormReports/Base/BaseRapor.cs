@@ -285,6 +285,10 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                     case KartTuru.HizmetAlimRaporu:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, null, "Hizmet Türü", Hizmetler.Text, "Hizmet Alım Türü", HizmetAlimTuru.Text);
                         break;
+
+                    case KartTuru.NetUcretRaporu:
+                        TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Hizmet Türü", Hizmetler.Text);
+                        break;
                 }
             }
 

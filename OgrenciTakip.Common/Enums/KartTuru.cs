@@ -124,6 +124,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Sinif Raporları")]
         SinifRaporlari = 58,
         [Description("Hizmet Alım Raporu")]
-        HizmetAlimRaporu = 59
+        HizmetAlimRaporu = 59,
+        [Description("Net Ücret Raporu")]
+        NetUcretRaporu = 60
     }
 }

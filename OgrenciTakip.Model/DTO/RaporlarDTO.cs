@@ -139,4 +139,49 @@ namespace OgrenciTakip.Model.DTO
         public string VeliIsyeriAdi { get; set; }
         public string VeliGorevAdi { get; set; }
     }
+
+    public class NetUcretRaporuL
+    {
+        public long OgrenciId { get; set; }
+        public long TahakkukId { get; set; }
+        public long SubeId { get; set; }
+        public long DonemId { get; set; }
+        public string OgrenciNo { get; set; }
+        public string OkulNo { get; set; }
+        public string TcKimlikNo { get; set; }
+        public string Adi { get; set; }
+        public string Soyadi { get; set; }
+        public Cinsiyet Cinsiyet { get; set; }
+        public string Telefon { get; set; }
+        public DateTime? KayitTarihi { get; set; }
+        public KayitSekli KayitSekli { get; set; }
+        public KayitDurumu KayitDurumu { get; set; }
+        public string SinifAdi { get; set; }
+        public string GeldigiOkulAdi { get; set; }
+        public string KontenjanAdi { get; set; }
+        public string YabanciDilAdi { get; set; }
+        public string RehberAdi { get; set; }
+        public string TesvikAdi { get; set; }
+        public IptalDurumu IptalDurumu { get; set; }
+        public string SubeAdi { get; set; }
+        public string OzelKod1 { get; set; }
+        public string OzelKod2 { get; set; }
+        public string OzelKod3 { get; set; }
+        public string OzelKod4 { get; set; }
+        public string OzelKod5 { get; set; }
+        public string VeliAdi { get; set; }
+        public string VeliSoyadi { get; set; }
+        public string VeliYakinlikAdi { get; set; }
+        public string VeliMeslekAdi { get; set; }
+        public string VeliIsyeriAdi { get; set; }
+        public string VeliGorevAdi { get; set; }
+        public decimal BrutHizmet { get; set; }
+        public decimal KistDonemDusulenHizmet { get; set; }
+        public decimal NetHizmet { get; set; }
+        public decimal BrutIndirim { get; set; }
+        public decimal KistDonemDusulenIndirim { get; set; }
+        public decimal NetIndirim { get; set; }
+        public decimal NetUcret { get; set; }
+        public decimal IndirimOrani { get; set; }
+    }
 }
