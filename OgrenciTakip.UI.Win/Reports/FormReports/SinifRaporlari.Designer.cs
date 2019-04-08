@@ -1,6 +1,6 @@
 ﻿namespace OgrenciTakip.UI.Win.Reports.FormReports
 {
-    partial class GenelAmacliRapor
+    partial class SinifRaporlari
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenelAmacliRapor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinifRaporlari));
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
@@ -183,7 +183,6 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(1015, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
@@ -222,8 +221,8 @@
             this.myDataLayoutControl.Name = "myDataLayoutControl";
             this.myDataLayoutControl.OptionsFocus.EnableAutoTabOrder = false;
             this.myDataLayoutControl.Root = this.layoutControlGroup1;
-            this.myDataLayoutControl.Size = new System.Drawing.Size(1015, 426);
-            this.myDataLayoutControl.TabIndex = 2;
+            this.myDataLayoutControl.Size = new System.Drawing.Size(1067, 395);
+            this.myDataLayoutControl.TabIndex = 3;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
             // grid
@@ -235,7 +234,7 @@
             this.grid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryDecimal,
             this.repositoryYuzde});
-            this.grid.Size = new System.Drawing.Size(1011, 346);
+            this.grid.Size = new System.Drawing.Size(1063, 315);
             this.grid.TabIndex = 10;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
@@ -388,7 +387,9 @@
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetOdeme", this.colNetOdeme, "{0:n2}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tahsil", this.colTahsilEdilen, "{0:n2}"),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Tahsilde", this.colTahsildeOlan, "{0:n2}"),
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Kalan", this.colKalan, "{0:n2}")});
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Kalan", this.colKalan, "{0:n2}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Kiz", this.colAdi, "Kız : {0:n0}"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Erkek", this.colSoyadi, "Erkek : {0:n0}")});
             this.tablo.Name = "tablo";
             this.tablo.OptionsMenu.EnableColumnMenu = false;
             this.tablo.OptionsMenu.EnableFooterMenu = false;
@@ -406,7 +407,7 @@
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
             this.tablo.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colSubeAdi, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colSinifAdi, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
@@ -500,6 +501,8 @@
             this.colAdi.StatusBarAciklama = null;
             this.colAdi.StatusBarKisayol = null;
             this.colAdi.StatusBarKisayolAciklama = null;
+            this.colAdi.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Kiz", "Kız : {0:n0}")});
             this.colAdi.Visible = true;
             this.colAdi.Width = 95;
             // 
@@ -516,6 +519,8 @@
             this.colSoyadi.StatusBarAciklama = null;
             this.colSoyadi.StatusBarKisayol = null;
             this.colSoyadi.StatusBarKisayolAciklama = null;
+            this.colSoyadi.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Erkek", "Erkek : {0:n0}")});
             this.colSoyadi.Visible = true;
             this.colSoyadi.Width = 95;
             // 
@@ -2101,9 +2106,9 @@
             // 
             // longNavigator
             // 
-            this.longNavigator.Location = new System.Drawing.Point(2, 402);
+            this.longNavigator.Location = new System.Drawing.Point(2, 371);
             this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(1011, 22);
+            this.longNavigator.Size = new System.Drawing.Size(1063, 22);
             this.longNavigator.TabIndex = 9;
             // 
             // btnRaporHazirla
@@ -2248,7 +2253,7 @@
             rowDefinition3,
             rowDefinition4});
             this.layoutControlGroup1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 2, 0);
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1015, 426);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1067, 395);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -2343,11 +2348,11 @@
             this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem6.AppearanceItemCaption.Options.UseForeColor = true;
             this.layoutControlItem6.Control = this.longNavigator;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 398);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 367);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.OptionsTableLayoutItem.ColumnSpan = 7;
             this.layoutControlItem6.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem6.Size = new System.Drawing.Size(1015, 26);
+            this.layoutControlItem6.Size = new System.Drawing.Size(1067, 26);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -2360,18 +2365,18 @@
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.OptionsTableLayoutItem.ColumnSpan = 7;
             this.layoutControlItem7.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem7.Size = new System.Drawing.Size(1015, 350);
+            this.layoutControlItem7.Size = new System.Drawing.Size(1067, 319);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
-            // GenelAmacliRapor
+            // SinifRaporlari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 559);
+            this.ClientSize = new System.Drawing.Size(1067, 528);
             this.Controls.Add(this.myDataLayoutControl);
-            this.Name = "GenelAmacliRapor";
-            this.Text = "Genel Amaçlı Rapor";
+            this.Name = "SinifRaporlari";
+            this.Text = "Sınıf Raporları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.myDataLayoutControl, 0);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
@@ -2401,6 +2406,108 @@
         #endregion
 
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
+        private UserControls.Grid.MyBandedGridControl grid;
+        private UserControls.Grid.MyBandedGridView tablo;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOgrenciBilgileri;
+        private UserControls.Grid.MyBandedGridColumn colOgrenciNo;
+        private UserControls.Grid.MyBandedGridColumn colOkulNo;
+        private UserControls.Grid.MyBandedGridColumn colTcKimlikNo;
+        private UserControls.Grid.MyBandedGridColumn colAdi;
+        private UserControls.Grid.MyBandedGridColumn colSoyadi;
+        private UserControls.Grid.MyBandedGridColumn colSinifAdi;
+        private UserControls.Grid.MyBandedGridColumn colCinsiyet;
+        private UserControls.Grid.MyBandedGridColumn colTelefon;
+        private UserControls.Grid.MyBandedGridColumn colYabanciDil;
+        private UserControls.Grid.MyBandedGridColumn colGeldigiOkul;
+        private UserControls.Grid.MyBandedGridColumn colRehberOgretmen;
+        private UserControls.Grid.MyBandedGridColumn colKontenjanTuru;
+        private UserControls.Grid.MyBandedGridColumn colTesvik;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandUcretBilgileri;
+        private UserControls.Grid.MyBandedGridColumn colBrutHizmet;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
+        private UserControls.Grid.MyBandedGridColumn colKistDonemDusulenHizmet;
+        private UserControls.Grid.MyBandedGridColumn colNetHizmet;
+        private UserControls.Grid.MyBandedGridColumn colBrutIndirim;
+        private UserControls.Grid.MyBandedGridColumn colKistDonemDusulenIndirim;
+        private UserControls.Grid.MyBandedGridColumn colNetIndirim;
+        private UserControls.Grid.MyBandedGridColumn colNetUcret;
+        private UserControls.Grid.MyBandedGridColumn colIndirimOrani;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryYuzde;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandKayitBilgileri;
+        private UserControls.Grid.MyBandedGridColumn colKayitTarihi;
+        private UserControls.Grid.MyBandedGridColumn colKayitSekli;
+        private UserControls.Grid.MyBandedGridColumn colKayitDurumu;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandDigerBilgiler;
+        private UserControls.Grid.MyBandedGridColumn colSubeAdi;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOdemeBilgileri;
+        private UserControls.Grid.MyBandedGridColumn colAcik;
+        private UserControls.Grid.MyBandedGridColumn colCek;
+        private UserControls.Grid.MyBandedGridColumn colElden;
+        private UserControls.Grid.MyBandedGridColumn colEpos;
+        private UserControls.Grid.MyBandedGridColumn colPos;
+        private UserControls.Grid.MyBandedGridColumn colOts;
+        private UserControls.Grid.MyBandedGridColumn colSenet;
+        private UserControls.Grid.MyBandedGridColumn colToplamOdeme;
+        private UserControls.Grid.MyBandedGridColumn colGeriIade;
+        private UserControls.Grid.MyBandedGridColumn colGeriOdeme;
+        private UserControls.Grid.MyBandedGridColumn colNetOdeme;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOgrenciKimlikBilgileri;
+        private UserControls.Grid.MyBandedGridColumn colKimlikSeri;
+        private UserControls.Grid.MyBandedGridColumn colKimlikSiraNo;
+        private UserControls.Grid.MyBandedGridColumn colAnaAdi;
+        private UserControls.Grid.MyBandedGridColumn colBabaAdi;
+        private UserControls.Grid.MyBandedGridColumn colDogumYeri;
+        private UserControls.Grid.MyBandedGridColumn colDogumTarihi;
+        private UserControls.Grid.MyBandedGridColumn colKanGrubu;
+        private UserControls.Grid.MyBandedGridColumn colKimlikNkoIl;
+        private UserControls.Grid.MyBandedGridColumn colKimlikNkoIlce;
+        private UserControls.Grid.MyBandedGridColumn colcolKimlikNkoMahalleKoy;
+        private UserControls.Grid.MyBandedGridColumn colKimlikCiltNo;
+        private UserControls.Grid.MyBandedGridColumn colKimlikAileSiraNo;
+        private UserControls.Grid.MyBandedGridColumn colKimlikBireySiraNo;
+        private UserControls.Grid.MyBandedGridColumn colKimlikVerildigiYer;
+        private UserControls.Grid.MyBandedGridColumn colKimlikVerilisNedeni;
+        private UserControls.Grid.MyBandedGridColumn colKimlikKayitNo;
+        private UserControls.Grid.MyBandedGridColumn colKimlikVerilisTarihi;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOzelKod;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod1;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod2;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod3;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod4;
+        private UserControls.Grid.MyBandedGridColumn colOzelKod5;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandTahsilatBilgileri;
+        private UserControls.Grid.MyBandedGridColumn colTahsilEdilen;
+        private UserControls.Grid.MyBandedGridColumn colTahsildeOlan;
+        private UserControls.Grid.MyBandedGridColumn colKalan;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandVeliBilgileri;
+        private UserControls.Grid.MyBandedGridColumn colVeliTcKimlikNo;
+        private UserControls.Grid.MyBandedGridColumn colVeliAdi;
+        private UserControls.Grid.MyBandedGridColumn colVeliSoyadi;
+        private UserControls.Grid.MyBandedGridColumn colVeliMeslek;
+        private UserControls.Grid.MyBandedGridColumn colVeliYakinlik;
+        private UserControls.Grid.MyBandedGridColumn colIsYeri;
+        private UserControls.Grid.MyBandedGridColumn colVeriGorev;
+        private UserControls.Grid.MyBandedGridColumn colVeliEvTel;
+        private UserControls.Grid.MyBandedGridColumn colVeliIsTel1;
+        private UserControls.Grid.MyBandedGridColumn colVeliIsTel2;
+        private UserControls.Grid.MyBandedGridColumn colVeliCepTel1;
+        private UserControls.Grid.MyBandedGridColumn colVeliCepTel2;
+        private UserControls.Grid.MyBandedGridColumn colVeliIbanNo;
+        private UserControls.Grid.MyBandedGridColumn colVeliKartNo;
+        private UserControls.Grid.MyBandedGridColumn colVeliEvAdres;
+        private UserControls.Grid.MyBandedGridColumn colVeliEvAdresIl;
+        private UserControls.Grid.MyBandedGridColumn colVeliEvAdresIlceAdi;
+        private UserControls.Grid.MyBandedGridColumn colVeriAnaAdi;
+        private UserControls.Grid.MyBandedGridColumn colVeliBabaAdi;
+        private UserControls.Grid.MyBandedGridColumn colVeliDogumYeri;
+        private UserControls.Grid.MyBandedGridColumn colVeliDogumTarihi;
+        private UserControls.Grid.MyBandedGridColumn colVeliKanGrubu;
+        private UserControls.Grid.MyBandedGridColumn colVeliEmail;
+        private UserControls.Grid.MyBandedGridColumn colVeliWeb;
+        private UserControls.Grid.MyBandedGridColumn colIptalDurumu;
+        private UserControls.Grid.MyBandedGridColumn colVeliIsAdres;
+        private UserControls.Grid.MyBandedGridColumn colVeliIsAdresIl;
+        private UserControls.Grid.MyBandedGridColumn colVeliIsAdresIlce;
         private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Controls.MySimpleButton btnRaporHazirla;
         private UserControls.Controls.MyCheckedComboBoxEdit txtIptalDurumu;
@@ -2414,108 +2521,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private UserControls.Grid.MyBandedGridControl grid;
-        private UserControls.Grid.MyBandedGridView tablo;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private UserControls.Grid.MyBandedGridColumn colOgrenciNo;
-        private UserControls.Grid.MyBandedGridColumn colOkulNo;
-        private UserControls.Grid.MyBandedGridColumn colTcKimlikNo;
-        private UserControls.Grid.MyBandedGridColumn colAdi;
-        private UserControls.Grid.MyBandedGridColumn colSoyadi;
-        private UserControls.Grid.MyBandedGridColumn colCinsiyet;
-        private UserControls.Grid.MyBandedGridColumn colKayitTarihi;
-        private UserControls.Grid.MyBandedGridColumn colIptalDurumu;
-        private UserControls.Grid.MyBandedGridColumn colKayitSekli;
-        private UserControls.Grid.MyBandedGridColumn colKayitDurumu;
-        private UserControls.Grid.MyBandedGridColumn colSinifAdi;
-        private UserControls.Grid.MyBandedGridColumn colGeldigiOkul;
-        private UserControls.Grid.MyBandedGridColumn colKontenjanTuru;
-        private UserControls.Grid.MyBandedGridColumn colYabanciDil;
-        private UserControls.Grid.MyBandedGridColumn colRehberOgretmen;
-        private UserControls.Grid.MyBandedGridColumn colTesvik;
-        private UserControls.Grid.MyBandedGridColumn colOzelKod1;
-        private UserControls.Grid.MyBandedGridColumn colOzelKod2;
-        private UserControls.Grid.MyBandedGridColumn colOzelKod3;
-        private UserControls.Grid.MyBandedGridColumn colOzelKod4;
-        private UserControls.Grid.MyBandedGridColumn colOzelKod5;
-        private UserControls.Grid.MyBandedGridColumn colBabaAdi;
-        private UserControls.Grid.MyBandedGridColumn colAnaAdi;
-        private UserControls.Grid.MyBandedGridColumn colDogumYeri;
-        private UserControls.Grid.MyBandedGridColumn colDogumTarihi;
-        private UserControls.Grid.MyBandedGridColumn colTelefon;
-        private UserControls.Grid.MyBandedGridColumn colKanGrubu;
-        private UserControls.Grid.MyBandedGridColumn colKimlikSeri;
-        private UserControls.Grid.MyBandedGridColumn colKimlikSiraNo;
-        private UserControls.Grid.MyBandedGridColumn colKimlikNkoIl;
-        private UserControls.Grid.MyBandedGridColumn colKimlikNkoIlce;
-        private UserControls.Grid.MyBandedGridColumn colcolKimlikNkoMahalleKoy;
-        private UserControls.Grid.MyBandedGridColumn colKimlikCiltNo;
-        private UserControls.Grid.MyBandedGridColumn colKimlikAileSiraNo;
-        private UserControls.Grid.MyBandedGridColumn colKimlikBireySiraNo;
-        private UserControls.Grid.MyBandedGridColumn colKimlikVerildigiYer;
-        private UserControls.Grid.MyBandedGridColumn colKimlikVerilisNedeni;
-        private UserControls.Grid.MyBandedGridColumn colKimlikKayitNo;
-        private UserControls.Grid.MyBandedGridColumn colKimlikVerilisTarihi;
-        private UserControls.Grid.MyBandedGridColumn colSubeAdi;
-        private UserControls.Grid.MyBandedGridColumn colVeliTcKimlikNo;
-        private UserControls.Grid.MyBandedGridColumn colVeliAdi;
-        private UserControls.Grid.MyBandedGridColumn colVeliSoyadi;
-        private UserControls.Grid.MyBandedGridColumn colVeliYakinlik;
-        private UserControls.Grid.MyBandedGridColumn colVeliMeslek;
-        private UserControls.Grid.MyBandedGridColumn colIsYeri;
-        private UserControls.Grid.MyBandedGridColumn colVeriGorev;
-        private UserControls.Grid.MyBandedGridColumn colVeriAnaAdi;
-        private UserControls.Grid.MyBandedGridColumn colVeliBabaAdi;
-        private UserControls.Grid.MyBandedGridColumn colVeliDogumYeri;
-        private UserControls.Grid.MyBandedGridColumn colVeliDogumTarihi;
-        private UserControls.Grid.MyBandedGridColumn colVeliKanGrubu;
-        private UserControls.Grid.MyBandedGridColumn colVeliEvTel;
-        private UserControls.Grid.MyBandedGridColumn colVeliIsTel1;
-        private UserControls.Grid.MyBandedGridColumn colVeliIsTel2;
-        private UserControls.Grid.MyBandedGridColumn colVeliCepTel1;
-        private UserControls.Grid.MyBandedGridColumn colVeliCepTel2;
-        private UserControls.Grid.MyBandedGridColumn colVeliWeb;
-        private UserControls.Grid.MyBandedGridColumn colVeliEmail;
-        private UserControls.Grid.MyBandedGridColumn colVeliEvAdres;
-        private UserControls.Grid.MyBandedGridColumn colVeliEvAdresIl;
-        private UserControls.Grid.MyBandedGridColumn colVeliEvAdresIlceAdi;
-        private UserControls.Grid.MyBandedGridColumn colVeliIsAdres;
-        private UserControls.Grid.MyBandedGridColumn colVeliIsAdresIl;
-        private UserControls.Grid.MyBandedGridColumn colVeliIsAdresIlce;
-        private UserControls.Grid.MyBandedGridColumn colVeliIbanNo;
-        private UserControls.Grid.MyBandedGridColumn colVeliKartNo;
-        private UserControls.Grid.MyBandedGridColumn colBrutHizmet;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryDecimal;
-        private UserControls.Grid.MyBandedGridColumn colKistDonemDusulenHizmet;
-        private UserControls.Grid.MyBandedGridColumn colNetHizmet;
-        private UserControls.Grid.MyBandedGridColumn colBrutIndirim;
-        private UserControls.Grid.MyBandedGridColumn colKistDonemDusulenIndirim;
-        private UserControls.Grid.MyBandedGridColumn colNetIndirim;
-        private UserControls.Grid.MyBandedGridColumn colNetUcret;
-        private UserControls.Grid.MyBandedGridColumn colIndirimOrani;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryYuzde;
-        private UserControls.Grid.MyBandedGridColumn colAcik;
-        private UserControls.Grid.MyBandedGridColumn colCek;
-        private UserControls.Grid.MyBandedGridColumn colElden;
-        private UserControls.Grid.MyBandedGridColumn colEpos;
-        private UserControls.Grid.MyBandedGridColumn colOts;
-        private UserControls.Grid.MyBandedGridColumn colPos;
-        private UserControls.Grid.MyBandedGridColumn colSenet;
-        private UserControls.Grid.MyBandedGridColumn colToplamOdeme;
-        private UserControls.Grid.MyBandedGridColumn colTahsilEdilen;
-        private UserControls.Grid.MyBandedGridColumn colTahsildeOlan;
-        private UserControls.Grid.MyBandedGridColumn colGeriIade;
-        private UserControls.Grid.MyBandedGridColumn colGeriOdeme;
-        private UserControls.Grid.MyBandedGridColumn colNetOdeme;
-        private UserControls.Grid.MyBandedGridColumn colKalan;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOgrenciBilgileri;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandUcretBilgileri;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandKayitBilgileri;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandDigerBilgiler;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOdemeBilgileri;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOgrenciKimlikBilgileri;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandOzelKod;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandTahsilatBilgileri;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand bandVeliBilgileri;
     }
 }

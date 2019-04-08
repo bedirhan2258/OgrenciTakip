@@ -236,6 +236,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowEditReports<GenelAmacliRapor>.ShowEditReport(KartTuru.GenelAmacliRapor);
             }
+
+            else if (e.Item == btnSinifRaporlari)
+            {
+                ShowEditReports<SinifRaporlari>.ShowEditReport(KartTuru.SinifRaporlari);
+            }
         }
     }
 }

@@ -64,14 +64,15 @@
             this.btnSubeKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaturaKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaturaTahakkukKarti = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGenelAmacliRapor = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnGenelAmacliRapor = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSinifRaporlari = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -115,9 +116,10 @@
             this.btnSubeKartlari,
             this.btnFaturaKartlari,
             this.btnFaturaTahakkukKarti,
-            this.btnGenelAmacliRapor});
+            this.btnGenelAmacliRapor,
+            this.btnSinifRaporlari});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 36;
+            this.ribbonControl.MaxItemId = 37;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -329,6 +331,12 @@
             this.btnFaturaTahakkukKarti.Id = 34;
             this.btnFaturaTahakkukKarti.Name = "btnFaturaTahakkukKarti";
             // 
+            // btnGenelAmacliRapor
+            // 
+            this.btnGenelAmacliRapor.Caption = "Genel  Amaçlı Rapor";
+            this.btnGenelAmacliRapor.Id = 35;
+            this.btnGenelAmacliRapor.Name = "btnGenelAmacliRapor";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -374,6 +382,20 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnFaturaTahakkukKarti);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "ribbonPage3";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnGenelAmacliRapor);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnSinifRaporlari);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 494);
@@ -390,24 +412,11 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // ribbonPage3
+            // btnSinifRaporlari
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "ribbonPage3";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnGenelAmacliRapor);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
-            // 
-            // btnGenelAmacliRapor
-            // 
-            this.btnGenelAmacliRapor.Caption = "Genel  Amaçlı Rapor";
-            this.btnGenelAmacliRapor.Id = 35;
-            this.btnGenelAmacliRapor.Name = "btnGenelAmacliRapor";
+            this.btnSinifRaporlari.Caption = "Sınıf Raporları";
+            this.btnSinifRaporlari.Id = 36;
+            this.btnSinifRaporlari.Name = "btnSinifRaporlari";
             // 
             // AnaForm
             // 
@@ -474,5 +483,6 @@
         private DevExpress.XtraBars.BarButtonItem btnGenelAmacliRapor;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnSinifRaporlari;
     }
 }

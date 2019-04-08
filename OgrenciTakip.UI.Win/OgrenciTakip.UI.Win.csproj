@@ -545,6 +545,12 @@
     <Compile Include="Reports\FormReports\GenelAmacliRapor.Designer.cs">
       <DependentUpon>GenelAmacliRapor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\SinifRaporlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\SinifRaporlari.Designer.cs">
+      <DependentUpon>SinifRaporlari.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1171,6 +1177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\GenelAmacliRapor.resx">
       <DependentUpon>GenelAmacliRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\SinifRaporlari.resx">
+      <DependentUpon>SinifRaporlari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.resx">
       <DependentUpon>FaturaDonemIcmalRaporu.cs</DependentUpon>
