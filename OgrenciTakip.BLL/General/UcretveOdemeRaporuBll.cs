@@ -1,7 +1,6 @@
 ﻿
 using OgrenciTakip.BLL.Base;
 using OgrenciTakip.Common.Enums;
-using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
@@ -12,9 +11,9 @@ using System.Linq.Expressions;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class GenelAmacliRaporBll : BaseBll<Tahakkuk, OgrenciTakipContext>
+    public class UcretveOdemeRaporuBll : BaseBll<Tahakkuk, OgrenciTakipContext>
     {
-        public IEnumerable<GenelAmacliRaporL> List(Expression<Func<Tahakkuk, bool>> filter)
+        public IEnumerable<UcretVeOdemeRaporuL> List(Expression<Func<Tahakkuk, bool>> filter)
         {
             return BaseList(filter, x => new
             {
@@ -64,7 +63,7 @@ namespace OgrenciTakip.BLL.General
                     GeriOdenen = y.Select(z => z.Tutar).DefaultIfEmpty(0).Sum(),
                 }).FirstOrDefault(),
 
-            }).Select(x => new GenelAmacliRaporL
+            }).Select(x => new UcretVeOdemeRaporuL
             {
                 OgrenciId = x.Tahakkuk.OgrenciId,
                 TahakkukId = x.Tahakkuk.Id,
@@ -74,26 +73,7 @@ namespace OgrenciTakip.BLL.General
                 Adi = x.Tahakkuk.Ogrenci.Adi,
                 Soyadi = x.Tahakkuk.Ogrenci.Soyadi,
                 Cinsiyet = x.Tahakkuk.Ogrenci.Cinsiyet,
-                Kiz = x.Tahakkuk.Ogrenci.Cinsiyet == Cinsiyet.Kiz ? 1 : 0,
-                Erkek = x.Tahakkuk.Ogrenci.Cinsiyet == Cinsiyet.Erkek ? 1 : 0,
                 Telefon = x.Tahakkuk.Ogrenci.Telefon,
-                KanGrubu = x.Tahakkuk.Ogrenci.KanGrubu,
-                BabaAdi = x.Tahakkuk.Ogrenci.BabaAdi,
-                AnaAdi = x.Tahakkuk.Ogrenci.AnaAdi,
-                DogumYeri = x.Tahakkuk.Ogrenci.DogumYeri,
-                DogumTarihi = x.Tahakkuk.Ogrenci.DogumTarihi,
-                KimlikSeri = x.Tahakkuk.Ogrenci.KimlikSeri,
-                KimlikSiraNo = x.Tahakkuk.Ogrenci.KimlikSiraNo,
-                KimlikIlAdi = x.Tahakkuk.Ogrenci.KimlikIl.IlAdi,
-                KimlikIlceAdi = x.Tahakkuk.Ogrenci.KimlikIlce.IlceAdi,
-                KimlikMahalleKoy = x.Tahakkuk.Ogrenci.KimlikMahalleKoy,
-                KimlikCiltNo = x.Tahakkuk.Ogrenci.KimlikCiltNo,
-                KimlikAileSiraNo = x.Tahakkuk.Ogrenci.KimlikAileSiraNo,
-                KimlikBireySiraNo = x.Tahakkuk.Ogrenci.KimlikBireySiraNo,
-                KimlikVerildigiYer = x.Tahakkuk.Ogrenci.KimlikVerildigiYer,
-                KimlikVerilisTarihi = x.Tahakkuk.Ogrenci.KimlikVerilisTarihi,
-                KimlikKayitNo = x.Tahakkuk.Ogrenci.KimlikKayitNo,
-                KimlikVerilisNedeni = x.Tahakkuk.Ogrenci.KimlikVerilisNedeni,
                 KayitTarihi = x.Tahakkuk.KayitTarihi,
                 KayitSekli = x.Tahakkuk.KayitSekli,
                 KayitDurumu = x.Tahakkuk.KayitDurumu,
@@ -112,29 +92,8 @@ namespace OgrenciTakip.BLL.General
                 OzelKod3 = x.Tahakkuk.OzelKod3.OzelKodAdi,
                 OzelKod4 = x.Tahakkuk.OzelKod4.OzelKodAdi,
                 OzelKod5 = x.Tahakkuk.OzelKod5.OzelKodAdi,
-                VeliTcKimlikNo = x.VeliBilgileri.Iletisim.TcKimlikNo,
                 VeliAdi = x.VeliBilgileri.Iletisim.Adi,
                 VeliSoyadi = x.VeliBilgileri.Iletisim.Soyadi,
-                VeliBabaAdi = x.VeliBilgileri.Iletisim.BabaAdi,
-                VeliAnaAdi = x.VeliBilgileri.Iletisim.AnaAdi,
-                VeliDogumYeri = x.VeliBilgileri.Iletisim.DogumYeri,
-                VeliDogumTarihi = x.VeliBilgileri.Iletisim.DogumTarihi,
-                VeliKanGrubu = x.VeliBilgileri.Iletisim.KanGrubu,
-                VeliEvTel = x.VeliBilgileri.Iletisim.EvTel,
-                VeliIsTel1 = x.VeliBilgileri.Iletisim.IsTel1,
-                VeliIsTel2 = x.VeliBilgileri.Iletisim.IsTel2,
-                VeliCepTel1 = x.VeliBilgileri.Iletisim.CepTel1,
-                VeliCepTel2 = x.VeliBilgileri.Iletisim.CepTel2,
-                VeliWeb = x.VeliBilgileri.Iletisim.Web,
-                VeliEmail = x.VeliBilgileri.Iletisim.Email,
-                VeliEvAdres = x.VeliBilgileri.Iletisim.EvAdres,
-                VeliEvAdresIlAdi = x.VeliBilgileri.Iletisim.EvAdresIl.IlAdi,
-                VeliEvAdresIlceAdi = x.VeliBilgileri.Iletisim.EvAdresIlce.IlceAdi,
-                VeliIsAdres = x.VeliBilgileri.Iletisim.IsAdres,
-                VeliIsAdresIlAdi = x.VeliBilgileri.Iletisim.IsAdresIl.IlAdi,
-                VeliIsAdresIlceAdi = x.VeliBilgileri.Iletisim.IsAdresIlce.IlceAdi,
-                VeliIbanNo = x.VeliBilgileri.Iletisim.IbanNo,
-                VeliKartNo = x.VeliBilgileri.Iletisim.KartNo,
                 VeliYakinlikAdi = x.VeliBilgileri.Yakinlik.YakinlikAdi,
                 VeliMeslekAdi = x.VeliBilgileri.Iletisim.Meslek.MeslekAdi,
                 VeliIsyeriAdi = x.VeliBilgileri.Iletisim.Isyeri.IsyeriAdi,

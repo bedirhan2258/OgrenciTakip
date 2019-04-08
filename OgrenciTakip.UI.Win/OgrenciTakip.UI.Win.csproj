@@ -563,6 +563,12 @@
     <Compile Include="Reports\FormReports\SinifRaporlari.Designer.cs">
       <DependentUpon>SinifRaporlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\UcretVeOdemeRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\UcretVeOdemeRaporu.Designer.cs">
+      <DependentUpon>UcretVeOdemeRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1198,6 +1204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\SinifRaporlari.resx">
       <DependentUpon>SinifRaporlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\UcretVeOdemeRaporu.resx">
+      <DependentUpon>UcretVeOdemeRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.resx">
       <DependentUpon>FaturaDonemIcmalRaporu.cs</DependentUpon>
