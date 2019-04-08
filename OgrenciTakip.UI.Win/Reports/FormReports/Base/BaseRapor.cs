@@ -34,9 +34,11 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
         protected BarItem[] ShowItems;
         protected BarItem[] HideItems;
         protected MyCheckedComboBoxEdit Subeler;
+        protected MyCheckedComboBoxEdit Hizmetler;
         protected MyCheckedComboBoxEdit KayitSekilleri;
         protected MyCheckedComboBoxEdit KayitDurumlari;
         protected MyCheckedComboBoxEdit IptalDurumlari;
+        protected ComboBoxEdit HizmetAlimTuru;
         protected MyDataLayoutControl DataLayoutControl;
 
         public BaseRapor()
@@ -111,6 +113,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
             }
         }
 
+
+
         protected void KayitSekliYukle()
         {
             var enums = Enum.GetValues(typeof(KayitSekli));
@@ -156,6 +160,25 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                     Value = entity
                 };
                 IptalDurumlari.Properties.Items.Add(item);
+            }
+        }
+
+        protected void HizmetKartlariYukle()
+        {
+            using (var bll = new HizmetBll())
+            {
+                var entities = bll.List(null);
+
+                foreach (HizmetL entity in entities)
+                {
+                    var item = new CheckedListBoxItem
+                    {
+                        CheckState = CheckState.Checked,
+                        Description = entity.HizmetAdi,
+                        Value = entity.Id
+                    };
+                    Hizmetler.Properties.Items.Add(item);
+                }
             }
         }
 
@@ -257,6 +280,10 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                     case KartTuru.GenelAmacliRapor:
                     case KartTuru.SinifRaporlari:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text);
+                        break;
+
+                    case KartTuru.HizmetAlimRaporu:
+                        TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, null, "Hizmet Türü", Hizmetler.Text, "Hizmet Alım Türü", HizmetAlimTuru.Text);
                         break;
                 }
             }

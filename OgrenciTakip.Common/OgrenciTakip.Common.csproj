@@ -61,6 +61,7 @@
     <Compile Include="Enums\EposKartTuru.cs" />
     <Compile Include="Enums\EvetHayir.cs" />
     <Compile Include="Enums\GeriOdemeHesapTuru.cs" />
+    <Compile Include="Enums\HizmetAlimDurumu.cs" />
     <Compile Include="Enums\HizmetTipi.cs" />
     <Compile Include="Enums\IptalDurumu.cs" />
     <Compile Include="Enums\IslemTuru.cs" />

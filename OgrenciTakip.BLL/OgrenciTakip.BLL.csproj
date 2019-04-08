@@ -81,6 +81,7 @@
     <Compile Include="General\GenelAmacliRaporBll.cs" />
     <Compile Include="General\GeriOdemeBilgileriBll.cs" />
     <Compile Include="General\GorevBll.cs" />
+    <Compile Include="General\HizmetAlimRaporuBll.cs" />
     <Compile Include="General\HizmetBilgileriBll.cs" />
     <Compile Include="General\HizmetTuruBll.cs" />
     <Compile Include="General\HizmetBll.cs" />

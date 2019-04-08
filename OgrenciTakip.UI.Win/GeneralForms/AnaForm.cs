@@ -37,10 +37,11 @@ using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Forms.FaturaForms;
 using System.Collections.Generic;
 using OgrenciTakip.UI.Win.Reports.FormReports;
+using DevExpress.XtraBars.Ribbon;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
-    public partial class AnaForm : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class AnaForm : RibbonForm
     {
         public static long DonemId = 1;
         public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
@@ -240,6 +241,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnSinifRaporlari)
             {
                 ShowEditReports<SinifRaporlari>.ShowEditReport(KartTuru.SinifRaporlari);
+            }
+
+            else if (e.Item == btnHizmetAlimRaporu)
+            {
+                ShowEditReports<HizmetAlimRaporu>.ShowEditReport(KartTuru.HizmetAlimRaporu);
             }
         }
     }
