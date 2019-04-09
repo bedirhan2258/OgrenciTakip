@@ -551,6 +551,12 @@
     <Compile Include="Reports\FormReports\HizmetAlimRaporu.Designer.cs">
       <DependentUpon>HizmetAlimRaporu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\IndirimDagilimRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\IndirimDagilimRaporu.Designer.cs">
+      <DependentUpon>IndirimDagilimRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\NetUcretRaporu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1198,6 +1204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\HizmetAlimRaporu.resx">
       <DependentUpon>HizmetAlimRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\IndirimDagilimRaporu.resx">
+      <DependentUpon>IndirimDagilimRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\NetUcretRaporu.resx">
       <DependentUpon>NetUcretRaporu.cs</DependentUpon>

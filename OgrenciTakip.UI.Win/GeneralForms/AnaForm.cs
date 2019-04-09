@@ -255,7 +255,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
             else if (e.Item == btnUcretVeOdemeRaporu)
             {
-                ShowEditReports<NetUcretRaporu>.ShowEditReport(KartTuru.UcretveOdemeRaporu  );
+                ShowEditReports<NetUcretRaporu>.ShowEditReport(KartTuru.UcretveOdemeRaporu);
+            }
+
+            else if (e.Item == btnIndirimDagilimRaporu)
+            {
+                ShowEditReports<IndirimDagilimRaporu>.ShowEditReport(KartTuru.IndirimDagilimRaporu);
             }
         }
     }

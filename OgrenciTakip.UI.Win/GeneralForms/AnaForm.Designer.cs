@@ -68,6 +68,7 @@
             this.btnSinifRaporlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnHizmetAlimRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.btnNetUcretRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnUcretVeOdemeRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -75,7 +76,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnUcretVeOdemeRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnIndirimDagilimRaporu = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -123,9 +124,10 @@
             this.btnSinifRaporlari,
             this.btnHizmetAlimRaporu,
             this.btnNetUcretRaporu,
-            this.btnUcretVeOdemeRaporu});
+            this.btnUcretVeOdemeRaporu,
+            this.btnIndirimDagilimRaporu});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 40;
+            this.ribbonControl.MaxItemId = 41;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -361,6 +363,12 @@
             this.btnNetUcretRaporu.Id = 38;
             this.btnNetUcretRaporu.Name = "btnNetUcretRaporu";
             // 
+            // btnUcretVeOdemeRaporu
+            // 
+            this.btnUcretVeOdemeRaporu.Caption = "Ücret ve Ödeme Raporu";
+            this.btnUcretVeOdemeRaporu.Id = 39;
+            this.btnUcretVeOdemeRaporu.Name = "btnUcretVeOdemeRaporu";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -420,6 +428,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnHizmetAlimRaporu);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnNetUcretRaporu);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnUcretVeOdemeRaporu);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnIndirimDagilimRaporu);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
@@ -439,11 +448,11 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnUcretVeOdemeRaporu
+            // btnIndirimDagilimRaporu
             // 
-            this.btnUcretVeOdemeRaporu.Caption = "Ücret ve Ödeme Raporu";
-            this.btnUcretVeOdemeRaporu.Id = 39;
-            this.btnUcretVeOdemeRaporu.Name = "btnUcretVeOdemeRaporu";
+            this.btnIndirimDagilimRaporu.Caption = "İndirim Dağılım Raporu";
+            this.btnIndirimDagilimRaporu.Id = 40;
+            this.btnIndirimDagilimRaporu.Name = "btnIndirimDagilimRaporu";
             // 
             // AnaForm
             // 
@@ -514,5 +523,6 @@
         private DevExpress.XtraBars.BarButtonItem btnHizmetAlimRaporu;
         private DevExpress.XtraBars.BarButtonItem btnNetUcretRaporu;
         private DevExpress.XtraBars.BarButtonItem btnUcretVeOdemeRaporu;
+        private DevExpress.XtraBars.BarButtonItem btnIndirimDagilimRaporu;
     }
 }

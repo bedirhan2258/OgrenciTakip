@@ -128,6 +128,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Net Ücret Raporu")]
         NetUcretRaporu = 60,
         [Description("Ücret ve Ödeme Raporu")]
-        UcretveOdemeRaporu = 61
+        UcretveOdemeRaporu = 61,
+        [Description("İndirim Dağılım Raporu")]
+        IndirimDagilimRaporu = 62
     }
 }
