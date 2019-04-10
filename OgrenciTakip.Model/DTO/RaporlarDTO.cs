@@ -283,4 +283,36 @@ namespace OgrenciTakip.Model.DTO
         public decimal KistDonemDusulenIndirim { get; set; }
         public decimal NetIndirim { get; set; }
     }
+
+    public class MesleklereGoreKayitRaporuL
+    {
+        public string SubeAdi { get; set; }
+        public string MeslekAdi { get; set; }
+        public int KayitYenileme { get; set; }
+        public int YeniKayit { get; set; }
+        public int NakilKayit { get; set; }
+        public int ToplamKayit { get; set; }
+        public decimal BrutHizmet { get; set; }
+        public decimal KistDonemDusulenHizmet { get; set; }
+        public decimal NetHizmet { get; set; }
+        public decimal BrutIndirim { get; set; }
+        public decimal KistDonemDusulenIndirim { get; set; }
+        public decimal NetIndirim { get; set; }
+        public decimal NetUcret { get; set; }
+        public decimal IndirimOrani { get; set; }
+        public decimal Acik { get; set; }
+        public decimal Cek { get; set; }
+        public decimal Elden { get; set; }
+        public decimal Epos { get; set; }
+        public decimal Ots { get; set; }
+        public decimal Pos { get; set; }
+        public decimal Senet { get; set; }
+        public decimal ToplamOdeme { get; set; }
+        public decimal Tahsil { get; set; }
+        public decimal Tahsilde { get; set; }
+        public decimal Iade { get; set; }
+        public decimal GeriOdenen { get; set; }
+        public decimal Kalan { get; set; }
+        public decimal NetOdeme { get; set; }
+    }
 }

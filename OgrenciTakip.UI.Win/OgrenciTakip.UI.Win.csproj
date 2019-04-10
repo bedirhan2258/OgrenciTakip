@@ -557,6 +557,12 @@
     <Compile Include="Reports\FormReports\IndirimDagilimRaporu.Designer.cs">
       <DependentUpon>IndirimDagilimRaporu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\MesleklereGoreKayitRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\MesleklereGoreKayitRaporu.Designer.cs">
+      <DependentUpon>MesleklereGoreKayitRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\NetUcretRaporu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1207,6 +1213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\IndirimDagilimRaporu.resx">
       <DependentUpon>IndirimDagilimRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\MesleklereGoreKayitRaporu.resx">
+      <DependentUpon>MesleklereGoreKayitRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\NetUcretRaporu.resx">
       <DependentUpon>NetUcretRaporu.cs</DependentUpon>

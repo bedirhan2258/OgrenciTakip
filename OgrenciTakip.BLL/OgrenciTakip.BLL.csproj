@@ -102,6 +102,7 @@
     <Compile Include="General\MakbuzBll.cs" />
     <Compile Include="General\MakbuzHareketleriBll.cs" />
     <Compile Include="General\MeslekBll.cs" />
+    <Compile Include="General\MesleklereGoreKayitRaporuBll.cs" />
     <Compile Include="General\NetUcretRaporuBll.cs" />
     <Compile Include="General\OdemeBilgileriBll.cs" />
     <Compile Include="General\OdemeTuruBll.cs" />

@@ -686,12 +686,12 @@
         protected DevExpress.XtraBars.BarButtonItem btnBelgeHareketleri;
         protected DevExpress.XtraBars.BarButtonItem btnTabloYazdir;
         protected DevExpress.XtraBars.BarButtonItem btnTasarimDegistir;
-        private DevExpress.XtraBars.BarButtonItem btnKartAc;
         private DevExpress.XtraBars.BarButtonItem btnGruplamaPaneli;
         private DevExpress.XtraBars.BarButtonItem btnTumGruplariGenislet;
         private DevExpress.XtraBars.BarButtonItem btnTumGruplariDaralt;
         protected DevExpress.XtraBars.BarButtonItem btnTumDetaylariGenislet;
         protected DevExpress.XtraBars.BarButtonItem btnTumDetaylariDaralt;
+        protected DevExpress.XtraBars.BarButtonItem btnKartAc;
     }
 }
   
