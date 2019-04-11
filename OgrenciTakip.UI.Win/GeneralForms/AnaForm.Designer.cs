@@ -70,6 +70,7 @@
             this.btnNetUcretRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.btnUcretVeOdemeRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.btnIndirimDagilimRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMesleklereGoreKayitRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -77,7 +78,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.btnMesleklereGoreKayitRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnAylikKayitRaporu = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -127,9 +128,10 @@
             this.btnNetUcretRaporu,
             this.btnUcretVeOdemeRaporu,
             this.btnIndirimDagilimRaporu,
-            this.btnMesleklereGoreKayitRaporu});
+            this.btnMesleklereGoreKayitRaporu,
+            this.btnAylikKayitRaporu});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 42;
+            this.ribbonControl.MaxItemId = 43;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -377,6 +379,12 @@
             this.btnIndirimDagilimRaporu.Id = 40;
             this.btnIndirimDagilimRaporu.Name = "btnIndirimDagilimRaporu";
             // 
+            // btnMesleklereGoreKayitRaporu
+            // 
+            this.btnMesleklereGoreKayitRaporu.Caption = "Mesleklere Göre Kayıt Raporu";
+            this.btnMesleklereGoreKayitRaporu.Id = 41;
+            this.btnMesleklereGoreKayitRaporu.Name = "btnMesleklereGoreKayitRaporu";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -438,6 +446,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnUcretVeOdemeRaporu);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnIndirimDagilimRaporu);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnMesleklereGoreKayitRaporu);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnAylikKayitRaporu);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
@@ -457,11 +466,11 @@
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
             // 
-            // btnMesleklereGoreKayitRaporu
+            // btnAylikKayitRaporu
             // 
-            this.btnMesleklereGoreKayitRaporu.Caption = "Mesleklere Göre Kayıt Raporu";
-            this.btnMesleklereGoreKayitRaporu.Id = 41;
-            this.btnMesleklereGoreKayitRaporu.Name = "btnMesleklereGoreKayitRaporu";
+            this.btnAylikKayitRaporu.Caption = "Aylık Kayıt Raporu";
+            this.btnAylikKayitRaporu.Id = 42;
+            this.btnAylikKayitRaporu.Name = "btnAylikKayitRaporu";
             // 
             // AnaForm
             // 
@@ -534,5 +543,6 @@
         private DevExpress.XtraBars.BarButtonItem btnUcretVeOdemeRaporu;
         private DevExpress.XtraBars.BarButtonItem btnIndirimDagilimRaporu;
         private DevExpress.XtraBars.BarButtonItem btnMesleklereGoreKayitRaporu;
+        private DevExpress.XtraBars.BarButtonItem btnAylikKayitRaporu;
     }
 }

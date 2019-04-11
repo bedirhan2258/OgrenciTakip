@@ -66,6 +66,7 @@
     <Compile Include="General\AileBilgiBll.cs" />
     <Compile Include="General\AileBilgileriBll.cs" />
     <Compile Include="General\AvukatBll.cs" />
+    <Compile Include="General\AylikKayitRaporuBll.cs" />
     <Compile Include="General\BankaBll.cs" />
     <Compile Include="General\BankaHesapBll.cs" />
     <Compile Include="General\BankaSubeBll.cs" />

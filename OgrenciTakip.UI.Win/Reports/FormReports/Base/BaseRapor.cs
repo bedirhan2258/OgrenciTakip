@@ -301,6 +301,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                     case KartTuru.SinifRaporlari:
                     case KartTuru.UcretveOdemeRaporu:
                     case KartTuru.MesleklereGoreKayitRaporu:
+                    case KartTuru.AylikKayitRaporu:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text);
                         break;
 

@@ -533,6 +533,12 @@
     <Compile Include="Forms\SubeForms\SubeListForm.Designer.cs">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\AylikKayitRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\AylikKayitRaporu.Designer.cs">
+      <DependentUpon>AylikKayitRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\Base\BaseRapor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1201,6 +1207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SubeForms\SubeListForm.resx">
       <DependentUpon>SubeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\AylikKayitRaporu.resx">
+      <DependentUpon>AylikKayitRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\Base\BaseRapor.resx">
       <DependentUpon>BaseRapor.cs</DependentUpon>
