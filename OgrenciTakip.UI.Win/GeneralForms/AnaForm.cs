@@ -38,6 +38,7 @@ using OgrenciTakip.UI.Win.Forms.FaturaForms;
 using System.Collections.Generic;
 using OgrenciTakip.UI.Win.Reports.FormReports;
 using DevExpress.XtraBars.Ribbon;
+using OgrenciTakip.UI.Win.Reports;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -271,6 +272,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnAylikKayitRaporu)
             {
                 ShowEditReports<AylikKayitRaporu>.ShowEditReport(KartTuru.AylikKayitRaporu);
+            }
+
+            else if (e.Item == btnGelirDagilimRaporu)
+            {
+                ShowEditReports<GelirDagilimRaporu>.ShowEditReport(KartTuru.GelirDagilimRaporu);
             }
         }
     }

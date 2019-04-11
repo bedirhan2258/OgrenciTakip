@@ -298,8 +298,6 @@ namespace OgrenciTakip.Model.DTO
         public decimal BrutIndirim { get; set; }
         public decimal KistDonemDusulenIndirim { get; set; }
         public decimal NetIndirim { get; set; }
-        public decimal NetUcret { get; set; }
-        public decimal IndirimOrani { get; set; }
         public decimal Acik { get; set; }
         public decimal Cek { get; set; }
         public decimal Elden { get; set; }
@@ -312,8 +310,6 @@ namespace OgrenciTakip.Model.DTO
         public decimal Tahsilde { get; set; }
         public decimal Iade { get; set; }
         public decimal GeriOdenen { get; set; }
-        public decimal Kalan { get; set; }
-        public decimal NetOdeme { get; set; }
     }
 
     public class AylikKayitRaporuL
@@ -330,8 +326,6 @@ namespace OgrenciTakip.Model.DTO
         public decimal BrutIndirim { get; set; }
         public decimal KistDonemDusulenIndirim { get; set; }
         public decimal NetIndirim { get; set; }
-        public decimal NetUcret { get; set; }
-        public decimal IndirimOrani { get; set; }
         public decimal Acik { get; set; }
         public decimal Cek { get; set; }
         public decimal Elden { get; set; }
@@ -344,7 +338,23 @@ namespace OgrenciTakip.Model.DTO
         public decimal Tahsilde { get; set; }
         public decimal Iade { get; set; }
         public decimal GeriOdenen { get; set; }
-        public decimal Kalan { get; set; }
-        public decimal NetOdeme { get; set; }
+    }
+
+    public class GelirDagilimRaporuL
+    {
+        public int Yil { get; set; }
+        public Aylar Ay { get; set; }
+        public decimal Acik { get; set; }
+        public decimal Cek { get; set; }
+        public decimal Elden { get; set; }
+        public decimal Epos { get; set; }
+        public decimal Ots { get; set; }
+        public decimal Pos { get; set; }
+        public decimal Senet { get; set; }
+        public decimal ToplamOdeme { get; set; }
+        public decimal Tahsil { get; set; }
+        public decimal Tahsilde { get; set; }
+        public decimal Iade { get; set; }
+        public int TaksitSayisi { get; set; }
     }
 }

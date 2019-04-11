@@ -587,6 +587,12 @@
     <Compile Include="Reports\FormReports\UcretVeOdemeRaporu.Designer.cs">
       <DependentUpon>UcretVeOdemeRaporu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\GelirDagilimRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\GelirDagilimRaporu.Designer.cs">
+      <DependentUpon>GelirDagilimRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\XtraReports\Fatura\FaturaDonemIcmalRaporu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1213,6 +1219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\Base\BaseRapor.resx">
       <DependentUpon>BaseRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\GelirDagilimRaporu.resx">
+      <DependentUpon>GelirDagilimRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\GenelAmacliRapor.resx">
       <DependentUpon>GenelAmacliRapor.cs</DependentUpon>

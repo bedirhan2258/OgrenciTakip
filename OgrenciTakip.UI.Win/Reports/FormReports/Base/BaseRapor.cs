@@ -36,10 +36,12 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
         protected MyCheckedComboBoxEdit Subeler;
         protected MyCheckedComboBoxEdit Hizmetler;
         protected MyCheckedComboBoxEdit Indirimler;
+        protected MyCheckedComboBoxEdit Odemeler;
         protected MyCheckedComboBoxEdit KayitSekilleri;
         protected MyCheckedComboBoxEdit KayitDurumlari;
         protected MyCheckedComboBoxEdit IptalDurumlari;
         protected ComboBoxEdit HizmetAlimTuru;
+        protected ComboBoxEdit HesaplamaSekli;
         protected MyDataLayoutControl DataLayoutControl;
 
         public BaseRapor()
@@ -183,6 +185,22 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
             }
         }
 
+        protected void OdemeTurleriYukle()
+        {
+            var enums = Enum.GetValues(typeof(OdemeTipi));
+
+            foreach (OdemeTipi entity in enums)
+            {
+                var item = new CheckedListBoxItem
+                {
+                    CheckState = CheckState.Checked,
+                    Description = entity.ToName(),
+                    Value = entity
+                };
+                Odemeler.Properties.Items.Add(item);
+            }
+        }
+
         protected void IndirimKartlariYukle()
         {
             using (var bll = new IndirimBll())
@@ -315,6 +333,10 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
 
                     case KartTuru.IndirimDagilimRaporu:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "İndirim Türü", Indirimler.Text);
+                        break;
+
+                    case KartTuru.GelirDagilimRaporu:
+                        TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Hesaplama Türü", HesaplamaSekli.Text);
                         break;
                 }
             }

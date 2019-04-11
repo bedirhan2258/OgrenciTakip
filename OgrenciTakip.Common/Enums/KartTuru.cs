@@ -134,6 +134,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Mesleklere Göre Kayıt Raporu")]
         MesleklereGoreKayitRaporu = 63,
         [Description("Aylık Kayıt Raporu")]
-        AylikKayitRaporu = 64
+        AylikKayitRaporu = 64,
+        [Description("Gelir Dağılım Raporu")]
+        GelirDagilimRaporu = 65
     }
 }
