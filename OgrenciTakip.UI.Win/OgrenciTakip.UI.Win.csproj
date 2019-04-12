@@ -581,6 +581,12 @@
     <Compile Include="Reports\FormReports\SinifRaporlari.Designer.cs">
       <DependentUpon>SinifRaporlari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\UcretOrtalamalariRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\UcretOrtalamalariRaporu.Designer.cs">
+      <DependentUpon>UcretOrtalamalariRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\UcretVeOdemeRaporu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1240,6 +1246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\SinifRaporlari.resx">
       <DependentUpon>SinifRaporlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\UcretOrtalamalariRaporu.resx">
+      <DependentUpon>UcretOrtalamalariRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\UcretVeOdemeRaporu.resx">
       <DependentUpon>UcretVeOdemeRaporu.cs</DependentUpon>

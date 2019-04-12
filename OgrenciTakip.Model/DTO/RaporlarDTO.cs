@@ -357,4 +357,23 @@ namespace OgrenciTakip.Model.DTO
         public decimal Iade { get; set; }
         public int TaksitSayisi { get; set; }
     }
+
+    public class UcretOrtalamalariRaporuL
+    {
+        public string SubeAdi { get; set; }
+        public string SinifGrupAdi { get; set; }
+        public string SinifAdi { get; set; }
+        public string SubeGrupAdi { get; set; }
+        public int? SubeSiraNo { get; set; }
+        public int UcretsizOgrenci { get; set; }
+        public int UcretliOgrenci { get; set; }
+        public int SinifSayisi { get; set; }
+        public decimal BrutHizmet { get; set; }
+        public decimal KistDonemDusulenHizmet { get; set; }
+        public decimal NetHizmet { get; set; }
+        public decimal BrutIndirim { get; set; }
+        public decimal KistDonemDusulenIndirim { get; set; }
+        public decimal NetIndirim { get; set; }
+
+    }
 }

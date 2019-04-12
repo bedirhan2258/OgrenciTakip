@@ -122,6 +122,7 @@
     <Compile Include="General\SubeBll.cs" />
     <Compile Include="General\TahakkukBll.cs" />
     <Compile Include="General\TesvikBll.cs" />
+    <Compile Include="General\UcretOrtalamalariRaporuBll.cs" />
     <Compile Include="General\UcretveOdemeRaporuBll.cs" />
     <Compile Include="General\YabanciDilBll.cs" />
     <Compile Include="General\YakinlikBll.cs" />

@@ -36,7 +36,7 @@ namespace OgrenciTakip.BLL.General
             } : new { x.Odeme.Vade.Year, x.Odeme.Vade.Month }).Select(x => new GelirDagilimRaporuL
             {
                 Yil = x.Select(y => hesaplamaSekli == GruplamaTuru.GirisTarihineGore ? y.Odeme.GirisTarihi.Year : hesaplamaSekli == GruplamaTuru.HesabaGecisTarihineGore ? y.Odeme.HesabaGecisTarihi.Year : y.Odeme.Vade.Year).FirstOrDefault(),
-
+            
                 Ay = (Aylar)x.Select(y => hesaplamaSekli == GruplamaTuru.GirisTarihineGore ? y.Odeme.GirisTarihi.Month : hesaplamaSekli == GruplamaTuru.HesabaGecisTarihineGore ? y.Odeme.HesabaGecisTarihi.Month : y.Odeme.Vade.Month).FirstOrDefault(),
                 TaksitSayisi = x.Count(),
                 Acik = x.Where(y => y.Odeme.OdemeTipi == OdemeTipi.Acik).Select(y => y.Odeme.Tutar).DefaultIfEmpty(0).Sum(),

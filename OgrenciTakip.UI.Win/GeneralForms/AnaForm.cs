@@ -278,6 +278,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowEditReports<GelirDagilimRaporu>.ShowEditReport(KartTuru.GelirDagilimRaporu);
             }
+
+            else if (e.Item == btnUcretOrtalamalariRaporu)
+            {
+                ShowEditReports<UcretOrtalamalariRaporu>.ShowEditReport(KartTuru.UcretOrtalamalariRaporu);
+            }
         }
     }
 }

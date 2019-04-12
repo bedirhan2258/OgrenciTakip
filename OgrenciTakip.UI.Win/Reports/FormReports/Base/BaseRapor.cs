@@ -320,6 +320,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                     case KartTuru.UcretveOdemeRaporu:
                     case KartTuru.MesleklereGoreKayitRaporu:
                     case KartTuru.AylikKayitRaporu:
+                    case KartTuru.UcretOrtalamalariRaporu:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text);
                         break;
 
@@ -450,8 +451,8 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
 
         private void Tablo_CustomDrawRowFooterCell(object sender, FooterCellCustomDrawEventArgs e)
         {
-            if (e.Column.Summary.Count > 0)
-                e.Appearance.TextOptions.HAlignment = e.Column.AppearanceCell.HAlignment;
+            if (e.Column.Summary.Count > 0 && e.Column.ColumnEdit != null)
+                e.Appearance.TextOptions.HAlignment = e.Column.ColumnEdit.Appearance.HAlignment;
         }
 
         protected virtual void Tablo_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e) { }
