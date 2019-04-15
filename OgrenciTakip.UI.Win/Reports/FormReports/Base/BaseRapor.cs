@@ -37,6 +37,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
         protected MyCheckedComboBoxEdit Hizmetler;
         protected MyCheckedComboBoxEdit Indirimler;
         protected MyCheckedComboBoxEdit Odemeler;
+        protected MyCheckedComboBoxEdit BelgeDurumlari;
         protected MyCheckedComboBoxEdit KayitSekilleri;
         protected MyCheckedComboBoxEdit KayitDurumlari;
         protected MyCheckedComboBoxEdit IptalDurumlari;
@@ -57,7 +58,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
             Navigator.NavigatableControl = Tablo.GridControl;
 
             ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Always);
-            ShowItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
+            HideItems?.ForEach(x => x.Visibility = BarItemVisibility.Never);
         }
 
         protected virtual void DegiskenleriDoldur() { }
@@ -201,6 +202,22 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
             }
         }
 
+        protected void BelgeDurumuYukle()
+        {
+            var enums = Enum.GetValues(typeof(BelgeDurumu));
+
+            foreach (BelgeDurumu entity in enums)
+            {
+                var item = new CheckedListBoxItem
+                {
+                    CheckState = CheckState.Checked,
+                    Description = entity.ToName(),
+                    Value = entity
+                };
+                BelgeDurumlari.Properties.Items.Add(item);
+            }
+        }
+
         protected void IndirimKartlariYukle()
         {
             using (var bll = new IndirimBll())
@@ -321,6 +338,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                     case KartTuru.MesleklereGoreKayitRaporu:
                     case KartTuru.AylikKayitRaporu:
                     case KartTuru.UcretOrtalamalariRaporu:
+                    case KartTuru.OdemeBelgeleriRaporu:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text);
                         break;
 

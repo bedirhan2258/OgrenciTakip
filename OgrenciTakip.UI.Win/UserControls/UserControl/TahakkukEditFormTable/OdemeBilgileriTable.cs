@@ -26,7 +26,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             Bll = new OdemeBilgileriBll();
             Tablo = tablo;
             EventsLoad();
-            ShowItems = new BarItem[] { btnBelgeHareketleri };
+            ShowItems = new BarItem[] {btnBelgeHareketleri };
         }
 
         protected internal override void Listele()

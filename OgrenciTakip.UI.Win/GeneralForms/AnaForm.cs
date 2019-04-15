@@ -283,6 +283,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowEditReports<UcretOrtalamalariRaporu>.ShowEditReport(KartTuru.UcretOrtalamalariRaporu);
             }
+
+            else if (e.Item == btnOdemeBelgeleriRaporu)
+            {
+                ShowEditReports<OdemeBelgeleriRaporu>.ShowEditReport(KartTuru.OdemeBelgeleriRaporu);
+            }
         }
     }
 }

@@ -575,6 +575,12 @@
     <Compile Include="Reports\FormReports\NetUcretRaporu.Designer.cs">
       <DependentUpon>NetUcretRaporu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FormReports\OdemeBelgeleriRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormReports\OdemeBelgeleriRaporu.Designer.cs">
+      <DependentUpon>OdemeBelgeleriRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\SinifRaporlari.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1243,6 +1249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\NetUcretRaporu.resx">
       <DependentUpon>NetUcretRaporu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormReports\OdemeBelgeleriRaporu.resx">
+      <DependentUpon>OdemeBelgeleriRaporu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\SinifRaporlari.resx">
       <DependentUpon>SinifRaporlari.cs</DependentUpon>

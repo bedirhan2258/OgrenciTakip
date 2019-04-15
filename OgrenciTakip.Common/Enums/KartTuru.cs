@@ -138,6 +138,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Gelir Dağılım Raporu")]
         GelirDagilimRaporu = 65,
         [Description("Ücret Ortalamaları Raporu")]
-        UcretOrtalamalariRaporu = 66
+        UcretOrtalamalariRaporu = 66,
+        [Description("Ödeme Belgeleri Raporu")]
+        OdemeBelgeleriRaporu = 67
     }
 }
