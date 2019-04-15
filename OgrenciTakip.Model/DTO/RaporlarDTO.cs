@@ -423,4 +423,54 @@ namespace OgrenciTakip.Model.DTO
         public string OzelKod4 { get; set; }
         public string OzelKod5 { get; set; }
     }
+
+    public class TahsilatRaporuL
+    {
+        public long SubeId { get; set; }
+        public long DonemId { get; set; }
+        public string OgrenciSubeAdi { get; set; }
+        public string OgrenciNo { get; set; }
+        public string Adi { get; set; }
+        public string Soyadi { get; set; }
+        public string SinifAdi { get; set; }
+        public string SinifGrupAdi { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public KayitSekli KayitSekli { get; set; }
+        public KayitDurumu KayitDurumu { get; set; }
+        public IptalDurumu IptalDurumu { get; set; }
+        public string BelgeSubeAdi { get; set; }
+        public int PortfoyNo { get; set; }
+        public string OdemeTuruAdi { get; set; }
+        public DateTime GirisTarihi { get; set; }
+        public DateTime Vade { get; set; }
+        public DateTime HesabaGecisTarihi { get; set; }
+        public decimal Tutar { get; set; }
+        public decimal IslemOncesiTutar { get; set; }
+        public decimal IslemTutari { get; set; }
+        public decimal Kalan { get; set; }
+        public BelgeDurumu BelgeDurumu { get; set; }
+        public string BelgeNo { get; set; }
+        public string HesapNo { get; set; }
+        public string BankaAdi { get; set; }
+        public string BankaSubeAdi { get; set; }
+        public string AsilBorclu { get; set; }
+        public string Ciranta { get; set; }
+        public byte BlokeGunSayisi { get; set; }
+        public string BankaHesapAdi { get; set; }
+        public string TakipNo { get; set; }
+        public string Aciklama { get; set; }
+        public long MakbuzId { get; set; }
+        public string MakbuzNo { get; set; }
+        public DateTime MakbuzTarihi { get; set; }
+        public MakbuzTuru MakbuzTuru { get; set; }
+        public MakbuzHesapTuru MakbuzHesapTuru { get; set; }
+        public string IslemYeri { get; set; }
+        public string TahsilEden { get; set; }
+        public string OzelKod1 { get; set; }
+        public string OzelKod2 { get; set; }
+        public string OzelKod3 { get; set; }
+        public string OzelKod4 { get; set; }
+        public string OzelKod5 { get; set; }
+    }
 }
+

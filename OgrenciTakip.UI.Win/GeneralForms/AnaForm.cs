@@ -288,6 +288,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowEditReports<OdemeBelgeleriRaporu>.ShowEditReport(KartTuru.OdemeBelgeleriRaporu);
             }
+
+            else if (e.Item == btnTahsilatRaporu)
+            {
+                ShowEditReports<TahsilatRaporu>.ShowEditReport(KartTuru.TahsilatRaporu);
+            }
         }
     }
 }

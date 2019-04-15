@@ -44,6 +44,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
         protected ComboBoxEdit HizmetAlimTuru;
         protected ComboBoxEdit HesaplamaSekli;
         protected MyDataLayoutControl DataLayoutControl;
+        protected DateEdit IlkTarih, SonTarih;
 
         public BaseRapor()
         {
@@ -202,7 +203,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
             }
         }
 
-        protected void BelgeDurumuYukle()
+        protected virtual void BelgeDurumuYukle()
         {
             var enums = Enum.GetValues(typeof(BelgeDurumu));
 
@@ -356,6 +357,10 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
 
                     case KartTuru.GelirDagilimRaporu:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Hesaplama Türü", HesaplamaSekli.Text);
+                        break;
+
+                    case KartTuru.TahsilatRaporu:
+                        TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Vade Aralığı", $"{IlkTarih.Text} - {SonTarih.Text}");
                         break;
                 }
             }
