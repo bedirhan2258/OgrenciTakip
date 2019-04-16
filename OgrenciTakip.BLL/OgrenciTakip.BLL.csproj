@@ -108,6 +108,7 @@
     <Compile Include="General\NetUcretRaporuBll.cs" />
     <Compile Include="General\OdemeBelgeleriRaporuBll.cs" />
     <Compile Include="General\OdemeBilgileriBll.cs" />
+    <Compile Include="General\OdemesiGecikenAlacaklarRaporuBll.cs" />
     <Compile Include="General\OdemeTuruBll.cs" />
     <Compile Include="General\OgrenciBll.cs" />
     <Compile Include="General\OkulBLL.cs" />

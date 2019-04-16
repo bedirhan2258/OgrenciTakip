@@ -472,5 +472,62 @@ namespace OgrenciTakip.Model.DTO
         public string OzelKod4 { get; set; }
         public string OzelKod5 { get; set; }
     }
+
+    public class OdemesiGecikenAlacaklarRaporuL
+    {
+        public long SubeId { get; set; }
+        public long DonemId { get; set; }
+        public string OgrenciSubeAdi { get; set; }
+        public string OgrenciNo { get; set; }
+        public string Adi { get; set; }
+        public string Soyadi { get; set; }
+        public string SinifAdi { get; set; }
+        public string SinifGrupAdi { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public KayitSekli KayitSekli { get; set; }
+        public KayitDurumu KayitDurumu { get; set; }
+        public IptalDurumu IptalDurumu { get; set; }
+        public string BelgeSubeAdi { get; set; }
+        public int PortfoyNo { get; set; }
+        public string OdemeTuruAdi { get; set; }
+        public DateTime GirisTarihi { get; set; }
+        public DateTime Vade { get; set; }
+        public DateTime HesabaGecisTarihi { get; set; }
+        public decimal Tutar { get; set; }
+        public decimal Iade { get; set; }
+        public decimal NetTutar { get; set; }
+        public decimal Tahsil { get; set; }
+        public decimal Tahsilde { get; set; }
+        public decimal Kalan { get; set; }
+        public BelgeDurumu BelgeDurumu { get; set; }
+        public string BelgeNo { get; set; }
+        public string HesapNo { get; set; }
+        public string BankaAdi { get; set; }
+        public string BankaSubeAdi { get; set; }
+        public string AsilBorclu { get; set; }
+        public string Ciranta { get; set; }
+        public byte BlokeGunSayisi { get; set; }
+        public string BankaHesapAdi { get; set; }
+        public string TakipNo { get; set; }
+        public string Aciklama { get; set; }
+        public DateTime? SonHareketTarihi { get; set; }
+        public string SonIslemYeri { get; set; }
+        public string OzelKod1 { get; set; }
+        public string OzelKod2 { get; set; }
+        public string OzelKod3 { get; set; }
+        public string OzelKod4 { get; set; }
+        public string OzelKod5 { get; set; }
+        public string VeliAdi { get; set; }
+        public string VeliSoyadi { get; set; }
+        public string Yakinlik { get; set; }
+        public string Meslek { get; set; }
+        public string EvTel { get; set; }
+        public string IsTel1 { get; set; }
+        public string IsTel2 { get; set; }
+        public string CepTel1 { get; set; }
+        public string CepTel2 { get; set; }
+        public string Isyeri { get; set; }
+        public string Gorev { get; set; }
+    }
 }
 
