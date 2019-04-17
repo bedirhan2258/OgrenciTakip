@@ -13,6 +13,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaSubeForms
         private readonly long _bankaId;
         private readonly string _bankaAdi; 
         #endregion
+
         public BankaSubeEditForm(params object[] prm)
         {
             InitializeComponent();

@@ -360,6 +360,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
                         break;
 
                     case KartTuru.TahsilatRaporu:
+                    case KartTuru.OdemesiGecikenAlacaklarRaporu:
                         TablePrintingFunctions.Yazdir(Tablo, Tablo.ViewCaption, Subeler.Text, KayitSekilleri.Text, KayitDurumlari.Text, IptalDurumlari.Text, "Vade Aralığı", $"{IlkTarih.Text} - {SonTarih.Text}");
                         break;
                 }

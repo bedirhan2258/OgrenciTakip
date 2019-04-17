@@ -75,6 +75,9 @@
             this.btnGelirDagilimRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.btnUcretOrtalamalariRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.btnOdemeBelgeleriRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
+            this.btnTahsilatRaporu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGecikenAlacaklarRaporu = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -82,8 +85,6 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
-            this.btnTahsilatRaporu = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
@@ -139,9 +140,10 @@
             this.btnUcretOrtalamalariRaporu,
             this.btnOdemeBelgeleriRaporu,
             this.barCheckItem1,
-            this.btnTahsilatRaporu});
+            this.btnTahsilatRaporu,
+            this.btnGecikenAlacaklarRaporu});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 48;
+            this.ribbonControl.MaxItemId = 49;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -419,6 +421,24 @@
             this.btnOdemeBelgeleriRaporu.Id = 45;
             this.btnOdemeBelgeleriRaporu.Name = "btnOdemeBelgeleriRaporu";
             // 
+            // barCheckItem1
+            // 
+            this.barCheckItem1.Caption = "barCheckItem1";
+            this.barCheckItem1.Id = 46;
+            this.barCheckItem1.Name = "barCheckItem1";
+            // 
+            // btnTahsilatRaporu
+            // 
+            this.btnTahsilatRaporu.Caption = "Tahsilat Raporu";
+            this.btnTahsilatRaporu.Id = 47;
+            this.btnTahsilatRaporu.Name = "btnTahsilatRaporu";
+            // 
+            // btnGecikenAlacaklarRaporu
+            // 
+            this.btnGecikenAlacaklarRaporu.Caption = "Geciken Alacaklar Raporu";
+            this.btnGecikenAlacaklarRaporu.Id = 48;
+            this.btnGecikenAlacaklarRaporu.Name = "btnGecikenAlacaklarRaporu";
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -485,6 +505,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.btnUcretOrtalamalariRaporu);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnOdemeBelgeleriRaporu);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnTahsilatRaporu);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnGecikenAlacaklarRaporu);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
@@ -503,18 +524,6 @@
             // xtraTabbedMdiManager
             // 
             this.xtraTabbedMdiManager.MdiParent = this;
-            // 
-            // barCheckItem1
-            // 
-            this.barCheckItem1.Caption = "barCheckItem1";
-            this.barCheckItem1.Id = 46;
-            this.barCheckItem1.Name = "barCheckItem1";
-            // 
-            // btnTahsilatRaporu
-            // 
-            this.btnTahsilatRaporu.Caption = "Tahsilat Raporu";
-            this.btnTahsilatRaporu.Id = 47;
-            this.btnTahsilatRaporu.Name = "btnTahsilatRaporu";
             // 
             // AnaForm
             // 
@@ -593,5 +602,6 @@
         private DevExpress.XtraBars.BarButtonItem btnOdemeBelgeleriRaporu;
         private DevExpress.XtraBars.BarCheckItem barCheckItem1;
         private DevExpress.XtraBars.BarButtonItem btnTahsilatRaporu;
+        private DevExpress.XtraBars.BarButtonItem btnGecikenAlacaklarRaporu;
     }
 }

@@ -73,6 +73,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static long? DefaultAvukatHesapId;
         public static string DefaultAvukatHesapAdi;
         public static long KullaniciId = 1;
+        public static string KullaniciAdi = "Bedo";
         public static bool RaporlariOnayAlmadanKapat = false;
         public static List<long> YetkiliOlunanSubeler = new List<long> { 1, 2019031701050868106 };
 
@@ -292,6 +293,11 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnTahsilatRaporu)
             {
                 ShowEditReports<TahsilatRaporu>.ShowEditReport(KartTuru.TahsilatRaporu);
+            }
+
+            else if (e.Item == btnGecikenAlacaklarRaporu)
+            {
+                ShowEditReports<OdemesiGecikenAlacaklarRaporu>.ShowEditReport(KartTuru.OdemesiGecikenAlacaklarRaporu);
             }
         }
     }

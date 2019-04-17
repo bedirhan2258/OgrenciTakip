@@ -233,6 +233,18 @@
     <Compile Include="Forms\FiltreForms\FiltreListForm.Designer.cs">
       <DependentUpon>FiltreListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariEditForm.Designer.cs">
+      <DependentUpon>GecikmeAciklamalariEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariListForm.Designer.cs">
+      <DependentUpon>GecikmeAciklamalariListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GorevForms\GorevEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1082,6 +1094,12 @@
     <EmbeddedResource Include="Forms\FiltreForms\FiltreListForm.resx">
       <DependentUpon>FiltreListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariEditForm.resx">
+      <DependentUpon>GecikmeAciklamalariEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GecikmeAciklamalariForms\GecikmeAciklamalariListForm.resx">
+      <DependentUpon>GecikmeAciklamalariListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GorevForms\GorevEditForm.resx">
       <DependentUpon>GorevEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1695,6 +1713,7 @@
   <ItemGroup>
     <None Include="Resources\previous_32x32.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

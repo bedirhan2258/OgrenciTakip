@@ -163,13 +163,13 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         {
             if (!IsMdiChild)
             {
-                //Güncellenecek
-                SelectEntity();
-
+                if (btnSec.Visibility == BarItemVisibility.Never)
+                    btnDuzelt.PerformClick();
+                else
+                    SelectEntity();
             }
             else
             {
-                //PerformClick MdiChild değilsen btnDüzenle butonuna basılmış gibi işlem yapılmaını sağlar.
                 btnDuzelt.PerformClick();
             }
         }
@@ -461,6 +461,6 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
         }
 
-     
+
     }
 }

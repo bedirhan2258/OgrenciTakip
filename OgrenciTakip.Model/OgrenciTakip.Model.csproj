@@ -64,6 +64,7 @@
     <Compile Include="DTO\EposBilgileriDTO.cs" />
     <Compile Include="DTO\EvrakBilgileriDTO.cs" />
     <Compile Include="DTO\FaturaDTO.cs" />
+    <Compile Include="DTO\GecikmeAciklamalariDTO.cs" />
     <Compile Include="DTO\GeriOdemeBilgileriDTO.cs" />
     <Compile Include="DTO\HizmetBilgileriDTO.cs" />
     <Compile Include="DTO\HizmetDTO.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="DTO\SubeDTO.cs" />
     <Compile Include="DTO\TahakkukDTO.cs" />
+    <Compile Include="Entities\GecikmeAciklamalari.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\AileBilgileri.cs" />
     <Compile Include="Entities\Avukat.cs" />
