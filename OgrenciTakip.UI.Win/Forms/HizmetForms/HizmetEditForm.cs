@@ -91,10 +91,10 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
         {
             base.Control_EditValueChanged(sender, e);
 
-            txtBaslamaTarihi.Properties.MinValue = AnaForm.EgitimBaslamaTarihi;
-            txtBaslamaTarihi.Properties.MaxValue = AnaForm.DonemBitisTarihi;
+            txtBaslamaTarihi.Properties.MinValue = AnaForm.DonemParametreleri.EgitimBaslamaTarihi;
+            txtBaslamaTarihi.Properties.MaxValue = AnaForm.DonemParametreleri.DonemBitisTarihi;
             txtBitisTarihi.Properties.MinValue = txtBaslamaTarihi.DateTime.Date;
-            txtBitisTarihi.Properties.MaxValue = AnaForm.DonemBitisTarihi;
+            txtBitisTarihi.Properties.MaxValue = AnaForm.DonemParametreleri.DonemBitisTarihi;
         }
     }
 }

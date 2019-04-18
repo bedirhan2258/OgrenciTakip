@@ -49,8 +49,8 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             txtKayitDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<KayitDurumu>());
             txtSonrakiDonemKayitDurumu.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<SonrakiDonemKayitDurumu>());
 
-            txtKayitTarihi.Properties.MinValue = AnaForm.DonemBaslamaTarihi;
-            txtKayitTarihi.Properties.MaxValue = AnaForm.DonemBitisTarihi;
+            txtKayitTarihi.Properties.MinValue = AnaForm.DonemParametreleri.DonemBaslamaTarihi;
+            txtKayitTarihi.Properties.MaxValue = AnaForm.DonemParametreleri.DonemBitisTarihi;
 
             btnYazdir.Caption = "Kayıt Evrakları";
             kayitSonrasiFormuKapat = false;

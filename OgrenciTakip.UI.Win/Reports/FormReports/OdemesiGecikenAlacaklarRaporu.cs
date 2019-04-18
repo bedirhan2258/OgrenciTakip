@@ -45,7 +45,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports
             IptalDurumuYukle();
             OdemeTurleriYukle();
             BelgeDurumuYukle();
-            txtIlkTarih.DateTime = AnaForm.DonemBaslamaTarihi;
+            txtIlkTarih.DateTime = AnaForm.DonemParametreleri.DonemBaslamaTarihi;
             txtSonTarih.DateTime = DateTime.Now.Date;
             RaporTuru = KartTuru.OdemesiGecikenAlacaklarRaporu;
 

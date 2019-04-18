@@ -106,7 +106,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             {
                 var entity = tablo.GetRow<HizmetBilgileriL>(i);
 
-                if (entity.IptalEdildi && entity.HizmetTipi == HizmetTipi.Egitim && AnaForm.GittigiOkulZorunlu && entity.GittigiOkulId == null)
+                if (entity.IptalEdildi && entity.HizmetTipi == HizmetTipi.Egitim && AnaForm.DonemParametreleri.GittigiOkulZorunlu && entity.GittigiOkulId == null)
                 {
                     tablo.FocusedRowHandle = i;
                     tablo.FocusedColumn = colGittigiOkulAdi;
@@ -138,15 +138,15 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
 
         private void UcretHesapla(HizmetBilgileriL entity)
         {
-            var egitimBaslamaTarihi = AnaForm.EgitimBaslamaTarihi;
-            var egitimBitisTarihi = AnaForm.DonemBitisTarihi;
+            var egitimBaslamaTarihi = AnaForm.DonemParametreleri.EgitimBaslamaTarihi;
+            var egitimBitisTarihi = AnaForm.DonemParametreleri.DonemBitisTarihi;
 
             var toplamGunSayisi = (int)(egitimBitisTarihi - egitimBaslamaTarihi).TotalDays + 1;
             var gunlukUcret = entity.BrutUcret / toplamGunSayisi;
             var alinanHizmetGunSayisi = entity.IptalTarihi == null ? (int)(egitimBitisTarihi - entity.BaslamaTarihi).TotalDays + 1 : (int)((entity.IptalTarihi - entity.BaslamaTarihi).Value.TotalDays + 1);
             var odenecekUcret = alinanHizmetGunSayisi > 0 ? gunlukUcret * alinanHizmetGunSayisi : 0;
             var kistDonemDusulenUcret = entity.BrutUcret - odenecekUcret;
-            kistDonemDusulenUcret = Math.Round(kistDonemDusulenUcret, AnaForm.HizmetTahakkukKurusKullan ? 2 : 0);
+            kistDonemDusulenUcret = Math.Round(kistDonemDusulenUcret, AnaForm.DonemParametreleri.HizmetTahakkukKurusKullan ? 2 : 0);
 
             if (entity.BaslamaTarihi > egitimBaslamaTarihi || entity.IptalEdildi)
                 entity.KistDonemDusulenUcret = kistDonemDusulenUcret;
@@ -317,8 +317,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 var entity = tablo.GetRow<HizmetBilgileriL>();
                 if (entity.IptalTarihi == null) return;
 
-                repositoryIptalTarihi.MinValue = AnaForm.GunTarihininOncesineIptalTarihiGirilebilir ? entity.BaslamaTarihi : DateTime.Now.Date;
-                repositoryIptalTarihi.MaxValue = AnaForm.GunTarihininSonrasinaIptalTarihiGirilebilir ? AnaForm.DonemBitisTarihi.AddDays(-1) : DateTime.Now.Date;
+                repositoryIptalTarihi.MinValue = AnaForm.DonemParametreleri.GunTarihininOncesineIptalTarihiGirilebilir ? entity.BaslamaTarihi : DateTime.Now.Date;
+                repositoryIptalTarihi.MaxValue = AnaForm.DonemParametreleri.GunTarihininSonrasinaIptalTarihiGirilebilir ? AnaForm.DonemParametreleri.DonemBitisTarihi.AddDays(-1) : DateTime.Now.Date;
             }
         }
 

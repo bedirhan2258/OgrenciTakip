@@ -87,6 +87,7 @@
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="DTO\SubeDTO.cs" />
     <Compile Include="DTO\TahakkukDTO.cs" />
+    <Compile Include="Entities\DonemParametre.cs" />
     <Compile Include="Entities\GecikmeAciklamalari.cs" />
     <Compile Include="Entities\AileBilgi.cs" />
     <Compile Include="Entities\AileBilgileri.cs" />

@@ -125,7 +125,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 var hizmetSource = bll.List(x => x.IndirimId == indirimId && x.HizmetId == hizmetId).Cast<IndiriminUygulanacagiHizmetBilgileriL>().FirstOrDefault();
                 if (hizmetSource == null) return (0, 0);
 
-                var egitimBitisTarihi = AnaForm.DonemBitisTarihi;
+                var egitimBitisTarihi = AnaForm.DonemParametreleri.DonemBitisTarihi;
                 var hizmetEntity = ((TahakkukEditForm)OwnerForm).hizmetBilgileriTable.Tablo.DataController.ListSource.Cast<HizmetBilgileriL>().First(x => x.HizmetId == hizmetId && !x.Delete);
                 var indirimEntity = tablo.DataController.ListSource.Cast<IndirimBilgileriL>().FirstOrDefault(x => x.IndirimId == indirimId && x.HizmetId == hizmetId && !x.Delete);
                 var hizmetToplami = hizmetEntity.IptalEdildi ? HizmetToplamiAl(true) : HizmetToplamiAl(false);
@@ -134,8 +134,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 var brutIndirim = hizmetSource.IndirimTutari > 0 ? hizmetSource.IndirimTutari : hizmetToplami * hizmetSource.IndirimOrani / 100;
                 var gunlukIndirim = brutIndirim / toplamGunSayisi;
                 var kistDonemDusulenIndirim = (toplamGunSayisi - hizmetGunSayisi) * gunlukIndirim;
-                brutIndirim = Math.Round(brutIndirim, AnaForm.IndirimTahakkukKurusKullan ? 2 : 0);
-                kistDonemDusulenIndirim = Math.Round(kistDonemDusulenIndirim, AnaForm.IndirimTahakkukKurusKullan ? 2 : 0);
+                brutIndirim = Math.Round(brutIndirim, AnaForm.DonemParametreleri.IndirimTahakkukKurusKullan ? 2 : 0);
+                kistDonemDusulenIndirim = Math.Round(kistDonemDusulenIndirim, AnaForm.DonemParametreleri.IndirimTahakkukKurusKullan ? 2 : 0);
 
                 return (brutIndirim, kistDonemDusulenIndirim);
             }
@@ -216,7 +216,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
             var alinanHizmetGunSayisi = (int)(DateTime.Now.Date - hizmetEntity.BaslamaTarihi).TotalDays + 1;
             var brutIndirim = gunlukIndirim * alinanHizmetGunSayisi;
             var kistDonemDusulenIndirim = indirimEntity.BrutIndirim - brutIndirim;
-            kistDonemDusulenIndirim = Math.Round(kistDonemDusulenIndirim, AnaForm.IndirimTahakkukKurusKullan ? 2 : 0);
+            kistDonemDusulenIndirim = Math.Round(kistDonemDusulenIndirim, AnaForm.DonemParametreleri.IndirimTahakkukKurusKullan ? 2 : 0);
 
             var iptalNedeni = (IptalNedeni)ShowListForms<IptalNedeniListForm>.ShowDialogListForm(KartTuru.IptalNedeni, -1);
             if (iptalNedeni != null)
@@ -251,7 +251,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 var gunlukIndirim = x.BrutIndirim / entity.EgitimDonemiGunSayisi;
                 var brutIndirim = gunlukIndirim * entity.AlinanHizmetGunSayisi;
                 var kistDonemDusulenIndirim = x.BrutIndirim - brutIndirim;
-                kistDonemDusulenIndirim = Math.Round(kistDonemDusulenIndirim, AnaForm.IndirimTahakkukKurusKullan ? 2 : 0);
+                kistDonemDusulenIndirim = Math.Round(kistDonemDusulenIndirim, AnaForm.DonemParametreleri.IndirimTahakkukKurusKullan ? 2 : 0);
 
                 x.IndirimAdi = $"{x.IndirimAdi } - ( *** İptal Edildi *** )";
                 if (!x.ManuelGirilenTutar)
@@ -389,8 +389,8 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.TahakkukEditFormTable
                 var entity = tablo.GetRow<IndirimBilgileriL>();
                 if (entity.IptalTarihi == null) return;
 
-                repositoryIptalTarihi.MinValue = AnaForm.GunTarihininOncesineIptalTarihiGirilebilir ? entity.IslemTarihi : DateTime.Now.Date;
-                repositoryIptalTarihi.MaxValue = AnaForm.GunTarihininSonrasinaIptalTarihiGirilebilir ? AnaForm.DonemBitisTarihi.AddDays(-1) : DateTime.Now.Date;
+                repositoryIptalTarihi.MinValue = AnaForm.DonemParametreleri.GunTarihininOncesineIptalTarihiGirilebilir ? entity.IslemTarihi : DateTime.Now.Date;
+                repositoryIptalTarihi.MaxValue = AnaForm.DonemParametreleri.GunTarihininSonrasinaIptalTarihiGirilebilir ? AnaForm.DonemParametreleri.DonemBitisTarihi.AddDays(-1) : DateTime.Now.Date;
             }
         }
 
