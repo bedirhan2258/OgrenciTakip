@@ -222,10 +222,6 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 ShowListForms<MakbuzListForm>.ShowListForm(KartTuru.Makbuz);
             }
-            else if (e.Item == btnSubeKartlari)
-            {
-                ShowListForms<SubeListForm>.ShowListForm(KartTuru.Sube);
-            }
             else if (e.Item == btnFaturaKartlari)
             {
                 ShowListForms<FaturaPlaniListForm>.ShowListForm(KartTuru.Fatura);
