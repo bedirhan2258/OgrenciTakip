@@ -20,7 +20,6 @@ using OgrenciTakip.UI.Win.Forms.PromosyonForms;
 using OgrenciTakip.UI.Win.Forms.ServisForms;
 using OgrenciTakip.UI.Win.Forms.SinifForms;
 using OgrenciTakip.UI.Win.Forms.HizmetTuruForms;
-using System;
 using OgrenciTakip.UI.Win.Forms.HizmetForms;
 using OgrenciTakip.UI.Win.Forms.KasaForms;
 using OgrenciTakip.UI.Win.Forms.BankaForms;
@@ -33,13 +32,14 @@ using OgrenciTakip.UI.Win.Forms.OgrenciForms;
 using OgrenciTakip.UI.Win.Forms.IndirimForms;
 using OgrenciTakip.UI.Win.Forms.TahakkukForms;
 using OgrenciTakip.UI.Win.Forms.MakbuzForms;
-using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Forms.FaturaForms;
 using System.Collections.Generic;
 using OgrenciTakip.UI.Win.Reports.FormReports;
 using DevExpress.XtraBars.Ribbon;
 using OgrenciTakip.UI.Win.Reports;
 using OgrenciTakip.Model.Entities;
+using DevExpress.XtraBars.Ribbon.Gallery;
+using OgrenciTakip.UI.Win.Functions;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -89,12 +89,32 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             {
                 switch (item)
                 {
+
+                    case SkinRibbonGalleryBarItem btn:
+                        btn.GalleryItemClick += GalleryItem_GalleryItemClick;
+                        break;
+
+                    case SkinPaletteRibbonGalleryBarItem btn:
+                        btn.GalleryItemClick += GalleryItem_GalleryItemClick;
+                        break;
                     case BarButtonItem btn:
                         btn.ItemClick += Butonlar_ItemClick;
                         break;
-
                 }
             }
+        }
+
+        private void GalleryItem_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
+        {
+            var gallery = sender as InRibbonGallery;
+            var key = "";
+
+            if (gallery.OwnerItem.GetType() == typeof(SkinRibbonGalleryBarItem))
+                key = "Skin";
+            else if (gallery.OwnerItem.GetType() == typeof(SkinPaletteRibbonGalleryBarItem))
+                key = "Palette";
+
+            GeneralFunctions.AppSettingsWrite(key, e.Item.Caption);
         }
 
         private void Butonlar_ItemClick(object sender, ItemClickEventArgs e)

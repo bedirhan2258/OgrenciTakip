@@ -16,6 +16,7 @@ using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
@@ -342,6 +343,13 @@ namespace OgrenciTakip.UI.Win.Functions
             return comboBox.Properties.Items.Where(x => x.CheckState == CheckState.Checked).Select(x => (T)x.Value);
         }
 
+        public static void AppSettingsWrite(string key, string value)
+        {
+            var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.AppSettings.Settings[key].Value = value;
+            configuration.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
+        }
     }
 }
 
