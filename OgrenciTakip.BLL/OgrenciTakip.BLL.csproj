@@ -102,6 +102,7 @@
     <Compile Include="General\KardesBilgileriBll.cs" />
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
+    <Compile Include="General\KullaniciParametreBll.cs" />
     <Compile Include="General\MakbuzBll.cs" />
     <Compile Include="General\MakbuzHareketleriBll.cs" />
     <Compile Include="General\MeslekBll.cs" />

@@ -547,6 +547,12 @@
     <Compile Include="Forms\SubeForms\SubeListForm.Designer.cs">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\KullaniciParametreEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\KullaniciParametreEditForm.Designer.cs">
+      <DependentUpon>KullaniciParametreEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FormReports\AylikKayitRaporu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -851,6 +857,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyCheckEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\MyColorPickEdit.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyComboBoxEdit.cs">
@@ -1257,6 +1266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SubeForms\SubeListForm.resx">
       <DependentUpon>SubeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\KullaniciParametreEditForm.resx">
+      <DependentUpon>KullaniciParametreEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\AylikKayitRaporu.resx">
       <DependentUpon>AylikKayitRaporu.cs</DependentUpon>

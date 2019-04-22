@@ -18,6 +18,7 @@ namespace OgrenciTakip.UI.Win
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
+            
             UserLookAndFeel.Default.SetSkinStyle(ConfigurationManager.AppSettings["Skin"], ConfigurationManager.AppSettings["Palette"]);
             Application.Run(new AnaForm());
         }
