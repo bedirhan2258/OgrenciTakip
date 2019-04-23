@@ -72,17 +72,17 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             {
                 switch (_hesapTuru)
                 {
-                    case MakbuzHesapTuru.Kasa when AnaForm.DefaultKasaHesapId != null:
-                        txtHesap.Id = AnaForm.DefaultKasaHesapId;
-                        txtHesap.Text = AnaForm.DefaultKasaHesapAdi;
+                    case MakbuzHesapTuru.Kasa when AnaForm.KullaniciParametreleri.DefaultKasaHesapId != null:
+                        txtHesap.Id = AnaForm.KullaniciParametreleri.DefaultKasaHesapId;
+                        txtHesap.Text = AnaForm.KullaniciParametreleri.DefaultKasaHesapAdi;
                         break;
-                    case MakbuzHesapTuru.Banka when AnaForm.DefaultBankaHesapId != null:
-                        txtHesap.Id = AnaForm.DefaultBankaHesapId;
-                        txtHesap.Text = AnaForm.DefaultBankaHesapAdi;
+                    case MakbuzHesapTuru.Banka when AnaForm.KullaniciParametreleri.DefaultBankaHesapId != null:
+                        txtHesap.Id = AnaForm.KullaniciParametreleri.DefaultBankaHesapId;
+                        txtHesap.Text = AnaForm.KullaniciParametreleri.DefaultBankaHesapAdi;
                         break;
-                    case MakbuzHesapTuru.Avukat when AnaForm.DefaultAvukatHesapId != null:
-                        txtHesap.Id = AnaForm.DefaultAvukatHesapId;
-                        txtHesap.Text = AnaForm.DefaultAvukatHesapAdi;
+                    case MakbuzHesapTuru.Avukat when AnaForm.KullaniciParametreleri.DefaultAvukatHesapId != null:
+                        txtHesap.Id = AnaForm.KullaniciParametreleri.DefaultAvukatHesapId;
+                        txtHesap.Text = AnaForm.KullaniciParametreleri.DefaultAvukatHesapAdi;
                         break;
                     case MakbuzHesapTuru.Transfer when MakbuzTuru == MakbuzTuru.GelenBelgeyiOnaylama:
                         txtHesap.Id = AnaForm.SubeId;

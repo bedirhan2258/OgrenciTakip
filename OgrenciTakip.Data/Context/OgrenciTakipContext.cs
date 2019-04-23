@@ -88,6 +88,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<Fatura> Fatura { get; set; }
         public DbSet<GecikmeAciklamalari> GecikmeAciklamalari { get; set; }
         public DbSet<DonemParametre> DonemParametre { get; set; }
+        public DbSet<KullaniciParametre> KullaniciParametre { get; set; }
     }
 
 }

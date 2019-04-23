@@ -489,7 +489,7 @@ namespace OgrenciTakip.UI.Win.Reports.FormReports.Base
 
         private void BaseRapor_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!AnaForm.RaporlariOnayAlmadanKapat)
+            if (!AnaForm.KullaniciParametreleri.RaporlariOnayAlmadanKapat)
             {
                 if (Messages.RaporKapatMesaj() != DialogResult.Yes)
                     e.Cancel = true;

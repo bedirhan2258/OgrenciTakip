@@ -1,8 +1,7 @@
 ﻿
-using OgrenciTakip.Model.Attributes;
 using OgrenciTakip.Model.Entities.Base;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Drawing;
 
 namespace OgrenciTakip.Model.Entities
 {
@@ -16,9 +15,9 @@ namespace OgrenciTakip.Model.Entities
         public long? DefaultBankaHesapId { get; set; }
         public long? DefaultKasaHesapId { get; set; }
         public bool RaporlariOnayAlmadanKapat { get; set; }
-        public int TableViewCaptionForeColor { get; set; }
-        public int TableColumnHeaderForeColor { get; set; }
-        public int TableBandPanelForeColor { get; set; }
+        public int TableViewCaptionForeColor { get; set; } = Color.Maroon.ToArgb();
+        public int TableColumnHeaderForeColor { get; set; } = Color.Maroon.ToArgb();
+        public int TableBandPanelForeColor { get; set; } = Color.DarkBlue.ToArgb();
 
         [Column(TypeName = "image")]
         public byte[] ArkaPlanResim { get; set; }

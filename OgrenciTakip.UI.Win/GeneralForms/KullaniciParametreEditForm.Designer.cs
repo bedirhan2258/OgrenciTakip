@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraLayout.ColumnDefinition columnDefinition2 = new DevExpress.XtraLayout.ColumnDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition10 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition11 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition12 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition13 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition14 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition15 = new DevExpress.XtraLayout.RowDefinition();
-            DevExpress.XtraLayout.RowDefinition rowDefinition16 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.ColumnDefinition columnDefinition1 = new DevExpress.XtraLayout.ColumnDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition1 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition2 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition3 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition4 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition5 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition6 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
+            DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
             this.txtRaporlariOnayAlmadanKapat = new OgrenciTakip.UI.Win.UserControls.Controls.MyCheckEdit();
-            this.txtVarsayılanKasaHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
-            this.txtVarsayılanBankaHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
-            this.txtVarsayılanAvukatHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtDefaultKasaHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtDefaultBankaHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
+            this.txtDefaultAvukatHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -60,9 +60,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRaporlariOnayAlmadanKapat.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVarsayılanKasaHesap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVarsayılanBankaHesap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVarsayılanAvukatHesap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultKasaHesap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultBankaHesap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultAvukatHesap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -91,9 +91,9 @@
             this.myDataLayoutControl.Controls.Add(this.txtTableColumnHeaderForeColor);
             this.myDataLayoutControl.Controls.Add(this.txtTableViewCaptionForeColor);
             this.myDataLayoutControl.Controls.Add(this.txtRaporlariOnayAlmadanKapat);
-            this.myDataLayoutControl.Controls.Add(this.txtVarsayılanKasaHesap);
-            this.myDataLayoutControl.Controls.Add(this.txtVarsayılanBankaHesap);
-            this.myDataLayoutControl.Controls.Add(this.txtVarsayılanAvukatHesap);
+            this.myDataLayoutControl.Controls.Add(this.txtDefaultKasaHesap);
+            this.myDataLayoutControl.Controls.Add(this.txtDefaultBankaHesap);
+            this.myDataLayoutControl.Controls.Add(this.txtDefaultAvukatHesap);
             this.myDataLayoutControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.myDataLayoutControl.Location = new System.Drawing.Point(0, 102);
             this.myDataLayoutControl.Name = "myDataLayoutControl";
@@ -117,62 +117,62 @@
             this.txtRaporlariOnayAlmadanKapat.StyleController = this.myDataLayoutControl;
             this.txtRaporlariOnayAlmadanKapat.TabIndex = 3;
             // 
-            // txtVarsayılanKasaHesap
+            // txtDefaultKasaHesap
             // 
-            this.txtVarsayılanKasaHesap.EnterMoveNextControl = true;
-            this.txtVarsayılanKasaHesap.Id = null;
-            this.txtVarsayılanKasaHesap.Location = new System.Drawing.Point(162, 60);
-            this.txtVarsayılanKasaHesap.MenuManager = this.ribbonControl;
-            this.txtVarsayılanKasaHesap.Name = "txtVarsayılanKasaHesap";
-            this.txtVarsayılanKasaHesap.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtVarsayılanKasaHesap.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtVarsayılanKasaHesap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtDefaultKasaHesap.EnterMoveNextControl = true;
+            this.txtDefaultKasaHesap.Id = null;
+            this.txtDefaultKasaHesap.Location = new System.Drawing.Point(162, 60);
+            this.txtDefaultKasaHesap.MenuManager = this.ribbonControl;
+            this.txtDefaultKasaHesap.Name = "txtDefaultKasaHesap";
+            this.txtDefaultKasaHesap.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDefaultKasaHesap.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDefaultKasaHesap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtVarsayılanKasaHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtVarsayılanKasaHesap.Size = new System.Drawing.Size(241, 20);
-            this.txtVarsayılanKasaHesap.StatusBarAciklama = null;
-            this.txtVarsayılanKasaHesap.StatusBarKisayol = "F4 :";
-            this.txtVarsayılanKasaHesap.StatusBarKisayolAciklama = null;
-            this.txtVarsayılanKasaHesap.StyleController = this.myDataLayoutControl;
-            this.txtVarsayılanKasaHesap.TabIndex = 2;
+            this.txtDefaultKasaHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtDefaultKasaHesap.Size = new System.Drawing.Size(241, 20);
+            this.txtDefaultKasaHesap.StatusBarAciklama = null;
+            this.txtDefaultKasaHesap.StatusBarKisayol = "F4 :";
+            this.txtDefaultKasaHesap.StatusBarKisayolAciklama = null;
+            this.txtDefaultKasaHesap.StyleController = this.myDataLayoutControl;
+            this.txtDefaultKasaHesap.TabIndex = 2;
             // 
-            // txtVarsayılanBankaHesap
+            // txtDefaultBankaHesap
             // 
-            this.txtVarsayılanBankaHesap.EnterMoveNextControl = true;
-            this.txtVarsayılanBankaHesap.Id = null;
-            this.txtVarsayılanBankaHesap.Location = new System.Drawing.Point(162, 36);
-            this.txtVarsayılanBankaHesap.MenuManager = this.ribbonControl;
-            this.txtVarsayılanBankaHesap.Name = "txtVarsayılanBankaHesap";
-            this.txtVarsayılanBankaHesap.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtVarsayılanBankaHesap.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtVarsayılanBankaHesap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtDefaultBankaHesap.EnterMoveNextControl = true;
+            this.txtDefaultBankaHesap.Id = null;
+            this.txtDefaultBankaHesap.Location = new System.Drawing.Point(162, 36);
+            this.txtDefaultBankaHesap.MenuManager = this.ribbonControl;
+            this.txtDefaultBankaHesap.Name = "txtDefaultBankaHesap";
+            this.txtDefaultBankaHesap.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDefaultBankaHesap.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDefaultBankaHesap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtVarsayılanBankaHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtVarsayılanBankaHesap.Size = new System.Drawing.Size(241, 20);
-            this.txtVarsayılanBankaHesap.StatusBarAciklama = null;
-            this.txtVarsayılanBankaHesap.StatusBarKisayol = "F4 :";
-            this.txtVarsayılanBankaHesap.StatusBarKisayolAciklama = null;
-            this.txtVarsayılanBankaHesap.StyleController = this.myDataLayoutControl;
-            this.txtVarsayılanBankaHesap.TabIndex = 1;
+            this.txtDefaultBankaHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtDefaultBankaHesap.Size = new System.Drawing.Size(241, 20);
+            this.txtDefaultBankaHesap.StatusBarAciklama = null;
+            this.txtDefaultBankaHesap.StatusBarKisayol = "F4 :";
+            this.txtDefaultBankaHesap.StatusBarKisayolAciklama = null;
+            this.txtDefaultBankaHesap.StyleController = this.myDataLayoutControl;
+            this.txtDefaultBankaHesap.TabIndex = 1;
             // 
-            // txtVarsayılanAvukatHesap
+            // txtDefaultAvukatHesap
             // 
-            this.txtVarsayılanAvukatHesap.EnterMoveNextControl = true;
-            this.txtVarsayılanAvukatHesap.Id = null;
-            this.txtVarsayılanAvukatHesap.Location = new System.Drawing.Point(162, 12);
-            this.txtVarsayılanAvukatHesap.MenuManager = this.ribbonControl;
-            this.txtVarsayılanAvukatHesap.Name = "txtVarsayılanAvukatHesap";
-            this.txtVarsayılanAvukatHesap.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtVarsayılanAvukatHesap.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtVarsayılanAvukatHesap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtDefaultAvukatHesap.EnterMoveNextControl = true;
+            this.txtDefaultAvukatHesap.Id = null;
+            this.txtDefaultAvukatHesap.Location = new System.Drawing.Point(162, 12);
+            this.txtDefaultAvukatHesap.MenuManager = this.ribbonControl;
+            this.txtDefaultAvukatHesap.Name = "txtDefaultAvukatHesap";
+            this.txtDefaultAvukatHesap.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtDefaultAvukatHesap.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtDefaultAvukatHesap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtVarsayılanAvukatHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.txtVarsayılanAvukatHesap.Size = new System.Drawing.Size(241, 20);
-            this.txtVarsayılanAvukatHesap.StatusBarAciklama = null;
-            this.txtVarsayılanAvukatHesap.StatusBarKisayol = "F4 :";
-            this.txtVarsayılanAvukatHesap.StatusBarKisayolAciklama = null;
-            this.txtVarsayılanAvukatHesap.StyleController = this.myDataLayoutControl;
-            this.txtVarsayılanAvukatHesap.TabIndex = 0;
+            this.txtDefaultAvukatHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtDefaultAvukatHesap.Size = new System.Drawing.Size(241, 20);
+            this.txtDefaultAvukatHesap.StatusBarAciklama = null;
+            this.txtDefaultAvukatHesap.StatusBarKisayol = "F4 :";
+            this.txtDefaultAvukatHesap.StatusBarKisayolAciklama = null;
+            this.txtDefaultAvukatHesap.StyleController = this.myDataLayoutControl;
+            this.txtDefaultAvukatHesap.TabIndex = 0;
             // 
             // layoutControlGroup1
             // 
@@ -189,35 +189,35 @@
             this.layoutControlItem8});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            columnDefinition2.SizeType = System.Windows.Forms.SizeType.Percent;
-            columnDefinition2.Width = 100D;
+            columnDefinition1.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1.Width = 100D;
             this.layoutControlGroup1.OptionsTableLayoutGroup.ColumnDefinitions.AddRange(new DevExpress.XtraLayout.ColumnDefinition[] {
-            columnDefinition2});
-            rowDefinition9.Height = 24D;
-            rowDefinition9.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition10.Height = 24D;
-            rowDefinition10.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition11.Height = 24D;
-            rowDefinition11.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition12.Height = 24D;
-            rowDefinition12.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition13.Height = 24D;
-            rowDefinition13.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition14.Height = 24D;
-            rowDefinition14.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition15.Height = 24D;
-            rowDefinition15.SizeType = System.Windows.Forms.SizeType.Absolute;
-            rowDefinition16.Height = 100D;
-            rowDefinition16.SizeType = System.Windows.Forms.SizeType.Percent;
+            columnDefinition1});
+            rowDefinition1.Height = 24D;
+            rowDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition2.Height = 24D;
+            rowDefinition2.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition3.Height = 24D;
+            rowDefinition3.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition4.Height = 24D;
+            rowDefinition4.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition5.Height = 24D;
+            rowDefinition5.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition6.Height = 24D;
+            rowDefinition6.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition7.Height = 24D;
+            rowDefinition7.SizeType = System.Windows.Forms.SizeType.Absolute;
+            rowDefinition8.Height = 100D;
+            rowDefinition8.SizeType = System.Windows.Forms.SizeType.Percent;
             this.layoutControlGroup1.OptionsTableLayoutGroup.RowDefinitions.AddRange(new DevExpress.XtraLayout.RowDefinition[] {
-            rowDefinition9,
-            rowDefinition10,
-            rowDefinition11,
-            rowDefinition12,
-            rowDefinition13,
-            rowDefinition14,
-            rowDefinition15,
-            rowDefinition16});
+            rowDefinition1,
+            rowDefinition2,
+            rowDefinition3,
+            rowDefinition4,
+            rowDefinition5,
+            rowDefinition6,
+            rowDefinition7,
+            rowDefinition8});
             this.layoutControlGroup1.Size = new System.Drawing.Size(415, 316);
             this.layoutControlGroup1.TextVisible = false;
             // 
@@ -225,7 +225,7 @@
             // 
             this.layoutControlItem1.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem1.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem1.Control = this.txtVarsayılanAvukatHesap;
+            this.layoutControlItem1.Control = this.txtDefaultAvukatHesap;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(395, 24);
@@ -236,7 +236,7 @@
             // 
             this.layoutControlItem2.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem2.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem2.Control = this.txtVarsayılanBankaHesap;
+            this.layoutControlItem2.Control = this.txtDefaultBankaHesap;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 24);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.OptionsTableLayoutItem.RowIndex = 1;
@@ -248,7 +248,7 @@
             // 
             this.layoutControlItem3.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
             this.layoutControlItem3.AppearanceItemCaption.Options.UseForeColor = true;
-            this.layoutControlItem3.Control = this.txtVarsayılanKasaHesap;
+            this.layoutControlItem3.Control = this.txtDefaultKasaHesap;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.OptionsTableLayoutItem.RowIndex = 2;
@@ -407,9 +407,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtRaporlariOnayAlmadanKapat.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVarsayılanKasaHesap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVarsayılanBankaHesap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtVarsayılanAvukatHesap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultKasaHesap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultBankaHesap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultAvukatHesap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -433,9 +433,9 @@
         private UserControls.Controls.MyDataLayoutControl myDataLayoutControl;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private UserControls.Controls.MyCheckEdit txtRaporlariOnayAlmadanKapat;
-        private UserControls.Controls.MyButtonEdit txtVarsayılanKasaHesap;
-        private UserControls.Controls.MyButtonEdit txtVarsayılanBankaHesap;
-        private UserControls.Controls.MyButtonEdit txtVarsayılanAvukatHesap;
+        private UserControls.Controls.MyButtonEdit txtDefaultKasaHesap;
+        private UserControls.Controls.MyButtonEdit txtDefaultBankaHesap;
+        private UserControls.Controls.MyButtonEdit txtDefaultAvukatHesap;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;

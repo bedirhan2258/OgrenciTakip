@@ -40,6 +40,7 @@ using OgrenciTakip.UI.Win.Reports;
 using OgrenciTakip.Model.Entities;
 using DevExpress.XtraBars.Ribbon.Gallery;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.Model.DTO;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -50,34 +51,19 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         public static long SubeId = 1;
         public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
-
-        //public static DateTime EgitimBaslamaTarihi = new DateTime(2017, 09, 15);
-        //public static DateTime DonemBaslamaTarihi = new DateTime(2017, 07, 01);
-        //public static DateTime DonemBitisTarihi = new DateTime(2018, 06, 30);
-        //public static bool GunTarihininOncesineHizmetBaslamaTarihiGirilebilir = true;
-        //public static bool GunTarihininSonrasinaHizmetBaslamaTarihiGirilebilir = true;
-        //public static bool GunTarihininOncesineIptalTarihiGirilebilir = true;
-        //public static bool GunTarihininSonrasinaIptalTarihiGirilebilir = true;
-        //public static bool GunTarihininOncesineMakbuzTarihiGirilebilir = true;
-        //public static bool GunTarihininSonrasinaMakbuzTarihiGirilebilir = true;
-        //public static bool HizmetTahakkukKurusKullan;
-        //public static bool IndirimTahakkukKurusKullan;
-        //public static bool OdemePlaniKurusKullan;
-        //public static bool FaturaTahakkukKurusKullan;
-        //public static bool GittigiOkulZorunlu = true;
-        //public static DateTime MaksimumTaksitTarihi = new DateTime(2018, 06, 30);
-        //public static byte MaksimumTaksitSayisi = 12;
-        public static long? DefaultKasaHesapId;
-        public static string DefaultKasaHesapAdi;
-        public static long? DefaultBankaHesapId;
-        public static string DefaultBankaHesapAdi;
-        public static long? DefaultAvukatHesapId;
-        public static string DefaultAvukatHesapAdi;
+        //public static long? DefaultKasaHesapId;
+        //public static string DefaultKasaHesapAdi;
+        //public static long? DefaultBankaHesapId;
+        //public static string DefaultBankaHesapAdi;
+        //public static long? DefaultAvukatHesapId;
+        //public static string DefaultAvukatHesapAdi;
         public static long KullaniciId = 1;
         public static string KullaniciAdi = "Bedo";
-        public static bool RaporlariOnayAlmadanKapat = false;
+        //public static bool RaporlariOnayAlmadanKapat = false;
         public static List<long> YetkiliOlunanSubeler = new List<long> { 1, 2019031701050868106 };
         public static DonemParametre DonemParametreleri;
+        public static KullaniciParametreS KullaniciParametreleri = new KullaniciParametreS();
+
         public AnaForm()
         {
             InitializeComponent();
@@ -315,6 +301,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (e.Item == btnGecikenAlacaklarRaporu)
             {
                 ShowEditReports<OdemesiGecikenAlacaklarRaporu>.ShowEditReport(KartTuru.OdemesiGecikenAlacaklarRaporu);
+            }
+
+            else if (e.Item == btnKullaniciParametreleri)
+            {
+                var entity = ShowEditForms<KullaniciParametreEditForm>.ShowDialogEditForms<KullaniciParametreS>(KullaniciId);
+                if (entity == null) return;
+                KullaniciParametreleri = entity;
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraBars;
@@ -17,6 +18,7 @@ using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.Show.Interfaces;
+using OgrenciTakip.UI.Win.UserControls.Grid;
 
 namespace OgrenciTakip.UI.Win.Forms.BaseForms
 {
@@ -232,7 +234,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Listele();
             Cursor.Current = DefaultCursor;
 
-            //Güncellenecek
+            Tablo.Appearance.ViewCaption.ForeColor = Color.FromArgb(AnaForm.KullaniciParametreleri.TableViewCaptionForeColor);
+            Tablo.Appearance.HeaderPanel.ForeColor = Color.FromArgb(AnaForm.KullaniciParametreleri.TableColumnHeaderForeColor);
+            if (Tablo is MyBandedGridView bandedGrid)
+                bandedGrid.Appearance.BandPanel.ForeColor = Color.FromArgb(AnaForm.KullaniciParametreleri.TableBandPanelForeColor);
         }
         protected virtual void TahakkukYap() { }
 

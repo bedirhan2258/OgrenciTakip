@@ -321,6 +321,7 @@ namespace OgrenciTakip.UI.Win.Functions
                     break;
 
                 case "txtBankaHesap":
+                case "txtDefaultBankaHesap":
                     {
                         var entity = (BankaHesapL)ShowListForms<BankaHesapListForm>.ShowDialogListForm(KartTuru.BankaHesap, _btnEdit.Id, _odemeTipi);
                         if (entity != null)
@@ -340,6 +341,28 @@ namespace OgrenciTakip.UI.Win.Functions
                             _btnEdit.Tag = entity.OdemeTipi;
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.OdemeTuruAdi;
+                        }
+                    }
+                    break;
+
+                case "txtDefaultAvukatHesap":
+                    {
+                        var entity = (AvukatL)ShowListForms<AvukatListForm>.ShowDialogListForm(KartTuru.Avukat, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.AdiSoyadi;
+                        }
+                    }
+                    break;
+
+                case "txtDefaultKasaHesap":
+                    {
+                        var entity = (KasaL)ShowListForms<KasaListForm>.ShowDialogListForm(KartTuru.Kasa, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.KasaAdi;
                         }
                     }
                     break;
@@ -391,17 +414,6 @@ namespace OgrenciTakip.UI.Win.Functions
                                     }
                                     break;
                                 }
-
-                                //case KartTuru.Sube:
-                                //    {
-                                //        var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id, true);
-                                //        if (entity != null)
-                                //        {
-                                //            _btnEdit.Id = entity.Id;
-                                //            _btnEdit.EditValue = entity.SubeAdi;
-                                //        }
-                                //        break;
-                                //    }
                         }
                     }
                     break;
