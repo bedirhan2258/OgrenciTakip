@@ -38,6 +38,10 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition7 = new DevExpress.XtraLayout.RowDefinition();
             DevExpress.XtraLayout.RowDefinition rowDefinition8 = new DevExpress.XtraLayout.RowDefinition();
             this.myDataLayoutControl = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.imgArkaPlanResim = new OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
+            this.txtTableBandPanelForeColor = new OgrenciTakip.UI.Win.UserControls.Controls.MyColorPickEdit();
+            this.txtTableColumnHeaderForeColor = new OgrenciTakip.UI.Win.UserControls.Controls.MyColorPickEdit();
+            this.txtTableViewCaptionForeColor = new OgrenciTakip.UI.Win.UserControls.Controls.MyColorPickEdit();
             this.txtRaporlariOnayAlmadanKapat = new OgrenciTakip.UI.Win.UserControls.Controls.MyCheckEdit();
             this.txtDefaultKasaHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
             this.txtDefaultBankaHesap = new OgrenciTakip.UI.Win.UserControls.Controls.MyButtonEdit();
@@ -47,18 +51,18 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtTableViewCaptionForeColor = new OgrenciTakip.UI.Win.UserControls.Controls.MyColorPickEdit();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtTableColumnHeaderForeColor = new OgrenciTakip.UI.Win.UserControls.Controls.MyColorPickEdit();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.txtTableBandPanelForeColor = new OgrenciTakip.UI.Win.UserControls.Controls.MyColorPickEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.imgArkaPlanResim = new OgrenciTakip.UI.Win.UserControls.Controls.MyPictureEdit();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
             this.myDataLayoutControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResim.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTableBandPanelForeColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTableColumnHeaderForeColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTableViewCaptionForeColor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRaporlariOnayAlmadanKapat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDefaultKasaHesap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDefaultBankaHesap.Properties)).BeginInit();
@@ -68,13 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTableViewCaptionForeColor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTableColumnHeaderForeColor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTableBandPanelForeColor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +103,83 @@
             this.myDataLayoutControl.TabIndex = 0;
             this.myDataLayoutControl.Text = "myDataLayoutControl1";
             // 
+            // imgArkaPlanResim
+            // 
+            this.imgArkaPlanResim.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imgArkaPlanResim.EnterMoveNextControl = true;
+            this.imgArkaPlanResim.Location = new System.Drawing.Point(162, 180);
+            this.imgArkaPlanResim.MenuManager = this.ribbonControl;
+            this.imgArkaPlanResim.Name = "imgArkaPlanResim";
+            this.imgArkaPlanResim.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
+            this.imgArkaPlanResim.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.imgArkaPlanResim.Properties.Appearance.Options.UseBackColor = true;
+            this.imgArkaPlanResim.Properties.Appearance.Options.UseForeColor = true;
+            this.imgArkaPlanResim.Properties.NullText = "Resim Yok";
+            this.imgArkaPlanResim.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.imgArkaPlanResim.Properties.ShowMenu = false;
+            this.imgArkaPlanResim.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.imgArkaPlanResim.Size = new System.Drawing.Size(241, 124);
+            this.imgArkaPlanResim.StatusBarAciklama = "Arka Plan Resmi Seçiniz.";
+            this.imgArkaPlanResim.StatusBarKisayol = "F4 :";
+            this.imgArkaPlanResim.StatusBarKisayolAciklama = "Seçim Yap.";
+            this.imgArkaPlanResim.StyleController = this.myDataLayoutControl;
+            this.imgArkaPlanResim.TabIndex = 7;
+            this.imgArkaPlanResim.TabStop = true;
+            // 
+            // txtTableBandPanelForeColor
+            // 
+            this.txtTableBandPanelForeColor.EditValue = System.Drawing.Color.Empty;
+            this.txtTableBandPanelForeColor.Location = new System.Drawing.Point(162, 156);
+            this.txtTableBandPanelForeColor.MenuManager = this.ribbonControl;
+            this.txtTableBandPanelForeColor.Name = "txtTableBandPanelForeColor";
+            this.txtTableBandPanelForeColor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtTableBandPanelForeColor.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTableBandPanelForeColor.Properties.AutomaticColor = System.Drawing.Color.Black;
+            this.txtTableBandPanelForeColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtTableBandPanelForeColor.Size = new System.Drawing.Size(241, 20);
+            this.txtTableBandPanelForeColor.StatusBarAciklama = "Renk Seçiniz.";
+            this.txtTableBandPanelForeColor.StatusBarKisayol = "F4 :";
+            this.txtTableBandPanelForeColor.StatusBarKisayolAciklama = "Seçim Yap.";
+            this.txtTableBandPanelForeColor.StyleController = this.myDataLayoutControl;
+            this.txtTableBandPanelForeColor.TabIndex = 6;
+            // 
+            // txtTableColumnHeaderForeColor
+            // 
+            this.txtTableColumnHeaderForeColor.EditValue = System.Drawing.Color.Empty;
+            this.txtTableColumnHeaderForeColor.Location = new System.Drawing.Point(162, 132);
+            this.txtTableColumnHeaderForeColor.MenuManager = this.ribbonControl;
+            this.txtTableColumnHeaderForeColor.Name = "txtTableColumnHeaderForeColor";
+            this.txtTableColumnHeaderForeColor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtTableColumnHeaderForeColor.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTableColumnHeaderForeColor.Properties.AutomaticColor = System.Drawing.Color.Black;
+            this.txtTableColumnHeaderForeColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtTableColumnHeaderForeColor.Size = new System.Drawing.Size(241, 20);
+            this.txtTableColumnHeaderForeColor.StatusBarAciklama = "Renk Seçiniz.";
+            this.txtTableColumnHeaderForeColor.StatusBarKisayol = "F4 :";
+            this.txtTableColumnHeaderForeColor.StatusBarKisayolAciklama = "Seçim Yap.";
+            this.txtTableColumnHeaderForeColor.StyleController = this.myDataLayoutControl;
+            this.txtTableColumnHeaderForeColor.TabIndex = 5;
+            // 
+            // txtTableViewCaptionForeColor
+            // 
+            this.txtTableViewCaptionForeColor.EditValue = System.Drawing.Color.Empty;
+            this.txtTableViewCaptionForeColor.Location = new System.Drawing.Point(162, 108);
+            this.txtTableViewCaptionForeColor.MenuManager = this.ribbonControl;
+            this.txtTableViewCaptionForeColor.Name = "txtTableViewCaptionForeColor";
+            this.txtTableViewCaptionForeColor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
+            this.txtTableViewCaptionForeColor.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtTableViewCaptionForeColor.Properties.AutomaticColor = System.Drawing.Color.Black;
+            this.txtTableViewCaptionForeColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtTableViewCaptionForeColor.Size = new System.Drawing.Size(241, 20);
+            this.txtTableViewCaptionForeColor.StatusBarAciklama = "Renk Seçiniz.";
+            this.txtTableViewCaptionForeColor.StatusBarKisayol = "F4 :";
+            this.txtTableViewCaptionForeColor.StatusBarKisayolAciklama = "Seçim Yap.";
+            this.txtTableViewCaptionForeColor.StyleController = this.myDataLayoutControl;
+            this.txtTableViewCaptionForeColor.TabIndex = 4;
+            // 
             // txtRaporlariOnayAlmadanKapat
             // 
             this.txtRaporlariOnayAlmadanKapat.EnterMoveNextControl = true;
@@ -113,7 +190,7 @@
             this.txtRaporlariOnayAlmadanKapat.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtRaporlariOnayAlmadanKapat.Properties.Caption = "";
             this.txtRaporlariOnayAlmadanKapat.Size = new System.Drawing.Size(241, 19);
-            this.txtRaporlariOnayAlmadanKapat.StatusBarAciklama = null;
+            this.txtRaporlariOnayAlmadanKapat.StatusBarAciklama = "Raporlar Onay Almadan Kapatılsın.";
             this.txtRaporlariOnayAlmadanKapat.StyleController = this.myDataLayoutControl;
             this.txtRaporlariOnayAlmadanKapat.TabIndex = 3;
             // 
@@ -130,9 +207,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDefaultKasaHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtDefaultKasaHesap.Size = new System.Drawing.Size(241, 20);
-            this.txtDefaultKasaHesap.StatusBarAciklama = null;
+            this.txtDefaultKasaHesap.StatusBarAciklama = "Kasa Hesabı Seçiniz.";
             this.txtDefaultKasaHesap.StatusBarKisayol = "F4 :";
-            this.txtDefaultKasaHesap.StatusBarKisayolAciklama = null;
+            this.txtDefaultKasaHesap.StatusBarKisayolAciklama = "Seçim Yap.";
             this.txtDefaultKasaHesap.StyleController = this.myDataLayoutControl;
             this.txtDefaultKasaHesap.TabIndex = 2;
             // 
@@ -149,9 +226,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDefaultBankaHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtDefaultBankaHesap.Size = new System.Drawing.Size(241, 20);
-            this.txtDefaultBankaHesap.StatusBarAciklama = null;
+            this.txtDefaultBankaHesap.StatusBarAciklama = "Banka Hesabı Seçiniz.";
             this.txtDefaultBankaHesap.StatusBarKisayol = "F4 :";
-            this.txtDefaultBankaHesap.StatusBarKisayolAciklama = null;
+            this.txtDefaultBankaHesap.StatusBarKisayolAciklama = "Seçim Yap.";
             this.txtDefaultBankaHesap.StyleController = this.myDataLayoutControl;
             this.txtDefaultBankaHesap.TabIndex = 1;
             // 
@@ -168,9 +245,9 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtDefaultAvukatHesap.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtDefaultAvukatHesap.Size = new System.Drawing.Size(241, 20);
-            this.txtDefaultAvukatHesap.StatusBarAciklama = null;
+            this.txtDefaultAvukatHesap.StatusBarAciklama = "Avukat Hesabı Seçiniz.";
             this.txtDefaultAvukatHesap.StatusBarKisayol = "F4 :";
-            this.txtDefaultAvukatHesap.StatusBarKisayolAciklama = null;
+            this.txtDefaultAvukatHesap.StatusBarKisayolAciklama = "Seçim Yap.";
             this.txtDefaultAvukatHesap.StyleController = this.myDataLayoutControl;
             this.txtDefaultAvukatHesap.TabIndex = 0;
             // 
@@ -268,24 +345,6 @@
             this.layoutControlItem4.Text = "Raporları Onay Almadan Kapat";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(147, 13);
             // 
-            // txtTableViewCaptionForeColor
-            // 
-            this.txtTableViewCaptionForeColor.EditValue = System.Drawing.Color.Empty;
-            this.txtTableViewCaptionForeColor.Location = new System.Drawing.Point(162, 108);
-            this.txtTableViewCaptionForeColor.MenuManager = this.ribbonControl;
-            this.txtTableViewCaptionForeColor.Name = "txtTableViewCaptionForeColor";
-            this.txtTableViewCaptionForeColor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtTableViewCaptionForeColor.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTableViewCaptionForeColor.Properties.AutomaticColor = System.Drawing.Color.Black;
-            this.txtTableViewCaptionForeColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTableViewCaptionForeColor.Size = new System.Drawing.Size(241, 20);
-            this.txtTableViewCaptionForeColor.StatusBarAciklama = null;
-            this.txtTableViewCaptionForeColor.StatusBarKisayol = null;
-            this.txtTableViewCaptionForeColor.StatusBarKisayolAciklama = null;
-            this.txtTableViewCaptionForeColor.StyleController = this.myDataLayoutControl;
-            this.txtTableViewCaptionForeColor.TabIndex = 4;
-            // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -297,24 +356,6 @@
             this.layoutControlItem5.Size = new System.Drawing.Size(395, 24);
             this.layoutControlItem5.Text = "Tablo Başlık Yazı Rengi";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(147, 13);
-            // 
-            // txtTableColumnHeaderForeColor
-            // 
-            this.txtTableColumnHeaderForeColor.EditValue = System.Drawing.Color.Empty;
-            this.txtTableColumnHeaderForeColor.Location = new System.Drawing.Point(162, 132);
-            this.txtTableColumnHeaderForeColor.MenuManager = this.ribbonControl;
-            this.txtTableColumnHeaderForeColor.Name = "txtTableColumnHeaderForeColor";
-            this.txtTableColumnHeaderForeColor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtTableColumnHeaderForeColor.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTableColumnHeaderForeColor.Properties.AutomaticColor = System.Drawing.Color.Black;
-            this.txtTableColumnHeaderForeColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTableColumnHeaderForeColor.Size = new System.Drawing.Size(241, 20);
-            this.txtTableColumnHeaderForeColor.StatusBarAciklama = null;
-            this.txtTableColumnHeaderForeColor.StatusBarKisayol = null;
-            this.txtTableColumnHeaderForeColor.StatusBarKisayolAciklama = null;
-            this.txtTableColumnHeaderForeColor.StyleController = this.myDataLayoutControl;
-            this.txtTableColumnHeaderForeColor.TabIndex = 5;
             // 
             // layoutControlItem6
             // 
@@ -328,24 +369,6 @@
             this.layoutControlItem6.Text = "Tablo Sütun Başlık Yazı Rengi";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(147, 13);
             // 
-            // txtTableBandPanelForeColor
-            // 
-            this.txtTableBandPanelForeColor.EditValue = System.Drawing.Color.Empty;
-            this.txtTableBandPanelForeColor.Location = new System.Drawing.Point(162, 156);
-            this.txtTableBandPanelForeColor.MenuManager = this.ribbonControl;
-            this.txtTableBandPanelForeColor.Name = "txtTableBandPanelForeColor";
-            this.txtTableBandPanelForeColor.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
-            this.txtTableBandPanelForeColor.Properties.AppearanceFocused.Options.UseBackColor = true;
-            this.txtTableBandPanelForeColor.Properties.AutomaticColor = System.Drawing.Color.Black;
-            this.txtTableBandPanelForeColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtTableBandPanelForeColor.Size = new System.Drawing.Size(241, 20);
-            this.txtTableBandPanelForeColor.StatusBarAciklama = null;
-            this.txtTableBandPanelForeColor.StatusBarKisayol = null;
-            this.txtTableBandPanelForeColor.StatusBarKisayolAciklama = null;
-            this.txtTableBandPanelForeColor.StyleController = this.myDataLayoutControl;
-            this.txtTableBandPanelForeColor.TabIndex = 6;
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -357,28 +380,6 @@
             this.layoutControlItem7.Size = new System.Drawing.Size(395, 24);
             this.layoutControlItem7.Text = "Tablo Band Panel Yazı Rengi";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(147, 13);
-            // 
-            // imgArkaPlanResim
-            // 
-            this.imgArkaPlanResim.Cursor = System.Windows.Forms.Cursors.Default;
-            this.imgArkaPlanResim.EnterMoveNextControl = true;
-            this.imgArkaPlanResim.Location = new System.Drawing.Point(162, 180);
-            this.imgArkaPlanResim.MenuManager = this.ribbonControl;
-            this.imgArkaPlanResim.Name = "imgArkaPlanResim";
-            this.imgArkaPlanResim.Properties.Appearance.BackColor = System.Drawing.Color.LightCyan;
-            this.imgArkaPlanResim.Properties.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.imgArkaPlanResim.Properties.Appearance.Options.UseBackColor = true;
-            this.imgArkaPlanResim.Properties.Appearance.Options.UseForeColor = true;
-            this.imgArkaPlanResim.Properties.NullText = "Resim Yok";
-            this.imgArkaPlanResim.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.imgArkaPlanResim.Properties.ShowMenu = false;
-            this.imgArkaPlanResim.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.imgArkaPlanResim.Size = new System.Drawing.Size(241, 124);
-            this.imgArkaPlanResim.StatusBarAciklama = null;
-            this.imgArkaPlanResim.StatusBarKisayol = "F4 :";
-            this.imgArkaPlanResim.StatusBarKisayolAciklama = null;
-            this.imgArkaPlanResim.StyleController = this.myDataLayoutControl;
-            this.imgArkaPlanResim.TabIndex = 7;
             // 
             // layoutControlItem8
             // 
@@ -406,6 +407,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).EndInit();
             this.myDataLayoutControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResim.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTableBandPanelForeColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTableColumnHeaderForeColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTableViewCaptionForeColor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRaporlariOnayAlmadanKapat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDefaultKasaHesap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDefaultBankaHesap.Properties)).EndInit();
@@ -415,13 +420,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTableViewCaptionForeColor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTableColumnHeaderForeColor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTableBandPanelForeColor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgArkaPlanResim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

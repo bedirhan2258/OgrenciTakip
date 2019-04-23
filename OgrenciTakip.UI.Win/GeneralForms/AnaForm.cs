@@ -41,6 +41,10 @@ using OgrenciTakip.Model.Entities;
 using DevExpress.XtraBars.Ribbon.Gallery;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.Model.DTO;
+using DevExpress.XtraTabbedMdi;
+using OgrenciTakip.Common.Message;
+using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -68,9 +72,15 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         {
             InitializeComponent();
             EventsLoad();
+
+            imgArkaPlanResim.EditValue = KullaniciParametreleri.ArkaPlanResim;
         }
         private void EventsLoad()
         {
+            Load += AnaForm_Load;
+            FormClosing += AnaForm_FormClosing;
+            KeyDown += Control_KeyDown;
+
             foreach (var item in ribbonControl.Items)
             {
                 switch (item)
@@ -88,6 +98,31 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                         break;
                 }
             }
+
+            foreach (Control control in Controls)
+            {
+                control.KeyDown += Control_KeyDown;
+            }
+
+            xtraTabbedMdiManager.PageAdded += XtraTabbedMdiManager_PageAdded;
+            xtraTabbedMdiManager.PageRemoved += XtraTabbedMdiManager_PageRemoved;
+        }
+
+        private void Control_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Close();
+        }
+
+        private void AnaForm_Load(object sender, System.EventArgs e) { }
+
+        private void AnaForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Messages.HayirSeciliEvetHayir("Programdan Çıkmak İstiyor Musunuz?", "Çıkış Onay") == DialogResult.Yes)
+                Application.ExitThread();
+            else
+                e.Cancel = true;
+
         }
 
         private void GalleryItem_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
@@ -308,7 +343,32 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                 var entity = ShowEditForms<KullaniciParametreEditForm>.ShowDialogEditForms<KullaniciParametreS>(KullaniciId);
                 if (entity == null) return;
                 KullaniciParametreleri = entity;
+                imgArkaPlanResim.EditValue = entity.ArkaPlanResim;
+            }
+
+            else if (e.Item == btnHesapMakinesi)
+            {
+                try
+                {
+                    Process.Start("calc.exe");
+                }
+                catch
+                {
+                    Messages.HataMesaji("Hesap Makinesi Bulunamadı.");
+                }
             }
         }
+
+        private void XtraTabbedMdiManager_PageAdded(object sender, MdiTabPageEventArgs e)
+        {
+            imgArkaPlanResim.SendToBack();
+        }
+
+        private void XtraTabbedMdiManager_PageRemoved(object sender, MdiTabPageEventArgs e)
+        {
+            if (((XtraTabbedMdiManager)sender).Pages.Count == 0)
+                imgArkaPlanResim.BringToFront();
+        }
+
     }
 }
