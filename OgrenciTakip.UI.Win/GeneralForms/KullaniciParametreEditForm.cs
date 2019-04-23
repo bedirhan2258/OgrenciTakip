@@ -11,7 +11,6 @@ using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using System;
 using System.Drawing;
-using System.ServiceProcess;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
