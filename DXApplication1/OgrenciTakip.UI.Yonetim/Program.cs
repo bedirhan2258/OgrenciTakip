@@ -1,11 +1,9 @@
-﻿using DevExpress.LookAndFeel;
-using DevExpress.UserSkins;
-using OgrenciTakip.UI.Win.GeneralForms;
-using System;
-using System.Configuration;
+﻿using System;
 using System.Windows.Forms;
+using DevExpress.UserSkins;
+using OgrenciTakip.UI.Yonetim.GeneralForms;
 
-namespace OgrenciTakip.UI.Win
+namespace OgrenciTakip.UI.Yonetim
 {
     static class Program
     {
@@ -18,8 +16,8 @@ namespace OgrenciTakip.UI.Win
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+
             BonusSkins.Register();
-            UserLookAndFeel.Default.SetSkinStyle(ConfigurationManager.AppSettings["Skin"], ConfigurationManager.AppSettings["Palette"]);
             Application.Run(new AnaForm());
         }
     }
