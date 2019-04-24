@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciTakip.Model", "Ogren
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciTakip.Common", "OgrenciTakip.Common\OgrenciTakip.Common.csproj", "{46AC19A6-5358-48C2-8139-C640A1C0CEE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgrenciTakip.UI.Yonetim", "DXApplication1\OgrenciTakip.UI.Yonetim\OgrenciTakip.UI.Yonetim.csproj", "{CE14405A-DCEB-4A9E-84CE-EB95F55D6216}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{46AC19A6-5358-48C2-8139-C640A1C0CEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46AC19A6-5358-48C2-8139-C640A1C0CEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46AC19A6-5358-48C2-8139-C640A1C0CEE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE14405A-DCEB-4A9E-84CE-EB95F55D6216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE14405A-DCEB-4A9E-84CE-EB95F55D6216}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE14405A-DCEB-4A9E-84CE-EB95F55D6216}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE14405A-DCEB-4A9E-84CE-EB95F55D6216}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
