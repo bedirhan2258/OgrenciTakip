@@ -1,7 +1,7 @@
 ﻿
 using DevExpress.XtraEditors;
 
-namespace OgrenciTakip.UI.Win.UserControls.Navigators
+namespace OgrenciTakip.UI.Yonetim.UserControls.Navigators
 {
     public partial class InsUptNavigator : XtraUserControl
     {

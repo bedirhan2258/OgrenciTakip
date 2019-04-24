@@ -28,56 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SuperToolTip superToolTip41 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem81 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem41 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem41 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem82 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip42 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem83 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem42 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem42 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem84 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip43 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem85 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem43 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem43 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem86 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip44 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem87 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem44 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem44 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem88 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip45 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem89 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem45 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem45 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem90 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip46 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem91 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem46 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem46 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem92 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip47 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem93 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem47 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem47 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem94 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip48 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem95 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem48 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem48 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem96 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip49 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem97 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem49 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem49 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem98 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip50 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem99 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem50 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem50 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem100 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem11 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem12 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem25 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem13 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem26 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem27 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem14 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem28 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem29 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem15 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem30 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip16 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem31 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem16 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem16 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem32 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip17 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem33 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem17 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem17 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem34 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip18 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem35 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem18 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem18 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem36 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip19 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem37 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem19 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem19 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem38 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip20 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem39 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem20 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem20 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem40 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnDuzelt = new DevExpress.XtraBars.BarButtonItem();
@@ -89,16 +89,6 @@
             this.btnKullaniciBirimYetkileri = new DevExpress.XtraBars.BarButtonItem();
             this.btnRolKartlari = new DevExpress.XtraBars.BarButtonItem();
             this.btnEmailParametreleri = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
@@ -119,7 +109,26 @@
             this.barStaticItem18 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem19 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem20 = new DevExpress.XtraBars.BarStaticItem();
+            this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.longNavigator = new OgrenciTakip.UI.Yonetim.UserControls.Navigators.LongNavigator();
+            this.grid = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridControl();
+            this.tablo = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridView();
+            this.colKod = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridColumn();
+            this.colKurumAdi = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridColumn();
+            this.colServer = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridColumn();
+            this.colYetkilendirmeTuru = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -181,18 +190,18 @@
             this.btnYeni.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.addfile_32x32;
             this.btnYeni.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Insert);
             this.btnYeni.Name = "btnYeni";
-            toolTipTitleItem81.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem81.Text = "(Insert)";
-            toolTipItem41.LeftIndent = 6;
-            toolTipItem41.Text = "Yeni";
-            toolTipTitleItem82.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem82.LeftIndent = 6;
-            toolTipTitleItem82.Text = "Yeni Kurum Ekle";
-            superToolTip41.Items.Add(toolTipTitleItem81);
-            superToolTip41.Items.Add(toolTipItem41);
-            superToolTip41.Items.Add(toolTipSeparatorItem41);
-            superToolTip41.Items.Add(toolTipTitleItem82);
-            this.btnYeni.SuperTip = superToolTip41;
+            toolTipTitleItem21.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem21.Text = "(Insert)";
+            toolTipItem11.LeftIndent = 6;
+            toolTipItem11.Text = "Yeni";
+            toolTipTitleItem22.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem22.LeftIndent = 6;
+            toolTipTitleItem22.Text = "Yeni Kurum Ekle";
+            superToolTip11.Items.Add(toolTipTitleItem21);
+            superToolTip11.Items.Add(toolTipItem11);
+            superToolTip11.Items.Add(toolTipSeparatorItem11);
+            superToolTip11.Items.Add(toolTipTitleItem22);
+            this.btnYeni.SuperTip = superToolTip11;
             // 
             // btnDuzelt
             // 
@@ -202,18 +211,18 @@
             this.btnDuzelt.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.edit_32x32;
             this.btnDuzelt.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F3);
             this.btnDuzelt.Name = "btnDuzelt";
-            toolTipTitleItem83.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem83.Text = "(F3)";
-            toolTipItem42.LeftIndent = 6;
-            toolTipItem42.Text = "Düzelt";
-            toolTipTitleItem84.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem84.LeftIndent = 6;
-            toolTipTitleItem84.Text = "Kurum Bilgileri Düzelt";
-            superToolTip42.Items.Add(toolTipTitleItem83);
-            superToolTip42.Items.Add(toolTipItem42);
-            superToolTip42.Items.Add(toolTipSeparatorItem42);
-            superToolTip42.Items.Add(toolTipTitleItem84);
-            this.btnDuzelt.SuperTip = superToolTip42;
+            toolTipTitleItem23.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem23.Text = "(F3)";
+            toolTipItem12.LeftIndent = 6;
+            toolTipItem12.Text = "Düzelt";
+            toolTipTitleItem24.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem24.LeftIndent = 6;
+            toolTipTitleItem24.Text = "Kurum Bilgileri Düzelt";
+            superToolTip12.Items.Add(toolTipTitleItem23);
+            superToolTip12.Items.Add(toolTipItem12);
+            superToolTip12.Items.Add(toolTipSeparatorItem12);
+            superToolTip12.Items.Add(toolTipTitleItem24);
+            this.btnDuzelt.SuperTip = superToolTip12;
             // 
             // btnSil
             // 
@@ -223,18 +232,18 @@
             this.btnSil.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.deletelist_32x32;
             this.btnSil.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.Delete);
             this.btnSil.Name = "btnSil";
-            toolTipTitleItem85.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem85.Text = "(Delete)";
-            toolTipItem43.LeftIndent = 6;
-            toolTipItem43.Text = "Kurum Sil";
-            toolTipTitleItem86.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem86.LeftIndent = 6;
-            toolTipTitleItem86.Text = "Seçilen Kurum Onayınız Alınarak Veri Tabanı Dosyaları Dahil Tamamen Silinir.";
-            superToolTip43.Items.Add(toolTipTitleItem85);
-            superToolTip43.Items.Add(toolTipItem43);
-            superToolTip43.Items.Add(toolTipSeparatorItem43);
-            superToolTip43.Items.Add(toolTipTitleItem86);
-            this.btnSil.SuperTip = superToolTip43;
+            toolTipTitleItem25.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem25.Text = "(Delete)";
+            toolTipItem13.LeftIndent = 6;
+            toolTipItem13.Text = "Kurum Sil";
+            toolTipTitleItem26.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem26.LeftIndent = 6;
+            toolTipTitleItem26.Text = "Seçilen Kurum Onayınız Alınarak Veri Tabanı Dosyaları Dahil Tamamen Silinir.";
+            superToolTip13.Items.Add(toolTipTitleItem25);
+            superToolTip13.Items.Add(toolTipItem13);
+            superToolTip13.Items.Add(toolTipSeparatorItem13);
+            superToolTip13.Items.Add(toolTipTitleItem26);
+            this.btnSil.SuperTip = superToolTip13;
             // 
             // btnKurumBilgileri
             // 
@@ -244,18 +253,18 @@
             this.btnKurumBilgileri.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.home_32x32;
             this.btnKurumBilgileri.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F4);
             this.btnKurumBilgileri.Name = "btnKurumBilgileri";
-            toolTipTitleItem87.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem87.Text = "(F4)";
-            toolTipItem44.LeftIndent = 6;
-            toolTipItem44.Text = "Kurum Bilgileri";
-            toolTipTitleItem88.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem88.LeftIndent = 6;
-            toolTipTitleItem88.Text = "Kurumla İlgili Detay Bilgiler";
-            superToolTip44.Items.Add(toolTipTitleItem87);
-            superToolTip44.Items.Add(toolTipItem44);
-            superToolTip44.Items.Add(toolTipSeparatorItem44);
-            superToolTip44.Items.Add(toolTipTitleItem88);
-            this.btnKurumBilgileri.SuperTip = superToolTip44;
+            toolTipTitleItem27.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem27.Text = "(F4)";
+            toolTipItem14.LeftIndent = 6;
+            toolTipItem14.Text = "Kurum Bilgileri";
+            toolTipTitleItem28.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem28.LeftIndent = 6;
+            toolTipTitleItem28.Text = "Kurumla İlgili Detay Bilgiler";
+            superToolTip14.Items.Add(toolTipTitleItem27);
+            superToolTip14.Items.Add(toolTipItem14);
+            superToolTip14.Items.Add(toolTipSeparatorItem14);
+            superToolTip14.Items.Add(toolTipTitleItem28);
+            this.btnKurumBilgileri.SuperTip = superToolTip14;
             // 
             // btnSubeKartlari
             // 
@@ -265,18 +274,18 @@
             this.btnSubeKartlari.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.documentmap_32x32;
             this.btnSubeKartlari.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F5);
             this.btnSubeKartlari.Name = "btnSubeKartlari";
-            toolTipTitleItem89.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem89.Text = "(F5)";
-            toolTipItem45.LeftIndent = 6;
-            toolTipItem45.Text = "Şube Kartları";
-            toolTipTitleItem90.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem90.LeftIndent = 6;
-            toolTipTitleItem90.Text = "Seçilen Kuruma Bağlı Şubeler Listelenir";
-            superToolTip45.Items.Add(toolTipTitleItem89);
-            superToolTip45.Items.Add(toolTipItem45);
-            superToolTip45.Items.Add(toolTipSeparatorItem45);
-            superToolTip45.Items.Add(toolTipTitleItem90);
-            this.btnSubeKartlari.SuperTip = superToolTip45;
+            toolTipTitleItem29.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem29.Text = "(F5)";
+            toolTipItem15.LeftIndent = 6;
+            toolTipItem15.Text = "Şube Kartları";
+            toolTipTitleItem30.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem30.LeftIndent = 6;
+            toolTipTitleItem30.Text = "Seçilen Kuruma Bağlı Şubeler Listelenir";
+            superToolTip15.Items.Add(toolTipTitleItem29);
+            superToolTip15.Items.Add(toolTipItem15);
+            superToolTip15.Items.Add(toolTipSeparatorItem15);
+            superToolTip15.Items.Add(toolTipTitleItem30);
+            this.btnSubeKartlari.SuperTip = superToolTip15;
             // 
             // btnDonemKartlari
             // 
@@ -286,18 +295,18 @@
             this.btnDonemKartlari.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.monthview_32x32;
             this.btnDonemKartlari.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F6);
             this.btnDonemKartlari.Name = "btnDonemKartlari";
-            toolTipTitleItem91.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem91.Text = "(F6)";
-            toolTipItem46.LeftIndent = 6;
-            toolTipItem46.Text = "Dönem Kartları";
-            toolTipTitleItem92.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem92.LeftIndent = 6;
-            toolTipTitleItem92.Text = "Seçilen Kuruma Bağlı Dönemler Listelenir";
-            superToolTip46.Items.Add(toolTipTitleItem91);
-            superToolTip46.Items.Add(toolTipItem46);
-            superToolTip46.Items.Add(toolTipSeparatorItem46);
-            superToolTip46.Items.Add(toolTipTitleItem92);
-            this.btnDonemKartlari.SuperTip = superToolTip46;
+            toolTipTitleItem31.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem31.Text = "(F6)";
+            toolTipItem16.LeftIndent = 6;
+            toolTipItem16.Text = "Dönem Kartları";
+            toolTipTitleItem32.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem32.LeftIndent = 6;
+            toolTipTitleItem32.Text = "Seçilen Kuruma Bağlı Dönemler Listelenir";
+            superToolTip16.Items.Add(toolTipTitleItem31);
+            superToolTip16.Items.Add(toolTipItem16);
+            superToolTip16.Items.Add(toolTipSeparatorItem16);
+            superToolTip16.Items.Add(toolTipTitleItem32);
+            this.btnDonemKartlari.SuperTip = superToolTip16;
             // 
             // btnKullaniciKartlari
             // 
@@ -307,18 +316,18 @@
             this.btnKullaniciKartlari.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.usergroup_32x32;
             this.btnKullaniciKartlari.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F7);
             this.btnKullaniciKartlari.Name = "btnKullaniciKartlari";
-            toolTipTitleItem93.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem93.Text = "(F7)";
-            toolTipItem47.LeftIndent = 6;
-            toolTipItem47.Text = "Kullanıcı Kartları";
-            toolTipTitleItem94.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem94.LeftIndent = 6;
-            toolTipTitleItem94.Text = "Kullanıcı İle İlgili İşlemler Yapılır";
-            superToolTip47.Items.Add(toolTipTitleItem93);
-            superToolTip47.Items.Add(toolTipItem47);
-            superToolTip47.Items.Add(toolTipSeparatorItem47);
-            superToolTip47.Items.Add(toolTipTitleItem94);
-            this.btnKullaniciKartlari.SuperTip = superToolTip47;
+            toolTipTitleItem33.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem33.Text = "(F7)";
+            toolTipItem17.LeftIndent = 6;
+            toolTipItem17.Text = "Kullanıcı Kartları";
+            toolTipTitleItem34.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem34.LeftIndent = 6;
+            toolTipTitleItem34.Text = "Kullanıcı İle İlgili İşlemler Yapılır";
+            superToolTip17.Items.Add(toolTipTitleItem33);
+            superToolTip17.Items.Add(toolTipItem17);
+            superToolTip17.Items.Add(toolTipSeparatorItem17);
+            superToolTip17.Items.Add(toolTipTitleItem34);
+            this.btnKullaniciKartlari.SuperTip = superToolTip17;
             // 
             // btnKullaniciBirimYetkileri
             // 
@@ -328,18 +337,18 @@
             this.btnKullaniciBirimYetkileri.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.newitem_32x32;
             this.btnKullaniciBirimYetkileri.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F8);
             this.btnKullaniciBirimYetkileri.Name = "btnKullaniciBirimYetkileri";
-            toolTipTitleItem95.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem95.Text = "(F8)";
-            toolTipItem48.LeftIndent = 6;
-            toolTipItem48.Text = "Kullanıcı Birim Yetkileri";
-            toolTipTitleItem96.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem96.LeftIndent = 6;
-            toolTipTitleItem96.Text = "Seçilen Kullanıcının Yetkili Olduğu Birimler Belirlenir";
-            superToolTip48.Items.Add(toolTipTitleItem95);
-            superToolTip48.Items.Add(toolTipItem48);
-            superToolTip48.Items.Add(toolTipSeparatorItem48);
-            superToolTip48.Items.Add(toolTipTitleItem96);
-            this.btnKullaniciBirimYetkileri.SuperTip = superToolTip48;
+            toolTipTitleItem35.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem35.Text = "(F8)";
+            toolTipItem18.LeftIndent = 6;
+            toolTipItem18.Text = "Kullanıcı Birim Yetkileri";
+            toolTipTitleItem36.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem36.LeftIndent = 6;
+            toolTipTitleItem36.Text = "Seçilen Kullanıcının Yetkili Olduğu Birimler Belirlenir";
+            superToolTip18.Items.Add(toolTipTitleItem35);
+            superToolTip18.Items.Add(toolTipItem18);
+            superToolTip18.Items.Add(toolTipSeparatorItem18);
+            superToolTip18.Items.Add(toolTipTitleItem36);
+            this.btnKullaniciBirimYetkileri.SuperTip = superToolTip18;
             // 
             // btnRolKartlari
             // 
@@ -349,17 +358,17 @@
             this.btnRolKartlari.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.newgroup_32x32;
             this.btnRolKartlari.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F9);
             this.btnRolKartlari.Name = "btnRolKartlari";
-            toolTipTitleItem97.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem97.Text = "(F9)";
-            toolTipItem49.LeftIndent = 6;
-            toolTipTitleItem98.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem98.LeftIndent = 6;
-            toolTipTitleItem98.Text = "Kullanıcılara Atanmak Üzere Rol Tanımlamaları Yapılır";
-            superToolTip49.Items.Add(toolTipTitleItem97);
-            superToolTip49.Items.Add(toolTipItem49);
-            superToolTip49.Items.Add(toolTipSeparatorItem49);
-            superToolTip49.Items.Add(toolTipTitleItem98);
-            this.btnRolKartlari.SuperTip = superToolTip49;
+            toolTipTitleItem37.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem37.Text = "(F9)";
+            toolTipItem19.LeftIndent = 6;
+            toolTipTitleItem38.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem38.LeftIndent = 6;
+            toolTipTitleItem38.Text = "Kullanıcılara Atanmak Üzere Rol Tanımlamaları Yapılır";
+            superToolTip19.Items.Add(toolTipTitleItem37);
+            superToolTip19.Items.Add(toolTipItem19);
+            superToolTip19.Items.Add(toolTipSeparatorItem19);
+            superToolTip19.Items.Add(toolTipTitleItem38);
+            this.btnRolKartlari.SuperTip = superToolTip19;
             // 
             // btnEmailParametreleri
             // 
@@ -369,113 +378,18 @@
             this.btnEmailParametreleri.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.emailtemplate_32x32;
             this.btnEmailParametreleri.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F11);
             this.btnEmailParametreleri.Name = "btnEmailParametreleri";
-            toolTipTitleItem99.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem99.Text = "(F11)";
-            toolTipItem50.LeftIndent = 6;
-            toolTipItem50.Text = "E-Mail Parametreleri";
-            toolTipTitleItem100.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem100.LeftIndent = 6;
-            toolTipTitleItem100.Text = "Kurumun E-Mail Gönderimi İçin Kullanılacak Parametreler";
-            superToolTip50.Items.Add(toolTipTitleItem99);
-            superToolTip50.Items.Add(toolTipItem50);
-            superToolTip50.Items.Add(toolTipSeparatorItem50);
-            superToolTip50.Items.Add(toolTipTitleItem100);
-            this.btnEmailParametreleri.SuperTip = superToolTip50;
-            // 
-            // ribbonPageCategory1
-            // 
-            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
-            this.ribbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage3});
-            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "ribbonPage3";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup4,
-            this.ribbonPageGroup5});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnYeni);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnDuzelt);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnSil);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
-            this.ribbonPageGroup1.Text = "Kurum İşlemleri";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnKurumBilgileri);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnSubeKartlari);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnDonemKartlari);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.ShowCaptionButton = false;
-            this.ribbonPageGroup2.Text = "Kurum Bilgileri";
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnKullaniciKartlari);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnKullaniciBirimYetkileri);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnRolKartlari);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.ShowCaptionButton = false;
-            this.ribbonPageGroup4.Text = "Kullamıcı İşlemleri";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnEmailParametreleri);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.ShowCaptionButton = false;
-            this.ribbonPageGroup5.Text = "Parametreler";
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem2);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem3, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem4);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem5, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem7, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem8);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem9, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem10);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem11, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem12);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem13, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem14);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem15, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem16);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem17);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem18);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem19, true);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem20);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 499);
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1130, 31);
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
+            toolTipTitleItem39.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
+            toolTipTitleItem39.Text = "(F11)";
+            toolTipItem20.LeftIndent = 6;
+            toolTipItem20.Text = "E-Mail Parametreleri";
+            toolTipTitleItem40.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem40.LeftIndent = 6;
+            toolTipTitleItem40.Text = "Kurumun E-Mail Gönderimi İçin Kullanılacak Parametreler";
+            superToolTip20.Items.Add(toolTipTitleItem39);
+            superToolTip20.Items.Add(toolTipItem20);
+            superToolTip20.Items.Add(toolTipSeparatorItem20);
+            superToolTip20.Items.Add(toolTipTitleItem40);
+            this.btnEmailParametreleri.SuperTip = superToolTip20;
             // 
             // barStaticItem1
             // 
@@ -637,11 +551,217 @@
             this.barStaticItem20.Id = 30;
             this.barStaticItem20.Name = "barStaticItem20";
             // 
+            // ribbonPageCategory1
+            // 
+            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
+            this.ribbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage3});
+            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "ribbonPage3";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup5});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnYeni);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnDuzelt);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSil);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.ShowCaptionButton = false;
+            this.ribbonPageGroup1.Text = "Kurum İşlemleri";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnKurumBilgileri);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnSubeKartlari);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnDonemKartlari);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.ShowCaptionButton = false;
+            this.ribbonPageGroup2.Text = "Kurum Bilgileri";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnKullaniciKartlari);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnKullaniciBirimYetkileri);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnRolKartlari);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.ShowCaptionButton = false;
+            this.ribbonPageGroup4.Text = "Kullamıcı İşlemleri";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.btnEmailParametreleri);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.ShowCaptionButton = false;
+            this.ribbonPageGroup5.Text = "Parametreler";
+            // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem1);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem2);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem3, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem4);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem5, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem6);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem7, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem8);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem9, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem10);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem11, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem12);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem13, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem14);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem15, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem16);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem17);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem18);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem19, true);
+            this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem20);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 499);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1130, 31);
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
+            // 
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 475);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1130, 24);
+            this.longNavigator.TabIndex = 2;
+            // 
+            // grid
+            // 
+            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid.Location = new System.Drawing.Point(0, 122);
+            this.grid.MainView = this.tablo;
+            this.grid.MenuManager = this.ribbonControl1;
+            this.grid.Name = "grid";
+            this.grid.Size = new System.Drawing.Size(1130, 353);
+            this.grid.TabIndex = 3;
+            this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.tablo});
+            // 
+            // tablo
+            // 
+            this.tablo.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.tablo.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.tablo.Appearance.FooterPanel.Options.UseFont = true;
+            this.tablo.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.tablo.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.Maroon;
+            this.tablo.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.tablo.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.tablo.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.tablo.Appearance.ViewCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.tablo.Appearance.ViewCaption.Options.UseForeColor = true;
+            this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colKod,
+            this.colKurumAdi,
+            this.colServer,
+            this.colYetkilendirmeTuru});
+            this.tablo.GridControl = this.grid;
+            this.tablo.Name = "tablo";
+            this.tablo.OptionsMenu.EnableColumnMenu = false;
+            this.tablo.OptionsMenu.EnableFooterMenu = false;
+            this.tablo.OptionsMenu.EnableGroupPanelMenu = false;
+            this.tablo.OptionsNavigation.EnterMoveNextColumn = true;
+            this.tablo.OptionsPrint.AutoWidth = false;
+            this.tablo.OptionsPrint.PrintFooter = false;
+            this.tablo.OptionsPrint.PrintGroupFooter = false;
+            this.tablo.OptionsView.ColumnAutoWidth = false;
+            this.tablo.OptionsView.HeaderFilterButtonShowMode = DevExpress.XtraEditors.Controls.FilterButtonShowMode.Button;
+            this.tablo.OptionsView.RowAutoHeight = true;
+            this.tablo.OptionsView.ShowAutoFilterRow = true;
+            this.tablo.OptionsView.ShowGroupPanel = false;
+            this.tablo.OptionsView.ShowViewCaption = true;
+            this.tablo.StatusBarAciklama = null;
+            this.tablo.StatusBarKisayol = null;
+            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.ViewCaption = "Kurum Kartları";
+            // 
+            // colKod
+            // 
+            this.colKod.Caption = "Kod";
+            this.colKod.FieldName = "Kod";
+            this.colKod.Name = "colKod";
+            this.colKod.OptionsColumn.AllowEdit = false;
+            this.colKod.StatusBarAciklama = null;
+            this.colKod.StatusBarKisayol = null;
+            this.colKod.StatusBarKisayolAciklama = null;
+            this.colKod.Visible = true;
+            this.colKod.VisibleIndex = 0;
+            this.colKod.Width = 120;
+            // 
+            // colKurumAdi
+            // 
+            this.colKurumAdi.Caption = "Kurum Adı";
+            this.colKurumAdi.FieldName = "KurumAdi";
+            this.colKurumAdi.Name = "colKurumAdi";
+            this.colKurumAdi.OptionsColumn.AllowEdit = false;
+            this.colKurumAdi.StatusBarAciklama = null;
+            this.colKurumAdi.StatusBarKisayol = null;
+            this.colKurumAdi.StatusBarKisayolAciklama = null;
+            this.colKurumAdi.Visible = true;
+            this.colKurumAdi.VisibleIndex = 1;
+            this.colKurumAdi.Width = 290;
+            // 
+            // colServer
+            // 
+            this.colServer.Caption = "Server";
+            this.colServer.FieldName = "Server";
+            this.colServer.Name = "colServer";
+            this.colServer.OptionsColumn.AllowEdit = false;
+            this.colServer.StatusBarAciklama = null;
+            this.colServer.StatusBarKisayol = null;
+            this.colServer.StatusBarKisayolAciklama = null;
+            this.colServer.Visible = true;
+            this.colServer.VisibleIndex = 2;
+            this.colServer.Width = 220;
+            // 
+            // colYetkilendirmeTuru
+            // 
+            this.colYetkilendirmeTuru.Caption = "Yetkilendirme Türü";
+            this.colYetkilendirmeTuru.FieldName = "YetkilendirmeTuru";
+            this.colYetkilendirmeTuru.Name = "colYetkilendirmeTuru";
+            this.colYetkilendirmeTuru.OptionsColumn.AllowEdit = false;
+            this.colYetkilendirmeTuru.StatusBarAciklama = null;
+            this.colYetkilendirmeTuru.StatusBarKisayol = null;
+            this.colYetkilendirmeTuru.StatusBarKisayolAciklama = null;
+            this.colYetkilendirmeTuru.Visible = true;
+            this.colYetkilendirmeTuru.VisibleIndex = 3;
+            this.colYetkilendirmeTuru.Width = 220;
+            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1130, 530);
+            this.Controls.Add(this.grid);
+            this.Controls.Add(this.longNavigator);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "AnaForm";
@@ -651,6 +771,8 @@
             this.Text = "Öğrenci Takip Yönetim Modülü";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,5 +821,12 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem18;
         private DevExpress.XtraBars.BarStaticItem barStaticItem19;
         private DevExpress.XtraBars.BarStaticItem barStaticItem20;
+        private UserControls.Navigators.LongNavigator longNavigator;
+        private UserControls.Grid.MyGridControl grid;
+        private UserControls.Grid.MyGridView tablo;
+        private UserControls.Grid.MyGridColumn colKod;
+        private UserControls.Grid.MyGridColumn colKurumAdi;
+        private UserControls.Grid.MyGridColumn colServer;
+        private UserControls.Grid.MyGridColumn colYetkilendirmeTuru;
     }
 }

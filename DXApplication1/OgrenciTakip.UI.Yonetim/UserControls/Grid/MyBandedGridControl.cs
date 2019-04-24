@@ -2,7 +2,7 @@
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.BandedGrid;
-using OgrenciTakip.UI.Win.Interfaces;
+using OgrenciTakip.UI.Yonetim.Interfaces;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.Utils;
 using DevExpress.XtraEditors.Mask;
@@ -12,12 +12,12 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraGrid.Registrator;
 using System.ComponentModel;
 
-namespace OgrenciTakip.UI.Win.UserControls.Grid
+namespace OgrenciTakip.UI.Yonetim.UserControls.Grid
 {
     [ToolboxItem(true)]
     public class MyBandedGridControl : GridControl
     {
-      
+
         public MyBandedGridControl()
         {
 

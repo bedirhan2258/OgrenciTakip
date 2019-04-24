@@ -40,6 +40,11 @@
     <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v18.1" />
     <Reference Include="DevExpress.Printing.v18.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 18.1\Components\Bin\Framework\DevExpress.XtraGrid.v18.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,8 +63,94 @@
     <Compile Include="GeneralForms\AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IStatusbarAciklama.cs" />
+    <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Controls\BDButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDCalcEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDEmailTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyCardEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyCheckedComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyCheckEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyColorPickEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyDataLayoutControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyDateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyFilterControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyIbanTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyKodTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyMemoEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyPictureEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMySpinEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyTcKimlikNoTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyTelefonNoTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\BDMyToggleSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Grid\MyBandedGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Grid\MyGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Navigators\InsUptNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Navigators\InsUptNavigator.Designer.cs">
+      <DependentUpon>InsUptNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Navigators\LongNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Navigators\LongNavigator.Designer.cs">
+      <DependentUpon>LongNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Navigators\SmallNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Navigators\SmallNavigator.Designer.cs">
+      <DependentUpon>SmallNavigator.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GeneralForms\AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +165,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\Navigators\InsUptNavigator.resx">
+      <DependentUpon>InsUptNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Navigators\LongNavigator.resx">
+      <DependentUpon>LongNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Navigators\SmallNavigator.resx">
+      <DependentUpon>SmallNavigator.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +252,141 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\emailtemplate_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doublenext_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleprev_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doublenext_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleprev_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doublenext_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleprev_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doublenext_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleprev_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doublenext_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleprev_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x166.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x166.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x166.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x166.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doublenext_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleprev_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first_16x168.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last_16x167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_16x167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prev_16x167.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
