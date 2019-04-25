@@ -3,7 +3,7 @@ using DevExpress.XtraBars.Ribbon;
 using OgrenciTakip.Common.Enums;
 using System.Windows.Forms;
 using System.Security;
-using OgrenciTakip.UI.Win.Show;
+using OgrenciTakip.UI.Yonetim.Show;
 using OgrenciTakip.UI.Win.Functions;
 
 namespace OgrenciTakip.UI.Yonetim.GeneralForms
@@ -40,7 +40,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
             var result = ShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre);
             if (result <= 0) return;
-            Listele();
+           // Listele();
             tablo.RowFocus("Id", result);
         }
 

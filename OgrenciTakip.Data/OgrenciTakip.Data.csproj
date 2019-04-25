@@ -56,7 +56,9 @@
   <ItemGroup>
     <Compile Include="Context\BaseDbContext.cs" />
     <Compile Include="Context\OgrenciTakipContext.cs" />
+    <Compile Include="Context\OgrenciTakipYonetimContext.cs" />
     <Compile Include="OgrenciTakipMigration\Configuration.cs" />
+    <Compile Include="OgrenciTakipYonetimMigration\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

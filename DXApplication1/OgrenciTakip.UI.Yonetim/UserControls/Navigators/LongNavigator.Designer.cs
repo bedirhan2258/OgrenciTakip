@@ -50,6 +50,22 @@
             this.imageCollection.Images.SetKeyName(4, "doublenext_16x164");
             this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.last_16x165, "last_16x165", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 5);
             this.imageCollection.Images.SetKeyName(5, "last_16x165");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.print_16x16, "print_16x16", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 6);
+            this.imageCollection.Images.SetKeyName(6, "print_16x16");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.saveall_16x16, "saveall_16x16", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 7);
+            this.imageCollection.Images.SetKeyName(7, "saveall_16x16");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.printpreview_16x16, "printpreview_16x16", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 8);
+            this.imageCollection.Images.SetKeyName(8, "printpreview_16x16");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.insertrangefilter_16x16, "insertrangefilter_16x16", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 9);
+            this.imageCollection.Images.SetKeyName(9, "insertrangefilter_16x16");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.saveall_32x32, "saveall_32x32", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 10);
+            this.imageCollection.Images.SetKeyName(10, "saveall_32x32");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.print_32x32, "print_32x32", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 11);
+            this.imageCollection.Images.SetKeyName(11, "print_32x32");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.printpreview_32x32, "printpreview_32x32", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 12);
+            this.imageCollection.Images.SetKeyName(12, "printpreview_32x32");
+            this.imageCollection.InsertImage(global::OgrenciTakip.UI.Yonetim.Properties.Resources.insertrangefilter_32x32, "insertrangefilter_32x32", typeof(global::OgrenciTakip.UI.Yonetim.Properties.Resources), 13);
+            this.imageCollection.Images.SetKeyName(13, "insertrangefilter_32x32");
             // 
             // Navigator
             // 
