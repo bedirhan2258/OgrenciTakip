@@ -11,17 +11,21 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.Properties;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -349,6 +353,45 @@ namespace OgrenciTakip.UI.Win.Functions
             configuration.AppSettings.Settings[key].Value = value;
             configuration.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
+        }
+
+        public static void CreateConnectionString(string initialCatalog, string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru)
+        {
+            SqlConnectionStringBuilder builder = null;
+            switch (yetkilendirmeTuru)
+            {
+                case YetkilendirmeTuru.SqlServer:
+                    builder = new SqlConnectionStringBuilder
+                    {
+                        DataSource = server,
+                        UserID = kullaniciAdi.ConvertToUnSecureString(),
+                        Password = sifre.ConvertToUnSecureString(),
+                        InitialCatalog = initialCatalog,
+                        MultipleActiveResultSets = true,
+                    };
+                    break;
+                case YetkilendirmeTuru.Windows:
+                    builder = new SqlConnectionStringBuilder
+                    {
+                        DataSource = server,
+                        InitialCatalog = initialCatalog,
+                        MultipleActiveResultSets = true,
+                        IntegratedSecurity = true
+                    };
+                    break;
+            }
+            var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.ConnectionStrings.ConnectionStrings["OgrenciTakipContext"].ConnectionString = builder?.ConnectionString;
+            configuration.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.GetSection("connectionStrings");
+            Settings.Default.Reset();
+            Settings.Default.Save();
+        }
+
+        public static string ConvertToUnSecureString(this SecureString value)
+        {
+            var result = Marshal.SecureStringToBSTR(value);
+            return Marshal.PtrToStringAuto(result);
         }
     }
 }

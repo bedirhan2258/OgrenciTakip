@@ -91,6 +91,6 @@
         #endregion
 
         private DevExpress.Utils.ImageCollection imageCollection;
-        private DevExpress.XtraEditors.ControlNavigator Navigator;
+        protected internal DevExpress.XtraEditors.ControlNavigator Navigator;
     }
 }

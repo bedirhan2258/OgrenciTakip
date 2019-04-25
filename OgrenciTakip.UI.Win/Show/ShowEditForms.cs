@@ -36,6 +36,19 @@ namespace OgrenciTakip.UI.Win.Show
             }
         }
 
+        public static long ShowDialogEditForms(long id, params object[] prm)
+        {
+            
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
+            {
+                frm.BaseIslemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
+                frm.id = id;
+                frm.Yukle();
+                frm.ShowDialog();
+                return frm.refreshYapilacak ? frm.id : 0;
+            }
+        }
+
         public static bool ShowDialogEditForms(params object[] prm)
         {
             //Yetki kontrolü yapılacak
