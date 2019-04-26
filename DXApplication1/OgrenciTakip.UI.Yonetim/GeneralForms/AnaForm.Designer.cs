@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
@@ -126,9 +127,11 @@
             this.colKurumAdi = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridColumn();
             this.colServer = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridColumn();
             this.colYetkilendirmeTuru = new OgrenciTakip.UI.Yonetim.UserControls.Grid.MyGridColumn();
+            this.sagMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sagMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -755,6 +758,14 @@
             this.colYetkilendirmeTuru.VisibleIndex = 3;
             this.colYetkilendirmeTuru.Width = 220;
             // 
+            // sagMenu
+            // 
+            this.sagMenu.ItemLinks.Add(this.btnYeni);
+            this.sagMenu.ItemLinks.Add(this.btnDuzelt);
+            this.sagMenu.ItemLinks.Add(this.btnSil);
+            this.sagMenu.Name = "sagMenu";
+            this.sagMenu.Ribbon = this.ribbonControl;
+            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -773,6 +784,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sagMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -828,5 +840,6 @@
         private UserControls.Grid.MyGridColumn colKurumAdi;
         private UserControls.Grid.MyGridColumn colServer;
         private UserControls.Grid.MyGridColumn colYetkilendirmeTuru;
+        private DevExpress.XtraBars.PopupMenu sagMenu;
     }
 }
