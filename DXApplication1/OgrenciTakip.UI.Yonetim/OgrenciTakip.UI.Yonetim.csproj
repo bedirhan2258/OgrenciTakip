@@ -46,7 +46,14 @@
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 18.1\Components\Bin\Framework\DevExpress.XtraGrid.v18.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,11 +71,18 @@
     <Compile Include="Forms\BaseForms\BaseEditForm.Designer.cs">
       <DependentUpon>BaseEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\GeneralFunctions.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneralForms\AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\BekleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\BekleForm.Designer.cs">
+      <DependentUpon>BekleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GeneralForms\KurumEditForm.cs">
       <SubType>Form</SubType>
@@ -172,6 +186,9 @@
     <EmbeddedResource Include="GeneralForms\AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\BekleForm.resx">
+      <DependentUpon>BekleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\KurumEditForm.resx">
       <DependentUpon>KurumEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +213,7 @@
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

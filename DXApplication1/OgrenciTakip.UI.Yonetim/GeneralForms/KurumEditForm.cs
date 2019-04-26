@@ -1,22 +1,27 @@
 ﻿
+using DevExpress.XtraEditors;
 using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Yonetim.Forms.BaseForms;
+using System;
 using System.Security;
 
 namespace OgrenciTakip.UI.Yonetim.GeneralForms
 {
     public partial class KurumEditForm : BaseEditForm
     {
+        #region Variables
         private readonly string _server;
         private readonly SecureString _kullaniciAdi;
         private readonly SecureString _sifre;
+        #endregion
 
-        public KurumEditForm()
+        public KurumEditForm(params object[] prm)
         {
             InitializeComponent();
 
@@ -25,6 +30,10 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             kartTuru = KartTuru.Kurum;
             txtYetkilendirmeTuru.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YetkilendirmeTuru>());
             EventsLoad();
+
+            _server = prm[0].ToString();
+            _kullaniciAdi = (SecureString)prm[1];
+            _sifre = (SecureString)prm[2];
         }
 
         protected internal override void Yukle()
@@ -65,6 +74,42 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             ((Kurum)currentEnttiy).Sifre = txtSifre.Text.Encrypt(currentEnttiy.Id + currentEnttiy.Kod);
 
             ButonEnabledDurumu();
+        }
+
+        protected override bool EntityInsert()
+        {
+            if (!Win.Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
+
+            Win.Functions.GeneralFunctions.CreateConnectionString(txtKod.Text, txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+
+            if (!Functions.GeneralFunctions.CreateDatabase<OgrenciTakipContext>("Lütfen Bekleyiniz", "Kurum Veritabanı Oluşturuluyor.", "Kurum Veritabanı Oluşturulacaktır. Onaylıyor Musunuz?", "Kurum Veritabanı Başarılı Bir Şekilde Oluşturuldu.")) return false;
+
+            Win.Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+            return base.EntityInsert();
+        }
+
+        protected override bool EntityUpdate()
+        {
+            if (!Win.Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
+
+            Win.Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+
+            return base.EntityUpdate();
+        }
+
+        protected override void Control_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            if (!(sender is ComboBoxEdit edit)) return;
+            var yetkilendirmeTuru = edit.Text.GetEnum<YetkilendirmeTuru>();
+
+            txtKullaniciAdi.Enabled = yetkilendirmeTuru == YetkilendirmeTuru.SqlServer;
+            txtSifre.Enabled = yetkilendirmeTuru == YetkilendirmeTuru.SqlServer;
+            txtKullaniciAdi.Focus();
+
+            if (yetkilendirmeTuru != YetkilendirmeTuru.Windows) return;
+            txtKullaniciAdi.Text = "";
+            txtSifre.Text = "";
         }
 
     }

@@ -393,6 +393,50 @@ namespace OgrenciTakip.UI.Win.Functions
             var result = Marshal.SecureStringToBSTR(value);
             return Marshal.PtrToStringAuto(result);
         }
+
+        public static SecureString ConvertToSecureString(this string value)
+        {
+            var secureString = new SecureString();
+            if (value.Length > 0)
+            {
+                value.ToCharArray().ForEach(x => secureString.AppendChar(x));
+            }
+            secureString.MakeReadOnly();
+            return secureString;
+        }
+
+        public static bool BaglantiKontrolu(string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru, bool genelMesajVer = false)
+        {
+            CreateConnectionString("", server, kullaniciAdi, sifre, yetkilendirmeTuru);
+
+            using (var con = new SqlConnection(BLL.Functions.GeneralFunctions.GetConnectionString()))
+            {
+                try
+                {
+                    if (con.ConnectionString == "") return false;
+                    con.Open();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    if (genelMesajVer)
+                    {
+                        Messages.HataMesaji("Server Bağlantı Ayarları Hatalıdır. Lütfen Kontrol Ediniz.");
+                        return false;
+                    }
+                    switch (ex.Number)
+                    {
+                        case 18456:
+                            Messages.HataMesaji("Server Kullanıcı Adı veya Şifresi Hatalıdır.");
+                            break;
+                        default:
+                            Messages.HataMesaji(ex.Message);
+                            break;
+                    }
+                }
+                return false;
+            }
+        }
     }
 }
 
