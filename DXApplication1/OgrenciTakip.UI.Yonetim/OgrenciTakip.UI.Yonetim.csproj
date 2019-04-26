@@ -84,6 +84,12 @@
     <Compile Include="GeneralForms\BekleForm.Designer.cs">
       <DependentUpon>BekleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\GirisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\GirisForm.Designer.cs">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\KurumEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="UserControls\Controls\MyPictureEdit.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\Controls\MySimpleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Controls\MySpinEdit.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -189,6 +198,9 @@
     <EmbeddedResource Include="GeneralForms\BekleForm.resx">
       <DependentUpon>BekleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\GirisForm.resx">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\KurumEditForm.resx">
       <DependentUpon>KurumEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +243,7 @@
     <Content Include="Resources\apply_32x32.png" />
     <Content Include="Resources\article_16x16.png" />
     <Content Include="Resources\article_32x32.png" />
+    <None Include="Resources\background.jpg" />
     <Content Include="Resources\close_16x16.png" />
     <None Include="Resources\close_16x161.png" />
     <Content Include="Resources\close_32x32.png" />

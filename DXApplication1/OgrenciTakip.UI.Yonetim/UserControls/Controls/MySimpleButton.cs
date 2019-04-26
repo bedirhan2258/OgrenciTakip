@@ -1,10 +1,9 @@
-﻿
-using DevExpress.XtraEditors;
-using OgrenciTakip.UI.Win.Interfaces;
-using System.Drawing;
+﻿using DevExpress.XtraEditors;
+using OgrenciTakip.UI.Yonetim.Interfaces;
 using System.ComponentModel;
+using System.Drawing;
 
-namespace OgrenciTakip.UI.Win.UserControls.Controls
+namespace OgrenciTakip.UI.Yonetim.UserControls.Controls
 {
     [ToolboxItem(true)]
     class MySimpleButton : SimpleButton, IStatusBarAciklama

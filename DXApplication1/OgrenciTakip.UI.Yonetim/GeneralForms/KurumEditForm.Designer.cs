@@ -118,6 +118,7 @@
             this.txtSifre.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtSifre.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSifre.Properties.MaxLength = 50;
+            this.txtSifre.Properties.UseSystemPasswordChar = true;
             this.txtSifre.Size = new System.Drawing.Size(153, 20);
             this.txtSifre.StatusBarAciklama = "Sifre Giriniz.";
             this.txtSifre.StyleController = this.myDataLayoutControl;
