@@ -224,7 +224,9 @@
     <EmbeddedResource Include="UserControls\Navigators\SmallNavigator.resx">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="..\..\OgrenciTakip.UI.Win\App.config">
+      <Link>App.config</Link>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

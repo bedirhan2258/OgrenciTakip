@@ -50,6 +50,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
             //Forms Evnts
             FormClosing += AnaForm_FormClosing;
+            Load += AnaForm_Load;
         }
 
         protected internal void Listele()
@@ -134,6 +135,11 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 Application.ExitThread();
             else
                 e.Cancel = true;
+        }
+
+        private void AnaForm_Load(object sender, System.EventArgs e)
+        {
+            Listele();
         }
 
     }

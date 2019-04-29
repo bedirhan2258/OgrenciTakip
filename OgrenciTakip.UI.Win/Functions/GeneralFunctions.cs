@@ -402,7 +402,7 @@ namespace OgrenciTakip.UI.Win.Functions
                 value.ToCharArray().ForEach(x => secureString.AppendChar(x));
             }
             secureString.MakeReadOnly();
-            return secureString;
+            return secureString;    
         }
 
         public static bool BaglantiKontrolu(string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru, bool genelMesajVer = false)
@@ -435,7 +435,9 @@ namespace OgrenciTakip.UI.Win.Functions
                     }
                 }
                 return false;
+               
             }
+
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿
-using DevExpress.XtraGrid.Views.Grid;
 using OgrenciTakip.DAL.Base;
 using OgrenciTakip.DAL.Interfaces;
 using OgrenciTakip.Model.Entities.Base.Interfaces;

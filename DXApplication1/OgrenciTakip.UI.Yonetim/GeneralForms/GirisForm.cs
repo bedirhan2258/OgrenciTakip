@@ -3,6 +3,9 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Data.Context;
+using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Yonetim.UserControls.Controls;
 using System.Collections.Generic;
 using System.Drawing;
@@ -19,9 +22,10 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
         {
             InitializeComponent();
             txtYetkilendirme.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<YetkilendirmeTuru>());
+            EventsLoad();
         }
 
-        private void EventLoad()
+        private void EventsLoad()
         {
             //Control Events
             foreach (Control control in Controls)
@@ -61,12 +65,30 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 dictionary.Add(row[0], row[1]);
             });
             txtServer.Text = dictionary.GetValueOrDefault("Data Source", "");
-            txtYetkilendirme.SelectedItem = dictionary.ContainsKey("Password") ? YetkilendirmeTuru.SqlServer : YetkilendirmeTuru.Windows;
+            txtYetkilendirme.SelectedItem = dictionary.ContainsKey("Password") ? YetkilendirmeTuru.SqlServer.ToName() : YetkilendirmeTuru.Windows.ToName();
+            if (txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>() == YetkilendirmeTuru.SqlServer)
+                txtKullaniciAdi.Focus();
+            else
+                txtSifre.Focus();
+        }
+
+        private void Giris()
+        {
+            if (!GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>())) return;
+
+            GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>());
+
+            if (!Functions.GeneralFunctions.CreateDatabase<OgrenciTakipYonetimContext>("Lütfen Bekleyiniz", "Program İlk Kurulum İçin Hazırlanıyor...", "Program İlk Kurulum İşlemi Yapılacaktır. Onaylıyor Musunuz?", "İlk Kurulum İşlemi Başarılı Bir Şekilde Tamamlandı.")) return;
+            Hide();
+
+            ShowRibbonForms<AnaForm>.ShowForm(false, txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>());
+            txtKullaniciAdi.Text = "";
+            txtSifre.Text = "";
         }
 
         private void Control_MouseDown(object sender, MouseEventArgs e)
         {
-            _mouseLocation = new Point(e.X, e.Y);
+            _mouseLocation = new Point(-e.X, -e.Y);
         }
 
         private void Control_MouseMove(object sender, MouseEventArgs e)
@@ -88,7 +110,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             if (!(sender is MySimpleButton button)) return;
 
             if (button == btnGiris)
-               // Giris();
+                Giris();
             else if (button == btnVazgec)
                 Close();
         }
