@@ -45,6 +45,18 @@ namespace OgrenciTakip.UI.Win.Show
                 return frm.DialogResult == DialogResult.OK ? frm.selectedEntity : null;
             }
         }
+
+        public static void ShowDialogListForm()
+        {
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm)))
+            {
+                frm.AktifPasifButtonGoster = true;
+                frm.Yukle();
+                frm.ShowDialog();
+
+            }
+        }
+
         public static IEnumerable<IBaseEntity> ShowDialogListForm(KartTuru kartTuru, IList<long> listeDisiTutulacakKayitlar, bool multiSelect, params object[] prm)
         {
             //Yetki kontrolü Yap.

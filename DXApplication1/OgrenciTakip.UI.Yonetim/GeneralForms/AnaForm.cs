@@ -11,6 +11,8 @@ using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Yonetim.Show;
+using OgrenciTakip.UI.Win.Show;
+using OgrenciTakip.UI.Win.Forms.SubeForms;
 
 namespace OgrenciTakip.UI.Yonetim.GeneralForms
 {
@@ -66,7 +68,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
         protected virtual void ShowEditForm(long id)
         {
             Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
-            var result = ShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            var result = Yonetim.Show.ShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
             if (result <= 0) return;
             Listele();
             tablo.RowFocus("Id", result);
@@ -119,9 +121,15 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 {
                     EntityDelete(entity);
                 }
+
                 else if (e.Item == btnEmailParametreleri)
                 {
                     Win.Show.ShowEditForms<EmailParametreEditForm>.ShowDialogEditForms();
+                }
+
+                else if (e.Item == btnSubeKartlari)
+                {
+                    ShowListForms<SubeListForm>.ShowDialogListForm();
                 }
             }
 
