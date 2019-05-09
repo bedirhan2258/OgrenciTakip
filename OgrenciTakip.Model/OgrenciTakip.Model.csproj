@@ -131,6 +131,7 @@
     <Compile Include="Entities\Kullanici.cs" />
     <Compile Include="Entities\KullaniciParametre.cs" />
     <Compile Include="Entities\Kurum.cs" />
+    <Compile Include="Entities\MailParametre.cs" />
     <Compile Include="Entities\Makbuz.cs" />
     <Compile Include="Entities\MakbuzHareketleri.cs" />
     <Compile Include="Entities\Meslek.cs" />

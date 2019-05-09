@@ -15,7 +15,12 @@ namespace OgrenciTakip.BLL.Base
         private KartTuru _kartTuru;
         #endregion
 
+        public BaseGenelBll() { }
+
+        public BaseGenelBll(Control ctrl) : base(ctrl) { }
+
         public BaseGenelBll(KartTuru kartTuru) { _kartTuru = kartTuru; }
+
         public BaseGenelBll(Control ctrl, KartTuru kartTuru) : base(ctrl) { _kartTuru = kartTuru; }
 
         public virtual BaseEntity Single(Expression<Func<T, bool>> filter)

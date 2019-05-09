@@ -3,13 +3,14 @@ using DevExpress.XtraBars.Ribbon;
 using OgrenciTakip.Common.Enums;
 using System.Windows.Forms;
 using System.Security;
-using OgrenciTakip.UI.Yonetim.Show;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.GeneralForms;
+using OgrenciTakip.UI.Yonetim.Show;
 
 namespace OgrenciTakip.UI.Yonetim.GeneralForms
 {
@@ -21,6 +22,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
         private readonly SecureString _sifre;
         private readonly YetkilendirmeTuru _yetkilendirmeTuru;
         private readonly KurumBll _bll;
+
         #endregion
 
         public AnaForm(params object[] prm)
@@ -100,6 +102,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 {
                     ShowEditForm(-1);
                 }
+
                 else if (e.Item == btnDuzelt)
                 {
                     ShowEditForm(tablo.GetRowId());
@@ -115,6 +118,10 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 if (e.Item == btnSil)
                 {
                     EntityDelete(entity);
+                }
+                else if (e.Item == btnEmailParametreleri)
+                {
+                    Win.Show.ShowEditForms<EmailParametreEditForm>.ShowDialogEditForms();
                 }
             }
 

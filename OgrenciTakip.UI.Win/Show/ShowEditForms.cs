@@ -81,6 +81,16 @@ namespace OgrenciTakip.UI.Win.Show
             }
         }
 
+        public static void ShowDialogEditForms()
+        {
+           
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm)))
+            {
+                frm.Yukle();
+                frm.ShowDialog();
+            }
+        }
+
         public static T ShowDialogEditForms<T>(params object[] prm) where T : IBaseEntity
         {
             using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
