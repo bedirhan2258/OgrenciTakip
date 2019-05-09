@@ -110,6 +110,7 @@ namespace OgrenciTakip.BLL.Base
             _unitOfWork.Rep.Delete(entity.EntityConvert<T>());
             return _unitOfWork.Save();
         }
+
         protected string BaseYeniKodVer(KartTuru kartTuru, Expression<Func<T, string>> filter, Expression<Func<T, bool>> where = null)
         {
 

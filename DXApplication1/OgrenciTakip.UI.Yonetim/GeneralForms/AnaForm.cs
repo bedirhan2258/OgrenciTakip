@@ -4,9 +4,12 @@ using OgrenciTakip.Common.Enums;
 using System.Windows.Forms;
 using System.Security;
 using OgrenciTakip.UI.Yonetim.Show;
-using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Message;
+using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.Model.Entities.Base;
+using OgrenciTakip.Data.Context;
+using OgrenciTakip.Model.Entities;
 
 namespace OgrenciTakip.UI.Yonetim.GeneralForms
 {
@@ -60,8 +63,8 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         protected virtual void ShowEditForm(long id)
         {
-            GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
-            var result = ShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre);
+            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            var result = ShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
             if (result <= 0) return;
             Listele();
             tablo.RowFocus("Id", result);
@@ -77,6 +80,17 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             }
         }
 
+        private void EntityDelete(BaseEntity entity)
+        {
+            Functions.GeneralFunctions.CreateConnectionString(entity.Kod, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            if (!Functions.GeneralFunctions.DeleteDatabase<OgrenciTakipYonetimContext>()) return;
+
+            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            _bll.Delete(entity);
+            tablo.DeleteSelectedRows();
+            tablo.RowFocus(tablo.FocusedRowHandle);
+        }
+
         private void Button_ItemClick(object sender, ItemClickEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -88,13 +102,22 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 }
                 else if (e.Item == btnDuzelt)
                 {
-
+                    ShowEditForm(tablo.GetRowId());
                 }
             }
+
             else
             {
+                var entity = tablo.GetRow<Kurum>();
+                if (entity == null) return;
+                Functions.GeneralFunctions.CreateConnectionString(entity.Kod, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
 
+                if (e.Item == btnSil)
+                {
+                    EntityDelete(entity);
+                }
             }
+
             Cursor.Current = DefaultCursor;
         }
 
@@ -140,6 +163,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
         private void AnaForm_Load(object sender, System.EventArgs e)
         {
             Listele();
+            tablo.Focus();
         }
 
     }

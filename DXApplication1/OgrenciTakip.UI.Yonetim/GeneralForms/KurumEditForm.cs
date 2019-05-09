@@ -8,6 +8,7 @@ using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Yonetim.Forms.BaseForms;
+using OgrenciTakip.UI.Yonetim.Functions;
 using System;
 using System.Security;
 
@@ -19,6 +20,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
         private readonly string _server;
         private readonly SecureString _kullaniciAdi;
         private readonly SecureString _sifre;
+        private readonly YetkilendirmeTuru _yetkilendirmeTuru;
         #endregion
 
         public KurumEditForm(params object[] prm)
@@ -34,6 +36,8 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             _server = prm[0].ToString();
             _kullaniciAdi = (SecureString)prm[1];
             _sifre = (SecureString)prm[2];
+            _yetkilendirmeTuru = (YetkilendirmeTuru)prm[3];
+            txtYetkilendirmeTuru.SelectedItem = _yetkilendirmeTuru.ToName();
         }
 
         protected internal override void Yukle()
@@ -78,21 +82,21 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         protected override bool EntityInsert()
         {
-            if (!Win.Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
+            if (!Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
 
-            Win.Functions.GeneralFunctions.CreateConnectionString(txtKod.Text, txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+            Functions.GeneralFunctions.CreateConnectionString(txtKod.Text, txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
 
             if (!Functions.GeneralFunctions.CreateDatabase<OgrenciTakipContext>("Lütfen Bekleyiniz", "Kurum Veritabanı Oluşturuluyor.", "Kurum Veritabanı Oluşturulacaktır. Onaylıyor Musunuz?", "Kurum Veritabanı Başarılı Bir Şekilde Oluşturuldu.")) return false;
 
-            Win.Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
             return base.EntityInsert();
         }
 
         protected override bool EntityUpdate()
         {
-            if (!Win.Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
+            if (!Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
 
-            Win.Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
 
             return base.EntityUpdate();
         }
@@ -112,5 +116,9 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             txtSifre.Text = "";
         }
 
+        private void txtKod_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

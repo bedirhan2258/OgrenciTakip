@@ -50,7 +50,7 @@ namespace OgrenciTakip.BLL.Base
 
         public virtual bool Delete(BaseEntity entity)
         {
-            return BaseDelete(entity, _kartTuru);
+            return BaseDelete(entity, _kartTuru, false);
         }
 
         public string YeniKodVer()

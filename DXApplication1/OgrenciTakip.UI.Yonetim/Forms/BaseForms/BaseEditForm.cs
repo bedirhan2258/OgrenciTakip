@@ -11,7 +11,7 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Functions;
-using OgrenciTakip.UI.Win.Interfaces;
+using OgrenciTakip.UI.Yonetim.Interfaces;
 using OgrenciTakip.UI.Yonetim.UserControls.Controls;
 using OgrenciTakip.UI.Yonetim.UserControls.Grid;
 namespace OgrenciTakip.UI.Yonetim.Forms.BaseForms

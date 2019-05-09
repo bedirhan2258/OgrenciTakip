@@ -8,7 +8,7 @@ namespace OgrenciTakip.BLL.General
 {
     public class KurumBll : BaseGenelYonetimBll<Kurum>, IBaseGenelBll, IBaseCommonBll
     {
-        public KurumBll() : base(KartTuru.AileBilgi) { }
-        public KurumBll(Control ctrl) : base(ctrl, KartTuru.AileBilgi) { }
+        public KurumBll() : base(KartTuru.Kurum) { }
+        public KurumBll(Control ctrl) : base(ctrl, KartTuru.Kurum) { }
     }
 }

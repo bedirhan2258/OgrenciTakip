@@ -100,6 +100,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.resimMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             this.SuspendLayout();
@@ -125,9 +126,10 @@
             this.btnBaskiOnizleme,
             this.btnResimEkle,
             this.btnResimSil,
-            this.btnTaksitOlustur});
+            this.btnTaksitOlustur,
+            this.barStaticItem1});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 16;
+            this.ribbonControl.MaxItemId = 17;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -152,14 +154,11 @@
             this.btnYeni.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.addfile_32x32;
             this.btnYeni.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Insert));
             this.btnYeni.Name = "btnYeni";
-            toolTipTitleItem1.Appearance.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
-            toolTipTitleItem1.Appearance.Options.UseImage = true;
             toolTipTitleItem1.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.comment_16x16;
             toolTipTitleItem1.Text = "(Ctrl+Insert)";
+            toolTipItem1.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
             toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Yeni Kart";
-            toolTipTitleItem2.Appearance.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
-            toolTipTitleItem2.Appearance.Options.UseImage = true;
+            toolTipItem1.Text = "Yeni Kart.";
             toolTipTitleItem2.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
             toolTipTitleItem2.LeftIndent = 6;
             toolTipTitleItem2.Text = "Formu Yeni Kart Ekleme Modunda Açar.";
@@ -272,6 +271,8 @@
             // statusBarAciklama
             // 
             this.statusBarAciklama.Id = 6;
+            this.statusBarAciklama.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            this.statusBarAciklama.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
             this.statusBarAciklama.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
             this.statusBarAciklama.ItemAppearance.Normal.Options.UseForeColor = true;
             this.statusBarAciklama.Name = "statusBarAciklama";
@@ -477,8 +478,17 @@
             // 
             this.resimMenu.ItemLinks.Add(this.btnResimEkle);
             this.resimMenu.ItemLinks.Add(this.btnResimSil);
+            this.resimMenu.ItemLinks.Add(this.btnResimEkle);
+            this.resimMenu.ItemLinks.Add(this.btnResimSil);
             this.resimMenu.Name = "resimMenu";
             this.resimMenu.Ribbon = this.ribbonControl;
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Id = 16;
+            this.barStaticItem1.ImageOptions.Image = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            this.barStaticItem1.ImageOptions.LargeImage = global::OgrenciTakip.UI.Yonetim.Properties.Resources.suggestion_16x16;
+            this.barStaticItem1.Name = "barStaticItem1";
             // 
             // BaseEditForm
             // 
@@ -522,5 +532,6 @@
         protected internal DevExpress.XtraBars.BarStaticItem statusBarKisayolAciklama;
         protected DevExpress.XtraBars.BarButtonItem btnTaksitOlustur;
         protected internal DevExpress.XtraBars.BarButtonItem btnSil;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
     }
 }

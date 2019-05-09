@@ -36,8 +36,6 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         #endregion
 
-        public enum WaitFormCommand
-        {
-        }
+  
     }
 }

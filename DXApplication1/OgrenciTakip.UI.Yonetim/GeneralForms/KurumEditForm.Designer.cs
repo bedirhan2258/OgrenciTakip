@@ -101,13 +101,18 @@
             this.txtKod.Name = "txtKod";
             this.txtKod.Properties.Appearance.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.txtKod.Properties.Appearance.Options.UseBackColor = true;
+            this.txtKod.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtKod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtKod.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtKod.Properties.AppearanceFocused.Options.UseBackColor = true;
+            this.txtKod.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtKod.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtKod.Properties.MaxLength = 30;
             this.txtKod.Size = new System.Drawing.Size(153, 20);
             this.txtKod.StatusBarAciklama = "Kod Giriniz";
             this.txtKod.StyleController = this.myDataLayoutControl;
             this.txtKod.TabIndex = 0;
+            this.txtKod.EditValueChanged += new System.EventHandler(this.txtKod_EditValueChanged);
             // 
             // txtSifre
             // 

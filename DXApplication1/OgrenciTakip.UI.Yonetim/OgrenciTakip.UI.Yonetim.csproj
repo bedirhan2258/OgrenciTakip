@@ -54,6 +54,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -96,7 +97,7 @@
     <Compile Include="GeneralForms\KurumEditForm.Designer.cs">
       <DependentUpon>KurumEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IStatusbarAciklama.cs" />
+    <Compile Include="Interfaces\IStatusBarAciklama.cs" />
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +227,7 @@
     </EmbeddedResource>
     <None Include="..\..\OgrenciTakip.UI.Win\App.config">
       <Link>App.config</Link>
+      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -534,6 +536,10 @@
     <ProjectReference Include="..\..\OgrenciTakip.Common\OgrenciTakip.Common.csproj">
       <Project>{46ac19a6-5358-48c2-8139-c640a1c0cee8}</Project>
       <Name>OgrenciTakip.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OgrenciTakip.DAL\OgrenciTakip.DAL.csproj">
+      <Project>{27F4B7FA-4430-4BF8-81A3-1D7340F692B3}</Project>
+      <Name>OgrenciTakip.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\OgrenciTakip.Data\OgrenciTakip.Data.csproj">
       <Project>{d135cf06-739e-44cf-855d-e66b079574ee}</Project>

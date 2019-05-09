@@ -32,6 +32,8 @@ namespace OgrenciTakip.UI.Win.Functions
 {
     public static class GeneralFunctions
     {
+        
+
         public static long GetRowId(this GridView tablo)
         {
             if (tablo.FocusedRowHandle > -1) return (long)tablo.GetFocusedRowCellValue("Id");
@@ -355,90 +357,6 @@ namespace OgrenciTakip.UI.Win.Functions
             ConfigurationManager.RefreshSection("appSettings");
         }
 
-        public static void CreateConnectionString(string initialCatalog, string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru)
-        {
-            SqlConnectionStringBuilder builder = null;
-            switch (yetkilendirmeTuru)
-            {
-                case YetkilendirmeTuru.SqlServer:
-                    builder = new SqlConnectionStringBuilder
-                    {
-                        DataSource = server,
-                        UserID = kullaniciAdi.ConvertToUnSecureString(),
-                        Password = sifre.ConvertToUnSecureString(),
-                        InitialCatalog = initialCatalog,
-                        MultipleActiveResultSets = true,
-                    };
-                    break;
-                case YetkilendirmeTuru.Windows:
-                    builder = new SqlConnectionStringBuilder
-                    {
-                        DataSource = server,
-                        InitialCatalog = initialCatalog,
-                        MultipleActiveResultSets = true,
-                        IntegratedSecurity = true
-                    };
-                    break;
-            }
-            var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            configuration.ConnectionStrings.ConnectionStrings["OgrenciTakipContext"].ConnectionString = builder?.ConnectionString;
-            configuration.Save(ConfigurationSaveMode.Modified);
-            ConfigurationManager.GetSection("connectionStrings");
-            Settings.Default.Reset();
-            Settings.Default.Save();
-        }
-
-        public static string ConvertToUnSecureString(this SecureString value)
-        {
-            var result = Marshal.SecureStringToBSTR(value);
-            return Marshal.PtrToStringAuto(result);
-        }
-
-        public static SecureString ConvertToSecureString(this string value)
-        {
-            var secureString = new SecureString();
-            if (value.Length > 0)
-            {
-                value.ToCharArray().ForEach(x => secureString.AppendChar(x));
-            }
-            secureString.MakeReadOnly();
-            return secureString;    
-        }
-
-        public static bool BaglantiKontrolu(string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru, bool genelMesajVer = false)
-        {
-            CreateConnectionString("", server, kullaniciAdi, sifre, yetkilendirmeTuru);
-
-            using (var con = new SqlConnection(BLL.Functions.GeneralFunctions.GetConnectionString()))
-            {
-                try
-                {
-                    if (con.ConnectionString == "") return false;
-                    con.Open();
-                    return true;
-                }
-                catch (SqlException ex)
-                {
-                    if (genelMesajVer)
-                    {
-                        Messages.HataMesaji("Server Bağlantı Ayarları Hatalıdır. Lütfen Kontrol Ediniz.");
-                        return false;
-                    }
-                    switch (ex.Number)
-                    {
-                        case 18456:
-                            Messages.HataMesaji("Server Kullanıcı Adı veya Şifresi Hatalıdır.");
-                            break;
-                        default:
-                            Messages.HataMesaji(ex.Message);
-                            break;
-                    }
-                }
-                return false;
-               
-            }
-
-        }
     }
 }
 
