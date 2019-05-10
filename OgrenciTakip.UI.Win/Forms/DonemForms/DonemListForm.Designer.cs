@@ -1,6 +1,6 @@
-﻿namespace OgrenciTakip.UI.Win.Forms
+﻿namespace OgrenciTakip.UI.Win.Forms.DonemForms
 {
-    partial class AileBilgiListForm
+    partial class DonemListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AileBilgiListForm));
-            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DonemListForm));
             this.grid = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridControl();
             this.tablo = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridView();
             this.colId = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colKod = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
-            this.colBilgiAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.colDonemAdi = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
             this.colAciklama = new OgrenciTakip.UI.Win.UserControls.Grid.MyGridColumn();
+            this.longNavigator = new OgrenciTakip.UI.Win.UserControls.Navigators.LongNavigator();
+            this.barF4 = new DevExpress.XtraBars.BarStaticItem();
+            this.barF4Aciklama = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem3 = new DevExpress.XtraBars.BarStaticItem();
+            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablo)).BeginInit();
@@ -44,7 +49,12 @@
             // ribbonControl
             // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.Size = new System.Drawing.Size(924, 102);
+            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barF4,
+            this.barF4Aciklama,
+            this.barStaticItem4});
+            this.ribbonControl.MaxItemId = 98;
+            this.ribbonControl.Size = new System.Drawing.Size(1257, 102);
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             // 
             // btnGonder
@@ -86,14 +96,6 @@
             // 
             this.btnOnTanimliRaporlar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOnTanimliRaporlar.ImageOptions.Image")));
             // 
-            // longNavigator
-            // 
-            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.longNavigator.Location = new System.Drawing.Point(0, 531);
-            this.longNavigator.Name = "longNavigator";
-            this.longNavigator.Size = new System.Drawing.Size(924, 24);
-            this.longNavigator.TabIndex = 2;
-            // 
             // grid
             // 
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -101,8 +103,8 @@
             this.grid.MainView = this.tablo;
             this.grid.MenuManager = this.ribbonControl;
             this.grid.Name = "grid";
-            this.grid.Size = new System.Drawing.Size(924, 429);
-            this.grid.TabIndex = 3;
+            this.grid.Size = new System.Drawing.Size(1257, 378);
+            this.grid.TabIndex = 5;
             this.grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tablo});
             // 
@@ -121,7 +123,7 @@
             this.tablo.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colKod,
-            this.colBilgiAdi,
+            this.colDonemAdi,
             this.colAciklama});
             this.tablo.GridControl = this.grid;
             this.tablo.Name = "tablo";
@@ -141,7 +143,7 @@
             this.tablo.StatusBarAciklama = null;
             this.tablo.StatusBarKisayol = null;
             this.tablo.StatusBarKisayolAciklama = null;
-            this.tablo.ViewCaption = "Aile Bilgi Kartları";
+            this.tablo.ViewCaption = "Dönem Kartları";
             // 
             // colId
             // 
@@ -169,18 +171,18 @@
             this.colKod.VisibleIndex = 0;
             this.colKod.Width = 120;
             // 
-            // colBilgiAdi
+            // colDonemAdi
             // 
-            this.colBilgiAdi.Caption = "Bilgi Adı";
-            this.colBilgiAdi.FieldName = "BilgiAdi";
-            this.colBilgiAdi.Name = "colBilgiAdi";
-            this.colBilgiAdi.OptionsColumn.AllowEdit = false;
-            this.colBilgiAdi.StatusBarAciklama = null;
-            this.colBilgiAdi.StatusBarKisayol = null;
-            this.colBilgiAdi.StatusBarKisayolAciklama = null;
-            this.colBilgiAdi.Visible = true;
-            this.colBilgiAdi.VisibleIndex = 1;
-            this.colBilgiAdi.Width = 250;
+            this.colDonemAdi.Caption = "Dönem Adı";
+            this.colDonemAdi.FieldName = "DonemAdi";
+            this.colDonemAdi.Name = "colDonemAdi";
+            this.colDonemAdi.OptionsColumn.AllowEdit = false;
+            this.colDonemAdi.StatusBarAciklama = null;
+            this.colDonemAdi.StatusBarKisayol = null;
+            this.colDonemAdi.StatusBarKisayolAciklama = null;
+            this.colDonemAdi.Visible = true;
+            this.colDonemAdi.VisibleIndex = 1;
+            this.colDonemAdi.Width = 250;
             // 
             // colAciklama
             // 
@@ -195,15 +197,70 @@
             this.colAciklama.VisibleIndex = 2;
             this.colAciklama.Width = 450;
             // 
-            // AileBilgiListForm
+            // longNavigator
+            // 
+            this.longNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.longNavigator.Location = new System.Drawing.Point(0, 480);
+            this.longNavigator.Name = "longNavigator";
+            this.longNavigator.Size = new System.Drawing.Size(1257, 24);
+            this.longNavigator.TabIndex = 4;
+            // 
+            // barF4
+            // 
+            this.barF4.Caption = "F4 :";
+            this.barF4.Id = 95;
+            this.barF4.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barF4.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.barF4.ItemAppearance.Normal.Options.UseFont = true;
+            this.barF4.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.barF4.Name = "barF4";
+            this.barF4.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // barF4Aciklama
+            // 
+            this.barF4Aciklama.Caption = "Parametreler";
+            this.barF4Aciklama.Id = 96;
+            this.barF4Aciklama.Name = "barF4Aciklama";
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "F4 :";
+            this.barStaticItem2.Id = 95;
+            this.barStaticItem2.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barStaticItem2.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.barStaticItem2.ItemAppearance.Normal.Options.UseFont = true;
+            this.barStaticItem2.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.barStaticItem2.Name = "barStaticItem2";
+            // 
+            // barStaticItem3
+            // 
+            this.barStaticItem3.Caption = "F4 :";
+            this.barStaticItem3.Id = 95;
+            this.barStaticItem3.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barStaticItem3.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.barStaticItem3.ItemAppearance.Normal.Options.UseFont = true;
+            this.barStaticItem3.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.barStaticItem3.Name = "barStaticItem3";
+            // 
+            // barStaticItem4
+            // 
+            this.barStaticItem4.Caption = "F5 :";
+            this.barStaticItem4.Id = 97;
+            this.barStaticItem4.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.barStaticItem4.ItemAppearance.Normal.ForeColor = System.Drawing.Color.DarkBlue;
+            this.barStaticItem4.ItemAppearance.Normal.Options.UseFont = true;
+            this.barStaticItem4.ItemAppearance.Normal.Options.UseForeColor = true;
+            this.barStaticItem4.Name = "barStaticItem4";
+            // 
+            // DonemListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 586);
+            this.ClientSize = new System.Drawing.Size(1257, 535);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.longNavigator);
-            this.Name = "AileBilgiListForm";
-            this.Text = "Aile Bilgi Kartları";
+            this.Name = "DonemListForm";
+            this.Text = "Dönem Kartları";
             this.Controls.SetChildIndex(this.ribbonControl, 0);
             this.Controls.SetChildIndex(this.longNavigator, 0);
             this.Controls.SetChildIndex(this.grid, 0);
@@ -217,12 +274,17 @@
 
         #endregion
 
-        private UserControls.Navigators.LongNavigator longNavigator;
         private UserControls.Grid.MyGridControl grid;
         private UserControls.Grid.MyGridView tablo;
         private UserControls.Grid.MyGridColumn colId;
         private UserControls.Grid.MyGridColumn colKod;
-        private UserControls.Grid.MyGridColumn colBilgiAdi;
+        private UserControls.Grid.MyGridColumn colDonemAdi;
         private UserControls.Grid.MyGridColumn colAciklama;
+        private UserControls.Navigators.LongNavigator longNavigator;
+        private DevExpress.XtraBars.BarStaticItem barF4;
+        private DevExpress.XtraBars.BarStaticItem barF4Aciklama;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem4;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem2;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem3;
     }
 }

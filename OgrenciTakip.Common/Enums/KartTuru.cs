@@ -150,6 +150,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Kullanıcı Parametre Kartı")]
         KullaniciParametre = 71,
         [Description("Kurum Kartı")]
-        Kurum = 72
+        Kurum = 72,
+        [Description("Dönem Kartı")]
+        Donem = 73
     }
 }

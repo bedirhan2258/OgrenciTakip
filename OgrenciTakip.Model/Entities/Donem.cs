@@ -1,5 +1,4 @@
 ﻿
-
 using OgrenciTakip.Model.Attributes;
 using OgrenciTakip.Model.Entities.Base;
 using System.ComponentModel.DataAnnotations;

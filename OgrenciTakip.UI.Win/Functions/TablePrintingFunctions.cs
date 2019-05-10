@@ -5,7 +5,6 @@ using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.Common.Enums;
 using System.Drawing;
-using System;
 using System.Drawing.Printing;
 
 namespace OgrenciTakip.UI.Win.Functions

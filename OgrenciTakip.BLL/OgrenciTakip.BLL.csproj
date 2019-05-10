@@ -75,6 +75,7 @@
     <Compile Include="General\BelgeSecimBll.cs" />
     <Compile Include="General\BilgiNotlariBll.cs" />
     <Compile Include="General\CariBll.cs" />
+    <Compile Include="General\DonemBll.cs" />
     <Compile Include="General\EposBilgileriBll.cs" />
     <Compile Include="General\EvrakBilgileriBll.cs" />
     <Compile Include="General\EvrakBll.cs" />
