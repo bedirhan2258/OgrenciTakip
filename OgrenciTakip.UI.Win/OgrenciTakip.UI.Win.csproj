@@ -563,6 +563,12 @@
     <Compile Include="Forms\SubeForms\SubeListForm.Designer.cs">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\DonemParametreEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\DonemParametreEditForm.Designer.cs">
+      <DependentUpon>DonemParametreEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\EmailParametreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1294,6 +1300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SubeForms\SubeListForm.resx">
       <DependentUpon>SubeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\DonemParametreEditForm.resx">
+      <DependentUpon>DonemParametreEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\EmailParametreEditForm.resx">
       <DependentUpon>EmailParametreEditForm.cs</DependentUpon>
