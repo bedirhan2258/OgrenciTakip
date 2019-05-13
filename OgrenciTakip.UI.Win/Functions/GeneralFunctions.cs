@@ -6,6 +6,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraLayout;
 using DevExpress.XtraPrinting.Native;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraVerticalGrid;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities.Base;
@@ -32,7 +33,7 @@ namespace OgrenciTakip.UI.Win.Functions
 {
     public static class GeneralFunctions
     {
-        
+
 
         public static long GetRowId(this GridView tablo)
         {
@@ -191,6 +192,12 @@ namespace OgrenciTakip.UI.Win.Functions
                     edt.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
                     edt.Id = null;
                     edt.EditValue = null;
+                    break;
+
+                case PropertyGridControl pGrd:
+                    pGrd.Enabled = baseEdit.Id.HasValue && baseEdit.Id > 0;
+                    if (!pGrd.Enabled)
+                        pGrd.SelectedObject = null;
                     break;
             }
         }

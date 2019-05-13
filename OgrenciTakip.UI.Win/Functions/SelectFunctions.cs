@@ -23,6 +23,7 @@ using OgrenciTakip.UI.Win.Forms.RehberForms;
 using OgrenciTakip.UI.Win.Forms.SchoolForms;
 using OgrenciTakip.UI.Win.Forms.SinifForms;
 using OgrenciTakip.UI.Win.Forms.SinifGrupForms;
+using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Forms.TesvikForms;
 using OgrenciTakip.UI.Win.Forms.YabanciDilForms;
 using OgrenciTakip.UI.Win.Show;
@@ -367,6 +368,17 @@ namespace OgrenciTakip.UI.Win.Functions
                     }
                     break;
 
+                case "txtSube":
+                    {
+                        var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.SubeAdi;
+                        }
+                    }
+                    break;
+
                 case "txtHesap":
                     {
                         switch (_kartTuru)
@@ -411,6 +423,17 @@ namespace OgrenciTakip.UI.Win.Functions
                                     {
                                         _btnEdit.Id = entity.Id;
                                         _btnEdit.EditValue = entity.CariAdi;
+                                    }
+                                    break;
+                                }
+
+                            case KartTuru.Sube:
+                                {
+                                    var entity = (SubeL)ShowListForms<SubeListForm>.ShowDialogListForm(KartTuru.Sube, _btnEdit.Id, true);
+                                    if (entity != null)
+                                    {
+                                        _btnEdit.Id = entity.Id;
+                                        _btnEdit.EditValue = entity.SubeAdi;
                                     }
                                     break;
                                 }

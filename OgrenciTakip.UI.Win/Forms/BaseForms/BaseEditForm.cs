@@ -5,6 +5,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraVerticalGrid;
 //using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.BLL.Interfaces;
 using OgrenciTakip.Common.Enums;
@@ -86,6 +87,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                         break;
                     case TabPane tab:
                         tab.SelectedPageChanged += Control_SelectedPageChanged;
+                        break;
+                    case PropertyGridControl pGrd:
+                        pGrd.CellValueChanged += Control_CellValueChanged;
+                        pGrd.FocusedRowChanged += Control_FocusedRowChanged;
                         break;
                 }
             }
@@ -421,13 +426,15 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Cursor.Current = DefaultCursor;
         }
 
-
-
         protected virtual void Control_SelectedValueChanged(object sender, EventArgs e) { }
 
         protected virtual void Control_EnabledChange(object sender, EventArgs e) { }
 
         protected virtual void Control_SelectedPageChanged(object sender, SelectedPageChangedEventArgs e) { }
+
+        protected virtual void Control_CellValueChanged(object sender, DevExpress.XtraVerticalGrid.Events.CellValueChangedEventArgs e) { }
+
+        protected virtual void Control_FocusedRowChanged(object sender, DevExpress.XtraVerticalGrid.Events.FocusedRowChangedEventArgs e) { }
 
     }
 }

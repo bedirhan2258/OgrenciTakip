@@ -11,6 +11,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.GeneralForms;
 
 namespace OgrenciTakip.UI.Win.Forms.DonemForms
 {
@@ -59,7 +60,7 @@ namespace OgrenciTakip.UI.Win.Forms.DonemForms
         {
             var entity = Tablo.GetRow<Donem>();
             if (entity == null) return;
-            ShowListForms<BankaSubeListForm>.ShowListForm(KartTuru.Banka, entity.Id, entity.BankaAdi);
+            ShowEditForms<DonemParametreEditForm>.ShowDialogEditForms(null, entity.Id);
         }
     }
 }
