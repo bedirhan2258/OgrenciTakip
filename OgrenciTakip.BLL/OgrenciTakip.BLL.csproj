@@ -106,8 +106,9 @@
     <Compile Include="General\KasaBll.cs" />
     <Compile Include="General\KontenjanBll.cs" />
     <Compile Include="General\KullaniciParametreBll.cs" />
+    <Compile Include="General\KurumBilgileriBll.cs" />
     <Compile Include="General\KurumBll.cs" />
-    <Compile Include="General\MailParametreBll.cs" />
+    <Compile Include="General\MailBilgileriBll.cs" />
     <Compile Include="General\MakbuzBll.cs" />
     <Compile Include="General\MakbuzHareketleriBll.cs" />
     <Compile Include="General\MeslekBll.cs" />

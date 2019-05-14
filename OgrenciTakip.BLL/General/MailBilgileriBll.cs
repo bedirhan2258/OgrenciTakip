@@ -8,7 +8,7 @@ namespace OgrenciTakip.BLL.General
 {
     public class MailBilgileriBll : BaseGenelBll<MailParametre>, IBaseGenelBll, IBaseCommonBll
     {
-        public KuurumBilgileriBll() { }
-        public KuurumBilgileriBll(Control ctrl) : base(ctrl) { }
+        public MailBilgileriBll() { }
+        public MailBilgileriBll(Control ctrl) : base(ctrl) { }
     }
 }

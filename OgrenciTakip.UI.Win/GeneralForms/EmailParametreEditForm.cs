@@ -17,7 +17,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             InitializeComponent();
 
             dataLayoutControl = myDataLayoutControl;
-            bll = new MailParametreBll(myDataLayoutControl);
+            bll = new MailBilgileriBll(myDataLayoutControl);
             HideItems = new BarItem[] { btnYeni, btnSil };
             txtSslKullan.Properties.Items.AddRange(EnumFunctions.GetEnumDescriptionList<EvetHayir>());
             EventsLoad();
@@ -25,7 +25,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         protected internal override void Yukle()
         {
-            oldEntity = ((MailParametreBll)bll).Single(null) ?? new MailParametre();
+            oldEntity = ((MailBilgileriBll)bll).Single(null) ?? new MailParametre();
             ((MailParametre)oldEntity).Sifre = "Bu Email Şifresidir.".Encrypt(oldEntity.Id + oldEntity.Kod);
 
             BaseIslemTuru = oldEntity.Id == 0 ? IslemTuru.EntityInsert : IslemTuru.EntityUpdate;

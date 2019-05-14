@@ -137,6 +137,11 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 {
                     ShowListForms<DonemListForm>.ShowDialogListForm();
                 }
+
+                else if (e.Item == btnKurumBilgileri)
+                {
+                    Win.Show.ShowEditForms<KurumBilgileriEditForm>.ShowDialogEditForms(null, entity.Kod, entity.KurumAdi);
+                }
             }
 
             Cursor.Current = DefaultCursor;
