@@ -86,6 +86,7 @@
     <Compile Include="DTO\PromosyonBilgileriDTO.cs" />
     <Compile Include="DTO\RaporDTO.cs" />
     <Compile Include="DTO\RaporlarDTO.cs" />
+    <Compile Include="DTO\RolYetkileriDTO.cs" />
     <Compile Include="DTO\SinavBilgileriDTO.cs" />
     <Compile Include="DTO\SinifDTO.cs" />
     <Compile Include="DTO\SubeDTO.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Entities\Rapor.cs" />
     <Compile Include="Entities\Rehber.cs" />
     <Compile Include="Entities\Rol.cs" />
+    <Compile Include="Entities\RolYetkileri.cs" />
     <Compile Include="Entities\Servis.cs" />
     <Compile Include="Entities\SinavBilgileri.cs" />
     <Compile Include="Entities\Sinif.cs" />

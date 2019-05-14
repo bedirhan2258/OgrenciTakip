@@ -977,6 +977,12 @@
     <Compile Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.Designer.cs">
       <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl\GenelEditFormTable\RolYetkileriTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl\GenelEditFormTable\RolYetkileriTable.Designer.cs">
+      <DependentUpon>RolYetkileriTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -1485,6 +1491,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\GenelEditFormTable\MakbuzHareketleriTable.resx">
       <DependentUpon>MakbuzHareketleriTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl\GenelEditFormTable\RolYetkileriTable.resx">
+      <DependentUpon>RolYetkileriTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl\IndirimEditFormTable\IndiriminUygulanacagiHizmetlerTable.resx">
       <DependentUpon>IndiriminUygulanacagiHizmetlerTable.cs</DependentUpon>

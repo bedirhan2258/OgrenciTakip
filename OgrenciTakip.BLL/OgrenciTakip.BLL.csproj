@@ -126,6 +126,7 @@
     <Compile Include="General\RaporBll.cs" />
     <Compile Include="General\RehberBll.cs" />
     <Compile Include="General\RolBll.cs" />
+    <Compile Include="General\RolYetkileriBll.cs" />
     <Compile Include="General\ServisBll.cs" />
     <Compile Include="General\SinavBilgileriBll.cs" />
     <Compile Include="General\SinifBll.cs" />

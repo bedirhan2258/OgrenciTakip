@@ -59,9 +59,8 @@ namespace OgrenciTakip.UI.Win.UserControls.IndirimEditFormTable
             tablo.FocusedRowHandle = tablo.DataRowCount - 1;
             tablo.FocusedColumn = colIndirimTutari;
             ButtonEnabledDurumu(true);
-
-
         }
+
         protected internal override bool HataliGiris()
         {
             if (!TableValueChanged) return false;
