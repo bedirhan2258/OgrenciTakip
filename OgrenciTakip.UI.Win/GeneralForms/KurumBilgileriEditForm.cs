@@ -42,7 +42,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             txtKurumAdi.Text = _kurumAdi;
             txtKurumAdi.Focus();
         }
-
+        
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KurumBilgileriS)oldEntity;

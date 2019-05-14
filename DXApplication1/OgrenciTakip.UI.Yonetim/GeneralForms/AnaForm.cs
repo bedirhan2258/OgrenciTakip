@@ -14,6 +14,7 @@ using OgrenciTakip.UI.Yonetim.Show;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.Forms.SubeForms;
 using OgrenciTakip.UI.Win.Forms.DonemForms;
+using OgrenciTakip.UI.Win.Forms.KullaniciForms;
 
 namespace OgrenciTakip.UI.Yonetim.GeneralForms
 {
@@ -141,6 +142,11 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 else if (e.Item == btnKurumBilgileri)
                 {
                     Win.Show.ShowEditForms<KurumBilgileriEditForm>.ShowDialogEditForms(null, entity.Kod, entity.KurumAdi);
+                }
+
+                else if (e.Item == btnRolKartlari)
+                {
+                    ShowListForms<RolListForm>.ShowDialogListForm();
                 }
             }
 

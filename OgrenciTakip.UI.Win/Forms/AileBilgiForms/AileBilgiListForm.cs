@@ -39,6 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms
             navigator = longNavigator.Navigator;
 
         }
+
         protected override void Listele()
         {
             var list = ((AileBilgiBll)bll).List(_filter);

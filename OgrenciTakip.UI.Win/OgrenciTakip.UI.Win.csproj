@@ -395,6 +395,18 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KullaniciForms\RolEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\RolEditForm.Designer.cs">
+      <DependentUpon>RolEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\RolListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\RolListForm.Designer.cs">
+      <DependentUpon>RolListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MakbuzForms\BelgeHareketleriListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1222,6 +1234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\RolEditForm.resx">
+      <DependentUpon>RolEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\RolListForm.resx">
+      <DependentUpon>RolListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MakbuzForms\BelgeHareketleriListForm.resx">
       <DependentUpon>BelgeHareketleriListForm.cs</DependentUpon>

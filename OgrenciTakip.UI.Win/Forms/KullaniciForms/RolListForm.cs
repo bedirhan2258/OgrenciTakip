@@ -1,34 +1,31 @@
-﻿
-using DevExpress.XtraBars;
-using OgrenciTakip.BLL.General;
+﻿using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 
-namespace OgrenciTakip.UI.Win.Forms.AvukatForms
+namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
 {
-    public partial class AvukatListForm : BaseListForm
+    public partial class RolListForm : BaseListForm
     {
-        public AvukatListForm()
+        public RolListForm()
         {
             InitializeComponent();
-            bll = new AvukatBll();
+            bll = new RolBll();
         }
 
         protected override void DegiskenleriDoldur()
         {
             Tablo = tablo;
-            BaseKartTuru = KartTuru.Avukat;
-            formShow = new ShowEditForms<AvukatEditForm>();
+            BaseKartTuru = KartTuru.Rol;
+            formShow = new ShowEditForms<RolEditForm>();
             navigator = longNavigator.Navigator;
-
         }
 
         protected override void Listele()
         {
-            Tablo.GridControl.DataSource = ((AvukatBll)bll).List(FilterFunctions.Filter<Avukat>(aktifKartlariGoster));
+            Tablo.GridControl.DataSource = ((RolBll)bll).List(FilterFunctions.Filter<Rol>(aktifKartlariGoster));
         }
 
     }

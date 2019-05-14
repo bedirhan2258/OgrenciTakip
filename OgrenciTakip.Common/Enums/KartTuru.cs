@@ -152,6 +152,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Kurum Kartı")]
         Kurum = 72,
         [Description("Dönem Kartı")]
-        Donem = 73
+        Donem = 73,
+        [Description("Rol Kartı")]
+        Rol = 77
     }
 }
