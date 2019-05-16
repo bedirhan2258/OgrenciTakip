@@ -493,6 +493,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap highlightactiveelements_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("highlightactiveelements_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap highlightactiveelements_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("highlightactiveelements_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap historyitem_16x16 {
             get {
                 object obj = ResourceManager.GetObject("historyitem_16x16", resourceCulture);
@@ -746,6 +766,26 @@ namespace OgrenciTakip.UI.Win.Properties {
         internal static System.Drawing.Bitmap suggestion_16x16 {
             get {
                 object obj = ResourceManager.GetObject("suggestion_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap task_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("task_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap task_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("task_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

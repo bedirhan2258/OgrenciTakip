@@ -1,6 +1,7 @@
 ﻿
 using OgrenciTakip.BLL.Base;
 using OgrenciTakip.BLL.Interfaces;
+using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
@@ -24,8 +25,8 @@ namespace OgrenciTakip.BLL.General
                 Gorebilir = x.Gorebilir,
                 Ekleyebilir = x.Ekleyebilir,
                 Degistirebilir = x.Degistirebilir,
-                Silebilir = x.Silebilir     
-            }).ToList();
+                Silebilir = x.Silebilir
+            }).AsEnumerable().OrderBy(x => x.KartTuru.ToName()).ToList();
         }
     }
 }

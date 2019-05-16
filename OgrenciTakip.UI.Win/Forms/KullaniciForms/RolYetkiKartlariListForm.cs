@@ -1,6 +1,7 @@
 ﻿
 using DevExpress.XtraBars;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
@@ -39,7 +40,7 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
                 liste.Add(entity);
             });
 
-            var list = liste.Where(x => !ListeDisiTutulacakKayitlar.Contains((long)x.KartTuru));
+            var list = liste.Where(x => !ListeDisiTutulacakKayitlar.Contains((long)x.KartTuru)).OrderBy(x => x.KartTuru.ToName());
             Tablo.GridControl.DataSource = list;
 
             if (!multiSelect) return;

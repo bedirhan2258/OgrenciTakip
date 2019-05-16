@@ -1,4 +1,6 @@
 ﻿
+using System;
+using System.Windows.Forms;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities;
@@ -53,10 +55,34 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
             ButonEnabledDurumu();
         }
 
+        protected internal override void ButonEnabledDurumu()
+        {
+            if (!isLoaded) return;
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, rolYetkileriTable.TableValueChanged);
+        }
+
+        protected override bool EntityInsert()
+        {
+            return ((RolBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod) && rolYetkileriTable.Kaydet();
+        }
+        protected override bool EntityUpdate()
+        {
+
+            return ((RolBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod) && rolYetkileriTable.Kaydet();
+        }
+
+        protected override void BaseEditForm_Shown(object sender, EventArgs e)
+        {
+            if (BaseIslemTuru == IslemTuru.EntityUpdate)
+                rolYetkileriTable.Tablo.Focus();
+        }
+
         protected override void TabloYukle()
         {
             rolYetkileriTable.OwnerForm = this;
             rolYetkileriTable.Yukle();
         }
+
+
     }
 }

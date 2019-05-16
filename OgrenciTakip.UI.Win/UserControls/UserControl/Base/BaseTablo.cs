@@ -133,6 +133,10 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
 
         protected virtual void IptalGeriAl() { }
 
+        protected virtual void TumunuSec() { }
+
+        protected virtual void TumSecimleriKaldir() { }
+
         protected internal bool Kaydet()
         {
             insUptNavigator.Navigator.Buttons.DoClick(insUptNavigator.Navigator.Buttons.EndEdit);
@@ -183,6 +187,10 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
                 IptalGeriAl();
             else if (e.Item == btnBelgeHareketleri)
                 BelgeHareketleri();
+            else if (e.Item == btnTumunuSec)
+                TumunuSec();
+            else if (e.Item == btnTumSecimleriKaldir)
+                TumSecimleriKaldir();
 
             Cursor.Current = DefaultCursor;
         }

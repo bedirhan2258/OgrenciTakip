@@ -93,9 +93,9 @@
             this.tablo.OptionsView.RowAutoHeight = true;
             this.tablo.OptionsView.ShowGroupPanel = false;
             this.tablo.OptionsView.ShowViewCaption = true;
-            this.tablo.StatusBarAciklama = null;
-            this.tablo.StatusBarKisayol = null;
-            this.tablo.StatusBarKisayolAciklama = null;
+            this.tablo.StatusBarAciklama = "Rol Yetki Kartları";
+            this.tablo.StatusBarKisayol = "Shift + Insert";
+            this.tablo.StatusBarKisayolAciklama = "Yetki Kartı Ekle";
             this.tablo.ViewCaption = "Rol Yetkileri";
             // 
             // colId

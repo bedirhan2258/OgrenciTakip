@@ -62,6 +62,7 @@ namespace OgrenciTakip.UI.Win.Functions
             _column.OptionsColumn.AllowSize = false;
             _column.UnboundType = UnboundColumnType.Boolean;
             _column.Width = 35;
+            _column.OptionsColumn.FixedWidth = true;
             _column.ColumnEdit = _checkEdit;
             _tablo.FocusedColumn = _column;
 
