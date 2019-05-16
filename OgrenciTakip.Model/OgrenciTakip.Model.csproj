@@ -148,6 +148,7 @@
     <Compile Include="Entities\Rapor.cs" />
     <Compile Include="Entities\Rehber.cs" />
     <Compile Include="Entities\Rol.cs" />
+    <Compile Include="Entities\RolYetki.cs" />
     <Compile Include="Entities\RolYetkileri.cs" />
     <Compile Include="Entities\Servis.cs" />
     <Compile Include="Entities\SinavBilgileri.cs" />

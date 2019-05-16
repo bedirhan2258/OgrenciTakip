@@ -407,6 +407,12 @@
     <Compile Include="Forms\KullaniciForms\RolListForm.Designer.cs">
       <DependentUpon>RolListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KullaniciForms\RolYetkiKartlariListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\RolYetkiKartlariListForm.Designer.cs">
+      <DependentUpon>RolYetkiKartlariListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MakbuzForms\BelgeHareketleriListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1246,6 +1252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciForms\RolListForm.resx">
       <DependentUpon>RolListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\RolYetkiKartlariListForm.resx">
+      <DependentUpon>RolYetkiKartlariListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MakbuzForms\BelgeHareketleriListForm.resx">
       <DependentUpon>BelgeHareketleriListForm.cs</DependentUpon>
