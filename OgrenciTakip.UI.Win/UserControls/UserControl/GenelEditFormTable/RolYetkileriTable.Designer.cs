@@ -115,6 +115,8 @@
             this.colKartTuru.FieldName = "KartTuru";
             this.colKartTuru.Name = "colKartTuru";
             this.colKartTuru.OptionsColumn.AllowEdit = false;
+            this.colKartTuru.OptionsFilter.AllowAutoFilter = false;
+            this.colKartTuru.OptionsFilter.AllowFilter = false;
             this.colKartTuru.StatusBarAciklama = null;
             this.colKartTuru.StatusBarKisayol = null;
             this.colKartTuru.StatusBarKisayolAciklama = null;
@@ -128,7 +130,8 @@
             this.colGorebilir.ColumnEdit = this.repositoryCheck;
             this.colGorebilir.FieldName = "Gorebilir";
             this.colGorebilir.Name = "colGorebilir";
-            this.colGorebilir.OptionsColumn.AllowEdit = false;
+            this.colGorebilir.OptionsFilter.AllowAutoFilter = false;
+            this.colGorebilir.OptionsFilter.AllowFilter = false;
             this.colGorebilir.StatusBarAciklama = null;
             this.colGorebilir.StatusBarKisayol = null;
             this.colGorebilir.StatusBarKisayolAciklama = null;
@@ -139,6 +142,9 @@
             // 
             this.repositoryCheck.AutoHeight = false;
             this.repositoryCheck.Name = "repositoryCheck";
+            this.repositoryCheck.ValueChecked = ((byte)(1));
+            this.repositoryCheck.ValueGrayed = ((byte)(2));
+            this.repositoryCheck.ValueUnchecked = ((byte)(0));
             // 
             // colEkleyebilir
             // 
@@ -146,7 +152,8 @@
             this.colEkleyebilir.ColumnEdit = this.repositoryCheck;
             this.colEkleyebilir.FieldName = "Ekleyebilir";
             this.colEkleyebilir.Name = "colEkleyebilir";
-            this.colEkleyebilir.OptionsColumn.AllowEdit = false;
+            this.colEkleyebilir.OptionsFilter.AllowAutoFilter = false;
+            this.colEkleyebilir.OptionsFilter.AllowFilter = false;
             this.colEkleyebilir.StatusBarAciklama = null;
             this.colEkleyebilir.StatusBarKisayol = null;
             this.colEkleyebilir.StatusBarKisayolAciklama = null;
@@ -159,7 +166,8 @@
             this.colDegistirebilir.ColumnEdit = this.repositoryCheck;
             this.colDegistirebilir.FieldName = "Degistirebilir";
             this.colDegistirebilir.Name = "colDegistirebilir";
-            this.colDegistirebilir.OptionsColumn.AllowEdit = false;
+            this.colDegistirebilir.OptionsFilter.AllowAutoFilter = false;
+            this.colDegistirebilir.OptionsFilter.AllowFilter = false;
             this.colDegistirebilir.StatusBarAciklama = null;
             this.colDegistirebilir.StatusBarKisayol = null;
             this.colDegistirebilir.StatusBarKisayolAciklama = null;
@@ -172,7 +180,8 @@
             this.colSilebilir.ColumnEdit = this.repositoryCheck;
             this.colSilebilir.FieldName = "Silebilir";
             this.colSilebilir.Name = "colSilebilir";
-            this.colSilebilir.OptionsColumn.AllowEdit = false;
+            this.colSilebilir.OptionsFilter.AllowAutoFilter = false;
+            this.colSilebilir.OptionsFilter.AllowFilter = false;
             this.colSilebilir.StatusBarAciklama = null;
             this.colSilebilir.StatusBarKisayol = null;
             this.colSilebilir.StatusBarKisayolAciklama = null;

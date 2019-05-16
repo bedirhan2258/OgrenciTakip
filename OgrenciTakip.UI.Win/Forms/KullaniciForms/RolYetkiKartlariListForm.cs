@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
                 liste.Add(entity);
             });
 
-            var list = liste.Where(x => ListeDisiTutulacakKayitlar.Contains((long)x.KartTuru));
+            var list = liste.Where(x => !ListeDisiTutulacakKayitlar.Contains((long)x.KartTuru));
             Tablo.GridControl.DataSource = list;
 
             if (!multiSelect) return;

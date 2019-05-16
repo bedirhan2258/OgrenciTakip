@@ -1,6 +1,9 @@
 ﻿
+using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Model.DTO;
+using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
@@ -29,28 +32,22 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable
             var source = tablo.DataController.ListSource;
             ListeDisiTutulacakKayitlar = source.Cast<RolYetkileriL>().Where(x => !x.Delete).Select(x => (long)x.KartTuru).ToList();
 
-            var entities = ShowListForms<RolYetkiKartlariListForm>.ShowDialogListForm(KartTuru.Hizmet, ListeDisiTutulacakKayitlar, true, false).EntityListConvert<HizmetL>();
+            var entities = ShowListForms<RolYetkiKartlariListForm>.ShowDialogListForm(ListeDisiTutulacakKayitlar, true).EntityListConvert<RolYetki>();
             if (entities == null) return;
 
             foreach (var entity in entities)
             {
-                var row = new IndiriminUygulanacagiHizmetBilgileriL
+                var row = new RolYetkileriL
                 {
-                    IndirimId = OwnerForm.id,
-                    HizmetId = entity.Id,
-                    HizmetAdi = entity.HizmetAdi,
-                    IndirimTutari = 0,
-                    IndirimOrani = 0,
-                    SubeId = AnaForm.SubeId,
-                    DonemId = AnaForm.DonemId,
-                    Insert = true
+                    RolId = OwnerForm.id,
+                    KartTuru = entity.KartTuru,
+
                 };
                 source.Add(row);
             }
             tablo.Focus();
             tablo.RefleshDataSource();
             tablo.FocusedRowHandle = tablo.DataRowCount - 1;
-            tablo.FocusedColumn = colIndirimTutari;
             ButtonEnabledDurumu(true);
         }
 

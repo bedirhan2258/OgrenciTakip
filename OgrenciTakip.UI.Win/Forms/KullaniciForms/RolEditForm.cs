@@ -23,6 +23,7 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
         {
             oldEntity = BaseIslemTuru == IslemTuru.EntityInsert ? new Rol() : ((RolBll)bll).Single(FilterFunctions.Filter<Rol>(id));
             NesneyiKontrollereBagla();
+            TabloYukle();
 
             if (BaseIslemTuru != IslemTuru.EntityInsert) return;
             id = BaseIslemTuru.IdOlustur(oldEntity);
@@ -50,6 +51,12 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
             };
 
             ButonEnabledDurumu();
+        }
+
+        protected override void TabloYukle()
+        {
+            rolYetkileriTable.OwnerForm = this;
+            rolYetkileriTable.Yukle();
         }
     }
 }

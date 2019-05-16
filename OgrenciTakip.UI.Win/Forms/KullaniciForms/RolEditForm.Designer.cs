@@ -45,6 +45,8 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.rolYetkileriTable = new OgrenciTakip.UI.Win.UserControls.UserControl.GenelEditFormTable.RolYetkileriTable();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resimMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl)).BeginInit();
@@ -58,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl
@@ -68,6 +71,7 @@
             // 
             // myDataLayoutControl
             // 
+            this.myDataLayoutControl.Controls.Add(this.rolYetkileriTable);
             this.myDataLayoutControl.Controls.Add(this.txtAciklama);
             this.myDataLayoutControl.Controls.Add(this.tglDurum);
             this.myDataLayoutControl.Controls.Add(this.txtRolAdi);
@@ -153,7 +157,8 @@
             this.layoutControlItem1,
             this.layoutControlItem2,
             this.layoutControlItem4,
-            this.layoutControlItem3});
+            this.layoutControlItem3,
+            this.layoutControlItem5});
             this.layoutControlGroup1.LayoutMode = DevExpress.XtraLayout.Utils.LayoutMode.Table;
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             columnDefinition1.SizeType = System.Windows.Forms.SizeType.Absolute;
@@ -231,6 +236,26 @@
             this.layoutControlItem3.Text = "Açıklama";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(41, 13);
             // 
+            // rolYetkileriTable
+            // 
+            this.rolYetkileriTable.Location = new System.Drawing.Point(12, 108);
+            this.rolYetkileriTable.Name = "rolYetkileriTable";
+            this.rolYetkileriTable.Size = new System.Drawing.Size(592, 458);
+            this.rolYetkileriTable.TabIndex = 4;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseForeColor = true;
+            this.layoutControlItem5.Control = this.rolYetkileriTable;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 96);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.OptionsTableLayoutItem.ColumnSpan = 3;
+            this.layoutControlItem5.OptionsTableLayoutItem.RowIndex = 3;
+            this.layoutControlItem5.Size = new System.Drawing.Size(596, 462);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
+            // 
             // RolEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,6 +279,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,5 +297,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private UserControls.UserControl.GenelEditFormTable.RolYetkileriTable rolYetkileriTable;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }
