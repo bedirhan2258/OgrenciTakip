@@ -113,5 +113,10 @@ namespace OgrenciTakip.Common.Message
             return HayirSeciliEvetHayir("Rapor Kapatılacaktır Onaylıyor Musunuz?", "Onay");
         }
 
+        public static DialogResult EmailGonderimOnayı()
+        {
+            return HayirSeciliEvetHayir("Kullanıcı Şifresi Sıfırlanarak , Kullanıcı Bilgilerini İçeren Yeni Bir Email Gönderilecektir. Onaylıyor Musunuz?", "Onay");
+        }
+
     }
 }

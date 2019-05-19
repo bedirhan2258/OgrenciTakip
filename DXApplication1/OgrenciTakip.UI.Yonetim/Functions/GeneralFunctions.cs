@@ -156,17 +156,6 @@ namespace OgrenciTakip.UI.Yonetim.Functions
             return Marshal.PtrToStringAuto(result);
         }
 
-        public static SecureString ConvertToSecureString(this string value)
-        {
-            var secureString = new SecureString();
-            if (value.Length > 0)
-            {
-                value.ToCharArray().ForEach(x => secureString.AppendChar(x));
-            }
-            secureString.MakeReadOnly();
-            return secureString;
-        }
-
         public static bool BaglantiKontrolu(string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru, bool genelMesajVer = false)
         {
             CreateConnectionString("", server, kullaniciAdi, sifre, yetkilendirmeTuru);

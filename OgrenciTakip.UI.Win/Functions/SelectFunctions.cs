@@ -16,6 +16,7 @@ using OgrenciTakip.UI.Win.Forms.IndirimTuruForms;
 using OgrenciTakip.UI.Win.Forms.IsyeriForms;
 using OgrenciTakip.UI.Win.Forms.KasaForms;
 using OgrenciTakip.UI.Win.Forms.KontenjanForms;
+using OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using OgrenciTakip.UI.Win.Forms.MeslekForms;
 using OgrenciTakip.UI.Win.Forms.OdemeTuruForms;
 using OgrenciTakip.UI.Win.Forms.OzelKodForms;
@@ -375,6 +376,17 @@ namespace OgrenciTakip.UI.Win.Functions
                         {
                             _btnEdit.Id = entity.Id;
                             _btnEdit.EditValue = entity.SubeAdi;
+                        }
+                    }
+                    break;
+
+                case "txtRol":
+                    {
+                        var entity = (Rol)ShowListForms<RolListForm>.ShowDialogListForm(KartTuru.Rol, _btnEdit.Id);
+                        if (entity != null)
+                        {
+                            _btnEdit.Id = entity.Id;
+                            _btnEdit.EditValue = entity.RolAdi;
                         }
                     }
                     break;

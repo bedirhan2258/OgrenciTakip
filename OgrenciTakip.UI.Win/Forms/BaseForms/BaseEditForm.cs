@@ -248,13 +248,12 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected virtual void NesneyiKontrollereBagla() { }
 
         protected virtual void GuncelNesneOlustur() { }
+
         protected virtual void TabloYukle() { }
 
+        protected virtual void SifreSifirla() { }
 
-        protected internal virtual void Yukle()
-        {
-
-        }
+        protected internal virtual void Yukle() { }
 
         protected internal virtual IBaseEntity ReturnEntity() { return null; }
 
@@ -418,10 +417,15 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             {
                 BaskiOnIzleme();
             }
+            else if (e.Item == btnSifreSifirla)
+            {
+                SifreSifirla();
+            }
             else if (e.Item == btnCikis)
             {
                 Close();
             }
+
 
             Cursor.Current = DefaultCursor;
         }

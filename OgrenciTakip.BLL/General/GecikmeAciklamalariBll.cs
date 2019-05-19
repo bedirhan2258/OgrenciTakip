@@ -24,7 +24,7 @@ namespace OgrenciTakip.BLL.General
             {
                 Id = x.Id,
                 Kod = x.Kod,
-                KullaniciAdi = x.Kullanici.KullaniciAdi,
+                KullaniciAdi = x.Kullanici.Adi,
                 TarihSaat = x.TarihSaat,
                 Aciklama = x.Aciklama,
             });
@@ -36,7 +36,7 @@ namespace OgrenciTakip.BLL.General
             {
                 Id = x.Id,
                 Kod = x.Kod,
-                KullaniciAdi = x.Kullanici.KullaniciAdi,
+                KullaniciAdi = x.Kullanici.Adi,
                 TarihSaat = x.TarihSaat,
                 Aciklama = x.Aciklama,
             }).OrderBy(x => x.Kod).ToList();

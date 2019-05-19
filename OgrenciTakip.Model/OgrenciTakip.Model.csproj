@@ -76,6 +76,7 @@
     <Compile Include="DTO\IndiriminUygulanacagiHizmetBilgileriDTO.cs" />
     <Compile Include="DTO\KardesBilgilerDTO.cs" />
     <Compile Include="DTO\KasaDTO.cs" />
+    <Compile Include="DTO\KullaniciDTO.cs" />
     <Compile Include="DTO\KullaniciParametreDTO.cs" />
     <Compile Include="DTO\KurumBilgileriDTO.cs" />
     <Compile Include="DTO\MakbuzDTO.cs" />

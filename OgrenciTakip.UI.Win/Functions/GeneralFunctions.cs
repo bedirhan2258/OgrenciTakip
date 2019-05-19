@@ -7,8 +7,11 @@ using DevExpress.XtraLayout;
 using DevExpress.XtraPrinting.Native;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraVerticalGrid;
+using OgrenciTakip.BLL.Functions;
+using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
@@ -25,8 +28,12 @@ using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Runtime.InteropServices;
 using System.Security;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win.Functions
@@ -364,6 +371,103 @@ namespace OgrenciTakip.UI.Win.Functions
             ConfigurationManager.RefreshSection("appSettings");
         }
 
+        public static SecureString ConvertToSecureString(this string value)
+        {
+            var secureString = new SecureString();
+            if (value.Length > 0)
+            {
+                value.ToCharArray().ForEach(x => secureString.AppendChar(x));
+            }
+            secureString.MakeReadOnly();
+            return secureString;
+        }
+
+        public static string ConvertToUnSecureString(this SecureString value)
+        {
+            var result = Marshal.SecureStringToBSTR(value);
+            return Marshal.PtrToStringAuto(result);
+        }
+
+        private static string Md5Sifrele(this string value)
+        {
+            var md5 = new MD5CryptoServiceProvider();
+            var ba = Encoding.UTF8.GetBytes(value);
+            ba = md5.ComputeHash(ba);
+            var md5Sifre = BitConverter.ToString(ba).Replace("-", "");
+
+            return md5Sifre;
+        }
+
+        public static (SecureString secureSifre, SecureString secureGizliKelime, string sifre, string gizliKelime) SifreUret()
+        {
+            string RandomDegerUret(int minValue, int count)
+            {
+                var random = new Random();
+                const string karakterTablosu = "0123456789ABCDEFGHIJKLMNOPQRSTUVXWYZabcdefghijklmnopqrstuvxwyz";
+                string sonuc = null;
+
+                for (int i = 0; i < count; i++)
+                {
+                    sonuc += karakterTablosu[random.Next(minValue, karakterTablosu.Length - 1)].ToString();
+                }
+
+                return sonuc;
+            }
+
+            var secureSifre = RandomDegerUret(0, 8).ConvertToSecureString();
+            var secureGizliKelime = RandomDegerUret(9, 10).ConvertToSecureString();
+            var sifre = secureSifre.ConvertToUnSecureString().Md5Sifrele();
+            var gizliKelime = secureGizliKelime.ConvertToUnSecureString().Md5Sifrele();
+
+            return (secureSifre, secureGizliKelime, sifre, gizliKelime);
+        }
+
+        public static bool SifreMailiGonder(this string kullaniciAdi, string rol, string email, SecureString secureSifre, SecureString secureGizliKelime)
+        {
+            using (var bll = new MailParametreBll())
+            {
+                var entity = (MailParametre)bll.Single(null);
+                if (entity == null)
+                {
+                    Messages.HataMesaji("Email Gönderilemedi. Kurumun Email Parametreleri Girilmemiş. Lütfen Kontrol Edip Tekrar Deneyiniz.");
+                    return false;
+                }
+                var client = new SmtpClient
+                {
+                    Port = entity.PortNo,
+                    Host = entity.Host,
+                    EnableSsl = entity.SslKullan == EvetHayir.Evet,
+                    UseDefaultCredentials = true,
+                    Credentials = new NetworkCredential(entity.Email, entity.Sifre.Decrypt(entity.Id + entity.Kod).ConvertToSecureString())
+                };
+                var messages = new MailMessage
+                {
+                    From = new MailAddress(entity.Email, "Öğrenci Takip Programı"),
+                    To = { email },
+                    Subject = "Öğrenci Takip Programı Kullanıcı Bilgileri",
+                    IsBodyHtml = true,
+                    Body = "Öğrenci Takip Programına Giriş İçin Gereken Kullanıcı Adı,Şifre ve Gizli Kelime Bilgileri Aşağıdadır.<br/>" +
+                         "Lütfen Programa Giriş Yaptıktan Sonra Bu Bilgileri Değiştiriniz.<br/><br/><br/>" +
+                          $"<b>Kullanıcı Adı : <b/> {kullaniciAdi}<br/>" +
+                          $"<b>Yetki Türü    : <b/> {rol}<br/>" +
+                          $"<b>Şifre         : <b/> {secureSifre.ConvertToUnSecureString()}<br/>" +
+                          $"<b>Gizli Kelime  : <b/> {secureGizliKelime.ConvertToUnSecureString()}<br/>"
+                };
+
+                try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    client.Send(messages);
+                    Cursor.Current = Cursors.Default;
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    Messages.HataMesaji(ex.Message);
+                    return false;
+                }
+            }
+        }
     }
 }
 

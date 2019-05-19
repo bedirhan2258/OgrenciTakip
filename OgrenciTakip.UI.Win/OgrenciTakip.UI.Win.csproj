@@ -395,6 +395,18 @@
     <Compile Include="Forms\KontenjanForms\KontenjanListForm.Designer.cs">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciEditForm.Designer.cs">
+      <DependentUpon>KullaniciEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\KullaniciListForm.Designer.cs">
+      <DependentUpon>KullaniciListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KullaniciForms\RolEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1247,6 +1259,9 @@
     <EmbeddedResource Include="Forms\KontenjanForms\KontenjanListForm.resx">
       <DependentUpon>KontenjanListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\KullaniciEditForm.resx">
+      <DependentUpon>KullaniciEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciForms\RolEditForm.resx">
       <DependentUpon>RolEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1829,6 +1844,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\highlightactiveelements_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assigntome_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

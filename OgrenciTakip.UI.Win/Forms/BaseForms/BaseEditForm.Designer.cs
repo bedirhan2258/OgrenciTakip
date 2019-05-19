@@ -80,6 +80,11 @@
             DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem10 = new DevExpress.Utils.ToolTipSeparatorItem();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem11 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -96,6 +101,7 @@
             this.btnResimEkle = new DevExpress.XtraBars.BarButtonItem();
             this.btnResimSil = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaksitOlustur = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSifreSifirla = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -126,9 +132,11 @@
             this.btnBaskiOnizleme,
             this.btnResimEkle,
             this.btnResimSil,
-            this.btnTaksitOlustur});
+            this.btnTaksitOlustur,
+            this.btnSifreSifirla});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 16;
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.ribbonControl.MaxItemId = 17;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -140,7 +148,7 @@
             this.ribbonControl.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl.ShowQatLocationSelector = false;
             this.ribbonControl.ShowToolbarCustomizeItem = false;
-            this.ribbonControl.Size = new System.Drawing.Size(1042, 102);
+            this.ribbonControl.Size = new System.Drawing.Size(731, 102);
             this.ribbonControl.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -439,6 +447,28 @@
             this.btnTaksitOlustur.SuperTip = superToolTip10;
             this.btnTaksitOlustur.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnSifreSifirla
+            // 
+            this.btnSifreSifirla.Caption = "Şifre Sıfırla";
+            this.btnSifreSifirla.Id = 16;
+            this.btnSifreSifirla.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.assigntome_16x16;
+            this.btnSifreSifirla.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.assigntome_32x32;
+            this.btnSifreSifirla.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L));
+            this.btnSifreSifirla.Name = "btnSifreSifirla";
+            toolTipTitleItem21.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem21.Text = "(Ctrl + L )";
+            toolTipItem11.LeftIndent = 6;
+            toolTipItem11.Text = "Şifre Sıfırla";
+            toolTipTitleItem22.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem22.LeftIndent = 6;
+            toolTipTitleItem22.Text = "Kullanıcı İçin Yeni Bir Şifre Oluşturulup Mail Olarak Gönderilir.";
+            superToolTip11.Items.Add(toolTipTitleItem21);
+            superToolTip11.Items.Add(toolTipItem11);
+            superToolTip11.Items.Add(toolTipSeparatorItem11);
+            superToolTip11.Items.Add(toolTipTitleItem22);
+            this.btnSifreSifirla.SuperTip = superToolTip11;
+            this.btnSifreSifirla.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -457,6 +487,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.btnTaksitOlustur);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYazdir);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnBaskiOnizleme);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSifreSifirla);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCikis);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
@@ -467,9 +498,10 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.statusBarKisayol);
             this.ribbonStatusBar1.ItemLinks.Add(this.statusBarKisayolAciklama);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 565);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1042, 31);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(731, 31);
             // 
             // ribbonPage2
             // 
@@ -487,9 +519,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 596);
+            this.ClientSize = new System.Drawing.Size(731, 596);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl);
+            this.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.MaximizeBox = false;
             this.Name = "BaseEditForm";
             this.Ribbon = this.ribbonControl;
@@ -525,5 +558,6 @@
         protected internal DevExpress.XtraBars.BarStaticItem statusBarKisayolAciklama;
         protected DevExpress.XtraBars.BarButtonItem btnTaksitOlustur;
         protected internal DevExpress.XtraBars.BarButtonItem btnSil;
+        protected DevExpress.XtraBars.BarButtonItem btnSifreSifirla;
     }
 }

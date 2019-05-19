@@ -156,6 +156,8 @@ namespace OgrenciTakip.Common.Enums
         [Description("Rol Kartı")]
         Rol = 74,
         [Description("Yetki Kartı")]
-        Yetki = 75
+        Yetki = 75,
+        [Description("Kullanıcı Kartı")]
+        Kullanici = 76
     }
 }

@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.BLL.General
 {
-    public class MailBilgileriBll : BaseGenelBll<MailParametre>, IBaseGenelBll, IBaseCommonBll
+    public class MailParametreBll : BaseGenelBll<MailParametre>, IBaseGenelBll, IBaseCommonBll
     {
-        public KuurumBilgileriBll() { }
-        public KuurumBilgileriBll(Control ctrl) : base(ctrl) { }
+        public MailParametreBll() { }
+        public MailParametreBll(Control ctrl) : base(ctrl) { }
     }
 }
