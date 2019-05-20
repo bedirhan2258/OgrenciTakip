@@ -8,7 +8,7 @@ using OgrenciTakip.Data.Context;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Yonetim.Forms.BaseForms;
-using OgrenciTakip.UI.Yonetim.Functions;
+//using OgrenciTakip.UI.Yonetim.Functions;
 using System;
 using System.Security;
 
@@ -82,21 +82,21 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         protected override bool EntityInsert()
         {
-            if (!Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
+            if (!Functions.YonetimGeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
 
-            Functions.GeneralFunctions.CreateConnectionString(txtKod.Text, txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+            Functions.YonetimGeneralFunctions.CreateConnectionString(txtKod.Text, txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
 
-            if (!Functions.GeneralFunctions.CreateDatabase<OgrenciTakipContext>("Lütfen Bekleyiniz", "Kurum Veritabanı Oluşturuluyor.", "Kurum Veritabanı Oluşturulacaktır. Onaylıyor Musunuz?", "Kurum Veritabanı Başarılı Bir Şekilde Oluşturuldu.")) return false;
+            if (!Functions.YonetimGeneralFunctions.CreateDatabase<OgrenciTakipContext>("Lütfen Bekleyiniz", "Kurum Veritabanı Oluşturuluyor.", "Kurum Veritabanı Oluşturulacaktır. Onaylıyor Musunuz?", "Kurum Veritabanı Başarılı Bir Şekilde Oluşturuldu.")) return false;
 
-            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+            Functions.YonetimGeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
             return base.EntityInsert();
         }
 
         protected override bool EntityUpdate()
         {
-            if (!Functions.GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
+            if (!Functions.YonetimGeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>())) return false;
 
-            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
+            Functions.YonetimGeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>());
 
             return base.EntityUpdate();
         }

@@ -72,7 +72,7 @@
     <Compile Include="Forms\BaseForms\BaseEditForm.Designer.cs">
       <DependentUpon>BaseEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functions\GeneralFunctions.cs" />
+    <Compile Include="Functions\YonetimGeneralFunctions.cs" />
     <Compile Include="GeneralForms\AnaForm.cs">
       <SubType>Form</SubType>
     </Compile>

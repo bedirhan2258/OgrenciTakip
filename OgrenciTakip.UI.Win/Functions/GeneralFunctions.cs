@@ -448,10 +448,10 @@ namespace OgrenciTakip.UI.Win.Functions
                     IsBodyHtml = true,
                     Body = "Öğrenci Takip Programına Giriş İçin Gereken Kullanıcı Adı,Şifre ve Gizli Kelime Bilgileri Aşağıdadır.<br/>" +
                          "Lütfen Programa Giriş Yaptıktan Sonra Bu Bilgileri Değiştiriniz.<br/><br/><br/>" +
-                          $"<b>Kullanıcı Adı : <b/> {kullaniciAdi}<br/>" +
-                          $"<b>Yetki Türü    : <b/> {rol}<br/>" +
-                          $"<b>Şifre         : <b/> {secureSifre.ConvertToUnSecureString()}<br/>" +
-                          $"<b>Gizli Kelime  : <b/> {secureGizliKelime.ConvertToUnSecureString()}<br/>"
+                          $"<b>Kullanıcı Adı : </b> {kullaniciAdi}<br/>" +
+                          $"<b>Yetki Türü    : </b> {rol}<br/>" +
+                          $"<b>Şifre         : </b> {secureSifre.ConvertToUnSecureString()}<br/>" +
+                          $"<b>Gizli Kelime  : </b> {secureGizliKelime.ConvertToUnSecureString()}<br/>"
                 };
 
                 try

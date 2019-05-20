@@ -4,8 +4,10 @@ using DevExpress.XtraPrinting.Native;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Data.Context;
-using OgrenciTakip.UI.Yonetim.Functions;
+using OgrenciTakip.UI.Win.Functions;
+//using OgrenciTakip.UI.Yonetim.Functions;
 using OgrenciTakip.UI.Win.Show;
+using OgrenciTakip.UI.Yonetim.Functions;
 using OgrenciTakip.UI.Yonetim.UserControls.Controls;
 using System.Collections.Generic;
 using System.Drawing;
@@ -74,11 +76,11 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         private void Giris()
         {
-           if (!GeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>())) return;
+           if (!YonetimGeneralFunctions.BaglantiKontrolu(txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>())) return;
 
-            GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>());
+            YonetimGeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>());
 
-            if (!GeneralFunctions.CreateDatabase<OgrenciTakipYonetimContext>("Lütfen Bekleyiniz", "Program İlk Kurulum İçin Hazırlanıyor...", "Program İlk Kurulum İşlemi Yapılacaktır. Onaylıyor Musunuz?", "İlk Kurulum İşlemi Başarılı Bir Şekilde Tamamlandı.")) return;
+            if (!YonetimGeneralFunctions.CreateDatabase<OgrenciTakipYonetimContext>("Lütfen Bekleyiniz", "Program İlk Kurulum İçin Hazırlanıyor...", "Program İlk Kurulum İşlemi Yapılacaktır. Onaylıyor Musunuz?", "İlk Kurulum İşlemi Başarılı Bir Şekilde Tamamlandı.")) return;
             Hide();
 
             ShowRibbonForms<AnaForm>.ShowForm(false, txtServer.Text, txtKullaniciAdi.Text.ConvertToSecureString(), txtSifre.Text.ConvertToSecureString(), txtYetkilendirme.Text.GetEnum<YetkilendirmeTuru>());

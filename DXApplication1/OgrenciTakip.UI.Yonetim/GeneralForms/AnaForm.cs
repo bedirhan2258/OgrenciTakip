@@ -69,7 +69,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         protected virtual void ShowEditForm(long id)
         {
-            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            Functions.YonetimGeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
             var result = Yonetim.Show.ShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
             if (result <= 0) return;
             Listele();
@@ -88,10 +88,10 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         private void EntityDelete(BaseEntity entity)
         {
-            Functions.GeneralFunctions.CreateConnectionString(entity.Kod, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
-            if (!Functions.GeneralFunctions.DeleteDatabase<OgrenciTakipYonetimContext>()) return;
+            Functions.YonetimGeneralFunctions.CreateConnectionString(entity.Kod, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            if (!Functions.YonetimGeneralFunctions.DeleteDatabase<OgrenciTakipYonetimContext>()) return;
 
-            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            Functions.YonetimGeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
             _bll.Delete(entity);
             tablo.DeleteSelectedRows();
             tablo.RowFocus(tablo.FocusedRowHandle);
@@ -117,7 +117,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             {
                 var entity = tablo.GetRow<Kurum>();
                 if (entity == null) return;
-                Functions.GeneralFunctions.CreateConnectionString(entity.Kod, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+                Functions.YonetimGeneralFunctions.CreateConnectionString(entity.Kod, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
 
                 if (e.Item == btnSil)
                 {
@@ -147,6 +147,11 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 else if (e.Item == btnRolKartlari)
                 {
                     ShowListForms<RolListForm>.ShowDialogListForm();
+                }
+
+                else if (e.Item == btnKullaniciKartlari)
+                {
+                    ShowListForms<KullaniciListForm>.ShowDialogListForm();
                 }
             }
 

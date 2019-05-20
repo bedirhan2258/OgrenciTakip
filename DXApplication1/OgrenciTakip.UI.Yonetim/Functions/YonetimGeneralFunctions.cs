@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Yonetim.Functions
 {
-    public static class GeneralFunctions
+    public static class YonetimGeneralFunctions
     {
         public static string GetConnectionString()
         {

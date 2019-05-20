@@ -1262,6 +1262,9 @@
     <EmbeddedResource Include="Forms\KullaniciForms\KullaniciEditForm.resx">
       <DependentUpon>KullaniciEditForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\KullaniciListForm.resx">
+      <DependentUpon>KullaniciListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciForms\RolEditForm.resx">
       <DependentUpon>RolEditForm.cs</DependentUpon>
     </EmbeddedResource>

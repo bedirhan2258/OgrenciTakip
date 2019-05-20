@@ -49,6 +49,7 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
         protected override void NesneyiKontrollereBagla()
         {
             var entity = (KullaniciS)oldEntity;
+
             txtKullaniciAdi.Text = entity.Kod;
             txtAdi.Text = entity.Adi;
             txtSoyadi.Text = entity.Soyadi;
