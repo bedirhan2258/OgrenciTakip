@@ -94,6 +94,7 @@ namespace OgrenciTakip.Data.Context
         public DbSet<Rol> Rol { get; set; }
         public DbSet<RolYetkileri> RolYetkileri { get; set; }
         public DbSet<Kullanici> Kullanici { get; set; }
+        public DbSet<KullaniciBirimYetkileri> KullaniciBirimYetkileri { get; set; }
     }
 
 }

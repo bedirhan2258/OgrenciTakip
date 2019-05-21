@@ -21,7 +21,7 @@ namespace OgrenciTakip.UI.Yonetim
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
+            UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");
                 Application.Run(new GirisForm());
         }
     }

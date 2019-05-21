@@ -153,6 +153,10 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
                 {
                     ShowListForms<KullaniciListForm>.ShowDialogListForm();
                 }
+                else if (e.Item == btnKullaniciBirimYetkileri)
+                {
+                    Win.Show.ShowEditForms<KullaniciBirimYetkileriEditForm>.ShowDialogEditForms();
+                }
             }
 
             Cursor.Current = DefaultCursor;

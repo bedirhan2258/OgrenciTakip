@@ -319,7 +319,7 @@ namespace OgrenciTakip.UI.Win.UserControls.UserControl.Base
             OpenEntity();
         }
 
-        private void Tablo_FocusedRowObjectChanged(object sender, FocusedRowObjectChangedEventArgs e)
+        protected virtual void Tablo_FocusedRowObjectChanged(object sender, FocusedRowObjectChangedEventArgs e)
         {
             SutunGizleGoster();
             RowCellAllowEdit();

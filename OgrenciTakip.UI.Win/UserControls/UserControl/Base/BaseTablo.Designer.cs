@@ -37,13 +37,13 @@
             this.btnIptalEt = new DevExpress.XtraBars.BarButtonItem();
             this.btnIptalGeriAl = new DevExpress.XtraBars.BarButtonItem();
             this.btnBelgeHareketleri = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTumunuSec = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTumSecimleriKaldir = new DevExpress.XtraBars.BarButtonItem();
             this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.btnTumunuSec = new DevExpress.XtraBars.BarButtonItem();
-            this.btnTumSecimleriKaldir = new DevExpress.XtraBars.BarButtonItem();
             this.bar1 = new DevExpress.XtraBars.Bar();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
@@ -125,6 +125,26 @@
             this.btnBelgeHareketleri.ShortcutKeyDisplayString = "F6";
             this.btnBelgeHareketleri.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnTumunuSec
+            // 
+            this.btnTumunuSec.Caption = "Tümünü Seç";
+            this.btnTumunuSec.Id = 8;
+            this.btnTumunuSec.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.task_16x16;
+            this.btnTumunuSec.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.task_32x32;
+            this.btnTumunuSec.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A));
+            this.btnTumunuSec.Name = "btnTumunuSec";
+            this.btnTumunuSec.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
+            // btnTumSecimleriKaldir
+            // 
+            this.btnTumSecimleriKaldir.Caption = "Tüm Seçimleri Kaldır";
+            this.btnTumSecimleriKaldir.Id = 9;
+            this.btnTumSecimleriKaldir.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.highlightactiveelements_16x16;
+            this.btnTumSecimleriKaldir.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.highlightactiveelements_32x32;
+            this.btnTumSecimleriKaldir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K));
+            this.btnTumSecimleriKaldir.Name = "btnTumSecimleriKaldir";
+            this.btnTumSecimleriKaldir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // barManager
             // 
             this.barManager.DockControls.Add(this.barDockControlTop);
@@ -175,26 +195,6 @@
             this.barDockControlRight.Manager = this.barManager;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 289);
             // 
-            // btnTumunuSec
-            // 
-            this.btnTumunuSec.Caption = "Tümünü Seç";
-            this.btnTumunuSec.Id = 8;
-            this.btnTumunuSec.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.task_16x16;
-            this.btnTumunuSec.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.task_32x32;
-            this.btnTumunuSec.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A));
-            this.btnTumunuSec.Name = "btnTumunuSec";
-            this.btnTumunuSec.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            // 
-            // btnTumSecimleriKaldir
-            // 
-            this.btnTumSecimleriKaldir.Caption = "Tüm Seçimleri Kaldır";
-            this.btnTumSecimleriKaldir.Id = 9;
-            this.btnTumSecimleriKaldir.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.highlightactiveelements_16x16;
-            this.btnTumSecimleriKaldir.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.highlightactiveelements_32x32;
-            this.btnTumSecimleriKaldir.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K));
-            this.btnTumSecimleriKaldir.Name = "btnTumSecimleriKaldir";
-            this.btnTumSecimleriKaldir.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            // 
             // bar1
             // 
             this.bar1.BarName = "Custom 2";
@@ -222,7 +222,6 @@
         }
 
         #endregion
-        private DevExpress.XtraBars.PopupMenu popupMenu;
         private DevExpress.XtraBars.BarManager barManager;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -238,5 +237,6 @@
         protected DevExpress.XtraBars.BarButtonItem btnTumunuSec;
         private DevExpress.XtraBars.Bar bar1;
         protected DevExpress.XtraBars.BarButtonItem btnTumSecimleriKaldir;
+        protected DevExpress.XtraBars.PopupMenu popupMenu;
     }
 }

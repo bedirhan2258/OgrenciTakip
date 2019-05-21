@@ -5,6 +5,7 @@ using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Show;
 using System;
 using System.Linq;
@@ -27,7 +28,11 @@ namespace OgrenciTakip.UI.Win.Forms.SubeForms
 
         public SubeListForm(params object[] prm) : this()
         {
-            _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.Durum == aktifKartlariGoster;
+            if ((bool)prm[0])
+                _filter = x => x.Durum == aktifKartlariGoster && x.Id != AnaForm.SubeId;
+
+            else if (!(bool)prm[0])
+                _filter = x => !ListeDisiTutulacakKayitlar.Contains(x.Id) && x.Durum == aktifKartlariGoster;
         }
 
         protected override void DegiskenleriDoldur()
