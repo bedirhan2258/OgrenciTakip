@@ -468,6 +468,82 @@ namespace OgrenciTakip.UI.Win.Functions
                 }
             }
         }
+
+        public static bool BaglantiKontrolu(string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru, bool genelMesajVer = false)
+        {
+            CreateConnectionString("", server, kullaniciAdi, sifre, yetkilendirmeTuru);
+
+            using (var con = new SqlConnection(GetConnectionString()))
+            {
+                try
+                {
+                    if (con.ConnectionString == "") return false;
+                    con.Open();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    if (genelMesajVer)
+                    {
+                        Messages.HataMesaji("Server Bağlantı Ayarları Hatalıdır. Lütfen Kontrol Ediniz.");
+                        return false;
+                    }
+                    switch (ex.Number)
+                    {
+                        case 18456:
+                            Messages.HataMesaji("Server Kullanıcı Adı veya Şifresi Hatalıdır.");
+                            break;
+                        default:
+                            Messages.HataMesaji(ex.Message);
+                            break;
+                    }
+                }
+                return false;
+
+            }
+
+        }
+
+        public static void CreateConnectionString(string initialCatalog, string server, SecureString kullaniciAdi, SecureString sifre, YetkilendirmeTuru yetkilendirmeTuru)
+        {
+
+            SqlConnectionStringBuilder builder = null;
+            switch (yetkilendirmeTuru)
+            {
+                case YetkilendirmeTuru.SqlServer:
+                    builder = new SqlConnectionStringBuilder
+                    {
+                        DataSource = server,
+                        UserID = kullaniciAdi.ConvertToUnSecureString(),
+                        Password = sifre.ConvertToUnSecureString(),
+                        InitialCatalog = initialCatalog,
+                        MultipleActiveResultSets = true,
+                    };
+                    break;
+                case YetkilendirmeTuru.Windows:
+                    builder = new SqlConnectionStringBuilder
+                    {
+                        DataSource = server,
+                        InitialCatalog = initialCatalog,
+                        MultipleActiveResultSets = true,
+                        IntegratedSecurity = true
+                    };
+                    break;
+            }
+            var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.ConnectionStrings.ConnectionStrings["OgrenciTakipContext"].ConnectionString = builder.ConnectionString;
+            configuration.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.GetSection("connectionStrings");
+            ConfigurationManager.RefreshSection("connectionStrings");
+            Settings.Default.Reset();
+            Settings.Default.Save();
+        }
+
+        public static string GetConnectionString()
+        {
+
+            return ConfigurationManager.ConnectionStrings["OgrenciTakipContext"].ConnectionString;
+        }
     }
 }
 

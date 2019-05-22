@@ -611,6 +611,12 @@
     <Compile Include="GeneralForms\EmailParametreEditForm.Designer.cs">
       <DependentUpon>EmailParametreEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\GirisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\GirisForm.Designer.cs">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\KullaniciParametreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -914,6 +920,9 @@
     <Compile Include="UserControls\Controls\EmailTextEdit.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\Controls\MyHyperLinkLabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Controls\MyButtonEdit.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -948,6 +957,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyKodTextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Controls\MyLookUpEdit.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Controls\MyMemoEdit.cs">
@@ -1390,6 +1402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\EmailParametreEditForm.resx">
       <DependentUpon>EmailParametreEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\GirisForm.resx">
+      <DependentUpon>GirisForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\KullaniciParametreEditForm.resx">
       <DependentUpon>KullaniciParametreEditForm.cs</DependentUpon>
