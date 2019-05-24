@@ -42,6 +42,8 @@
             DevExpress.XtraLayout.RowDefinition rowDefinition9 = new DevExpress.XtraLayout.RowDefinition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisForm));
             this.myDataLayoutControl1 = new OgrenciTakip.UI.Win.UserControls.Controls.MyDataLayoutControl();
+            this.btnBaglantiAyarlari = new OgrenciTakip.UI.Win.UserControls.Controls.MyHyperLinkLabelControl();
+            this.btnSifremiUnuttum = new OgrenciTakip.UI.Win.UserControls.Controls.MyHyperLinkLabelControl();
             this.btnVazgec = new OgrenciTakip.UI.Win.UserControls.Controls.MySimpleButton();
             this.btnGiris = new OgrenciTakip.UI.Win.UserControls.Controls.MySimpleButton();
             this.txtKurum = new OgrenciTakip.UI.Win.UserControls.Controls.MyLookUpEdit();
@@ -56,9 +58,7 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnSifremiUnuttum = new OgrenciTakip.UI.Win.UserControls.Controls.MyHyperLinkLabelControl();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnBaglantiAyarlari = new OgrenciTakip.UI.Win.UserControls.Controls.MyHyperLinkLabelControl();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).BeginInit();
             this.myDataLayoutControl1.SuspendLayout();
@@ -97,6 +97,34 @@
             this.myDataLayoutControl1.TabIndex = 0;
             this.myDataLayoutControl1.Text = "myDataLayoutControl1";
             // 
+            // btnBaglantiAyarlari
+            // 
+            this.btnBaglantiAyarlari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBaglantiAyarlari.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.btnBaglantiAyarlari.Location = new System.Drawing.Point(84, 297);
+            this.btnBaglantiAyarlari.Name = "btnBaglantiAyarlari";
+            this.btnBaglantiAyarlari.Size = new System.Drawing.Size(140, 21);
+            this.btnBaglantiAyarlari.StatusBarAciklama = null;
+            this.btnBaglantiAyarlari.StyleController = this.myDataLayoutControl1;
+            this.btnBaglantiAyarlari.TabIndex = 6;
+            this.btnBaglantiAyarlari.Text = "Bağlantı Ayarları";
+            // 
+            // btnSifremiUnuttum
+            // 
+            this.btnSifremiUnuttum.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSifremiUnuttum.Appearance.Options.UseFont = true;
+            this.btnSifremiUnuttum.Appearance.Options.UseTextOptions = true;
+            this.btnSifremiUnuttum.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.btnSifremiUnuttum.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSifremiUnuttum.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.btnSifremiUnuttum.Location = new System.Drawing.Point(318, 225);
+            this.btnSifremiUnuttum.Name = "btnSifremiUnuttum";
+            this.btnSifremiUnuttum.Size = new System.Drawing.Size(86, 20);
+            this.btnSifremiUnuttum.StatusBarAciklama = null;
+            this.btnSifremiUnuttum.StyleController = this.myDataLayoutControl1;
+            this.btnSifremiUnuttum.TabIndex = 5;
+            this.btnSifremiUnuttum.Text = "Şifremi Unuttum";
+            // 
             // btnVazgec
             // 
             this.btnVazgec.Appearance.ForeColor = System.Drawing.Color.Maroon;
@@ -130,6 +158,9 @@
             this.txtKurum.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtKurum.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKurum.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Kod", "Kod", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("KurumAdi", "Kurum Adı", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.txtKurum.Properties.HeaderClickMode = DevExpress.XtraEditors.Controls.HeaderClickMode.AutoSearch;
             this.txtKurum.Properties.NullText = "Lütfen Bir Kurum Seçiniz.";
             this.txtKurum.Properties.ShowFooter = false;
@@ -148,6 +179,7 @@
             this.txtSifre.Properties.AppearanceFocused.BackColor = System.Drawing.Color.LightCyan;
             this.txtSifre.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.txtSifre.Properties.MaxLength = 50;
+            this.txtSifre.Properties.UseSystemPasswordChar = true;
             this.txtSifre.Size = new System.Drawing.Size(232, 20);
             this.txtSifre.StatusBarAciklama = null;
             this.txtSifre.StyleController = this.myDataLayoutControl1;
@@ -343,22 +375,6 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // btnSifremiUnuttum
-            // 
-            this.btnSifremiUnuttum.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSifremiUnuttum.Appearance.Options.UseFont = true;
-            this.btnSifremiUnuttum.Appearance.Options.UseTextOptions = true;
-            this.btnSifremiUnuttum.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.btnSifremiUnuttum.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSifremiUnuttum.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.btnSifremiUnuttum.Location = new System.Drawing.Point(318, 225);
-            this.btnSifremiUnuttum.Name = "btnSifremiUnuttum";
-            this.btnSifremiUnuttum.Size = new System.Drawing.Size(86, 20);
-            this.btnSifremiUnuttum.StatusBarAciklama = null;
-            this.btnSifremiUnuttum.StyleController = this.myDataLayoutControl1;
-            this.btnSifremiUnuttum.TabIndex = 5;
-            this.btnSifremiUnuttum.Text = "Şifremi Unuttum";
-            // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.AppearanceItemCaption.ForeColor = System.Drawing.Color.Maroon;
@@ -373,18 +389,6 @@
             this.layoutControlItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
-            // 
-            // btnBaglantiAyarlari
-            // 
-            this.btnBaglantiAyarlari.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBaglantiAyarlari.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.btnBaglantiAyarlari.Location = new System.Drawing.Point(84, 297);
-            this.btnBaglantiAyarlari.Name = "btnBaglantiAyarlari";
-            this.btnBaglantiAyarlari.Size = new System.Drawing.Size(140, 21);
-            this.btnBaglantiAyarlari.StatusBarAciklama = null;
-            this.btnBaglantiAyarlari.StyleController = this.myDataLayoutControl1;
-            this.btnBaglantiAyarlari.TabIndex = 6;
-            this.btnBaglantiAyarlari.Text = "Bağlantı Ayarları";
             // 
             // layoutControlItem7
             // 
@@ -415,6 +419,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GirisForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GirisForm";
             ((System.ComponentModel.ISupportInitialize)(this.myDataLayoutControl1)).EndInit();
             this.myDataLayoutControl1.ResumeLayout(false);

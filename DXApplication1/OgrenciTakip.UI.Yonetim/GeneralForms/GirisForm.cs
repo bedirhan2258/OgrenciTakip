@@ -1,6 +1,7 @@
 ﻿
 using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting.Native;
+using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Data.Context;

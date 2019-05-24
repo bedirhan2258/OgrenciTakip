@@ -50,20 +50,16 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 {
     public partial class AnaForm : RibbonForm
     {
+        public static string KurumAdi;
+        public static long KullaniciId;
+        public static string KullaniciAdi;
+        public static long KullaniciRolId;
+        public static string KullaniciRolAdi;
+
         public static long DonemId = 1;
         public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
-
         public static long SubeId = 1;
         public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
-        //public static long? DefaultKasaHesapId;
-        //public static string DefaultKasaHesapAdi;
-        //public static long? DefaultBankaHesapId;
-        //public static string DefaultBankaHesapAdi;
-        //public static long? DefaultAvukatHesapId;
-        //public static string DefaultAvukatHesapAdi;
-        public static long KullaniciId = 1;
-        public static string KullaniciAdi = "Bedo";
-        //public static bool RaporlariOnayAlmadanKapat = false;
         public static List<long> YetkiliOlunanSubeler = new List<long> { 1, 2019031701050868106 };
         public static DonemParametre DonemParametreleri;
         public static KullaniciParametreS KullaniciParametreleri = new KullaniciParametreS();

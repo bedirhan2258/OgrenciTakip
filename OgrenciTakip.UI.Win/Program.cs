@@ -20,7 +20,7 @@ namespace OgrenciTakip.UI.Win
 
             BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle(ConfigurationManager.AppSettings["Skin"], ConfigurationManager.AppSettings["Palette"]);
-            Application.Run(new AnaForm());
+            Application.Run(new GirisForm());
         }
     }
 }

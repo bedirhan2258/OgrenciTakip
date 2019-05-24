@@ -1,11 +1,19 @@
 ﻿
 using DevExpress.XtraEditors;
+using OgrenciTakip.BLL.Functions;
+using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Common.Functions;
+using OgrenciTakip.Common.Message;
+using OgrenciTakip.Model.DTO;
+using OgrenciTakip.Model.Entities;
 using OgrenciTakip.UI.Win.Functions;
+using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -16,6 +24,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         #region Variables
         private Point _mouseLocation;
+        private List<Kurum> _source;
         #endregion
 
         public GirisForm()
@@ -64,9 +73,84 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             var kullaniciAdi = ConfigurationManager.AppSettings["KullaniciAdi"].ConvertToSecureString();
             var sifre = ConfigurationManager.AppSettings["Sifre"].ConvertToSecureString();
 
-            if (!GeneralFunctions.BaglantiKontrolu(server, kullaniciAdi, sifre, yetkilendirmeTuru, true))
+            if (!Functions.GeneralFunctions.BaglantiKontrolu(server, kullaniciAdi, sifre, yetkilendirmeTuru, true))
             {
                 txtKurum.Properties.DataSource = null; //devredışı bırakılarak çalıştırılacak.
+                if (ShowEditForms<BaglantiAyarlariEditForm>.ShowDialogEditForms(IslemTuru.EntityUpdate))
+                    Yukle();
+                return;
+            }
+
+            Functions.GeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", server, kullaniciAdi, sifre, yetkilendirmeTuru);
+
+            using (var bll = new KurumBll())
+            {
+                _source = bll.List(null).Cast<Kurum>().ToList();
+                txtKurum.Properties.DataSource = _source;
+                txtKurum.Properties.ValueMember = "Kod";
+                txtKurum.Properties.DisplayMember = "KurumAdi";
+                txtKurum.ItemIndex = 0;
+            }
+        }
+
+        private void CreateConnection()
+        {
+            if (txtKurum.Text == "")
+            {
+                Messages.HataMesaji("Kurum Seçimi Yapmalısınız.");
+                txtKurum.Focus();
+                return;
+            }
+            var kurum = _source[txtKurum.ItemIndex];
+
+            var kod = kurum.Kod;
+            var server = kurum.Server;
+            var yetkilendirmeTuru = kurum.YetkilendirmeTuru;
+            var kullaniciAdi = kurum.KullaniciAdi.Decrypt(kurum.Id + kurum.Kod).ConvertToSecureString();
+            var sifre = kurum.Sifre.Decrypt(kurum.Id + kurum.Kod).ConvertToSecureString();
+
+            if (!Functions.GeneralFunctions.BaglantiKontrolu(server, kullaniciAdi, sifre, yetkilendirmeTuru)) return;
+
+            Functions.GeneralFunctions.CreateConnectionString(kod, server, kullaniciAdi, sifre, yetkilendirmeTuru);
+        }
+
+        private void Giris()
+        {
+            CreateConnection();
+
+            using (var kullaniciBll = new KullaniciBll())
+            {
+                var kullanici = (KullaniciS)kullaniciBll.SingleDetail(x => x.Kod == txtKullaniciAdi.Text);
+
+                if (kullanici == null || txtSifre.Text.Md5Sifrele() != kullanici.Sifre)
+                {
+                    Messages.HataMesaji("Kullanıcı Adı veya Şifre Hatalıdır Lütfen Kontrol Edip Tekrar Deneyiniz.");
+                    txtKullaniciAdi.Focus();
+                    return;
+                }
+
+                if (!kullanici.Durum)
+
+                {
+                    Messages.HataMesaji("Pasif Durumdaki Kullanıcı İle Giriş Yapamazsınız.");
+                    txtKullaniciAdi.Focus();
+                    return;
+                }
+
+                using (var parametreBll = new KullaniciParametreBll())
+                {
+                    var entity = (KullaniciParametreS)parametreBll.Single(x => x.KullaniciId == kullanici.Id);
+                    AnaForm.KullaniciParametreleri = entity ?? new KullaniciParametreS();
+
+                    AnaForm.KurumAdi = txtKurum.Text;
+                    AnaForm.KullaniciId = kullanici.Id;
+                    AnaForm.KullaniciAdi = kullanici.Adi;
+                    AnaForm.KullaniciRolId = kullanici.RolId;
+                    AnaForm.KullaniciRolAdi = kullanici.RolAdi;
+                    Hide();
+
+                    ShowRibbonForms<AnaForm>.ShowForm(false);
+                }
             }
         }
 

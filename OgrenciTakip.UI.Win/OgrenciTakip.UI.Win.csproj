@@ -599,6 +599,12 @@
     <Compile Include="Forms\SubeForms\SubeListForm.Designer.cs">
       <DependentUpon>SubeListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\BaglantiAyarlariEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\BaglantiAyarlariEditForm.Designer.cs">
+      <DependentUpon>BaglantiAyarlariEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\DonemParametreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1396,6 +1402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SubeForms\SubeListForm.resx">
       <DependentUpon>SubeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\BaglantiAyarlariEditForm.resx">
+      <DependentUpon>BaglantiAyarlariEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\DonemParametreEditForm.resx">
       <DependentUpon>DonemParametreEditForm.cs</DependentUpon>

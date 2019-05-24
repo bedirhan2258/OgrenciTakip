@@ -116,9 +116,5 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
             txtSifre.Text = "";
         }
 
-        private void txtKod_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

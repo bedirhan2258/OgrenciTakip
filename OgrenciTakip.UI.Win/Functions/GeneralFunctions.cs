@@ -100,6 +100,18 @@ namespace OgrenciTakip.UI.Win.Functions
                         return VeriDegisimYeri.Alan;
                     }
                 }
+
+                if (prop.PropertyType == typeof(SecureString))
+                {
+                    var oldStr = ((SecureString)oldValue).ConvertToUnSecureString();
+                    var curStr = ((SecureString)currentvalue).ConvertToUnSecureString();
+
+                    if (!oldStr.Equals(curStr))
+                    {
+                        return VeriDegisimYeri.Alan;
+                    }
+                }
+
                 else if (!currentvalue.Equals(oldValue))
                 {
                     return VeriDegisimYeri.Alan;
@@ -371,24 +383,7 @@ namespace OgrenciTakip.UI.Win.Functions
             ConfigurationManager.RefreshSection("appSettings");
         }
 
-        public static SecureString ConvertToSecureString(this string value)
-        {
-            var secureString = new SecureString();
-            if (value.Length > 0)
-            {
-                value.ToCharArray().ForEach(x => secureString.AppendChar(x));
-            }
-            secureString.MakeReadOnly();
-            return secureString;
-        }
-
-        public static string ConvertToUnSecureString(this SecureString value)
-        {
-            var result = Marshal.SecureStringToBSTR(value);
-            return Marshal.PtrToStringAuto(result);
-        }
-
-        private static string Md5Sifrele(this string value)
+        public static string Md5Sifrele(this string value)
         {
             var md5 = new MD5CryptoServiceProvider();
             var ba = Encoding.UTF8.GetBytes(value);
@@ -531,6 +526,18 @@ namespace OgrenciTakip.UI.Win.Functions
                     break;
             }
             var configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+            if (builder == null)
+            {
+                builder = new SqlConnectionStringBuilder
+                {
+                    DataSource = "",
+                    UserID = "",
+                    Password = "",
+                    InitialCatalog = ""
+                };
+            }
+
             configuration.ConnectionStrings.ConnectionStrings["OgrenciTakipContext"].ConnectionString = builder.ConnectionString;
             configuration.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.GetSection("connectionStrings");

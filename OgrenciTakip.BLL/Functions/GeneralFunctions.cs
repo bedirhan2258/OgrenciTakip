@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Runtime.InteropServices;
+using System.Security;
+using DevExpress.Utils.Extensions;
 
 namespace OgrenciTakip.BLL.Functions
 {
@@ -43,6 +46,18 @@ namespace OgrenciTakip.BLL.Functions
                         alanlar.Add(prop.Name);
                     }
                 }
+
+                if (prop.PropertyType == typeof(SecureString))
+                {
+                    var oldStr = ((SecureString)oldValue).ConvertToUnSecureString();
+                    var curStr = ((SecureString)currentvalue).ConvertToUnSecureString();
+
+                    if (!oldStr.Equals(curStr))
+                    {
+                        alanlar.Add(prop.Name);
+                    }
+                }
+
                 else if (!currentvalue.Equals(oldValue))
                 {
                     alanlar.Add(prop.Name);
@@ -54,11 +69,29 @@ namespace OgrenciTakip.BLL.Functions
         {
             return (TContext)Activator.CreateInstance(typeof(TContext), GetConnectionString());
         }
+
         public static void CreateOfUnitOfWork<T, TContext>(ref IUnitOfWork<T> unitOfWork) where T : class, IBaseEntity where TContext : DbContext
         {
             unitOfWork?.Dispose();
             unitOfWork = new UnitOfWork<T>(CreateContext<TContext>());
         }
-       
+
+        public static SecureString ConvertToSecureString(this string value)
+        {
+            var secureString = new SecureString();
+            if (value.Length > 0)
+            {
+                value.ToCharArray().ForEach(x => secureString.AppendChar(x));
+            }
+            secureString.MakeReadOnly();
+            return secureString;
+        }
+
+        public static string ConvertToUnSecureString(this SecureString value)
+        {
+            var result = Marshal.SecureStringToBSTR(value);
+            return Marshal.PtrToStringAuto(result);
+        }
+
     }
 }
