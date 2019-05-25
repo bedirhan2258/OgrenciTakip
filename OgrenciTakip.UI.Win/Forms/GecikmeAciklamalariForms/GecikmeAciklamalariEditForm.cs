@@ -49,7 +49,7 @@ namespace OgrenciTakip.UI.Win.Forms.GecikmeAciklamalariForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new GecikmeAciklamalari
+            currentEntity = new GecikmeAciklamalari
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -63,11 +63,11 @@ namespace OgrenciTakip.UI.Win.Forms.GecikmeAciklamalariForms
         }
         protected override bool EntityInsert()
         {
-            return ((GecikmeAciklamalariBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.OdemeBilgileriId == _portfoyNo);
+            return ((GecikmeAciklamalariBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod && x.OdemeBilgileriId == _portfoyNo);
         }
         protected override bool EntityUpdate()
         {
-            return ((GecikmeAciklamalariBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.OdemeBilgileriId == _portfoyNo);
+            return ((GecikmeAciklamalariBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod && x.OdemeBilgileriId == _portfoyNo);
         }
     }
 }

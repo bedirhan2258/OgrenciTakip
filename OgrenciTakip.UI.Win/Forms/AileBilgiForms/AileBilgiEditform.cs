@@ -38,7 +38,7 @@ namespace OgrenciTakip.UI.Win.Forms.AileBilgiForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new AileBilgi
+            currentEntity = new AileBilgi
             {
                 Id = id,
                 Kod = txtKod.Text,

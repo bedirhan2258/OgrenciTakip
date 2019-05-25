@@ -47,7 +47,7 @@ namespace OgrenciTakip.UI.Win.Forms.OzelKodForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new OzelKod
+            currentEntity = new OzelKod
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -61,11 +61,11 @@ namespace OgrenciTakip.UI.Win.Forms.OzelKodForms
         }
         protected override bool EntityInsert()
         {
-            return ((OzelKodBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.KodTuru == _ozelKodTuru && x.KartTuru == _ozelKodKartTuru);
+            return ((OzelKodBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod && x.KodTuru == _ozelKodTuru && x.KartTuru == _ozelKodKartTuru);
         }
         protected override bool EntityUpdate()
         {
-            return ((OzelKodBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.KodTuru == _ozelKodTuru && x.KartTuru == _ozelKodKartTuru);
+            return ((OzelKodBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod && x.KodTuru == _ozelKodTuru && x.KartTuru == _ozelKodKartTuru);
         }
     }
 }

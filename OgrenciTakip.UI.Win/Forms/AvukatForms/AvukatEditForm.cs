@@ -51,7 +51,7 @@ namespace OgrenciTakip.UI.Win.Forms.AvukatForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Avukat
+            currentEntity = new Avukat
             {
                 Id = id,
                 Kod = txtKod.Text,

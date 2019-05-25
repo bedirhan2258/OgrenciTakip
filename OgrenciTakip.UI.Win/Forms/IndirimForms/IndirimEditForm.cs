@@ -45,7 +45,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Indirim
+            currentEntity = new Indirim
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -63,20 +63,20 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimForms
         protected internal override void ButonEnabledDurumu()
         {
             if (!isLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, hizmetTablo.TableValueChanged);
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEntity, hizmetTablo.TableValueChanged);
         }
 
         protected override bool EntityInsert()
         {
             if (hizmetTablo.HataliGiris()) return false;
 
-            return ((IndirimBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((IndirimBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && hizmetTablo.Kaydet();
         }
         protected override bool EntityUpdate()
         {
             if (hizmetTablo.HataliGiris()) return false;
-            return ((IndirimBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((IndirimBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && hizmetTablo.Kaydet();
         }
         protected override void SecimYap(object sender)

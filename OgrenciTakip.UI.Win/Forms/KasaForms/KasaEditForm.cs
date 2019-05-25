@@ -47,7 +47,7 @@ namespace OgrenciTakip.UI.Win.Forms.KasaForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Kasa
+            currentEntity = new Kasa
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -63,12 +63,12 @@ namespace OgrenciTakip.UI.Win.Forms.KasaForms
         }
         protected override bool EntityInsert()
         {
-            return ((KasaBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((KasaBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
         protected override bool EntityUpdate()
         {
-            return ((KasaBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((KasaBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
         protected override void SecimYap(object sender)

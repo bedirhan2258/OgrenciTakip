@@ -100,7 +100,7 @@ namespace OgrenciTakip.UI.Win.Forms.IletisimForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Iletisim
+            currentEntity = new Iletisim
             {
                 Id = id,
                 Kod = txtKod.Text,

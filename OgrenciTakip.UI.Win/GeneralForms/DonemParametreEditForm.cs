@@ -69,12 +69,12 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             if (txtSube.Id == null)
             {
                 oldEntity = new DonemParametre();
-                currentEnttiy = new DonemParametre();
+                currentEntity = new DonemParametre();
                 ButonEnabledDurumu();
                 return;
             }
 
-            currentEnttiy = new DonemParametre
+            currentEntity = new DonemParametre
             {
                 Id = id,
                 Kod = id.ToString(),

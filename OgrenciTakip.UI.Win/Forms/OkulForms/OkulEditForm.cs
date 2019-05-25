@@ -48,7 +48,7 @@ namespace OgrenciTakip.UI.Win.Forms.SchoolForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Okul
+            currentEntity = new Okul
             {
                 Id = id,
                 Kod = txtKod.Text,

@@ -7,6 +7,7 @@ using OgrenciTakip.Common.Functions;
 using OgrenciTakip.Common.Message;
 using OgrenciTakip.Model.DTO;
 using OgrenciTakip.Model.Entities;
+using OgrenciTakip.UI.Win.Forms.KullaniciForms;
 using OgrenciTakip.UI.Win.Functions;
 using OgrenciTakip.UI.Win.Show;
 using OgrenciTakip.UI.Win.UserControls.Controls;
@@ -110,7 +111,6 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             var sifre = kurum.Sifre.Decrypt(kurum.Id + kurum.Kod).ConvertToSecureString();
 
             if (!Functions.GeneralFunctions.BaglantiKontrolu(server, kullaniciAdi, sifre, yetkilendirmeTuru)) return;
-
             Functions.GeneralFunctions.CreateConnectionString(kod, server, kullaniciAdi, sifre, yetkilendirmeTuru);
         }
 
@@ -190,6 +190,16 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                     break;
 
                 case MyHyperLinkLabelControl hyp:
+                    if (hyp == btnBaglantiAyarlari)
+                    {
+                        if (ShowEditForms<BaglantiAyarlariEditForm>.ShowDialogEditForms(IslemTuru.EntityUpdate))
+                            Yukle();
+                    }
+                    else if (hyp == btnSifremiUnuttum)
+                    {
+                        CreateConnection();
+                        ShowEditForms<SifremiUnuttumEditForm>.ShowDialogEditForms(IslemTuru.EntityUpdate, txtKullaniciAdi.Text);
+                    }
                     break;
             }
 

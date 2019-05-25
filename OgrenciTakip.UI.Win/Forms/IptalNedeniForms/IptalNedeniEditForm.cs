@@ -38,7 +38,7 @@ namespace OgrenciTakip.UI.Win.IptalNedeniForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new IptalNedeni
+            currentEntity = new IptalNedeni
             {
                 Id = id,
                 Kod = txtKod.Text,

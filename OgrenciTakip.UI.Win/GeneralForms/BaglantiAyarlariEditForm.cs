@@ -48,7 +48,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new BaglantiAyarlari
+            currentEntity = new BaglantiAyarlari
             {
                 Server = txtServer.Text,
                 YetkilendirmeTuru = txtYetkilendirmeTuru.Text.GetEnum<YetkilendirmeTuru>(),
@@ -60,7 +60,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         protected override bool EntityUpdate()
         {
-            var list = BLL.Functions.GeneralFunctions.DegisenAlanlariGetir(oldEntity, currentEnttiy).ToList();
+            var list = BLL.Functions.GeneralFunctions.DegisenAlanlariGetir(oldEntity, currentEntity).ToList();
             list.ForEach(x =>
             {
                 switch (x)

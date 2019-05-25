@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.YabanciDilForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new YabanciDil
+            currentEntity = new YabanciDil
             {
                 Id = id,
                 Kod = txtKod.Text,

@@ -62,7 +62,7 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
 
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Kullanici
+            currentEntity = new Kullanici
             {
                 Id = id,
                 Kod = txtKullaniciAdi.Text,

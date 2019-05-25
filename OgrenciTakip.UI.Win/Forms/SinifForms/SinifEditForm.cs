@@ -47,7 +47,7 @@ namespace OgrenciTakip.UI.Win.Forms.SinifForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Sinif
+            currentEntity = new Sinif
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -72,12 +72,12 @@ namespace OgrenciTakip.UI.Win.Forms.SinifForms
         }
         protected override bool EntityInsert()
         {
-            return ((SinifBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((SinifBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId);
         }
         protected override bool EntityUpdate()
         {
-            return ((SinifBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((SinifBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId);
         }
     }

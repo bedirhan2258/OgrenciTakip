@@ -54,7 +54,7 @@ namespace OgrenciTakip.UI.Win.Forms.SubeForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Sube
+            currentEntity = new Sube
             {
                 Id = id,
                 Kod = txtKod.Text,

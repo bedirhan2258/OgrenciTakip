@@ -40,7 +40,7 @@ namespace OgrenciTakip.UI.Win.Forms.RehberForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Rehber
+            currentEntity = new Rehber
             {
                 Id = id,
                 Kod = txtKod.Text,

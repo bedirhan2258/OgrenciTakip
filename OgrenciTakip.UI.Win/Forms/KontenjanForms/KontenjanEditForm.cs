@@ -38,7 +38,7 @@ namespace OgrenciTakip.UI.Win.Forms.KontenjanForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Kontenjan
+            currentEntity = new Kontenjan
             {
                 Id = id,
                 Kod = txtKod.Text,

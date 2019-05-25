@@ -47,7 +47,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaSubeForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new BankaSube
+            currentEntity = new BankaSube
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -60,11 +60,11 @@ namespace OgrenciTakip.UI.Win.Forms.BankaSubeForms
         }
         protected override bool EntityInsert()
         {
-            return ((BankaSubeBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.BankaId == _bankaId);
+            return ((BankaSubeBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod && x.BankaId == _bankaId);
         }
         protected override bool EntityUpdate()
         {
-            return ((BankaSubeBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.BankaId == _bankaId);
+            return ((BankaSubeBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod && x.BankaId == _bankaId);
         }
     }
 }

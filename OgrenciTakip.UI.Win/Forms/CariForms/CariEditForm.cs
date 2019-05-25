@@ -56,7 +56,7 @@ namespace OgrenciTakip.UI.Win.Forms.CariForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Cari
+            currentEntity = new Cari
             {
                 Id = id,
                 Kod = txtKod.Text,

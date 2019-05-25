@@ -37,7 +37,7 @@ namespace OgrenciTakip.UI.Win.Forms.TesvikForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Tesvik
+            currentEntity = new Tesvik
             {
                 Id = id,
                 Kod = txtKod.Text,

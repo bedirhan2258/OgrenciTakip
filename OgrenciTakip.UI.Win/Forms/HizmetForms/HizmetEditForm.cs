@@ -51,7 +51,7 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Hizmet
+            currentEntity = new Hizmet
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -71,12 +71,12 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetForms
 
         protected override bool EntityInsert()
         {
-            return ((HizmetBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((HizmetBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
         protected override bool EntityUpdate()
         {
-            return ((HizmetBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((HizmetBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
         protected override void SecimYap(object sender)

@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.SinifGrupForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new SinifGrup
+            currentEntity = new SinifGrup
             {
                 Id = id,
                 Kod = txtKod.Text,

@@ -43,7 +43,7 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Rol
+            currentEntity = new Rol
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -58,17 +58,17 @@ namespace OgrenciTakip.UI.Win.Forms.KullaniciForms
         protected internal override void ButonEnabledDurumu()
         {
             if (!isLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, rolYetkileriTable.TableValueChanged);
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEntity, rolYetkileriTable.TableValueChanged);
         }
 
         protected override bool EntityInsert()
         {
-            return ((RolBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod) && rolYetkileriTable.Kaydet();
+            return ((RolBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod) && rolYetkileriTable.Kaydet();
         }
         protected override bool EntityUpdate()
         {
 
-            return ((RolBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod) && rolYetkileriTable.Kaydet();
+            return ((RolBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod) && rolYetkileriTable.Kaydet();
         }
 
         protected override void BaseEditForm_Shown(object sender, EventArgs e)

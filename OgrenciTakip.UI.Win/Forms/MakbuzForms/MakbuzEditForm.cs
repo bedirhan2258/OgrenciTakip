@@ -99,7 +99,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
         protected override void GuncelNesneOlustur()
         {
             var hesapTuru = txtHesapTuru.Text.GetEnum<MakbuzHesapTuru>();
-            currentEnttiy = new Makbuz
+            currentEntity = new Makbuz
             {
                 Id = id,
                 Kod = txtMakbuzNo.Text,
@@ -126,7 +126,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             if (FarkliSubeIslemi)
                 GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil);
             else
-                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, makbuzHareketleriTable.TableValueChanged);
+                GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEntity, makbuzHareketleriTable.TableValueChanged);
         }
 
         protected override bool EntityInsert()
@@ -135,7 +135,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             if (HataliGiris()) return false;
             if (makbuzHareketleriTable.HataliGiris()) return false;
 
-            var result = ((MakbuzBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            var result = ((MakbuzBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
                x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && makbuzHareketleriTable.Kaydet();
 
             if (result && !kayitSonrasiFormuKapat)
@@ -150,7 +150,7 @@ namespace OgrenciTakip.UI.Win.Forms.MakbuzForms
             if (HataliGiris()) return false;
             if (makbuzHareketleriTable.HataliGiris()) return false;
 
-            var result = ((MakbuzBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            var result = ((MakbuzBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && makbuzHareketleriTable.Kaydet();
 
             if (result && !kayitSonrasiFormuKapat)

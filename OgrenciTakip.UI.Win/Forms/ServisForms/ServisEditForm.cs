@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.ServisForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Servis
+            currentEntity = new Servis
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -55,12 +55,12 @@ namespace OgrenciTakip.UI.Win.Forms.ServisForms
         }
         protected override bool EntityInsert()
         {
-            return ((ServisBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((ServisBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
         protected override bool EntityUpdate()
         {
-            return ((ServisBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((ServisBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
     }

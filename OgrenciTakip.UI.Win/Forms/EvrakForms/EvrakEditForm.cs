@@ -40,7 +40,7 @@ namespace OgrenciTakip.UI.Win.Forms.EvrakForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Evrak
+            currentEntity = new Evrak
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -55,12 +55,12 @@ namespace OgrenciTakip.UI.Win.Forms.EvrakForms
         }
         protected override bool EntityInsert()
         {
-            return ((EvrakBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((EvrakBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
         protected override bool EntityUpdate()
         {
-            return ((EvrakBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((EvrakBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
     }

@@ -101,9 +101,9 @@ namespace OgrenciTakip.UI.Win.Show
             }
         }
 
-        public static bool ShowDialogEditForms(IslemTuru islemTuru)
+        public static bool ShowDialogEditForms(IslemTuru islemTuru, params object[] prm)
         {
-            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm)))
+            using (var frm = (TForm)Activator.CreateInstance(typeof(TForm), prm))
             {
                 frm.BaseIslemTuru = IslemTuru.EntityUpdate;
                 frm.Yukle();

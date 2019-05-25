@@ -505,7 +505,7 @@ namespace OgrenciTakip.UI.Win.Functions
             SqlConnectionStringBuilder builder = null;
             switch (yetkilendirmeTuru)
             {
-                case YetkilendirmeTuru.SqlServer:
+                case YetkilendirmeTuru.SqlServer: 
                     builder = new SqlConnectionStringBuilder
                     {
                         DataSource = server,

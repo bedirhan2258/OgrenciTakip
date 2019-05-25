@@ -45,7 +45,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Banka
+            currentEntity = new Banka
             {
                 Id = id,
                 Kod = txtKod.Text,

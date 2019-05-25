@@ -81,7 +81,7 @@ namespace OgrenciTakip.UI.Win.Forms.OgrenciForms
 
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Ogrenci
+            currentEntity = new Ogrenci
             {
                 Id = id,
                 Kod = txtKod.Text,

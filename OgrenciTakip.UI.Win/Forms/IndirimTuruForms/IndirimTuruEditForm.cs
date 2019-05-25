@@ -38,7 +38,7 @@ namespace OgrenciTakip.UI.Win.Forms.IndirimTuruForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new IndirimTuru
+            currentEntity = new IndirimTuru
             {
                 Id = id,
                 Kod = txtKod.Text,

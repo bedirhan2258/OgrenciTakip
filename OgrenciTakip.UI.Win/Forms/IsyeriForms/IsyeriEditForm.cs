@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.IsyeriForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Isyeri
+            currentEntity = new Isyeri
             {
                 Id = id,
                 Kod = txtKod.Text,

@@ -46,7 +46,7 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Ilce
+            currentEntity = new Ilce
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -59,11 +59,11 @@ namespace OgrenciTakip.UI.Win.Forms.IlceForms
         }
         protected override bool EntityInsert()
         {
-            return ((IlceBLL)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.IlId == _ilId);
+            return ((IlceBLL)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod && x.IlId == _ilId);
         }
         protected override bool EntityUpdate()
         {
-            return ((IlceBLL)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.IlId == _ilId);
+            return ((IlceBLL)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod && x.IlId == _ilId);
         }
     }
 }

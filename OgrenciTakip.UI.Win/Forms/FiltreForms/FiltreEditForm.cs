@@ -69,7 +69,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Filtre
+            currentEntity = new Filtre
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -81,11 +81,11 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         }
         protected override bool EntityInsert()
         {
-            return ((FiltreBLL)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.KartTuru == _filtreKartTuru);
+            return ((FiltreBLL)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod && x.KartTuru == _filtreKartTuru);
         }
         protected override bool EntityUpdate()
         {
-            return ((FiltreBLL)bll).Update(oldEntity, currentEnttiy, X => X.Kod == currentEnttiy.Kod && X.KartTuru == _filtreKartTuru);
+            return ((FiltreBLL)bll).Update(oldEntity, currentEntity, X => X.Kod == currentEntity.Kod && X.KartTuru == _filtreKartTuru);
 
         }
         protected override void FiltreUygula()
@@ -96,7 +96,7 @@ namespace OgrenciTakip.UI.Win.Forms.FiltreForms
         protected internal override void ButonEnabledDurumu()
         {
             if (!isLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnFarkliKaydet, btnSil, BaseIslemTuru, oldEntity, currentEnttiy);
+            GeneralFunctions.ButtonEnabledDurumu(btnKaydet, btnFarkliKaydet, btnSil, BaseIslemTuru, oldEntity, currentEntity);
 
         }
     }

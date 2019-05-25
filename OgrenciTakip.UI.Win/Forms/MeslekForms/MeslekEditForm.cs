@@ -38,7 +38,7 @@ namespace OgrenciTakip.UI.Win.Forms.MeslekForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Meslek
+            currentEntity = new Meslek
             {
                 Id = id,
                 Kod = txtKod.Text,

@@ -44,7 +44,7 @@ namespace OgrenciTakip.UI.Win.Forms.HizmetTuruForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new HizmetTuru
+            currentEntity = new HizmetTuru
             {
                 Id = id,
                 Kod = txtKod.Text,

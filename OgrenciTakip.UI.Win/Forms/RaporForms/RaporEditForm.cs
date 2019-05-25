@@ -49,7 +49,7 @@ namespace OgrenciTakip.UI.Win.Forms.RaporForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Rapor
+            currentEntity = new Rapor
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -67,12 +67,12 @@ namespace OgrenciTakip.UI.Win.Forms.RaporForms
 
         protected override bool EntityInsert()
         {
-            return ((RaporBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.RaporBolumTuru == _raporBolumTuru && x.RaporTuru == _raporTuru);
+            return ((RaporBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod && x.RaporBolumTuru == _raporBolumTuru && x.RaporTuru == _raporTuru);
         }
 
         protected override bool EntityUpdate()
         {
-            return ((RaporBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod && x.RaporBolumTuru == _raporBolumTuru && x.RaporTuru == _raporTuru);
+            return ((RaporBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod && x.RaporBolumTuru == _raporBolumTuru && x.RaporTuru == _raporTuru);
         }
     }
 }

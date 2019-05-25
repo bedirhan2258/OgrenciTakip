@@ -58,7 +58,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new KullaniciParametre
+            currentEntity = new KullaniciParametre
             {
                 Id = id,
                 Kod = "Param-001",

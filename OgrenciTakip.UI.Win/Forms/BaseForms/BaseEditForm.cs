@@ -27,7 +27,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected IBaseBll bll;
         protected KartTuru kartTuru;
         protected BaseEntity oldEntity;
-        protected BaseEntity currentEnttiy;
+        protected BaseEntity currentEntity;
         protected MyDataLayoutControl dataLayoutControl;
         protected MyDataLayoutControl[] dataLayoutControls;
         protected bool isLoaded;
@@ -146,7 +146,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 }
                 bool KayitSonrasiIslemler()
                 {
-                    oldEntity = currentEnttiy;
+                    oldEntity = currentEntity;
                     refreshYapilacak = true;
                     ButonEnabledDurumu();
                     if (kayitSonrasiFormuKapat)
@@ -225,12 +225,12 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         protected virtual bool EntityUpdate()
         {
-            return ((IBaseGenelBll)bll).Update(oldEntity, currentEnttiy);
+            return ((IBaseGenelBll)bll).Update(oldEntity, currentEntity);
         }
 
         protected virtual bool EntityInsert()
         {
-            return ((IBaseGenelBll)bll).Insert(currentEnttiy);
+            return ((IBaseGenelBll)bll).Insert(currentEntity);
         }
 
         protected virtual void EntityDelete()
@@ -260,7 +260,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         protected internal virtual void ButonEnabledDurumu()
         {
             if (!isLoaded) return;
-            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy);
+            GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEntity);
         }
 
         protected virtual void BagliTabloYukle() { }

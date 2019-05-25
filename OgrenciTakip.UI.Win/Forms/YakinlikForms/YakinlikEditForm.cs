@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.YakinlikForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Yakinlik
+            currentEntity = new Yakinlik
             {
                 Id = id,
                 Kod = txtKod.Text,

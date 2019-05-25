@@ -212,7 +212,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Tahakkuk
+            currentEntity = new Tahakkuk
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -250,7 +250,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (BagliTabloHataliGirisKontrol())
                 return false;
 
-            var result = ((TahakkukBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            var result = ((TahakkukBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
                x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && BagliTabloKaydet();
 
             if (result && !kayitSonrasiFormuKapat)
@@ -266,7 +266,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (BagliTabloHataliGirisKontrol())
                 return false;
 
-            var result = ((TahakkukBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            var result = ((TahakkukBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId) && BagliTabloKaydet();
 
             if (result && !kayitSonrasiFormuKapat)
@@ -383,7 +383,7 @@ namespace OgrenciTakip.UI.Win.Forms.TahakkukForms
             if (FarkliSubeIslemi)
                 Functions.GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil);
             else
-                Functions.GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEnttiy, TableValueChanged());
+                Functions.GeneralFunctions.ButtonEnabledDurumu(btnYeni, btnKaydet, btnGeriAl, btnSil, oldEntity, currentEntity, TableValueChanged());
         }
 
         protected override bool BagliTabloKaydet()

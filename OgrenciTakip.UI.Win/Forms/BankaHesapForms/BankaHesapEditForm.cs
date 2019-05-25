@@ -63,7 +63,7 @@ namespace OgrenciTakip.UI.Win.Forms.BankaHesapForms
         {
             BankaHesapTuru hesap= txtHesapTuru.Text.GetEnum<BankaHesapTuru>();
 
-            currentEnttiy = new BankaHesap
+            currentEntity = new BankaHesap
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -87,12 +87,12 @@ namespace OgrenciTakip.UI.Win.Forms.BankaHesapForms
         }
         protected override bool EntityInsert()
         {
-            return ((BankaHesapBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((BankaHesapBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId);
         }
         protected override bool EntityUpdate()
         {
-            return ((BankaHesapBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((BankaHesapBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId);
         }
 

@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.DonemForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Donem
+            currentEntity = new Donem
             {
                 Id = id,
                 Kod = txtKod.Text,

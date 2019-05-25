@@ -39,7 +39,7 @@ namespace OgrenciTakip.UI.Win.Forms.PromosyonForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Promosyon
+            currentEntity = new Promosyon
             {
                 Id = id,
                 Kod = txtKod.Text,
@@ -54,12 +54,12 @@ namespace OgrenciTakip.UI.Win.Forms.PromosyonForms
         }
         protected override bool EntityInsert()
         {
-            return ((PromosyonBll)bll).Insert(currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((PromosyonBll)bll).Insert(currentEntity, x => x.Kod == currentEntity.Kod &&
              x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
         protected override bool EntityUpdate()
         {
-            return ((PromosyonBll)bll).Update(oldEntity, currentEnttiy, x => x.Kod == currentEnttiy.Kod &&
+            return ((PromosyonBll)bll).Update(oldEntity, currentEntity, x => x.Kod == currentEntity.Kod &&
             x.SubeId == AnaForm.SubeId && x.DonemId == AnaForm.DonemId);
         }
     }

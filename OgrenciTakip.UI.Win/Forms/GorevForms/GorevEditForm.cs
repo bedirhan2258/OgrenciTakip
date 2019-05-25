@@ -38,7 +38,7 @@ namespace OgrenciTakip.UI.Win.Forms.GorevForms
         }
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new Gorev
+            currentEntity = new Gorev
             {
                 Id = id,
                 Kod = txtKod.Text,

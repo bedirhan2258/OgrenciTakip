@@ -51,7 +51,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         protected override void GuncelNesneOlustur()
         {
-            currentEnttiy = new MailParametre
+            currentEntity = new MailParametre
             {
                 Id = id,
                 Kod = txtKod.Text,
