@@ -101,7 +101,7 @@ namespace OgrenciTakip.UI.Win.Functions
                     }
                 }
 
-                if (prop.PropertyType == typeof(SecureString))
+                else if (prop.PropertyType == typeof(SecureString))
                 {
                     var oldStr = ((SecureString)oldValue).ConvertToUnSecureString();
                     var curStr = ((SecureString)currentvalue).ConvertToUnSecureString();
@@ -505,7 +505,7 @@ namespace OgrenciTakip.UI.Win.Functions
             SqlConnectionStringBuilder builder = null;
             switch (yetkilendirmeTuru)
             {
-                case YetkilendirmeTuru.SqlServer: 
+                case YetkilendirmeTuru.SqlServer:
                     builder = new SqlConnectionStringBuilder
                     {
                         DataSource = server,

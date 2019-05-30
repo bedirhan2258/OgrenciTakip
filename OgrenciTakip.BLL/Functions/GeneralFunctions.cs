@@ -47,7 +47,7 @@ namespace OgrenciTakip.BLL.Functions
                     }
                 }
 
-                if (prop.PropertyType == typeof(SecureString))
+                else if (prop.PropertyType == typeof(SecureString))
                 {
                     var oldStr = ((SecureString)oldValue).ConvertToUnSecureString();
                     var curStr = ((SecureString)currentvalue).ConvertToUnSecureString();
