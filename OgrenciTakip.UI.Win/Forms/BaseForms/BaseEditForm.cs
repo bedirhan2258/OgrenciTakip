@@ -92,6 +92,9 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                         pGrd.CellValueChanged += Control_CellValueChanged;
                         pGrd.FocusedRowChanged += Control_FocusedRowChanged;
                         break;
+                    case MyGridControl grd:
+                        grd.MainView.GotFocus += Control_GotFocus;
+                        break;
                 }
             }
             if (dataLayoutControls == null)
@@ -255,6 +258,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         protected internal virtual void Yukle() { }
 
+        protected internal virtual void Giris() { }
+
         protected internal virtual IBaseEntity ReturnEntity() { return null; }
 
         protected internal virtual void ButonEnabledDurumu()
@@ -342,7 +347,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             GuncelNesneOlustur();
         }
 
-        private void Control_KeyDown(object sender, KeyEventArgs e)
+        protected virtual void Control_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
                 Close();
@@ -374,7 +379,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
                 Messages.UyariMesaji("İşlem Yapılan Kart Çalışılan Şube Veya Dönemde Olmadığı İçin Yapılan Değişiklikler Kayıt Edilemez.");
         }
 
-        private void Button_ItemClick(object sender, ItemClickEventArgs e)
+        protected virtual void Button_ItemClick(object sender, ItemClickEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             if (e.Item == btnYeni)
@@ -424,6 +429,10 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             else if (e.Item == btnCikis)
             {
                 Close();
+            }
+            else if (e.Item == btnGiris)
+            {
+                Giris();
             }
 
 

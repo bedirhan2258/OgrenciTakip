@@ -431,6 +431,12 @@
     <Compile Include="Forms\KullaniciForms\RolYetkiKartlariListForm.Designer.cs">
       <DependentUpon>RolYetkiKartlariListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KullaniciForms\SifreDegistirEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullaniciForms\SifreDegistirEditForm.Designer.cs">
+      <DependentUpon>SifreDegistirEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\KullaniciForms\SifremiUnuttumEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -640,6 +646,12 @@
     </Compile>
     <Compile Include="GeneralForms\KurumBilgileriEditForm.Designer.cs">
       <DependentUpon>KurumBilgileriEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralForms\SubeDonemSecimiEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\SubeDonemSecimiEditForm.Designer.cs">
+      <DependentUpon>SubeDonemSecimiEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FormReports\AylikKayitRaporu.cs">
       <SubType>Form</SubType>
@@ -1325,6 +1337,9 @@
     <EmbeddedResource Include="Forms\KullaniciForms\RolYetkiKartlariListForm.resx">
       <DependentUpon>RolYetkiKartlariListForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullaniciForms\SifreDegistirEditForm.resx">
+      <DependentUpon>SifreDegistirEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\KullaniciForms\SifremiUnuttumEditForm.resx">
       <DependentUpon>SifremiUnuttumEditForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1429,6 +1444,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\KurumBilgileriEditForm.resx">
       <DependentUpon>KurumBilgileriEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\SubeDonemSecimiEditForm.resx">
+      <DependentUpon>SubeDonemSecimiEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FormReports\AylikKayitRaporu.resx">
       <DependentUpon>AylikKayitRaporu.cs</DependentUpon>

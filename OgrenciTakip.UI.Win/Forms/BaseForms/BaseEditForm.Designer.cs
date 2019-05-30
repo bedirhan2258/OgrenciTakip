@@ -85,6 +85,11 @@
             DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem11 = new DevExpress.Utils.ToolTipSeparatorItem();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem12 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnYeni = new DevExpress.XtraBars.BarButtonItem();
             this.btnKaydet = new DevExpress.XtraBars.BarButtonItem();
@@ -102,6 +107,7 @@
             this.btnResimSil = new DevExpress.XtraBars.BarButtonItem();
             this.btnTaksitOlustur = new DevExpress.XtraBars.BarButtonItem();
             this.btnSifreSifirla = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGiris = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -133,10 +139,11 @@
             this.btnResimEkle,
             this.btnResimSil,
             this.btnTaksitOlustur,
-            this.btnSifreSifirla});
+            this.btnSifreSifirla,
+            this.btnGiris});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.ribbonControl.MaxItemId = 17;
+            this.ribbonControl.MaxItemId = 18;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -469,6 +476,28 @@
             this.btnSifreSifirla.SuperTip = superToolTip11;
             this.btnSifreSifirla.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btnGiris
+            // 
+            this.btnGiris.Caption = "Giriş";
+            this.btnGiris.Id = 17;
+            this.btnGiris.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.apply_16x16;
+            this.btnGiris.ImageOptions.LargeImage = global::OgrenciTakip.UI.Win.Properties.Resources.apply_32x32;
+            this.btnGiris.ItemShortcut = new DevExpress.XtraBars.BarShortcut(System.Windows.Forms.Keys.F2);
+            this.btnGiris.Name = "btnGiris";
+            toolTipTitleItem23.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.comment_16x16;
+            toolTipTitleItem23.Text = "(F2)";
+            toolTipItem12.LeftIndent = 6;
+            toolTipItem12.Text = "Giriş";
+            toolTipTitleItem24.ImageOptions.Image = global::OgrenciTakip.UI.Win.Properties.Resources.suggestion_16x16;
+            toolTipTitleItem24.LeftIndent = 6;
+            toolTipTitleItem24.Text = "Çalışalacak Şube ve Dönem Seçilerek Programa Giriş Yapılır.";
+            superToolTip12.Items.Add(toolTipTitleItem23);
+            superToolTip12.Items.Add(toolTipItem12);
+            superToolTip12.Items.Add(toolTipSeparatorItem12);
+            superToolTip12.Items.Add(toolTipTitleItem24);
+            this.btnGiris.SuperTip = superToolTip12;
+            this.btnGiris.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -478,6 +507,7 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnGiris);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnYeni);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnKaydet);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnFarkliKaydet);
@@ -541,7 +571,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.BarButtonItem btnCikis;
         protected DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl;
         protected DevExpress.XtraBars.BarButtonItem btnFarkliKaydet;
         protected DevExpress.XtraBars.BarButtonItem btnUygula;
@@ -559,5 +588,7 @@
         protected DevExpress.XtraBars.BarButtonItem btnTaksitOlustur;
         protected internal DevExpress.XtraBars.BarButtonItem btnSil;
         protected DevExpress.XtraBars.BarButtonItem btnSifreSifirla;
+        protected DevExpress.XtraBars.BarButtonItem btnGiris;
+        protected DevExpress.XtraBars.BarButtonItem btnCikis;
     }
 }

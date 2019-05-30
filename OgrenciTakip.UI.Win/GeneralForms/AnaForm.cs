@@ -45,6 +45,9 @@ using DevExpress.XtraTabbedMdi;
 using OgrenciTakip.Common.Message;
 using System.Windows.Forms;
 using System.Diagnostics;
+using OgrenciTakip.BLL.General;
+using OgrenciTakip.BLL.Functions;
+using OgrenciTakip.UI.Win.Forms.KullaniciForms;
 
 namespace OgrenciTakip.UI.Win.GeneralForms
 {
@@ -56,13 +59,14 @@ namespace OgrenciTakip.UI.Win.GeneralForms
         public static long KullaniciRolId;
         public static string KullaniciRolAdi;
 
-        public static long DonemId = 1;
+        public static long DonemId;
         public static string DonemAdi = "Dönem Bilgisi Bekleniyor...";
-        public static long SubeId = 1;
+        public static long SubeId;
         public static string SubeAdi = "Şube Bilgisi Bekleniyor...";
-        public static List<long> YetkiliOlunanSubeler = new List<long> { 1, 2019031701050868106 };
+        public static List<long> YetkiliOlunanSubeler;
         public static DonemParametre DonemParametreleri;
         public static KullaniciParametreS KullaniciParametreleri = new KullaniciParametreS();
+        public static IEnumerable<RolYetkileri> RolYetkileri;
 
         public AnaForm()
         {
@@ -104,13 +108,38 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             xtraTabbedMdiManager.PageRemoved += XtraTabbedMdiManager_PageRemoved;
         }
 
+        private void SubeDonemSecimi(bool subeSecimButonunaBasildi)
+        {
+            ShowEditForms<SubeDonemSecimiEditForm>.ShowDialogEditForms(null, KullaniciId, subeSecimButonunaBasildi, SubeId, DonemId);
+            barDonem.Caption = DonemAdi;
+            btnSube.Caption = SubeAdi;
+        }
+
         private void Control_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
                 Close();
         }
 
-        private void AnaForm_Load(object sender, System.EventArgs e) { }
+        private void AnaForm_Load(object sender, System.EventArgs e)
+        {
+            barKullanici.Caption = $"{KullaniciAdi} ( {KullaniciRolAdi} )";
+            barKurum.Caption = KurumAdi;
+            SubeDonemSecimi(false);
+
+            if (DonemParametreleri == null)
+            {
+                Messages.HataMesaji("Dönem Parametreleri Girilmemiş. Lütfen Sistem Yöneticinize Başvurunuz.");
+                Application.ExitThread();
+                return;
+            }
+
+            if (!DonemParametreleri.YetkiKontroluAnlikYapilacak)
+                using (var bll = new RolYetkileriBll())
+                {
+                    RolYetkileri = bll.List(x => x.RolId == KullaniciRolId).EntityListConvert<RolYetkileriL>();
+                }
+        }
 
         private void AnaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -131,11 +160,13 @@ namespace OgrenciTakip.UI.Win.GeneralForms
             else if (gallery.OwnerItem.GetType() == typeof(SkinPaletteRibbonGalleryBarItem))
                 key = "Palette";
 
-            GeneralFunctions.AppSettingsWrite(key, e.Item.Caption);
+            UI.Win.Functions.GeneralFunctions.AppSettingsWrite(key, e.Item.Caption);
         }
 
         private void Butonlar_ItemClick(object sender, ItemClickEventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             if (e.Item == btnOkulKartlari)
             {
                 ShowListForms<OkulListForm>.ShowListForm(KartTuru.Okul);
@@ -353,6 +384,23 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                     Messages.HataMesaji("Hesap Makinesi Bulunamadı.");
                 }
             }
+
+            else if (e.Item == btnSube)
+            {
+                for (int i = 0; i < Application.OpenForms.Count; i++)
+                {
+                    if (Application.OpenForms[i] is GirisForm || Application.OpenForms[i] is AnaForm) continue;
+                    Application.OpenForms[i].Close();
+                    i--;
+                }
+                SubeDonemSecimi(true);
+            }
+
+            else if (e.Item == btnSifreDegistir)
+                ShowEditForms<SifreDegistirEditForm>.ShowDialogEditForms(IslemTuru.EntityUpdate);
+
+            Cursor.Current = Cursors.Default;
+
         }
 
         private void XtraTabbedMdiManager_PageAdded(object sender, MdiTabPageEventArgs e)
