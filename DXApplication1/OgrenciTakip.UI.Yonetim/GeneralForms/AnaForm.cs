@@ -203,8 +203,10 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
 
         private void AnaForm_Load(object sender, System.EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             Listele();
             tablo.Focus();
+            Cursor.Current = Cursors.Default;
         }
 
     }

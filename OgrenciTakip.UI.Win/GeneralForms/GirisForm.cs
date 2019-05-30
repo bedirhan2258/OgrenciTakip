@@ -1,5 +1,6 @@
 ﻿
 using DevExpress.XtraEditors;
+using DevExpress.XtraSplashScreen;
 using OgrenciTakip.BLL.Functions;
 using OgrenciTakip.BLL.General;
 using OgrenciTakip.Common.Enums;
@@ -201,7 +202,7 @@ namespace OgrenciTakip.UI.Win.GeneralForms
                         ShowEditForms<SifremiUnuttumEditForm>.ShowDialogEditForms(IslemTuru.EntityUpdate, txtKullaniciAdi.Text);
                     }
                     break;
-            }
+            }   
 
         }
 
@@ -212,8 +213,9 @@ namespace OgrenciTakip.UI.Win.GeneralForms
 
         private void GirisForm_Load(object sender, System.EventArgs e)
         {
-            //splash yazılcak
+            SplashScreenManager.ShowForm(typeof(Baslatiliyor));
             Yukle();
+            SplashScreenManager.CloseForm();
         }
 
     }

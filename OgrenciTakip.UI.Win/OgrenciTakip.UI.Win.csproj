@@ -617,6 +617,12 @@
     <Compile Include="GeneralForms\BaglantiAyarlariEditForm.Designer.cs">
       <DependentUpon>BaglantiAyarlariEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralForms\Baslatiliyor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralForms\Baslatiliyor.Designer.cs">
+      <DependentUpon>Baslatiliyor.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeneralForms\DonemParametreEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1429,6 +1435,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\BaglantiAyarlariEditForm.resx">
       <DependentUpon>BaglantiAyarlariEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralForms\Baslatiliyor.resx">
+      <DependentUpon>Baslatiliyor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralForms\DonemParametreEditForm.resx">
       <DependentUpon>DonemParametreEditForm.cs</DependentUpon>
