@@ -70,7 +70,7 @@ namespace OgrenciTakip.UI.Yonetim.GeneralForms
         protected virtual void ShowEditForm(long id)
         {
             Functions.YonetimGeneralFunctions.CreateConnectionString("OgrenciTakip2018_Yonetim", _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
-            var result = Yonetim.Show.ShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
+            var result = YonetimShowEditForms<KurumEditForm>.ShowDialogEditForms(id, _server, _kullaniciAdi, _sifre, _yetkilendirmeTuru);
             if (result <= 0) return;
             Listele();
             tablo.RowFocus("Id", result);

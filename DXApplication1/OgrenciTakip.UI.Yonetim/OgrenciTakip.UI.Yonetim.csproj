@@ -101,8 +101,7 @@
     <Compile Include="Interfaces\IStatusBarKisayol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Show\Interfaces\IBaseFormShow.cs" />
-    <Compile Include="Show\ShowEditForms.cs" />
+    <Compile Include="Show\YonetimShowEditForms.cs" />
     <Compile Include="UserControls\Controls\MyButtonEdit.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -553,6 +552,9 @@
       <Project>{84106c71-c78d-4a46-a18c-eb4250146a6e}</Project>
       <Name>OgrenciTakip.UI.Win</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Show\Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

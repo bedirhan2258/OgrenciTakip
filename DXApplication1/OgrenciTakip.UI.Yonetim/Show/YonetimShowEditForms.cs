@@ -1,13 +1,13 @@
 ﻿using OgrenciTakip.Common.Enums;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
-using OgrenciTakip.UI.Yonetim.Show.Interfaces;
 using OgrenciTakip.UI.Yonetim.Forms.BaseForms;
 using System;
 using System.Windows.Forms;
+using OgrenciTakip.UI.Win.Show.Interfaces;
 
 namespace OgrenciTakip.UI.Yonetim.Show
 {
-    public class ShowEditForms<TForm> : IBaseFormShow where TForm : BaseEditForm //Interfaces gelecek
+    public class YonetimShowEditForms<TForm> : IBaseFormShow where TForm : BaseEditForm //Interfaces gelecek
     {
         public long ShowDialogEditForms(KartTuru kartTuru, long id)
         {

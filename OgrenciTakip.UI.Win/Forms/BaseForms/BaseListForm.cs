@@ -178,6 +178,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
 
         private void FiltreSec()
         {
+            if (!KartTuru.Filtre.YetkiKontrolu(YetkiTuru.Gorebilir)) return;
+
             var entity = (Filtre)ShowListForms<FiltreListForm>.ShowDialogListForm(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
             if (entity == null) return;
             _filtreId = entity.Id;
@@ -272,6 +274,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
         }
         private void Tablo_FilterEditorCreated(object sender, DevExpress.XtraGrid.Views.Base.FilterControlEventArgs e)
         {
+            if (!KartTuru.Filtre.YetkiKontrolu(YetkiTuru.Degistirebilir)) return;
             e.ShowFilterEditor = false;
             ShowEditForms<FiltreEditForm>.ShowDialogEditForms(KartTuru.Filtre, _filtreId, BaseKartTuru, Tablo.GridControl);
 
@@ -368,7 +371,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             else if (e.Item == btnYeni)
             {
-                //Burada yetki kontrolü yapılacak.
+                if (!KartTuru.Filtre.YetkiKontrolu(YetkiTuru.Ekleyebilir)) return;
                 ShowEditForm(-1);
             }
             else if (e.Item == btnDuzelt)
@@ -377,7 +380,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             else if (e.Item == btnSil)
             {
-                //Yetki kontrolü yapılacak
+                if (!KartTuru.Filtre.YetkiKontrolu(YetkiTuru.Silebilir)) return;
                 EntityDelete();
             }
             else if (e.Item == btnSec)

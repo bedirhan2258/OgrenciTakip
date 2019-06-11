@@ -82,6 +82,7 @@
     <Compile Include="Enums\YazdirmaSekli.cs" />
     <Compile Include="Enums\YazdirmaYonu.cs" />
     <Compile Include="Enums\YetkilendirmeTuru.cs" />
+    <Compile Include="Enums\YetkiTuru.cs" />
     <Compile Include="Functions\EnumFunctions.cs" />
     <Compile Include="Message\Messages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

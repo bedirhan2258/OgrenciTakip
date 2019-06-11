@@ -1,5 +1,4 @@
-﻿
-using DevExpress.XtraBars;
+﻿using DevExpress.XtraBars;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
@@ -15,6 +14,7 @@ using OgrenciTakip.Model.Entities;
 using OgrenciTakip.Model.Entities.Base;
 using OgrenciTakip.Model.Entities.Base.Interfaces;
 using OgrenciTakip.UI.Win.Forms.BaseForms;
+using OgrenciTakip.UI.Win.GeneralForms;
 using OgrenciTakip.UI.Win.Properties;
 using OgrenciTakip.UI.Win.UserControls.Controls;
 using OgrenciTakip.UI.Win.UserControls.UserControl.Base;
@@ -30,7 +30,6 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Runtime.InteropServices;
 using System.Security;
 using System.Security.Cryptography;
 using System.Text;
@@ -40,13 +39,62 @@ namespace OgrenciTakip.UI.Win.Functions
 {
     public static class GeneralFunctions
     {
-
-
         public static long GetRowId(this GridView tablo)
         {
             if (tablo.FocusedRowHandle > -1) return (long)tablo.GetFocusedRowCellValue("Id");
             Messages.KartSecmemeUyariMesaji();
             return (-1);
+        }
+
+        public static bool YetkiKontrolu(this KartTuru kartTuru, YetkiTuru yetkiTuru)
+        {
+            if (AnaForm.KullaniciId == 0) return true;
+            RolYetkileri yetkiler;
+
+            using (var bll = new RolYetkileriBll())
+            {
+                yetkiler = AnaForm.DonemParametreleri.YetkiKontroluAnlikYapilacak ? bll.Single(x => x.RolId == AnaForm.KullaniciRolId && x.KartTuru == kartTuru).EntityConvert<RolYetkileri>() : AnaForm.RolYetkileri.FirstOrDefault(x => x.KartTuru == kartTuru);
+            }
+            var result = false;
+
+            switch (yetkiTuru)
+            {
+                case YetkiTuru.Gorebilir:
+                    result = yetkiler?.Gorebilir == 1;
+                    break;
+                case YetkiTuru.Ekleyebilir:
+                    result = yetkiler?.Ekleyebilir == 1;
+                    break;
+                case YetkiTuru.Degistirebilir:
+                    result = yetkiler?.Degistirebilir == 1;
+                    break;
+                case YetkiTuru.Silebilir:
+                    result = yetkiler?.Silebilir == 1;
+                    break;
+                default:
+                    break;
+            }
+
+            if (!result)
+                Messages.UyariMesaji("Bu İşlem İçin Yetkiniz Bulunmamaktadır.");
+
+            return result;
+        }
+
+        public static bool EditFormYetkiKontrolu(long id, KartTuru kartTuru)
+        {
+            var islemTuru = id > 0 ? IslemTuru.EntityUpdate : IslemTuru.EntityInsert;
+
+            switch (islemTuru)
+            {
+                case IslemTuru.EntityInsert when !kartTuru.YetkiKontrolu(YetkiTuru.Ekleyebilir):
+                    return false;
+
+                case IslemTuru.EntityUpdate when !kartTuru.YetkiKontrolu(YetkiTuru.Degistirebilir):
+                    return false;
+            }
+
+            return true;
         }
 
         public static long GetRowCellId(this GridView tablo, GridColumn idColumn)

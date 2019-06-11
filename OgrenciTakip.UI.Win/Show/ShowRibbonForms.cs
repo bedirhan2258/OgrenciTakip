@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars.Ribbon;
 using OgrenciTakip.Common.Enums;
+using OgrenciTakip.UI.Win.Functions;
 using System;
 using System.Windows.Forms;
 
@@ -19,6 +20,8 @@ namespace OgrenciTakip.UI.Win.Show
 
         public static long ShowDialogForm(KartTuru kartTuru, params object[] prm)
         {
+            if (!kartTuru.YetkiKontrolu(YetkiTuru.Gorebilir)) return 0;
+
             var frm = (TFrom)Activator.CreateInstance(typeof(TFrom), prm);
             using (frm)
             {

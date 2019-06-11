@@ -384,7 +384,8 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             Cursor.Current = Cursors.WaitCursor;
             if (e.Item == btnYeni)
             {
-                //Yetki Kontrol Olucak
+                if (!kartTuru.YetkiKontrolu(YetkiTuru.Ekleyebilir)) return;
+
                 BaseIslemTuru = IslemTuru.EntityInsert;
                 Yukle();
             }
@@ -394,7 +395,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             else if (e.Item == btnFarkliKaydet)
             {
-                //Yetki Kontrolü yapılacak
+                if (!kartTuru.YetkiKontrolu(YetkiTuru.Ekleyebilir)) return;
                 FarkliKaydet();
             }
             else if (e.Item == btnGeriAl)
@@ -403,7 +404,7 @@ namespace OgrenciTakip.UI.Win.Forms.BaseForms
             }
             else if (e.Item == btnSil)
             {
-                //Yetki Kontrolü olacak
+                if (!kartTuru.YetkiKontrolu(YetkiTuru.Silebilir)) return;
                 EntityDelete();
             }
             else if (e.Item == btnUygula)
