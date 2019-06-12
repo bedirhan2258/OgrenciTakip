@@ -3,6 +3,8 @@ using DevExpress.UserSkins;
 using OgrenciTakip.UI.Win.GeneralForms;
 using System;
 using System.Configuration;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace OgrenciTakip.UI.Win
@@ -17,6 +19,8 @@ namespace OgrenciTakip.UI.Win
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR");
 
             BonusSkins.Register();
             UserLookAndFeel.Default.SetSkinStyle(ConfigurationManager.AppSettings["Skin"], ConfigurationManager.AppSettings["Palette"]);

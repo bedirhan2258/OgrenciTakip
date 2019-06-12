@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using System.Threading;
 using System.Windows.Forms;
 using DevExpress.LookAndFeel;
 using DevExpress.Skins;
@@ -17,12 +19,13 @@ namespace OgrenciTakip.UI.Yonetim
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("tr-TR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("tr-TR");
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("Office 2016 Colorful");
-                Application.Run(new GirisForm());
+            Application.Run(new GirisForm());
         }
     }
 }
