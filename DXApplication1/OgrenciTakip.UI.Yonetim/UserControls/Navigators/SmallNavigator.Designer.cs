@@ -54,6 +54,7 @@
             this.Navigator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Navigator.Location = new System.Drawing.Point(0, 0);
             this.Navigator.Name = "Navigator";
+            this.Navigator.ShowToolTips = true;
             this.Navigator.Size = new System.Drawing.Size(480, 24);
             this.Navigator.TabIndex = 0;
             this.Navigator.Text = "controlNavigator1";
