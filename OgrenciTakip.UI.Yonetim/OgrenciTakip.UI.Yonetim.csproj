@@ -224,9 +224,8 @@
     <EmbeddedResource Include="UserControls\Navigators\SmallNavigator.resx">
       <DependentUpon>SmallNavigator.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="..\..\OgrenciTakip.UI.Win\App.config">
+    <None Include="..\OgrenciTakip.UI.Win\App.config">
       <Link>App.config</Link>
-      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -528,27 +527,27 @@
     <None Include="Resources\prev_16x167.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\OgrenciTakip.BLL\OgrenciTakip.BLL.csproj">
+    <ProjectReference Include="..\OgrenciTakip.BLL\OgrenciTakip.BLL.csproj">
       <Project>{667ee83a-9657-4eaa-a77d-b67145704552}</Project>
       <Name>OgrenciTakip.BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\OgrenciTakip.Common\OgrenciTakip.Common.csproj">
+    <ProjectReference Include="..\OgrenciTakip.Common\OgrenciTakip.Common.csproj">
       <Project>{46ac19a6-5358-48c2-8139-c640a1c0cee8}</Project>
       <Name>OgrenciTakip.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\OgrenciTakip.DAL\OgrenciTakip.DAL.csproj">
+    <ProjectReference Include="..\OgrenciTakip.DAL\OgrenciTakip.DAL.csproj">
       <Project>{27F4B7FA-4430-4BF8-81A3-1D7340F692B3}</Project>
       <Name>OgrenciTakip.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\OgrenciTakip.Data\OgrenciTakip.Data.csproj">
+    <ProjectReference Include="..\OgrenciTakip.Data\OgrenciTakip.Data.csproj">
       <Project>{d135cf06-739e-44cf-855d-e66b079574ee}</Project>
       <Name>OgrenciTakip.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\OgrenciTakip.Model\OgrenciTakip.Model.csproj">
+    <ProjectReference Include="..\OgrenciTakip.Model\OgrenciTakip.Model.csproj">
       <Project>{0734f5cf-5794-4e0a-9b41-17b3715278f8}</Project>
       <Name>OgrenciTakip.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\OgrenciTakip.UI.Win\OgrenciTakip.UI.Win.csproj">
+    <ProjectReference Include="..\OgrenciTakip.UI.Win\OgrenciTakip.UI.Win.csproj">
       <Project>{84106c71-c78d-4a46-a18c-eb4250146a6e}</Project>
       <Name>OgrenciTakip.UI.Win</Name>
     </ProjectReference>
