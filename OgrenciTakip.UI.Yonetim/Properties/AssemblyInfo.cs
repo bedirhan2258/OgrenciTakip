@@ -4,13 +4,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OgrenciTakip.UI.Yonetim")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Yönetim Modülü")]
+[assembly: AssemblyDescription("Bedirhan Yönetim Modülü")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OgrenciTakip.UI.Yonetim")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Bedirhan")]
+[assembly: AssemblyProduct("Yönetim Modülü")]
+[assembly: AssemblyCopyright("Copyright © Bedirhan  2019")]
+[assembly: AssemblyTrademark("Bedirhan")]
 [assembly: AssemblyCulture("")]
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -28,5 +28,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("19.6.*")]
+[assembly: AssemblyFileVersion("19.6.1.0")]

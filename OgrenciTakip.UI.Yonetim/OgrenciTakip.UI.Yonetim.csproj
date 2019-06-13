@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OgrenciTakip.UI.Yonetim</RootNamespace>
-    <AssemblyName>OgrenciTakip.UI.Yonetim</AssemblyName>
+    <AssemblyName>Yönetim Modülü</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -32,6 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Custom-Icon-Design-Silky-Line-User-Users-1.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v18.1" />
@@ -239,6 +242,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Custom-Icon-Design-Silky-Line-User-Users-1.ico" />
     <Content Include="Resources\addfooter_16x16.png" />
     <Content Include="Resources\addfooter_32x32.png" />
     <Content Include="Resources\apply_16x16.png" />
