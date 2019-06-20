@@ -599,6 +599,26 @@ namespace OgrenciTakip.UI.Win.Functions
 
             return ConfigurationManager.ConnectionStrings["OgrenciTakipContext"].ConnectionString;
         }
+
+        public static void EncryptConfigFile(string configFileName, params string[] sectionName)
+        {
+            var configuration = ConfigurationManager.OpenExeConfiguration(configFileName);
+
+            foreach (var x in sectionName)
+            {
+                var section = configuration.GetSection(x);
+
+                if (section.SectionInformation.IsProtected)
+                    return;
+                else
+                    section.SectionInformation.ProtectSection("DataProtectionConfigurationProvider");
+
+                section.SectionInformation.ForceSave = true;
+                configuration.Save();
+            }
+
+        }
+
     }
 }
 
